@@ -43,7 +43,7 @@ const Homepage = () => {
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Our AI doesn&apos;t close deals for you—it gets you people ready to listen. 
+                Our AI doesn&apos;t close deals for you—it gets your people ready to listen. 
                 Qualified prospects who want to talk, delivered straight to your phone.
               </p>
               
@@ -253,20 +253,20 @@ const Homepage = () => {
                     <table className="w-full">
                       <thead className="bg-gray-50">
                         <tr>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Sales Rep</th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Hot Leads</th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Won</th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Revenue</th>
-                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Win Rate</th>
+                          <th className="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase">Sales Rep</th>
+                          <th className="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase">Hot Leads</th>
+                          <th className="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase">Won</th>
+                          <th className="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase">Revenue</th>
+                          <th className="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase">Win Rate</th>
                         </tr>
                       </thead>
                       <tbody className="bg-white divide-y divide-gray-200">
                         <tr>
-                          <td className="px-4 py-3 text-sm font-medium text-blue-600">Sarah Chen</td>
-                          <td className="px-4 py-3 text-sm text-gray-900">45</td>
-                          <td className="px-4 py-3 text-sm text-gray-900">8</td>
-                          <td className="px-4 py-3 text-sm font-medium text-green-600">$240,000</td>
-                          <td className="px-4 py-3 text-sm text-gray-900">17.8%</td>
+                          <td className="px-2 py-3 text-xs font-medium text-blue-600">Sarah Chen</td>
+                          <td className="px-2 py-3 text-xs text-gray-900">45</td>
+                          <td className="px-2 py-3 text-xs text-gray-900">8</td>
+                          <td className="px-2 py-3 text-xs font-medium text-green-600">$240,000</td>
+                          <td className="px-2 py-3 text-xs text-gray-900">17.8%</td>
                         </tr>
                         <tr className="bg-gray-50">
                           <td className="px-4 py-3 text-sm font-medium text-blue-600">Mike Rodriguez</td>
@@ -296,7 +296,7 @@ const Homepage = () => {
                   {/* Summary Cards */}
                   <div className="grid grid-cols-3 gap-4 mt-6">
                     <div className="bg-blue-50 p-4 rounded-lg text-center">
-                      <div className="text-2xl font-bold text-blue-600">$987K</div>
+                      <div className="text-lg font-bold text-blue-600">$987K</div>
                       <div className="text-sm text-blue-700">Total Revenue</div>
                     </div>
                     <div className="bg-green-50 p-4 rounded-lg text-center">
