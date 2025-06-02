@@ -249,45 +249,46 @@ const Homepage = () => {
                   </div>
                   
                   {/* Table */}
-                  <div className="overflow-hidden border border-gray-200 rounded-lg">
-                    <table className="w-full">
+                  {/* Table */}
+                  <div className="overflow-x-auto border border-gray-200 rounded-lg">
+                    <table className="w-full min-w-0">
                       <thead className="bg-gray-50">
                         <tr>
-                          <th className="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase">Sales Rep</th>
-                          <th className="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase">Hot Leads</th>
-                          <th className="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase">Won</th>
-                          <th className="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase">Revenue</th>
-                          <th className="px-2 py-3 text-left text-xs font-medium text-gray-500 uppercase">Win Rate</th>
+                          <th className="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase">Rep</th>
+                          <th className="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase">Leads</th>
+                          <th className="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase">Won</th>
+                          <th className="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase">Revenue</th>
+                          <th className="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase">Rate</th>
                         </tr>
                       </thead>
                       <tbody className="bg-white divide-y divide-gray-200">
                         <tr>
-                          <td className="px-2 py-3 text-xs font-medium text-blue-600">Sarah Chen</td>
-                          <td className="px-2 py-3 text-xs text-gray-900">45</td>
-                          <td className="px-2 py-3 text-xs text-gray-900">8</td>
-                          <td className="px-2 py-3 text-xs font-medium text-green-600">$240,000</td>
-                          <td className="px-2 py-3 text-xs text-gray-900">17.8%</td>
+                          <td className="px-1 py-2 text-xs font-medium text-blue-600">S. Chen</td>
+                          <td className="px-1 py-2 text-xs text-gray-900">45</td>
+                          <td className="px-1 py-2 text-xs text-gray-900">8</td>
+                          <td className="px-1 py-2 text-xs font-medium text-green-600">$240K</td>
+                          <td className="px-1 py-2 text-xs text-gray-900">17.8%</td>
                         </tr>
                         <tr className="bg-gray-50">
-                          <td className="px-2 py-3 text-xs font-medium text-blue-600">Mike Rodriguez</td>
-                          <td className="px-2 py-3 text-xs text-gray-900">52</td>
-                          <td className="px-2 py-3 text-xs text-gray-900">12</td>
-                          <td className="px-2 py-3 text-xs font-medium text-green-600">$360,000</td>
-                          <td className="px-2 py-3 text-xs text-gray-900">23.1%</td>
+                          <td className="px-1 py-2 text-xs font-medium text-blue-600">M. Rodriguez</td>
+                          <td className="px-1 py-2 text-xs text-gray-900">52</td>
+                          <td className="px-1 py-2 text-xs text-gray-900">12</td>
+                          <td className="px-1 py-2 text-xs font-medium text-green-600">$360K</td>
+                          <td className="px-1 py-2 text-xs text-gray-900">23.1%</td>
                         </tr>
                         <tr>
-                          <td className="px-2 py-3 text-xs font-medium text-blue-600">Jennifer Kim</td>
-                          <td className="px-2 py-3 text-xs text-gray-900">38</td>
-                          <td className="px-2 py-3 text-xs text-gray-900">7</td>
-                          <td className="px-2 py-3 text-xs font-medium text-green-600">$189,000</td>
-                          <td className="px-2 py-3 text-xs text-gray-900">18.4%</td>
+                          <td className="px-1 py-2 text-xs font-medium text-blue-600">J. Kim</td>
+                          <td className="px-1 py-2 text-xs text-gray-900">38</td>
+                          <td className="px-1 py-2 text-xs text-gray-900">7</td>
+                          <td className="px-1 py-2 text-xs font-medium text-green-600">$189K</td>
+                          <td className="px-1 py-2 text-xs text-gray-900">18.4%</td>
                         </tr>
                         <tr className="bg-gray-50">
-                          <td className="px-2 py-3 text-xs font-medium text-blue-600">David Thompson</td>
-                          <td className="px-2 py-3 text-xs text-gray-900">41</td>
-                          <td className="px-2 py-3 text-xs text-gray-900">6</td>
-                          <td className="px-2 py-3 text-xs font-medium text-green-600">$198,000</td>
-                          <td className="px-2 py-3 text-xs text-gray-900">14.6%</td>
+                          <td className="px-1 py-2 text-xs font-medium text-blue-600">D. Thompson</td>
+                          <td className="px-1 py-2 text-xs text-gray-900">41</td>
+                          <td className="px-1 py-2 text-xs text-gray-900">6</td>
+                          <td className="px-1 py-2 text-xs font-medium text-green-600">$198K</td>
+                          <td className="px-1 py-2 text-xs text-gray-900">14.6%</td>
                         </tr>
                       </tbody>
                     </table>
