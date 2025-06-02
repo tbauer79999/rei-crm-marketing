@@ -12,7 +12,7 @@ const Homepage = () => {
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">REI-CRM</span>
+              <span className="text-xl font-bold text-gray-900">SurFox</span>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
@@ -716,7 +716,7 @@ const Homepage = () => {
                 avatar: "MC"
               },
               {
-                quote: "Before REI-CRM, I was playing phone tag with tire-kickers. Now when someone picks up, they already know why I'm calling and they want to hear what I have to say.",
+                quote: "Before SurFox, I was playing phone tag with tire-kickers. Now when someone picks up, they already know why I'm calling and they want to hear what I have to say.",
                 author: "Sarah Rodriguez",
                 title: "Fix & Flip Specialist", 
                 location: "Denver, CO",
@@ -970,7 +970,7 @@ const Homepage = () => {
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
                   <Zap className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold text-white">REI-CRM</span>
+                <span className="text-xl font-bold text-white">SurFox</span>
               </div>
               <p className="text-gray-400 mb-4">
                 AI-qualified prospect delivery for real estate professionals.
@@ -1009,7 +1009,7 @@ const Homepage = () => {
           
           <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400">
-              © 2025 REI-CRM. All rights reserved.
+              © 2025 SurFox. All rights reserved.
             </p>
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
               <span className="text-sm text-gray-400">We don&apos;t close deals. We deliver people ready to talk.</span>
