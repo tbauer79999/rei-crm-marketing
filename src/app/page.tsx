@@ -249,7 +249,6 @@ const Homepage = () => {
                   </div>
                   
                   {/* Table */}
-                  {/* Table */}
                   <div className="overflow-x-auto border border-gray-200 rounded-lg">
                     <table className="w-full min-w-0">
                       <thead className="bg-gray-50">
