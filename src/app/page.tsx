@@ -48,16 +48,16 @@ const Homepage = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="group bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl">
-                  Get Qualified Prospects
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
-                
-                <button className="group border border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center">
-                  <Play className="w-5 h-5 mr-2" />
-                  See Real Results
-                </button>
-              </div>
+  <a href="#pricing" className="group bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl">
+    Get Qualified Prospects
+    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+  </a>
+  
+  <a href="#pricing" className="group border border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center">
+    <Play className="w-5 h-5 mr-2" />
+    See Real Results
+  </a>
+</div>
               
               <div className="mt-8 flex items-center gap-6 justify-center lg:justify-start text-sm text-gray-500">
                 <div className="flex items-center">
