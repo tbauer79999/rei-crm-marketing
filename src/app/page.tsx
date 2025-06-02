@@ -1022,5 +1022,3 @@ const Homepage = () => {
 }
 
 export default Homepage
-
-//hello
