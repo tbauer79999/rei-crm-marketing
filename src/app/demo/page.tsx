@@ -22,17 +22,117 @@ const MinimalDemo = () => {
   const [aiInsights, setAiInsights] = useState<any>(null)
   const [conversationData, setConversationData] = useState<any>(null)
 
-  const scenarios: Scenario[] = [
-    { id: 1, title: "Confused Lead", message: "Who is this?", description: "The lead doesn't remember who contacted them." },
-    { id: 2, title: "Soft Rejection", message: "Not interested", description: "The lead responds negatively but not firmly." },
-    { id: 3, title: "Info Seeker", message: "How does it work?", description: "The lead is asking for more information." }
+  // Industry options as specified in directive
+  const industryOptions = [
+    "Real Estate (Wholesalers/Flippers)",
+    "Car Sales", 
+    "Mortgages",
+    "Staffing Agencies",
+    "Home Services"
   ]
+
+  // Dynamic scenarios based on industry - all universally applicable but with industry context
+  const scenarios: Scenario[] = [
+    { 
+      id: 1, 
+      title: "Confused Lead", 
+      message: "Who is this?", 
+      description: "The lead doesn't remember who contacted them." 
+    },
+    { 
+      id: 2, 
+      title: "Soft Rejection", 
+      message: "Not interested", 
+      description: "The lead responds negatively but not firmly." 
+    },
+    { 
+      id: 3, 
+      title: "Info Seeker", 
+      message: "How does it work?", 
+      description: "The lead is asking for more information." 
+    }
+  ]
+
+  // Get industry-specific problem text
+  const getIndustryProblemText = () => {
+    switch(industry) {
+      case "Real Estate (Wholesalers/Flippers)":
+        return "Most Investors Face"
+      case "Car Sales":
+        return "Most Car Sales Teams Face"
+      case "Mortgages":
+        return "Most Mortgage Teams Face"
+      case "Staffing Agencies":
+        return "Most Staffing Agencies Face"
+      case "Home Services":
+        return "Most Home Service Teams Face"
+      default:
+        return "Most Sales Teams Face"
+    }
+  }
+
+  // Get industry-specific AI response for initial contact
+  const getIndustryAIResponse = (scenario: Scenario) => {
+    const companyName = company || "our company"
+    
+    switch(industry) {
+      case "Real Estate (Wholesalers/Flippers)":
+        switch(scenario.id) {
+          case 1: return `Hi there! This is Sarah from ${companyName}. You filled out a form on our website asking about quick cash offers for properties. I wanted to reach out personally - do you have 2 minutes to chat about your property situation?`
+          case 2: return `No worries at all! I completely understand. Just so you know, we specialize in unique situations - inherited properties, properties that need work, or when you need to sell quickly. If anything changes, feel free to reach out. Have a great day!`
+          case 3: return `Great question! We make cash offers on properties in any condition. Here's how it works: I ask a few quick questions about your property, then we can usually give you a fair cash offer within 24 hours. No repairs needed, no realtor fees. Would you like me to walk you through it?`
+        }
+        break;
+      
+      case "Car Sales":
+        switch(scenario.id) {
+          case 1: return `Hi there! This is Mike from ${companyName}. You filled out a form on our website asking about our vehicle inventory. I wanted to reach out personally - do you have 2 minutes to chat about what you're looking for?`
+          case 2: return `No problem at all! I totally understand. Just so you know, we specialize in helping people find the right vehicle for their needs - whether it's financing, trade-ins, or finding specific models. If anything changes, feel free to reach out. Have a great day!`
+          case 3: return `Excellent question! We make the car buying process simple and transparent. Here's how it works: I ask a few questions about what you're looking for, then we can show you options that fit your needs and budget. We handle financing, trade-ins, everything. Would you like me to walk you through it?`
+        }
+        break;
+
+      case "Mortgages":
+        switch(scenario.id) {
+          case 1: return `Hi there! This is Jennifer from ${companyName}. You filled out a form on our website asking about mortgage options. I wanted to reach out personally - do you have 2 minutes to chat about your home financing needs?`
+          case 2: return `No worries at all! I completely understand. Just so you know, we specialize in unique financing situations - first-time buyers, refinancing, or investment properties. If anything changes, feel free to reach out. Have a great day!`
+          case 3: return `Great question! We help people secure the best mortgage rates and terms. Here's how it works: I ask a few questions about your situation, then we can usually pre-qualify you and show you options within 24 hours. No obligation. Would you like me to walk you through it?`
+        }
+        break;
+
+      case "Staffing Agencies":
+        switch(scenario.id) {
+          case 1: return `Hi there! This is David from ${companyName}. You filled out a form on our website about staffing solutions for your company. I wanted to reach out personally - do you have 2 minutes to chat about your hiring needs?`
+          case 2: return `No problem at all! I totally understand. Just so you know, we specialize in unique staffing situations - temporary staff, specialized roles, or urgent hiring needs. If anything changes, feel free to reach out. Have a great day!`
+          case 3: return `Excellent question! We connect companies with qualified candidates quickly. Here's how it works: I ask a few questions about your staffing needs, then we can usually provide candidate options within 48 hours. Pre-screened and ready to interview. Would you like me to walk you through it?`
+        }
+        break;
+
+      case "Home Services":
+        switch(scenario.id) {
+          case 1: return `Hi there! This is Lisa from ${companyName}. You filled out a form on our website asking about our home services. I wanted to reach out personally - do you have 2 minutes to chat about your project?`
+          case 2: return `No worries at all! I completely understand. Just so you know, we specialize in unique situations - emergency repairs, large projects, or when you need work done quickly. If anything changes, feel free to reach out. Have a great day!`
+          case 3: return `Great question! We provide reliable home services with transparent pricing. Here's how it works: I ask a few questions about your project, then we can usually provide a quote within 24 hours. Licensed, insured, guaranteed work. Would you like me to walk you through it?`
+        }
+        break;
+    }
+    
+    // Fallback generic response
+    switch(scenario.id) {
+      case 1: return `Hi there! This is Sarah from ${companyName}. You filled out a form asking about our services. Do you have 2 minutes to chat?`
+      case 2: return `No problem! I understand. Feel free to reach out if anything changes. Have a great day!`
+      case 3: return `Great question! Let me walk you through how we can help you. Do you have a few minutes?`
+      default: return `Hi! I'm Sarah with ${companyName}. You filled out a form asking about our services. Do you have 2 minutes to chat?`
+    }
+  }
 
   const handleScenarioClick = (scenario: Scenario) => {
     setSelectedScenario(scenario)
+    
+    const aiResponse = getIndustryAIResponse(scenario)
     setConversationHistory([
       { role: 'user', content: scenario.message },
-      { role: 'assistant', content: `Hi! I'm Sarah with ${company}. You filled out a form asking about our services. Do you have 2 minutes to chat?` }
+      { role: 'assistant', content: aiResponse }
     ])
     
     // Generate AI insights for initial scenario
@@ -134,9 +234,9 @@ const MinimalDemo = () => {
       leadType: followUp.id.toString().endsWith('3') ? "Hot Prospect" :
                followUp.id.toString().endsWith('2') ? "Warm Lead" : 
                "Cold Nurture",
-      nextSteps: followUp.id.toString().endsWith('3') ? ["Schedule property walkthrough", "Prepare offer within 24hrs"] :
-                followUp.id.toString().endsWith('2') ? ["Send market analysis", "Follow up in 3-5 days"] :
-                ["Add to nurture sequence", "Monthly market updates"]
+      nextSteps: followUp.id.toString().endsWith('3') ? ["Schedule consultation within 24 hours", "Prepare detailed proposal"] :
+                followUp.id.toString().endsWith('2') ? ["Send targeted educational content", "Follow up in 3-5 days"] :
+                ["Add to nurture sequence", "Monthly value-add communications"]
     }
     setAiInsights(enhancedInsights)
     setShowFollowUps(false)
@@ -173,7 +273,7 @@ const MinimalDemo = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
                   <input
                     type="text"
-                    placeholder="e.g., Austin Real Estate Solutions"
+                    placeholder="e.g., Austin Solutions"
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
@@ -181,27 +281,25 @@ const MinimalDemo = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Industry Focus</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Industry</label>
                   <select 
                     value={industry}
                     onChange={(e) => setIndustry(e.target.value)}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
-                    <option value="">Select your focus...</option>
-                    <option value="Real Estate Wholesaling">Real Estate Wholesaling</option>
-                    <option value="Fix & Flip">Fix & Flip</option>
-                    <option value="Buy & Hold Rentals">Buy & Hold Rentals</option>
-                    <option value="Commercial Real Estate">Commercial Real Estate</option>
-                    <option value="Land Investing">Land Investing</option>
+                    <option value="">Select your industry...</option>
+                    {industryOptions.map((option) => (
+                      <option key={option} value={option}>{option}</option>
+                    ))}
                   </select>
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">What You Offer Sellers</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Product/Service You're Selling</label>
                 <input
                   type="text"
-                  placeholder="e.g., Quick cash offers, fast closings, buy as-is"
+                  placeholder="e.g., Quick cash offers, Vehicle financing, Home loans"
                   value={offering}
                   onChange={(e) => setOffering(e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -253,7 +351,7 @@ const MinimalDemo = () => {
           </div>
 
           <div className="bg-white rounded-xl p-6 mb-8 border border-blue-200 bg-blue-50">
-            <h3 className="font-semibold text-blue-900 mb-2">Your Business Context:</h3>
+            <h3 className="font-semibold text-blue-900 mb-2">Business Context:</h3>
             <p className="text-blue-800">
               <strong>{company}</strong> • {industry} • {offering}
             </p>
@@ -280,7 +378,7 @@ const MinimalDemo = () => {
 
                 <div className="bg-red-50 p-3 rounded-lg border border-red-200 mb-4">
                   <p className="text-xs text-red-700">
-                    <strong>Why This Usually Fails:</strong> Most investors send generic pitches that bore them
+                    <strong>Why This Usually Fails:</strong> Most {getIndustryProblemText().toLowerCase()} send generic pitches that bore them
                   </p>
                 </div>
 
@@ -293,7 +391,7 @@ const MinimalDemo = () => {
 
           <div className="text-center mt-12">
             <p className="text-gray-500 text-sm">
-              Each scenario demonstrates different AI strategies for lead qualification and conversion
+              Each scenario demonstrates different AI strategies for lead qualification and conversion in {industry.toLowerCase()}
             </p>
           </div>
         </div>
@@ -414,7 +512,10 @@ const MinimalDemo = () => {
               >
                 Try Another Scenario
               </button>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded font-bold hover:bg-blue-700">
+              <button 
+                onClick={() => window.location.href = '/#pricing'}
+                className="bg-blue-600 text-white px-6 py-3 rounded font-bold hover:bg-blue-700"
+              >
                 Get This AI Working For Me
               </button>
             </div>

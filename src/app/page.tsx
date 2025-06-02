@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Zap, Target, TrendingUp, Users, CheckCircle, Star, Play, Phone, Clock, Filter } from 'lucide-react'
+import { ArrowRight, Zap, Target, Users, CheckCircle, Star, Play, Phone, Filter } from 'lucide-react'
 
 const Homepage = () => {
   return (
@@ -43,7 +43,7 @@ const Homepage = () => {
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Our AI doesn't close deals for you—it gets you people ready to listen. 
+                Our AI doesn&apos;t close deals for you—it gets you people ready to listen. 
                 Qualified prospects who want to talk, delivered straight to your phone.
               </p>
               
@@ -83,7 +83,7 @@ const Homepage = () => {
                 
                 <div className="space-y-6">
                   <div className="text-center">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Today's Qualified Prospects</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Today&apos;s Qualified Prospects</h3>
                   </div>
                   
                   <div className="space-y-3">
@@ -126,25 +126,25 @@ const Homepage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              The Real Problem: You're Talking to the Wrong People
+              The Real Problem: You&apos;re Talking to the Wrong People
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              You can close anyone who's ready to buy. The problem is finding them in a sea of tire-kickers.
+              You can close anyone who&apos;s ready to buy. The problem is finding them in a sea of tire-kickers.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="bg-red-50 p-6 rounded-xl border border-red-200">
-                <h3 className="text-xl font-semibold text-red-800 mb-4">What You're Dealing With Now</h3>
+                <h3 className="text-xl font-semibold text-red-800 mb-4">What You&apos;re Dealing With Now</h3>
                 <ul className="space-y-3 text-red-700">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Spending hours calling people who aren't ready
+                    Spending hours calling people who aren&apos;t ready
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    "Just looking" responses that waste your time
+                    &ldquo;Just looking&rdquo; responses that waste your time
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
@@ -152,7 +152,7 @@ const Homepage = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    No way to know who's actually motivated to sell
+                    No way to know who&apos;s actually motivated to sell
                   </li>
                 </ul>
               </div>
@@ -185,15 +185,424 @@ const Homepage = () => {
         </div>
       </section>
 
+      {/* Platform Preview Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              See Inside the Platform
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Take a look at the actual dashboard you&apos;ll use to track your AI-qualified prospects and performance metrics.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Real-Time Sales Performance Tracking
+              </h3>
+              <p className="text-lg text-gray-600 mb-6">
+                See exactly how your team is performing with qualified prospects. Track hot leads, deals won, revenue generated, and win rates - all in one clean dashboard.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Individual rep performance metrics</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Revenue tracking and win rate analysis</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Hot lead distribution monitoring</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
+                <div className="bg-gray-50 px-6 py-3 border-b border-gray-200 flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                    </div>
+                    <span className="text-sm font-medium text-gray-700">Sales Outcomes Dashboard</span>
+                  </div>
+                  <button className="bg-blue-600 text-white px-3 py-1 rounded text-sm">Export</button>
+                </div>
+                
+                <div className="p-6">
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900">Sales Rep Performance</h3>
+                    <div className="flex items-center space-x-4 text-sm">
+                      <select className="border border-gray-300 rounded px-3 py-1">
+                        <option>Last 30 Days</option>
+                      </select>
+                      <select className="border border-gray-300 rounded px-3 py-1">
+                        <option>All Campaigns</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  {/* Table */}
+                  <div className="overflow-hidden border border-gray-200 rounded-lg">
+                    <table className="w-full">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Sales Rep</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Hot Leads</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Won</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Revenue</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Win Rate</th>
+                        </tr>
+                      </thead>
+                      <tbody className="bg-white divide-y divide-gray-200">
+                        <tr>
+                          <td className="px-4 py-3 text-sm font-medium text-blue-600">Sarah Chen</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">45</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">8</td>
+                          <td className="px-4 py-3 text-sm font-medium text-green-600">$240,000</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">17.8%</td>
+                        </tr>
+                        <tr className="bg-gray-50">
+                          <td className="px-4 py-3 text-sm font-medium text-blue-600">Mike Rodriguez</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">52</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">12</td>
+                          <td className="px-4 py-3 text-sm font-medium text-green-600">$360,000</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">23.1%</td>
+                        </tr>
+                        <tr>
+                          <td className="px-4 py-3 text-sm font-medium text-blue-600">Jennifer Kim</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">38</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">7</td>
+                          <td className="px-4 py-3 text-sm font-medium text-green-600">$189,000</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">18.4%</td>
+                        </tr>
+                        <tr className="bg-gray-50">
+                          <td className="px-4 py-3 text-sm font-medium text-blue-600">David Thompson</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">41</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">6</td>
+                          <td className="px-4 py-3 text-sm font-medium text-green-600">$198,000</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">14.6%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  {/* Summary Cards */}
+                  <div className="grid grid-cols-3 gap-4 mt-6">
+                    <div className="bg-blue-50 p-4 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-blue-600">$987K</div>
+                      <div className="text-sm text-blue-700">Total Revenue</div>
+                    </div>
+                    <div className="bg-green-50 p-4 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-green-600">33</div>
+                      <div className="text-sm text-green-700">Deals Won</div>
+                    </div>
+                    <div className="bg-purple-50 p-4 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-purple-600">18.8%</div>
+                      <div className="text-sm text-purple-700">Win Rate</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div className="order-2 lg:order-1 relative">
+              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
+                <div className="bg-gray-50 px-6 py-3 border-b border-gray-200 flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                    </div>
+                    <span className="text-sm font-medium text-gray-700">A/B Testing</span>
+                  </div>
+                  <button className="bg-blue-600 text-white px-3 py-1 rounded text-sm">+ New Experiment</button>
+                </div>
+                
+                <div className="p-6">
+                  <div className="mb-4">
+                    <p className="text-sm text-gray-600">Optimize your AI&apos;s performance with data-driven experiments</p>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {/* Active Experiments */}
+                    <div className="mb-6">
+                      <div className="flex items-center space-x-2 mb-4">
+                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <h4 className="font-semibold text-gray-900">Active Experiments</h4>
+                      </div>
+                      
+                      {/* Q2 Opening Line Test */}
+                      <div className="border border-gray-200 rounded-lg p-4 mb-4">
+                        <div className="flex items-center justify-between mb-2">
+                          <h5 className="font-medium text-gray-900">Q2 Opening Line Test</h5>
+                          <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Running</span>
+                        </div>
+                        <p className="text-sm text-gray-600 mb-3">Testing: Hot Lead Conversion</p>
+                        
+                        <div className="bg-blue-50 p-3 rounded mb-3">
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm font-medium text-blue-900">🏆 Variant B Leading (+7%)</span>
+                          </div>
+                          <div className="mt-2">
+                            <div className="flex justify-between text-xs text-blue-700 mb-1">
+                              <span>Participants: 1,247</span>
+                              <span>Confidence: Significant</span>
+                            </div>
+                            <div className="w-full bg-blue-200 rounded-full h-2">
+                              <div className="bg-blue-600 h-2 rounded-full" style={{width: '78%'}}></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex space-x-2">
+                          <button className="bg-blue-600 text-white px-3 py-1 rounded text-xs">View Details</button>
+                          <button className="border border-gray-300 text-gray-700 px-3 py-1 rounded text-xs">Pause</button>
+                        </div>
+                        <div className="text-xs text-gray-500 mt-2">5/24/2025 - 6/7/2025</div>
+                      </div>
+                      
+                      {/* Professional vs Friendly Tone */}
+                      <div className="border border-gray-200 rounded-lg p-4">
+                        <div className="flex items-center justify-between mb-2">
+                          <h5 className="font-medium text-gray-900">Professional vs Friendly Tone</h5>
+                          <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Running</span>
+                        </div>
+                        <p className="text-sm text-gray-600 mb-3">Testing: Reply Rate</p>
+                        
+                        <div className="bg-yellow-50 p-3 rounded mb-3">
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm font-medium text-yellow-900">📈 Variant A Leading (+3%)</span>
+                          </div>
+                          <div className="mt-2">
+                            <div className="flex justify-between text-xs text-yellow-700 mb-1">
+                              <span>Participants: 892</span>
+                              <span>Confidence: Trending</span>
+                            </div>
+                            <div className="w-full bg-yellow-200 rounded-full h-2">
+                              <div className="bg-yellow-600 h-2 rounded-full" style={{width: '65%'}}></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="flex space-x-2">
+                          <button className="bg-blue-600 text-white px-3 py-1 rounded text-xs">View Details</button>
+                          <button className="border border-gray-300 text-gray-700 px-3 py-1 rounded text-xs">Pause</button>
+                        </div>
+                        <div className="text-xs text-gray-500 mt-2">5/19/2025 - 6/9/2025</div>
+                      </div>
+                    </div>
+                    
+                    {/* Paused Experiment */}
+                    <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                      <div className="flex items-center justify-between mb-2">
+                        <h5 className="font-medium text-gray-700">Follow-up Timing Test</h5>
+                        <span className="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-medium">Paused</span>
+                      </div>
+                      <p className="text-sm text-gray-500 mb-3">Testing: Response Time</p>
+                      
+                      <div className="text-xs text-gray-500">
+                        Participants: 543 • Confidence: Needs Data
+                      </div>
+                      <button className="bg-blue-600 text-white px-3 py-1 rounded text-xs mt-2">View Details</button>
+                      <div className="text-xs text-gray-400 mt-1">5/14/2025 - 6/4/2025</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Continuous AI Optimization
+              </h3>
+              <p className="text-lg text-gray-600 mb-6">
+                Our platform constantly tests and improves your lead qualification process. See live A/B tests that optimize opening lines, conversation tone, and follow-up timing for maximum conversion.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Live A/B testing for qualification scripts</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Automated performance optimization</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Statistical significance tracking</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                System Health & AI Performance
+              </h3>
+              <p className="text-lg text-gray-600 mb-6">
+                Monitor every aspect of your lead qualification system. From AI accuracy to system uptime, you&apos;ll always know your qualified prospect pipeline is running smoothly.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Real-time system performance monitoring</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">AI qualification accuracy tracking</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                  <span className="text-gray-700">Lead pipeline health indicators</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
+                <div className="bg-gray-50 px-6 py-3 border-b border-gray-200">
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                    </div>
+                    <span className="text-sm font-medium text-gray-700">System Overview</span>
+                  </div>
+                </div>
+                
+                <div className="p-6 space-y-4">
+                  {/* Overview & Health */}
+                  <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <Target className="w-4 h-4 text-blue-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900">Overview & Health</h4>
+                        <p className="text-sm text-gray-600">System performance, lead counts, and key metrics</p>
+                        <p className="text-xs text-blue-600 mt-1">1 leads today, slow activity</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Review</span>
+                      <ArrowRight className="w-4 h-4 text-gray-400" />
+                    </div>
+                  </div>
+                  
+                  {/* Hot Lead Handoff */}
+                  <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                        <Users className="w-4 h-4 text-green-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900">Hot Lead Handoff</h4>
+                        <p className="text-sm text-gray-600">Sales team notifications and response tracking</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Healthy</span>
+                      <ArrowRight className="w-4 h-4 text-gray-400" />
+                    </div>
+                  </div>
+                  
+                  {/* Lead Journey & Funnel */}
+                  <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <Target className="w-4 h-4 text-blue-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900">Lead Journey & Funnel</h4>
+                        <p className="text-sm text-gray-600">Conversion rates and pipeline analytics</p>
+                        <p className="text-xs text-blue-600 mt-1">Funnel analysis complete</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Review</span>
+                      <ArrowRight className="w-4 h-4 text-gray-400" />
+                    </div>
+                  </div>
+                  
+                  {/* AI Optimization */}
+                  <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                        <Zap className="w-4 h-4 text-green-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900">AI Optimization</h4>
+                        <p className="text-sm text-gray-600">Message analysis, keywords, and conversation insights</p>
+                        <p className="text-xs text-green-600 mt-1">89% AI accuracy</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Healthy</span>
+                      <ArrowRight className="w-4 h-4 text-gray-400" />
+                    </div>
+                  </div>
+                  
+                  {/* System Metrics */}
+                  <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                        <CheckCircle className="w-4 h-4 text-green-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900">System Metrics</h4>
+                        <p className="text-sm text-gray-600">API uptime, message delivery, and infrastructure health</p>
+                        <p className="text-xs text-green-600 mt-1">99.9% uptime</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Healthy</span>
+                      <ArrowRight className="w-4 h-4 text-gray-400" />
+                    </div>
+                  </div>
+                  
+                  {/* Customization & Control */}
+                  <div className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <Filter className="w-4 h-4 text-blue-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900">Customization & Control</h4>
+                        <p className="text-sm text-gray-600">AI prompts, escalation rules, and system configuration</p>
+                        <p className="text-xs text-blue-600 mt-1">3 pending updates</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Review</span>
+                      <ArrowRight className="w-4 h-4 text-gray-400" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works Section */}
       <section id="how-it-works" className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              We Don't Close Deals. We Deliver People Ready to Listen.
+              We Don&apos;t Close Deals. We Deliver People Ready to Listen.
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Your closing skills work great. The problem is getting in front of qualified prospects. That's what we fix.
+              Your closing skills work great. The problem is getting in front of qualified prospects. That&apos;s what we fix.
             </p>
           </div>
           
@@ -261,7 +670,7 @@ const Homepage = () => {
           
           <div className="mt-16 text-center bg-blue-50 rounded-2xl p-8 border border-blue-200">
             <h3 className="text-xl font-semibold text-blue-900 mb-4">
-              Here's What We DON'T Do
+              Here&apos;s What We DON&apos;T Do
             </h3>
             <div className="grid md:grid-cols-3 gap-6 text-blue-800">
               <div className="flex items-center">
@@ -292,7 +701,7 @@ const Homepage = () => {
               Real Results from Real Investors
             </h2>
             <p className="text-xl text-gray-600">
-              These aren't unicorn success stories. This is what happens when you stop chasing dead leads.
+              These aren&apos;t unicorn success stories. This is what happens when you stop chasing dead leads.
             </p>
           </div>
           
@@ -331,7 +740,7 @@ const Homepage = () => {
                 </div>
                 
                 <blockquote className="text-gray-700 mb-6 italic">
-                  "{testimonial.quote}"
+                  &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
                 
                 <div className="flex items-center space-x-4">
@@ -380,9 +789,13 @@ const Homepage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Simple Pricing. Pay for Results Only.
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
               No upfront fees. No long-term contracts. You only pay when we deliver qualified prospects to your phone.
             </p>
+            <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-800">
+              <span className="font-medium">Qualified Prospect:</span>
+              <span className="ml-2">A lead that has been nurtured by our AI to the point of &apos;Qualified Interest&apos;, indicating readiness for direct human engagement.</span>
+            </div>
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -394,9 +807,8 @@ const Homepage = () => {
                 description: "Perfect for getting started with qualified lead delivery",
                 features: [
                   "Up to 50 qualified prospects/month",
-                  "Basic lead qualification",
+                  "Full AI Lead Readiness Scoring",
                   "Email & SMS pre-warming",
-                  "Lead readiness scoring",
                   "Standard support"
                 ],
                 cta_text: "Get Started",
@@ -409,7 +821,7 @@ const Homepage = () => {
                 description: "Advanced qualification for serious investors",
                 features: [
                   "Up to 150 qualified prospects/month",
-                  "Advanced AI qualification",
+                  "Enhanced AI Lead Scoring Insights",
                   "A/B testing for better results",
                   "Detailed motivation analysis",
                   "Property-specific pre-warming",
@@ -422,7 +834,7 @@ const Homepage = () => {
               {
                 name: "Scale",
                 price: 497,
-                per_lead_cost: 8,
+                per_lead_cost: null,
                 description: "High-volume qualification for growing teams",
                 features: [
                   "Unlimited qualified prospects",
@@ -455,9 +867,16 @@ const Homepage = () => {
                       <span className="text-4xl font-bold text-gray-900">${tier.price}</span>
                       <span className="text-gray-600 ml-2">/month</span>
                     </div>
-                    <div className="text-sm text-gray-500 mt-2">
-                      + ${tier.per_lead_cost} per qualified prospect
-                    </div>
+                    {tier.per_lead_cost && (
+                      <div className="text-sm text-gray-500 mt-2">
+                        + ${tier.per_lead_cost} per qualified prospect
+                      </div>
+                    )}
+                    {!tier.per_lead_cost && (
+                      <div className="text-sm text-green-600 font-medium mt-2">
+                        No per-prospect fees
+                      </div>
+                    )}
                   </div>
                   
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors mb-8 ${
@@ -507,10 +926,10 @@ const Homepage = () => {
       <section className="py-20 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Stop Wasting Time on People Who Aren't Ready
+            Stop Wasting Time on People Who Aren&apos;t Ready
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            You're great at closing deals. Let us get you in front of people who actually want to hear what you have to say.
+            You&apos;re great at closing deals. Let us get you in front of people who actually want to hear what you have to say.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -593,7 +1012,7 @@ const Homepage = () => {
               © 2025 REI-CRM. All rights reserved.
             </p>
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
-              <span className="text-sm text-gray-400">We don't close deals. We deliver people ready to talk.</span>
+              <span className="text-sm text-gray-400">We don&apos;t close deals. We deliver people ready to talk.</span>
             </div>
           </div>
         </div>

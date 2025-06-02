@@ -31,6 +31,19 @@ const ConversationStep = ({ company, industry, offering, selectedScenario, onCom
     }
   }
 
+// Get dynamic industry-specific problem text
+const getIndustryProblemText = () => {
+  switch(industry) {
+    case "Real Estate (Wholesalers/Flippers)": return "Most Investors Face"
+    case "Car Sales": return "Most Car Sales Teams Face"
+    case "Mortgages": return "Most Mortgage Teams Face"
+    case "Staffing Agencies": return "Most Staffing Agencies Face"
+    case "Home Services": return "Most Home Service Teams Face"
+    default: return "Most Sales Teams Face"
+  }
+}
+
+
   const getChoices = () => {
     switch(selectedScenario?.id) {
       case 1: // "Who is this?"
@@ -190,8 +203,7 @@ const ConversationStep = ({ company, industry, offering, selectedScenario, onCom
                 <div className="flex items-center justify-center mb-4">
                   <AlertCircle className="w-8 h-8 text-red-600" />
                 </div>
-                <h3 className="text-xl font-bold text-red-800 mb-4">The Problem Most Investors Face</h3>
-                <p className="text-red-700 text-lg">{currentScenario.problem}</p>
+              <h3 className="text-xl font-bold text-red-800 mb-4">The Problem {getIndustryProblemText()}</h3>                   <p className="text-red-700 text-lg">{currentScenario.problem}</p>
               </div>
 
               <div className="bg-amber-50 p-8 rounded-2xl border border-amber-200 mb-8">
