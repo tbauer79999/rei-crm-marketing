@@ -269,25 +269,25 @@ const Homepage = () => {
                           <td className="px-2 py-3 text-xs text-gray-900">17.8%</td>
                         </tr>
                         <tr className="bg-gray-50">
-                          <td className="px-4 py-3 text-sm font-medium text-blue-600">Mike Rodriguez</td>
-                          <td className="px-4 py-3 text-sm text-gray-900">52</td>
-                          <td className="px-4 py-3 text-sm text-gray-900">12</td>
-                          <td className="px-4 py-3 text-sm font-medium text-green-600">$360,000</td>
-                          <td className="px-4 py-3 text-sm text-gray-900">23.1%</td>
+                          <td className="px-4 py-3 text-xs font-medium text-blue-600">Mike Rodriguez</td>
+                          <td className="px-4 py-3 text-xs text-gray-900">52</td>
+                          <td className="px-4 py-3 text-xs text-gray-900">12</td>
+                          <td className="px-4 py-3 text-xs font-medium text-green-600">$360,000</td>
+                          <td className="px-4 py-3 text-xs text-gray-900">23.1%</td>
                         </tr>
                         <tr>
-                          <td className="px-4 py-3 text-sm font-medium text-blue-600">Jennifer Kim</td>
-                          <td className="px-4 py-3 text-sm text-gray-900">38</td>
-                          <td className="px-4 py-3 text-sm text-gray-900">7</td>
-                          <td className="px-4 py-3 text-sm font-medium text-green-600">$189,000</td>
-                          <td className="px-4 py-3 text-sm text-gray-900">18.4%</td>
+                          <td className="px-4 py-3 text-xs font-medium text-blue-600">Jennifer Kim</td>
+                          <td className="px-4 py-3 text-xs text-gray-900">38</td>
+                          <td className="px-4 py-3 text-xs text-gray-900">7</td>
+                          <td className="px-4 py-3 text-xs font-medium text-green-600">$189,000</td>
+                          <td className="px-4 py-3 text-xs text-gray-900">18.4%</td>
                         </tr>
                         <tr className="bg-gray-50">
-                          <td className="px-4 py-3 text-sm font-medium text-blue-600">David Thompson</td>
-                          <td className="px-4 py-3 text-sm text-gray-900">41</td>
-                          <td className="px-4 py-3 text-sm text-gray-900">6</td>
-                          <td className="px-4 py-3 text-sm font-medium text-green-600">$198,000</td>
-                          <td className="px-4 py-3 text-sm text-gray-900">14.6%</td>
+                          <td className="px-4 py-3 text-xs font-medium text-blue-600">David Thompson</td>
+                          <td className="px-4 py-3 text-xs text-gray-900">41</td>
+                          <td className="px-4 py-3 text-xs text-gray-900">6</td>
+                          <td className="px-4 py-3 text-xs font-medium text-green-600">$198,000</td>
+                          <td className="px-4 py-3 text-xs text-gray-900">14.6%</td>
                         </tr>
                       </tbody>
                     </table>
