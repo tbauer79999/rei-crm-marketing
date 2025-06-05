@@ -30,7 +30,7 @@ const Homepage = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
                 <Phone className="w-4 h-4 mr-2" />
@@ -75,10 +75,10 @@ const Homepage = () => {
               </div>
             </div>
             
-            <div className="relative">
-              <div className="relative bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center animate-pulse">
-                  <Phone className="w-12 h-12 text-white" />
+            <div className="relative px-2 sm:px-4 lg:px-0">
+              <div className="relative bg-white rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 border border-gray-200 w-full max-w-md mx-auto lg:max-w-none">
+                <div className="absolute -top-4 -right-4 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center animate-pulse">
+                  <Phone className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white" />
                 </div>
                 
                 <div className="space-y-6">
