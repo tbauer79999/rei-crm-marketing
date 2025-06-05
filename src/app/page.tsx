@@ -12,7 +12,7 @@ const Homepage = () => {
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">SurFox</span>
+              <span className="text-xl font-bold text-gray-900">REI-CRM</span>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
@@ -43,21 +43,21 @@ const Homepage = () => {
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Our AI doesn&apos;t close deals for you—it gets your people ready to listen. 
+                Our AI doesn&apos;t close deals for you—it gets you people ready to listen. 
                 Qualified prospects who want to talk, delivered straight to your phone.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-  <a href="#pricing" className="group bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl">
-    Get Qualified Prospects
-    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-  </a>
-  
-  <a href="#pricing" className="group border border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center">
-    <Play className="w-5 h-5 mr-2" />
-    See Real Results
-  </a>
-</div>
+                <button className="group bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl">
+                  Get Qualified Prospects
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
+                
+                <button className="group border border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center">
+                  <Play className="w-5 h-5 mr-2" />
+                  See Real Results
+                </button>
+              </div>
               
               <div className="mt-8 flex items-center gap-6 justify-center lg:justify-start text-sm text-gray-500">
                 <div className="flex items-center">
@@ -221,7 +221,7 @@ const Homepage = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden max-w-lg mx-auto">
+              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
                 <div className="bg-gray-50 px-6 py-3 border-b border-gray-200 flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-2">
@@ -249,45 +249,45 @@ const Homepage = () => {
                   </div>
                   
                   {/* Table */}
-                  <div className="overflow-x-auto border border-gray-200 rounded-lg">
-                    <table className="w-full min-w-0">
+                  <div className="overflow-hidden border border-gray-200 rounded-lg">
+                    <table className="w-full">
                       <thead className="bg-gray-50">
                         <tr>
-                          <th className="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase">Rep</th>
-                          <th className="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase">Leads</th>
-                          <th className="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase">Won</th>
-                          <th className="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase">Revenue</th>
-                          <th className="px-1 py-2 text-left text-xs font-medium text-gray-500 uppercase">Rate</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Sales Rep</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Hot Leads</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Won</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Revenue</th>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Win Rate</th>
                         </tr>
                       </thead>
                       <tbody className="bg-white divide-y divide-gray-200">
                         <tr>
-                          <td className="px-1 py-2 text-xs font-medium text-blue-600">S. Chen</td>
-                          <td className="px-1 py-2 text-xs text-gray-900">45</td>
-                          <td className="px-1 py-2 text-xs text-gray-900">8</td>
-                          <td className="px-1 py-2 text-xs font-medium text-green-600">$240K</td>
-                          <td className="px-1 py-2 text-xs text-gray-900">17.8%</td>
+                          <td className="px-4 py-3 text-sm font-medium text-blue-600">Sarah Chen</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">45</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">8</td>
+                          <td className="px-4 py-3 text-sm font-medium text-green-600">$240,000</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">17.8%</td>
                         </tr>
                         <tr className="bg-gray-50">
-                          <td className="px-1 py-2 text-xs font-medium text-blue-600">M. Rodriguez</td>
-                          <td className="px-1 py-2 text-xs text-gray-900">52</td>
-                          <td className="px-1 py-2 text-xs text-gray-900">12</td>
-                          <td className="px-1 py-2 text-xs font-medium text-green-600">$360K</td>
-                          <td className="px-1 py-2 text-xs text-gray-900">23.1%</td>
+                          <td className="px-4 py-3 text-sm font-medium text-blue-600">Mike Rodriguez</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">52</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">12</td>
+                          <td className="px-4 py-3 text-sm font-medium text-green-600">$360,000</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">23.1%</td>
                         </tr>
                         <tr>
-                          <td className="px-1 py-2 text-xs font-medium text-blue-600">J. Kim</td>
-                          <td className="px-1 py-2 text-xs text-gray-900">38</td>
-                          <td className="px-1 py-2 text-xs text-gray-900">7</td>
-                          <td className="px-1 py-2 text-xs font-medium text-green-600">$189K</td>
-                          <td className="px-1 py-2 text-xs text-gray-900">18.4%</td>
+                          <td className="px-4 py-3 text-sm font-medium text-blue-600">Jennifer Kim</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">38</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">7</td>
+                          <td className="px-4 py-3 text-sm font-medium text-green-600">$189,000</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">18.4%</td>
                         </tr>
                         <tr className="bg-gray-50">
-                          <td className="px-1 py-2 text-xs font-medium text-blue-600">D. Thompson</td>
-                          <td className="px-1 py-2 text-xs text-gray-900">41</td>
-                          <td className="px-1 py-2 text-xs text-gray-900">6</td>
-                          <td className="px-1 py-2 text-xs font-medium text-green-600">$198K</td>
-                          <td className="px-1 py-2 text-xs text-gray-900">14.6%</td>
+                          <td className="px-4 py-3 text-sm font-medium text-blue-600">David Thompson</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">41</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">6</td>
+                          <td className="px-4 py-3 text-sm font-medium text-green-600">$198,000</td>
+                          <td className="px-4 py-3 text-sm text-gray-900">14.6%</td>
                         </tr>
                       </tbody>
                     </table>
@@ -296,7 +296,7 @@ const Homepage = () => {
                   {/* Summary Cards */}
                   <div className="grid grid-cols-3 gap-4 mt-6">
                     <div className="bg-blue-50 p-4 rounded-lg text-center">
-                      <div className="text-lg font-bold text-blue-600">$987K</div>
+                      <div className="text-2xl font-bold text-blue-600">$987K</div>
                       <div className="text-sm text-blue-700">Total Revenue</div>
                     </div>
                     <div className="bg-green-50 p-4 rounded-lg text-center">
@@ -716,7 +716,7 @@ const Homepage = () => {
                 avatar: "MC"
               },
               {
-                quote: "Before SurFox, I was playing phone tag with tire-kickers. Now when someone picks up, they already know why I'm calling and they want to hear what I have to say.",
+                quote: "Before REI-CRM, I was playing phone tag with tire-kickers. Now when someone picks up, they already know why I'm calling and they want to hear what I have to say.",
                 author: "Sarah Rodriguez",
                 title: "Fix & Flip Specialist", 
                 location: "Denver, CO",
@@ -970,7 +970,7 @@ const Homepage = () => {
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
                   <Zap className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold text-white">SurFox</span>
+                <span className="text-xl font-bold text-white">REI-CRM</span>
               </div>
               <p className="text-gray-400 mb-4">
                 AI-qualified prospect delivery for real estate professionals.
@@ -1009,7 +1009,7 @@ const Homepage = () => {
           
           <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400">
-              © 2025 SurFox. All rights reserved.
+              © 2025 REI-CRM. All rights reserved.
             </p>
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
               <span className="text-sm text-gray-400">We don&apos;t close deals. We deliver people ready to talk.</span>
