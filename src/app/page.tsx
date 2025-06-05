@@ -221,7 +221,7 @@ const Homepage = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
+              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden w-full max-w-sm mx-auto lg:max-w-none">
                 <div className="bg-gray-50 px-6 py-3 border-b border-gray-200 flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-2">
@@ -315,7 +315,7 @@ const Homepage = () => {
           
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="order-2 lg:order-1 relative">
-              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
+              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden w-full max-w-sm mx-auto lg:max-w-none">
                 <div className="bg-gray-50 px-6 py-3 border-b border-gray-200 flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-2">
@@ -468,7 +468,7 @@ const Homepage = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
+              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden w-full max-w-sm mx-auto lg:max-w-none">
                 <div className="bg-gray-50 px-6 py-3 border-b border-gray-200">
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-2">
