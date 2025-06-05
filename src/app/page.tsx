@@ -221,7 +221,7 @@ const Homepage = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden max-w-lg lg:mx-auto">
+              <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden lg:max-w-lg lg:mx-auto">
                 <div className="bg-gray-50 px-6 py-3 border-b border-gray-200 flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-2">
