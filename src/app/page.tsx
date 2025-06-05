@@ -43,7 +43,7 @@ const Homepage = () => {
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Our AI doesn&apos;t close deals for you—it gets you people ready to listen. 
+                Our AI doesn&apos;t close deals for you—it gets your people ready to listen. 
                 Qualified prospects who want to talk, delivered straight to your phone.
               </p>
               
