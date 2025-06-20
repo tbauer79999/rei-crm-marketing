@@ -8,7 +8,7 @@ const SurFoxV2 = () => {
   const [activeTab, setActiveTab] = useState('performance')
   const [activeFaq, setActiveFaq] = useState<number | null>(null)
   const [isLoading, setIsLoading] = useState(true)
-  const [typingText, setTypingText] = useState('Qualified Prospects')
+  const [typingText, setTypingText] = useState('Better Leads')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
   const cursorRef = useRef<HTMLDivElement>(null)
@@ -16,7 +16,7 @@ const SurFoxV2 = () => {
 
   // Typing animation
   useEffect(() => {
-    const words = ['Qualified Prospects', 'Warm Leads', 'Real Conversations', 'Better Close Rates']
+    const words = ['Better Leads', 'More Closes', 'Real Results', 'Less Effort']
     let wordIndex = 0
     let charIndex = 0
     let isDeleting = false
@@ -177,7 +177,7 @@ const SurFoxV2 = () => {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6">
                 Your Sales Team Deserves
                 <br />
-                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent inline-block">
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent inline-block min-h-[1.2em]">
                   {typingText}
                   <span className="animate-pulse">|</span>
                 </span>
