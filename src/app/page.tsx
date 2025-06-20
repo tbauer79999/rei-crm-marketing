@@ -120,6 +120,10 @@ const SurFoxV2 = () => {
                 How It Works
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
               </a>
+              <a href="/demo" className="text-gray-600 hover:text-gray-900 font-medium transition-colors relative group">
+                Demo
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+              </a>
               <a href="#platform" className="text-gray-600 hover:text-gray-900 font-medium transition-colors relative group">
                 Platform
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
@@ -151,6 +155,7 @@ const SurFoxV2 = () => {
           <div className="md:hidden bg-white border-t mt-4">
             <div className="px-4 py-4 space-y-4">
               <a href="#how-it-works" className="block text-gray-600 hover:text-gray-900 font-medium">How It Works</a>
+              <a href="/demo" className="block text-gray-600 hover:text-gray-900 font-medium">Demo</a>
               <a href="#platform" className="block text-gray-600 hover:text-gray-900 font-medium">Platform</a>
               <a href="#testimonials" className="block text-gray-600 hover:text-gray-900 font-medium">Results</a>
               <a href="#pricing" className="block text-gray-600 hover:text-gray-900 font-medium">Pricing</a>
