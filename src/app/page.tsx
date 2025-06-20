@@ -16,7 +16,7 @@ const SurFoxV2 = () => {
 
   // Typing animation
   useEffect(() => {
-    const words = ['Better Leads', 'More Closes', 'Real Results', 'Less Effort']
+    const words = ['Better Leads', 'More Wins', 'Real Results', 'Less Effort']
     let wordIndex = 0
     let charIndex = 0
     let isDeleting = false
@@ -372,7 +372,7 @@ const SurFoxV2 = () => {
               ].map((item, index) => (
                 <div key={index} className="text-center group">
                   <div className="relative">
-                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all mx-auto mb-4">
+                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition-transform mx-auto mb-4 relative">
                       {item.icon}
                       <span className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                         {item.step}
