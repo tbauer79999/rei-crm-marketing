@@ -1,13 +1,4 @@
-if (isLoading) {
-    return (
-      <div className="fixed inset-0 bg-gradient-to-br from-gray-900 to-black z-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-white text-lg font-semibold">Loading Your Demo Experience...</p>
-        </div>
-      </div>
-    )
-  }'use client'
+'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
 import { Play, Pause, Volume2, VolumeX, ChevronDown } from 'lucide-react'

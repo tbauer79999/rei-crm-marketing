@@ -11,8 +11,7 @@ const SurFoxV2 = () => {
   const [typingText, setTypingText] = useState('Better Leads')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
-  const cursorRef = useRef<HTMLDivElement>(null)
-  const cursorDotRef = useRef<HTMLDivElement>(null)
+
 
   // Typing animation
   useEffect(() => {
@@ -62,19 +61,6 @@ const SurFoxV2 = () => {
     setTimeout(() => setIsLoading(false), 1500)
   }, [])
 
-  // Custom cursor
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (cursorRef.current && cursorDotRef.current) {
-        cursorRef.current.style.left = e.clientX + 'px'
-        cursorRef.current.style.top = e.clientY + 'px'
-        cursorDotRef.current.style.left = e.clientX + 'px'
-        cursorDotRef.current.style.top = e.clientY + 'px'
-      }
-    }
-    document.addEventListener('mousemove', handleMouseMove)
-    return () => document.removeEventListener('mousemove', handleMouseMove)
-  }, [])
 
   if (isLoading) {
     return (
@@ -86,18 +72,7 @@ const SurFoxV2 = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      {/* Custom Cursor - Desktop Only */}
-      <div 
-        ref={cursorRef}
-        className="hidden lg:block fixed w-10 h-10 border-2 border-purple-600 rounded-full pointer-events-none transition-all duration-100 z-50 mix-blend-difference"
-        style={{ transform: 'translate(-50%, -50%)' }}
-      />
-      <div 
-        ref={cursorDotRef}
-        className="hidden lg:block fixed w-1 h-1 bg-purple-600 rounded-full pointer-events-none z-50"
-        style={{ transform: 'translate(-50%, -50%)' }}
-      />
-
+ 
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-40 transition-all duration-300 ${
         isScrolled ? 'bg-white/95 backdrop-blur-xl shadow-lg py-4' : 'py-6'
