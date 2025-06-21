@@ -126,7 +126,9 @@ const SurFoxVideoDemo = () => {
             <div className="relative bg-gray-800 rounded-2xl overflow-hidden aspect-video shadow-2xl">
               {/* Video 1: Turning Lead Frustration into Opportunity */}
               <video
-                ref={el => videoRefs.current[0] = el}
+                ref={(el) => {
+                  if (el) videoRefs.current[0] = el
+                }}
                 className="w-full h-full object-cover"
                 playsInline
                 muted={isMuted}
@@ -213,7 +215,9 @@ const SurFoxVideoDemo = () => {
             <div className="relative bg-gray-800 rounded-2xl overflow-hidden aspect-video shadow-2xl">
               {/* Video 2: AI Engaging Conversations */}
               <video
-                ref={el => videoRefs.current[1] = el}
+                ref={(el) => {
+                  if (el) videoRefs.current[1] = el
+                }}
                 className="w-full h-full object-cover"
                 playsInline
                 muted={isMuted}
@@ -301,7 +305,9 @@ const SurFoxVideoDemo = () => {
             <div className="relative bg-gray-800 rounded-2xl overflow-hidden aspect-video shadow-2xl">
               {/* Video 3: Hot Leads Alert System */}
               <video
-                ref={el => videoRefs.current[2] = el}
+                ref={(el) => {
+                  if (el) videoRefs.current[2] = el
+                }}
                 className="w-full h-full object-cover"
                 playsInline
                 muted={isMuted}
