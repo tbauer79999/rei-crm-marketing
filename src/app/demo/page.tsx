@@ -355,6 +355,91 @@ const SurFoxVideoDemo = () => {
         </div>
       </section>
       
+      {/* Final CTA Section */}
+      <section id="section-6" className="min-h-screen bg-gradient-to-br from-gray-900 to-black flex items-center justify-center px-4 py-20 relative overflow-hidden">
+        {/* Animated background effects */}
+        <div className="absolute inset-0">
+          <div className="absolute w-96 h-96 -top-48 -right-24 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+          <div className="absolute w-96 h-96 -bottom-48 -left-24 bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+          <div className="absolute w-96 h-96 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              The Choice Is Clear.
+            </span>
+            <br />
+            <span className="text-white">The Future of Sales Is Now.</span>
+          </h2>
+          
+          <div className="space-y-6 text-lg md:text-xl text-gray-300 leading-relaxed mb-12">
+            <p>
+              You've just witnessed the future of sales. You've seen how SurFox eradicates wasted time, 
+              eliminates uncertainty, and transforms cold prospects into engaged, ready-to-buy clients. 
+              This isn't just an improvement; it's a fundamental shift in how you acquire and qualify leads.
+            </p>
+            
+            <p>
+              In an increasingly competitive landscape, relying on outdated methods is no longer an option. 
+              Your competitors are wasting hours; <span className="italic text-purple-400">*you*</span> could be closing deals. 
+              They're chasing ghosts; <span className="italic text-purple-400">*you*</span> could be building relationships with validated prospects.
+            </p>
+            
+            <p className="text-2xl font-bold text-white">
+              SurFox is not just another tool; it's your unfair advantage.
+            </p>
+            
+            <p>
+              It's the intelligence that scales your efforts without compromising quality. 
+              It's the precision that ensures every conversation counts. 
+              It's the dedicated, tireless qualifier working 24/7, turning your lead pool into a pipeline of profitable opportunities.
+            </p>
+            
+            <p className="text-2xl font-bold text-white">
+              The time for incremental gains is over. It's time for a definitive leap forward.
+            </p>
+            
+            <p>
+              Stop settling for guesswork. Stop accepting low conversion rates. 
+              Stop losing valuable time that could be spent on strategy, high-value conversations, and closing bigger deals.
+            </p>
+            
+            <p className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Ready to revolutionize your sales efficiency and unlock unparalleled growth?
+            </p>
+            
+            <p className="text-xl font-bold text-white">
+              Don't let another qualified lead slip away. The path to a smarter, more profitable sales operation starts here.
+            </p>
+          </div>
+          
+          <a
+            href="/#pricing"
+            className="group inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-6 rounded-full font-bold text-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-pulse hover:animate-none"
+          >
+            <span className="mr-2">🔥</span>
+            CLICK HERE TO START YOUR FREE, RISK-FREE TRIAL NOW
+            <span className="ml-2">🔥</span>
+          </a>
+          
+          <div className="mt-8 flex items-center justify-center gap-6 text-sm text-gray-400">
+            <div className="flex items-center">
+              <span className="text-green-400 mr-2">✓</span>
+              No credit card required
+            </div>
+            <div className="flex items-center">
+              <span className="text-green-400 mr-2">✓</span>
+              30-day money back guarantee
+            </div>
+            <div className="flex items-center">
+              <span className="text-green-400 mr-2">✓</span>
+              Setup in 5 minutes
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <style jsx>{`
         @keyframes blob {
           0% {
