@@ -8,7 +8,7 @@ const SurFoxVideoDemo = () => {
   const [currentVideo, setCurrentVideo] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
+  const videoRefs = useRef<any[]>([])
   
   // Loading animation
   useEffect(() => {
@@ -25,6 +25,8 @@ const SurFoxVideoDemo = () => {
   
   // Video control handlers
   const togglePlayPause = (index: number) => {
+    if (typeof window === 'undefined') return
+    
     const video = videoRefs.current[index]
     if (video) {
       if (isPlaying && currentVideo === index) {
@@ -43,6 +45,8 @@ const SurFoxVideoDemo = () => {
   }
   
   const toggleMute = () => {
+    if (typeof window === 'undefined') return
+    
     setIsMuted(!isMuted)
     videoRefs.current.forEach(video => {
       if (video) video.muted = !isMuted
