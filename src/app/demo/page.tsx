@@ -119,7 +119,7 @@ const SurFoxVideoDemo = () => {
         </div>
       </section>
       
-      {/* Placeholder sections for videos and text */}
+      {/* Section 1 - Video */}
       <section id="section-1" className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center px-4">
           <div className="w-full max-w-4xl mx-auto">
@@ -208,7 +208,7 @@ const SurFoxVideoDemo = () => {
         </div>
       </section>
       
-      {/* Section 3 - Video Placeholder */}
+      {/* Section 3 - Video */}
       <section id="section-3" className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center px-4">
           <div className="w-full max-w-4xl mx-auto">
@@ -298,7 +298,7 @@ const SurFoxVideoDemo = () => {
         </div>
       </section>
       
-      {/* Section 5 - Video Placeholder */}
+      {/* Section 5 - Video */}
       <section id="section-5" className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center px-4">
           <div className="w-full max-w-4xl mx-auto">
@@ -462,6 +462,10 @@ const SurFoxVideoDemo = () => {
         
         .animation-delay-2000 {
           animation-delay: 2s;
+        }
+        
+        .animation-delay-4000 {
+          animation-delay: 4s;
         }
       `}</style>
     </div>
