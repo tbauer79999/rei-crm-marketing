@@ -8,14 +8,14 @@ const SurFoxV2 = () => {
   const [activeTab, setActiveTab] = useState('performance')
   const [activeFaq, setActiveFaq] = useState<number | null>(null)
   const [isLoading, setIsLoading] = useState(true)
-  const [typingText, setTypingText] = useState('Better Leads')
+  const [typingText, setTypingText] = useState('Warm Leads')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
 
 
   // Typing animation
   useEffect(() => {
-    const words = ['Better Leads', 'More Wins', 'Real Results', 'Less Effort']
+    const words = ['Warm Leads', 'Hot Prospects', 'Ready Buyers', 'Real Conversations']
     let wordIndex = 0
     let charIndex = 0
     let isDeleting = false
@@ -155,7 +155,7 @@ const SurFoxV2 = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6">
-                Your Sales Team Deserves
+                Turn Cold Leads Into
                 <br />
                 <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent inline-block min-h-[1.2em]">
                   {typingText}
@@ -164,13 +164,13 @@ const SurFoxV2 = () => {
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Stop wasting 80% of your time on tire-kickers. Our AI pre-qualifies every lead, 
-                so you only talk to people ready to buy.
+                Our Messaging Intelligence Engine™ analyzes 50 data points in real-time to warm up your cold leads. 
+                You only get notified when they're ready to buy.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                 <a href="#" className="group bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all flex items-center justify-center">
-                  Get Pre-Qualified Leads
+                  Get Warm Leads Daily
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a href="#" className="group bg-white text-gray-800 px-8 py-4 rounded-full font-bold text-lg border-2 border-gray-200 hover:border-purple-600 hover:shadow-lg transform hover:-translate-y-1 transition-all flex items-center justify-center">
@@ -199,18 +199,18 @@ const SurFoxV2 = () => {
             <div className="relative perspective-1000">
               <div className="bg-white rounded-2xl shadow-2xl p-6 transform rotate-y-[-15deg] rotate-x-[5deg] transition-transform hover:rotate-y-[-5deg] hover:rotate-x-[2deg]">
                 <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-xl font-bold text-gray-900">Today's Hot Leads</h3>
+                  <h3 className="text-xl font-bold text-gray-900">Messaging Intelligence Engine™</h3>
                   <div className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center animate-pulse">
                     <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
-                    Live Now
+                    Live Analysis
                   </div>
                 </div>
                 
                 <div className="space-y-4">
                   {[
-                    { name: 'Sarah Mitchell', status: 'Ready to sell • Motivated by job relocation', score: 96 },
-                    { name: 'Michael Chen', status: 'Cash buyer • Looking for investment property', score: 92 },
-                    { name: 'Jennifer Davis', status: 'Inherited property • Wants quick sale', score: 94 }
+                    { name: 'Sarah Mitchell', status: 'Engaged 12 times • High intent signals detected', score: 96, dataPoints: '47/50' },
+                    { name: 'Michael Chen', status: 'Asked about pricing • Budget confirmed', score: 92, dataPoints: '45/50' },
+                    { name: 'Jennifer Davis', status: 'Timeline urgent • Decision maker confirmed', score: 94, dataPoints: '46/50' }
                   ].map((lead, index) => (
                     <div key={index} className="bg-gray-50 rounded-xl p-4 flex justify-between items-center hover:shadow-md transition-all cursor-pointer hover:scale-[1.02]">
                       <div>
@@ -221,7 +221,7 @@ const SurFoxV2 = () => {
                         <div className="text-2xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                           {lead.score}%
                         </div>
-                        <div className="text-xs text-gray-500">Qualification Score</div>
+                        <div className="text-xs text-gray-500">Data Points: {lead.dataPoints}</div>
                       </div>
                     </div>
                   ))}
@@ -231,13 +231,13 @@ const SurFoxV2 = () => {
                 <div className="absolute -top-8 -right-10 bg-white rounded-lg shadow-lg p-3 animate-float">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-sm font-semibold">New qualified lead!</span>
+                    <span className="text-sm font-semibold">Lead is now warm!</span>
                   </div>
                 </div>
                 
                 <div className="absolute -bottom-8 -left-10 bg-white rounded-lg shadow-lg p-4 text-center animate-float animation-delay-2000">
-                  <div className="text-3xl font-black text-purple-600">87%</div>
-                  <div className="text-xs text-gray-500">Close Rate</div>
+                  <div className="text-3xl font-black text-purple-600">50</div>
+                  <div className="text-xs text-gray-500">Data Points Analyzed</div>
                 </div>
               </div>
             </div>
@@ -251,10 +251,10 @@ const SurFoxV2 = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: '73%', label: 'Less Time on Phone' },
-              { number: '3.2x', label: 'Higher Close Rate' },
-              { number: '94%', label: 'Lead Quality Score' },
-              { number: '2,847', label: 'Happy Sales Teams' }
+              { number: '89%', label: 'Lead Warm-Up Rate' },
+              { number: '50', label: 'Data Points Analyzed' },
+              { number: '24/7', label: 'AI Engagement' },
+              { number: '5.2x', label: 'Conversion Increase' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
@@ -272,10 +272,10 @@ const SurFoxV2 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
-              The Problem Isn't Your Sales Skills
+              Cold Leads Are Killing Your Sales
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              You're wasting time talking to people who will never buy. We fix that.
+              Your team wastes time on unresponsive leads. Our Messaging Intelligence Engine™ changes that.
             </p>
           </div>
           
@@ -283,15 +283,15 @@ const SurFoxV2 = () => {
             <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-red-900 mb-6 flex items-center">
                 <span className="text-3xl mr-3">😤</span>
-                Your Current Reality
+                Without SurFox
               </h3>
               <ul className="space-y-4">
                 {[
-                  '50+ calls to find one serious buyer',
-                  '"Just looking" wastes hours daily',
-                  'Hot leads go cold while you chase ghosts',
-                  'No idea who\'s actually motivated',
-                  'Burnout from endless rejection'
+                  'Cold outreach gets ignored or deleted',
+                  'No idea who\'s interested or why',
+                  'Sales team calls unresponsive leads',
+                  'Prospects aren\'t ready to talk',
+                  'Conversion rates stay low'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start text-red-700">
                     <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
@@ -305,15 +305,15 @@ const SurFoxV2 = () => {
               <div className="absolute -top-24 -right-24 w-48 h-48 bg-green-500 rounded-full opacity-10"></div>
               <h3 className="text-2xl font-bold text-green-900 mb-6 flex items-center relative z-10">
                 <span className="text-3xl mr-3">🚀</span>
-                Your Future with SurFox
+                With SurFox
               </h3>
               <ul className="space-y-4 relative z-10">
                 {[
-                  'Every call is with a qualified prospect',
-                  'AI filters out time-wasters 24/7',
-                  'Prospects are warmed up and ready',
-                  'Know their pain points before calling',
-                  'Close more deals in less time'
+                  'AI engages and warms every lead',
+                  '50 data points reveal buying intent',
+                  'Sales only calls warm prospects',
+                  'Leads are educated and ready',
+                  'Close rates skyrocket'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start text-green-700">
                     <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
@@ -331,10 +331,10 @@ const SurFoxV2 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
-              From Cold Lead to Closed Deal in 4 Steps
+              The Messaging Intelligence Engine™ Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI does the heavy lifting, so you can focus on what you do best: closing.
+              50 data points. Real-time analysis. Warm leads delivered to your team.
             </p>
           </div>
           
@@ -345,10 +345,10 @@ const SurFoxV2 = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {[
-                { icon: '📥', step: 1, title: 'Leads Flow In', description: 'Your marketing keeps working as usual. We integrate with any lead source.' },
-                { icon: '🤖', step: 2, title: 'AI Qualifies 24/7', description: 'Our AI engages instantly, asking the right questions to identify serious buyers.' },
-                { icon: '🔥', step: 3, title: 'Prospects Get Warmed', description: 'Qualified leads are educated and prepared for your conversation.' },
-                { icon: '💰', step: 4, title: 'You Close Deals', description: 'Talk only to motivated prospects who are ready to move forward.' }
+                { icon: '📥', step: 1, title: 'Import Cold Leads', description: 'Connect your CRM or upload your lead list. We work with any source.' },
+                { icon: '🤖', step: 2, title: 'AI Engages Instantly', description: 'Our AI starts personalized conversations, analyzing 50 data points per lead.' },
+                { icon: '🔥', step: 3, title: 'Leads Get Warmed', description: 'Through intelligent messaging, cold leads become warm prospects.' },
+                { icon: '🔔', step: 4, title: 'You Get Notified', description: 'When leads are ready, your sales team gets alerted with full context.' }
               ].map((item, index) => (
                 <div key={index} className="text-center group">
                   <div className="relative">
@@ -373,20 +373,20 @@ const SurFoxV2 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
-              A Command Center Built for Closers
+              Intelligence That Drives Results
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real-time insights, AI optimization, and total control over your pipeline.
+              Monitor your Messaging Intelligence Engine™ in real-time and watch cold leads transform.
             </p>
           </div>
           
           <div>
             <div className="flex justify-center gap-4 mb-12 flex-wrap">
               {[
-                { id: 'performance', label: 'Team Performance', icon: TrendingUp },
-                { id: 'ai', label: 'AI Optimization', icon: Brain },
-                { id: 'analytics', label: 'Lead Analytics', icon: BarChart3 },
-                { id: 'automation', label: 'Automation Rules', icon: Settings }
+                { id: 'performance', label: 'Engine Analytics', icon: TrendingUp },
+                { id: 'ai', label: '50 Data Points', icon: Brain },
+                { id: 'analytics', label: 'Lead Warming', icon: BarChart3 },
+                { id: 'automation', label: 'Alert Settings', icon: Settings }
               ].map((tab) => {
                 const Icon = tab.icon
                 return (
@@ -411,13 +411,13 @@ const SurFoxV2 = () => {
                 {activeTab === 'performance' && (
                   <>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      Track Every Rep, Every Deal, Every Dollar
+                      Watch Your Engine Work in Real-Time
                     </h3>
                     <p className="text-lg text-gray-600 mb-6">
-                      Get a bird's-eye view of your entire sales operation. See who's crushing it, who needs help, and where the opportunities are.
+                      The Messaging Intelligence Engine™ shows you exactly how your leads are warming up, with full transparency into every interaction.
                     </p>
                     <ul className="space-y-3">
-                      {['Individual rep scorecards', 'Revenue attribution tracking', 'Win rate optimization insights'].map((item, index) => (
+                      {['Real-time engagement metrics', 'Lead temperature tracking', 'Conversion pathway analysis'].map((item, index) => (
                         <li key={index} className="flex items-center text-gray-700">
                           <Check className="w-5 h-5 text-green-500 mr-3" />
                           {item}
@@ -430,13 +430,13 @@ const SurFoxV2 = () => {
                 {activeTab === 'ai' && (
                   <>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      AI That Gets Smarter Every Day
+                      50 Data Points = Perfect Timing
                     </h3>
                     <p className="text-lg text-gray-600 mb-6">
-                      Our AI doesn't just qualify leads—it learns from every interaction to get better at finding your perfect prospects.
+                      Our proprietary algorithm analyzes 50 distinct behavioral and contextual data points to determine the exact moment a lead is ready for sales outreach.
                     </p>
                     <ul className="space-y-3">
-                      {['A/B test conversation flows', 'Optimize qualification criteria', 'Custom AI training for your market'].map((item, index) => (
+                      {['Engagement frequency & depth', 'Content interest mapping', 'Buying signal detection'].map((item, index) => (
                         <li key={index} className="flex items-center text-gray-700">
                           <Check className="w-5 h-5 text-green-500 mr-3" />
                           {item}
@@ -449,13 +449,13 @@ const SurFoxV2 = () => {
                 {activeTab === 'analytics' && (
                   <>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      Know Everything Before You Call
+                      From Cold to Hot: Track the Journey
                     </h3>
                     <p className="text-lg text-gray-600 mb-6">
-                      Deep insights into every lead's journey, pain points, and readiness to buy. Never go into a call blind again.
+                      See exactly how the Messaging Intelligence Engine™ warms up each lead, with detailed insights into what's working.
                     </p>
                     <ul className="space-y-3">
-                      {['Complete conversation history', 'Pain point identification', 'Buying timeline tracking'].map((item, index) => (
+                      {['Lead temperature progression', 'Engagement history timeline', 'Interest topic analysis'].map((item, index) => (
                         <li key={index} className="flex items-center text-gray-700">
                           <Check className="w-5 h-5 text-green-500 mr-3" />
                           {item}
@@ -468,13 +468,13 @@ const SurFoxV2 = () => {
                 {activeTab === 'automation' && (
                   <>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      Set It and Forget It Automation
+                      Smart Alerts When It Matters
                     </h3>
                     <p className="text-lg text-gray-600 mb-6">
-                      Create custom rules for lead routing, follow-ups, and escalations. Your pipeline runs itself while you close deals.
+                      Configure intelligent alerts based on the 50 data points. Get notified only when leads meet your exact criteria.
                     </p>
                     <ul className="space-y-3">
-                      {['Smart lead distribution', 'Automated follow-up sequences', 'Custom escalation rules'].map((item, index) => (
+                      {['Custom alert thresholds', 'Team routing rules', 'Priority lead notifications'].map((item, index) => (
                         <li key={index} className="flex items-center text-gray-700">
                           <Check className="w-5 h-5 text-green-500 mr-3" />
                           {item}
@@ -490,13 +490,13 @@ const SurFoxV2 = () => {
                   <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
                     <div className="flex items-center justify-between">
                       <h4 className="font-semibold text-gray-900">
-                        {activeTab === 'performance' && 'Sales Team Performance'}
-                        {activeTab === 'ai' && 'AI Optimization Center'}
-                        {activeTab === 'analytics' && 'Lead Intelligence'}
-                        {activeTab === 'automation' && 'Automation Rules'}
+                        {activeTab === 'performance' && 'Messaging Intelligence Engine™'}
+                        {activeTab === 'ai' && '50 Data Points Analysis'}
+                        {activeTab === 'analytics' && 'Lead Warming Progress'}
+                        {activeTab === 'automation' && 'Alert Configuration'}
                       </h4>
                       <button className="bg-purple-600 text-white px-4 py-1 rounded-lg text-sm font-semibold">
-                        {activeTab === 'ai' ? '+ New Test' : 'Export'}
+                        {activeTab === 'ai' ? 'View All' : 'Configure'}
                       </button>
                     </div>
                   </div>
@@ -506,28 +506,28 @@ const SurFoxV2 = () => {
                       <>
                         <div className="grid grid-cols-3 gap-4 mb-6">
                           <div className="bg-blue-50 rounded-lg p-4 text-center">
-                            <div className="text-2xl font-bold text-blue-600">$1.2M</div>
-                            <div className="text-sm text-gray-600">Total Revenue</div>
+                            <div className="text-2xl font-bold text-blue-600">2,847</div>
+                            <div className="text-sm text-gray-600">Leads Engaged</div>
                           </div>
                           <div className="bg-green-50 rounded-lg p-4 text-center">
                             <div className="text-2xl font-bold text-green-600">89%</div>
-                            <div className="text-sm text-gray-600">Qualification Rate</div>
+                            <div className="text-sm text-gray-600">Warm Rate</div>
                           </div>
                           <div className="bg-purple-50 rounded-lg p-4 text-center">
-                            <div className="text-2xl font-bold text-purple-600">3.2x</div>
-                            <div className="text-sm text-gray-600">ROI Increase</div>
+                            <div className="text-2xl font-bold text-purple-600">437</div>
+                            <div className="text-sm text-gray-600">Ready Now</div>
                           </div>
                         </div>
                         <div className="space-y-3">
                           {[
-                            { name: 'Sarah Chen', leads: 45, won: 8, revenue: '$240,000', rate: '17.8%' },
-                            { name: 'Mike Rodriguez', leads: 52, won: 12, revenue: '$360,000', rate: '23.1%' }
-                          ].map((rep, index) => (
+                            { name: 'Real Estate Campaign', engaged: 145, warm: 89, ready: 23 },
+                            { name: 'B2B Software Leads', engaged: 203, warm: 156, ready: 41 }
+                          ].map((campaign, index) => (
                             <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                              <div className="font-semibold text-purple-600">{rep.name}</div>
-                              <div className="text-sm text-gray-600">{rep.leads} leads</div>
-                              <div className="text-sm font-semibold text-green-600">{rep.revenue}</div>
-                              <div className="text-sm text-gray-600">{rep.rate}</div>
+                              <div className="font-semibold text-purple-600">{campaign.name}</div>
+                              <div className="text-sm text-gray-600">{campaign.engaged} engaged</div>
+                              <div className="text-sm font-semibold text-orange-600">{campaign.warm} warm</div>
+                              <div className="text-sm font-bold text-green-600">{campaign.ready} ready</div>
                             </div>
                           ))}
                         </div>
@@ -536,24 +536,29 @@ const SurFoxV2 = () => {
                     
                     {activeTab === 'ai' && (
                       <div className="space-y-4">
-                        <div className="border border-gray-200 rounded-lg p-4">
-                          <div className="flex justify-between items-center mb-3">
-                            <h5 className="font-semibold">Opening Line Test</h5>
-                            <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">
-                              Running
-                            </span>
-                          </div>
-                          <p className="text-sm text-gray-600 mb-3">Testing: Hot Lead Conversion</p>
-                          <div className="bg-blue-50 rounded-lg p-3">
-                            <div className="font-semibold text-blue-900 mb-2">🏆 Variant B Leading (+7%)</div>
-                            <div className="flex justify-between text-xs text-blue-700 mb-2">
-                              <span>Participants: 1,247</span>
-                              <span>Confidence: Significant</span>
+                        <div className="mb-4">
+                          <h5 className="font-semibold mb-3">Top Contributing Data Points</h5>
+                          {[
+                            { point: 'Message open rate', value: '92%', impact: 'High' },
+                            { point: 'Link click behavior', value: '67%', impact: 'High' },
+                            { point: 'Response sentiment', value: 'Positive', impact: 'Medium' },
+                            { point: 'Time spent reading', value: '3.2 min', impact: 'High' },
+                            { point: 'Question engagement', value: '4/5', impact: 'Very High' }
+                          ].map((data, index) => (
+                            <div key={index} className="flex justify-between items-center p-2 hover:bg-gray-50 rounded">
+                              <span className="text-sm">{data.point}</span>
+                              <div className="flex items-center gap-3">
+                                <span className="text-sm font-semibold">{data.value}</span>
+                                <span className={`text-xs px-2 py-1 rounded-full ${
+                                  data.impact === 'Very High' ? 'bg-red-100 text-red-700' :
+                                  data.impact === 'High' ? 'bg-orange-100 text-orange-700' :
+                                  'bg-yellow-100 text-yellow-700'
+                                }`}>
+                                  {data.impact}
+                                </span>
+                              </div>
                             </div>
-                            <div className="w-full bg-blue-200 rounded-full h-2">
-                              <div className="bg-blue-600 h-2 rounded-full" style={{ width: '78%' }}></div>
-                            </div>
-                          </div>
+                          ))}
                         </div>
                       </div>
                     )}
@@ -561,28 +566,28 @@ const SurFoxV2 = () => {
                     {activeTab === 'analytics' && (
                       <div>
                         <div className="mb-6">
-                          <div className="h-32 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg flex items-center justify-center">
+                          <div className="h-32 bg-gradient-to-r from-blue-100 via-orange-100 to-red-100 rounded-lg flex items-center justify-center">
                             <div className="text-center">
-                              <div className="text-3xl font-bold text-purple-600 mb-1">92%</div>
-                              <div className="text-sm text-gray-600">Average Lead Score</div>
+                              <div className="text-3xl font-bold text-purple-600 mb-1">℃</div>
+                              <div className="text-sm text-gray-600">Lead Temperature Map</div>
                             </div>
                           </div>
                         </div>
                         <div className="space-y-3">
-                          <h5 className="font-semibold text-gray-900">Top Pain Points Identified</h5>
+                          <h5 className="font-semibold text-gray-900">Warming Progress</h5>
                           {[
-                            { point: 'Need to relocate quickly', percentage: 45 },
-                            { point: 'Inherited property issues', percentage: 38 },
-                            { point: 'Financial distress', percentage: 32 }
+                            { stage: 'Cold → Lukewarm', count: 847, percentage: 45 },
+                            { stage: 'Lukewarm → Warm', count: 623, percentage: 78 },
+                            { stage: 'Warm → Hot', count: 289, percentage: 92 }
                           ].map((item, index) => (
                             <div key={index}>
                               <div className="flex justify-between text-sm mb-1">
-                                <span>{item.point}</span>
-                                <span className="font-semibold">{item.percentage}%</span>
+                                <span>{item.stage}</span>
+                                <span className="font-semibold">{item.count} leads</span>
                               </div>
                               <div className="w-full bg-gray-200 rounded-full h-2">
                                 <div 
-                                  className="bg-gradient-to-r from-purple-600 to-pink-600 h-2 rounded-full" 
+                                  className="bg-gradient-to-r from-blue-400 via-orange-400 to-red-400 h-2 rounded-full" 
                                   style={{ width: `${item.percentage}%` }}
                                 ></div>
                               </div>
@@ -595,12 +600,13 @@ const SurFoxV2 = () => {
                     {activeTab === 'automation' && (
                       <div className="space-y-4">
                         {[
-                          { condition: 'If qualification score > 90%', action: 'Then assign to top performer', color: 'purple' },
-                          { condition: 'If no response in 2 hours', action: 'Then send SMS reminder', color: 'pink' }
+                          { condition: 'If 40+ data points triggered', action: 'Alert top sales rep immediately', color: 'red' },
+                          { condition: 'If engagement score > 85%', action: 'Send to senior closer', color: 'orange' },
+                          { condition: 'If responds within 1 hour', action: 'Mark as high priority', color: 'green' }
                         ].map((rule, index) => (
                           <div key={index} className="border border-gray-200 rounded-lg p-4">
                             <div className="flex items-center mb-3">
-                              <div className={`w-4 h-4 bg-${rule.color}-600 rounded-full mr-3`}></div>
+                              <div className={`w-4 h-4 bg-${rule.color}-500 rounded-full mr-3`}></div>
                               <span className="text-sm font-semibold">{rule.condition}</span>
                             </div>
                             <div className="flex items-center ml-7">
@@ -624,38 +630,38 @@ const SurFoxV2 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
-              Sales Teams That Stopped Chasing Ghosts
+              Sales Teams Love the Messaging Intelligence Engine™
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real results from teams who transformed their sales process with SurFox.
+              See how teams are transforming cold leads into warm conversations.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                quote: "I went from 50 calls a day to 8. Same number of deals closed, but now I actually have time to prepare for each conversation. Game changer.",
+                quote: "The 50 data points analysis is incredible. We know exactly when to reach out, and prospects are actually happy to hear from us. Our close rate tripled.",
                 author: 'Sarah Chen',
-                role: 'Senior Sales Rep • Real Estate',
+                role: 'VP Sales • Real Estate Tech',
                 avatar: 'SC',
-                metric: 'Time Saved',
-                value: '84%'
+                metric: 'Leads Warmed',
+                value: '847/mo'
               },
               {
-                quote: "My close rate went from 15% to 47% overnight. When everyone you talk to is pre-qualified, selling becomes a conversation, not a battle.",
+                quote: "We went from cold calling all day to having warm conversations with interested prospects. The Messaging Intelligence Engine changed everything for us.",
                 author: 'Marcus Rodriguez',
-                role: 'Sales Manager • Solar',
+                role: 'Sales Director • SaaS',
                 avatar: 'MR',
-                metric: 'Close Rate',
-                value: '3.1x'
+                metric: 'Response Rate',
+                value: '73%'
               },
               {
-                quote: "We scaled from 5 to 25 reps without losing quality. The AI ensures everyone gets the same high-quality leads. It's like cloning your best qualifier.",
+                quote: "Having AI warm up our leads 24/7 means my team only talks to people ready to buy. It's like having 100 SDRs working around the clock.",
                 author: 'Jennifer Wu',
-                role: 'VP of Sales • B2B SaaS',
+                role: 'CEO • Marketing Agency',
                 avatar: 'JW',
-                metric: 'Team Growth',
-                value: '5x'
+                metric: 'ROI Increase',
+                value: '5.2x'
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all cursor-pointer hover:-translate-y-2 relative">
@@ -687,10 +693,10 @@ const SurFoxV2 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
-              Pricing That Scales With Your Success
+              Pay Only for Warm Leads
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Only pay for qualified leads. No setup fees. Cancel anytime.
+              No setup fees. No cold leads. Just warm prospects ready to buy.
             </p>
           </div>
           
@@ -698,11 +704,11 @@ const SurFoxV2 = () => {
             {[
               {
                 name: 'Starter',
-                description: 'Perfect for individual reps',
+                description: 'Perfect for testing the waters',
                 price: 97,
                 features: [
-                  'Up to 50 qualified leads',
-                  'Basic AI qualification',
+                  'Up to 100 cold leads warmed',
+                  'Basic Messaging Intelligence',
                   'Email support',
                   'CRM integrations'
                 ],
@@ -710,14 +716,14 @@ const SurFoxV2 = () => {
               },
               {
                 name: 'Professional',
-                description: 'For high-performing teams',
+                description: 'For serious sales teams',
                 price: 297,
                 features: [
-                  'Up to 200 qualified leads',
-                  'Advanced AI + A/B testing',
-                  'Priority phone support',
+                  'Up to 500 cold leads warmed',
+                  'Full 50 data point analysis',
+                  'Priority support',
                   'All integrations + API',
-                  'Team performance analytics'
+                  'Custom alert rules'
                 ],
                 featured: true
               },
@@ -726,10 +732,10 @@ const SurFoxV2 = () => {
                 description: 'For scaling organizations',
                 price: 'Custom',
                 features: [
-                  'Unlimited qualified leads',
-                  'Custom AI training',
+                  'Unlimited lead warming',
+                  'Custom data point configuration',
                   'Dedicated success manager',
-                  'Custom integrations',
+                  'White-label options',
                   'SLA guarantees'
                 ],
                 featured: false
@@ -798,35 +804,35 @@ const SurFoxV2 = () => {
               Questions? We've Got Answers
             </h2>
             <p className="text-xl text-gray-600">
-              Everything you need to know about transforming your sales process.
+              Everything you need to know about the Messaging Intelligence Engine™.
             </p>
           </div>
           
           <div className="space-y-4">
             {[
               {
-                question: 'What exactly is a "qualified lead"?',
-                answer: 'A qualified lead is someone who has been engaged by our AI, answered key qualifying questions, expressed genuine interest, meets your specific criteria (budget, timeline, need), and has agreed to speak with you. We use a proprietary scoring system that ensures you only pay for leads that are actually worth your time.'
+                question: 'What exactly is the Messaging Intelligence Engine™?',
+                answer: 'Our proprietary AI system that engages with your cold leads through intelligent conversations. It analyzes 50 different data points in real-time - from engagement patterns to content interests to response timing - to determine when a lead has warmed up and is ready for sales outreach.'
               },
               {
-                question: 'How quickly will I see results?',
-                answer: 'Most clients see qualified leads within 24-48 hours of setup. The AI starts working immediately on your existing leads, and you\'ll notice the difference in call quality from day one. Full optimization typically happens within the first 2 weeks as the AI learns your specific market.'
+                question: 'What are the 50 data points you analyze?',
+                answer: 'We analyze behavioral signals (open rates, click patterns, response times), contextual indicators (content preferences, question types, urgency language), engagement depth (time spent, pages viewed, return visits), and buying signals (budget mentions, timeline discussions, decision-maker involvement). Each data point is weighted based on your specific industry and sales process.'
               },
               {
-                question: 'Will this work with my CRM?',
-                answer: 'Yes! We integrate seamlessly with all major CRMs including Salesforce, HubSpot, Pipedrive, Follow Up Boss, and more. We also offer API access for custom integrations. Setup takes about 15 minutes with our step-by-step guide.'
+                question: 'How long does it take to warm up a lead?',
+                answer: 'It varies based on the lead and industry, but typically we see cold leads warming up within 7-14 days of engagement. Some leads warm faster (2-3 days) if they\'re already in-market, while others may take 30+ days. The beauty is our AI works 24/7, so you\'re always nurturing leads even while you sleep.'
               },
               {
-                question: 'What if I\'m not satisfied with lead quality?',
-                answer: 'We have a 94% satisfaction rate, but if you receive a lead that doesn\'t meet your criteria, simply mark it in the dashboard and you won\'t be charged. Plus, we offer a 30-day money-back guarantee if you\'re not seeing the results you expected.'
+                question: 'Will this work with my existing CRM and tools?',
+                answer: 'Absolutely! We integrate seamlessly with all major CRMs including Salesforce, HubSpot, Pipedrive, and more. We also connect with your email marketing tools, calendar systems, and communication platforms. Setup typically takes less than 30 minutes.'
               },
               {
-                question: 'How is this different from other lead services?',
-                answer: 'Unlike lead generation services that send you cold contacts, we take YOUR existing leads and qualify them using AI. We don\'t generate leads - we make sure the leads you already have are actually worth calling. It\'s like having a top qualifier working 24/7 just for you.'
+                question: 'How do I know when a lead is ready?',
+                answer: 'When our Messaging Intelligence Engine™ determines a lead has crossed the threshold (based on your customized data point settings), you\'ll receive an instant notification via email, SMS, or directly in your CRM. The alert includes the full conversation history and key insights about what the lead is interested in.'
               },
               {
-                question: 'Can I customize the AI\'s approach?',
-                answer: 'Absolutely! You can customize qualification criteria, conversation scripts, and even the AI\'s tone to match your brand. Our Professional and Enterprise plans include A/B testing so you can optimize what works best for your specific market.'
+                question: 'What makes this different from email automation?',
+                answer: 'Traditional email automation sends the same messages to everyone. Our Messaging Intelligence Engine™ has dynamic, personalized conversations with each lead, adapting based on their responses and behavior. It\'s like having a skilled SDR engaging with each lead individually, but powered by AI that never sleeps.'
               }
             ].map((item, index) => (
               <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
@@ -857,10 +863,10 @@ const SurFoxV2 = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-pink-900/20"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-black mb-4">
-            Ready to Stop Wasting Time on Tire-Kickers?
+            Ready to Turn Cold Leads Into Warm Conversations?
           </h2>
           <p className="text-xl opacity-90 mb-8">
-            Join 2,847 sales teams who only talk to qualified prospects.
+            Let our Messaging Intelligence Engine™ warm up your leads while you focus on closing deals.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -905,7 +911,7 @@ const SurFoxV2 = () => {
                   SurFox
                 </h3>
               </div>
-              <p className="mb-6">We don't close deals. We deliver people ready to buy.</p>
+              <p className="mb-6">Powered by the Messaging Intelligence Engine™</p>
               <div className="flex gap-4">
                 {/* Social links would go here */}
               </div>
