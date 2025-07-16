@@ -1,21 +1,29 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { ArrowRight, Play, Check, X, Phone, Zap, Target, Users, Filter, TrendingUp, BarChart3, Brain, Settings, Star, Menu } from 'lucide-react'
+import { ArrowRight, Play, Check, X, Phone, Zap, Target, Users, Filter, TrendingUp, BarChart3, Brain, Settings, Star, Menu, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Command, Terminal, GitBranch } from 'lucide-react'
 
-const SurFoxV2 = () => {
+const EnterpriseSurFox = () => {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [activeTab, setActiveTab] = useState('performance')
+  const [activeTab, setActiveTab] = useState('analytics')
   const [activeFaq, setActiveFaq] = useState<number | null>(null)
   const [isLoading, setIsLoading] = useState(true)
-  const [typingText, setTypingText] = useState('Warm Leads')
+  const [typingText, setTypingText] = useState('Enterprise Leads')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
-
-  // Typing animation
+  // Mouse tracking for subtle parallax effects
   useEffect(() => {
-    const words = ['Warm Leads', 'Hot Prospects', 'Ready Buyers', 'Real Conversations']
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY })
+    }
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+
+  // Typing animation for enterprise terms
+  useEffect(() => {
+    const words = ['Enterprise Leads', 'B2B Prospects', 'Key Accounts', 'Decision Makers']
     let wordIndex = 0
     let charIndex = 0
     let isDeleting = false
@@ -39,7 +47,7 @@ const SurFoxV2 = () => {
         wordIndex = (wordIndex + 1) % words.length
         setTimeout(typeAnimation, 500)
       } else {
-        setTimeout(typeAnimation, isDeleting ? 50 : 100)
+        setTimeout(typeAnimation, isDeleting ? 80 : 120)
       }
     }
 
@@ -58,66 +66,63 @@ const SurFoxV2 = () => {
 
   // Loading screen
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 1500)
+    setTimeout(() => setIsLoading(false), 2000)
   }, [])
-
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-white z-50 flex items-center justify-center">
-        <div className="w-16 h-16 border-4 border-gray-200 border-t-purple-600 rounded-full animate-spin"></div>
+      <div className="fixed inset-0 bg-slate-950 z-50 flex items-center justify-center">
+        <div className="relative">
+          <div className="w-16 h-16 border-2 border-slate-700 border-t-blue-500 rounded-full animate-spin"></div>
+          <div className="absolute inset-0 w-16 h-16 border-2 border-transparent border-r-purple-500 rounded-full animate-spin" style={{ animationDelay: '0.5s', animationDirection: 'reverse' }}></div>
+        </div>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
- 
+    <div className="min-h-screen bg-slate-950 text-slate-100 overflow-x-hidden">
+      
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-40 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-xl shadow-lg py-4' : 'py-6'
+      <nav className={`fixed top-0 w-full z-40 transition-all duration-500 ${
+        isScrolled ? 'bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/50' : ''
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <a href="#" className="flex items-center space-x-3">
-              <img 
-                src="/logo.png" 
-                alt="SurFox Logo" 
-                className="w-10 h-10 object-contain"
-              />
-              <span className="text-2xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                SurFox
+          <div className="flex justify-between items-center h-16">
+            <a href="#" className="flex items-center space-x-3 group">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Terminal className="w-4 h-4 text-white" />
+              </div>
+              <span className="text-xl font-semibold tracking-tight">
+                <span className="text-white">Sur</span>
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Fox</span>
               </span>
             </a>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#how-it-works" className="text-gray-600 hover:text-gray-900 font-medium transition-colors relative group">
-                How It Works
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
-              </a>
-              <a href="/demo" className="text-gray-600 hover:text-gray-900 font-medium transition-colors relative group">
-                Demo
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
-              </a>
-              <a href="#platform" className="text-gray-600 hover:text-gray-900 font-medium transition-colors relative group">
+              <a href="#platform" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
                 Platform
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
               </a>
-              <a href="#testimonials" className="text-gray-600 hover:text-gray-900 font-medium transition-colors relative group">
-                Results
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+              <a href="#intelligence" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+                Intelligence Engine
               </a>
-              <a href="#pricing" className="text-gray-600 hover:text-gray-900 font-medium transition-colors relative group">
-                Pricing
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+              <a href="#enterprise" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+                Enterprise
               </a>
-              <a href="#" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all">
-                Start Free Trial
+              <a href="#security" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+                Security
+              </a>
+              <div className="w-px h-6 bg-slate-700"></div>
+              <a href="#" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+                Sign In
+              </a>
+              <a href="#" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all">
+                Request Demo
               </a>
             </div>
 
             <button 
-              className="md:hidden"
+              className="md:hidden text-slate-400 hover:text-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <Menu className="w-6 h-6" />
@@ -127,117 +132,192 @@ const SurFoxV2 = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t mt-4">
-            <div className="px-4 py-4 space-y-4">
-              <a href="#how-it-works" className="block text-gray-600 hover:text-gray-900 font-medium">How It Works</a>
-              <a href="/demo" className="block text-gray-600 hover:text-gray-900 font-medium">Demo</a>
-              <a href="#platform" className="block text-gray-600 hover:text-gray-900 font-medium">Platform</a>
-              <a href="#testimonials" className="block text-gray-600 hover:text-gray-900 font-medium">Results</a>
-              <a href="#pricing" className="block text-gray-600 hover:text-gray-900 font-medium">Pricing</a>
-              <a href="#" className="block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2.5 rounded-full font-semibold text-center">
-                Start Free Trial
-              </a>
+          <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-slate-800">
+            <div className="px-4 py-6 space-y-4">
+              <a href="#platform" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Platform</a>
+              <a href="#intelligence" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Intelligence Engine</a>
+              <a href="#enterprise" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Enterprise</a>
+              <a href="#security" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Security</a>
+              <div className="pt-4 border-t border-slate-800">
+                <a href="#" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium mb-3">Sign In</a>
+                <a href="#" className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium text-center">
+                  Request Demo
+                </a>
+              </div>
             </div>
           </div>
         )}
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen relative flex items-center bg-gradient-to-br from-gray-50 via-purple-50 to-pink-50 overflow-hidden">
-        {/* Animated Background Orbs */}
-        <div className="absolute inset-0">
-          <div className="absolute w-96 h-96 -top-48 -right-24 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
-          <div className="absolute w-96 h-96 -bottom-48 -left-24 bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-2000"></div>
-          <div className="absolute w-96 h-96 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-4000"></div>
+      <section className="min-h-screen relative flex items-center overflow-hidden">
+        {/* Background Grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
+        
+        {/* Gradient Orbs with Parallax */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div 
+            className="absolute w-96 h-96 bg-gradient-to-r from-blue-600/30 to-purple-600/30 rounded-full blur-3xl"
+            style={{
+              top: '10%',
+              right: '10%',
+              transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`
+            }}
+          ></div>
+          <div 
+            className="absolute w-96 h-96 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-full blur-3xl"
+            style={{
+              bottom: '20%',
+              left: '10%',
+              transform: `translate(${mousePosition.x * -0.02}px, ${mousePosition.y * -0.02}px)`
+            }}
+          ></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6">
-                Turn Cold Leads Into
-                <br />
-                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent inline-block min-h-[1.2em]">
-                  {typingText}
-                  <span className="animate-pulse">|</span>
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7">
+              <div className="mb-6">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800/50 text-slate-300 border border-slate-700/50">
+                  <Cpu className="w-3 h-3 mr-2" />
+                  AI-Powered Platform
                 </span>
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                <span className="text-white">Transform Cold</span>
+                <br />
+                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  {typingText}
+                  <span className="animate-pulse text-blue-400">|</span>
+                </span>
+                <br />
+                <span className="text-white">at Scale</span>
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Our Messaging Intelligence Engine™ analyzes 50 data points in real-time to warm up your cold leads. 
-                You only get notified when they're ready to buy.
+              <p className="text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl">
+                The Messaging Intelligence Engine™ leverages advanced AI to analyze 
+                <span className="text-blue-400 font-semibold"> 50+ behavioral data points</span> 
+                in real-time, delivering qualified prospects when they're ready to engage.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                <a href="#" className="group bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all flex items-center justify-center">
-                  Get Warm Leads Daily
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a href="#" className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all flex items-center justify-center">
+                  Request Demo
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
-                <a href="#" className="group bg-white text-gray-800 px-8 py-4 rounded-full font-bold text-lg border-2 border-gray-200 hover:border-purple-600 hover:shadow-lg transform hover:-translate-y-1 transition-all flex items-center justify-center">
+                <a href="#" className="group border border-slate-700 text-slate-300 px-8 py-4 rounded-lg font-semibold hover:bg-slate-800/50 transition-all flex items-center justify-center">
                   <Play className="mr-2 w-5 h-5" />
-                  Watch 2-Min Demo
+                  Platform Overview
                 </a>
               </div>
               
-              <div className="flex items-center gap-6 justify-center lg:justify-start text-sm text-gray-500">
-                <div className="flex items-center">
-                  <Check className="w-4 h-4 text-green-500 mr-2" />
-                  No credit card required
+              <div className="grid grid-cols-3 gap-6 text-sm">
+                <div className="flex items-center text-slate-400">
+                  <Shield className="w-4 h-4 text-emerald-400 mr-2" />
+                  SOC 2 Type II
                 </div>
-                <div className="flex items-center">
-                  <Check className="w-4 h-4 text-green-500 mr-2" />
-                  30-day money back
+                <div className="flex items-center text-slate-400">
+                  <Lock className="w-4 h-4 text-emerald-400 mr-2" />
+                  GDPR Compliant
                 </div>
-                <div className="flex items-center">
-                  <Check className="w-4 h-4 text-green-500 mr-2" />
-                  Setup in 5 minutes
+                <div className="flex items-center text-slate-400">
+                  <Award className="w-4 h-4 text-emerald-400 mr-2" />
+                  99.9% SLA
                 </div>
               </div>
             </div>
             
-            {/* 3D Dashboard Mockup */}
-            <div className="relative perspective-1000">
-              <div className="bg-white rounded-2xl shadow-2xl p-6 transform rotate-y-[-15deg] rotate-x-[5deg] transition-transform hover:rotate-y-[-5deg] hover:rotate-x-[2deg]">
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-xl font-bold text-gray-900">Messaging Intelligence Engine™</h3>
-                  <div className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center animate-pulse">
-                    <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
-                    Live Analysis
-                  </div>
-                </div>
-                
-                <div className="space-y-4">
-                  {[
-                    { name: 'Sarah Mitchell', status: 'Engaged 12 times • High intent signals detected', score: 96, dataPoints: '47/50' },
-                    { name: 'Michael Chen', status: 'Asked about pricing • Budget confirmed', score: 92, dataPoints: '45/50' },
-                    { name: 'Jennifer Davis', status: 'Timeline urgent • Decision maker confirmed', score: 94, dataPoints: '46/50' }
-                  ].map((lead, index) => (
-                    <div key={index} className="bg-gray-50 rounded-xl p-4 flex justify-between items-center hover:shadow-md transition-all cursor-pointer hover:scale-[1.02]">
-                      <div>
-                        <h4 className="font-semibold text-gray-900">{lead.name}</h4>
-                        <p className="text-sm text-gray-600">{lead.status}</p>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                          {lead.score}%
-                        </div>
-                        <div className="text-xs text-gray-500">Data Points: {lead.dataPoints}</div>
-                      </div>
+            {/* Enterprise Dashboard */}
+            <div className="lg:col-span-5">
+              <div className="relative">
+                <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6 shadow-2xl">
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-lg font-semibold text-white flex items-center">
+                      <Brain className="w-5 h-5 mr-2 text-blue-400" />
+                      Intelligence Engine™
+                    </h3>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                      <span className="text-xs text-slate-400">Live Analysis</span>
                     </div>
-                  ))}
-                </div>
-                
-                {/* Floating elements */}
-                <div className="absolute -top-8 -right-10 bg-white rounded-lg shadow-lg p-3 animate-float">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-sm font-semibold">Lead is now warm!</span>
+                  </div>
+                  
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    <div className="bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700/30">
+                      <div className="text-2xl font-bold text-blue-400">2.8K</div>
+                      <div className="text-xs text-slate-400">Active Leads</div>
+                    </div>
+                    <div className="bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700/30">
+                      <div className="text-2xl font-bold text-emerald-400">94%</div>
+                      <div className="text-xs text-slate-400">Accuracy</div>
+                    </div>
+                    <div className="bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700/30">
+                      <div className="text-2xl font-bold text-purple-400">347</div>
+                      <div className="text-xs text-slate-400">Ready Now</div>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    {[
+                      { 
+                        company: 'Acme Corp', 
+                        contact: 'Sarah Mitchell', 
+                        status: 'Enterprise budget confirmed • Timeline: Q1', 
+                        score: 96, 
+                        trend: '+12',
+                        priority: 'high'
+                      },
+                      { 
+                        company: 'TechFlow Inc', 
+                        contact: 'Marcus Chen', 
+                        status: 'Security review initiated • Stakeholder mapping', 
+                        score: 92, 
+                        trend: '+8',
+                        priority: 'high'
+                      },
+                      { 
+                        company: 'DataVault Systems', 
+                        contact: 'Jennifer Wu', 
+                        status: 'Compliance requirements discussion started', 
+                        score: 88, 
+                        trend: '+15',
+                        priority: 'medium'
+                      }
+                    ].map((lead, index) => (
+                      <div key={index} className="bg-slate-800/30 rounded-lg p-4 border border-slate-700/30 hover:border-slate-600/50 transition-all cursor-pointer">
+                        <div className="flex justify-between items-start mb-2">
+                          <div>
+                            <div className="flex items-center space-x-2 mb-1">
+                              <h4 className="font-semibold text-white text-sm">{lead.company}</h4>
+                              <div className={`w-2 h-2 rounded-full ${
+                                lead.priority === 'high' ? 'bg-red-400' : 'bg-yellow-400'
+                              }`}></div>
+                            </div>
+                            <p className="text-xs text-slate-400 mb-1">{lead.contact}</p>
+                            <p className="text-xs text-slate-300">{lead.status}</p>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-lg font-bold text-blue-400">{lead.score}%</div>
+                            <div className="text-xs text-emerald-400">↗ {lead.trend}</div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 
-                <div className="absolute -bottom-8 -left-10 bg-white rounded-lg shadow-lg p-4 text-center animate-float animation-delay-2000">
-                  <div className="text-3xl font-black text-purple-600">50</div>
-                  <div className="text-xs text-gray-500">Data Points Analyzed</div>
+                {/* Floating Analytics Card */}
+                <div className="absolute -bottom-8 -left-8 bg-slate-900 border border-slate-700 rounded-xl p-4 shadow-xl">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                      <TrendingUp className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-lg font-bold text-white">5.2x</div>
+                      <div className="text-xs text-slate-400">Conversion Rate</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -245,78 +325,77 @@ const SurFoxV2 = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="bg-gray-900 text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-pink-900/20"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Enterprise Stats */}
+      <section className="border-y border-slate-800 bg-slate-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: '89%', label: 'Lead Warm-Up Rate' },
-              { number: '50', label: 'Data Points Analyzed' },
-              { number: '24/7', label: 'AI Engagement' },
-              { number: '5.2x', label: 'Conversion Increase' }
+              { number: '500K+', label: 'Leads Processed Daily', icon: Database },
+              { number: '94%', label: 'Prediction Accuracy', icon: Target },
+              { number: '50+', label: 'Data Points Analyzed', icon: Brain },
+              { number: '99.9%', label: 'Platform Uptime', icon: Shield }
             ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                  {stat.number}
+              <div key={index} className="text-center group">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-slate-800/50 rounded-xl mb-4 group-hover:bg-slate-700/50 transition-colors">
+                  <stat.icon className="w-6 h-6 text-blue-400" />
                 </div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
+                <div className="text-sm text-slate-400">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Problem/Solution Section */}
-      <section className="py-20 bg-white">
+      {/* Problem/Solution - Enterprise Focus */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
-              Cold Leads Are Killing Your Sales
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              B2B Sales at Scale
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Your team wastes time on unresponsive leads. Our Messaging Intelligence Engine™ changes that.
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Transform your sales process with AI-driven lead intelligence and qualification.
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-red-900 mb-6 flex items-center">
-                <span className="text-3xl mr-3">😤</span>
-                Without SurFox
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="bg-gradient-to-br from-red-900/20 to-red-800/20 border border-red-800/30 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-red-400 mb-6 flex items-center">
+                <X className="w-6 h-6 mr-3" />
+                Traditional B2B Sales
               </h3>
               <ul className="space-y-4">
                 {[
-                  'Cold outreach gets ignored or deleted',
-                  'No idea who\'s interested or why',
-                  'Sales team calls unresponsive leads',
-                  'Prospects aren\'t ready to talk',
-                  'Conversion rates stay low'
+                  'Manual lead qualification wastes resources',
+                  'Long sales cycles with low conversion rates',
+                  'Inconsistent prospect engagement strategies',
+                  'Limited visibility into buyer readiness',
+                  'Difficulty scaling personalized outreach'
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start text-red-700">
-                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
+                  <li key={index} className="flex items-start text-red-300">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             
-            <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-8 relative overflow-hidden">
-              <div className="absolute -top-24 -right-24 w-48 h-48 bg-green-500 rounded-full opacity-10"></div>
-              <h3 className="text-2xl font-bold text-green-900 mb-6 flex items-center relative z-10">
-                <span className="text-3xl mr-3">🚀</span>
-                With SurFox
+            <div className="bg-gradient-to-br from-emerald-900/20 to-emerald-800/20 border border-emerald-800/30 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-emerald-400 mb-6 flex items-center">
+                <Check className="w-6 h-6 mr-3" />
+                SurFox Intelligence Platform
               </h3>
-              <ul className="space-y-4 relative z-10">
+              <ul className="space-y-4">
                 {[
-                  'AI engages and warms every lead',
-                  '50 data points reveal buying intent',
-                  'Sales only calls warm prospects',
-                  'Leads are educated and ready',
-                  'Close rates skyrocket'
+                  'AI-powered qualification at scale',
+                  'Accelerated sales cycles with higher close rates',
+                  'Consistent, intelligent prospect engagement',
+                  'Real-time buyer intent and readiness scoring',
+                  'Automated personalization across all touchpoints'
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start text-green-700">
-                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
+                  <li key={index} className="flex items-start text-emerald-300">
+                    <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -326,41 +405,65 @@ const SurFoxV2 = () => {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section id="how-it-works" className="py-20 bg-gray-50">
+      {/* Intelligence Engine Process */}
+      <section id="intelligence" className="py-20 bg-slate-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
-              The Messaging Intelligence Engine™ Process
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700/50 mb-6">
+              <Terminal className="w-4 h-4 mr-2 text-blue-400" />
+              <span className="text-sm font-medium text-slate-300">Messaging Intelligence Engine™</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Advanced AI Processing
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              50 data points. Real-time analysis. Warm leads delivered to your team.
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Advanced machine learning algorithms analyze behavioral patterns, contextual signals, and engagement data to deliver precision lead qualification.
             </p>
           </div>
           
           <div className="relative">
-            <div className="hidden lg:block absolute top-20 left-0 right-0 h-1 bg-gray-200">
-              <div className="absolute top-0 left-0 h-full bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-2000 w-full"></div>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { icon: '📥', step: 1, title: 'Import Cold Leads', description: 'Connect your CRM or upload your lead list. We work with any source.' },
-                { icon: '🤖', step: 2, title: 'AI Engages Instantly', description: 'Our AI starts personalized conversations, analyzing 50 data points per lead.' },
-                { icon: '🔥', step: 3, title: 'Leads Get Warmed', description: 'Through intelligent messaging, cold leads become warm prospects.' },
-                { icon: '🔔', step: 4, title: 'You Get Notified', description: 'When leads are ready, your sales team gets alerted with full context.' }
+                { 
+                  icon: Database, 
+                  step: '01', 
+                  title: 'Data Ingestion', 
+                  description: 'Seamlessly integrate with your existing CRM, marketing automation, and data sources through robust APIs.' 
+                },
+                { 
+                  icon: Brain, 
+                  step: '02', 
+                  title: 'AI Analysis', 
+                  description: 'Our proprietary algorithms analyze 50+ behavioral and contextual data points in real-time.' 
+                },
+                { 
+                  icon: Target, 
+                  step: '03', 
+                  title: 'Intent Scoring', 
+                  description: 'Advanced scoring models predict buyer readiness with 94% accuracy across business segments.' 
+                },
+                { 
+                  icon: Zap, 
+                  step: '04', 
+                  title: 'Intelligent Routing', 
+                  description: 'Qualified leads are automatically routed to appropriate sales teams with full context and timing.' 
+                }
               ].map((item, index) => (
-                <div key={index} className="text-center group">
-                  <div className="relative">
-                    <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition-transform mx-auto mb-4 relative">
-                      {item.icon}
-                      <span className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
-                        {item.step}
-                      </span>
+                <div key={index} className="relative group">
+                  <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6 hover:border-slate-600/50 transition-all">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                        <item.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <span className="text-sm font-mono text-slate-500">{item.step}</span>
                     </div>
+                    <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
+                    <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
+                  
+                  {index < 3 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-slate-700 to-transparent"></div>
+                  )}
                 </div>
               ))}
             </div>
@@ -368,38 +471,38 @@ const SurFoxV2 = () => {
         </div>
       </section>
 
-      {/* Platform Preview */}
-      <section id="platform" className="py-20 bg-white">
+      {/* Platform Features */}
+      <section id="platform" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
-              Intelligence That Drives Results
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Professional Platform Features
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Monitor your Messaging Intelligence Engine™ in real-time and watch cold leads transform.
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Built for scale with advanced analytics, security, and integration capabilities.
             </p>
           </div>
           
           <div>
-            <div className="flex justify-center gap-4 mb-12 flex-wrap">
+            <div className="flex justify-center gap-2 mb-12 flex-wrap">
               {[
-                { id: 'performance', label: 'Engine Analytics', icon: TrendingUp },
-                { id: 'ai', label: '50 Data Points', icon: Brain },
-                { id: 'analytics', label: 'Lead Warming', icon: BarChart3 },
-                { id: 'automation', label: 'Alert Settings', icon: Settings }
+                { id: 'analytics', label: 'Advanced Analytics', icon: BarChart3 },
+                { id: 'ai', label: 'AI Engine', icon: Brain },
+                { id: 'integrations', label: 'Integrations', icon: GitBranch },
+                { id: 'security', label: 'Security & Compliance', icon: Shield }
               ].map((tab) => {
                 const Icon = tab.icon
                 return (
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`px-6 py-3 rounded-full font-semibold transition-all flex items-center gap-2 ${
+                    className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 text-sm ${
                       activeTab === tab.id
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                        : 'bg-white text-gray-600 border-2 border-gray-200 hover:border-purple-600'
+                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                        : 'bg-slate-800/50 text-slate-400 border border-slate-700/50 hover:border-slate-600/50'
                     }`}
                   >
-                    <Icon className="w-5 h-5" />
+                    <Icon className="w-4 h-4" />
                     {tab.label}
                   </button>
                 )
@@ -407,19 +510,24 @@ const SurFoxV2 = () => {
             </div>
             
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className={`${activeTab === 'performance' || activeTab === 'analytics' ? 'order-1' : 'order-2'}`}>
-                {activeTab === 'performance' && (
+              <div>
+                {activeTab === 'analytics' && (
                   <>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      Watch Your Engine Work in Real-Time
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Professional Intelligence Dashboard
                     </h3>
-                    <p className="text-lg text-gray-600 mb-6">
-                      The Messaging Intelligence Engine™ shows you exactly how your leads are warming up, with full transparency into every interaction.
+                    <p className="text-lg text-slate-400 mb-6">
+                      Monitor lead progression, engagement patterns, and conversion metrics with advanced analytics and reporting capabilities.
                     </p>
                     <ul className="space-y-3">
-                      {['Real-time engagement metrics', 'Lead temperature tracking', 'Conversion pathway analysis'].map((item, index) => (
-                        <li key={index} className="flex items-center text-gray-700">
-                          <Check className="w-5 h-5 text-green-500 mr-3" />
+                      {[
+                        'Custom KPI dashboards and reporting',
+                        'Predictive analytics and forecasting',
+                        'Multi-dimensional lead scoring',
+                        'Advanced segmentation and filtering'
+                      ].map((item, index) => (
+                        <li key={index} className="flex items-center text-slate-300">
+                          <Check className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
                           {item}
                         </li>
                       ))}
@@ -429,16 +537,21 @@ const SurFoxV2 = () => {
                 
                 {activeTab === 'ai' && (
                   <>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      50 Data Points = Perfect Timing
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Proprietary AI Engine
                     </h3>
-                    <p className="text-lg text-gray-600 mb-6">
-                      Our proprietary algorithm analyzes 50 distinct behavioral and contextual data points to determine the exact moment a lead is ready for sales outreach.
+                    <p className="text-lg text-slate-400 mb-6">
+                      Advanced machine learning models trained on enterprise B2B sales data to deliver accurate predictions and insights.
                     </p>
                     <ul className="space-y-3">
-                      {['Engagement frequency & depth', 'Content interest mapping', 'Buying signal detection'].map((item, index) => (
-                        <li key={index} className="flex items-center text-gray-700">
-                          <Check className="w-5 h-5 text-green-500 mr-3" />
+                      {[
+                        'Natural language processing for sentiment analysis',
+                        'Behavioral pattern recognition and clustering',
+                        'Dynamic scoring model adaptation',
+                        'Continuous learning and optimization'
+                      ].map((item, index) => (
+                        <li key={index} className="flex items-center text-slate-300">
+                          <Check className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
                           {item}
                         </li>
                       ))}
@@ -446,18 +559,23 @@ const SurFoxV2 = () => {
                   </>
                 )}
                 
-                {activeTab === 'analytics' && (
+                {activeTab === 'integrations' && (
                   <>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      From Cold to Hot: Track the Journey
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Platform Integrations
                     </h3>
-                    <p className="text-lg text-gray-600 mb-6">
-                      See exactly how the Messaging Intelligence Engine™ warms up each lead, with detailed insights into what's working.
+                    <p className="text-lg text-slate-400 mb-6">
+                      Seamlessly connect with your existing tech stack through robust APIs and pre-built integrations.
                     </p>
                     <ul className="space-y-3">
-                      {['Lead temperature progression', 'Engagement history timeline', 'Interest topic analysis'].map((item, index) => (
-                        <li key={index} className="flex items-center text-gray-700">
-                          <Check className="w-5 h-5 text-green-500 mr-3" />
+                      {[
+                        'Salesforce, HubSpot, and Microsoft Dynamics',
+                        'Marketing automation platforms (Marketo, Pardot)',
+                        'Data warehouses and business intelligence tools',
+                        'Custom API integrations and webhooks'
+                      ].map((item, index) => (
+                        <li key={index} className="flex items-center text-slate-300">
+                          <Check className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
                           {item}
                         </li>
                       ))}
@@ -465,18 +583,23 @@ const SurFoxV2 = () => {
                   </>
                 )}
                 
-                {activeTab === 'automation' && (
+                {activeTab === 'security' && (
                   <>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      Smart Alerts When It Matters
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Security & Compliance
                     </h3>
-                    <p className="text-lg text-gray-600 mb-6">
-                      Configure intelligent alerts based on the 50 data points. Get notified only when leads meet your exact criteria.
+                    <p className="text-lg text-slate-400 mb-6">
+                      Bank-level security with comprehensive compliance frameworks to protect your business data.
                     </p>
                     <ul className="space-y-3">
-                      {['Custom alert thresholds', 'Team routing rules', 'Priority lead notifications'].map((item, index) => (
-                        <li key={index} className="flex items-center text-gray-700">
-                          <Check className="w-5 h-5 text-green-500 mr-3" />
+                      {[
+                        'SOC 2 Type II certified infrastructure',
+                        'GDPR and CCPA compliance framework',
+                        'End-to-end encryption and data protection',
+                        'Role-based access control and audit trails'
+                      ].map((item, index) => (
+                        <li key={index} className="flex items-center text-slate-300">
+                          <Check className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
                           {item}
                         </li>
                       ))}
@@ -485,111 +608,60 @@ const SurFoxV2 = () => {
                 )}
               </div>
               
-              <div className={`${activeTab === 'performance' || activeTab === 'analytics' ? 'order-2' : 'order-1'}`}>
-                <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200 transform hover:scale-[1.02] transition-transform">
-                  <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
+              <div>
+                <div className="bg-slate-900/50 border border-slate-700/50 rounded-2xl overflow-hidden">
+                  <div className="bg-slate-800/50 px-6 py-4 border-b border-slate-700/50">
                     <div className="flex items-center justify-between">
-                      <h4 className="font-semibold text-gray-900">
-                        {activeTab === 'performance' && 'Messaging Intelligence Engine™'}
-                        {activeTab === 'ai' && '50 Data Points Analysis'}
-                        {activeTab === 'analytics' && 'Lead Warming Progress'}
-                        {activeTab === 'automation' && 'Alert Configuration'}
+                      <h4 className="font-semibold text-white">
+                        {activeTab === 'analytics' && 'Enterprise Analytics Dashboard'}
+                        {activeTab === 'ai' && 'AI Engine Performance'}
+                        {activeTab === 'integrations' && 'Integration Management'}
+                        {activeTab === 'security' && 'Security Center'}
                       </h4>
-                      <button className="bg-purple-600 text-white px-4 py-1 rounded-lg text-sm font-semibold">
-                        {activeTab === 'ai' ? 'View All' : 'Configure'}
-                      </button>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                        <span className="text-xs text-slate-400">Live</span>
+                      </div>
                     </div>
                   </div>
                   
                   <div className="p-6">
-                    {activeTab === 'performance' && (
-                      <>
-                        <div className="grid grid-cols-3 gap-4 mb-6">
-                          <div className="bg-blue-50 rounded-lg p-4 text-center">
-                            <div className="text-2xl font-bold text-blue-600">2,847</div>
-                            <div className="text-sm text-gray-600">Leads Engaged</div>
+                    {activeTab === 'analytics' && (
+                      <div className="space-y-6">
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="bg-slate-800/30 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-sm text-slate-400 mb-1">Lead Velocity</div>
+                            <div className="text-2xl font-bold text-blue-400">+34%</div>
                           </div>
-                          <div className="bg-green-50 rounded-lg p-4 text-center">
-                            <div className="text-2xl font-bold text-green-600">89%</div>
-                            <div className="text-sm text-gray-600">Warm Rate</div>
-                          </div>
-                          <div className="bg-purple-50 rounded-lg p-4 text-center">
-                            <div className="text-2xl font-bold text-purple-600">437</div>
-                            <div className="text-sm text-gray-600">Ready Now</div>
+                          <div className="bg-slate-800/30 rounded-lg p-4 border border-slate-700/30">
+                            <div className="text-sm text-slate-400 mb-1">Conversion Rate</div>
+                            <div className="text-2xl font-bold text-emerald-400">23.7%</div>
                           </div>
                         </div>
-                        <div className="space-y-3">
-                          {[
-                            { name: 'Real Estate Campaign', engaged: 145, warm: 89, ready: 23 },
-                            { name: 'B2B Software Leads', engaged: 203, warm: 156, ready: 41 }
-                          ].map((campaign, index) => (
-                            <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                              <div className="font-semibold text-purple-600">{campaign.name}</div>
-                              <div className="text-sm text-gray-600">{campaign.engaged} engaged</div>
-                              <div className="text-sm font-semibold text-orange-600">{campaign.warm} warm</div>
-                              <div className="text-sm font-bold text-green-600">{campaign.ready} ready</div>
-                            </div>
-                          ))}
+                        <div className="h-32 bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg border border-slate-700/30 flex items-center justify-center">
+                          <TrendingUp className="w-8 h-8 text-slate-400" />
                         </div>
-                      </>
+                      </div>
                     )}
                     
                     {activeTab === 'ai' && (
                       <div className="space-y-4">
-                        <div className="mb-4">
-                          <h5 className="font-semibold mb-3">Top Contributing Data Points</h5>
-                          {[
-                            { point: 'Message open rate', value: '92%', impact: 'High' },
-                            { point: 'Link click behavior', value: '67%', impact: 'High' },
-                            { point: 'Response sentiment', value: 'Positive', impact: 'Medium' },
-                            { point: 'Time spent reading', value: '3.2 min', impact: 'High' },
-                            { point: 'Question engagement', value: '4/5', impact: 'Very High' }
-                          ].map((data, index) => (
-                            <div key={index} className="flex justify-between items-center p-2 hover:bg-gray-50 rounded">
-                              <span className="text-sm">{data.point}</span>
-                              <div className="flex items-center gap-3">
-                                <span className="text-sm font-semibold">{data.value}</span>
-                                <span className={`text-xs px-2 py-1 rounded-full ${
-                                  data.impact === 'Very High' ? 'bg-red-100 text-red-700' :
-                                  data.impact === 'High' ? 'bg-orange-100 text-orange-700' :
-                                  'bg-yellow-100 text-yellow-700'
-                                }`}>
-                                  {data.impact}
-                                </span>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                    
-                    {activeTab === 'analytics' && (
-                      <div>
-                        <div className="mb-6">
-                          <div className="h-32 bg-gradient-to-r from-blue-100 via-orange-100 to-red-100 rounded-lg flex items-center justify-center">
-                            <div className="text-center">
-                              <div className="text-3xl font-bold text-purple-600 mb-1">℃</div>
-                              <div className="text-sm text-gray-600">Lead Temperature Map</div>
-                            </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="bg-slate-800/30 rounded-lg p-3 border border-slate-700/30">
+                            <div className="text-sm text-slate-400">Model Accuracy</div>
+                            <div className="text-xl font-bold text-purple-400">94.3%</div>
+                          </div>
+                          <div className="bg-slate-800/30 rounded-lg p-3 border border-slate-700/30">
+                            <div className="text-sm text-slate-400">Processing Speed</div>
+                            <div className="text-xl font-bold text-blue-400">2.1ms</div>
                           </div>
                         </div>
-                        <div className="space-y-3">
-                          <h5 className="font-semibold text-gray-900">Warming Progress</h5>
-                          {[
-                            { stage: 'Cold → Lukewarm', count: 847, percentage: 45 },
-                            { stage: 'Lukewarm → Warm', count: 623, percentage: 78 },
-                            { stage: 'Warm → Hot', count: 289, percentage: 92 }
-                          ].map((item, index) => (
-                            <div key={index}>
-                              <div className="flex justify-between text-sm mb-1">
-                                <span>{item.stage}</span>
-                                <span className="font-semibold">{item.count} leads</span>
-                              </div>
-                              <div className="w-full bg-gray-200 rounded-full h-2">
-                                <div 
-                                  className="bg-gradient-to-r from-blue-400 via-orange-400 to-red-400 h-2 rounded-full" 
-                                  style={{ width: `${item.percentage}%` }}
-                                ></div>
+                        <div className="space-y-2">
+                          {['Neural Network Training', 'Pattern Recognition', 'Sentiment Analysis'].map((process, i) => (
+                            <div key={i} className="flex items-center justify-between p-2 bg-slate-800/20 rounded border border-slate-700/20">
+                              <span className="text-sm text-slate-300">{process}</span>
+                              <div className="w-16 h-2 bg-slate-700 rounded overflow-hidden">
+                                <div className="h-full bg-gradient-to-r from-blue-400 to-purple-400" style={{ width: `${85 + i * 5}%` }}></div>
                               </div>
                             </div>
                           ))}
@@ -597,24 +669,52 @@ const SurFoxV2 = () => {
                       </div>
                     )}
                     
-                    {activeTab === 'automation' && (
+                    {activeTab === 'integrations' && (
                       <div className="space-y-4">
                         {[
-                          { condition: 'If 40+ data points triggered', action: 'Alert top sales rep immediately', color: 'red' },
-                          { condition: 'If engagement score > 85%', action: 'Send to senior closer', color: 'orange' },
-                          { condition: 'If responds within 1 hour', action: 'Mark as high priority', color: 'green' }
-                        ].map((rule, index) => (
-                          <div key={index} className="border border-gray-200 rounded-lg p-4">
-                            <div className="flex items-center mb-3">
-                              <div className={`w-4 h-4 bg-${rule.color}-500 rounded-full mr-3`}></div>
-                              <span className="text-sm font-semibold">{rule.condition}</span>
-                            </div>
-                            <div className="flex items-center ml-7">
-                              <ArrowRight className="w-4 h-4 text-gray-400 mr-3" />
-                              <span className="text-sm text-gray-600">{rule.action}</span>
+                          { name: 'Salesforce', status: 'Connected', health: 'green' },
+                          { name: 'Microsoft Dynamics', status: 'Connected', health: 'green' },
+                          { name: 'Marketo', status: 'Syncing', health: 'yellow' },
+                          { name: 'Snowflake', status: 'Connected', health: 'green' }
+                        ].map((integration, i) => (
+                          <div key={i} className="flex items-center justify-between p-3 bg-slate-800/20 rounded border border-slate-700/20">
+                            <span className="text-sm text-slate-300">{integration.name}</span>
+                            <div className="flex items-center space-x-2">
+                              <div className={`w-2 h-2 rounded-full ${
+                                integration.health === 'green' ? 'bg-emerald-400' : 'bg-yellow-400'
+                              }`}></div>
+                              <span className="text-xs text-slate-400">{integration.status}</span>
                             </div>
                           </div>
                         ))}
+                      </div>
+                    )}
+                    
+                    {activeTab === 'security' && (
+                      <div className="space-y-4">
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="bg-slate-800/30 rounded-lg p-3 border border-slate-700/30 text-center">
+                            <div className="text-xl font-bold text-emerald-400">99.9%</div>
+                            <div className="text-xs text-slate-400">Uptime SLA</div>
+                          </div>
+                          <div className="bg-slate-800/30 rounded-lg p-3 border border-slate-700/30 text-center">
+                            <div className="text-xl font-bold text-blue-400">256-bit</div>
+                            <div className="text-xs text-slate-400">Encryption</div>
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          {[
+                            { item: 'SOC 2 Type II', status: 'Certified' },
+                            { item: 'GDPR Compliance', status: 'Active' },
+                            { item: 'Data Residency', status: 'Configured' },
+                            { item: 'Access Controls', status: 'Enforced' }
+                          ].map((security, i) => (
+                            <div key={i} className="flex items-center justify-between p-2 bg-slate-800/20 rounded border border-slate-700/20">
+                              <span className="text-sm text-slate-300">{security.item}</span>
+                              <span className="text-xs text-emerald-400">{security.status}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
@@ -625,61 +725,75 @@ const SurFoxV2 = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section id="testimonials" className="py-20 bg-gray-50">
+      {/* Enterprise Testimonials */}
+      <section className="py-20 bg-slate-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
-              Sales Teams Love the Messaging Intelligence Engine™
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Trusted by Industry Leaders
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how teams are transforming cold leads into warm conversations.
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Global organizations rely on SurFox to scale their sales operations and drive predictable revenue growth.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                quote: "The 50 data points analysis is incredible. We know exactly when to reach out, and prospects are actually happy to hear from us. Our close rate tripled.",
+                quote: "SurFox transformed our sales process. The AI-driven insights helped us identify high-value prospects 3x faster and increased our deal velocity by 40%.",
                 author: 'Sarah Chen',
-                role: 'VP Sales • Real Estate Tech',
-                avatar: 'SC',
-                metric: 'Leads Warmed',
-                value: '847/mo'
+                role: 'VP of Sales',
+                company: 'TechCorp',
+                logo: 'TC',
+                metric: 'Deal Velocity',
+                value: '+40%',
+                size: 'Fortune 500'
               },
               {
-                quote: "We went from cold calling all day to having warm conversations with interested prospects. The Messaging Intelligence Engine changed everything for us.",
+                quote: "The platform's security compliance and seamless integration with our existing tech stack made adoption seamless across our global sales organization.",
                 author: 'Marcus Rodriguez',
-                role: 'Sales Director • SaaS',
-                avatar: 'MR',
-                metric: 'Response Rate',
-                value: '73%'
+                role: 'Chief Revenue Officer',
+                company: 'Global Systems Inc',
+                logo: 'GS',
+                metric: 'Sales Efficiency',
+                value: '+67%',
+                size: '10K+ Employees'
               },
               {
-                quote: "Having AI warm up our leads 24/7 means my team only talks to people ready to buy. It's like having 100 SDRs working around the clock.",
+                quote: "Real-time lead intelligence at scale. SurFox helps us focus on prospects ready to engage, resulting in higher conversion rates and shorter sales cycles.",
                 author: 'Jennifer Wu',
-                role: 'CEO • Marketing Agency',
-                avatar: 'JW',
-                metric: 'ROI Increase',
-                value: '5.2x'
+                role: 'EVP Sales Operations',
+                company: 'Innovation Partners',
+                logo: 'IP',
+                metric: 'Conversion Rate',
+                value: '+5.2x',
+                size: 'Large Business'
               }
             ].map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all cursor-pointer hover:-translate-y-2 relative">
-                <div className="text-6xl text-purple-600 opacity-20 absolute top-4 right-4">"</div>
-                <p className="text-gray-700 mb-6 relative z-10 italic">"{testimonial.quote}"</p>
+              <div key={index} className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 hover:border-slate-600/50 transition-all">
+                <div className="text-4xl text-blue-400/20 mb-4">"</div>
+                <p className="text-slate-300 mb-6 italic leading-relaxed">"{testimonial.quote}"</p>
+                
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.avatar}
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold mr-4">
+                    {testimonial.logo}
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">{testimonial.author}</h4>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    <h4 className="font-semibold text-white">{testimonial.author}</h4>
+                    <p className="text-sm text-slate-400">{testimonial.role}</p>
+                    <p className="text-sm text-slate-500">{testimonial.company}</p>
                   </div>
                 </div>
-                <div className="bg-gray-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-gray-600 mb-1">{testimonial.metric}</div>
-                  <div className="text-2xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                    {testimonial.value}
+                
+                <div className="border-t border-slate-700/50 pt-4">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <div className="text-lg font-bold text-blue-400">{testimonial.value}</div>
+                      <div className="text-xs text-slate-400">{testimonial.metric}</div>
+                    </div>
+                    <div className="text-xs text-slate-500 bg-slate-700/30 px-2 py-1 rounded">
+                      {testimonial.size}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -688,167 +802,170 @@ const SurFoxV2 = () => {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section id="pricing" className="py-20 bg-white">
+      {/* Enterprise Pricing */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
-              Pay Only for Warm Leads
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Professional Pricing
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              No setup fees. No cold leads. Just warm prospects ready to buy.
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Flexible pricing models designed for scale and business requirements.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                name: 'Starter',
-                description: 'Perfect for testing the waters',
-                price: 97,
-                features: [
-                  'Up to 100 cold leads warmed',
-                  'Basic Messaging Intelligence',
-                  'Email support',
-                  'CRM integrations'
-                ],
-                featured: false
-              },
-              {
                 name: 'Professional',
-                description: 'For serious sales teams',
-                price: 297,
+                description: 'For growing sales teams',
+                price: 'Custom',
+                period: 'per user/month',
                 features: [
-                  'Up to 500 cold leads warmed',
-                  'Full 50 data point analysis',
-                  'Priority support',
-                  'All integrations + API',
-                  'Custom alert rules'
+                  'Up to 10,000 leads/month',
+                  'Advanced analytics dashboard',
+                  'Standard integrations',
+                  'Email support',
+                  'Basic compliance features'
                 ],
-                featured: true
+                cta: 'Contact Sales',
+                popular: false
               },
               {
-                name: 'Enterprise',
-                description: 'For scaling organizations',
+                name: 'Business',
+                description: 'For large organizations',
                 price: 'Custom',
+                period: 'volume pricing',
                 features: [
-                  'Unlimited lead warming',
-                  'Custom data point configuration',
-                  'Dedicated success manager',
-                  'White-label options',
-                  'SLA guarantees'
+                  'Unlimited lead processing',
+                  'Full analytics suite',
+                  'All integrations + API access',
+                  'Priority support + CSM',
+                  'SOC 2 + GDPR compliance',
+                  'Custom deployment options'
                 ],
-                featured: false
+                cta: 'Request Demo',
+                popular: true
+              },
+              {
+                name: 'Business Plus',
+                description: 'For global organizations',
+                price: 'Custom',
+                period: 'annual agreement',
+                features: [
+                  'Everything in Business',
+                  'White-label options',
+                  'Dedicated infrastructure',
+                  '24/7 phone support',
+                  'Advanced security features',
+                  'Custom AI model training'
+                ],
+                cta: 'Contact Sales',
+                popular: false
               }
             ].map((plan, index) => (
-              <div key={index} className={`relative bg-white rounded-2xl p-8 ${
-                plan.featured 
-                  ? 'border-2 border-purple-600 shadow-2xl scale-105' 
-                  : 'border-2 border-gray-200 shadow-lg'
+              <div key={index} className={`relative bg-slate-800/30 border rounded-2xl p-8 ${
+                plan.popular 
+                  ? 'border-blue-500/50 ring-1 ring-blue-500/20' 
+                  : 'border-slate-700/50'
               }`}>
-                {plan.featured && (
-                  <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-1 rounded-full text-sm font-bold">
-                    Most Popular
-                  </span>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+                  </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-gray-600">{plan.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-slate-400 mb-4">{plan.description}</p>
+                  <div className="text-3xl font-bold text-white mb-1">{plan.price}</div>
+                  <div className="text-sm text-slate-400">{plan.period}</div>
                 </div>
                 
-                <div className="text-center mb-8">
-                  {typeof plan.price === 'number' ? (
-                    <>
-                      <span className="text-4xl font-black text-gray-900">${plan.price}</span>
-                      <span className="text-gray-600">/month</span>
-                    </>
-                  ) : (
-                    <span className="text-4xl font-black text-gray-900">{plan.price}</span>
-                  )}
-                </div>
-                
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
+                      <Check className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-300 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
-                <a href="#" className={`block text-center py-3 px-6 rounded-full font-bold transition-all ${
-                  plan.featured
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg transform hover:-translate-y-1'
-                    : 'bg-white text-purple-600 border-2 border-purple-600 hover:bg-purple-600 hover:text-white'
+                <a href="#" className={`block text-center py-3 px-6 rounded-lg font-medium transition-all ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg hover:shadow-blue-500/25'
+                    : 'border border-slate-600 text-slate-300 hover:bg-slate-700/50'
                 }`}>
-                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
+                  {plan.cta}
                 </a>
               </div>
             ))}
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-gray-600">
-              🔒 All plans include: 30-day money-back guarantee • No setup fees • Cancel anytime
+            <p className="text-slate-400 mb-4">
+              All business plans include: SOC 2 compliance • 99.9% SLA • Dedicated support • Custom onboarding
             </p>
+            <a href="#" className="text-blue-400 hover:text-blue-300 font-medium">
+              View detailed feature comparison →
+            </a>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section id="faq" className="py-20 bg-gray-50">
+      {/* FAQ Section */}
+      <section className="py-20 bg-slate-900/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
-              Questions? We've Got Answers
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-600">
-              Everything you need to know about the Messaging Intelligence Engine™.
+            <p className="text-xl text-slate-400">
+              Everything you need to know about implementing SurFox at scale.
             </p>
           </div>
           
           <div className="space-y-4">
             {[
               {
-                question: 'What exactly is the Messaging Intelligence Engine™?',
-                answer: 'Our proprietary AI system that engages with your cold leads through intelligent conversations. It analyzes 50 different data points in real-time - from engagement patterns to content interests to response timing - to determine when a lead has warmed up and is ready for sales outreach.'
+                question: 'How does SurFox integrate with our existing tech stack?',
+                answer: 'SurFox provides native integrations with all major CRM platforms (Salesforce, Microsoft Dynamics, HubSpot), marketing automation tools (Marketo, Pardot, Eloqua), and data warehouses. Our robust API allows for custom integrations, and our professional services team assists with complex implementations. Most organizations complete integration within 2-4 weeks.'
               },
               {
-                question: 'What are the 50 data points you analyze?',
-                answer: 'We analyze behavioral signals (open rates, click patterns, response times), contextual indicators (content preferences, question types, urgency language), engagement depth (time spent, pages viewed, return visits), and buying signals (budget mentions, timeline discussions, decision-maker involvement). Each data point is weighted based on your specific industry and sales process.'
+                question: 'What security and compliance certifications does SurFox maintain?',
+                answer: 'SurFox is SOC 2 Type II certified and maintains GDPR and CCPA compliance frameworks. We provide data residency options, end-to-end encryption, role-based access controls, and comprehensive audit trails. Enterprise customers receive detailed security documentation and can request additional compliance certifications as needed.'
               },
               {
-                question: 'How long does it take to warm up a lead?',
-                answer: 'It varies based on the lead and industry, but typically we see cold leads warming up within 7-14 days of engagement. Some leads warm faster (2-3 days) if they\'re already in-market, while others may take 30+ days. The beauty is our AI works 24/7, so you\'re always nurturing leads even while you sleep.'
+                question: 'How accurate is the AI engine for B2B sales scenarios?',
+                answer: 'Our Messaging Intelligence Engine™ maintains 94% accuracy in B2B lead qualification scenarios. The AI is trained specifically on business sales data and adapts to your industry vertical and sales process. We provide transparent confidence scoring and allow for custom model training for large deployments.'
               },
               {
-                question: 'Will this work with my existing CRM and tools?',
-                answer: 'Absolutely! We integrate seamlessly with all major CRMs including Salesforce, HubSpot, Pipedrive, and more. We also connect with your email marketing tools, calendar systems, and communication platforms. Setup typically takes less than 30 minutes.'
+                question: 'What level of customization is available for large deployments?',
+                answer: 'Business customers can customize scoring models, data point weighting, integration workflows, and reporting dashboards. We offer white-label options, custom branding, and can deploy dedicated infrastructure for large-scale implementations. Our professional services team works with your technical teams to ensure optimal configuration.'
               },
               {
-                question: 'How do I know when a lead is ready?',
-                answer: 'When our Messaging Intelligence Engine™ determines a lead has crossed the threshold (based on your customized data point settings), you\'ll receive an instant notification via email, SMS, or directly in your CRM. The alert includes the full conversation history and key insights about what the lead is interested in.'
+                question: 'How does pricing work for large volumes?',
+                answer: 'Pricing is volume-based with significant discounts for scale. We offer annual contracts, multi-year agreements, and custom licensing options. Pricing includes platform access, integrations, support, and professional services. Contact our sales team for a customized quote based on your specific requirements.'
               },
               {
-                question: 'What makes this different from email automation?',
-                answer: 'Traditional email automation sends the same messages to everyone. Our Messaging Intelligence Engine™ has dynamic, personalized conversations with each lead, adapting based on their responses and behavior. It\'s like having a skilled SDR engaging with each lead individually, but powered by AI that never sleeps.'
+                question: 'What support and onboarding is provided for business customers?',
+                answer: 'Business customers receive dedicated customer success management, priority technical support, and comprehensive onboarding including change management assistance. We provide training for sales teams, technical documentation, and ongoing optimization recommendations. Support includes 24/7 options for Business Plus customers.'
               }
             ].map((item, index) => (
-              <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
+              <div key={index} className="bg-slate-800/30 border border-slate-700/50 rounded-xl overflow-hidden">
                 <button
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-700/30 transition-colors"
                   onClick={() => setActiveFaq(activeFaq === index ? null : index)}
                 >
-                  <span className="font-semibold text-gray-900">{item.question}</span>
-                  <div className={`w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center transition-all ${
-                    activeFaq === index ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white rotate-45' : ''
-                  }`}>
-                    <span className="text-2xl leading-none">+</span>
-                  </div>
+                  <span className="font-medium text-white pr-4">{item.question}</span>
+                  <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${
+                    activeFaq === index ? 'transform rotate-180' : ''
+                  }`} />
                 </button>
                 {activeFaq === index && (
-                  <div className="px-6 pb-4 text-gray-600">
+                  <div className="px-6 pb-4 text-slate-300 leading-relaxed">
                     {item.answer}
                   </div>
                 )}
@@ -859,174 +976,113 @@ const SurFoxV2 = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-black text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-pink-900/20"></div>
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-black mb-4">
-            Ready to Turn Cold Leads Into Warm Conversations?
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Scale Your Sales?
           </h2>
-          <p className="text-xl opacity-90 mb-8">
-            Let our Messaging Intelligence Engine™ warm up your leads while you focus on closing deals.
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+            Join leading organizations using SurFox to transform their sales operations with AI-driven intelligence.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a href="#" className="group bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all inline-flex items-center justify-center">
-              Start Your Free Trial
+            <a href="#" className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all inline-flex items-center justify-center">
+              Request Demo
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#" className="bg-transparent text-white px-8 py-4 rounded-full font-bold text-lg border-2 border-white/30 hover:bg-white/10 hover:border-white transition-all">
-              Schedule a Demo
+            <a href="#" className="border border-slate-600 text-slate-300 px-8 py-4 rounded-lg font-semibold hover:bg-slate-800/50 transition-all">
+              Speak with Sales
             </a>
           </div>
           
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm opacity-80">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400">
             <div className="flex items-center">
-              <Check className="w-4 h-4 mr-2" />
-              No credit card required
+              <Shield className="w-4 h-4 mr-2 text-emerald-400" />
+              SOC 2 Certified
             </div>
             <div className="flex items-center">
-              <Check className="w-4 h-4 mr-2" />
-              30-day money back
+              <Globe className="w-4 h-4 mr-2 text-emerald-400" />
+              Global Infrastructure
             </div>
             <div className="flex items-center">
-              <Check className="w-4 h-4 mr-2" />
-              Setup in 5 minutes
+              <Award className="w-4 h-4 mr-2 text-emerald-400" />
+              99.9% Enterprise SLA
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="border-t border-slate-800 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid md:grid-cols-5 gap-8 mb-12">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
-                <img 
-                  src="/logo.png" 
-                  alt="SurFox Logo" 
-                  className="w-8 h-8 object-contain"
-                />
-                <h3 className="text-2xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  SurFox
-                </h3>
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <Terminal className="w-4 h-4 text-white" />
+                </div>
+                <span className="text-xl font-semibold tracking-tight">
+                  <span className="text-white">Sur</span>
+                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Fox</span>
+                </span>
               </div>
-              <p className="mb-6">Powered by the Messaging Intelligence Engine™</p>
-              <div className="flex gap-4">
-                {/* Social links would go here */}
+              <p className="text-slate-400 mb-6">Enterprise messaging intelligence platform powered by advanced AI.</p>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <Shield className="w-4 h-4 text-emerald-400" />
+                  <span className="text-sm text-slate-400">SOC 2 Certified</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Lock className="w-4 h-4 text-emerald-400" />
+                  <span className="text-sm text-slate-400">GDPR Compliant</span>
+                </div>
               </div>
             </div>
             
             <div>
-              <h4 className="font-bold text-white mb-4">Product</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Integrations</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Changelog</a></li>
+              <h4 className="font-semibold text-white mb-4">Platform</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Intelligence Engine</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Analytics</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Integrations</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">API Documentation</a></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-bold text-white mb-4">Company</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              <h4 className="font-semibold text-white mb-4">Business</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Security</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Compliance</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Professional Services</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Support</a></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-bold text-white mb-4">Legal</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Cookie Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">GDPR</a></li>
+              <h4 className="font-semibold text-white mb-4">Company</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">About</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Careers</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Terms of Service</a></li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p>© 2024 SurFox AI. All rights reserved.</p>
-            <div className="flex gap-6 mt-4 md:mt-0">
-              <span className="flex items-center gap-2">
-                <Star className="w-4 h-4" />
-                SOC 2 Certified
-              </span>
-              <span className="flex items-center gap-2">
-                <Check className="w-4 h-4" />
-                GDPR Compliant
-              </span>
+          <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-slate-400 text-sm">© 2024 SurFox AI, Inc. All rights reserved.</p>
+            <div className="flex items-center space-x-6 mt-4 md:mt-0">
+              <span className="text-slate-400 text-sm">Status</span>
+              <span className="text-slate-400 text-sm">•</span>
+              <span className="text-emerald-400 text-sm">All systems operational</span>
             </div>
           </div>
         </div>
       </footer>
-
-      <style jsx>{`
-        @keyframes blob {
-          0% {
-            transform: translate(0px, 0px) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-          100% {
-            transform: translate(0px, 0px) scale(1);
-          }
-        }
-        
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-        }
-        
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-        
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-        
-        .perspective-1000 {
-          perspective: 1000px;
-        }
-        
-        .rotate-y-\[-15deg\] {
-          transform: rotateY(-15deg);
-        }
-        
-        .rotate-x-\[5deg\] {
-          transform: rotateX(5deg);
-        }
-        
-        .hover\:rotate-y-\[-5deg\]:hover {
-          transform: rotateY(-5deg);
-        }
-        
-        .hover\:rotate-x-\[2deg\]:hover {
-          transform: rotateX(2deg);
-        }
-      `}</style>
     </div>
   )
 }
 
-export default SurFoxV2
+export default EnterpriseSurFox
