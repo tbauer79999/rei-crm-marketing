@@ -106,12 +106,8 @@ const EnterpriseSurFox = () => {
               <a href="#intelligence" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
                 Intelligence Engine
               </a>
-              <a href="#enterprise" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
-                Enterprise
-              </a>
-              <a href="#security" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
-                Security
-              </a>
+              <a href="/enterprise" className="...">Enterprise</a>
+              <a href="/security" className="...">Security</a>
               <div className="w-px h-6 bg-slate-700"></div>
               <a href="#" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
                 Sign In
@@ -136,8 +132,8 @@ const EnterpriseSurFox = () => {
             <div className="px-4 py-6 space-y-4">
               <a href="#platform" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Platform</a>
               <a href="#intelligence" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Intelligence Engine</a>
-              <a href="#enterprise" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Enterprise</a>
-              <a href="#security" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Security</a>
+              <a href="/enterprise" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Enterprise</a>
+              <a href="/security" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Security</a>
               <div className="pt-4 border-t border-slate-800">
                 <a href="#" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium mb-3">Sign In</a>
                 <a href="#" className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium text-center">
@@ -1053,7 +1049,7 @@ const EnterpriseSurFox = () => {
             <div>
               <h4 className="font-semibold text-white mb-4">Business</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Security</a></li>
+                <li><a href="/security" className="text-slate-400 hover:text-white transition-colors">Security</a></li>
                 <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Compliance</a></li>
                 <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Professional Services</a></li>
                 <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Support</a></li>
