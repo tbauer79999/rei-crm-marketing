@@ -157,9 +157,7 @@ const EnterpriseSurFox = () => {
                 From solo hustlers to national teams — close leads faster with SurFox.
               </p>
               <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-2xl">
-                Advanced AI analyzes 
-                <span className="text-blue-400 font-semibold"> 50+ behavioral data points</span> 
-                in real-time, delivering qualified prospects when they're ready to engage.
+                Your AI assistant engages prospects via text, learns from every conversation, and delivers qualified leads when they're ready to buy. Just upload your data and let AI do the heavy lifting.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -176,15 +174,15 @@ const EnterpriseSurFox = () => {
               <div className="grid grid-cols-3 gap-6 text-sm">
                 <div className="flex items-center text-slate-400">
                   <Shield className="w-4 h-4 text-emerald-400 mr-2" />
-                  SOC 2 Type II
+                  Chrome Extension
                 </div>
                 <div className="flex items-center text-slate-400">
                   <Lock className="w-4 h-4 text-emerald-400 mr-2" />
-                  GDPR Compliant
+                  Self-Learning AI
                 </div>
                 <div className="flex items-center text-slate-400">
                   <Award className="w-4 h-4 text-emerald-400 mr-2" />
-                  99.9% SLA
+                  99.9% Uptime
                 </div>
               </div>
             </div>
@@ -211,11 +209,11 @@ const EnterpriseSurFox = () => {
                     </div>
                     <div className="bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700/30">
                       <div className="text-2xl font-bold text-emerald-400">94%</div>
-                      <div className="text-xs text-slate-400">Accuracy</div>
+                      <div className="text-xs text-slate-400">Conversion Rate</div>
                     </div>
                     <div className="bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700/30">
                       <div className="text-2xl font-bold text-purple-400">347</div>
-                      <div className="text-xs text-slate-400">Ready Now</div>
+                      <div className="text-xs text-slate-400">Ready to Close</div>
                     </div>
                   </div>
                   
@@ -224,7 +222,7 @@ const EnterpriseSurFox = () => {
                       { 
                         company: 'Acme Corp', 
                         contact: 'Sarah Mitchell', 
-                        status: 'Enterprise budget confirmed • Timeline: Q1', 
+                        status: 'Asked about enterprise pricing • Mentioned Q1 budget', 
                         score: 96, 
                         trend: '+12',
                         priority: 'high'
@@ -232,7 +230,7 @@ const EnterpriseSurFox = () => {
                       { 
                         company: 'TechFlow Inc', 
                         contact: 'Marcus Chen', 
-                        status: 'Security review initiated • Stakeholder mapping', 
+                        status: 'Inquired about security features • Ready for demo', 
                         score: 92, 
                         trend: '+8',
                         priority: 'high'
@@ -240,7 +238,7 @@ const EnterpriseSurFox = () => {
                       { 
                         company: 'DataVault Systems', 
                         contact: 'Jennifer Wu', 
-                        status: 'Compliance requirements discussion started', 
+                        status: 'Requesting compliance documentation', 
                         score: 88, 
                         trend: '+15',
                         priority: 'medium'
@@ -307,15 +305,19 @@ const EnterpriseSurFox = () => {
               <ul className="space-y-3 text-slate-300">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
-                  Get started in minutes
+                  Get started in minutes with Chrome extension
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
-                  Let AI qualify leads while you sleep
+                  AI learns from your conversations automatically
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
-                  No technical setup required
+                  Upload documents to train your AI assistant
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Dynamic follow-ups when prospects are ready
                 </li>
               </ul>
             </div>
@@ -328,15 +330,19 @@ const EnterpriseSurFox = () => {
               <ul className="space-y-3 text-slate-300">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
-                  Automate conversations across campaigns
+                  Automate conversations across multiple campaigns
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
-                  Track AI performance and lead quality
+                  Track AI performance and lead quality metrics
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
                   Customize follow-up pacing and urgency
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Zapier integrations for workflow automation
                 </li>
               </ul>
             </div>
@@ -349,15 +355,19 @@ const EnterpriseSurFox = () => {
               <ul className="space-y-3 text-slate-300">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
-                  Multi-tenant controls
+                  Multi-tenant controls for client management
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
-                  Team-level settings, custom AI roles
+                  Team-level settings and custom AI roles
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
-                  SLA, priority support, white-labeled ops
+                  Priority support and white-labeled operations
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Advanced reporting and analytics dashboards
                 </li>
               </ul>
               <div className="mt-6">
@@ -375,9 +385,9 @@ const EnterpriseSurFox = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: '500K+', label: 'Messages Processed Daily', icon: Database },
-              { number: '94%', label: 'AI Accuracy Rate', icon: Target },
-              { number: '50+', label: 'Data Points Analyzed', icon: Brain },
+              { number: '100K+', label: 'Conversations Processed', icon: Database },
+              { number: '94%', label: 'Lead Conversion Rate', icon: Target },
+              { number: 'Auto', label: 'Smart Follow-ups', icon: Brain },
               { number: '99.9%', label: 'Platform Uptime', icon: Shield }
             ].map((stat, index) => (
               <div key={index} className="text-center group">
@@ -462,7 +472,7 @@ const EnterpriseSurFox = () => {
               How SurFox Works
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Advanced AI processes your conversations and data to identify the hottest prospects automatically.
+              Your AI assistant processes conversations and learns from past interactions to identify the hottest prospects automatically.
             </p>
           </div>
           
@@ -472,26 +482,26 @@ const EnterpriseSurFox = () => {
                 { 
                   icon: Database, 
                   step: '01', 
-                  title: 'Connect Your Data', 
-                  description: 'Link your CRM, email, or messaging platforms. SurFox integrates with the tools you already use.' 
+                  title: 'Upload Your Data', 
+                  description: 'Use our Chrome extension to quickly import leads, or upload documents and reference materials to train your AI assistant.' 
                 },
                 { 
                   icon: Brain, 
                   step: '02', 
-                  title: 'AI Analyzes Everything', 
-                  description: 'Our AI scans conversations, behavior patterns, and 50+ signals to understand lead quality in real-time.' 
+                  title: 'AI Learns & Engages', 
+                  description: 'Your AI starts conversations via text, learning from the past 100 interactions to get smarter with every exchange.' 
                 },
                 { 
                   icon: Target, 
                   step: '03', 
-                  title: 'Get Instant Scores', 
-                  description: 'Every lead gets a readiness score with 94% accuracy. Know exactly who to focus on first.' 
+                  title: 'Smart Follow-ups', 
+                  description: 'AI determines the perfect timing for follow-ups based on prospect behavior, automatically nurturing leads when they\'re ready.' 
                 },
                 { 
                   icon: Zap, 
                   step: '04', 
-                  title: 'Take Action', 
-                  description: 'Receive alerts when prospects are hot, with context on what makes them ready to buy.' 
+                  title: 'Hot Lead Handoff', 
+                  description: 'When AI identifies a qualified prospect ready to buy, you get an instant alert with full conversation context.' 
                 }
               ].map((item, index) => (
                 <div key={index} className="relative group">
@@ -551,7 +561,7 @@ const EnterpriseSurFox = () => {
                 size: 'Scale-up'
               },
               {
-                quote: "The platform's security compliance and seamless integration made adoption smooth across our global sales organization. ROI was clear within 60 days.",
+                quote: "The platform's seamless integration made adoption smooth across our global sales organization. ROI was clear within 60 days.",
                 author: 'Marcus Rodriguez',
                 role: 'Chief Revenue Officer',
                 company: 'Global Systems Inc',
@@ -613,11 +623,11 @@ const EnterpriseSurFox = () => {
                 price: '$29',
                 period: 'per month',
                 features: [
-                  'Up to 1,000 leads/month',
-                  'Basic AI scoring and alerts',
-                  'Email integration',
-                  'Community support',
-                  'Core analytics dashboard'
+                  'Up to 1,000 conversations/month',
+                  'Chrome extension for easy import',
+                  'AI learns from 100 past conversations',
+                  'Basic scoring and alerts',
+                  'Email support'
                 ],
                 cta: 'Start Free Trial',
                 popular: false
@@ -628,11 +638,11 @@ const EnterpriseSurFox = () => {
                 price: '$99',
                 period: 'per month',
                 features: [
-                  'Up to 10,000 leads/month',
-                  'Advanced AI features',
-                  'CRM integrations',
-                  'Priority email support',
-                  'Custom scoring models',
+                  'Up to 10,000 conversations/month',
+                  'Advanced AI training with documents',
+                  'Zapier integrations',
+                  'Custom follow-up sequences',
+                  'Priority support',
                   'Team collaboration tools'
                 ],
                 cta: 'Start Free Trial',
@@ -644,12 +654,12 @@ const EnterpriseSurFox = () => {
                 price: 'Custom',
                 period: 'contact sales',
                 features: [
-                  'Unlimited lead processing',
+                  'Unlimited conversations',
                   'White-label options',
-                  'Dedicated infrastructure',
-                  '24/7 phone support',
-                  'Advanced security features',
-                  'Custom AI model training'
+                  'Multi-tenant controls',
+                  'Custom AI model training',
+                  'Dedicated support',
+                  'Advanced analytics'
                 ],
                 cta: 'Contact Sales',
                 popular: false
@@ -714,35 +724,35 @@ const EnterpriseSurFox = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-slate-400">
-              Everything you need to know about implementing SurFox at scale.
+              Everything you need to know about getting started with SurFox.
             </p>
           </div>
           
           <div className="space-y-4">
             {[
               {
-                question: 'How does SurFox integrate with our existing tech stack?',
-                answer: 'SurFox provides native integrations with all major CRM platforms (Salesforce, Microsoft Dynamics, HubSpot), marketing automation tools (Marketo, Pardot, Eloqua), and data warehouses. Our robust API allows for custom integrations, and our professional services team assists with complex implementations. Most organizations complete integration within 2-4 weeks.'
+                question: 'How does the AI learn from my conversations?',
+                answer: 'SurFox analyzes your past 100 conversations to understand your sales style, customer pain points, and what signals indicate a hot lead. The more conversations you have, the smarter your AI assistant becomes at identifying qualified prospects and timing follow-ups perfectly.'
               },
               {
-                question: 'What security and compliance certifications does SurFox maintain?',
-                answer: 'SurFox is SOC 2 Type II certified and maintains GDPR and CCPA compliance frameworks. We provide data residency options, end-to-end encryption, role-based access controls, and comprehensive audit trails. Enterprise customers receive detailed security documentation and can request additional compliance certifications as needed.'
+                question: 'Can I train the AI with my own documents and materials?',
+                answer: 'Absolutely! You can upload reference documents, product sheets, FAQs, and other materials to help your AI assistant understand your business better. This allows for more accurate and contextually relevant conversations with your prospects.'
               },
               {
-                question: 'How accurate is the AI engine for B2B sales scenarios?',
-                answer: 'Our Messaging Intelligence Engine™ maintains 94% accuracy in B2B lead qualification scenarios. The AI is trained specifically on business sales data and adapts to your industry vertical and sales process. We provide transparent confidence scoring and allow for custom model training for large deployments.'
+                question: 'How does the Chrome extension work for importing leads?',
+                answer: 'Our Chrome extension makes it incredibly easy to import leads from any website, social platform, or web app without needing complex integrations. Just click the extension button and your lead data is automatically captured and ready for AI engagement.'
               },
               {
-                question: 'What level of customization is available for large deployments?',
-                answer: 'Business customers can customize scoring models, data point weighting, integration workflows, and reporting dashboards. We offer white-label options, custom branding, and can deploy dedicated infrastructure for large-scale implementations. Our professional services team works with your technical teams to ensure optimal configuration.'
+                question: 'What integrations are available?',
+                answer: 'SurFox integrates with Zapier, giving you access to thousands of apps and services. Connect your CRM, email platforms, marketing tools, and more. No need for complex technical setup - most integrations can be configured in minutes.'
               },
               {
-                question: 'How does pricing work for large volumes?',
-                answer: 'Pricing is volume-based with significant discounts for scale. We offer annual contracts, multi-year agreements, and custom licensing options. Pricing includes platform access, integrations, support, and professional services. Contact our sales team for a customized quote based on your specific requirements.'
+                question: 'How accurate is the AI at identifying hot leads?',
+                answer: 'Our AI maintains a 94% accuracy rate in identifying qualified leads ready to engage. The system analyzes conversation patterns, response timing, questions asked, and dozens of other behavioral signals to score lead quality and buying intent.'
               },
               {
-                question: 'What support and onboarding is provided for business customers?',
-                answer: 'Business customers receive dedicated customer success management, priority technical support, and comprehensive onboarding including change management assistance. We provide training for sales teams, technical documentation, and ongoing optimization recommendations. Support includes 24/7 options for Business Plus customers.'
+                question: 'Do I need technical skills to get started?',
+                answer: 'Not at all! SurFox is designed for solo entrepreneurs and small teams without technical resources. The Chrome extension, document upload, and Zapier integrations make setup simple. Most users are up and running within 15 minutes of signing up.'
               }
             ].map((item, index) => (
               <div key={index} className="bg-slate-800/30 border border-slate-700/50 rounded-xl overflow-hidden">
@@ -823,11 +833,11 @@ const EnterpriseSurFox = () => {
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
                   <Shield className="w-4 h-4 text-emerald-400" />
-                  <span className="text-sm text-slate-400">SOC 2 Certified</span>
+                  <span className="text-sm text-slate-400">Chrome Extension</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Lock className="w-4 h-4 text-emerald-400" />
-                  <span className="text-sm text-slate-400">GDPR Compliant</span>
+                  <span className="text-sm text-slate-400">Self-Learning AI</span>
                 </div>
               </div>
             </div>
@@ -838,17 +848,17 @@ const EnterpriseSurFox = () => {
                 <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Intelligence Engine</a></li>
                 <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Analytics</a></li>
                 <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Integrations</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">API Documentation</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Chrome Extension</a></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-semibold text-white mb-4">Business</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="/security" className="text-slate-400 hover:text-white transition-colors">Security</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Compliance</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Professional Services</a></li>
+                <li><a href="/enterprise" className="text-slate-400 hover:text-white transition-colors">Enterprise</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Agencies</a></li>
                 <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Support</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Training</a></li>
               </ul>
             </div>
             
