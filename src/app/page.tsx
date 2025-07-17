@@ -1,14 +1,13 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react'
-import { ArrowRight, Play, Check, X, Phone, Zap, Target, Users, Filter, TrendingUp, BarChart3, Brain, Settings, Star, Menu, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Command, Terminal, GitBranch } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Menu, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch } from 'lucide-react'
 
 const EnterpriseSurFox = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeTab, setActiveTab] = useState('analytics')
   const [activeFaq, setActiveFaq] = useState<number | null>(null)
   const [isLoading, setIsLoading] = useState(true)
-  const [typingText, setTypingText] = useState('Enterprise Leads')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -19,40 +18,6 @@ const EnterpriseSurFox = () => {
     }
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
-
-  // Typing animation for enterprise terms
-  useEffect(() => {
-    const words = ['Enterprise Leads', 'B2B Prospects', 'Key Accounts', 'Decision Makers']
-    let wordIndex = 0
-    let charIndex = 0
-    let isDeleting = false
-
-    const typeAnimation = () => {
-      const currentWord = words[wordIndex]
-      
-      if (isDeleting) {
-        setTypingText(currentWord.substring(0, charIndex - 1))
-        charIndex--
-      } else {
-        setTypingText(currentWord.substring(0, charIndex + 1))
-        charIndex++
-      }
-      
-      if (!isDeleting && charIndex === currentWord.length) {
-        isDeleting = true
-        setTimeout(typeAnimation, 2000)
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false
-        wordIndex = (wordIndex + 1) % words.length
-        setTimeout(typeAnimation, 500)
-      } else {
-        setTimeout(typeAnimation, isDeleting ? 80 : 120)
-      }
-    }
-
-    const timeout = setTimeout(typeAnimation, 1000)
-    return () => clearTimeout(timeout)
   }, [])
 
   // Scroll effect
@@ -106,14 +71,14 @@ const EnterpriseSurFox = () => {
               <a href="#intelligence" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
                 Intelligence Engine
               </a>
-              <a href="/enterprise" className="...">Enterprise</a>
-              <a href="/security" className="...">Security</a>
+              <a href="/enterprise" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Enterprise</a>
+              <a href="/security" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Security</a>
               <div className="w-px h-6 bg-slate-700"></div>
               <a href="#" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
                 Sign In
               </a>
               <a href="#" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all">
-                Request Demo
+                Start Free Trial
               </a>
             </div>
 
@@ -137,7 +102,7 @@ const EnterpriseSurFox = () => {
               <div className="pt-4 border-t border-slate-800">
                 <a href="#" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium mb-3">Sign In</a>
                 <a href="#" className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium text-center">
-                  Request Demo
+                  Start Free Trial
                 </a>
               </div>
             </div>
@@ -181,30 +146,30 @@ const EnterpriseSurFox = () => {
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                <span className="text-white">Transform Cold</span>
+                <span className="text-white">AI Messaging That</span>
                 <br />
                 <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  {typingText}
-                  <span className="animate-pulse text-blue-400">|</span>
+                  Scales With You
                 </span>
-                <br />
-                <span className="text-white">at Scale</span>
               </h1>
               
-              <p className="text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl">
-                The Messaging Intelligence Engine™ leverages advanced AI to analyze 
+              <p className="text-xl text-slate-300 mb-4 leading-relaxed max-w-2xl">
+                From solo hustlers to national teams — close leads faster with SurFox.
+              </p>
+              <p className="text-lg text-slate-400 mb-8 leading-relaxed max-w-2xl">
+                Advanced AI analyzes 
                 <span className="text-blue-400 font-semibold"> 50+ behavioral data points</span> 
                 in real-time, delivering qualified prospects when they're ready to engage.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a href="#" className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all flex items-center justify-center">
-                  Request Demo
+                  Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a href="#" className="group border border-slate-700 text-slate-300 px-8 py-4 rounded-lg font-semibold hover:bg-slate-800/50 transition-all flex items-center justify-center">
                   <Play className="mr-2 w-5 h-5" />
-                  Platform Overview
+                  See How It Works
                 </a>
               </div>
               
@@ -224,7 +189,7 @@ const EnterpriseSurFox = () => {
               </div>
             </div>
             
-            {/* Enterprise Dashboard */}
+            {/* Dashboard */}
             <div className="lg:col-span-5">
               <div className="relative">
                 <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6 shadow-2xl">
@@ -321,13 +286,97 @@ const EnterpriseSurFox = () => {
         </div>
       </section>
 
-      {/* Enterprise Stats */}
+      {/* Who It's For Section */}
+      <section id="who" className="py-20 bg-slate-900/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Built for Teams of All Sizes
+            </h2>
+            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+              Whether you're a solo entrepreneur or managing enterprise sales, SurFox adapts to your needs.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 hover:border-slate-600/50 transition-all">
+              <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Solo & Small Teams</h3>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Get started in minutes
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Let AI qualify leads while you sleep
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
+                  No technical setup required
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-slate-800/30 border border-blue-500/50 rounded-2xl p-8 hover:border-blue-400/50 transition-all ring-1 ring-blue-500/20">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                <TrendingUp className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Growing Businesses</h3>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Automate conversations across campaigns
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Track AI performance and lead quality
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Customize follow-up pacing and urgency
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 hover:border-slate-600/50 transition-all">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Agencies & Enterprise</h3>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Multi-tenant controls
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Team-level settings, custom AI roles
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
+                  SLA, priority support, white-labeled ops
+                </li>
+              </ul>
+              <div className="mt-6">
+                <a href="/enterprise" className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                  Learn more about Enterprise →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Stats */}
       <section className="border-y border-slate-800 bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: '500K+', label: 'Leads Processed Daily', icon: Database },
-              { number: '94%', label: 'Prediction Accuracy', icon: Target },
+              { number: '500K+', label: 'Messages Processed Daily', icon: Database },
+              { number: '94%', label: 'AI Accuracy Rate', icon: Target },
               { number: '50+', label: 'Data Points Analyzed', icon: Brain },
               { number: '99.9%', label: 'Platform Uptime', icon: Shield }
             ].map((stat, index) => (
@@ -343,15 +392,15 @@ const EnterpriseSurFox = () => {
         </div>
       </section>
 
-      {/* Problem/Solution - Enterprise Focus */}
+      {/* Problem/Solution */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              B2B Sales at Scale
+              Sales Challenges, Solved
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Transform your sales process with AI-driven lead intelligence and qualification.
+              From managing a few leads to scaling thousands, SurFox transforms how you handle sales conversations.
             </p>
           </div>
           
@@ -359,15 +408,15 @@ const EnterpriseSurFox = () => {
             <div className="bg-gradient-to-br from-red-900/20 to-red-800/20 border border-red-800/30 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-red-400 mb-6 flex items-center">
                 <X className="w-6 h-6 mr-3" />
-                Traditional B2B Sales
+                Traditional Sales Struggles
               </h3>
               <ul className="space-y-4">
                 {[
-                  'Manual lead qualification wastes resources',
-                  'Long sales cycles with low conversion rates',
-                  'Inconsistent prospect engagement strategies',
-                  'Limited visibility into buyer readiness',
-                  'Difficulty scaling personalized outreach'
+                  'Manually sorting through endless leads',
+                  'Missing hot prospects while they\'re interested',
+                  'Inconsistent follow-up and messaging',
+                  'No idea which leads are actually ready to buy',
+                  'Burning out from repetitive qualification tasks'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start text-red-300">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -380,15 +429,15 @@ const EnterpriseSurFox = () => {
             <div className="bg-gradient-to-br from-emerald-900/20 to-emerald-800/20 border border-emerald-800/30 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-emerald-400 mb-6 flex items-center">
                 <Check className="w-6 h-6 mr-3" />
-                SurFox Intelligence Platform
+                SurFox AI Solution
               </h3>
               <ul className="space-y-4">
                 {[
-                  'AI-powered qualification at scale',
-                  'Accelerated sales cycles with higher close rates',
-                  'Consistent, intelligent prospect engagement',
-                  'Real-time buyer intent and readiness scoring',
-                  'Automated personalization across all touchpoints'
+                  'AI automatically qualifies and prioritizes leads',
+                  'Real-time alerts when prospects are ready to engage',
+                  'Consistent, intelligent messaging that converts',
+                  'Precise buyer intent scoring and readiness signals',
+                  'Focus on closing while AI handles qualification'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start text-emerald-300">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -401,7 +450,7 @@ const EnterpriseSurFox = () => {
         </div>
       </section>
 
-      {/* Intelligence Engine Process */}
+      {/* How It Works */}
       <section id="intelligence" className="py-20 bg-slate-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -410,10 +459,10 @@ const EnterpriseSurFox = () => {
               <span className="text-sm font-medium text-slate-300">Messaging Intelligence Engine™</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Advanced AI Processing
+              How SurFox Works
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Advanced machine learning algorithms analyze behavioral patterns, contextual signals, and engagement data to deliver precision lead qualification.
+              Advanced AI processes your conversations and data to identify the hottest prospects automatically.
             </p>
           </div>
           
@@ -423,26 +472,26 @@ const EnterpriseSurFox = () => {
                 { 
                   icon: Database, 
                   step: '01', 
-                  title: 'Data Ingestion', 
-                  description: 'Seamlessly integrate with your existing CRM, marketing automation, and data sources through robust APIs.' 
+                  title: 'Connect Your Data', 
+                  description: 'Link your CRM, email, or messaging platforms. SurFox integrates with the tools you already use.' 
                 },
                 { 
                   icon: Brain, 
                   step: '02', 
-                  title: 'AI Analysis', 
-                  description: 'Our proprietary algorithms analyze 50+ behavioral and contextual data points in real-time.' 
+                  title: 'AI Analyzes Everything', 
+                  description: 'Our AI scans conversations, behavior patterns, and 50+ signals to understand lead quality in real-time.' 
                 },
                 { 
                   icon: Target, 
                   step: '03', 
-                  title: 'Intent Scoring', 
-                  description: 'Advanced scoring models predict buyer readiness with 94% accuracy across business segments.' 
+                  title: 'Get Instant Scores', 
+                  description: 'Every lead gets a readiness score with 94% accuracy. Know exactly who to focus on first.' 
                 },
                 { 
                   icon: Zap, 
                   step: '04', 
-                  title: 'Intelligent Routing', 
-                  description: 'Qualified leads are automatically routed to appropriate sales teams with full context and timing.' 
+                  title: 'Take Action', 
+                  description: 'Receive alerts when prospects are hot, with context on what makes them ready to buy.' 
                 }
               ].map((item, index) => (
                 <div key={index} className="relative group">
@@ -467,303 +516,49 @@ const EnterpriseSurFox = () => {
         </div>
       </section>
 
-      {/* Platform Features */}
-      <section id="platform" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Professional Platform Features
-            </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Built for scale with advanced analytics, security, and integration capabilities.
-            </p>
-          </div>
-          
-          <div>
-            <div className="flex justify-center gap-2 mb-12 flex-wrap">
-              {[
-                { id: 'analytics', label: 'Advanced Analytics', icon: BarChart3 },
-                { id: 'ai', label: 'AI Engine', icon: Brain },
-                { id: 'integrations', label: 'Integrations', icon: GitBranch },
-                { id: 'security', label: 'Security & Compliance', icon: Shield }
-              ].map((tab) => {
-                const Icon = tab.icon
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all flex items-center gap-2 text-sm ${
-                      activeTab === tab.id
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
-                        : 'bg-slate-800/50 text-slate-400 border border-slate-700/50 hover:border-slate-600/50'
-                    }`}
-                  >
-                    <Icon className="w-4 h-4" />
-                    {tab.label}
-                  </button>
-                )
-              })}
-            </div>
-            
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                {activeTab === 'analytics' && (
-                  <>
-                    <h3 className="text-2xl font-bold text-white mb-4">
-                      Professional Intelligence Dashboard
-                    </h3>
-                    <p className="text-lg text-slate-400 mb-6">
-                      Monitor lead progression, engagement patterns, and conversion metrics with advanced analytics and reporting capabilities.
-                    </p>
-                    <ul className="space-y-3">
-                      {[
-                        'Custom KPI dashboards and reporting',
-                        'Predictive analytics and forecasting',
-                        'Multi-dimensional lead scoring',
-                        'Advanced segmentation and filtering'
-                      ].map((item, index) => (
-                        <li key={index} className="flex items-center text-slate-300">
-                          <Check className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-                
-                {activeTab === 'ai' && (
-                  <>
-                    <h3 className="text-2xl font-bold text-white mb-4">
-                      Proprietary AI Engine
-                    </h3>
-                    <p className="text-lg text-slate-400 mb-6">
-                      Advanced machine learning models trained on enterprise B2B sales data to deliver accurate predictions and insights.
-                    </p>
-                    <ul className="space-y-3">
-                      {[
-                        'Natural language processing for sentiment analysis',
-                        'Behavioral pattern recognition and clustering',
-                        'Dynamic scoring model adaptation',
-                        'Continuous learning and optimization'
-                      ].map((item, index) => (
-                        <li key={index} className="flex items-center text-slate-300">
-                          <Check className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-                
-                {activeTab === 'integrations' && (
-                  <>
-                    <h3 className="text-2xl font-bold text-white mb-4">
-                      Platform Integrations
-                    </h3>
-                    <p className="text-lg text-slate-400 mb-6">
-                      Seamlessly connect with your existing tech stack through robust APIs and pre-built integrations.
-                    </p>
-                    <ul className="space-y-3">
-                      {[
-                        'Salesforce, HubSpot, and Microsoft Dynamics',
-                        'Marketing automation platforms (Marketo, Pardot)',
-                        'Data warehouses and business intelligence tools',
-                        'Custom API integrations and webhooks'
-                      ].map((item, index) => (
-                        <li key={index} className="flex items-center text-slate-300">
-                          <Check className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-                
-                {activeTab === 'security' && (
-                  <>
-                    <h3 className="text-2xl font-bold text-white mb-4">
-                      Security & Compliance
-                    </h3>
-                    <p className="text-lg text-slate-400 mb-6">
-                      Bank-level security with comprehensive compliance frameworks to protect your business data.
-                    </p>
-                    <ul className="space-y-3">
-                      {[
-                        'SOC 2 Type II certified infrastructure',
-                        'GDPR and CCPA compliance framework',
-                        'End-to-end encryption and data protection',
-                        'Role-based access control and audit trails'
-                      ].map((item, index) => (
-                        <li key={index} className="flex items-center text-slate-300">
-                          <Check className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-              </div>
-              
-              <div>
-                <div className="bg-slate-900/50 border border-slate-700/50 rounded-2xl overflow-hidden">
-                  <div className="bg-slate-800/50 px-6 py-4 border-b border-slate-700/50">
-                    <div className="flex items-center justify-between">
-                      <h4 className="font-semibold text-white">
-                        {activeTab === 'analytics' && 'Enterprise Analytics Dashboard'}
-                        {activeTab === 'ai' && 'AI Engine Performance'}
-                        {activeTab === 'integrations' && 'Integration Management'}
-                        {activeTab === 'security' && 'Security Center'}
-                      </h4>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                        <span className="text-xs text-slate-400">Live</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6">
-                    {activeTab === 'analytics' && (
-                      <div className="space-y-6">
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-slate-800/30 rounded-lg p-4 border border-slate-700/30">
-                            <div className="text-sm text-slate-400 mb-1">Lead Velocity</div>
-                            <div className="text-2xl font-bold text-blue-400">+34%</div>
-                          </div>
-                          <div className="bg-slate-800/30 rounded-lg p-4 border border-slate-700/30">
-                            <div className="text-sm text-slate-400 mb-1">Conversion Rate</div>
-                            <div className="text-2xl font-bold text-emerald-400">23.7%</div>
-                          </div>
-                        </div>
-                        <div className="h-32 bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg border border-slate-700/30 flex items-center justify-center">
-                          <TrendingUp className="w-8 h-8 text-slate-400" />
-                        </div>
-                      </div>
-                    )}
-                    
-                    {activeTab === 'ai' && (
-                      <div className="space-y-4">
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-slate-800/30 rounded-lg p-3 border border-slate-700/30">
-                            <div className="text-sm text-slate-400">Model Accuracy</div>
-                            <div className="text-xl font-bold text-purple-400">94.3%</div>
-                          </div>
-                          <div className="bg-slate-800/30 rounded-lg p-3 border border-slate-700/30">
-                            <div className="text-sm text-slate-400">Processing Speed</div>
-                            <div className="text-xl font-bold text-blue-400">2.1ms</div>
-                          </div>
-                        </div>
-                        <div className="space-y-2">
-                          {['Neural Network Training', 'Pattern Recognition', 'Sentiment Analysis'].map((process, i) => (
-                            <div key={i} className="flex items-center justify-between p-2 bg-slate-800/20 rounded border border-slate-700/20">
-                              <span className="text-sm text-slate-300">{process}</span>
-                              <div className="w-16 h-2 bg-slate-700 rounded overflow-hidden">
-                                <div className="h-full bg-gradient-to-r from-blue-400 to-purple-400" style={{ width: `${85 + i * 5}%` }}></div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                    
-                    {activeTab === 'integrations' && (
-                      <div className="space-y-4">
-                        {[
-                          { name: 'Salesforce', status: 'Connected', health: 'green' },
-                          { name: 'Microsoft Dynamics', status: 'Connected', health: 'green' },
-                          { name: 'Marketo', status: 'Syncing', health: 'yellow' },
-                          { name: 'Snowflake', status: 'Connected', health: 'green' }
-                        ].map((integration, i) => (
-                          <div key={i} className="flex items-center justify-between p-3 bg-slate-800/20 rounded border border-slate-700/20">
-                            <span className="text-sm text-slate-300">{integration.name}</span>
-                            <div className="flex items-center space-x-2">
-                              <div className={`w-2 h-2 rounded-full ${
-                                integration.health === 'green' ? 'bg-emerald-400' : 'bg-yellow-400'
-                              }`}></div>
-                              <span className="text-xs text-slate-400">{integration.status}</span>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    
-                    {activeTab === 'security' && (
-                      <div className="space-y-4">
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-slate-800/30 rounded-lg p-3 border border-slate-700/30 text-center">
-                            <div className="text-xl font-bold text-emerald-400">99.9%</div>
-                            <div className="text-xs text-slate-400">Uptime SLA</div>
-                          </div>
-                          <div className="bg-slate-800/30 rounded-lg p-3 border border-slate-700/30 text-center">
-                            <div className="text-xl font-bold text-blue-400">256-bit</div>
-                            <div className="text-xs text-slate-400">Encryption</div>
-                          </div>
-                        </div>
-                        <div className="space-y-2">
-                          {[
-                            { item: 'SOC 2 Type II', status: 'Certified' },
-                            { item: 'GDPR Compliance', status: 'Active' },
-                            { item: 'Data Residency', status: 'Configured' },
-                            { item: 'Access Controls', status: 'Enforced' }
-                          ].map((security, i) => (
-                            <div key={i} className="flex items-center justify-between p-2 bg-slate-800/20 rounded border border-slate-700/20">
-                              <span className="text-sm text-slate-300">{security.item}</span>
-                              <span className="text-xs text-emerald-400">{security.status}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Enterprise Testimonials */}
+      {/* Testimonials */}
       <section className="py-20 bg-slate-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
+              Loved by Teams of All Sizes
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Global organizations rely on SurFox to scale their sales operations and drive predictable revenue growth.
+              From solo entrepreneurs to enterprise sales teams, SurFox delivers results across every business size.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                quote: "SurFox transformed our sales process. The AI-driven insights helped us identify high-value prospects 3x faster and increased our deal velocity by 40%.",
-                author: 'Sarah Chen',
-                role: 'VP of Sales',
-                company: 'TechCorp',
-                logo: 'TC',
-                metric: 'Deal Velocity',
-                value: '+40%',
-                size: 'Fortune 500'
+                quote: "As a solo consultant, SurFox helps me qualify leads while I'm focused on client work. The AI picks up buying signals I would have missed completely.",
+                author: 'Mike Chen',
+                role: 'Freelance Marketing Consultant',
+                company: 'Solo Business',
+                logo: 'MC',
+                metric: 'Time Saved',
+                value: '15+ hrs/week',
+                size: 'Solo'
               },
               {
-                quote: "The platform's security compliance and seamless integration with our existing tech stack made adoption seamless across our global sales organization.",
+                quote: "SurFox transformed our sales process. The AI-driven insights helped us identify high-value prospects 3x faster and increased our deal velocity by 40%.",
+                author: 'Sarah Mitchell',
+                role: 'VP of Sales',
+                company: 'GrowthTech',
+                logo: 'GT',
+                metric: 'Deal Velocity',
+                value: '+40%',
+                size: 'Scale-up'
+              },
+              {
+                quote: "The platform's security compliance and seamless integration made adoption smooth across our global sales organization. ROI was clear within 60 days.",
                 author: 'Marcus Rodriguez',
                 role: 'Chief Revenue Officer',
                 company: 'Global Systems Inc',
                 logo: 'GS',
                 metric: 'Sales Efficiency',
                 value: '+67%',
-                size: '10K+ Employees'
-              },
-              {
-                quote: "Real-time lead intelligence at scale. SurFox helps us focus on prospects ready to engage, resulting in higher conversion rates and shorter sales cycles.",
-                author: 'Jennifer Wu',
-                role: 'EVP Sales Operations',
-                company: 'Innovation Partners',
-                logo: 'IP',
-                metric: 'Conversion Rate',
-                value: '+5.2x',
-                size: 'Large Business'
+                size: 'Enterprise'
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 hover:border-slate-600/50 transition-all">
@@ -798,58 +593,58 @@ const EnterpriseSurFox = () => {
         </div>
       </section>
 
-      {/* Enterprise Pricing */}
+      {/* Pricing */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Professional Pricing
+              Pricing That Grows With You
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Flexible pricing models designed for scale and business requirements.
+              Start small and scale up. Pay for what you need, when you need it.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                name: 'Professional',
-                description: 'For growing sales teams',
-                price: 'Custom',
-                period: 'per user/month',
+                name: 'Starter',
+                description: 'Perfect for solo entrepreneurs',
+                price: '$29',
+                period: 'per month',
                 features: [
-                  'Up to 10,000 leads/month',
-                  'Advanced analytics dashboard',
-                  'Standard integrations',
-                  'Email support',
-                  'Basic compliance features'
+                  'Up to 1,000 leads/month',
+                  'Basic AI scoring and alerts',
+                  'Email integration',
+                  'Community support',
+                  'Core analytics dashboard'
                 ],
-                cta: 'Contact Sales',
+                cta: 'Start Free Trial',
                 popular: false
               },
               {
-                name: 'Business',
-                description: 'For large organizations',
-                price: 'Custom',
-                period: 'volume pricing',
+                name: 'Growth',
+                description: 'For growing teams and agencies',
+                price: '$99',
+                period: 'per month',
                 features: [
-                  'Unlimited lead processing',
-                  'Full analytics suite',
-                  'All integrations + API access',
-                  'Priority support + CSM',
-                  'SOC 2 + GDPR compliance',
-                  'Custom deployment options'
+                  'Up to 10,000 leads/month',
+                  'Advanced AI features',
+                  'CRM integrations',
+                  'Priority email support',
+                  'Custom scoring models',
+                  'Team collaboration tools'
                 ],
-                cta: 'Request Demo',
+                cta: 'Start Free Trial',
                 popular: true
               },
               {
-                name: 'Business Plus',
-                description: 'For global organizations',
+                name: 'Enterprise',
+                description: 'For large organizations',
                 price: 'Custom',
-                period: 'annual agreement',
+                period: 'contact sales',
                 features: [
-                  'Everything in Business',
+                  'Unlimited lead processing',
                   'White-label options',
                   'Dedicated infrastructure',
                   '24/7 phone support',
@@ -902,16 +697,16 @@ const EnterpriseSurFox = () => {
           
           <div className="text-center mt-12">
             <p className="text-slate-400 mb-4">
-              All business plans include: SOC 2 compliance • 99.9% SLA • Dedicated support • Custom onboarding
+              All plans include: AI-powered lead scoring • Real-time alerts • 14-day free trial • No setup fees
             </p>
-            <a href="#" className="text-blue-400 hover:text-blue-300 font-medium">
-              View detailed feature comparison →
+            <a href="/enterprise" className="text-blue-400 hover:text-blue-300 font-medium">
+              Need something bigger? Explore Enterprise options →
             </a>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ */}
       <section className="py-20 bg-slate-900/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -971,7 +766,7 @@ const EnterpriseSurFox = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -979,31 +774,31 @@ const EnterpriseSurFox = () => {
             Ready to Scale Your Sales?
           </h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Join leading organizations using SurFox to transform their sales operations with AI-driven intelligence.
+            Join thousands of businesses using SurFox to identify and close their best prospects faster.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href="#" className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all inline-flex items-center justify-center">
-              Request Demo
+              Start Free Trial
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a href="#" className="border border-slate-600 text-slate-300 px-8 py-4 rounded-lg font-semibold hover:bg-slate-800/50 transition-all">
-              Speak with Sales
+              Book a Demo
             </a>
           </div>
           
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400">
             <div className="flex items-center">
               <Shield className="w-4 h-4 mr-2 text-emerald-400" />
-              SOC 2 Certified
+              14-day free trial
             </div>
             <div className="flex items-center">
               <Globe className="w-4 h-4 mr-2 text-emerald-400" />
-              Global Infrastructure
+              No setup fees
             </div>
             <div className="flex items-center">
               <Award className="w-4 h-4 mr-2 text-emerald-400" />
-              99.9% Enterprise SLA
+              Cancel anytime
             </div>
           </div>
         </div>
@@ -1023,7 +818,8 @@ const EnterpriseSurFox = () => {
                   <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Fox</span>
                 </span>
               </div>
-              <p className="text-slate-400 mb-6">Enterprise messaging intelligence platform powered by advanced AI.</p>
+              <p className="text-slate-400 mb-4">AI messaging platform that scales with you.</p>
+              <p className="text-sm text-slate-500 mb-6">Built with enterprise-grade AI. Trusted by teams of all sizes.</p>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
                   <Shield className="w-4 h-4 text-emerald-400" />
