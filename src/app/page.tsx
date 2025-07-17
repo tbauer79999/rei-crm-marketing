@@ -74,9 +74,7 @@ const EnterpriseSurFox = () => {
               <a href="/enterprise" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Enterprise</a>
               <a href="/security" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Security</a>
               <div className="w-px h-6 bg-slate-700"></div>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
-                Sign In
-              </a>
+              <a href="https://app.getsurfox.com/login" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Sign In</a>
               <a href="#" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all">
                 Start Free Trial
               </a>
