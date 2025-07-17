@@ -165,27 +165,62 @@ const EnterpriseSurFox = () => {
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
-                <a href="#" className="group border border-slate-700 text-slate-300 px-8 py-4 rounded-lg font-semibold hover:bg-slate-800/50 transition-all flex items-center justify-center">
-                  <Play className="mr-2 w-5 h-5" />
-                  See How It Works
-                </a>
-              </div>
-              
-              <div className="grid grid-cols-3 gap-6 text-sm">
-                <div className="flex items-center text-slate-400">
-                  <Shield className="w-4 h-4 text-emerald-400 mr-2" />
-                  Chrome Extension
-                </div>
-                <div className="flex items-center text-slate-400">
-                  <Lock className="w-4 h-4 text-emerald-400 mr-2" />
-                  Self-Learning AI
-                </div>
-                <div className="flex items-center text-slate-400">
-                  <Award className="w-4 h-4 text-emerald-400 mr-2" />
-                  99.9% Uptime
-                </div>
-              </div>
-            </div>
+                <section className="bg-gradient-to-b from-slate-900 to-slate-950 py-20 px-6 md:px-20 text-white">
+  <h2 className="text-4xl font-bold mb-6 text-center">
+    Most Platforms Blast. SurFox Engages.
+  </h2>
+  <p className="text-xl text-center mb-12 max-w-3xl mx-auto">
+    Other platforms send mass messages and hope someone replies. SurFox opens real conversations — and keeps them going until the lead is ready to talk.
+  </p>
+  <div className="grid md:grid-cols-3 gap-8 text-left">
+    <div className="bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-xl transition">
+      <h3 className="text-lg font-semibold mb-2">🧠 Self-Learning Follow-Up</h3>
+      <p>SurFox adapts message tone, pacing, and content based on each lead’s behavior.</p>
+    </div>
+    <div className="bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-xl transition">
+      <h3 className="text-lg font-semibold mb-2">🔥 Qualified Conversations Only</h3>
+      <p>You only step in when AI says the lead is ready. Less noise. More signal.</p>
+    </div>
+    <div className="bg-slate-800 rounded-xl p-6 shadow-md hover:shadow-xl transition">
+      <h3 className="text-lg font-semibold mb-2">🤝 Feels Human, Not Robotic</h3>
+      <p>AI messages sound natural — like your best sales rep, not a bot.</p>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works" className="py-16 px-6 md:px-20 bg-slate-800 text-white rounded-lg max-w-6xl mx-auto">
+  <h2 className="text-3xl font-bold mb-8 text-center">How It Works</h2>
+  <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-12">
+    <div className="flex flex-col items-center text-center max-w-xs">
+      <div className="text-5xl mb-4">📤</div>
+      <h3 className="text-xl font-semibold">Upload Leads</h3>
+    </div>
+    <div className="flex flex-col items-center text-center max-w-xs">
+      <div className="text-5xl mb-4">🤖</div>
+      <h3 className="text-xl font-semibold">AI Starts Conversations</h3>
+    </div>
+    <div className="flex flex-col items-center text-center max-w-xs">
+      <div className="text-5xl mb-4">🔁</div>
+      <h3 className="text-xl font-semibold">Auto Follow-Ups</h3>
+    </div>
+    <div className="flex flex-col items-center text-center max-w-xs">
+      <div className="text-5xl mb-4">🔥</div>
+      <h3 className="text-xl font-semibold">You Jump in When It's Hot</h3>
+    </div>
+  </div>
+</section>
+<section className="bg-slate-900 text-white py-16 px-8 md:px-20 max-w-6xl mx-auto">
+  <h2 className="text-3xl font-bold mb-6">What Engagement Looks Like</h2>
+  <div className="bg-slate-800 rounded-lg p-6 space-y-2">
+    <p><strong>❌ Other Tools:</strong> “Hi, are you selling?” (x3)</p>
+    <p className="mt-4"><strong>✅ SurFox AI:</strong></p>
+    <p>👤 Hey — wasn’t sure if this was still your number. If you're still thinking about selling, I can keep it simple for you.</p>
+    <p>... [no reply]</p>
+    <p>👤 Just checking in — totally fine if not the right time.</p>
+    <p>💬 Yeah I might be. What's your offer?</p>
+  </div>
+</section>
+
             
             {/* Dashboard */}
             <div className="lg:col-span-5">
@@ -284,6 +319,146 @@ const EnterpriseSurFox = () => {
         </div>
       </section>
 
+      {/* Why SurFox Section */}
+      <section className="bg-gradient-to-b from-slate-900 to-slate-950 py-20 px-6 md:px-20 text-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold mb-6 text-center">Most Platforms Blast. SurFox Engages.</h2>
+          <p className="text-xl text-center mb-12 max-w-3xl mx-auto text-slate-300">
+            Other platforms send mass messages and hope someone replies. SurFox opens real conversations — and keeps them going until the lead is ready to talk.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 text-left">
+            <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 shadow-md hover:shadow-xl hover:border-slate-600/50 transition-all">
+              <h3 className="text-lg font-semibold mb-3 flex items-center">
+                <Brain className="w-5 h-5 mr-2 text-blue-400" />
+                Self-Learning Follow-Up
+              </h3>
+              <p className="text-slate-300">SurFox adapts message tone, pacing, and content based on each lead's behavior.</p>
+            </div>
+
+            <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 shadow-md hover:shadow-xl hover:border-slate-600/50 transition-all">
+              <h3 className="text-lg font-semibold mb-3 flex items-center">
+                <Target className="w-5 h-5 mr-2 text-emerald-400" />
+                Qualified Conversations Only
+              </h3>
+              <p className="text-slate-300">You only step in when AI says the lead is ready. Less noise. More signal.</p>
+            </div>
+
+            <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 shadow-md hover:shadow-xl hover:border-slate-600/50 transition-all">
+              <h3 className="text-lg font-semibold mb-3 flex items-center">
+                <Users className="w-5 h-5 mr-2 text-purple-400" />
+                Feels Human, Not Robotic
+              </h3>
+              <p className="text-slate-300">AI messages sound natural — like your best sales rep, not a bot.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SurFox vs Others Comparison */}
+      <section className="py-20 bg-slate-950 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center mb-10">SurFox vs Everyone Else</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-slate-800/50 border border-red-800/30 p-8 rounded-xl">
+              <h3 className="text-2xl font-semibold mb-4 flex items-center text-red-400">
+                <X className="w-6 h-6 mr-3" />
+                Other Tools
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start text-red-300">
+                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span>Bulk blasts with no context</span>
+                </li>
+                <li className="flex items-start text-red-300">
+                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span>No follow-up intelligence</span>
+                </li>
+                <li className="flex items-start text-red-300">
+                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span>All leads treated the same</span>
+                </li>
+                <li className="flex items-start text-red-300">
+                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span>You do all the work</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-900/50 to-purple-900/50 border border-blue-500/50 p-8 rounded-xl shadow-lg ring-1 ring-blue-500/20">
+              <h3 className="text-2xl font-semibold mb-4 flex items-center text-blue-400">
+                <Check className="w-6 h-6 mr-3" />
+                SurFox
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start text-blue-300">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span>Conversational AI that adapts</span>
+                </li>
+                <li className="flex items-start text-blue-300">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span>Smart follow-ups that learn</span>
+                </li>
+                <li className="flex items-start text-blue-300">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span>Lead scoring built in</span>
+                </li>
+                <li className="flex items-start text-blue-300">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span>You jump in only when it's hot</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Lead Conversation Example */}
+      <section className="bg-slate-900/50 text-white py-16 px-8 md:px-20">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">What Real Engagement Looks Like</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-slate-800/50 border border-red-800/30 rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-4 text-red-400 flex items-center">
+                <X className="w-5 h-5 mr-2" />
+                Other Tools
+              </h3>
+              <div className="space-y-3 text-sm">
+                <div className="bg-slate-700/50 p-3 rounded">
+                  <span className="text-slate-400">Message 1:</span> "Hi, are you selling?"
+                </div>
+                <div className="bg-slate-700/50 p-3 rounded">
+                  <span className="text-slate-400">Message 2:</span> "Hi, are you selling?"
+                </div>
+                <div className="bg-slate-700/50 p-3 rounded">
+                  <span className="text-slate-400">Message 3:</span> "Hi, are you selling?"
+                </div>
+                <div className="text-red-400 text-center font-medium">No replies. Lead lost.</div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-500/50 rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-4 text-blue-400 flex items-center">
+                <Check className="w-5 h-5 mr-2" />
+                SurFox AI
+              </h3>
+              <div className="space-y-3 text-sm">
+                <div className="bg-blue-900/30 p-3 rounded">
+                  <span className="text-blue-400">AI:</span> "Hey — wasn't sure if this was still your number. If you're still thinking about selling, I can keep it simple for you."
+                </div>
+                <div className="text-center text-slate-400 text-xs py-2">... [no reply for 3 days]</div>
+                <div className="bg-blue-900/30 p-3 rounded">
+                  <span className="text-blue-400">AI:</span> "Just checking in — totally fine if not the right time."
+                </div>
+                <div className="bg-emerald-900/30 p-3 rounded">
+                  <span className="text-emerald-400">Lead:</span> "Yeah I might be. What's your offer?"
+                </div>
+                <div className="text-emerald-400 text-center font-medium">🔥 Hot lead ready for handoff!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Who It's For Section */}
       <section id="who" className="py-20 bg-slate-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -353,10 +528,6 @@ const EnterpriseSurFox = () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Agencies & Enterprise</h3>
               <ul className="space-y-3 text-slate-300">
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
-                  Multi-tenant controls for client management
-                </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-purple-400 mr-3 mt-0.5 flex-shrink-0" />
                   Team-level settings and custom AI roles
@@ -460,7 +631,7 @@ const EnterpriseSurFox = () => {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How It Works - Enhanced Visual Flow */}
       <section id="intelligence" className="py-20 bg-slate-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -469,11 +640,36 @@ const EnterpriseSurFox = () => {
               <span className="text-sm font-medium text-slate-300">Messaging Intelligence Engine™</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              How SurFox Works
+              From Upload to Hot Lead in 4 Steps
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Your AI assistant processes conversations and learns from past interactions to identify the hottest prospects automatically.
+              Watch your AI assistant turn cold contacts into qualified conversations automatically.
             </p>
+          </div>
+          
+          {/* Visual Progress Flow */}
+          <div className="relative mb-12">
+            <div className="flex justify-between items-center mb-8">
+              <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600"></div>
+              {[
+                { icon: Database, title: 'Upload Leads', color: 'blue' },
+                { icon: Brain, title: 'AI Starts Conversations', color: 'purple' },
+                { icon: Target, title: 'Auto Follow-Ups', color: 'pink' },
+                { icon: Zap, title: 'You Jump in When Hot', color: 'emerald' }
+              ].map((step, index) => (
+                <div key={index} className="relative z-10 text-center">
+                  <div className={`w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br ${
+                    step.color === 'blue' ? 'from-blue-600 to-blue-700' :
+                    step.color === 'purple' ? 'from-purple-600 to-purple-700' :
+                    step.color === 'pink' ? 'from-pink-600 to-pink-700' :
+                    'from-emerald-600 to-emerald-700'
+                  } flex items-center justify-center shadow-lg`}>
+                    <step.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-sm font-medium text-white">{step.title}</div>
+                </div>
+              ))}
+            </div>
           </div>
           
           <div className="relative">
@@ -483,48 +679,76 @@ const EnterpriseSurFox = () => {
                   icon: Database, 
                   step: '01', 
                   title: 'Upload Your Data', 
-                  description: 'Use our Chrome extension to quickly import leads, or upload documents and reference materials to train your AI assistant.' 
+                  description: 'Chrome extension imports leads instantly. Upload docs to train your AI on your business.',
+                  highlight: 'Chrome Extension Ready'
                 },
                 { 
                   icon: Brain, 
                   step: '02', 
-                  title: 'AI Learns & Engages', 
-                  description: 'Your AI starts conversations via text, learning from the past 100 interactions to get smarter with every exchange.' 
+                  title: 'AI Starts Engaging', 
+                  description: 'AI opens natural conversations, learning from every interaction to improve over time.',
+                  highlight: 'Self-Learning AI'
                 },
                 { 
                   icon: Target, 
                   step: '03', 
                   title: 'Smart Follow-ups', 
-                  description: 'AI determines the perfect timing for follow-ups based on prospect behavior, automatically nurturing leads when they\'re ready.' 
+                  description: 'Perfect timing based on prospect behavior. No more guessing when to reach out.',
+                  highlight: 'Behavioral Triggers'
                 },
                 { 
                   icon: Zap, 
                   step: '04', 
-                  title: 'Hot Lead Handoff', 
-                  description: 'When AI identifies a qualified prospect ready to buy, you get an instant alert with full conversation context.' 
+                  title: 'Hot Lead Alert', 
+                  description: 'Instant notification with full context when prospects are ready to close.',
+                  highlight: 'Ready to Close'
                 }
               ].map((item, index) => (
                 <div key={index} className="relative group">
-                  <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6 hover:border-slate-600/50 transition-all">
+                  <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6 hover:border-slate-600/50 transition-all h-full">
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
                         <item.icon className="w-6 h-6 text-white" />
                       </div>
-                      <span className="text-sm font-mono text-slate-500">{item.step}</span>
+                      <span className="text-xs font-mono text-slate-500 bg-slate-700/50 px-2 py-1 rounded">
+                        {item.step}
+                      </span>
                     </div>
                     <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
+                    <p className="text-slate-400 text-sm leading-relaxed mb-3">{item.description}</p>
+                    <div className="text-xs text-blue-400 font-medium">
+                      ✨ {item.highlight}
+                    </div>
                   </div>
-                  
-                  {index < 3 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-slate-700 to-transparent"></div>
-                  )}
                 </div>
               ))}
             </div>
           </div>
         </div>
       </section>
+<section className="py-20 bg-slate-950 text-white">
+  <h2 className="text-4xl font-bold text-center mb-10">SurFox vs Everyone Else</h2>
+  <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <div className="bg-slate-800 p-6 rounded-lg">
+      <h3 className="text-2xl font-semibold mb-2">❌ Other Tools</h3>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>Bulk blasts with no context</li>
+        <li>No follow-up intelligence</li>
+        <li>All leads treated the same</li>
+        <li>You do all the work</li>
+      </ul>
+    </div>
+    <div className="bg-indigo-600 p-6 rounded-lg shadow-lg">
+      <h3 className="text-2xl font-semibold mb-2">✅ SurFox</h3>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>Conversational AI that adapts</li>
+        <li>Smart follow-ups that learn</li>
+        <li>Lead scoring built in</li>
+        <li>You jump in only when it’s hot</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
       {/* Testimonials */}
       <section className="py-20 bg-slate-900/30">
@@ -887,4 +1111,8 @@ const EnterpriseSurFox = () => {
   )
 }
 
-export default EnterpriseSurFox
+export default EnterpriseSurFox mr-3 mt-0.5 flex-shrink-0" />
+                  Multi-tenant controls for client management
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-purple-400
