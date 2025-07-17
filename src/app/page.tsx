@@ -788,7 +788,7 @@ const EnterpriseSurFox = () => {
               {
                 name: 'Starter',
                 description: 'Perfect for solo entrepreneurs',
-                price: '$147',
+                price: '$197',
                 period: 'per month',
                 features: [
                   'Up to 1,000 conversations/month',
@@ -803,7 +803,7 @@ const EnterpriseSurFox = () => {
               {
                 name: 'Growth',
                 description: 'For growing teams and agencies',
-                price: '$247',
+                price: '$397',
                 period: 'per month',
                 features: [
                   'Up to 10,000 conversations/month',
@@ -819,7 +819,7 @@ const EnterpriseSurFox = () => {
               {
                 name: 'Enterprise',
                 description: 'For large organizations',
-                price: 'Custom',
+                price: '$997',
                 period: 'contact sales',
                 features: [
                   'Unlimited conversations',
