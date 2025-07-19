@@ -55,7 +55,7 @@ const SurFoxVsLaunchControl = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden">
       
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-40 transition-all duration-500 ${
