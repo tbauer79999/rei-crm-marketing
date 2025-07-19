@@ -78,44 +78,46 @@ const EnterpriseSurFox = () => {
     Security
   </a>
 
-  {/* Compare Dropdown (Fully Functional) */}
-  <div className="relative">
-    <div className="group inline-block">
-      <button className="flex items-center space-x-1 text-slate-400 hover:text-white transition-colors text-sm font-medium">
-        <span>Compare</span>
-        <ChevronDown className="w-4 h-4" />
-      </button>
-      <div className="absolute left-0 mt-2 w-56 bg-slate-900 border border-slate-700 rounded-lg shadow-lg hidden group-hover:block z-50">
-        <a
-          href="https://www.getsurfox.com/compare/smarter-contact"
-          className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white"
-        >
-          ↳ vs Smarter Contact
-        </a>
-        <a
-          href="https://www.getsurfox.com/compare/launch-control"
-          className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white"
-        >
-          ↳ vs Launch Control
-        </a>
-        <a
-          href="https://www.getsurfox.com/compare/textus"
-          className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white"
-        >
-          ↳ vs TextUs
-        </a>
-        <a
-          href="https://www.getsurfox.com/compare"
-          className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white font-semibold"
-        >
-          ↳ All Comparisons
-        </a>
-      </div>
+  {/* 🔥 THIS WORKS */}
+  <div className="relative group">
+    <div className="flex items-center space-x-1 text-slate-400 hover:text-white transition-colors text-sm font-medium cursor-pointer">
+      <span>Compare</span>
+      <ChevronDown className="w-4 h-4" />
+    </div>
+
+    <div className="absolute left-0 mt-2 w-56 bg-slate-900 border border-slate-700 rounded-lg shadow-lg z-50 hidden group-hover:flex flex-col">
+      <a
+        href="https://www.getsurfox.com/compare/smarter-contact"
+        className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white"
+      >
+        ↳ vs Smarter Contact
+      </a>
+      <a
+        href="https://www.getsurfox.com/compare/launch-control"
+        className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white"
+      >
+        ↳ vs Launch Control
+      </a>
+      <a
+        href="https://www.getsurfox.com/compare/textus"
+        className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white"
+      >
+        ↳ vs TextUs
+      </a>
+      <a
+        href="https://www.getsurfox.com/compare"
+        className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white font-semibold"
+      >
+        ↳ All Comparisons
+      </a>
     </div>
   </div>
 
   <div className="w-px h-6 bg-slate-700"></div>
-  <a href="https://app.getsurfox.com/login" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+  <a
+    href="https://app.getsurfox.com/login"
+    className="text-slate-400 hover:text-white transition-colors text-sm font-medium"
+  >
     Sign In
   </a>
   <a
@@ -125,6 +127,7 @@ const EnterpriseSurFox = () => {
     Start Free Trial
   </a>
 </div>
+
 
 
 
