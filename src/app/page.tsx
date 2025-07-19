@@ -148,10 +148,10 @@ const SurFoxRevolution = () => {
               <div className="border-t border-slate-700/50 pt-4">
                 <div className="text-slate-400 text-sm font-medium mb-2">Compare</div>
                 <div className="ml-4 space-y-2">
-                  <a href="#" className="block text-slate-500 hover:text-white transition-colors text-sm">vs TextUs</a>
-                  <a href="#" className="block text-slate-500 hover:text-white transition-colors text-sm">vs Smarter Contact</a>
-                  <a href="#" className="block text-slate-500 hover:text-white transition-colors text-sm">vs Launch Control</a>
-                  <a href="#" className="block text-slate-500 hover:text-white transition-colors text-sm font-medium">All Comparisons</a>
+                  <a href="/compare/surfox-vs-textus" className="block text-slate-500 hover:text-white transition-colors text-sm">vs TextUs</a>
+                  <a href="/compare/surfox-vs-smarter-contact" className="block text-slate-500 hover:text-white transition-colors text-sm">vs Smarter Contact</a>
+                  <a href="/compare/surfox-vs-launch-control" className="block text-slate-500 hover:text-white transition-colors text-sm">vs Launch Control</a>
+                  <a href="/compare/surfox-vs-all-competitors" className="block text-slate-500 hover:text-white transition-colors text-sm font-medium">All Comparisons</a>
                 </div>
               </div>
               
