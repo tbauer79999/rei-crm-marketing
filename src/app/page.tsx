@@ -93,13 +93,13 @@ const EnterpriseSurFox = () => {
         ↳ vs Smarter Contact
       </a>
       <a
-        href="https://www.getsurfox.com/compare/launch-control"
+        href="https://www.getsurfox.com/compare/surfox-vs-launch-control"
         className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white"
       >
         ↳ vs Launch Control
       </a>
       <a
-        href="https://www.getsurfox.com/compare/textus"
+        href="https://www.getsurfox.com/compare/surfox-vs-textus"
         className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white"
       >
         ↳ vs TextUs
