@@ -11,7 +11,7 @@ const SurFoxVsSmarterContact = () => {
 
   // Mouse tracking for subtle parallax effects
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
     window.addEventListener('mousemove', handleMouseMove)
@@ -73,7 +73,7 @@ const SurFoxVsSmarterContact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <a href="/" className="flex items-center space-x-3 group">
-              <img src="/logo.png" alt="SurFox Logo" className="w-8 h-8" />
+              <img src="/logo.png" alt="SurFox Logo" className="w-4 h-4" />
               <span className="text-xl font-semibold tracking-tight">
                 <span className="text-white">Sur</span>
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Fox</span>
@@ -152,7 +152,7 @@ const SurFoxVsSmarterContact = () => {
               </span>
               <div className="flex items-center justify-center space-x-4 mb-6">
                 <div className="flex items-center space-x-2">
-                  <img src="/logo.png" alt="SurFox Logo" className="w-8 h-8" />
+                  <img src="/logo.png" alt="SurFox Logo" className="w-4 h-4" />
                   <span className="text-2xl font-bold text-white">SurFox</span>
                 </div>
                 <span className="text-slate-500 text-xl">vs</span>
@@ -277,9 +277,7 @@ const SurFoxVsSmarterContact = () => {
             {/* SurFox Approach */}
             <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-2xl p-8 ring-1 ring-blue-500/20">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
-                  <Terminal className="w-6 h-6 text-white" />
-                </div>
+                <img src="/logo.png" alt="SurFox Logo" className="w-6 h-6" />
                 <div>
                   <h3 className="text-2xl font-bold text-blue-400">SurFox</h3>
                   <p className="text-slate-300">AI Conversation Approach</p>
@@ -481,9 +479,7 @@ const SurFoxVsSmarterContact = () => {
               </div>
               <div className="col-span-3 p-4 text-center border-l border-slate-700/50">
                 <div className="flex items-center justify-center">
-                  <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-2">
-                    <Terminal className="w-3 h-3 text-white" />
-                  </div>
+                  <img src="/logo.png" alt="SurFox Logo" className="w-3 h-3" />
                   <span className="font-semibold text-white">SurFox</span>
                 </div>
               </div>
@@ -585,9 +581,7 @@ const SurFoxVsSmarterContact = () => {
             {/* SurFox Results */}
             <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-2xl p-8 ring-1 ring-blue-500/20">
               <div className="flex items-center mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
-                  <Terminal className="w-5 h-5 text-white" />
-                </div>
+                <img src="/logo.png" alt="SurFox Logo" className="w-5 h-5" />
                 <h3 className="text-xl font-bold text-blue-400">SurFox AI Results</h3>
               </div>
               
@@ -763,9 +757,7 @@ const SurFoxVsSmarterContact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Terminal className="w-4 h-4 text-white" />
-              </div>
+              <img src="/logo.png" alt="SurFox Logo" className="w-4 h-4" />
               <span className="text-xl font-semibold tracking-tight">
                 <span className="text-white">Sur</span>
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Fox</span>

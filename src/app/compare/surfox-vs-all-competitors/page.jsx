@@ -377,9 +377,7 @@ const SurFoxGeneralComparison = () => {
               </div>
               <div className="col-span-2 lg:col-span-2 p-3 text-center border-l border-slate-700/50">
                 <div className="flex items-center justify-center">
-                  <div className="w-5 h-5 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-1">
-                    <Terminal className="w-2 h-2 text-white" />
-                  </div>
+                  <img src="/logo.png" alt="SurFox Logo" className="w-2 h-2" />
                   <span className="font-semibold text-white text-xs">SurFox</span>
                 </div>
               </div>
@@ -447,9 +445,7 @@ const SurFoxGeneralComparison = () => {
               </div>
               <div className="col-span-4 p-4 text-center border-l border-slate-700/50">
                 <div className="flex items-center justify-center">
-                  <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-2">
-                    <Terminal className="w-3 h-3 text-white" />
-                  </div>
+                  <img src="/logo.png" alt="SurFox Logo" className="w-3 h-3" />
                   <span className="font-semibold text-white">SurFox</span>
                 </div>
               </div>

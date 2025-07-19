@@ -7,7 +7,6 @@ const SurFoxVsLaunchControl = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeTestimonial, setActiveTestimonial] = useState(0)
-  const [activeFeatureSet, setActiveFeatureSet] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   // Mouse tracking for subtle parallax effects
@@ -64,7 +63,7 @@ const SurFoxVsLaunchControl = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <a href="/" className="flex items-center space-x-3 group">
-              <img src="/logo.png" alt="SurFox Logo" className="w-8 h-8" />
+              <img src="/logo.png" alt="SurFox Logo" className="w-4 h-4" />
               <span className="text-xl font-semibold tracking-tight">
                 <span className="text-white">Sur</span>
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Fox</span>
@@ -137,9 +136,7 @@ const SurFoxVsLaunchControl = () => {
                 </span>
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-2">
-                      <Terminal className="w-8 h-8 text-white" />
-                    </div>
+                    <img src="/logo.png" alt="SurFox Logo" className="w-8 h-8" />
                     <div className="text-sm font-bold text-white">SurFox</div>
                     <div className="text-xs text-blue-400">AI Sales Rep</div>
                   </div>
@@ -328,9 +325,7 @@ const SurFoxVsLaunchControl = () => {
             {/* SurFox Side */}
             <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-2xl p-8 ring-1 ring-blue-500/20">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
-                  <Terminal className="w-6 h-6 text-white" />
-                </div>
+                <img src="/logo.png" alt="SurFox Logo" className="w-6 h-6" />
                 <div>
                   <h3 className="text-2xl font-bold text-blue-400">SurFox</h3>
                   <p className="text-blue-300">AI-Powered Sales Rep</p>
@@ -418,9 +413,7 @@ const SurFoxVsLaunchControl = () => {
               </div>
               <div className="col-span-3 p-4 text-center border-l border-slate-700/50">
                 <div className="flex items-center justify-center">
-                  <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-2">
-                    <Terminal className="w-3 h-3 text-white" />
-                  </div>
+                  <img src="/logo.png" alt="SurFox Logo" className="w-3 h-3" />
                   <span className="font-semibold text-white">SurFox</span>
                 </div>
               </div>
@@ -709,7 +702,9 @@ const SurFoxVsLaunchControl = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <img src="/logo.png" alt="SurFox Logo" className="w-8 h-8" />
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Terminal className="w-4 h-4 text-white" />
+              </div>
               <span className="text-xl font-semibold tracking-tight">
                 <span className="text-white">Sur</span>
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Fox</span>
