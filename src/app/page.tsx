@@ -102,16 +102,16 @@ const SurFoxRevolution = () => {
                   <ChevronDown className="w-4 h-4" />
                 </div>
                 <div className="absolute left-0 mt-0 w-56 bg-slate-900 border border-slate-700 rounded-lg shadow-lg z-50 hidden group-hover:flex flex-col">
-                  <a href="#" className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">
+                  <a href="/compare/surfox-vs-textus" className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">
                     ↳ vs TextUs
                   </a>
-                  <a href="#" className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">
+                  <a href="/compare/surfox-vs-smarter-contact" className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">
                     ↳ vs Smarter Contact
                   </a>
-                  <a href="#" className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">
+                  <a href="/compare/surfox-vs-launch-control" className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">
                     ↳ vs Launch Control
                   </a>
-                  <a href="#" className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white font-semibold">
+                  <a href="/compare/surfox-vs-all-competitors" className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white font-semibold">
                     ↳ All Comparisons
                   </a>
                 </div>
