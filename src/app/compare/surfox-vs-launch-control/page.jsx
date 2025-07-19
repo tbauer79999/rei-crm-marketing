@@ -8,7 +8,8 @@ const SurFoxVsLaunchControl = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeTestimonial, setActiveTestimonial] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-
+  const [activeFeatureSet, setActiveFeatureSet] = useState(0)
+  
   // Mouse tracking for subtle parallax effects
   useEffect(() => {
     const handleMouseMove = (e) => {
