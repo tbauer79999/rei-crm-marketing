@@ -87,7 +87,7 @@ const EnterpriseSurFox = () => {
 
     <div className="absolute left-0 mt-0 w-56 bg-slate-900 border border-slate-700 rounded-lg shadow-lg z-50 hidden group-hover:flex flex-col">
       <a
-        href="https://www.getsurfox.com/compare/smarter-contact"
+        href="https://www.getsurfox.com/compare/surfox-vs-smarter-contact"
         className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white"
       >
         ↳ vs Smarter Contact
