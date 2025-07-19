@@ -105,7 +105,7 @@ const EnterpriseSurFox = () => {
         ↳ vs TextUs
       </a>
       <a
-        href="https://www.getsurfox.com/compare"
+        href="https://www.getsurfox.com/surfox-vs-all-competitors"
         className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white font-semibold"
       >
         ↳ All Comparisons
