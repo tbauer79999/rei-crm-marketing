@@ -11,7 +11,7 @@ const SurFoxVsSmarterContact = () => {
 
   // Mouse tracking for subtle parallax effects
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
     window.addEventListener('mousemove', handleMouseMove)
