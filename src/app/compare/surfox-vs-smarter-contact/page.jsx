@@ -277,7 +277,9 @@ const SurFoxVsSmarterContact = () => {
             {/* SurFox Approach */}
             <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-2xl p-8 ring-1 ring-blue-500/20">
               <div className="flex items-center mb-6">
-                <img src="/logo.png" alt="SurFox Logo" className="w-8 h-8" />
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+                  <Terminal className="w-6 h-6 text-white" />
+                </div>
                 <div>
                   <h3 className="text-2xl font-bold text-blue-400">SurFox</h3>
                   <p className="text-slate-300">AI Conversation Approach</p>
