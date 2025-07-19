@@ -14,7 +14,7 @@ const SurFoxRevolution = () => {
 
   // Mouse tracking for subtle parallax effects
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
     window.addEventListener('mousemove', handleMouseMove)
