@@ -67,7 +67,7 @@ const SurFoxVsTextUs = () => {
   ]
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen bg-gray-900 text-gray-100 overflow-x-hidden">
       
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-40 transition-all duration-500 ${
