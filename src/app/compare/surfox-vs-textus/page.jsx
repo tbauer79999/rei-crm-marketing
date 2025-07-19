@@ -327,60 +327,77 @@ const SurFoxVsTextUs = () => {
             </p>
           </div>
 
-          {/* Feature Category Selector */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {featureSets.map((set, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveFeatureSet(index)}
-                className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all ${
-                  activeFeatureSet === index
-                    ? `bg-gradient-to-r ${
-                        set.color === 'blue' ? 'from-blue-600 to-blue-700' :
-                        set.color === 'emerald' ? 'from-emerald-600 to-emerald-700' :
-                        'from-purple-600 to-purple-700'
-                      } text-white shadow-lg`
-                    : 'bg-slate-800/50 text-slate-400 hover:bg-slate-700/50 hover:text-white border border-slate-700'
-                }`}
-              >
-                <set.icon className="w-5 h-5 mr-2" />
-                {set.category}
-              </button>
-            ))}
-          </div>
-
-          {/* Feature Comparison Cards */}
-          <div className="space-y-6">
-            {featureSets[activeFeatureSet].features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-slate-600/50 transition-all">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-white mb-4">{feature.name}</h3>
-                  
-                  <div className="grid md:grid-cols-2 gap-8">
-                    {/* SurFox Side */}
-                    <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-xl p-6">
-                      <div className="flex items-center mb-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
-                          <Terminal className="w-4 h-4 text-white" />
-                        </div>
-                        <span className="font-semibold text-blue-400">SurFox</span>
-                        <Check className="w-5 h-5 text-emerald-400 ml-auto" />
-                      </div>
-                      <p className="text-blue-200 text-sm">{feature.surfox}</p>
-                    </div>
-                    
-                    {/* TextUs Side */}
-                    <div className="bg-slate-800/30 border border-slate-700/30 rounded-xl p-6">
-                      <div className="flex items-center mb-3">
-                        <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center mr-3">
-                          <MessageSquare className="w-4 h-4 text-slate-400" />
-                        </div>
-                        <span className="font-medium text-slate-400">TextUs</span>
-                        <X className="w-5 h-5 text-red-400 ml-auto" />
-                      </div>
-                      <p className="text-slate-400 text-sm">{feature.textus}</p>
-                    </div>
+          {/* Comparison Table */}
+          <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden">
+            <div className="grid grid-cols-12 bg-slate-800/50 border-b border-slate-700/50">
+              <div className="col-span-6 p-4">
+                <h3 className="font-semibold text-white">Feature</h3>
+              </div>
+              <div className="col-span-3 p-4 text-center border-l border-slate-700/50">
+                <div className="flex items-center justify-center">
+                  <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-2">
+                    <Terminal className="w-3 h-3 text-white" />
                   </div>
+                  <span className="font-semibold text-white">SurFox</span>
+                </div>
+              </div>
+              <div className="col-span-3 p-4 text-center border-l border-slate-700/50">
+                <div className="flex items-center justify-center">
+                  <div className="w-6 h-6 bg-slate-700 rounded-lg flex items-center justify-center mr-2">
+                    <MessageSquare className="w-3 h-3 text-slate-400" />
+                  </div>
+                  <span className="font-medium text-slate-400">TextUs</span>
+                </div>
+              </div>
+            </div>
+
+            {[
+              { feature: 'AI-driven conversations', surfox: true, textus: false },
+              { feature: 'Conversation memory per lead', surfox: true, textus: false },
+              { feature: 'Dynamic follow-up timing', surfox: true, textus: false },
+              { feature: 'AI tone/persona customization', surfox: true, textus: false },
+              { feature: 'Spam-safe message randomization', surfox: true, textus: false },
+              { feature: 'AI motivation scoring', surfox: true, textus: false },
+              { feature: 'Auto qualification logic', surfox: true, textus: false },
+              { feature: 'Hot lead alerts', surfox: true, textus: false },
+              { feature: 'Chrome extension import', surfox: true, textus: false },
+              { feature: 'AI handles 90% of messages', surfox: true, textus: false },
+              { feature: 'Document-based AI training', surfox: true, textus: false },
+              { feature: 'Campaign-specific AI behavior', surfox: true, textus: false },
+              { feature: 'Smart retry logic', surfox: true, textus: false },
+              { feature: 'Zapier integration', surfox: true, textus: true },
+              { feature: 'Multi-tenant support', surfox: true, textus: true },
+              { feature: 'Daily send cap management', surfox: true, textus: true }
+            ].map((item, index) => (
+              <div key={index} className="grid grid-cols-12 border-b border-slate-700/30 hover:bg-slate-700/20 transition-colors">
+                <div className="col-span-6 p-4">
+                  <span className="text-slate-300">{item.feature}</span>
+                </div>
+                <div className="col-span-3 p-4 text-center border-l border-slate-700/30">
+                  {item.surfox ? (
+                    <div className="flex items-center justify-center">
+                      <Check className="w-5 h-5 text-emerald-400" />
+                      <span className="ml-2 text-emerald-400 font-medium">Yes</span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center justify-center">
+                      <X className="w-5 h-5 text-red-400" />
+                      <span className="ml-2 text-red-400">No</span>
+                    </div>
+                  )}
+                </div>
+                <div className="col-span-3 p-4 text-center border-l border-slate-700/30">
+                  {item.textus ? (
+                    <div className="flex items-center justify-center">
+                      <Check className="w-5 h-5 text-emerald-400" />
+                      <span className="ml-2 text-emerald-400 font-medium">Yes</span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center justify-center">
+                      <X className="w-5 h-5 text-red-400" />
+                      <span className="ml-2 text-red-400">No</span>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -525,22 +542,7 @@ const SurFoxVsTextUs = () => {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-2xl p-8 text-center">
-            <h3 className="text-xl font-bold text-white mb-4">
-              Special Migration Offer
-            </h3>
-            <p className="text-slate-300 mb-6">
-              We'll handle your TextUs migration for free, plus give you your first month at 50% off. Cancel TextUs and start saving immediately.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#cta" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all">
-                Start Migration
-              </a>
-              <a href="#demo" className="border border-slate-600 text-slate-300 px-6 py-3 rounded-lg font-semibold hover:bg-slate-800/50 transition-all">
-                Book Migration Call
-              </a>
-            </div>
-          </div>
+
         </div>
       </section>
 
