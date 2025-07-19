@@ -45,9 +45,9 @@ const SurFoxRevolution = () => {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-slate-950 z-50 flex items-center justify-center">
+      <div className="fixed inset-0 bg-gray-900 z-50 flex items-center justify-center">
         <div className="relative">
-          <div className="w-16 h-16 border-2 border-slate-700 border-t-blue-500 rounded-full animate-spin"></div>
+          <div className="w-16 h-16 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
           <div className="absolute inset-0 w-16 h-16 border-2 border-transparent border-r-purple-500 rounded-full animate-spin" style={{ animationDelay: '0.5s', animationDirection: 'reverse' }}></div>
         </div>
       </div>
@@ -55,70 +55,70 @@ const SurFoxRevolution = () => {
   }
 
   const signals = [
-    { label: 'Response Speed', value: '94ms avg', color: 'text-blue-400' },
-    { label: 'Question Patterns', value: '12 detected', color: 'text-emerald-400' },
-    { label: 'Urgency Indicators', value: 'High', color: 'text-red-400' },
-    { label: 'Pain Point Mentions', value: '3 identified', color: 'text-purple-400' },
-    { label: 'Budget Signals', value: 'Confirmed', color: 'text-yellow-400' },
-    { label: 'Decision Timeline', value: 'Q1 2025', color: 'text-pink-400' }
+    { label: 'Response Speed', value: '94ms avg', color: 'text-blue-600' },
+    { label: 'Question Patterns', value: '12 detected', color: 'text-emerald-600' },
+    { label: 'Urgency Indicators', value: 'High', color: 'text-red-500' },
+    { label: 'Pain Point Mentions', value: '3 identified', color: 'text-purple-600' },
+    { label: 'Budget Signals', value: 'Confirmed', color: 'text-amber-600' },
+    { label: 'Decision Timeline', value: 'Q1 2025', color: 'text-pink-600' }
   ]
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 overflow-x-hidden">
+    <div className="min-h-screen bg-gray-50 text-gray-900 overflow-x-hidden">
       
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-40 transition-all duration-500 ${
-        isScrolled ? 'bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/50' : ''
+        isScrolled ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm' : ''
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <a href="#" className="flex items-center space-x-3 group">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-semibold tracking-tight">
-                <span className="text-white">Sur</span>
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Fox</span>
+                <span className="text-gray-900">Sur</span>
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Fox</span>
               </span>
             </a>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#platform" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+              <a href="#platform" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Platform
               </a>
-              <a href="#intelligence" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+              <a href="#intelligence" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Messaging Intelligence
               </a>
-              <a href="#industries" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+              <a href="#industries" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Industries
               </a>
-              <a href="/enterprise" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+              <a href="/enterprise" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Enterprise
               </a>
 
               <div className="relative group">
-                <div className="flex items-center space-x-1 text-slate-400 hover:text-white transition-colors text-sm font-medium cursor-pointer">
+                <div className="flex items-center space-x-1 text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium cursor-pointer">
                   <span>Compare</span>
                   <ChevronDown className="w-4 h-4" />
                 </div>
-                <div className="absolute left-0 mt-0 w-56 bg-slate-900 border border-slate-700 rounded-lg shadow-lg z-50 hidden group-hover:flex flex-col">
-                  <a href="/compare/surfox-vs-textus" className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">
+                <div className="absolute left-0 mt-0 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 hidden group-hover:flex flex-col">
+                  <a href="/compare/surfox-vs-textus" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
                     ↳ vs TextUs
                   </a>
-                  <a href="/compare/surfox-vs-smarter-contact" className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">
+                  <a href="/compare/surfox-vs-smarter-contact" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
                     ↳ vs Smarter Contact
                   </a>
-                  <a href="/compare/surfox-vs-launch-control" className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">
+                  <a href="/compare/surfox-vs-launch-control" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900">
                     ↳ vs Launch Control
                   </a>
-                  <a href="/compare/surfox-vs-all-competitors" className="px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white font-semibold">
+                  <a href="/compare/surfox-vs-all-competitors" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 font-semibold">
                     ↳ All Comparisons
                   </a>
                 </div>
               </div>
 
-              <div className="w-px h-6 bg-slate-700"></div>
-              <a href="https://app.getsurfox.com" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+              <div className="w-px h-6 bg-gray-300"></div>
+              <a href="https://app.getsurfox.com" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
                 Sign In
               </a>
               <a href="#" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all">
@@ -127,7 +127,7 @@ const SurFoxRevolution = () => {
             </div>
 
             <button 
-              className="md:hidden text-slate-400 hover:text-white"
+              className="md:hidden text-gray-600 hover:text-gray-900"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <Menu className="w-6 h-6" />
@@ -137,26 +137,26 @@ const SurFoxRevolution = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-slate-800">
+          <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200">
             <div className="px-4 py-6 space-y-4">
-              <a href="#platform" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Platform</a>
-              <a href="#intelligence" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Messaging Intelligence</a>
-              <a href="#industries" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Industries</a>
-              <a href="/enterprise" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Enterprise</a>
+              <a href="#platform" className="block text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">Platform</a>
+              <a href="#intelligence" className="block text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">Messaging Intelligence</a>
+              <a href="#industries" className="block text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">Industries</a>
+              <a href="/enterprise" className="block text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">Enterprise</a>
               
               {/* Compare section for mobile */}
-              <div className="border-t border-slate-700/50 pt-4">
-                <div className="text-slate-400 text-sm font-medium mb-2">Compare</div>
+              <div className="border-t border-gray-200 pt-4">
+                <div className="text-gray-600 text-sm font-medium mb-2">Compare</div>
                 <div className="ml-4 space-y-2">
-                  <a href="/compare/surfox-vs-textus" className="block text-slate-500 hover:text-white transition-colors text-sm">vs TextUs</a>
-                  <a href="/compare/surfox-vs-smarter-contact" className="block text-slate-500 hover:text-white transition-colors text-sm">vs Smarter Contact</a>
-                  <a href="/compare/surfox-vs-launch-control" className="block text-slate-500 hover:text-white transition-colors text-sm">vs Launch Control</a>
-                  <a href="/compare/surfox-vs-all-competitors" className="block text-slate-500 hover:text-white transition-colors text-sm font-medium">All Comparisons</a>
+                  <a href="/compare/surfox-vs-textus" className="block text-gray-500 hover:text-gray-900 transition-colors text-sm">vs TextUs</a>
+                  <a href="/compare/surfox-vs-smarter-contact" className="block text-gray-500 hover:text-gray-900 transition-colors text-sm">vs Smarter Contact</a>
+                  <a href="/compare/surfox-vs-launch-control" className="block text-gray-500 hover:text-gray-900 transition-colors text-sm">vs Launch Control</a>
+                  <a href="/compare/surfox-vs-all-competitors" className="block text-gray-500 hover:text-gray-900 transition-colors text-sm font-medium">All Comparisons</a>
                 </div>
               </div>
               
-              <div className="pt-4 border-t border-slate-800">
-                <a href="https://app.getsurfox.com" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium mb-3">Sign In</a>
+              <div className="pt-4 border-t border-gray-200">
+                <a href="https://app.getsurfox.com" className="block text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium mb-3">Sign In</a>
                 <a href="#" className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium text-center">
                   Start Free Trial
                 </a>
@@ -168,12 +168,12 @@ const SurFoxRevolution = () => {
 
       {/* Hero Section - Category Creation */}
       <section className="min-h-screen relative flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"></div>
         
         {/* Dynamic Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div 
-            className="absolute w-96 h-96 bg-gradient-to-r from-blue-600/30 to-purple-600/30 rounded-full blur-3xl animate-pulse" 
+            className="absolute w-96 h-96 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-3xl animate-pulse" 
             style={{ 
               top: '10%', 
               right: '10%',
@@ -181,7 +181,7 @@ const SurFoxRevolution = () => {
             }}
           ></div>
           <div 
-            className="absolute w-96 h-96 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-full blur-3xl animate-pulse" 
+            className="absolute w-96 h-96 bg-gradient-to-r from-purple-600/15 to-pink-600/15 rounded-full blur-3xl animate-pulse" 
             style={{ 
               bottom: '20%', 
               left: '10%', 
@@ -196,27 +196,27 @@ const SurFoxRevolution = () => {
             <div className="lg:col-span-7">
               {/* Category Badge */}
               <div className="mb-8">
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-900/50 to-purple-900/50 text-blue-300 border border-blue-500/30">
+                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 border border-blue-200">
                   <Lightbulb className="w-4 h-4 mr-2" />
                   Introducing Messaging Intelligence™
                 </span>
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-8">
-                <span className="text-white">Beyond Mass Texting.</span>
+                <span className="text-gray-900">Beyond Mass Texting.</span>
                 <br />
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                   True Conversation AI.
                 </span>
               </h1>
               
-              <div className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 mb-8">
-                <p className="text-xl text-slate-200 mb-4 leading-relaxed">
-                  <strong className="text-blue-400">50+ behavioral signals</strong> analyzed in real-time. 
-                  <strong className="text-purple-400"> Perfect timing</strong> based on buyer psychology. 
-                  <strong className="text-emerald-400"> Human-level conversations</strong> that actually convert.
+              <div className="bg-white/80 border border-gray-200 rounded-xl p-6 mb-8 shadow-sm">
+                <p className="text-xl text-gray-800 mb-4 leading-relaxed">
+                  <strong className="text-blue-600">50+ behavioral signals</strong> analyzed in real-time. 
+                  <strong className="text-purple-600"> Perfect timing</strong> based on buyer psychology. 
+                  <strong className="text-emerald-600"> Human-level conversations</strong> that actually convert.
                 </p>
-                <p className="text-lg text-slate-400 leading-relaxed">
+                <p className="text-lg text-gray-600 leading-relaxed">
                   While others blast generic messages, SurFox reads minds and starts conversations that matter.
                 </p>
               </div>
@@ -226,44 +226,44 @@ const SurFoxRevolution = () => {
                   Experience the Future
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
-                <a href="#intelligence" className="group border border-slate-600 text-slate-300 px-8 py-4 rounded-xl font-semibold hover:bg-slate-800/50 transition-all flex items-center justify-center text-lg">
+                <a href="#intelligence" className="group border border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all flex items-center justify-center text-lg">
                   <Eye className="mr-2 w-5 h-5" />
                   See It In Action
                 </a>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-sm">
-                <div className="flex items-center text-slate-400">
-                  <Shield className="w-4 h-4 text-emerald-400 mr-2" />
+                <div className="flex items-center text-gray-600">
+                  <Shield className="w-4 h-4 text-emerald-500 mr-2" />
                   Chrome Extension
                 </div>
-                <div className="flex items-center text-slate-400">
-                  <Brain className="w-4 h-4 text-emerald-400 mr-2" />
+                <div className="flex items-center text-gray-600">
+                  <Brain className="w-4 h-4 text-emerald-500 mr-2" />
                   Self-Learning AI
                 </div>
-                <div className="flex items-center text-slate-400">
-                  <Award className="w-4 h-4 text-emerald-400 mr-2" />
+                <div className="flex items-center text-gray-600">
+                  <Award className="w-4 h-4 text-emerald-500 mr-2" />
                   99.9% Uptime
                 </div>
               </div>
               
-              <div className="text-sm text-slate-400 mt-6">
-                Used across <strong className="text-white">Real Estate • SaaS • E-commerce • Healthcare • Finance</strong> and more
+              <div className="text-sm text-gray-600 mt-6">
+                Used across <strong className="text-gray-900">Real Estate • SaaS • E-commerce • Healthcare • Finance</strong> and more
               </div>
             </div>
             
             {/* Live Signal Analysis Dashboard */}
             <div className="lg:col-span-5">
               <div className="relative">
-                <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-6 shadow-2xl">
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200 p-6 shadow-xl">
                   <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-lg font-semibold text-white flex items-center">
-                      <Activity className="w-5 h-5 mr-2 text-blue-400" />
+                    <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+                      <Activity className="w-5 h-5 mr-2 text-blue-600" />
                       Live Signal Analysis
                     </h3>
                     <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                      <span className="text-xs text-slate-400">50+ Signals Active</span>
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                      <span className="text-xs text-gray-600">50+ Signals Active</span>
                     </div>
                   </div>
                   
@@ -272,13 +272,13 @@ const SurFoxRevolution = () => {
                     {signals.map((signal, index) => (
                       <div 
                         key={index} 
-                        className={`bg-slate-800/30 rounded-lg p-3 border transition-all ${
+                        className={`bg-gray-50 rounded-lg p-3 border transition-all ${
                           activeSignal === index 
-                            ? 'border-blue-500/50 bg-blue-900/20' 
-                            : 'border-slate-700/30'
+                            ? 'border-blue-300 bg-blue-50' 
+                            : 'border-gray-200'
                         }`}
                       >
-                        <div className="text-xs text-slate-400 mb-1">{signal.label}</div>
+                        <div className="text-xs text-gray-600 mb-1">{signal.label}</div>
                         <div className={`text-sm font-bold ${signal.color}`}>{signal.value}</div>
                       </div>
                     ))}
@@ -306,28 +306,28 @@ const SurFoxRevolution = () => {
                         signals: ['Security questions', 'Demo interest', 'Compliance needs']
                       }
                     ].map((lead, index) => (
-                      <div key={index} className="bg-slate-800/20 rounded-lg p-4 border border-slate-700/30 hover:border-slate-600/50 transition-all cursor-pointer">
+                      <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-gray-300 transition-all cursor-pointer">
                         <div className="flex justify-between items-start mb-2">
                           <div className="flex-1">
                             <div className="flex items-center space-x-2 mb-1">
-                              <h4 className="font-semibold text-white text-sm">{lead.company}</h4>
+                              <h4 className="font-semibold text-gray-900 text-sm">{lead.company}</h4>
                               <div className={`w-2 h-2 rounded-full ${
-                                lead.priority === 'high' ? 'bg-red-400' : 'bg-yellow-400'
+                                lead.priority === 'high' ? 'bg-red-500' : 'bg-yellow-500'
                               }`}></div>
                             </div>
-                            <p className="text-xs text-slate-400 mb-1">{lead.contact}</p>
-                            <p className="text-xs text-slate-300 mb-2">{lead.status}</p>
+                            <p className="text-xs text-gray-600 mb-1">{lead.contact}</p>
+                            <p className="text-xs text-gray-700 mb-2">{lead.status}</p>
                             <div className="flex flex-wrap gap-1">
                               {lead.signals.slice(0, 2).map((signal, idx) => (
-                                <span key={idx} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-0.5 rounded">
+                                <span key={idx} className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
                                   {signal}
                                 </span>
                               ))}
                             </div>
                           </div>
                           <div className="text-right">
-                            <div className="text-lg font-bold text-blue-400">{lead.score}%</div>
-                            <div className="text-xs text-emerald-400">↗ {lead.trend}</div>
+                            <div className="text-lg font-bold text-blue-600">{lead.score}%</div>
+                            <div className="text-xs text-emerald-600">↗ {lead.trend}</div>
                           </div>
                         </div>
                       </div>
@@ -336,10 +336,10 @@ const SurFoxRevolution = () => {
                 </div>
                 
                 {/* Floating Accuracy Badge */}
-                <div className="absolute -bottom-6 -right-6 bg-emerald-900 border border-emerald-500 rounded-xl p-4 shadow-xl">
+                <div className="absolute -bottom-6 -right-6 bg-emerald-50 border border-emerald-200 rounded-xl p-4 shadow-xl">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-emerald-400">94%</div>
-                    <div className="text-xs text-emerald-300">Signal Accuracy</div>
+                    <div className="text-2xl font-bold text-emerald-600">94%</div>
+                    <div className="text-xs text-emerald-700">Signal Accuracy</div>
                   </div>
                 </div>
               </div>
@@ -349,29 +349,29 @@ const SurFoxRevolution = () => {
       </section>
 
       {/* Category Definition */}
-      <section className="bg-gradient-to-b from-slate-900 to-slate-950 py-20 px-6 md:px-20 text-white">
+      <section className="bg-gradient-to-b from-white to-gray-100 py-20 px-6 md:px-20 text-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">
-              <span className="text-slate-400">Mass Texting is Dead.</span>
+              <span className="text-gray-600">Mass Texting is Dead.</span>
               <br />
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Messaging Intelligence is Here.
               </span>
             </h2>
-            <p className="text-xl text-slate-300 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
               We didn't build another texting tool. We created the first platform that understands buyer psychology, 
               reads conversation intent, and knows exactly when prospects are ready to buy.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-red-900/20 to-red-800/20 border border-red-800/30 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-red-900/50 rounded-xl flex items-center justify-center mb-6">
-                <X className="w-6 h-6 text-red-400" />
+            <div className="bg-gradient-to-br from-red-50 to-red-100 border border-red-200 rounded-2xl p-8">
+              <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                <X className="w-6 h-6 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold text-red-400 mb-4">Old Way: Mass Texting</h3>
-              <ul className="space-y-3 text-red-300">
+              <h3 className="text-xl font-bold text-red-700 mb-4">Old Way: Mass Texting</h3>
+              <ul className="space-y-3 text-red-700">
                 <li>• Spray and pray messaging</li>
                 <li>• Generic templates for everyone</li>
                 <li>• No understanding of buyer intent</li>
@@ -382,12 +382,12 @@ const SurFoxRevolution = () => {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-500/50 rounded-2xl p-8 ring-2 ring-blue-500/20">
-              <div className="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6 text-blue-400" />
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-8 ring-2 ring-blue-200/50">
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                <Brain className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-blue-400 mb-4">New Way: Messaging Intelligence</h3>
-              <ul className="space-y-3 text-blue-300">
+              <h3 className="text-xl font-bold text-blue-700 mb-4">New Way: Messaging Intelligence</h3>
+              <ul className="space-y-3 text-blue-700">
                 <li>• AI reads 50+ behavioral signals</li>
                 <li>• Conversations adapt to each prospect</li>
                 <li>• Perfect timing based on psychology</li>
@@ -398,12 +398,12 @@ const SurFoxRevolution = () => {
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-emerald-900/20 to-emerald-800/20 border border-emerald-800/30 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-emerald-900/50 rounded-xl flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-emerald-400" />
+            <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 rounded-2xl p-8">
+              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                <Target className="w-6 h-6 text-emerald-600" />
               </div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-4">The Result</h3>
-              <ul className="space-y-3 text-emerald-300">
+              <h3 className="text-xl font-bold text-emerald-700 mb-4">The Result</h3>
+              <ul className="space-y-3 text-emerald-700">
                 <li>• 5.2x higher conversion rates</li>
                 <li>• 67% less time prospecting</li>
                 <li>• Zero spam complaints</li>
@@ -418,13 +418,13 @@ const SurFoxRevolution = () => {
       </section>
 
       {/* Universal Industry Applications */}
-      <section id="industries" className="py-20 bg-slate-900/30">
+      <section id="industries" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Every Industry. Every Use Case.
             </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Messaging Intelligence works wherever conversations drive revenue. 
               From real estate to SaaS, healthcare to e-commerce — if you need to qualify leads, we make it smarter.
             </p>
@@ -475,19 +475,19 @@ const SurFoxRevolution = () => {
                 metrics: ['92% enrollment rate', '34% cost reduction']
               }
             ].map((industry, index) => (
-              <div key={index} className="bg-slate-800/30 border border-slate-700/50 rounded-xl p-6 hover:border-slate-600/50 transition-all group">
+              <div key={index} className="bg-gray-50 border border-gray-200 rounded-xl p-6 hover:border-gray-300 transition-all group">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <industry.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{industry.title}</h3>
-                <p className="text-slate-300 text-sm mb-4 leading-relaxed">{industry.desc}</p>
-                <div className="text-xs text-blue-400 bg-blue-900/20 px-3 py-1 rounded-full mb-3">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{industry.title}</h3>
+                <p className="text-gray-700 text-sm mb-4 leading-relaxed">{industry.desc}</p>
+                <div className="text-xs text-blue-700 bg-blue-100 px-3 py-1 rounded-full mb-3">
                   🎯 Signals: {industry.signal}
                 </div>
                 <div className="space-y-1">
                   {industry.metrics.map((metric, idx) => (
-                    <div key={idx} className="text-xs text-emerald-400 flex items-center">
-                      <div className="w-1 h-1 bg-emerald-400 rounded-full mr-2"></div>
+                    <div key={idx} className="text-xs text-emerald-600 flex items-center">
+                      <div className="w-1 h-1 bg-emerald-600 rounded-full mr-2"></div>
                       {metric}
                     </div>
                   ))}
@@ -497,10 +497,10 @@ const SurFoxRevolution = () => {
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-slate-400 mb-6">
+            <p className="text-gray-600 mb-6">
               Don't see your industry? Messaging Intelligence adapts to any business model.
             </p>
-            <a href="#" className="text-blue-400 hover:text-blue-300 font-medium">
+            <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">
               See custom industry implementations →
             </a>
           </div>
@@ -508,20 +508,20 @@ const SurFoxRevolution = () => {
       </section>
 
       {/* The 50 Signals Breakdown */}
-      <section id="intelligence" className="py-20 bg-slate-950">
+      <section id="intelligence" className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-900/50 to-purple-900/50 border border-blue-500/30 mb-6">
-              <Database className="w-4 h-4 mr-2 text-blue-400" />
-              <span className="text-sm font-medium text-blue-300">Proprietary Technology</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200 mb-6">
+              <Database className="w-4 h-4 mr-2 text-blue-600" />
+              <span className="text-sm font-medium text-blue-700">Proprietary Technology</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               While Others Count Opens,<br />
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 We Read Minds
               </span>
             </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our Messaging Intelligence Engine analyzes 50+ behavioral signals in real-time. 
               Every word, timing pattern, and response reveals buyer intent.
             </p>
@@ -529,9 +529,9 @@ const SurFoxRevolution = () => {
           
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             <div className="lg:col-span-2">
-              <div className="bg-slate-900/50 border border-slate-700/50 rounded-2xl p-8">
-                <h3 className="text-xl font-bold text-white mb-6 flex items-center">
-                  <Brain className="w-6 h-6 mr-3 text-blue-400" />
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                  <Brain className="w-6 h-6 mr-3 text-blue-600" />
                   Signal Categories
                 </h3>
                 
@@ -560,19 +560,19 @@ const SurFoxRevolution = () => {
                   ].map((group, index) => (
                     <div key={index} className="space-y-3">
                       <h4 className={`font-semibold ${
-                        group.color === 'blue' ? 'text-blue-400' :
-                        group.color === 'purple' ? 'text-purple-400' :
-                        group.color === 'emerald' ? 'text-emerald-400' :
-                        'text-pink-400'
+                        group.color === 'blue' ? 'text-blue-600' :
+                        group.color === 'purple' ? 'text-purple-600' :
+                        group.color === 'emerald' ? 'text-emerald-600' :
+                        'text-pink-600'
                       }`}>{group.category}</h4>
                       <ul className="space-y-1">
                         {group.signals.map((signal, idx) => (
-                          <li key={idx} className="text-slate-300 text-sm flex items-center">
+                          <li key={idx} className="text-gray-700 text-sm flex items-center">
                             <div className={`w-2 h-2 rounded-full mr-3 ${
-                              group.color === 'blue' ? 'bg-blue-400' :
-                              group.color === 'purple' ? 'bg-purple-400' :
-                              group.color === 'emerald' ? 'bg-emerald-400' :
-                              'bg-pink-400'
+                              group.color === 'blue' ? 'bg-blue-600' :
+                              group.color === 'purple' ? 'bg-purple-600' :
+                              group.color === 'emerald' ? 'bg-emerald-600' :
+                              'bg-pink-600'
                             }`}></div>
                             {signal}
                           </li>
@@ -585,32 +585,32 @@ const SurFoxRevolution = () => {
             </div>
             
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-500/50 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-6">
                 <div className="text-center mb-4">
-                  <div className="text-3xl font-bold text-blue-400">50+</div>
-                  <div className="text-sm text-blue-300">Behavioral Signals</div>
+                  <div className="text-3xl font-bold text-blue-600">50+</div>
+                  <div className="text-sm text-blue-700">Behavioral Signals</div>
                 </div>
-                <div className="text-xs text-slate-300 text-center">
+                <div className="text-xs text-gray-700 text-center">
                   Most competitors analyze 3-5 basic metrics. We read the full conversation.
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-emerald-900/30 to-emerald-800/30 border border-emerald-500/50 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 rounded-xl p-6">
                 <div className="text-center mb-4">
-                  <div className="text-3xl font-bold text-emerald-400">94%</div>
-                  <div className="text-sm text-emerald-300">Accuracy Rate</div>
+                  <div className="text-3xl font-bold text-emerald-600">94%</div>
+                  <div className="text-sm text-emerald-700">Accuracy Rate</div>
                 </div>
-                <div className="text-xs text-slate-300 text-center">
+                <div className="text-xs text-gray-700 text-center">
                   When we say a lead is hot, they close 94% of the time.
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/50 rounded-xl p-6">
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-6">
                 <div className="text-center mb-4">
-                  <div className="text-3xl font-bold text-purple-400">Real-time</div>
-                  <div className="text-sm text-purple-300">Analysis</div>
+                  <div className="text-3xl font-bold text-purple-600">Real-time</div>
+                  <div className="text-sm text-purple-700">Analysis</div>
                 </div>
-                <div className="text-xs text-slate-300 text-center">
+                <div className="text-xs text-gray-700 text-center">
                   Every message is analyzed instantly. No delays, no batch processing.
                 </div>
               </div>
@@ -618,11 +618,11 @@ const SurFoxRevolution = () => {
           </div>
 
           {/* Interactive Demo Tabs */}
-          <div className="bg-slate-900/50 border border-slate-700/50 rounded-2xl p-8">
-            <h3 className="text-xl font-bold text-white mb-6 text-center">See Messaging Intelligence in Action</h3>
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">See Messaging Intelligence in Action</h3>
             
             <div className="flex justify-center mb-6">
-              <div className="bg-slate-800/50 rounded-lg p-1">
+              <div className="bg-gray-100 rounded-lg p-1">
                 {[
                   { id: 'real-time', label: 'Real-time Analysis', icon: Activity },
                   { id: 'conversation', label: 'Conversation Flow', icon: MessageSquare },
@@ -634,7 +634,7 @@ const SurFoxRevolution = () => {
                     className={`px-4 py-2 rounded-md text-sm font-medium transition-all flex items-center ${
                       activeTab === tab.id
                         ? 'bg-blue-600 text-white'
-                        : 'text-slate-400 hover:text-white'
+                        : 'text-gray-600 hover:text-gray-900'
                     }`}
                   >
                     <tab.icon className="w-4 h-4 mr-2" />
@@ -647,36 +647,36 @@ const SurFoxRevolution = () => {
             <div className="min-h-[300px]">
               {activeTab === 'real-time' && (
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-slate-800/30 rounded-lg p-4">
-                    <h4 className="font-semibold text-white mb-3">Incoming Message</h4>
-                    <div className="bg-slate-700/50 rounded p-3 mb-4 text-slate-300">
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 mb-3">Incoming Message</h4>
+                    <div className="bg-gray-100 rounded p-3 mb-4 text-gray-800">
                       "Hey, I've been looking at your platform and I need something implemented by Q1. My team of 50 is currently using a competitor but their security isn't meeting our compliance requirements. What's your pricing for enterprise?"
                     </div>
-                    <div className="text-sm text-slate-400">Message received • Analyzing...</div>
+                    <div className="text-sm text-gray-600">Message received • Analyzing...</div>
                   </div>
-                  <div className="bg-slate-800/30 rounded-lg p-4">
-                    <h4 className="font-semibold text-white mb-3">AI Analysis Results</h4>
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 mb-3">AI Analysis Results</h4>
                     <div className="space-y-2">
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-slate-300">Timeline Urgency</span>
-                        <span className="text-red-400 font-semibold">HIGH</span>
+                        <span className="text-sm text-gray-700">Timeline Urgency</span>
+                        <span className="text-red-600 font-semibold">HIGH</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-slate-300">Team Size Mentioned</span>
-                        <span className="text-emerald-400 font-semibold">50 users</span>
+                        <span className="text-sm text-gray-700">Team Size Mentioned</span>
+                        <span className="text-emerald-600 font-semibold">50 users</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-slate-300">Competitor Reference</span>
-                        <span className="text-blue-400 font-semibold">DETECTED</span>
+                        <span className="text-sm text-gray-700">Competitor Reference</span>
+                        <span className="text-blue-600 font-semibold">DETECTED</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-slate-300">Pricing Interest</span>
-                        <span className="text-purple-400 font-semibold">ENTERPRISE</span>
+                        <span className="text-sm text-gray-700">Pricing Interest</span>
+                        <span className="text-purple-600 font-semibold">ENTERPRISE</span>
                       </div>
-                      <div className="border-t border-slate-700 pt-2 mt-3">
+                      <div className="border-t border-gray-300 pt-2 mt-3">
                         <div className="text-center">
-                          <div className="text-2xl font-bold text-emerald-400">96%</div>
-                          <div className="text-xs text-slate-400">HOT LEAD SCORE</div>
+                          <div className="text-2xl font-bold text-emerald-600">96%</div>
+                          <div className="text-xs text-gray-600">HOT LEAD SCORE</div>
                         </div>
                       </div>
                     </div>
@@ -696,8 +696,8 @@ const SurFoxRevolution = () => {
                       <div key={index} className={`flex ${msg.sender === 'AI' ? 'justify-start' : 'justify-end'}`}>
                         <div className={`max-w-xs rounded-lg p-3 ${
                           msg.sender === 'AI' 
-                            ? 'bg-blue-900/30 text-blue-300' 
-                            : 'bg-slate-700/50 text-slate-300'
+                            ? 'bg-blue-100 text-blue-800' 
+                            : 'bg-gray-200 text-gray-800'
                         }`}>
                           <div className="text-sm">{msg.message}</div>
                           <div className="text-xs opacity-70 mt-1">{msg.time}</div>
@@ -705,7 +705,7 @@ const SurFoxRevolution = () => {
                       </div>
                     ))}
                     <div className="text-center py-4">
-                      <div className="inline-flex items-center bg-emerald-900/30 text-emerald-400 px-4 py-2 rounded-full text-sm">
+                      <div className="inline-flex items-center bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm">
                         <Zap className="w-4 h-4 mr-2" />
                         HOT LEAD: Ready for handoff to sales team
                       </div>
@@ -716,29 +716,29 @@ const SurFoxRevolution = () => {
 
               {activeTab === 'prediction' && (
                 <div className="grid md:grid-cols-3 gap-6">
-                  <div className="bg-slate-800/30 rounded-lg p-6 text-center">
-                    <div className="w-12 h-12 bg-emerald-900/50 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Target className="w-6 h-6 text-emerald-400" />
+                  <div className="bg-gray-50 rounded-lg p-6 text-center">
+                    <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Target className="w-6 h-6 text-emerald-600" />
                     </div>
-                    <div className="text-2xl font-bold text-emerald-400 mb-2">94%</div>
-                    <div className="text-sm text-slate-400">Likelihood to Close</div>
-                    <div className="text-xs text-slate-500 mt-2">Based on 12 positive signals</div>
+                    <div className="text-2xl font-bold text-emerald-600 mb-2">94%</div>
+                    <div className="text-sm text-gray-600">Likelihood to Close</div>
+                    <div className="text-xs text-gray-500 mt-2">Based on 12 positive signals</div>
                   </div>
-                  <div className="bg-slate-800/30 rounded-lg p-6 text-center">
-                    <div className="w-12 h-12 bg-blue-900/50 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Clock className="w-6 h-6 text-blue-400" />
+                  <div className="bg-gray-50 rounded-lg p-6 text-center">
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <Clock className="w-6 h-6 text-blue-600" />
                     </div>
-                    <div className="text-2xl font-bold text-blue-400 mb-2">7-14</div>
-                    <div className="text-sm text-slate-400">Days to Close</div>
-                    <div className="text-xs text-slate-500 mt-2">Timeline urgency detected</div>
+                    <div className="text-2xl font-bold text-blue-600 mb-2">7-14</div>
+                    <div className="text-sm text-gray-600">Days to Close</div>
+                    <div className="text-xs text-gray-500 mt-2">Timeline urgency detected</div>
                   </div>
-                  <div className="bg-slate-800/30 rounded-lg p-6 text-center">
-                    <div className="w-12 h-12 bg-purple-900/50 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <TrendingUp className="w-6 h-6 text-purple-400" />
+                  <div className="bg-gray-50 rounded-lg p-6 text-center">
+                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <TrendingUp className="w-6 h-6 text-purple-600" />
                     </div>
-                    <div className="text-2xl font-bold text-purple-400 mb-2">$47K</div>
-                    <div className="text-sm text-slate-400">Predicted Deal Size</div>
-                    <div className="text-xs text-slate-500 mt-2">Enterprise tier signals</div>
+                    <div className="text-2xl font-bold text-purple-600 mb-2">$47K</div>
+                    <div className="text-sm text-gray-600">Predicted Deal Size</div>
+                    <div className="text-xs text-gray-500 mt-2">Enterprise tier signals</div>
                   </div>
                 </div>
               )}
@@ -748,22 +748,22 @@ const SurFoxRevolution = () => {
       </section>
 
       {/* Competitive Differentiation */}
-      <section className="py-20 bg-slate-900/30">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why Messaging Intelligence Wins
             </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Compare our revolutionary approach to traditional texting platforms.
             </p>
           </div>
           
-          <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden">
-            <div className="grid lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-slate-700/50">
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
+            <div className="grid lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
               <div className="p-6">
-                <h3 className="font-semibold text-white mb-4">Feature</h3>
-                <div className="space-y-4 text-slate-300">
+                <h3 className="font-semibold text-gray-900 mb-4">Feature</h3>
+                <div className="space-y-4 text-gray-700">
                   <div>Lead Analysis</div>
                   <div>Conversation Intelligence</div>
                   <div>Timing Optimization</div>
@@ -775,45 +775,45 @@ const SurFoxRevolution = () => {
                 </div>
               </div>
               
-              <div className="p-6 bg-red-900/10">
-                <h3 className="font-semibold text-red-400 mb-4">TextUs</h3>
-                <div className="space-y-4 text-slate-400">
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Basic only</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> None</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Manual</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> 2-3 signals</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Templates</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Guesswork</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Static</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Surface</div>
+              <div className="p-6 bg-red-50">
+                <h3 className="font-semibold text-red-600 mb-4">TextUs</h3>
+                <div className="space-y-4 text-gray-600">
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Basic only</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> None</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Manual</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> 2-3 signals</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Templates</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Guesswork</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Static</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Surface</div>
                 </div>
               </div>
               
-              <div className="p-6 bg-red-900/10">
-                <h3 className="font-semibold text-red-400 mb-4">Launch Control</h3>
-                <div className="space-y-4 text-slate-400">
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Surface level</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Limited</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Scheduled</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> 5-6 signals</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Basic variables</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Reports only</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Minimal</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-400 mr-2" /> Basic</div>
+              <div className="p-6 bg-red-50">
+                <h3 className="font-semibold text-red-600 mb-4">Launch Control</h3>
+                <div className="space-y-4 text-gray-600">
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Surface level</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Limited</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Scheduled</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> 5-6 signals</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Basic variables</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Reports only</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Minimal</div>
+                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Basic</div>
                 </div>
               </div>
               
-              <div className="p-6 bg-gradient-to-br from-blue-900/20 to-purple-900/20">
-                <h3 className="font-semibold text-blue-400 mb-4">SurFox Intelligence</h3>
-                <div className="space-y-4 text-slate-300">
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-400 mr-2" /> Deep psychology</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-400 mr-2" /> Full conversation</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-400 mr-2" /> AI-powered</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-400 mr-2" /> 50+ signals</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-400 mr-2" /> Fully adaptive</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-400 mr-2" /> 94% accuracy</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-400 mr-2" /> Self-learning</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-400 mr-2" /> Deep integration</div>
+              <div className="p-6 bg-gradient-to-br from-blue-50 to-purple-50">
+                <h3 className="font-semibold text-blue-600 mb-4">SurFox Intelligence</h3>
+                <div className="space-y-4 text-gray-700">
+                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> Deep psychology</div>
+                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> Full conversation</div>
+                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> AI-powered</div>
+                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> 50+ signals</div>
+                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> Fully adaptive</div>
+                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> 94% accuracy</div>
+                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> Self-learning</div>
+                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> Deep integration</div>
                 </div>
               </div>
             </div>
@@ -822,17 +822,17 @@ const SurFoxRevolution = () => {
       </section>
 
       {/* How It Works - Complete Process */}
-      <section id="platform" className="py-20 bg-slate-950">
+      <section id="platform" className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700/50 mb-6">
-              <Terminal className="w-4 h-4 mr-2 text-blue-400" />
-              <span className="text-sm font-medium text-slate-300">Messaging Intelligence Engine™</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gray-200 border border-gray-300 mb-6">
+              <Terminal className="w-4 h-4 mr-2 text-blue-600" />
+              <span className="text-sm font-medium text-gray-700">Messaging Intelligence Engine™</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               From Cold Lead to Hot Prospect in 4 Steps
             </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Watch your AI assistant transform conversations using advanced behavioral psychology.
             </p>
           </div>
@@ -856,7 +856,7 @@ const SurFoxRevolution = () => {
                   } flex items-center justify-center shadow-lg`}>
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="text-sm font-medium text-white">{step.title}</div>
+                  <div className="text-sm font-medium text-gray-900">{step.title}</div>
                 </div>
               ))}
             </div>
@@ -899,28 +899,28 @@ const SurFoxRevolution = () => {
                 }
               ].map((item, index) => (
                 <div key={index} className="relative group">
-                  <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-6 hover:border-slate-600/50 transition-all h-full">
+                  <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-gray-300 transition-all h-full">
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
                         <item.icon className="w-6 h-6 text-white" />
                       </div>
-                      <span className="text-xs font-mono text-slate-500 bg-slate-700/50 px-2 py-1 rounded">
+                      <span className="text-xs font-mono text-gray-500 bg-gray-100 px-2 py-1 rounded">
                         {item.step}
                       </span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed mb-4">{item.description}</p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">{item.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">{item.description}</p>
                     
                     <ul className="space-y-2 mb-4">
                       {item.features.map((feature, idx) => (
-                        <li key={idx} className="text-xs text-slate-500 flex items-center">
-                          <div className="w-1 h-1 bg-blue-400 rounded-full mr-2"></div>
+                        <li key={idx} className="text-xs text-gray-500 flex items-center">
+                          <div className="w-1 h-1 bg-blue-600 rounded-full mr-2"></div>
                           {feature}
                         </li>
                       ))}
                     </ul>
                     
-                    <div className="text-xs text-blue-400 font-medium bg-blue-900/20 px-3 py-1 rounded-full">
+                    <div className="text-xs text-blue-700 font-medium bg-blue-100 px-3 py-1 rounded-full">
                       ✨ {item.highlight}
                     </div>
                   </div>
@@ -932,7 +932,7 @@ const SurFoxRevolution = () => {
       </section>
 
       {/* Platform Stats */}
-      <section className="border-y border-slate-800 bg-slate-900/50">
+      <section className="border-y border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -942,11 +942,11 @@ const SurFoxRevolution = () => {
               { number: '5.2x', label: 'Conversion Increase', icon: TrendingUp }
             ].map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-slate-800/50 rounded-xl mb-4 group-hover:bg-slate-700/50 transition-colors">
-                  <stat.icon className="w-6 h-6 text-blue-400" />
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-100 rounded-xl mb-4 group-hover:bg-gray-200 transition-colors">
+                  <stat.icon className="w-6 h-6 text-blue-600" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                <div className="text-sm text-slate-400">{stat.label}</div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">{stat.number}</div>
+                <div className="text-sm text-gray-600">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -954,13 +954,13 @@ const SurFoxRevolution = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Revolutionary Results Across Industries
             </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               See how Messaging Intelligence transforms businesses in every sector.
             </p>
           </div>
@@ -1001,34 +1001,34 @@ const SurFoxRevolution = () => {
                 additionalMetrics: ['4.2x cart recovery', '156% AOV increase']
               }
             ].map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 hover:border-slate-600/50 transition-all">
-                <div className="text-4xl text-blue-400/20 mb-4">"</div>
-                <p className="text-slate-300 mb-6 italic leading-relaxed">"{testimonial.quote}"</p>
+              <div key={index} className="bg-white border border-gray-200 rounded-2xl p-8 hover:border-gray-300 transition-all">
+                <div className="text-4xl text-blue-600/20 mb-4">"</div>
+                <p className="text-gray-700 mb-6 italic leading-relaxed">"{testimonial.quote}"</p>
                 
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold mr-4">
                     {testimonial.avatar}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">{testimonial.author}</h4>
-                    <p className="text-sm text-slate-400">{testimonial.role}</p>
-                    <p className="text-sm text-slate-500">{testimonial.company}</p>
+                    <h4 className="font-semibold text-gray-900">{testimonial.author}</h4>
+                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    <p className="text-sm text-gray-500">{testimonial.company}</p>
                   </div>
                 </div>
                 
-                <div className="border-t border-slate-700/50 pt-4">
+                <div className="border-t border-gray-200 pt-4">
                   <div className="flex justify-between items-center mb-3">
                     <div>
-                      <div className="text-lg font-bold text-emerald-400">{testimonial.value}</div>
-                      <div className="text-xs text-slate-400">{testimonial.metric}</div>
+                      <div className="text-lg font-bold text-emerald-600">{testimonial.value}</div>
+                      <div className="text-xs text-gray-600">{testimonial.metric}</div>
                     </div>
-                    <div className="text-xs text-slate-500 bg-slate-700/30 px-2 py-1 rounded">
+                    <div className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
                       {testimonial.industry}
                     </div>
                   </div>
                   <div className="space-y-1">
                     {testimonial.additionalMetrics.map((metric, idx) => (
-                      <div key={idx} className="text-xs text-blue-400">• {metric}</div>
+                      <div key={idx} className="text-xs text-blue-600">• {metric}</div>
                     ))}
                   </div>
                 </div>
@@ -1039,13 +1039,13 @@ const SurFoxRevolution = () => {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 bg-slate-900/30">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Pricing That Scales With Your Success
             </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Start with our Intelligence Engine and scale up as your messaging volume grows.
             </p>
           </div>
@@ -1106,10 +1106,10 @@ const SurFoxRevolution = () => {
                 highlight: 'Maximum Intelligence'
               }
             ].map((plan, index) => (
-              <div key={index} className={`relative bg-slate-800/30 border rounded-2xl p-8 ${
+              <div key={index} className={`relative bg-gray-50 border rounded-2xl p-8 ${
                 plan.popular 
-                  ? 'border-blue-500/50 ring-1 ring-blue-500/20' 
-                  : 'border-slate-700/50'
+                  ? 'border-blue-300 ring-1 ring-blue-200' 
+                  : 'border-gray-200'
               }`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1120,18 +1120,18 @@ const SurFoxRevolution = () => {
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-slate-400 mb-4">{plan.description}</p>
-                  <div className="text-3xl font-bold text-white mb-1">{plan.price}</div>
-                  <div className="text-sm text-slate-400">{plan.period}</div>
-                  <div className="text-xs text-blue-400 mt-2">{plan.highlight}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <p className="text-gray-600 mb-4">{plan.description}</p>
+                  <div className="text-3xl font-bold text-gray-900 mb-1">{plan.price}</div>
+                  <div className="text-sm text-gray-600">{plan.period}</div>
+                  <div className="text-xs text-blue-600 mt-2">{plan.highlight}</div>
                 </div>
                 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <Check className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-300 text-sm">{feature}</span>
+                      <Check className="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -1139,7 +1139,7 @@ const SurFoxRevolution = () => {
                 <a href="#" className={`block text-center py-3 px-6 rounded-lg font-medium transition-all ${
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg hover:shadow-blue-500/25'
-                    : 'border border-slate-600 text-slate-300 hover:bg-slate-700/50'
+                    : 'border border-gray-300 text-gray-700 hover:bg-gray-100'
                 }`}>
                   {plan.cta}
                 </a>
@@ -1148,10 +1148,10 @@ const SurFoxRevolution = () => {
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-slate-400 mb-4">
+            <p className="text-gray-600 mb-4">
               All plans include: Messaging Intelligence Engine • Real-time signal analysis • 14-day free trial • No setup fees
             </p>
-            <a href="/enterprise" className="text-blue-400 hover:text-blue-300 font-medium">
+            <a href="/enterprise" className="text-blue-600 hover:text-blue-700 font-medium">
               Need custom signals or higher volume? Explore Enterprise options →
             </a>
           </div>
@@ -1159,13 +1159,13 @@ const SurFoxRevolution = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-slate-950">
+      <section className="py-20 bg-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-slate-400">
+            <p className="text-xl text-gray-600">
               Everything you need to know about Messaging Intelligence.
             </p>
           </div>
@@ -1205,18 +1205,18 @@ const SurFoxRevolution = () => {
                 answer: 'Yes, SurFox is fully TCPA compliant and includes built-in opt-out management, consent tracking, and compliance monitoring. Our Messaging Intelligence actually helps with compliance because we focus on quality conversations with engaged prospects rather than mass blasting. The AI naturally creates more consent-friendly interactions because it reads engagement signals and adapts accordingly.'
               }
             ].map((item, index) => (
-              <div key={index} className="bg-slate-800/30 border border-slate-700/50 rounded-xl overflow-hidden">
+              <div key={index} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
                 <button
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-700/30 transition-colors"
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                   onClick={() => setActiveFaq(activeFaq === index ? -1 : index)}
                 >
-                  <span className="font-medium text-white pr-4">{item.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${
+                  <span className="font-medium text-gray-900 pr-4">{item.question}</span>
+                  <ChevronDown className={`w-5 h-5 text-gray-600 transition-transform ${
                     activeFaq === index ? 'transform rotate-180' : ''
                   }`} />
                 </button>
                 {activeFaq === index && (
-                  <div className="px-6 pb-4 text-slate-300 leading-relaxed">
+                  <div className="px-6 pb-4 text-gray-700 leading-relaxed">
                     {item.answer}
                   </div>
                 )}
@@ -1227,20 +1227,20 @@ const SurFoxRevolution = () => {
       </section>
 
       {/* Problem/Solution Deep Dive */}
-      <section className="py-20 bg-slate-900/30">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               The Sales Problem Everyone Faces
             </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Traditional messaging tools create more problems than they solve. Here's how Messaging Intelligence fixes everything.
             </p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12">
-            <div className="bg-gradient-to-br from-red-900/20 to-red-800/20 border border-red-800/30 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-red-400 mb-6 flex items-center">
+            <div className="bg-gradient-to-br from-red-50 to-red-100 border border-red-200 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-red-600 mb-6 flex items-center">
                 <X className="w-6 h-6 mr-3" />
                 Traditional Sales Struggles
               </h3>
@@ -1255,16 +1255,16 @@ const SurFoxRevolution = () => {
                   'Inconsistent follow-up timing based on gut feeling',
                   'No data on what messaging actually converts'
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start text-red-300">
-                    <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <li key={index} className="flex items-start text-red-700">
+                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             
-            <div className="bg-gradient-to-br from-emerald-900/20 to-emerald-800/20 border border-emerald-800/30 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-emerald-400 mb-6 flex items-center">
+            <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-emerald-600 mb-6 flex items-center">
                 <Check className="w-6 h-6 mr-3" />
                 Messaging Intelligence Solution
               </h3>
@@ -1279,8 +1279,8 @@ const SurFoxRevolution = () => {
                   'Perfect timing based on prospect behavior patterns',
                   'Complete analytics on what drives conversions'
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start text-emerald-300">
-                    <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <li key={index} className="flex items-start text-emerald-700">
+                    <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -1289,11 +1289,11 @@ const SurFoxRevolution = () => {
           </div>
           
           <div className="text-center mt-12">
-            <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-xl font-bold text-white mb-4">The Bottom Line</h3>
-              <p className="text-slate-300 text-lg leading-relaxed">
+            <div className="bg-gray-100 border border-gray-200 rounded-xl p-8 max-w-4xl mx-auto">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">The Bottom Line</h3>
+              <p className="text-gray-700 text-lg leading-relaxed">
                 Stop playing the numbers game with mass messaging. Start having intelligent conversations that actually convert. 
-                <strong className="text-blue-400"> Messaging Intelligence</strong> doesn't just save time — it fundamentally changes 
+                <strong className="text-blue-600"> Messaging Intelligence</strong> doesn't just save time — it fundamentally changes 
                 how you identify and engage your best prospects.
               </p>
             </div>
@@ -1302,20 +1302,20 @@ const SurFoxRevolution = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
+      <section className="py-20 relative overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
-            <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-900/50 to-purple-900/50 text-blue-300 border border-blue-500/30 text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 border border-blue-200 text-sm font-medium">
               <Brain className="w-4 h-4 mr-2" />
               Join the Messaging Intelligence Revolution
             </span>
           </div>
           
-          <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-6">
             Ready to Read Your Prospects' Minds?
           </h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
             Stop guessing when prospects are ready to buy. Start knowing with 94% accuracy. 
             Experience the future of sales conversations.
           </p>
@@ -1325,99 +1325,99 @@ const SurFoxRevolution = () => {
               Start Your Intelligence Engine
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#" className="border border-slate-600 text-slate-300 px-8 py-4 rounded-xl font-semibold hover:bg-slate-800/50 transition-all text-lg">
+            <a href="#" className="border border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-white transition-all text-lg">
               See Live Demo
             </a>
           </div>
           
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600">
             <div className="flex items-center">
-              <Shield className="w-4 h-4 mr-2 text-emerald-400" />
+              <Shield className="w-4 h-4 mr-2 text-emerald-500" />
               14-day free trial
             </div>
             <div className="flex items-center">
-              <Brain className="w-4 h-4 mr-2 text-emerald-400" />
+              <Brain className="w-4 h-4 mr-2 text-emerald-500" />
               50+ signals included
             </div>
             <div className="flex items-center">
-              <Award className="w-4 h-4 mr-2 text-emerald-400" />
+              <Award className="w-4 h-4 mr-2 text-emerald-500" />
               94% accuracy guarantee
             </div>
           </div>
           
-          <div className="text-sm text-slate-500 mt-4">
+          <div className="text-sm text-gray-500 mt-4">
             No credit card required • Setup in 5 minutes • Works with any industry
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800 bg-slate-900">
+      <footer className="border-t border-gray-200 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid md:grid-cols-5 gap-8 mb-12">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                   <Brain className="w-5 h-5 text-white" />
                 </div>
                 <span className="text-xl font-semibold tracking-tight">
-                  <span className="text-white">Sur</span>
-                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Fox</span>
+                  <span className="text-gray-900">Sur</span>
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Fox</span>
                 </span>
               </div>
-              <p className="text-slate-400 mb-4">The world's first Messaging Intelligence platform.</p>
-              <p className="text-sm text-slate-500 mb-6">Transforming conversations across every industry with behavioral AI.</p>
+              <p className="text-gray-600 mb-4">The world's first Messaging Intelligence platform.</p>
+              <p className="text-sm text-gray-500 mb-6">Transforming conversations across every industry with behavioral AI.</p>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
-                  <Brain className="w-4 h-4 text-emerald-400" />
-                  <span className="text-sm text-slate-400">50+ Signal Analysis</span>
+                  <Brain className="w-4 h-4 text-emerald-500" />
+                  <span className="text-sm text-gray-600">50+ Signal Analysis</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Target className="w-4 h-4 text-emerald-400" />
-                  <span className="text-sm text-slate-400">94% Accuracy</span>
+                  <Target className="w-4 h-4 text-emerald-500" />
+                  <span className="text-sm text-gray-600">94% Accuracy</span>
                 </div>
               </div>
             </div>
             
             <div>
-              <h4 className="font-semibold text-white mb-4">Platform</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">Platform</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Messaging Intelligence</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Signal Analysis</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Conversation AI</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Chrome Extension</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Integrations</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Messaging Intelligence</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Signal Analysis</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Conversation AI</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Chrome Extension</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Integrations</a></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-semibold text-white mb-4">Industries</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">Industries</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Real Estate</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">SaaS & Tech</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">E-commerce</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Healthcare</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">All Industries</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Real Estate</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">SaaS & Tech</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">E-commerce</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Healthcare</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">All Industries</a></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-semibold text-white mb-4">Company</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">Company</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Enterprise</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Privacy</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Terms</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">About</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Enterprise</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Careers</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Privacy</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Terms</a></li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-slate-400 text-sm">© 2024 SurFox AI, Inc. Leading the Messaging Intelligence revolution.</p>
+          <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-600 text-sm">© 2024 SurFox AI, Inc. Leading the Messaging Intelligence revolution.</p>
             <div className="flex items-center space-x-6 mt-4 md:mt-0">
-              <span className="text-emerald-400 text-sm flex items-center">
-                <div className="w-2 h-2 bg-emerald-400 rounded-full mr-2 animate-pulse"></div>
+              <span className="text-emerald-600 text-sm flex items-center">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
                 Messaging Intelligence™ Active
               </span>
             </div>
