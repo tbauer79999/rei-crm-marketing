@@ -64,21 +64,36 @@ const EnterpriseSurFox = () => {
               </span>
             </a>
             
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#platform" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
-                Platform
-              </a>
-              <a href="#intelligence" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
-                Intelligence Engine
-              </a>
-              <a href="/enterprise" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Enterprise</a>
-              <a href="/security" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Security</a>
-              <div className="w-px h-6 bg-slate-700"></div>
-              <a href="https://app.getsurfox.com/login" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Sign In</a>
-              <a href="#" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all">
-                Start Free Trial
-              </a>
-            </div>
+<div className="hidden md:flex items-center space-x-8">
+  <a href="#platform" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+    Platform
+  </a>
+  <a href="#intelligence" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
+    Intelligence Engine
+  </a>
+  <a href="/enterprise" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Enterprise</a>
+  <a href="/security" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Security</a>
+
+  <div className="relative group">
+    <button className="text-slate-400 hover:text-white transition-colors text-sm font-medium flex items-center space-x-1">
+      <span>Compare</span>
+      <ChevronDown className="w-4 h-4" />
+    </button>
+    <div className="absolute left-0 mt-2 w-56 bg-slate-900 border border-slate-700 rounded-lg shadow-lg hidden group-hover:block z-50">
+      <a href="https://www.getsurfox.com/compare/smarter-contact" className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">↳ vs Smarter Contact</a>
+      <a href="https://www.getsurfox.com/compare/launch-control" className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">↳ vs Launch Control</a>
+      <a href="https://www.getsurfox.com/compare/textus" className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">↳ vs TextUs</a>
+      <a href="https://www.getsurfox.com/compare" className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white font-semibold">↳ All Comparisons</a>
+    </div>
+  </div>
+
+  <div className="w-px h-6 bg-slate-700"></div>
+  <a href="https://app.getsurfox.com/login" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Sign In</a>
+  <a href="#" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all">
+    Start Free Trial
+  </a>
+</div>
+
 
             <button 
               className="md:hidden text-slate-400 hover:text-white"
