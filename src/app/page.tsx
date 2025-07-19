@@ -74,12 +74,13 @@ const EnterpriseSurFox = () => {
   <a href="/enterprise" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Enterprise</a>
   <a href="/security" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">Security</a>
 
+  {/* Compare Dropdown */}
   <div className="relative group">
-    <button className="text-slate-400 hover:text-white transition-colors text-sm font-medium flex items-center space-x-1">
+    <div className="flex items-center space-x-1 text-slate-400 hover:text-white transition-colors text-sm font-medium cursor-pointer">
       <span>Compare</span>
       <ChevronDown className="w-4 h-4" />
-    </button>
-    <div className="absolute left-0 mt-2 w-56 bg-slate-900 border border-slate-700 rounded-lg shadow-lg hidden group-hover:block z-50">
+    </div>
+    <div className="absolute left-0 mt-2 w-56 bg-slate-900 border border-slate-700 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition duration-200 z-50">
       <a href="https://www.getsurfox.com/compare/smarter-contact" className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">↳ vs Smarter Contact</a>
       <a href="https://www.getsurfox.com/compare/launch-control" className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">↳ vs Launch Control</a>
       <a href="https://www.getsurfox.com/compare/textus" className="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-white">↳ vs TextUs</a>
