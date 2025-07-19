@@ -4,8 +4,6 @@ import React, { useState, useEffect } from 'react'
 import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Menu, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, MessageSquare, Clock, Sparkles, AlertCircle, Star, Crown } from 'lucide-react'
 
 const SurFoxVsSmarterContact = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeComparison, setActiveComparison] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -16,15 +14,6 @@ const SurFoxVsSmarterContact = () => {
     }
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
-
-  // Scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const comparisonCategories = [
@@ -64,64 +53,10 @@ const SurFoxVsSmarterContact = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 overflow-x-hidden">
+    <div className="min-h-screen bg-gray-50 text-gray-900 overflow-x-hidden pt-16">
       
-      {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-40 transition-all duration-500 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm' : ''
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <a href="/" className="flex items-center space-x-3 group">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-semibold tracking-tight">
-                <span className="text-gray-900">Sur</span>
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Fox</span>
-              </span>
-            </a>
-            
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-                ← Back to Platform
-              </a>
-              <div className="w-px h-6 bg-gray-300"></div>
-              <a href="https://app.getsurfox.com/login" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
-                Sign In
-              </a>
-              <a href="#cta" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all">
-                Try SurFox Free
-              </a>
-            </div>
-
-            <button 
-              className="md:hidden text-gray-600 hover:text-gray-900"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200">
-            <div className="px-4 py-6 space-y-4">
-              <a href="/" className="block text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">← Back to Platform</a>
-              <div className="pt-4 border-t border-gray-200">
-                <a href="#" className="block text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium mb-3">Sign In</a>
-                <a href="#cta" className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium text-center">
-                  Try SurFox Free
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
-      </nav>
-
       {/* Hero Section */}
-      <section className="min-h-screen relative flex items-center overflow-hidden pt-16">
+      <section className="min-h-screen relative flex items-center overflow-hidden">
         {/* Background Grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"></div>
         
@@ -759,30 +694,6 @@ const SurFoxVsSmarterContact = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-gray-200 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-semibold tracking-tight">
-                <span className="text-gray-900">Sur</span>
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Fox</span>
-              </span>
-            </div>
-            
-            <div className="flex items-center space-x-6 text-sm">
-              <a href="/" className="text-gray-600 hover:text-gray-900 transition-colors">Platform</a>
-              <a href="/enterprise" className="text-gray-600 hover:text-gray-900 transition-colors">Enterprise</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Support</a>
-              <div className="text-gray-400">© 2024 SurFox AI</div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
