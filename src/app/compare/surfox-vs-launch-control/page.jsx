@@ -148,11 +148,11 @@ const SurFoxVsLaunchControl = () => {
                   <div className="text-orange-400 text-2xl font-bold">⚡ VS ⚡</div>
                   
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl flex items-center justify-center mb-2">
-                      <Rocket className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mb-2">
+                      <Rocket className="w-8 h-8 text-slate-400" />
                     </div>
-                    <div className="text-sm font-bold text-slate-300">Launch Control</div>
-                    <div className="text-xs text-orange-400">Campaign Tool</div>
+                    <div className="text-sm font-bold text-slate-400">Launch Control</div>
+                    <div className="text-xs text-slate-500">Campaign Tool</div>
                   </div>
                 </div>
               </div>
@@ -283,46 +283,46 @@ const SurFoxVsLaunchControl = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Launch Control Side */}
-            <div className="bg-gradient-to-br from-orange-900/20 to-red-900/20 border border-orange-800/30 rounded-2xl p-8">
+            <div className="bg-slate-800/30 border border-slate-700/30 rounded-2xl p-8">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-red-600 rounded-xl flex items-center justify-center mr-4">
-                  <Rocket className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center mr-4">
+                  <Rocket className="w-6 h-6 text-slate-400" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-orange-400">Launch Control</h3>
-                  <p className="text-orange-300">Manual Campaign Management</p>
+                  <h3 className="text-2xl font-bold text-slate-400">Launch Control</h3>
+                  <p className="text-slate-500">Manual Campaign Management</p>
                 </div>
               </div>
               
               <div className="space-y-4 mb-6">
-                <div className="bg-orange-900/30 border border-orange-800/30 rounded-lg p-4">
-                  <h4 className="font-semibold text-orange-300 mb-2 flex items-center">
+                <div className="bg-slate-700/30 border border-slate-600/30 rounded-lg p-4">
+                  <h4 className="font-semibold text-slate-300 mb-2 flex items-center">
                     <User className="w-4 h-4 mr-2" />
                     You Do Everything
                   </h4>
-                  <p className="text-sm text-orange-200">Script every message, monitor every reply, qualify every lead manually. Full control, full workload.</p>
+                  <p className="text-sm text-slate-400">Script every message, monitor every reply, qualify every lead manually. Full control, full workload.</p>
                 </div>
                 
-                <div className="bg-orange-900/30 border border-orange-800/30 rounded-lg p-4">
-                  <h4 className="font-semibold text-orange-300 mb-2 flex items-center">
+                <div className="bg-slate-700/30 border border-slate-600/30 rounded-lg p-4">
+                  <h4 className="font-semibold text-slate-300 mb-2 flex items-center">
                     <Eye className="w-4 h-4 mr-2" />
                     Manual Monitoring
                   </h4>
-                  <p className="text-sm text-orange-200">Watch dashboards, track responses, manually follow up. Miss a day, miss opportunities.</p>
+                  <p className="text-sm text-slate-400">Watch dashboards, track responses, manually follow up. Miss a day, miss opportunities.</p>
                 </div>
                 
-                <div className="bg-orange-900/30 border border-orange-800/30 rounded-lg p-4">
-                  <h4 className="font-semibold text-orange-300 mb-2 flex items-center">
+                <div className="bg-slate-700/30 border border-slate-600/30 rounded-lg p-4">
+                  <h4 className="font-semibold text-slate-300 mb-2 flex items-center">
                     <FileText className="w-4 h-4 mr-2" />
                     Template-Based
                   </h4>
-                  <p className="text-sm text-orange-200">Fixed templates with variables. Risk spam flags at scale without careful variation.</p>
+                  <p className="text-sm text-slate-400">Fixed templates with variables. Risk spam flags at scale without careful variation.</p>
                 </div>
               </div>
               
-              <div className="bg-orange-900/30 border border-orange-700/30 rounded-lg p-4">
-                <h4 className="font-semibold text-orange-300 mb-2">Best For:</h4>
-                <p className="text-orange-200 text-sm">Campaign managers who want full control and don't mind manual work</p>
+              <div className="bg-slate-700/30 border border-slate-600/30 rounded-lg p-4">
+                <h4 className="font-semibold text-slate-300 mb-2">Best For:</h4>
+                <p className="text-slate-400 text-sm">Campaign managers who want full control and don't mind manual work</p>
               </div>
             </div>
 
@@ -385,6 +385,32 @@ const SurFoxVsLaunchControl = () => {
             </p>
           </div>
 
+          {/* Category Tabs */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {[
+              { category: 'AI Intelligence', icon: Brain, color: 'blue' },
+              { category: 'Lead Management', icon: Target, color: 'emerald' },
+              { category: 'Automation & Efficiency', icon: Zap, color: 'purple' }
+            ].map((category, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveFeatureSet(index)}
+                className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all ${
+                  activeFeatureSet === index
+                    ? `bg-gradient-to-r ${
+                        category.color === 'blue' ? 'from-blue-600 to-blue-700' :
+                        category.color === 'emerald' ? 'from-emerald-600 to-emerald-700' :
+                        'from-purple-600 to-purple-700'
+                      } text-white shadow-lg`
+                    : 'bg-slate-800/50 text-slate-400 hover:bg-slate-700/50 hover:text-white border border-slate-700'
+                }`}
+              >
+                <category.icon className="w-5 h-5 mr-2" />
+                {category.category}
+              </button>
+            ))}
+          </div>
+
           {/* Comparison Table */}
           <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden">
             <div className="grid grid-cols-12 bg-slate-800/50 border-b border-slate-700/50">
@@ -401,65 +427,76 @@ const SurFoxVsLaunchControl = () => {
               </div>
               <div className="col-span-3 p-4 text-center border-l border-slate-700/50">
                 <div className="flex items-center justify-center">
-                  <div className="w-6 h-6 bg-gradient-to-br from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-2">
-                    <Rocket className="w-3 h-3 text-white" />
+                  <div className="w-6 h-6 bg-slate-700 rounded-lg flex items-center justify-center mr-2">
+                    <Rocket className="w-3 h-3 text-slate-400" />
                   </div>
-                  <span className="font-medium text-orange-400">Launch Control</span>
+                  <span className="font-medium text-slate-400">Launch Control</span>
                 </div>
               </div>
             </div>
 
-            {[
-              { feature: 'AI-powered conversation engine', surfox: true, launch: false },
-              { feature: 'Dynamic per-lead messaging', surfox: true, launch: false },
-              { feature: 'Full AI follow-up handling', surfox: true, launch: false },
-              { feature: 'Conversation memory per lead', surfox: true, launch: false },
-              { feature: 'AI lead scoring & motivation analysis', surfox: true, launch: false },
-              { feature: 'Auto lead escalation', surfox: true, launch: false },
-              { feature: 'Message randomization (anti-spam)', surfox: true, launch: false },
-              { feature: 'AI personas & tone customization', surfox: true, launch: false },
-              { feature: 'Knowledge base training', surfox: true, launch: false },
-              { feature: 'Chrome extension lead capture', surfox: true, launch: false },
-              { feature: 'Business hours awareness', surfox: true, launch: false },
-              { feature: 'Industry-specific AI prompts', surfox: true, launch: false },
-              { feature: 'Real-time escalation alerts', surfox: true, launch: false },
-              { feature: 'Funnel visualization', surfox: true, launch: false },
-              { feature: 'Basic drip campaigns', surfox: true, launch: true },
-              { feature: 'A2P compliance features', surfox: true, launch: true },
-              { feature: 'CSV contact upload', surfox: true, launch: true }
-            ].map((item, index) => (
-              <div key={index} className="grid grid-cols-12 border-b border-slate-700/30 hover:bg-slate-700/20 transition-colors">
-                <div className="col-span-6 p-4">
-                  <span className="text-slate-300">{item.feature}</span>
+            {(() => {
+              const features = [
+                // AI Intelligence
+                [
+                  { feature: 'AI-driven conversations', surfox: true, launch: false },
+                  { feature: 'Conversation memory per lead', surfox: true, launch: false },
+                  { feature: 'AI personas & tone customization', surfox: true, launch: false },
+                  { feature: 'Dynamic prompt injection', surfox: true, launch: false },
+                  { feature: 'Anti-spam message randomization', surfox: true, launch: false }
+                ],
+                // Lead Management
+                [
+                  { feature: 'AI motivation scoring', surfox: true, launch: false },
+                  { feature: 'Auto qualification logic', surfox: true, launch: false },
+                  { feature: 'Auto lead escalation', surfox: true, launch: false },
+                  { feature: 'Real-time hot lead alerts', surfox: true, launch: false },
+                  { feature: 'Funnel visualization', surfox: true, launch: false }
+                ],
+                // Automation & Efficiency
+                [
+                  { feature: 'Chrome extension import', surfox: true, launch: false },
+                  { feature: 'AI handles 90% of messages', surfox: true, launch: false },
+                  { feature: 'Document-based AI training', surfox: true, launch: false },
+                  { feature: 'Smart retry logic', surfox: true, launch: false },
+                  { feature: 'Business hours awareness', surfox: true, launch: false }
+                ]
+              ];
+              
+              return features[activeFeatureSet].map((item, index) => (
+                <div key={index} className="grid grid-cols-12 border-b border-slate-700/30 hover:bg-slate-700/20 transition-colors">
+                  <div className="col-span-6 p-4">
+                    <span className="text-slate-300">{item.feature}</span>
+                  </div>
+                  <div className="col-span-3 p-4 text-center border-l border-slate-700/30">
+                    {item.surfox ? (
+                      <div className="flex items-center justify-center">
+                        <Check className="w-5 h-5 text-emerald-400" />
+                        <span className="ml-2 text-emerald-400 font-medium">Yes</span>
+                      </div>
+                    ) : (
+                      <div className="flex items-center justify-center">
+                        <X className="w-5 h-5 text-red-400" />
+                        <span className="ml-2 text-red-400">No</span>
+                      </div>
+                    )}
+                  </div>
+                  <div className="col-span-3 p-4 text-center border-l border-slate-700/30">
+                    {item.launch ? (
+                      <div className="flex items-center justify-center">
+                        <Check className="w-5 h-5 text-emerald-400" />
+                        <span className="ml-2 text-emerald-400 font-medium">Yes</span>
+                      </div>
+                    ) : (
+                      <div className="flex items-center justify-center">
+                        <X className="w-5 h-5 text-red-400" />
+                        <span className="ml-2 text-red-400">No</span>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div className="col-span-3 p-4 text-center border-l border-slate-700/30">
-                  {item.surfox ? (
-                    <div className="flex items-center justify-center">
-                      <Check className="w-5 h-5 text-emerald-400" />
-                      <span className="ml-2 text-emerald-400 font-medium">Yes</span>
-                    </div>
-                  ) : (
-                    <div className="flex items-center justify-center">
-                      <X className="w-5 h-5 text-red-400" />
-                      <span className="ml-2 text-red-400">No</span>
-                    </div>
-                  )}
-                </div>
-                <div className="col-span-3 p-4 text-center border-l border-slate-700/30">
-                  {item.launch ? (
-                    <div className="flex items-center justify-center">
-                      <Check className="w-5 h-5 text-emerald-400" />
-                      <span className="ml-2 text-emerald-400 font-medium">Yes</span>
-                    </div>
-                  ) : (
-                    <div className="flex items-center justify-center">
-                      <X className="w-5 h-5 text-red-400" />
-                      <span className="ml-2 text-red-400">No</span>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
+              ));
+            })()}
           </div>
         </div>
       </section>
@@ -478,61 +515,61 @@ const SurFoxVsLaunchControl = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Launch Control Workflow */}
-            <div className="bg-slate-800/30 border border-orange-800/30 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-orange-400 mb-6 flex items-center">
+            <div className="bg-slate-800/30 border border-slate-700/30 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-slate-400 mb-6 flex items-center">
                 <Clock className="w-6 h-6 mr-3" />
                 Launch Control Day
               </h3>
               
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                  <div className="w-8 h-8 bg-slate-600 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <span className="text-white text-sm font-bold">1</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-orange-300">Write Campaign Messages</div>
-                    <div className="text-sm text-orange-200">Script templates, set variables, plan sequences</div>
-                    <div className="text-xs text-orange-400 mt-1">⏱ 45 minutes</div>
+                    <div className="font-semibold text-slate-300">Write Campaign Messages</div>
+                    <div className="text-sm text-slate-400">Script templates, set variables, plan sequences</div>
+                    <div className="text-xs text-slate-500 mt-1">⏱ 45 minutes</div>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                  <div className="w-8 h-8 bg-slate-600 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <span className="text-white text-sm font-bold">2</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-orange-300">Launch Campaigns</div>
-                    <div className="text-sm text-orange-200">Upload lists, configure timing, monitor sending</div>
-                    <div className="text-xs text-orange-400 mt-1">⏱ 30 minutes</div>
+                    <div className="font-semibold text-slate-300">Launch Campaigns</div>
+                    <div className="text-sm text-slate-400">Upload lists, configure timing, monitor sending</div>
+                    <div className="text-xs text-slate-500 mt-1">⏱ 30 minutes</div>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                  <div className="w-8 h-8 bg-slate-600 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <span className="text-white text-sm font-bold">3</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-orange-300">Monitor & Reply</div>
-                    <div className="text-sm text-orange-200">Check responses, manually reply to each lead</div>
-                    <div className="text-xs text-orange-400 mt-1">⏱ 3+ hours</div>
+                    <div className="font-semibold text-slate-300">Monitor & Reply</div>
+                    <div className="text-sm text-slate-400">Check responses, manually reply to each lead</div>
+                    <div className="text-xs text-slate-500 mt-1">⏱ 3+ hours</div>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                  <div className="w-8 h-8 bg-slate-600 rounded-lg flex items-center justify-center mr-4 mt-1 flex-shrink-0">
                     <span className="text-white text-sm font-bold">4</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-orange-300">Qualify Leads</div>
-                    <div className="text-sm text-orange-200">Manually assess interest, update statuses</div>
-                    <div className="text-xs text-orange-400 mt-1">⏱ 1 hour</div>
+                    <div className="font-semibold text-slate-300">Qualify Leads</div>
+                    <div className="text-sm text-slate-400">Manually assess interest, update statuses</div>
+                    <div className="text-xs text-slate-500 mt-1">⏱ 1 hour</div>
                   </div>
                 </div>
               </div>
               
-              <div className="mt-6 p-4 bg-orange-900/30 border border-orange-700/30 rounded-lg text-center">
-                <div className="text-2xl font-bold text-orange-400">5+ hours</div>
-                <div className="text-sm text-orange-500">Daily time investment</div>
+              <div className="mt-6 p-4 bg-slate-700/30 border border-slate-600/30 rounded-lg text-center">
+                <div className="text-2xl font-bold text-slate-400">5+ hours</div>
+                <div className="text-sm text-slate-500">Daily time investment</div>
               </div>
             </div>
 
@@ -601,8 +638,8 @@ const SurFoxVsLaunchControl = () => {
               <h3 className="text-2xl font-bold text-emerald-400 mb-4">Time Savings Calculator</h3>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-400 mb-2">5+ hours</div>
-                  <div className="text-sm text-slate-400">Launch Control daily</div>
+                  <div className="text-3xl font-bold text-slate-400 mb-2">5+ hours</div>
+                  <div className="text-sm text-slate-500">Launch Control daily</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">35 min</div>
