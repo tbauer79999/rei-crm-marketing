@@ -11,7 +11,7 @@ const SurFoxVsSmarterContact = () => {
 
   // Mouse tracking for subtle parallax effects
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
     window.addEventListener('mousemove', handleMouseMove)
@@ -581,7 +581,7 @@ const SurFoxVsSmarterContact = () => {
             {/* SurFox Results */}
             <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-2xl p-8 ring-1 ring-blue-500/20">
               <div className="flex items-center mb-6">
-                <img src="/logo.png" alt="SurFox Logo" className="w-5 h-5" />
+                <img src="/logo.png" alt="SurFox Logo" className="w-8 h-8" />
                 <h3 className="text-xl font-bold text-blue-400">SurFox AI Results</h3>
               </div>
               
