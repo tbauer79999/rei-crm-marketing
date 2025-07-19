@@ -248,74 +248,112 @@ const SurFoxGeneralComparison = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
-            {competitorCategories.map((category, index) => (
-              <div key={index} className={`bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 hover:border-slate-600/50 transition-all ${
-                index === 0 ? 'lg:col-span-2' : ''
-              }`}>
-                <div className="flex items-center mb-6">
-                  <div className={`w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center mr-4`}>
-                    <category.icon className="w-6 h-6 text-slate-400" />
+          {/* Flowing Card Layout */}
+          <div className="relative">
+            {/* Background connecting lines */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <svg className="w-full h-full opacity-10" viewBox="0 0 800 600">
+                <path d="M100,150 Q400,100 700,150" stroke="currentColor" strokeWidth="2" fill="none" className="text-slate-600" />
+                <path d="M100,300 Q400,250 700,300" stroke="currentColor" strokeWidth="2" fill="none" className="text-slate-600" />
+                <path d="M100,450 Q400,400 700,450" stroke="currentColor" strokeWidth="2" fill="none" className="text-slate-600" />
+              </svg>
+            </div>
+
+            <div className="space-y-12 relative z-10">
+              {competitorCategories.map((category, index) => (
+                <div key={index} className={`flex items-center gap-8 ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}>
+                  {/* Category Card */}
+                  <div className={`flex-1 bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-slate-600/50 hover:bg-slate-800/60 transition-all duration-300 ${
+                    index % 2 === 1 ? 'ml-auto' : 'mr-auto'
+                  } max-w-2xl`}>
+                    <div className="flex items-start space-x-4 mb-6">
+                      <div className="w-14 h-14 bg-slate-700/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <category.icon className="w-7 h-7 text-slate-400" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-slate-300 mb-1">{category.category}</h3>
+                        <p className="text-slate-500 text-sm mb-4">{category.description}</p>
+                        
+                        {/* Examples as flowing tags */}
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {category.examples.map((example, idx) => (
+                            <span key={idx} className="bg-slate-700/60 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-600/30">
+                              {example}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Problems in a more visual way */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {category.problems.map((problem, idx) => (
+                        <div key={idx} className="flex items-start space-x-2 text-slate-400 text-sm">
+                          <div className="w-4 h-4 mt-0.5 flex-shrink-0">
+                            <X className="w-4 h-4 text-red-400" />
+                          </div>
+                          <span>{problem}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-300">{category.category}</h3>
-                    <p className="text-slate-500">{category.description}</p>
+
+                  {/* Connecting element */}
+                  <div className="hidden lg:flex w-24 h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* SurFox Hero Card - Centered and Prominent */}
+          <div className="mt-20 flex justify-center">
+            <div className="relative">
+              {/* Glow effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-3xl blur opacity-20"></div>
+              
+              {/* Main card */}
+              <div className="relative bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-2xl p-10 text-center max-w-3xl backdrop-blur-sm">
+                <div className="flex items-center justify-center mb-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mr-6 shadow-lg shadow-blue-500/25">
+                    <Brain className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-3xl font-bold text-blue-400">SurFox AI</h3>
+                    <p className="text-blue-300 text-lg">AI Conversation Engine</p>
                   </div>
                 </div>
                 
-                <div className="mb-6">
-                  <div className="text-sm text-slate-400 mb-2">Examples:</div>
-                  <div className="flex flex-wrap gap-2">
-                    {category.examples.map((example, idx) => (
-                      <span key={idx} className="bg-slate-700/50 text-slate-300 px-3 py-1 rounded-full text-sm">
-                        {example}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                <p className="text-lg text-blue-200 mb-8 leading-relaxed">
+                  The only platform built from the ground up for AI-powered sales conversations that actually convert.
+                </p>
                 
-                <div className="space-y-2">
-                  {category.problems.map((problem, idx) => (
-                    <div key={idx} className="flex items-center text-slate-400 text-sm">
-                      <X className="w-4 h-4 text-red-400 mr-2 flex-shrink-0" />
-                      {problem}
+                {/* Features in a more dynamic layout */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    'AI writes & optimizes every message',
+                    'Learns from every conversation',
+                    'Automatically qualifies leads',
+                    'Escalates only hot prospects',
+                    'Built for conversion, not volume',
+                    'Transparent pricing & ROI'
+                  ].map((feature, idx) => (
+                    <div key={idx} className="flex items-center text-blue-200">
+                      <div className="w-5 h-5 bg-emerald-500/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                        <Check className="w-3 h-3 text-emerald-400" />
+                      </div>
+                      <span className="text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
-              </div>
-            ))}
-          </div>
 
-          {/* SurFox Category */}
-          <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-2xl p-8 text-center ring-1 ring-blue-500/20">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mr-4">
-                <Brain className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-blue-400">SurFox AI</h3>
-                <p className="text-blue-300">AI Conversation Engine</p>
-              </div>
-            </div>
-            
-            <p className="text-lg text-blue-200 mb-6">
-              The only platform built from the ground up for AI-powered sales conversations that actually convert.
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-4">
-              {[
-                'AI writes & optimizes every message',
-                'Learns from every conversation',
-                'Automatically qualifies leads',
-                'Escalates only hot prospects',
-                'Built for conversion, not volume',
-                'Transparent pricing & ROI'
-              ].map((feature, idx) => (
-                <div key={idx} className="flex items-center text-blue-200">
-                  <Check className="w-4 h-4 text-emerald-400 mr-2 flex-shrink-0" />
-                  {feature}
+                {/* Call to action */}
+                <div className="mt-8">
+                  <a href="#comparison" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all">
+                    See How We Compare
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </a>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
