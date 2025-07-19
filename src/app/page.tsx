@@ -143,6 +143,18 @@ const SurFoxRevolution = () => {
               <a href="#intelligence" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Messaging Intelligence</a>
               <a href="#industries" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Industries</a>
               <a href="/enterprise" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium">Enterprise</a>
+              
+              {/* Compare section for mobile */}
+              <div className="border-t border-slate-700/50 pt-4">
+                <div className="text-slate-400 text-sm font-medium mb-2">Compare</div>
+                <div className="ml-4 space-y-2">
+                  <a href="#" className="block text-slate-500 hover:text-white transition-colors text-sm">vs TextUs</a>
+                  <a href="#" className="block text-slate-500 hover:text-white transition-colors text-sm">vs Smarter Contact</a>
+                  <a href="#" className="block text-slate-500 hover:text-white transition-colors text-sm">vs Launch Control</a>
+                  <a href="#" className="block text-slate-500 hover:text-white transition-colors text-sm font-medium">All Comparisons</a>
+                </div>
+              </div>
+              
               <div className="pt-4 border-t border-slate-800">
                 <a href="#" className="block text-slate-400 hover:text-white transition-colors text-sm font-medium mb-3">Sign In</a>
                 <a href="#" className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium text-center">
