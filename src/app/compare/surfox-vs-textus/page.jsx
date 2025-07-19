@@ -327,6 +327,28 @@ const SurFoxVsTextUs = () => {
             </p>
           </div>
 
+          {/* Category Tabs */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {featureSets.map((category, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveFeatureSet(index)}
+                className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all ${
+                  activeFeatureSet === index
+                    ? `bg-gradient-to-r ${
+                        category.color === 'blue' ? 'from-blue-600 to-blue-700' :
+                        category.color === 'emerald' ? 'from-emerald-600 to-emerald-700' :
+                        'from-purple-600 to-purple-700'
+                      } text-white shadow-lg`
+                    : 'bg-slate-800/50 text-slate-400 hover:bg-slate-700/50 hover:text-white border border-slate-700'
+                }`}
+              >
+                <category.icon className="w-5 h-5 mr-2" />
+                {category.category}
+              </button>
+            ))}
+          </div>
+
           {/* Comparison Table */}
           <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl overflow-hidden">
             <div className="grid grid-cols-12 bg-slate-800/50 border-b border-slate-700/50">
@@ -351,53 +373,22 @@ const SurFoxVsTextUs = () => {
               </div>
             </div>
 
-            {[
-              { feature: 'AI-driven conversations', surfox: true, textus: false },
-              { feature: 'Conversation memory per lead', surfox: true, textus: false },
-              { feature: 'Dynamic follow-up timing', surfox: true, textus: false },
-              { feature: 'AI tone/persona customization', surfox: true, textus: false },
-              { feature: 'Spam-safe message randomization', surfox: true, textus: false },
-              { feature: 'AI motivation scoring', surfox: true, textus: false },
-              { feature: 'Auto qualification logic', surfox: true, textus: false },
-              { feature: 'Hot lead alerts', surfox: true, textus: false },
-              { feature: 'Chrome extension import', surfox: true, textus: false },
-              { feature: 'AI handles 90% of messages', surfox: true, textus: false },
-              { feature: 'Document-based AI training', surfox: true, textus: false },
-              { feature: 'Campaign-specific AI behavior', surfox: true, textus: false },
-              { feature: 'Smart retry logic', surfox: true, textus: false },
-              { feature: 'Zapier integration', surfox: true, textus: true },
-              { feature: 'Multi-tenant support', surfox: true, textus: true },
-              { feature: 'Daily send cap management', surfox: true, textus: true }
-            ].map((item, index) => (
+            {featureSets[activeFeatureSet].features.map((item, index) => (
               <div key={index} className="grid grid-cols-12 border-b border-slate-700/30 hover:bg-slate-700/20 transition-colors">
                 <div className="col-span-6 p-4">
-                  <span className="text-slate-300">{item.feature}</span>
+                  <span className="text-slate-300">{item.name}</span>
                 </div>
                 <div className="col-span-3 p-4 text-center border-l border-slate-700/30">
-                  {item.surfox ? (
-                    <div className="flex items-center justify-center">
-                      <Check className="w-5 h-5 text-emerald-400" />
-                      <span className="ml-2 text-emerald-400 font-medium">Yes</span>
-                    </div>
-                  ) : (
-                    <div className="flex items-center justify-center">
-                      <X className="w-5 h-5 text-red-400" />
-                      <span className="ml-2 text-red-400">No</span>
-                    </div>
-                  )}
+                  <div className="flex items-center justify-center">
+                    <Check className="w-5 h-5 text-emerald-400" />
+                    <span className="ml-2 text-emerald-400 font-medium">Yes</span>
+                  </div>
                 </div>
                 <div className="col-span-3 p-4 text-center border-l border-slate-700/30">
-                  {item.textus ? (
-                    <div className="flex items-center justify-center">
-                      <Check className="w-5 h-5 text-emerald-400" />
-                      <span className="ml-2 text-emerald-400 font-medium">Yes</span>
-                    </div>
-                  ) : (
-                    <div className="flex items-center justify-center">
-                      <X className="w-5 h-5 text-red-400" />
-                      <span className="ml-2 text-red-400">No</span>
-                    </div>
-                  )}
+                  <div className="flex items-center justify-center">
+                    <X className="w-5 h-5 text-red-400" />
+                    <span className="ml-2 text-red-400">No</span>
+                  </div>
                 </div>
               </div>
             ))}
