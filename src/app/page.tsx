@@ -2,25 +2,27 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Play, Check, X, Brain, MessageSquare, Target, Menu, User, ChevronRight, Phone, Mail, Zap, Activity, Shield, Eye, TrendingUp, BarChart3, Clock, ArrowRight, Star, Building, Users, Cpu, Database } from 'lucide-react'
+import { Play, Check, X, Brain, MessageSquare, Target, Menu, User, ChevronRight, Phone, Mail, Zap, Activity, Shield, Eye, TrendingUp, BarChart3, Clock, ArrowRight, Building, Users, Cpu, Database } from 'lucide-react'
 
 const SurFoxHomepage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeTab, setActiveTab] = useState('signals')
 
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div className="min-h-screen bg-slate-50 font-sans">
       {/* Navigation */}
-      <nav className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+      <nav className="bg-slate-100/95 backdrop-blur-sm border-b border-slate-300 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center h-16">
-            <div className="text-2xl font-bold text-gray-900">SurFox</div>
+            <div className="flex items-center">
+              <img src="/logo.png" alt="SurFox" className="h-8 w-auto" />
+            </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-gray-900 font-medium">Home</Link>
-              <Link href="/about-the-founder" className="text-gray-700 hover:text-gray-900 font-medium">About Tom</Link>
-              <Link href="/how-it-works" className="text-gray-700 hover:text-gray-900 font-medium">How It Works</Link>
-              <Link href="/pricing" className="text-gray-700 hover:text-gray-900 font-medium">Pricing</Link>
+              <Link href="/" className="text-slate-700 hover:text-slate-900 font-medium">Home</Link>
+              <Link href="/about-the-founder" className="text-slate-700 hover:text-slate-900 font-medium">About Tom</Link>
+              <Link href="/how-it-works" className="text-slate-700 hover:text-slate-900 font-medium">How It Works</Link>
+              <Link href="/pricing" className="text-slate-700 hover:text-slate-900 font-medium">Pricing</Link>
               <a href="#start" className="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-medium">
                 Get Started
               </a>
@@ -29,7 +31,7 @@ const SurFoxHomepage = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-600 hover:text-gray-900"
+                className="text-slate-600 hover:text-slate-900"
               >
                 <Menu className="w-6 h-6" />
               </button>
@@ -37,12 +39,12 @@ const SurFoxHomepage = () => {
           </div>
 
           {isMenuOpen && (
-            <div className="md:hidden py-4 border-t border-gray-200">
+            <div className="md:hidden py-4 border-t border-slate-300">
               <div className="space-y-3">
-                <Link href="/" className="block text-gray-700 font-medium">Home</Link>
-                <Link href="/about-the-founder" className="block text-gray-700 font-medium">About Tom</Link>
-                <Link href="/how-it-works" className="block text-gray-700 font-medium">How It Works</Link>
-                <Link href="/pricing" className="block text-gray-700 font-medium">Pricing</Link>
+                <Link href="/" className="block text-slate-700 font-medium">Home</Link>
+                <Link href="/about-the-founder" className="block text-slate-700 font-medium">About Tom</Link>
+                <Link href="/how-it-works" className="block text-slate-700 font-medium">How It Works</Link>
+                <Link href="/pricing" className="block text-slate-700 font-medium">Pricing</Link>
                 <a href="#start" className="block bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium">
                   Get Started
                 </a>
@@ -53,23 +55,23 @@ const SurFoxHomepage = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-20 bg-gradient-to-b from-slate-100 to-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
             <div className="mb-8">
-              <span className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-sm font-medium">
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 border border-blue-300 text-sm font-medium">
                 <Activity className="w-4 h-4 mr-2" />
                 Built by a 20-year sales veteran who was tired of losing good prospects
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-8 leading-tight">
               I spent 20 years watching good prospects slip away.
               <br />
               <span className="text-blue-600">So I built something to catch them.</span>
             </h1>
             
-            <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-xl text-slate-700 mb-10 leading-relaxed max-w-4xl mx-auto">
               Every business has leads that went cold. What if there was a way to know exactly which ones 
               are worth pursuing again? That's SurFox — the first AI platform built specifically to revive 
               dormant prospects using behavioral psychology and conversation intelligence.
@@ -80,30 +82,30 @@ const SurFoxHomepage = () => {
                 <Play className="w-5 h-5 mr-3" />
                 Watch Tom's Story (3 min)
               </button>
-              <a href="#how-it-works" className="border border-gray-300 text-gray-700 px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-sm hover:shadow-md">
+              <a href="#how-it-works" className="border border-slate-400 text-slate-700 px-8 py-4 rounded-xl hover:bg-slate-100 transition-colors font-semibold text-lg shadow-sm hover:shadow-md">
                 See How It Works
               </a>
             </div>
 
             {/* Video section with more context */}
             <div className="max-w-3xl mx-auto">
-              <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-lg">
+              <div className="bg-white rounded-2xl border border-slate-300 p-8 shadow-lg">
                 <div className="text-center mb-6">
-                  <p className="text-gray-600 text-base mb-4">
+                  <p className="text-slate-600 text-base mb-4">
                     "After two decades in sales, I was tired of watching perfectly good prospects go to competitors 
                     just because we gave up too early. So I built SurFox."
                   </p>
                 </div>
-                <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-8">
+                <div className="relative bg-gradient-to-br from-slate-200 to-slate-300 rounded-xl p-8">
                   <div className="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <User className="w-12 h-12 text-blue-600" />
                   </div>
                   <div className="absolute top-4 right-4 flex items-center space-x-2">
                     <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                    <span className="text-xs text-gray-600">LIVE</span>
+                    <span className="text-xs text-slate-600">LIVE</span>
                   </div>
                 </div>
-                <p className="text-gray-500 text-sm mt-4 text-center">
+                <p className="text-slate-500 text-sm mt-4 text-center">
                   Tom Rodriguez, Founder & CEO • Former VP of Sales at three successful exits
                 </p>
               </div>
@@ -116,16 +118,16 @@ const SurFoxHomepage = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">
               Here's the uncomfortable truth about cold leads
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-slate-600 leading-relaxed">
               Most sales teams give up too early. But some of those "dead" leads are actually just waiting for the right moment. 
               The challenge is knowing which ones — and when to reach out.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div className="bg-red-50 border border-red-200 rounded-xl p-8">
               <div className="flex items-center mb-6">
                 <X className="w-8 h-8 text-red-600 mr-3" />
@@ -186,83 +188,60 @@ const SurFoxHomepage = () => {
                 <li className="flex items-start">
                   <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
                   <div>
-                    <strong>Only alerts you when it matters</strong> — 94% accuracy on "hot lead" predictions
+                    <strong>Only alerts you when it matters</strong> — Focus on quality, not quantity
                   </div>
                 </li>
               </ul>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="bg-gray-50 rounded-xl p-8">
-            <h3 className="text-center text-lg font-semibold text-gray-900 mb-8">The numbers tell the story:</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">67%</div>
-                <div className="text-sm text-gray-600">of "dead" leads are actually just poorly timed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">5.2x</div>
-                <div className="text-sm text-gray-600">higher conversion with behavioral timing</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">94%</div>
-                <div className="text-sm text-gray-600">accuracy on hot lead predictions</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">$2.3M</div>
-                <div className="text-sm text-gray-600">revenue recovered from "dead" leads (avg customer)</div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* How It Works - Detailed */}
-      <section id="how-it-works" className="py-20 bg-gray-50">
+      <section id="how-it-works" className="py-20 bg-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">
               How SurFox actually works
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               It's simpler than you think, but more sophisticated than anything else on the market. 
-              Here's the step-by-step process that's helping companies recover millions in lost revenue.
+              Here's the step-by-step process behind the technology.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-xl border border-gray-200 p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl border border-slate-300 p-8 text-center shadow-sm hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
                 <Database className="w-8 h-8 text-blue-600" />
               </div>
               <div className="text-3xl font-bold text-blue-600 mb-2">1</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Upload & Analyze</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Upload & Analyze</h3>
+              <p className="text-slate-600 leading-relaxed">
                 Import your cold leads from any CRM or spreadsheet. Our AI immediately begins analyzing 
                 historical interaction patterns, response timing, and behavioral indicators.
               </p>
             </div>
             
-            <div className="bg-white rounded-xl border border-gray-200 p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl border border-slate-300 p-8 text-center shadow-sm hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
                 <Brain className="w-8 h-8 text-blue-600" />
               </div>
               <div className="text-3xl font-bold text-blue-600 mb-2">2</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">AI Conversation Engine</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">AI Conversation Engine</h3>
+              <p className="text-slate-600 leading-relaxed">
                 SurFox starts natural, personalized conversations. Each message is crafted based on the prospect's 
                 industry, previous interactions, and psychological profile.
               </p>
             </div>
             
-            <div className="bg-white rounded-xl border border-gray-200 p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white rounded-xl border border-slate-300 p-8 text-center shadow-sm hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
                 <Target className="w-8 h-8 text-blue-600" />
               </div>
               <div className="text-3xl font-bold text-blue-600 mb-2">3</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Signal Detection & Alert</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Signal Detection & Alert</h3>
+              <p className="text-slate-600 leading-relaxed">
                 When someone shows genuine buying interest, you get an instant alert with full context. 
                 No more sorting through "maybe later" responses.
               </p>
@@ -270,11 +249,11 @@ const SurFoxHomepage = () => {
           </div>
 
           {/* Interactive Demo */}
-          <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
-            <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">See the AI in Action</h3>
+          <div className="bg-white rounded-xl border border-slate-300 p-8 shadow-sm">
+            <h3 className="text-2xl font-bold text-center text-slate-900 mb-8">See the AI in Action</h3>
             
             <div className="flex justify-center mb-6">
-              <div className="bg-gray-100 rounded-lg p-1">
+              <div className="bg-slate-200 rounded-lg p-1">
                 {[
                   { id: 'signals', label: 'Signal Detection', icon: Activity },
                   { id: 'conversation', label: 'Conversation Flow', icon: MessageSquare },
@@ -286,7 +265,7 @@ const SurFoxHomepage = () => {
                     className={`px-6 py-3 rounded-md text-sm font-medium transition-all flex items-center ${
                       activeTab === tab.id
                         ? 'bg-blue-600 text-white shadow-sm'
-                        : 'text-gray-600 hover:text-gray-900'
+                        : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
                     <tab.icon className="w-4 h-4 mr-2" />
@@ -299,36 +278,36 @@ const SurFoxHomepage = () => {
             <div className="min-h-[300px]">
               {activeTab === 'signals' && (
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div className="bg-gray-50 rounded-lg p-6">
-                    <h4 className="font-bold text-gray-900 mb-4">Incoming Message</h4>
-                    <div className="bg-white rounded p-4 mb-4 text-gray-800 border">
+                  <div className="bg-slate-50 rounded-lg p-6">
+                    <h4 className="font-bold text-slate-900 mb-4">Incoming Message</h4>
+                    <div className="bg-white rounded p-4 mb-4 text-slate-800 border border-slate-200">
                       "Hey, I've been thinking about what you sent last month. My situation has changed and I might be ready to move forward. When would be a good time to chat?"
                     </div>
-                    <div className="text-sm text-gray-600">Analyzing behavioral signals...</div>
+                    <div className="text-sm text-slate-600">Analyzing behavioral signals...</div>
                   </div>
-                  <div className="bg-gray-50 rounded-lg p-6">
-                    <h4 className="font-bold text-gray-900 mb-4">AI Signal Analysis</h4>
+                  <div className="bg-slate-50 rounded-lg p-6">
+                    <h4 className="font-bold text-slate-900 mb-4">AI Signal Analysis</h4>
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Timeline Urgency</span>
+                        <span className="text-sm text-slate-700">Timeline Urgency</span>
                         <span className="text-green-600 font-bold">HIGH</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Decision Authority</span>
+                        <span className="text-sm text-slate-700">Decision Authority</span>
                         <span className="text-green-600 font-bold">CONFIRMED</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Pain Point Reference</span>
+                        <span className="text-sm text-slate-700">Pain Point Reference</span>
                         <span className="text-yellow-600 font-bold">DETECTED</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Commitment Language</span>
+                        <span className="text-sm text-slate-700">Commitment Language</span>
                         <span className="text-green-600 font-bold">STRONG</span>
                       </div>
-                      <div className="border-t border-gray-300 pt-3 mt-4">
+                      <div className="border-t border-slate-300 pt-3 mt-4">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-green-600">96%</div>
-                          <div className="text-xs text-gray-600">HOT LEAD CONFIDENCE</div>
+                          <div className="text-xs text-slate-600">HOT LEAD CONFIDENCE</div>
                         </div>
                       </div>
                     </div>
@@ -349,7 +328,7 @@ const SurFoxHomepage = () => {
                         <div className={`max-w-sm rounded-xl p-4 ${
                           msg.sender === 'AI' 
                             ? 'bg-blue-100 text-blue-900' 
-                            : 'bg-gray-200 text-gray-900'
+                            : 'bg-slate-200 text-slate-900'
                         }`}>
                           <div className="text-sm leading-relaxed">{msg.message}</div>
                           <div className="text-xs opacity-70 mt-2">{msg.time}</div>
@@ -368,29 +347,29 @@ const SurFoxHomepage = () => {
 
               {activeTab === 'prediction' && (
                 <div className="grid md:grid-cols-3 gap-6">
-                  <div className="bg-gray-50 rounded-lg p-6 text-center">
+                  <div className="bg-slate-50 rounded-lg p-6 text-center">
                     <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Target className="w-6 h-6 text-green-600" />
                     </div>
-                    <div className="text-3xl font-bold text-green-600 mb-2">96%</div>
-                    <div className="text-sm text-gray-600 font-medium">Likelihood to Close</div>
-                    <div className="text-xs text-gray-500 mt-2">Based on 14 positive signals</div>
+                    <div className="text-3xl font-bold text-green-600 mb-2">High</div>
+                    <div className="text-sm text-slate-600 font-medium">Interest Level</div>
+                    <div className="text-xs text-slate-500 mt-2">Based on multiple positive signals</div>
                   </div>
-                  <div className="bg-gray-50 rounded-lg p-6 text-center">
+                  <div className="bg-slate-50 rounded-lg p-6 text-center">
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Clock className="w-6 h-6 text-blue-600" />
                     </div>
-                    <div className="text-3xl font-bold text-blue-600 mb-2">5-7</div>
-                    <div className="text-sm text-gray-600 font-medium">Days to Close</div>
-                    <div className="text-xs text-gray-500 mt-2">High urgency detected</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">Now</div>
+                    <div className="text-sm text-slate-600 font-medium">Best Contact Time</div>
+                    <div className="text-xs text-slate-500 mt-2">Urgency indicators detected</div>
                   </div>
-                  <div className="bg-gray-50 rounded-lg p-6 text-center">
+                  <div className="bg-slate-50 rounded-lg p-6 text-center">
                     <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <BarChart3 className="w-6 h-6 text-purple-600" />
                     </div>
-                    <div className="text-3xl font-bold text-purple-600 mb-2">$67K</div>
-                    <div className="text-sm text-gray-600 font-medium">Predicted Deal Size</div>
-                    <div className="text-xs text-gray-500 mt-2">Enterprise buyer signals</div>
+                    <div className="text-3xl font-bold text-purple-600 mb-2">Strong</div>
+                    <div className="text-sm text-slate-600 font-medium">Conversion Likelihood</div>
+                    <div className="text-xs text-slate-500 mt-2">Decision maker signals present</div>
                   </div>
                 </div>
               )}
@@ -403,10 +382,10 @@ const SurFoxHomepage = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">
               Let me be crystal clear about what this is
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
               I built SurFox to solve one specific problem that was costing me millions in lost revenue. 
               It's not trying to be everything to everyone — it's laser-focused on one thing: 
               intelligently reviving cold prospects.
@@ -486,13 +465,13 @@ const SurFoxHomepage = () => {
       </section>
 
       {/* Industry Applications */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Works across every industry
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">
+              Built for every industry
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Cold leads are a universal problem. SurFox adapts to your industry's unique buying patterns and terminology.
             </p>
           </div>
@@ -503,47 +482,47 @@ const SurFoxHomepage = () => {
                 icon: Building, 
                 title: 'Real Estate', 
                 desc: 'Reactivate buyers who went cold. Know when they\'re ready to tour again.',
-                results: '340% increase in showings'
+                use_case: 'Perfect for agents with large prospect databases'
               },
               { 
                 icon: Cpu, 
                 title: 'SaaS & Technology', 
                 desc: 'Identify enterprise buyers showing implementation signals.',
-                results: '280% larger average deal size'
+                use_case: 'Ideal for B2B software sales teams'
               },
               { 
                 icon: Users, 
                 title: 'Professional Services', 
                 desc: 'Reconnect with prospects when their project timing aligns.',
-                results: '156% higher conversion rate'
+                use_case: 'Great for consultants and agencies'
               },
               { 
                 icon: TrendingUp, 
                 title: 'Financial Services', 
                 desc: 'Detect when prospects are ready for loans, investments, or insurance.',
-                results: '89% qualification accuracy'
+                use_case: 'Essential for financial advisors'
               },
               { 
                 icon: Shield, 
                 title: 'Healthcare', 
                 desc: 'Re-engage patients for elective procedures and consultations.',
-                results: '67% faster appointment booking'
+                use_case: 'Valuable for private practice marketing'
               },
               { 
                 icon: Target, 
                 title: 'Manufacturing', 
                 desc: 'Revive B2B prospects when their procurement cycles restart.',
-                results: '2.1x faster sales cycles'
+                use_case: 'Perfect for industrial sales teams'
               }
             ].map((industry, index) => (
-              <div key={index} className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
+              <div key={index} className="bg-white rounded-xl border border-slate-300 p-6 hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <industry.icon className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{industry.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">{industry.desc}</p>
-                <div className="text-sm text-green-600 font-medium">
-                  ✓ {industry.results}
+                <h3 className="text-lg font-bold text-slate-900 mb-3">{industry.title}</h3>
+                <p className="text-slate-600 mb-4 leading-relaxed">{industry.desc}</p>
+                <div className="text-sm text-blue-600 font-medium">
+                  {industry.use_case}
                 </div>
               </div>
             ))}
@@ -551,109 +530,22 @@ const SurFoxHomepage = () => {
         </div>
       </section>
 
-      {/* Results & Testimonials */}
+      {/* Pricing */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What people are actually saying
-            </h2>
-            <p className="text-xl text-gray-600">
-              Real results from real customers across different industries.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic leading-relaxed">
-                "I had 500 cold leads sitting in my CRM for over a year. SurFox helped me identify 23 that were actually worth pursuing. 
-                Closed 8 of them in the first month, representing $340K in commission."
-              </p>
-              <div className="text-sm">
-                <div className="font-bold text-gray-900">Sarah Chen</div>
-                <div className="text-gray-500">Commercial Real Estate • Los Angeles</div>
-              </div>
-            </div>
-            
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic leading-relaxed">
-                "Finally, something that doesn't feel like spam. The conversations SurFox creates actually sound human. 
-                My response rates went up 300% and I'm closing deals I thought were dead."
-              </p>
-              <div className="text-sm">
-                <div className="font-bold text-gray-900">Mike Torres</div>
-                <div className="text-gray-500">Enterprise Software Sales • Austin</div>
-              </div>
-            </div>
-
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <div className="flex items-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic leading-relaxed">
-                "We recovered $1.2M in revenue from leads we'd written off as dead. The AI's ability to detect buying signals 
-                is honestly scary accurate. ROI paid for itself in 3 weeks."
-              </p>
-              <div className="text-sm">
-                <div className="font-bold text-gray-900">Jennifer Park</div>
-                <div className="text-gray-500">VP of Sales • Healthcare Tech</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Results Summary */}
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-8">
-            <h3 className="text-center text-xl font-bold text-blue-900 mb-8">Average Customer Results (First 90 Days)</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">$2.3M</div>
-                <div className="text-sm text-blue-700">Revenue recovered from "dead" leads</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">340%</div>
-                <div className="text-sm text-blue-700">Increase in prospect response rates</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">67%</div>
-                <div className="text-sm text-blue-700">Reduction in sales cycle length</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">5.2x</div>
-                <div className="text-sm text-blue-700">ROI in first quarter</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">
               Try it risk-free for 14 days
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-slate-600">
               No contracts. No setup fees. See if it works for your business before you pay a dime.
             </p>
           </div>
           
-          <div className="max-w-lg mx-auto bg-white border border-gray-200 rounded-xl p-8 text-center shadow-sm">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">SurFox Professional</h3>
-            <div className="text-4xl font-bold text-gray-900 mb-2">$197<span className="text-lg text-gray-500">/month</span></div>
-            <p className="text-gray-600 mb-8">
+          <div className="max-w-lg mx-auto bg-white border border-slate-300 rounded-xl p-8 text-center shadow-sm">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">SurFox Professional</h3>
+            <div className="text-4xl font-bold text-slate-900 mb-2">$197<span className="text-lg text-slate-500">/month</span></div>
+            <p className="text-slate-600 mb-8">
               Everything you need to revive cold leads and grow revenue
             </p>
             
@@ -680,20 +572,20 @@ const SurFoxHomepage = () => {
               </li>
               <li className="flex items-center">
                 <Check className="w-5 h-5 text-green-600 mr-3" />
-                <span>Dedicated customer success manager</span>
+                <span>Email and chat support</span>
               </li>
             </ul>
             
             <a href="#start" className="w-full bg-blue-600 text-white px-6 py-4 rounded-xl hover:bg-blue-700 transition-colors font-semibold text-lg block shadow-lg hover:shadow-xl">
               Start Free Trial
             </a>
-            <p className="text-sm text-gray-500 mt-4">
+            <p className="text-sm text-slate-500 mt-4">
               No credit card required • Cancel anytime • Setup takes 10 minutes
             </p>
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">
+            <p className="text-slate-600 mb-4">
               Need higher volume or enterprise features?
             </p>
             <Link href="/enterprise" className="text-blue-600 hover:text-blue-700 font-medium">
@@ -715,7 +607,7 @@ const SurFoxHomepage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-            <a href="/signup" className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+            <a href="/signup" className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-slate-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
               Start Free Trial
             </a>
             <Link href="/about-the-founder" className="border-2 border-blue-300 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-colors font-semibold text-lg">
@@ -740,18 +632,20 @@ const SurFoxHomepage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-slate-800 text-white py-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="text-xl font-bold mb-4">SurFox</div>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <div className="mb-4">
+                <img src="/logo.png" alt="SurFox" className="h-8 w-auto brightness-0 invert" />
+              </div>
+              <p className="text-slate-400 text-sm leading-relaxed">
                 The first AI platform built specifically to revive cold leads using behavioral psychology and conversation intelligence.
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-slate-400">
                 <li><Link href="/how-it-works" className="hover:text-white">How It Works</Link></li>
                 <li><Link href="/pricing" className="hover:text-white">Pricing</Link></li>
                 <li><Link href="/integrations" className="hover:text-white">Integrations</Link></li>
@@ -760,7 +654,7 @@ const SurFoxHomepage = () => {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-slate-400">
                 <li><Link href="/about-the-founder" className="hover:text-white">About Tom</Link></li>
                 <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
                 <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
@@ -769,7 +663,7 @@ const SurFoxHomepage = () => {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-slate-400">
                 <li><Link href="/help" className="hover:text-white">Help Center</Link></li>
                 <li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="hover:text-white">Terms of Service</Link></li>
@@ -777,7 +671,7 @@ const SurFoxHomepage = () => {
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+          <div className="border-t border-slate-700 pt-8 text-center text-slate-400 text-sm">
             <p>© 2024 SurFox. Built by salespeople who got tired of losing good prospects.</p>
           </div>
         </div>
