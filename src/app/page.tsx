@@ -2,60 +2,16 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Play, Check, X, Brain, MessageSquare, Target, Menu, User, ChevronRight, Phone, Mail, Zap, Activity, Shield, Eye, TrendingUp, BarChart3, Clock, ArrowRight, Building, Users, Cpu, Database } from 'lucide-react'
+import { Play, Check, X, Brain, MessageSquare, Target, User, ChevronRight, Phone, Mail, Zap, Activity, Shield, Eye, TrendingUp, BarChart3, Clock, ArrowRight, Building, Users, Cpu, Database } from 'lucide-react'
 
 const SurFoxHomepage = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeTab, setActiveTab] = useState('signals')
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans">
-      {/* Navigation */}
-      <nav className="bg-slate-100/95 backdrop-blur-sm border-b border-slate-300 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <img src="/logo.png" alt="SurFox" className="h-8 w-auto" />
-            </div>
-            
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-slate-700 hover:text-slate-900 font-medium">Home</Link>
-              <Link href="/about-the-founder" className="text-slate-700 hover:text-slate-900 font-medium">About Tom</Link>
-              <Link href="/how-it-works" className="text-slate-700 hover:text-slate-900 font-medium">How It Works</Link>
-              <Link href="/pricing" className="text-slate-700 hover:text-slate-900 font-medium">Pricing</Link>
-              <a href="#start" className="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                Get Started
-              </a>
-            </div>
-
-            <div className="md:hidden">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-slate-600 hover:text-slate-900"
-              >
-                <Menu className="w-6 h-6" />
-              </button>
-            </div>
-          </div>
-
-          {isMenuOpen && (
-            <div className="md:hidden py-4 border-t border-slate-300">
-              <div className="space-y-3">
-                <Link href="/" className="block text-slate-700 font-medium">Home</Link>
-                <Link href="/about-the-founder" className="block text-slate-700 font-medium">About Tom</Link>
-                <Link href="/how-it-works" className="block text-slate-700 font-medium">How It Works</Link>
-                <Link href="/pricing" className="block text-slate-700 font-medium">Pricing</Link>
-                <a href="#start" className="block bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium">
-                  Get Started
-                </a>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
+    <div className="min-h-screen bg-slate-50 font-sans">{/* Using global nav from layout.tsx */}
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-100 to-slate-200">
+      <section className="py-20 pt-32 bg-gradient-to-b from-slate-100 to-slate-200">{/* Added pt-32 for nav spacing */}
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
             <div className="mb-8">
@@ -78,7 +34,7 @@ const SurFoxHomepage = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-colors font-semibold text-lg flex items-center justify-center shadow-lg hover:shadow-xl">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-purple-500/25 transition-all font-semibold text-lg flex items-center justify-center">
                 <Play className="w-5 h-5 mr-3" />
                 Watch Tom's Story (3 min)
               </button>
@@ -651,7 +607,7 @@ const SurFoxHomepage = () => {
                 </li>
               </ul>
               
-              <a href="#start" className="w-full bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-colors font-semibold shadow-lg hover:shadow-xl">
+              <a href="#start" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:shadow-lg hover:shadow-purple-500/25 transition-all font-semibold shadow-lg">
                 Start Free Trial
               </a>
             </div>
@@ -731,7 +687,7 @@ const SurFoxHomepage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-            <a href="/signup" className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-slate-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+            <a href="/signup" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-purple-500/25 transition-all font-semibold text-lg">
               Start Free Trial
             </a>
             <Link href="/about-the-founder" className="border-2 border-blue-300 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition-colors font-semibold text-lg">
@@ -754,52 +710,7 @@ const SurFoxHomepage = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-800 text-white py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="mb-4">
-                <img src="/logo.png" alt="SurFox" className="h-8 w-auto brightness-0 invert" />
-              </div>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                The first AI platform built specifically to revive cold leads using behavioral psychology and conversation intelligence.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li><Link href="/how-it-works" className="hover:text-white">How It Works</Link></li>
-                <li><Link href="/pricing" className="hover:text-white">Pricing</Link></li>
-                <li><Link href="/integrations" className="hover:text-white">Integrations</Link></li>
-                <li><Link href="/enterprise" className="hover:text-white">Enterprise</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li><Link href="/about-the-founder" className="hover:text-white">About Tom</Link></li>
-                <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-                <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
-                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
-                <li><Link href="/help" className="hover:text-white">Help Center</Link></li>
-                <li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-white">Terms of Service</Link></li>
-                <li><Link href="/security" className="hover:text-white">Security</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-slate-700 pt-8 text-center text-slate-400 text-sm">
-            <p>© 2024 SurFox. Built by salespeople who got tired of losing good prospects.</p>
-          </div>
-        </div>
-      </footer>
+      {/* Using global footer from layout.tsx */}
     </div>
   )
 }
