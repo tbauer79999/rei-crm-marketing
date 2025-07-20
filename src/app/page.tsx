@@ -1,7 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import { ArrowRight, Play, Check, X, Brain, MessageSquare, Target, Shield, Menu, User, ChevronRight } from 'lucide-react'
+import Link from 'next/link'
+import { Play, Check, X, Brain, MessageSquare, Target, Menu, User, ChevronRight } from 'lucide-react'
 
 const SurFoxHomepage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,8 +19,8 @@ const SurFoxHomepage = () => {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-gray-900 font-medium">Home</a>
-              <a href="/about-the-founder" className="text-gray-600 hover:text-gray-900 transition-colors">About the Founder</a>
+              <Link href="/" className="text-gray-900 font-medium">Home</Link>
+              <Link href="/about-the-founder" className="text-gray-600 hover:text-gray-900 transition-colors">About the Founder</Link>
               <a href="#try-free" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                 Try for Free
               </a>
@@ -40,8 +41,8 @@ const SurFoxHomepage = () => {
           {isMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-100">
               <div className="space-y-3">
-                <a href="/" className="block text-gray-900 font-medium">Home</a>
-                <a href="/about-the-founder" className="block text-gray-600 hover:text-gray-900">About the Founder</a>
+                <Link href="/" className="block text-gray-900 font-medium">Home</Link>
+                <Link href="/about-the-founder" className="block text-gray-600 hover:text-gray-900">About the Founder</Link>
                 <a href="#try-free" className="block bg-blue-600 text-white px-4 py-2 rounded-lg text-center">
                   Try for Free
                 </a>
@@ -327,10 +328,10 @@ const SurFoxHomepage = () => {
             <a href="/signup" className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all text-lg">
               Start Free Trial
             </a>
-            <a href="/about-the-founder" className="border border-gray-400 text-gray-200 px-8 py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all text-lg inline-flex items-center">
+            <Link href="/about-the-founder" className="border border-gray-400 text-gray-200 px-8 py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all text-lg inline-flex items-center">
               About the Founder
               <ChevronRight className="w-5 h-5 ml-2" />
-            </a>
+            </Link>
           </div>
           
           <div className="mt-8 text-sm text-gray-400">
@@ -348,9 +349,9 @@ const SurFoxHomepage = () => {
               Built by salespeople who got tired of chasing unqualified leads.
             </p>
             <div className="flex justify-center space-x-6 text-sm text-gray-500">
-              <a href="/privacy" className="hover:text-gray-700">Privacy</a>
-              <a href="/terms" className="hover:text-gray-700">Terms</a>
-              <a href="/contact" className="hover:text-gray-700">Contact</a>
+              <Link href="/privacy" className="hover:text-gray-700">Privacy</Link>
+              <Link href="/terms" className="hover:text-gray-700">Terms</Link>
+              <Link href="/contact" className="hover:text-gray-700">Contact</Link>
             </div>
           </div>
         </div>
