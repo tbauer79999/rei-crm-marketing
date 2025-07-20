@@ -1,1189 +1,310 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Menu, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, Eye, MessageSquare, Clock, Lightbulb, Activity, Phone, Mail, Building, Home, ShoppingCart, Heart, Briefcase, GraduationCap } from 'lucide-react'
+import React, { useState } from 'react'
+import { ArrowRight, Play, Check, X, Brain, MessageSquare, Target, Shield, Menu, User, ChevronRight } from 'lucide-react'
 
-const SurFoxRevolution = () => {
-  const [activeSignal, setActiveSignal] = useState(0)
-  const [activeTab, setActiveTab] = useState('real-time')
-  const [activeFaq, setActiveFaq] = useState(-1)
-  const [isLoading, setIsLoading] = useState(true)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-
-  // Mouse tracking for subtle parallax effects
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
-
-  // Loading screen
-  useEffect(() => {
-    setTimeout(() => setIsLoading(false), 2000)
-  }, [])
-
-  // Auto-cycle through signals
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveSignal((prev) => (prev + 1) % 6)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
-
-  if (isLoading) {
-    return (
-      <div className="fixed inset-0 bg-gray-900 z-50 flex items-center justify-center">
-        <div className="relative">
-          <div className="w-16 h-16 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-          <div className="absolute inset-0 w-16 h-16 border-2 border-transparent border-r-purple-500 rounded-full animate-spin" style={{ animationDelay: '0.5s', animationDirection: 'reverse' }}></div>
-        </div>
-      </div>
-    )
-  }
-
-  const signals = [
-    { label: 'Response Speed', value: '94ms avg', color: 'text-blue-600' },
-    { label: 'Question Patterns', value: '12 detected', color: 'text-emerald-600' },
-    { label: 'Urgency Indicators', value: 'High', color: 'text-red-500' },
-    { label: 'Pain Point Mentions', value: '3 identified', color: 'text-purple-600' },
-    { label: 'Budget Signals', value: 'Confirmed', color: 'text-amber-600' },
-    { label: 'Decision Timeline', value: 'Q1 2025', color: 'text-pink-600' }
-  ]
+const SurFoxHomepage = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 overflow-x-hidden">
-      
-      {/* Hero Section - Category Creation */}
-      <section className="min-h-screen relative flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"></div>
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center">
+              <div className="text-xl font-bold text-gray-900">SurFox</div>
+            </div>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              <a href="/" className="text-gray-900 font-medium">Home</a>
+              <a href="/about-the-founder" className="text-gray-600 hover:text-gray-900 transition-colors">About the Founder</a>
+              <a href="#try-free" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                Try for Free
+              </a>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-gray-600 hover:text-gray-900"
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="md:hidden py-4 border-t border-gray-100">
+              <div className="space-y-3">
+                <a href="/" className="block text-gray-900 font-medium">Home</a>
+                <a href="/about-the-founder" className="block text-gray-600 hover:text-gray-900">About the Founder</a>
+                <a href="#try-free" className="block bg-blue-600 text-white px-4 py-2 rounded-lg text-center">
+                  Try for Free
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-blue-50"></div>
         
-        {/* Dynamic Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div 
-            className="absolute w-96 h-96 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-3xl animate-pulse" 
-            style={{ 
-              top: '10%', 
-              right: '10%',
-              transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`
-            }}
-          ></div>
-          <div 
-            className="absolute w-96 h-96 bg-gradient-to-r from-purple-600/15 to-pink-600/15 rounded-full blur-3xl animate-pulse" 
-            style={{ 
-              bottom: '20%', 
-              left: '10%', 
-              animationDelay: '1s',
-              transform: `translate(${mousePosition.x * -0.02}px, ${mousePosition.y * -0.02}px)`
-            }}
-          ></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 mt-16">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7">
-              {/* Category Badge */}
-              <div className="mb-8">
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 border border-blue-200">
-                  <Lightbulb className="w-4 h-4 mr-2" />
-                  Introducing Messaging Intelligence™
-                </span>
-              </div>
-              
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-8">
-                <span className="text-gray-900">Beyond Mass Texting.</span>
-                <br />
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  True Conversation AI.
-                </span>
-              </h1>
-              
-              <div className="bg-white/80 border border-gray-200 rounded-xl p-6 mb-8 shadow-sm">
-                <p className="text-xl text-gray-800 mb-4 leading-relaxed">
-                  <strong className="text-blue-600">50+ behavioral signals</strong> analyzed in real-time. 
-                  <strong className="text-purple-600"> Perfect timing</strong> based on buyer psychology. 
-                  <strong className="text-emerald-600"> Human-level conversations</strong> that actually convert.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  While others blast generic messages, SurFox reads minds and starts conversations that matter.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <a href="#" className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all flex items-center justify-center text-lg">
-                  Experience the Future
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-                <a href="#intelligence" className="group border border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all flex items-center justify-center text-lg">
-                  <Eye className="mr-2 w-5 h-5" />
-                  See It In Action
-                </a>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-sm">
-                <div className="flex items-center text-gray-600">
-                  <Shield className="w-4 h-4 text-emerald-500 mr-2" />
-                  Chrome Extension
-                </div>
-                <div className="flex items-center text-gray-600">
-                  <Brain className="w-4 h-4 text-emerald-500 mr-2" />
-                  Self-Learning AI
-                </div>
-                <div className="flex items-center text-gray-600">
-                  <Award className="w-4 h-4 text-emerald-500 mr-2" />
-                  99.9% Uptime
-                </div>
-              </div>
-              
-              <div className="text-sm text-gray-600 mt-6">
-                Used across <strong className="text-gray-900">Real Estate • SaaS • E-commerce • Healthcare • Finance</strong> and more
-              </div>
-            </div>
-            
-            {/* Live Signal Analysis Dashboard */}
-            <div className="lg:col-span-5">
-              <div className="relative">
-                <div className="bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200 p-6 shadow-xl">
-                  <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-                      <Activity className="w-5 h-5 mr-2 text-blue-600" />
-                      Live Signal Analysis
-                    </h3>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                      <span className="text-xs text-gray-600">50+ Signals Active</span>
-                    </div>
-                  </div>
-                  
-                  {/* Signal Grid */}
-                  <div className="grid grid-cols-2 gap-3 mb-6">
-                    {signals.map((signal, index) => (
-                      <div 
-                        key={index} 
-                        className={`bg-gray-50 rounded-lg p-3 border transition-all ${
-                          activeSignal === index 
-                            ? 'border-blue-300 bg-blue-50' 
-                            : 'border-gray-200'
-                        }`}
-                      >
-                        <div className="text-xs text-gray-600 mb-1">{signal.label}</div>
-                        <div className={`text-sm font-bold ${signal.color}`}>{signal.value}</div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  {/* Active Leads */}
-                  <div className="space-y-3">
-                    {[
-                      { 
-                        company: 'TechFlow Inc', 
-                        contact: 'Sarah M.', 
-                        status: 'Asked about Q1 implementation • Mentioned team size', 
-                        score: 96, 
-                        trend: '+12',
-                        priority: 'high',
-                        signals: ['Budget confirmed', 'Timeline urgent', 'Decision maker']
-                      },
-                      { 
-                        company: 'DataVault Systems', 
-                        contact: 'Marcus C.', 
-                        status: 'Requesting security documentation • Ready for demo', 
-                        score: 92, 
-                        trend: '+8',
-                        priority: 'high',
-                        signals: ['Security questions', 'Demo interest', 'Compliance needs']
-                      }
-                    ].map((lead, index) => (
-                      <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-gray-300 transition-all cursor-pointer">
-                        <div className="flex justify-between items-start mb-2">
-                          <div className="flex-1">
-                            <div className="flex items-center space-x-2 mb-1">
-                              <h4 className="font-semibold text-gray-900 text-sm">{lead.company}</h4>
-                              <div className={`w-2 h-2 rounded-full ${
-                                lead.priority === 'high' ? 'bg-red-500' : 'bg-yellow-500'
-                              }`}></div>
-                            </div>
-                            <p className="text-xs text-gray-600 mb-1">{lead.contact}</p>
-                            <p className="text-xs text-gray-700 mb-2">{lead.status}</p>
-                            <div className="flex flex-wrap gap-1">
-                              {lead.signals.slice(0, 2).map((signal, idx) => (
-                                <span key={idx} className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
-                                  {signal}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                          <div className="text-right">
-                            <div className="text-lg font-bold text-blue-600">{lead.score}%</div>
-                            <div className="text-xs text-emerald-600">↗ {lead.trend}</div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* Floating Accuracy Badge */}
-                <div className="absolute -bottom-6 -right-6 bg-emerald-50 border border-emerald-200 rounded-xl p-4 shadow-xl">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-emerald-600">94%</div>
-                    <div className="text-xs text-emerald-700">Signal Accuracy</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Category Definition */}
-      <section className="bg-gradient-to-b from-white to-gray-100 py-20 px-6 md:px-20 text-gray-900">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
-              <span className="text-gray-600">Mass Texting is Dead.</span>
-              <br />
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Messaging Intelligence is Here.
-              </span>
-            </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto">
-              We didn't build another texting tool. We created the first platform that understands buyer psychology, 
-              reads conversation intent, and knows exactly when prospects are ready to buy.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-red-50 to-red-100 border border-red-200 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-6">
-                <X className="w-6 h-6 text-red-600" />
-              </div>
-              <h3 className="text-xl font-bold text-red-700 mb-4">Old Way: Mass Texting</h3>
-              <ul className="space-y-3 text-red-700">
-                <li>• Spray and pray messaging</li>
-                <li>• Generic templates for everyone</li>
-                <li>• No understanding of buyer intent</li>
-                <li>• You sort through all responses</li>
-                <li>• High volume, low conversion</li>
-                <li>• Feels robotic and spammy</li>
-                <li>• Same message to every lead</li>
-              </ul>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-8 ring-2 ring-blue-200/50">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-blue-700 mb-4">New Way: Messaging Intelligence</h3>
-              <ul className="space-y-3 text-blue-700">
-                <li>• AI reads 50+ behavioral signals</li>
-                <li>• Conversations adapt to each prospect</li>
-                <li>• Perfect timing based on psychology</li>
-                <li>• Only hot leads reach your desk</li>
-                <li>• Smart targeting, high conversion</li>
-                <li>• Natural, human-like interactions</li>
-                <li>• Every message is personalized</li>
-              </ul>
-            </div>
-            
-            <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-emerald-600" />
-              </div>
-              <h3 className="text-xl font-bold text-emerald-700 mb-4">The Result</h3>
-              <ul className="space-y-3 text-emerald-700">
-                <li>• 5.2x higher conversion rates</li>
-                <li>• 67% less time prospecting</li>
-                <li>• Zero spam complaints</li>
-                <li>• Conversations that feel human</li>
-                <li>• ROI visible in 30 days</li>
-                <li>• Qualified leads only</li>
-                <li>• Predictable revenue growth</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Universal Industry Applications */}
-      <section id="industries" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Every Industry. Every Use Case.
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Messaging Intelligence works wherever conversations drive revenue. 
-              From real estate to SaaS, healthcare to e-commerce — if you need to qualify leads, we make it smarter.
-            </p>
-          </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            I Spent 20 Years in Sales.<br />
+            Here's Why I Built SurFox.
+          </h1>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { 
-                icon: Home, 
-                title: 'Real Estate', 
-                desc: 'Qualify buyers instantly. Know who is ready to tour, who is pre-approved, and who is wasting time.',
-                signal: 'Budget confirmed, timeline urgent',
-                metrics: ['3.4x more showings', '67% faster sales']
-              },
-              { 
-                icon: Cpu, 
-                title: 'SaaS & Tech', 
-                desc: 'Identify enterprise buyers. Detect pain points, budget authority, and implementation timelines.',
-                signal: 'Security questions, team size, compliance needs',
-                metrics: ['2.8x larger deals', '94% qualification accuracy']
-              },
-              { 
-                icon: ShoppingCart, 
-                title: 'E-commerce', 
-                desc: 'Re-engage cart abandoners. Personalize offers based on browsing behavior and purchase intent.',
-                signal: 'Price sensitivity, feature interest, return visitor',
-                metrics: ['4.2x recovery rate', '156% AOV increase']
-              },
-              { 
-                icon: Heart, 
-                title: 'Healthcare', 
-                desc: 'Schedule consultations efficiently. Understand urgency levels and insurance coverage.',
-                signal: 'Symptom urgency, insurance status, availability',
-                metrics: ['89% show rate', '45% faster booking']
-              },
-              { 
-                icon: Briefcase, 
-                title: 'Financial Services', 
-                desc: 'Qualify loan applications. Detect credit readiness, income stability, and loan urgency.',
-                signal: 'Credit score mentions, income references, timeline',
-                metrics: ['78% approval rate', '2.1x faster processing']
-              },
-              { 
-                icon: GraduationCap, 
-                title: 'Education', 
-                desc: 'Enroll qualified students. Understand program interest, financial readiness, and start dates.',
-                signal: 'Program questions, financial aid, start timeline',
-                metrics: ['92% enrollment rate', '34% cost reduction']
-              }
-            ].map((industry, index) => (
-              <div key={index} className="bg-gray-50 border border-gray-200 rounded-xl p-6 hover:border-gray-300 transition-all group">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <industry.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{industry.title}</h3>
-                <p className="text-gray-700 text-sm mb-4 leading-relaxed">{industry.desc}</p>
-                <div className="text-xs text-blue-700 bg-blue-100 px-3 py-1 rounded-full mb-3">
-                  🎯 Signals: {industry.signal}
-                </div>
-                <div className="space-y-1">
-                  {industry.metrics.map((metric, idx) => (
-                    <div key={idx} className="text-xs text-emerald-600 flex items-center">
-                      <div className="w-1 h-1 bg-emerald-600 rounded-full mr-2"></div>
-                      {metric}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+          <p className="text-xl sm:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed">
+            Every business has cold leads sitting untouched. SurFox is the first AI platform 
+            built to revive them — intelligently, and automatically.
+          </p>
           
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">
-              Don't see your industry? Messaging Intelligence adapts to any business model.
-            </p>
-            <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">
-              See custom industry implementations →
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <button className="group bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all inline-flex items-center justify-center text-lg">
+              <Play className="w-5 h-5 mr-3" />
+              Watch My Story
+            </button>
+            <a href="#try-free" className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:border-gray-400 hover:bg-gray-50 transition-all text-lg">
+              Try SurFox Free
             </a>
           </div>
-        </div>
-      </section>
 
-      {/* The 50 Signals Breakdown */}
-      <section id="intelligence" className="py-20 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200 mb-6">
-              <Database className="w-4 h-4 mr-2 text-blue-600" />
-              <span className="text-sm font-medium text-blue-700">Proprietary Technology</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              While Others Count Opens,<br />
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                We Read Minds
-              </span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our Messaging Intelligence Engine analyzes 50+ behavioral signals in real-time. 
-              Every word, timing pattern, and response reveals buyer intent.
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-3 gap-8 mb-12">
-            <div className="lg:col-span-2">
-              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                  <Brain className="w-6 h-6 mr-3 text-blue-600" />
-                  Signal Categories
-                </h3>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  {[
-                    {
-                      category: 'Behavioral Patterns',
-                      signals: ['Response timing', 'Message length', 'Question frequency', 'Follow-up engagement', 'Read receipts', 'Response delay patterns'],
-                      color: 'blue'
-                    },
-                    {
-                      category: 'Language Analysis',
-                      signals: ['Urgency indicators', 'Pain point mentions', 'Authority language', 'Decision markers', 'Sentiment analysis', 'Confidence levels'],
-                      color: 'purple'
-                    },
-                    {
-                      category: 'Intent Signals',
-                      signals: ['Budget references', 'Timeline mentions', 'Comparison shopping', 'Feature requests', 'Competitive mentions', 'Price sensitivity'],
-                      color: 'emerald'
-                    },
-                    {
-                      category: 'Readiness Indicators',
-                      signals: ['Proposal requests', 'Demo interest', 'Pricing questions', 'Implementation talk', 'Contract discussions', 'Next steps'],
-                      color: 'pink'
-                    }
-                  ].map((group, index) => (
-                    <div key={index} className="space-y-3">
-                      <h4 className={`font-semibold ${
-                        group.color === 'blue' ? 'text-blue-600' :
-                        group.color === 'purple' ? 'text-purple-600' :
-                        group.color === 'emerald' ? 'text-emerald-600' :
-                        'text-pink-600'
-                      }`}>{group.category}</h4>
-                      <ul className="space-y-1">
-                        {group.signals.map((signal, idx) => (
-                          <li key={idx} className="text-gray-700 text-sm flex items-center">
-                            <div className={`w-2 h-2 rounded-full mr-3 ${
-                              group.color === 'blue' ? 'bg-blue-600' :
-                              group.color === 'purple' ? 'bg-purple-600' :
-                              group.color === 'emerald' ? 'bg-emerald-600' :
-                              'bg-pink-600'
-                            }`}></div>
-                            {signal}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
+          {/* Avatar Video Placeholder */}
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-gray-100 rounded-2xl p-8 border border-gray-200">
+              <div className="w-32 h-32 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <User className="w-16 h-16 text-white" />
               </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-6">
-                <div className="text-center mb-4">
-                  <div className="text-3xl font-bold text-blue-600">50+</div>
-                  <div className="text-sm text-blue-700">Behavioral Signals</div>
-                </div>
-                <div className="text-xs text-gray-700 text-center">
-                  Most competitors analyze 3-5 basic metrics. We read the full conversation.
-                </div>
+              <p className="text-gray-600 text-sm">
+                Tom, founder of SurFox — AI video avatar
+              </p>
+              <div className="mt-4 text-xs text-gray-500">
+                Video transcript available in About the Founder section
               </div>
-              
-              <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 rounded-xl p-6">
-                <div className="text-center mb-4">
-                  <div className="text-3xl font-bold text-emerald-600">94%</div>
-                  <div className="text-sm text-emerald-700">Accuracy Rate</div>
-                </div>
-                <div className="text-xs text-gray-700 text-center">
-                  When we say a lead is hot, they close 94% of the time.
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-6">
-                <div className="text-center mb-4">
-                  <div className="text-3xl font-bold text-purple-600">Real-time</div>
-                  <div className="text-sm text-purple-700">Analysis</div>
-                </div>
-                <div className="text-xs text-gray-700 text-center">
-                  Every message is analyzed instantly. No delays, no batch processing.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Interactive Demo Tabs */}
-          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-            <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">See Messaging Intelligence in Action</h3>
-            
-            <div className="flex justify-center mb-6">
-              <div className="bg-gray-100 rounded-lg p-1">
-                {[
-                  { id: 'real-time', label: 'Real-time Analysis', icon: Activity },
-                  { id: 'conversation', label: 'Conversation Flow', icon: MessageSquare },
-                  { id: 'prediction', label: 'Outcome Prediction', icon: TrendingUp }
-                ].map((tab) => (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all flex items-center ${
-                      activeTab === tab.id
-                        ? 'bg-blue-600 text-white'
-                        : 'text-gray-600 hover:text-gray-900'
-                    }`}
-                  >
-                    <tab.icon className="w-4 h-4 mr-2" />
-                    {tab.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="min-h-[300px]">
-              {activeTab === 'real-time' && (
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-semibold text-gray-900 mb-3">Incoming Message</h4>
-                    <div className="bg-gray-100 rounded p-3 mb-4 text-gray-800">
-                      "Hey, I've been looking at your platform and I need something implemented by Q1. My team of 50 is currently using a competitor but their security isn't meeting our compliance requirements. What's your pricing for enterprise?"
-                    </div>
-                    <div className="text-sm text-gray-600">Message received • Analyzing...</div>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-semibold text-gray-900 mb-3">AI Analysis Results</h4>
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Timeline Urgency</span>
-                        <span className="text-red-600 font-semibold">HIGH</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Team Size Mentioned</span>
-                        <span className="text-emerald-600 font-semibold">50 users</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Competitor Reference</span>
-                        <span className="text-blue-600 font-semibold">DETECTED</span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-700">Pricing Interest</span>
-                        <span className="text-purple-600 font-semibold">ENTERPRISE</span>
-                      </div>
-                      <div className="border-t border-gray-300 pt-2 mt-3">
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-emerald-600">96%</div>
-                          <div className="text-xs text-gray-600">HOT LEAD SCORE</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'conversation' && (
-                <div className="max-w-3xl mx-auto">
-                  <div className="space-y-4">
-                    {[
-                      { sender: 'AI', message: 'Hi Sarah! I noticed you downloaded our enterprise security guide. How\'s your current compliance situation?', time: '2:14 PM' },
-                      { sender: 'Lead', message: 'Actually pretty frustrating. Our current tool doesn\'t meet SOC 2 requirements and audit is coming up.', time: '2:16 PM' },
-                      { sender: 'AI', message: 'That\'s definitely stressful with audit pressure. We specialize in SOC 2 compliance - when\'s your audit timeline?', time: '2:17 PM' },
-                      { sender: 'Lead', message: 'End of Q1. Really need to get this sorted ASAP. Can you do a demo this week?', time: '2:18 PM' }
-                    ].map((msg, index) => (
-                      <div key={index} className={`flex ${msg.sender === 'AI' ? 'justify-start' : 'justify-end'}`}>
-                        <div className={`max-w-xs rounded-lg p-3 ${
-                          msg.sender === 'AI' 
-                            ? 'bg-blue-100 text-blue-800' 
-                            : 'bg-gray-200 text-gray-800'
-                        }`}>
-                          <div className="text-sm">{msg.message}</div>
-                          <div className="text-xs opacity-70 mt-1">{msg.time}</div>
-                        </div>
-                      </div>
-                    ))}
-                    <div className="text-center py-4">
-                      <div className="inline-flex items-center bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm">
-                        <Zap className="w-4 h-4 mr-2" />
-                        HOT LEAD: Ready for handoff to sales team
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'prediction' && (
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="bg-gray-50 rounded-lg p-6 text-center">
-                    <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Target className="w-6 h-6 text-emerald-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-emerald-600 mb-2">94%</div>
-                    <div className="text-sm text-gray-600">Likelihood to Close</div>
-                    <div className="text-xs text-gray-500 mt-2">Based on 12 positive signals</div>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-6 text-center">
-                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <Clock className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-blue-600 mb-2">7-14</div>
-                    <div className="text-sm text-gray-600">Days to Close</div>
-                    <div className="text-xs text-gray-500 mt-2">Timeline urgency detected</div>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-6 text-center">
-                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                      <TrendingUp className="w-6 h-6 text-purple-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-purple-600 mb-2">$47K</div>
-                    <div className="text-sm text-gray-600">Predicted Deal Size</div>
-                    <div className="text-xs text-gray-500 mt-2">Enterprise tier signals</div>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Competitive Differentiation */}
+      {/* Why SurFox Isn't Like the Others */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Messaging Intelligence Wins
+              Why SurFox Isn't Like the Others
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Compare our revolutionary approach to traditional texting platforms.
-            </p>
           </div>
           
-          <div className="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden">
-            <div className="grid lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
-              <div className="p-6">
-                <h3 className="font-semibold text-gray-900 mb-4">Feature</h3>
-                <div className="space-y-4 text-gray-700">
-                  <div>Lead Analysis</div>
-                  <div>Conversation Intelligence</div>
-                  <div>Timing Optimization</div>
-                  <div>Signal Detection</div>
-                  <div>Personalization</div>
-                  <div>Results Prediction</div>
-                  <div>Learning Capability</div>
-                  <div>Integration Depth</div>
-                </div>
-              </div>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold text-red-600 mb-6">Most platforms:</h3>
               
-              <div className="p-6 bg-red-50">
-                <h3 className="font-semibold text-red-600 mb-4">TextUs</h3>
-                <div className="space-y-4 text-gray-600">
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Basic only</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> None</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Manual</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> 2-3 signals</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Templates</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Guesswork</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Static</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Surface</div>
-                </div>
-              </div>
-              
-              <div className="p-6 bg-red-50">
-                <h3 className="font-semibold text-red-600 mb-4">Launch Control</h3>
-                <div className="space-y-4 text-gray-600">
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Surface level</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Limited</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Scheduled</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> 5-6 signals</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Basic variables</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Reports only</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Minimal</div>
-                  <div className="flex items-center"><X className="w-4 h-4 text-red-500 mr-2" /> Basic</div>
-                </div>
-              </div>
-              
-              <div className="p-6 bg-gradient-to-br from-blue-50 to-purple-50">
-                <h3 className="font-semibold text-blue-600 mb-4">SurFox Intelligence</h3>
-                <div className="space-y-4 text-gray-700">
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> Deep psychology</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> Full conversation</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> AI-powered</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> 50+ signals</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> Fully adaptive</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> 94% accuracy</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> Self-learning</div>
-                  <div className="flex items-center"><Check className="w-4 h-4 text-emerald-600 mr-2" /> Deep integration</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works - Complete Process */}
-      <section id="platform" className="py-20 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gray-200 border border-gray-300 mb-6">
-              <Terminal className="w-4 h-4 mr-2 text-blue-600" />
-              <span className="text-sm font-medium text-gray-700">Messaging Intelligence Engine™</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              From Cold Lead to Hot Prospect in 4 Steps
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Watch your AI assistant transform conversations using advanced behavioral psychology.
-            </p>
-          </div>
-          
-          {/* Visual Progress Flow */}
-          <div className="relative mb-12">
-            <div className="flex justify-between items-center mb-8">
-              <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600"></div>
-              {[
-                { icon: Database, title: 'Import & Train', color: 'blue' },
-                { icon: Brain, title: 'AI Analyzes', color: 'purple' },
-                { icon: MessageSquare, title: 'Smart Conversations', color: 'pink' },
-                { icon: Zap, title: 'Hot Lead Alert', color: 'emerald' }
-              ].map((step, index) => (
-                <div key={index} className="relative z-10 text-center">
-                  <div className={`w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br ${
-                    step.color === 'blue' ? 'from-blue-600 to-blue-700' :
-                    step.color === 'purple' ? 'from-purple-600 to-purple-700' :
-                    step.color === 'pink' ? 'from-pink-600 to-pink-700' :
-                    'from-emerald-600 to-emerald-700'
-                  } flex items-center justify-center shadow-lg`}>
-                    <step.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-sm font-medium text-gray-900">{step.title}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          <div className="relative">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { 
-                  icon: Database, 
-                  step: '01', 
-                  title: 'Import & Train', 
-                  description: 'Chrome extension captures leads instantly. Upload your sales docs, FAQs, and past conversations to train your AI.',
-                  features: ['Chrome extension', 'Document upload', 'Past conversation analysis', 'Industry customization'],
-                  highlight: 'Setup in 5 minutes'
-                },
-                { 
-                  icon: Brain, 
-                  step: '02', 
-                  title: 'AI Analyzes Everything', 
-                  description: 'AI reads 50+ behavioral signals in real-time, understanding buyer psychology and conversation patterns.',
-                  features: ['Behavioral analysis', 'Intent detection', 'Timing optimization', 'Psychology patterns'],
-                  highlight: '50+ signals tracked'
-                },
-                { 
-                  icon: MessageSquare, 
-                  step: '03', 
-                  title: 'Smart Conversations', 
-                  description: 'AI adapts tone, timing, and content based on each prospect response and behavioral signals.',
-                  features: ['Adaptive messaging', 'Perfect timing', 'Personalized content', 'Natural flow'],
-                  highlight: 'Human-like conversations'
-                },
-                { 
-                  icon: Zap, 
-                  step: '04', 
-                  title: 'Hot Lead Alert', 
-                  description: 'Instant notification with full context when AI detects a prospect is ready to buy or take next steps.',
-                  features: ['Real-time alerts', 'Full context', 'Readiness scoring', 'Handoff notes'],
-                  highlight: '94% accuracy rate'
-                }
-              ].map((item, index) => (
-                <div key={index} className="relative group">
-                  <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-gray-300 transition-all h-full">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                        <item.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <span className="text-xs font-mono text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                        {item.step}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">{item.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed mb-4">{item.description}</p>
-                    
-                    <ul className="space-y-2 mb-4">
-                      {item.features.map((feature, idx) => (
-                        <li key={idx} className="text-xs text-gray-500 flex items-center">
-                          <div className="w-1 h-1 bg-blue-600 rounded-full mr-2"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <div className="text-xs text-blue-700 font-medium bg-blue-100 px-3 py-1 rounded-full">
-                      ✨ {item.highlight}
-                    </div>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <X className="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Mass texting</h4>
+                    <p className="text-gray-600">Blast the same message to everyone and hope something sticks</p>
                   </div>
                 </div>
-              ))}
+                
+                <div className="flex items-start">
+                  <X className="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Static templates</h4>
+                    <p className="text-gray-600">Pre-written scripts that never change or adapt</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <X className="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">No signal detection</h4>
+                    <p className="text-gray-600">You manually sort through every response</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <X className="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Noisy CRM clutter</h4>
+                    <p className="text-gray-600">Every interaction creates noise, not insight</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-8">
+              <h3 className="text-2xl font-bold text-blue-600 mb-6">SurFox:</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <Check className="w-6 h-6 text-blue-600 mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">AI-driven engagement</h4>
+                    <p className="text-gray-600">Smart conversations that adapt to each prospect</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Check className="w-6 h-6 text-blue-600 mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Learns and adapts to replies</h4>
+                    <p className="text-gray-600">Every response teaches the AI how to improve</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Check className="w-6 h-6 text-blue-600 mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Tracks 50+ lead behavior signals</h4>
+                    <p className="text-gray-600">Knows when prospects are actually interested</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Check className="w-6 h-6 text-blue-600 mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Only alerts you when it matters</h4>
+                    <p className="text-gray-600">Focus on real opportunities, not busy work</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Platform Stats */}
-      <section className="border-y border-gray-200 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: '1M+', label: 'Conversations Analyzed', icon: MessageSquare },
-              { number: '50+', label: 'Behavioral Signals', icon: Brain },
-              { number: '94%', label: 'Signal Accuracy', icon: Target },
-              { number: '5.2x', label: 'Conversion Increase', icon: TrendingUp }
-            ].map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gray-100 rounded-xl mb-4 group-hover:bg-gray-200 transition-colors">
-                  <stat.icon className="w-6 h-6 text-blue-600" />
-                </div>
-                <div className="text-3xl font-bold text-gray-900 mb-1">{stat.number}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
+      {/* What SurFox Is / Isn't */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+              Let's Be Clear About What This Is
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-bold text-red-600 mb-8">This is not:</h3>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <X className="w-5 h-5 text-red-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-1">A mass-blast SMS tool</h4>
+                    <p className="text-gray-600">We don't do spray-and-pray messaging</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <X className="w-5 h-5 text-red-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-1">A CRM replacement</h4>
+                    <p className="text-gray-600">Your existing CRM handles records, we handle conversations</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <X className="w-5 h-5 text-red-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-1">Marketing automation</h4>
+                    <p className="text-gray-600">This is sales-focused, not marketing campaigns</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-bold text-blue-600 mb-8">This is:</h3>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <Check className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-1">A signal-based engagement engine</h4>
+                    <p className="text-gray-600">AI that reads behavior and knows when to act</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <Check className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-1">A focused cold-lead reactivation layer</h4>
+                    <p className="text-gray-600">Specifically built to wake up dormant prospects</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                    <Check className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-1">A sales-first AI assistant</h4>
+                    <p className="text-gray-600">Built by salespeople, for salespeople</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Actually Works */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Revolutionary Results Across Industries
+              How It Actually Works
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how Messaging Intelligence transforms businesses in every sector.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              No magic tricks. Just smart AI that pays attention to the signals your prospects are already sending.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                quote: "I switched from TextUs to SurFox and my lead quality went through the roof. The AI actually understands when someone is serious about buying vs. just browsing. It's like having a sales psychologist analyze every conversation.",
-                author: 'Jennifer Martinez',
-                role: 'Real Estate Agent',
-                company: 'Coldwell Banker',
-                industry: 'Real Estate',
-                metric: 'Conversion Rate',
-                value: '+340%',
-                avatar: 'JM',
-                additionalMetrics: ['67% faster sales', '3.4x more qualified showings']
-              },
-              {
-                quote: "SurFox's behavioral analysis is incredible. It caught enterprise buying signals in conversations that I would have marked as 'not interested.' The ROI paid for itself in the first month. Complete game changer for B2B sales.",
-                author: 'David Chen',
-                role: 'VP of Sales',
-                company: 'CloudTech Solutions',
-                industry: 'SaaS',
-                metric: 'Deal Size',
-                value: '+280%',
-                avatar: 'DC',
-                additionalMetrics: ['94% qualification accuracy', '45% shorter sales cycle']
-              },
-              {
-                quote: "The platform pays for itself in week one. It's like having a sales psychologist analyzing every conversation and telling you exactly when to strike. Our cart abandonment recovery went from 12% to 47%.",
-                author: 'Sarah Williams',
-                role: 'E-commerce Director',
-                company: 'Fashion Forward',
-                industry: 'E-commerce',
-                metric: 'Revenue/Lead',
-                value: '+425%',
-                avatar: 'SW',
-                additionalMetrics: ['4.2x cart recovery', '156% AOV increase']
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-2xl p-8 hover:border-gray-300 transition-all">
-                <div className="text-4xl text-blue-600/20 mb-4">"</div>
-                <p className="text-gray-700 mb-6 italic leading-relaxed">"{testimonial.quote}"</p>
-                
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">{testimonial.author}</h4>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
-                    <p className="text-sm text-gray-500">{testimonial.company}</p>
-                  </div>
-                </div>
-                
-                <div className="border-t border-gray-200 pt-4">
-                  <div className="flex justify-between items-center mb-3">
-                    <div>
-                      <div className="text-lg font-bold text-emerald-600">{testimonial.value}</div>
-                      <div className="text-xs text-gray-600">{testimonial.metric}</div>
-                    </div>
-                    <div className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                      {testimonial.industry}
-                    </div>
-                  </div>
-                  <div className="space-y-1">
-                    {testimonial.additionalMetrics.map((metric, idx) => (
-                      <div key={idx} className="text-xs text-blue-600">• {metric}</div>
-                    ))}
-                  </div>
-                </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <MessageSquare className="w-8 h-8 text-blue-600" />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Pricing That Scales With Your Success
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Start with our Intelligence Engine and scale up as your messaging volume grows.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                name: 'Starter Intelligence',
-                description: 'Perfect for solo entrepreneurs',
-                price: '$197',
-                period: 'per month',
-                features: [
-                  'Up to 1,000 conversations/month',
-                  '25+ behavioral signals analyzed',
-                  'Chrome extension for lead import',
-                  'Basic AI training with past conversations',
-                  'Real-time hot lead alerts',
-                  'Email support'
-                ],
-                cta: 'Start Free Trial',
-                popular: false,
-                highlight: 'Most Popular for Solo'
-              },
-              {
-                name: 'Growth Intelligence',
-                description: 'For growing teams and agencies',
-                price: '$397',
-                period: 'per month',
-                features: [
-                  'Up to 10,000 conversations/month',
-                  'All 50+ behavioral signals',
-                  'Advanced document training',
-                  'Custom conversation flows',
-                  'Team collaboration tools',
-                  'Zapier integrations',
-                  'Priority support'
-                ],
-                cta: 'Start Free Trial',
-                popular: true,
-                highlight: 'Best Value'
-              },
-              {
-                name: 'Enterprise Intelligence',
-                description: 'For large organizations',
-                price: 'Custom',
-                period: 'contact sales',
-                features: [
-                  'Unlimited conversations',
-                  'Custom signal development',
-                  'White-label options',
-                  'Multi-tenant controls',
-                  'Advanced analytics dashboard',
-                  'Dedicated success manager',
-                  'Custom integrations'
-                ],
-                cta: 'Contact Sales',
-                popular: false,
-                highlight: 'Maximum Intelligence'
-              }
-            ].map((plan, index) => (
-              <div key={index} className={`relative bg-gray-50 border rounded-2xl p-8 ${
-                plan.popular 
-                  ? 'border-blue-300 ring-1 ring-blue-200' 
-                  : 'border-gray-200'
-              }`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-gray-600 mb-4">{plan.description}</p>
-                  <div className="text-3xl font-bold text-gray-900 mb-1">{plan.price}</div>
-                  <div className="text-sm text-gray-600">{plan.period}</div>
-                  <div className="text-xs text-blue-600 mt-2">{plan.highlight}</div>
-                </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <Check className="w-5 h-5 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <a href="#" className={`block text-center py-3 px-6 rounded-lg font-medium transition-all ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg hover:shadow-blue-500/25'
-                    : 'border border-gray-300 text-gray-700 hover:bg-gray-100'
-                }`}>
-                  {plan.cta}
-                </a>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">
-              All plans include: Messaging Intelligence Engine • Real-time signal analysis • 14-day free trial • No setup fees
-            </p>
-            <a href="/enterprise" className="text-blue-600 hover:text-blue-700 font-medium">
-              Need custom signals or higher volume? Explore Enterprise options →
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-20 bg-gray-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-600">
-              Everything you need to know about Messaging Intelligence.
-            </p>
-          </div>
-          
-          <div className="space-y-4">
-            {[
-              {
-                question: 'What makes SurFox different from TextUs, Launch Control, or Smarter Contact?',
-                answer: 'While traditional platforms focus on mass messaging, SurFox created the first Messaging Intelligence Engine that analyzes 50+ behavioral signals in real-time. We don\'t just send messages - we understand buyer psychology, predict intent, and know exactly when prospects are ready to buy. It\'s the difference between throwing darts blindfolded and having a sales psychologist guide every conversation.'
-              },
-              {
-                question: 'How does the 50+ signal analysis actually work?',
-                answer: 'Our AI analyzes everything from response timing patterns and message length to urgency indicators, pain point mentions, budget signals, and decision-making language. For example, if someone responds within 2 minutes, asks about implementation timelines, and mentions team size - that\'s a completely different signal profile than someone who takes 3 days to reply with one-word answers. We\'ve trained our system to recognize these psychological patterns that indicate buying intent.'
-              },
-              {
-                question: 'Can this work for my industry? I am not in real estate.',
-                answer: 'Absolutely! Messaging Intelligence works wherever conversations drive revenue. We are used across real estate, SaaS, e-commerce, healthcare, financial services, education, and many more industries. The behavioral psychology of buying is universal - whether someone is ready to buy a house, sign a software contract, or schedule a medical consultation, the signals are remarkably similar. Our AI adapts to your specific industry terminology and buying patterns.'
-              },
-              {
-                question: 'How accurate is the "94% hot lead accuracy" claim?',
-                answer: 'When our system marks a lead as "hot" (96%+ score), they convert to the next step 94% of the time. This could mean booking a demo, requesting a proposal, or making a purchase - whatever your next step is. We have analyzed over 1 million conversations to train this accuracy. The key is we only alert you when we are highly confident, so you are not chasing false positives.'
-              },
-              {
-                question: 'Do I need technical skills to set this up?',
-                answer: 'Not at all! Our Chrome extension handles lead import automatically, and you can train your AI by simply uploading documents like FAQs, product sheets, or past successful conversations. Most users are having intelligent conversations within 15 minutes of signing up. The hardest part is usually deciding which conversations to review first when the hot leads start rolling in.'
-              },
-              {
-                question: 'How does this integrate with my existing CRM and tools?',
-                answer: 'SurFox integrates with popular CRMs through Zapier (thousands of apps available), plus we have direct integrations with major platforms. Our Chrome extension works with any web-based system, and we can sync lead scoring, conversation history, and hot lead alerts directly into your existing workflow. For enterprise customers, we offer custom API integrations.'
-              },
-              {
-                question: 'What happens during the 14-day free trial?',
-                answer: 'You get full access to our Messaging Intelligence Engine with up to 500 conversations included. Upload your leads, train the AI with your documents, and start having conversations immediately. You will see the behavioral signal analysis in real-time and get hot lead alerts when prospects are ready. No credit card required, and you can cancel anytime if you are not amazed by the results.'
-              },
-              {
-                question: 'Is this compliant with TCPA and other messaging regulations?',
-                answer: 'Yes, SurFox is fully TCPA compliant and includes built-in opt-out management, consent tracking, and compliance monitoring. Our Messaging Intelligence actually helps with compliance because we focus on quality conversations with engaged prospects rather than mass blasting. The AI naturally creates more consent-friendly interactions because it reads engagement signals and adapts accordingly.'
-              }
-            ].map((item, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-                <button
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
-                  onClick={() => setActiveFaq(activeFaq === index ? -1 : index)}
-                >
-                  <span className="font-medium text-gray-900 pr-4">{item.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-gray-600 transition-transform ${
-                    activeFaq === index ? 'transform rotate-180' : ''
-                  }`} />
-                </button>
-                {activeFaq === index && (
-                  <div className="px-6 pb-4 text-gray-700 leading-relaxed">
-                    {item.answer}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Problem/Solution Deep Dive */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              The Sales Problem Everyone Faces
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Traditional messaging tools create more problems than they solve. Here's how Messaging Intelligence fixes everything.
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="bg-gradient-to-br from-red-50 to-red-100 border border-red-200 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-red-600 mb-6 flex items-center">
-                <X className="w-6 h-6 mr-3" />
-                Traditional Sales Struggles
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  'Manually sorting through hundreds of unqualified responses',
-                  'Missing hot prospects while they\'re actively interested',
-                  'Sending the same generic message to every lead type',
-                  'No idea which leads are actually ready to buy vs. just browsing',
-                  'Burning out from repetitive qualification conversations',
-                  'Compliance headaches from mass messaging approaches',
-                  'Inconsistent follow-up timing based on gut feeling',
-                  'No data on what messaging actually converts'
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start text-red-700">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Upload Your Cold Leads</h3>
+              <p className="text-gray-600">
+                Import the prospects sitting in your CRM that haven't responded to previous outreach attempts.
+              </p>
             </div>
             
-            <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-emerald-600 mb-6 flex items-center">
-                <Check className="w-6 h-6 mr-3" />
-                Messaging Intelligence Solution
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  'AI automatically qualifies leads using behavioral psychology',
-                  'Real-time alerts the moment prospects show buying intent',
-                  'Every conversation adapts to the individual prospect\'s signals',
-                  'Precise buyer readiness scoring based on 50+ data points',
-                  'Focus on closing deals while AI handles qualification',
-                  'Compliant, consent-friendly conversations that feel natural',
-                  'Perfect timing based on prospect behavior patterns',
-                  'Complete analytics on what drives conversions'
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start text-emerald-700">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Brain className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Reads the Signals</h3>
+              <p className="text-gray-600">
+                Our AI analyzes response patterns, timing, and language to understand genuine interest vs. politeness.
+              </p>
             </div>
-          </div>
-          
-          <div className="text-center mt-12">
-            <div className="bg-gray-100 border border-gray-200 rounded-xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">The Bottom Line</h3>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                Stop playing the numbers game with mass messaging. Start having intelligent conversations that actually convert. 
-                <strong className="text-blue-600"> Messaging Intelligence</strong> doesn't just save time — it fundamentally changes 
-                how you identify and engage your best prospects.
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Target className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">You Get Hot Prospects</h3>
+              <p className="text-gray-600">
+                Only get notified when someone shows real buying signals. No more sorting through "maybe later" responses.
               </p>
             </div>
           </div>
@@ -1191,56 +312,51 @@ const SurFoxRevolution = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 relative overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 border border-blue-200 text-sm font-medium">
-              <Brain className="w-4 h-4 mr-2" />
-              Join the Messaging Intelligence Revolution
-            </span>
-          </div>
-          
-          <h2 className="text-3xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Ready to Read Your Prospects' Minds?
+      <section id="try-free" className="py-20 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+            You don't need more leads.<br />
+            You need to unlock the ones you already have.
           </h2>
-          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            Stop guessing when prospects are ready to buy. Start knowing with 94% accuracy. 
-            Experience the future of sales conversations.
+          
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+            Stop letting good prospects go cold. See if SurFox can wake them up.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a href="#" className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all inline-flex items-center justify-center text-lg">
-              Start Your Intelligence Engine
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/signup" className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all text-lg">
+              Start Free Trial
             </a>
-            <a href="#" className="border border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-white transition-all text-lg">
-              See Live Demo
+            <a href="/about-the-founder" className="border border-gray-400 text-gray-200 px-8 py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all text-lg inline-flex items-center">
+              About the Founder
+              <ChevronRight className="w-5 h-5 ml-2" />
             </a>
           </div>
           
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600">
-            <div className="flex items-center">
-              <Shield className="w-4 h-4 mr-2 text-emerald-500" />
-              14-day free trial
-            </div>
-            <div className="flex items-center">
-              <Brain className="w-4 h-4 mr-2 text-emerald-500" />
-              50+ signals included
-            </div>
-            <div className="flex items-center">
-              <Award className="w-4 h-4 mr-2 text-emerald-500" />
-              94% accuracy guarantee
-            </div>
-          </div>
-          
-          <div className="text-sm text-gray-500 mt-4">
-            No credit card required • Setup in 5 minutes • Works with any industry
+          <div className="mt-8 text-sm text-gray-400">
+            No credit card required • 14-day trial • Setup takes 5 minutes
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-white border-t border-gray-100 py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="text-xl font-bold text-gray-900 mb-4">SurFox</div>
+            <p className="text-gray-600 mb-6">
+              Built by salespeople who got tired of chasing unqualified leads.
+            </p>
+            <div className="flex justify-center space-x-6 text-sm text-gray-500">
+              <a href="/privacy" className="hover:text-gray-700">Privacy</a>
+              <a href="/terms" className="hover:text-gray-700">Terms</a>
+              <a href="/contact" className="hover:text-gray-700">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
 
-export default SurFoxRevolution
+export default SurFoxHomepage
