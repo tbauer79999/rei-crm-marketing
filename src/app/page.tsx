@@ -535,62 +535,186 @@ const SurFoxHomepage = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Try it risk-free for 14 days
+              Choose your plan
             </h2>
             <p className="text-xl text-slate-600">
-              No contracts. No setup fees. See if it works for your business before you pay a dime.
+              Start with what you need. Scale as you grow. No long-term contracts.
             </p>
           </div>
           
-          <div className="max-w-lg mx-auto bg-white border border-slate-300 rounded-xl p-8 text-center shadow-sm">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">SurFox Professional</h3>
-            <div className="text-4xl font-bold text-slate-900 mb-2">$197<span className="text-lg text-slate-500">/month</span></div>
-            <p className="text-slate-600 mb-8">
-              Everything you need to revive cold leads and grow revenue
-            </p>
-            
-            <ul className="text-left space-y-3 mb-8">
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-green-600 mr-3" />
-                <span>Up to 1,000 lead conversations per month</span>
-              </li>
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-green-600 mr-3" />
-                <span>50+ behavioral signal analysis</span>
-              </li>
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-green-600 mr-3" />
-                <span>Real-time hot lead alerts</span>
-              </li>
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-green-600 mr-3" />
-                <span>CRM integration (Salesforce, HubSpot, Pipedrive)</span>
-              </li>
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-green-600 mr-3" />
-                <span>Industry-specific conversation templates</span>
-              </li>
-              <li className="flex items-center">
-                <Check className="w-5 h-5 text-green-600 mr-3" />
-                <span>Email and chat support</span>
-              </li>
-            </ul>
-            
-            <a href="#start" className="w-full bg-blue-600 text-white px-6 py-4 rounded-xl hover:bg-blue-700 transition-colors font-semibold text-lg block shadow-lg hover:shadow-xl">
-              Start Free Trial
-            </a>
-            <p className="text-sm text-slate-500 mt-4">
-              No credit card required • Cancel anytime • Setup takes 10 minutes
-            </p>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Starter Plan */}
+            <div className="bg-white border border-slate-300 rounded-xl p-8 text-center shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Starter</h3>
+              <div className="text-3xl font-bold text-slate-900 mb-4">$197<span className="text-lg text-slate-500">/month</span></div>
+              <p className="text-slate-600 mb-6">Perfect for individual sales professionals</p>
+              
+              <ul className="text-left space-y-3 mb-8 text-sm">
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>500 monthly leads</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>AI-generated initial SMS</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>AI auto-replies</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Cold follow-up automations</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>AI tone/persona selector</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Basic analytics</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>CSV exports</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>1 team seat</span>
+                </li>
+              </ul>
+              
+              <a href="#start" className="w-full border border-slate-300 text-slate-700 px-6 py-3 rounded-xl hover:bg-slate-50 transition-colors font-medium">
+                Start Free Trial
+              </a>
+            </div>
+
+            {/* Growth Plan */}
+            <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-8 text-center shadow-md relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                  Most Popular
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Growth</h3>
+              <div className="text-3xl font-bold text-slate-900 mb-4">$397<span className="text-lg text-slate-500">/month</span></div>
+              <p className="text-slate-600 mb-6">For growing sales teams</p>
+              
+              <ul className="text-left space-y-3 mb-8 text-sm">
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>2,500 monthly leads</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Everything in Starter, plus:</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Funnel module (Cold → Escalated)</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Escalation score threshold control</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>After-hours AI override toggle</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>1 AI knowledge base file upload</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>AI reply pacing mode config</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Chrome extension</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>100 conversation memory/learning</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>5 team seats</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Admin + user permissions</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Zapier/API integration</span>
+                </li>
+              </ul>
+              
+              <a href="#start" className="w-full bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-colors font-semibold shadow-lg hover:shadow-xl">
+                Start Free Trial
+              </a>
+            </div>
+
+            {/* Scale Plan */}
+            <div className="bg-white border border-slate-300 rounded-xl p-8 text-center shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Scale</h3>
+              <div className="text-3xl font-bold text-slate-900 mb-4">$997<span className="text-lg text-slate-500">/month</span></div>
+              <p className="text-slate-600 mb-6">For enterprise sales organizations</p>
+              
+              <ul className="text-left space-y-3 mb-8 text-sm">
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>10,000+ monthly leads</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Everything in Growth, plus:</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Unlimited AI knowledge base uploads</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Full access + team metrics</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>1000 conversation memory/learning</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>15+ team seats</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Full RBAC (role-based access)</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>Message A/B testing (AI)</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>White-glove onboarding & CSM</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" />
+                  <span>SLA-backed priority routing</span>
+                </li>
+              </ul>
+              
+              <a href="/contact" className="w-full border border-slate-300 text-slate-700 px-6 py-3 rounded-xl hover:bg-slate-50 transition-colors font-medium">
+                Contact Sales
+              </a>
+            </div>
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-slate-600 mb-4">
-              Need higher volume or enterprise features?
+            <p className="text-sm text-slate-500">
+              All plans include: 14-day free trial • No setup fees • Cancel anytime
             </p>
-            <Link href="/enterprise" className="text-blue-600 hover:text-blue-700 font-medium">
-              View Enterprise Plans →
-            </Link>
           </div>
         </div>
       </section>
