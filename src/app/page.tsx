@@ -62,7 +62,7 @@ const SurFoxHomepage = () => {
                   </div>
                 </div>
                 <p className="text-slate-500 text-sm mt-4 text-center">
-                  Tom Rodriguez, Founder & CEO • Former VP of Sales at three successful exits
+                  Tom Bauer, Founder & CEO
                 </p>
               </div>
             </div>
