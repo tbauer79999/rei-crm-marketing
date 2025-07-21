@@ -561,7 +561,7 @@ const SurFoxHomepage = () => {
               Let me be crystal clear about what this is
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              I built SurFox to solve one specific problem that was costing me millions in lost revenue. 
+              I built SurFox to solve one specific problem that was costing companies millions in lost revenue. 
               It's not trying to be everything to everyone — it's laser-focused on one thing: 
               <strong className="text-white"> intelligently reviving cold prospects using sales psychology.</strong>
             </p>
