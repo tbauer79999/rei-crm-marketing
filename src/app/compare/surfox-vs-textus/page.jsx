@@ -1,10 +1,11 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Menu, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, MessageSquare, Clock, Sparkles, AlertCircle, Star, Crown, DollarSign, Workflow, Bot, User, FileText, Settings, Timer, Phone, Mail } from 'lucide-react'
+import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Menu, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, MessageSquare, Clock, Sparkles, AlertCircle, Star, Crown, DollarSign, Workflow, Bot, User, FileText, Settings, Timer, Phone, Mail, Eye, Lightbulb, Layers, Activity } from 'lucide-react'
 
-const SurFoxVsTextUs = () => {
+const SurFoxCompetitorComparison = () => {
   const [activeFeatureSet, setActiveFeatureSet] = useState(0)
+  const [activeCompetitor, setActiveCompetitor] = useState('textus')
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   // Mouse tracking for subtle parallax effects
@@ -16,233 +17,321 @@ const SurFoxVsTextUs = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
+  const competitors = {
+    textus: { name: 'TextUs', color: 'gray', desc: 'Manual Messaging Platform' },
+    launchcontrol: { name: 'Launch Control', color: 'orange', desc: 'Basic SMS Automation' },
+    smartercontact: { name: 'Smarter Contact', color: 'green', desc: 'Contact Management' }
+  }
+
   const featureSets = [
     {
-      category: 'AI Intelligence',
+      category: 'Sales Psychology AI',
       icon: Brain,
-      color: 'blue',
+      color: 'purple',
       features: [
-        { name: 'AI-driven conversations', surfox: 'Dynamic AI conversations', textus: 'Manual or canned messages' },
-        { name: 'Conversation memory per lead', surfox: 'Full conversation history', textus: 'No memory' },
-        { name: 'AI tone/persona customization', surfox: 'Tone + persona builder', textus: 'Not available' },
-        { name: 'Dynamic follow-up timing', surfox: 'Behavior-based timing', textus: 'Fixed timing only' },
-        { name: 'Spam-safe randomization', surfox: 'AI variants prevent spam flags', textus: 'Risk of detection' }
+        { 
+          name: 'Psychological profiling (50+ dimensions)', 
+          surfox: 'Advanced personality analysis', 
+          textus: 'Not available', 
+          launchcontrol: 'Not available',
+          smartercontact: 'Not available'
+        },
+        { 
+          name: 'Behavioral pattern learning', 
+          surfox: 'AI learns from every conversation', 
+          textus: 'No learning capability', 
+          launchcontrol: 'No learning capability',
+          smartercontact: 'No learning capability'
+        },
+        { 
+          name: 'Conversation memory by plan', 
+          surfox: '100-1000+ conversation memory', 
+          textus: 'No memory system', 
+          launchcontrol: 'Basic conversation history',
+          smartercontact: 'Limited memory'
+        },
+        { 
+          name: 'Message psychology optimization', 
+          surfox: 'AI adapts tone per personality', 
+          textus: 'Manual message crafting', 
+          launchcontrol: 'Template-based only',
+          smartercontact: 'Basic templates'
+        },
+        { 
+          name: 'Buying signal detection', 
+          surfox: 'Real-time psychological analysis', 
+          textus: 'Manual signal recognition', 
+          launchcontrol: 'Basic keyword detection',
+          smartercontact: 'Manual tracking'
+        }
+      ]
+    },
+    {
+      category: 'AI Intelligence',
+      icon: Sparkles,
+      color: 'cyan',
+      features: [
+        { 
+          name: 'Dynamic AI conversations', 
+          surfox: 'Context-aware responses', 
+          textus: 'Manual or canned messages', 
+          launchcontrol: 'Basic automation',
+          smartercontact: 'Template responses'
+        },
+        { 
+          name: 'AI knowledge base training', 
+          surfox: 'Upload PDFs, SOPs, FAQs', 
+          textus: 'Not supported', 
+          launchcontrol: 'Limited customization',
+          smartercontact: 'Not available'
+        },
+        { 
+          name: 'Persona-based messaging', 
+          surfox: 'Multiple AI personas per campaign', 
+          textus: 'One-size-fits-all', 
+          launchcontrol: 'Basic personalization',
+          smartercontact: 'Limited personas'
+        },
+        { 
+          name: 'Conversation flow intelligence', 
+          surfox: 'AI optimizes sequence patterns', 
+          textus: 'Manual flow management', 
+          launchcontrol: 'Fixed sequences',
+          smartercontact: 'Basic workflows'
+        },
+        { 
+          name: 'Anti-spam AI variants', 
+          surfox: 'Dynamic message variations', 
+          textus: 'Risk of spam detection', 
+          launchcontrol: 'Limited variation',
+          smartercontact: 'Static messages'
+        }
       ]
     },
     {
       category: 'Lead Management',
       icon: Target,
-      color: 'emerald',
+      color: 'blue',
       features: [
-        { name: 'AI motivation scoring', surfox: 'Built-in AI scoring engine', textus: 'No native scoring' },
-        { name: 'Auto qualification logic', surfox: 'AI qualifies leads automatically', textus: 'Manual qualification required' },
-        { name: 'Hot lead alerts', surfox: 'Real-time with full context', textus: 'Basic inbox filtering' },
-        { name: 'Smart escalation', surfox: 'Hands off to human at right time', textus: 'Manual handoff only' },
-        { name: 'Lead prioritization', surfox: 'AI-driven priority scoring', textus: 'Manual sorting' }
-      ]
-    },
-    {
-      category: 'Automation',
-      icon: Zap,
-      color: 'purple',
-      features: [
-        { name: 'Chrome extension import', surfox: '1-click lead capture', textus: 'Not available' },
-        { name: 'AI handles 90% of messages', surfox: 'Full AI conversation management', textus: 'All manual handling' },
-        { name: 'Document-based AI training', surfox: 'Upload PDFs, FAQs, SOPs', textus: 'Not supported' },
-        { name: 'Campaign-specific AI behavior', surfox: 'Customizable per campaign', textus: 'One-size-fits-all' },
-        { name: 'Smart retry logic', surfox: 'Adjusts per engagement', textus: 'Fixed retry patterns' }
+        { 
+          name: 'AI qualification engine', 
+          surfox: 'Automatic lead scoring & routing', 
+          textus: 'Manual qualification', 
+          launchcontrol: 'Basic scoring',
+          smartercontact: 'Manual sorting'
+        },
+        { 
+          name: 'Hot lead escalation', 
+          surfox: 'Psychology-based escalation', 
+          textus: 'Manual handoff only', 
+          launchcontrol: 'Time-based escalation',
+          smartercontact: 'Manual escalation'
+        },
+        { 
+          name: 'Motivation scoring', 
+          surfox: 'Real-time psychological scoring', 
+          textus: 'No native scoring', 
+          launchcontrol: 'Basic engagement metrics',
+          smartercontact: 'Manual assessment'
+        },
+        { 
+          name: 'Behavioral timing optimization', 
+          surfox: 'AI learns optimal contact times', 
+          textus: 'Fixed timing only', 
+          launchcontrol: 'Basic timing rules',
+          smartercontact: 'Manual scheduling'
+        },
+        { 
+          name: 'Chrome extension capture', 
+          surfox: '1-click lead import & analysis', 
+          textus: 'Not available', 
+          launchcontrol: 'Basic import tools',
+          smartercontact: 'Manual data entry'
+        }
       ]
     }
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 overflow-x-hidden pt-16">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
+
+      {/* Animated Background Elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-40 right-40 w-60 h-60 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      </div>
       
       {/* Hero Section */}
-      <section className="min-h-screen relative flex items-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(147,51,234,0.1),transparent_50%)]"></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="relative py-20 pt-32 min-h-screen flex items-center">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            {/* Platform Logos */}
-            <div className="flex items-center justify-center space-x-8 mb-8">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Brain className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-left">
-                  <div className="text-2xl font-bold text-gray-900">SurFox</div>
-                  <div className="text-sm text-blue-600">AI Conversations</div>
-                </div>
-              </div>
-              
-              <div className="text-gray-500 text-3xl font-bold">VS</div>
-              
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gray-300 rounded-xl flex items-center justify-center">
-                  <MessageSquare className="w-6 h-6 text-gray-600" />
-                </div>
-                <div className="text-left">
-                  <div className="text-2xl font-bold text-gray-600">TextUs</div>
-                  <div className="text-sm text-gray-500">Manual Messaging</div>
-                </div>
-              </div>
-            </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              <span className="text-gray-900">AI That</span>
-              <br />
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Works for You
+            <h1 className="text-6xl md:text-7xl font-bold leading-tight mb-8">
+              <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+                The World's First
               </span>
               <br />
-              <span className="text-gray-900">vs Manual Labor</span>
+              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Sales Psychology AI
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+                vs Manual Messaging
+              </span>
             </h1>
             
-            <p className="text-xl text-gray-700 mb-4 leading-relaxed max-w-3xl mx-auto">
-              TextUs makes you work harder. SurFox makes you work smarter.
-            </p>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-              While TextUs requires your team to manually craft every message and qualify every lead, SurFox AI handles 90% of conversations automatically — delivering only qualified prospects ready to close.
-            </p>
+            <div className="text-2xl text-purple-200 space-y-4 mb-8">
+              <p>While competitors force your team to manually craft messages and qualify leads,</p>
+              <p className="text-lg text-gray-300">
+                <strong className="text-white">SurFox's AI learns human psychology to create conversations that convert.</strong>
+              </p>
+              <p className="text-lg text-gray-300">
+                50+ psychological dimensions. Behavioral learning. Conversation intelligence. 
+                This is what happens when you build AI specifically for sales psychology instead of just sending messages.
+              </p>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a href="#comparison" className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all flex items-center justify-center">
-                See the Comparison
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a href="#demo" className="group border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all flex items-center justify-center">
-                <Play className="mr-2 w-5 h-5" />
-                Watch Demo
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+              <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative flex items-center justify-center">
+                  See the Psychological Advantage
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </button>
+              <a href="#demo" className="px-8 py-4 border-2 border-purple-400/50 rounded-2xl font-bold text-lg backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-300">
+                <Play className="mr-2 w-5 h-5 inline" />
+                Watch AI Learning Demo
               </a>
             </div>
 
-            {/* Cost Comparison Preview */}
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/80 border border-gray-200 rounded-xl p-6 text-center shadow-sm">
-                <div className="text-3xl font-bold text-emerald-600 mb-2">$197</div>
-                <div className="text-sm text-gray-600">SurFox Starting Price</div>
-                <div className="text-xs text-gray-500 mt-2">vs $500+ for TextUs</div>
+            {/* Key Stats Preview */}
+            <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-6 text-center shadow-2xl">
+                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+                <div className="text-sm text-purple-200">Psychological Dimensions</div>
+                <div className="text-xs text-gray-400 mt-2">vs 0 in competitors</div>
               </div>
-              <div className="bg-white/80 border border-blue-200 rounded-xl p-6 text-center shadow-sm">
-                <div className="text-3xl font-bold text-blue-600 mb-2">90%</div>
-                <div className="text-sm text-gray-600">AI Automation</div>
-                <div className="text-xs text-gray-500 mt-2">vs 0% automation</div>
+              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-6 text-center shadow-2xl">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">1000+</div>
+                <div className="text-sm text-purple-200">Conversation Memory</div>
+                <div className="text-xs text-gray-400 mt-2">AI learns & improves</div>
               </div>
-              <div className="bg-white/80 border border-purple-200 rounded-xl p-6 text-center shadow-sm">
-                <div className="text-3xl font-bold text-purple-600 mb-2">15min</div>
-                <div className="text-sm text-gray-600">Setup Time</div>
-                <div className="text-xs text-gray-500 mt-2">vs 2-3 hours</div>
+              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-6 text-center shadow-2xl">
+                <div className="text-3xl font-bold text-green-400 mb-2">90%</div>
+                <div className="text-sm text-purple-200">AI Automation</div>
+                <div className="text-xs text-gray-400 mt-2">vs manual messaging</div>
+              </div>
+              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-6 text-center shadow-2xl">
+                <div className="text-3xl font-bold text-yellow-400 mb-2">$197</div>
+                <div className="text-sm text-purple-200">Starting Price</div>
+                <div className="text-xs text-gray-400 mt-2">vs $300-500+ others</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Core Problem */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* The Category Revolution */}
+      <section className="relative py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50 backdrop-blur-xl border-y border-purple-500/30">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              The Problem with Traditional Messaging
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
+              We Created a New Category
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              TextUs forces your team to manually handle every aspect of lead communication. It's expensive, time-consuming, and doesn't scale.
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+              Traditional platforms send messages. SurFox reads minds. Here's why that matters for your revenue.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* TextUs Problems */}
-            <div className="bg-gradient-to-br from-red-50 to-red-100 border border-red-200 rounded-2xl p-8">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Traditional Approach */}
+            <div className="bg-gradient-to-br from-red-900/40 to-red-600/40 rounded-2xl border border-red-400/30 p-8 backdrop-blur-sm">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gray-300 rounded-xl flex items-center justify-center mr-4">
-                  <User className="w-6 h-6 text-gray-600" />
+                <div className="w-12 h-12 bg-gray-600/50 rounded-xl flex items-center justify-center mr-4">
+                  <MessageSquare className="w-6 h-6 text-gray-300" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-red-600">TextUs Limitations</h3>
-                  <p className="text-gray-600">Manual, expensive, time-intensive</p>
+                  <h3 className="text-2xl font-bold text-red-300">Traditional Platforms</h3>
+                  <p className="text-red-200">TextUs, Launch Control, Smarter Contact</p>
                 </div>
               </div>
               
               <div className="space-y-4">
-                <div className="bg-red-100 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-red-700 mb-2 flex items-center">
-                    <DollarSign className="w-4 h-4 mr-2" />
-                    High Cost, Low Value
+                <div className="bg-red-900/40 border border-red-400/30 rounded-xl p-4">
+                  <h4 className="font-semibold text-red-300 mb-2 flex items-center">
+                    <User className="w-4 h-4 mr-2" />
+                    Mass Messaging Approach
                   </h4>
-                  <p className="text-sm text-red-800">$500+/month with hidden fees and limited conversations. ROI unclear.</p>
+                  <p className="text-sm text-red-200">Send the same message to everyone. Hope someone responds. No understanding of psychology.</p>
                 </div>
                 
-                <div className="bg-red-100 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-red-700 mb-2 flex items-center">
+                <div className="bg-red-900/40 border border-red-400/30 rounded-xl p-4">
+                  <h4 className="font-semibold text-red-300 mb-2 flex items-center">
                     <Clock className="w-4 h-4 mr-2" />
                     Manual Everything
                   </h4>
-                  <p className="text-sm text-red-800">Your team writes every message, qualifies every lead, tracks every conversation manually.</p>
+                  <p className="text-sm text-red-200">Your team writes messages, qualifies leads, manages conversations. No intelligence.</p>
                 </div>
                 
-                <div className="bg-red-100 border border-red-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-red-700 mb-2 flex items-center">
+                <div className="bg-red-900/40 border border-red-400/30 rounded-xl p-4">
+                  <h4 className="font-semibold text-red-300 mb-2 flex items-center">
                     <X className="w-4 h-4 mr-2" />
-                    No Intelligence
+                    No Learning System
                   </h4>
-                  <p className="text-sm text-red-800">No AI, no learning, no qualification logic. Just an expensive inbox.</p>
+                  <p className="text-sm text-red-200">Same approach forever. Can't adapt. Doesn't improve. Just sends messages.</p>
                 </div>
               </div>
               
-              <div className="mt-6 p-4 bg-red-100 border border-red-200 rounded-lg">
-                <p className="text-red-700 text-sm font-medium">
-                  Result: Your team spends hours on unqualified leads while hot prospects slip through the cracks.
+              <div className="mt-6 p-4 bg-red-900/40 border border-red-400/30 rounded-xl">
+                <p className="text-red-200 text-sm font-medium">
+                  Result: Low conversion rates, high manual effort, expensive team time wasted on unqualified leads.
                 </p>
               </div>
             </div>
 
-            {/* SurFox Solution */}
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-8 ring-1 ring-blue-200">
+            {/* SurFox Revolutionary Approach */}
+            <div className="bg-gradient-to-br from-purple-900/40 to-cyan-900/40 rounded-2xl border-2 border-purple-400/50 p-8 backdrop-blur-sm">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-xl flex items-center justify-center mr-4">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-blue-600">SurFox Advantages</h3>
-                  <p className="text-gray-700">Intelligent, affordable, scalable</p>
+                  <h3 className="text-2xl font-bold text-purple-300">SurFox Sales Psychology AI</h3>
+                  <p className="text-purple-200">First-ever psychological intelligence platform</p>
                 </div>
               </div>
               
               <div className="space-y-4">
-                <div className="bg-blue-100 border border-blue-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-700 mb-2 flex items-center">
-                    <Sparkles className="w-4 h-4 mr-2" />
-                    AI-Powered Efficiency
-                  </h4>
-                  <p className="text-sm text-blue-800">Starting at $197/month. AI handles 90% of conversations, delivering only qualified leads.</p>
-                </div>
-                
-                <div className="bg-blue-100 border border-blue-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-700 mb-2 flex items-center">
-                    <Zap className="w-4 h-4 mr-2" />
-                    Automated Intelligence
-                  </h4>
-                  <p className="text-sm text-blue-800">AI learns your style, qualifies leads, and escalates only when prospects are ready to buy.</p>
-                </div>
-                
-                <div className="bg-blue-100 border border-blue-200 rounded-lg p-4">
-                  <h4 className="font-semibold text-blue-700 mb-2 flex items-center">
+                <div className="bg-purple-900/40 border border-purple-400/30 rounded-xl p-4">
+                  <h4 className="font-semibold text-purple-300 mb-2 flex items-center">
                     <Brain className="w-4 h-4 mr-2" />
-                    Smart Learning
+                    Psychological Profiling
                   </h4>
-                  <p className="text-sm text-blue-800">Upload documents, customize personas, train AI on your business. Gets smarter with every conversation.</p>
+                  <p className="text-sm text-purple-200">Analyzes 50+ psychological dimensions. Understands personality, motivation, decision-making patterns.</p>
+                </div>
+                
+                <div className="bg-purple-900/40 border border-purple-400/30 rounded-xl p-4">
+                  <h4 className="font-semibold text-purple-300 mb-2 flex items-center">
+                    <Sparkles className="w-4 h-4 mr-2" />
+                    Adaptive Learning Engine
+                  </h4>
+                  <p className="text-sm text-purple-200">AI learns from every conversation. Gets smarter. Adapts messaging based on what works for each psychology type.</p>
+                </div>
+                
+                <div className="bg-purple-900/40 border border-purple-400/30 rounded-xl p-4">
+                  <h4 className="font-semibold text-purple-300 mb-2 flex items-center">
+                    <Target className="w-4 h-4 mr-2" />
+                    Behavior-Based Intelligence
+                  </h4>
+                  <p className="text-sm text-purple-200">Reads buying signals, conversation patterns, engagement curves. Knows when to push vs when to wait.</p>
                 </div>
               </div>
               
-              <div className="mt-6 p-4 bg-blue-100 border border-blue-200 rounded-lg">
-                <p className="text-blue-700 text-sm font-medium">
-                  Result: Your team focuses on closing deals while AI handles qualification and nurturing automatically.
+              <div className="mt-6 p-4 bg-purple-900/40 border border-purple-400/30 rounded-xl">
+                <p className="text-purple-200 text-sm font-medium">
+                  Result: Higher conversion rates, intelligent automation, AI handles 90% of conversations until prospects are sales-ready.
                 </p>
               </div>
             </div>
@@ -250,32 +339,50 @@ const SurFoxVsTextUs = () => {
         </div>
       </section>
 
-      {/* Feature Comparison */}
-      <section id="comparison" className="py-20 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Competitor Selection */}
+      <section id="comparison" className="relative py-20 bg-black/20 backdrop-blur-xl">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Feature-by-Feature Breakdown
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
+              How SurFox Compares to Every Competitor
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See exactly why businesses are switching from TextUs to SurFox AI.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose any competitor below. The psychological advantage is clear across the board.
             </p>
           </div>
 
-          {/* Category Tabs */}
+          {/* Competitor Selector */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {Object.entries(competitors).map(([key, competitor]) => (
+              <button
+                key={key}
+                onClick={() => setActiveCompetitor(key)}
+                className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all ${
+                  activeCompetitor === key
+                    ? 'bg-gradient-to-r from-gray-700 to-gray-800 text-white shadow-lg border border-gray-600'
+                    : 'bg-gray-900/60 text-gray-300 hover:bg-gray-800/60 border border-gray-700/50 backdrop-blur-sm'
+                }`}
+              >
+                {competitor.name}
+                <span className="ml-2 text-xs opacity-75">({competitor.desc})</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Feature Category Tabs */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {featureSets.map((category, index) => (
               <button
                 key={index}
                 onClick={() => setActiveFeatureSet(index)}
-                className={`flex items-center px-6 py-3 rounded-lg font-medium transition-all ${
+                className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all ${
                   activeFeatureSet === index
                     ? `bg-gradient-to-r ${
-                        category.color === 'blue' ? 'from-blue-600 to-blue-700' :
-                        category.color === 'emerald' ? 'from-emerald-600 to-emerald-700' :
-                        'from-purple-600 to-purple-700'
+                        category.color === 'purple' ? 'from-purple-600 to-purple-700' :
+                        category.color === 'cyan' ? 'from-cyan-600 to-cyan-700' :
+                        'from-blue-600 to-blue-700'
                       } text-white shadow-lg`
-                    : 'bg-gray-200 text-gray-600 hover:bg-gray-300 hover:text-gray-900 border border-gray-300'
+                    : 'bg-gray-900/60 text-gray-300 hover:bg-gray-800/60 border border-gray-700/50 backdrop-blur-sm'
                 }`}
               >
                 <category.icon className="w-5 h-5 mr-2" />
@@ -285,42 +392,40 @@ const SurFoxVsTextUs = () => {
           </div>
 
           {/* Comparison Table */}
-          <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
-            <div className="grid grid-cols-12 bg-gray-100 border-b border-gray-200">
-              <div className="col-span-6 p-4">
-                <h3 className="font-semibold text-gray-900">Feature</h3>
+          <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-3xl border border-purple-500/30 overflow-hidden shadow-2xl">
+            <div className="grid grid-cols-12 bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-400/30">
+              <div className="col-span-5 p-6">
+                <h3 className="font-bold text-white text-lg">Feature</h3>
               </div>
-              <div className="col-span-3 p-4 text-center border-l border-gray-200">
+              <div className="col-span-4 p-6 text-center border-l border-purple-400/30">
                 <div className="flex items-center justify-center">
-                  <div className="w-4 h-4 bg-gradient-to-br from-blue-600 to-purple-600 rounded mr-2"></div>
-                  <span className="font-semibold text-gray-900">SurFox</span>
+                  <div className="w-4 h-4 bg-gradient-to-br from-purple-600 to-cyan-600 rounded mr-2"></div>
+                  <span className="font-bold text-white">SurFox</span>
                 </div>
               </div>
-              <div className="col-span-3 p-4 text-center border-l border-gray-200">
+              <div className="col-span-3 p-6 text-center border-l border-purple-400/30">
                 <div className="flex items-center justify-center">
-                  <div className="w-6 h-6 bg-gray-300 rounded-lg flex items-center justify-center mr-2">
-                    <MessageSquare className="w-3 h-3 text-gray-600" />
-                  </div>
-                  <span className="font-medium text-gray-600">TextUs</span>
+                  <div className="w-4 h-4 bg-gray-500 rounded mr-2"></div>
+                  <span className="font-medium text-gray-300">{competitors[activeCompetitor].name}</span>
                 </div>
               </div>
             </div>
 
             {featureSets[activeFeatureSet].features.map((item, index) => (
-              <div key={index} className="grid grid-cols-12 border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                <div className="col-span-6 p-4">
-                  <span className="text-gray-700">{item.name}</span>
+              <div key={index} className="grid grid-cols-12 border-b border-gray-700/50 hover:bg-purple-900/20 transition-colors">
+                <div className="col-span-5 p-6">
+                  <span className="text-gray-200 font-medium">{item.name}</span>
                 </div>
-                <div className="col-span-3 p-4 text-center border-l border-gray-200">
-                  <div className="flex items-center justify-center">
-                    <Check className="w-5 h-5 text-emerald-600" />
-                    <span className="ml-2 text-emerald-600 font-medium">Yes</span>
+                <div className="col-span-4 p-6 border-l border-gray-700/50">
+                  <div className="flex items-start">
+                    <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-green-300 font-medium text-sm">{item.surfox}</span>
                   </div>
                 </div>
-                <div className="col-span-3 p-4 text-center border-l border-gray-200">
-                  <div className="flex items-center justify-center">
-                    <X className="w-5 h-5 text-red-500" />
-                    <span className="ml-2 text-red-500">No</span>
+                <div className="col-span-3 p-6 border-l border-gray-700/50">
+                  <div className="flex items-start">
+                    <X className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-red-300 text-sm">{item[activeCompetitor]}</span>
                   </div>
                 </div>
               </div>
@@ -329,190 +434,283 @@ const SurFoxVsTextUs = () => {
         </div>
       </section>
 
-      {/* ROI Comparison */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Learning Tiers & Pricing */}
+      <section className="relative py-20">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              The Numbers Don't Lie
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
+              AI Learning Tiers vs Static Pricing
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              SurFox delivers better results at a fraction of the cost — with less work required from your team.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              SurFox offers learning-based plans that get smarter over time. Competitors charge more for basic features that never improve.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            {/* Cost Analysis */}
-            <div className="bg-gray-100 border border-gray-200 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <DollarSign className="w-6 h-6 mr-3 text-emerald-600" />
-                Cost Analysis
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* SurFox Learning Plans */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-purple-300 mb-6 flex items-center">
+                <Brain className="w-6 h-6 mr-3" />
+                SurFox Learning Plans
               </h3>
               
-              <div className="space-y-6">
-                <div className="flex justify-between items-center p-4 bg-red-100 border border-red-200 rounded-lg">
-                  <div>
-                    <div className="font-semibold text-red-700">TextUs</div>
-                    <div className="text-sm text-red-600">Base plan + team time</div>
+              <div className="space-y-4">
+                <div className="bg-gradient-to-br from-gray-900/60 to-purple-900/60 border border-purple-400/30 rounded-2xl p-6 backdrop-blur-xl">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h4 className="text-lg font-bold text-purple-300">Starter - $197/month</h4>
+                      <p className="text-sm text-purple-200">No learning, basic AI functionality</p>
+                    </div>
+                    <div className="text-2xl font-bold text-purple-300">$197</div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-red-600">$2,000+</div>
-                    <div className="text-xs text-red-500">per month all-in</div>
-                  </div>
+                  <ul className="text-sm text-purple-200 space-y-1">
+                    <li>• Static AI responses</li>
+                    <li>• Default "Friendly & Casual" tone</li>
+                    <li>• Basic psychological profiling</li>
+                  </ul>
                 </div>
                 
-                <div className="flex justify-between items-center p-4 bg-blue-100 border border-blue-200 rounded-lg">
-                  <div>
-                    <div className="font-semibold text-blue-700">SurFox</div>
-                    <div className="text-sm text-blue-600">AI automation included</div>
+                <div className="bg-gradient-to-br from-purple-900/60 to-cyan-900/60 border-2 border-purple-400/50 rounded-2xl p-6 backdrop-blur-xl shadow-lg shadow-purple-500/25">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h4 className="text-lg font-bold text-cyan-300">Growth - $397/month</h4>
+                      <p className="text-sm text-cyan-200">100 conversation memory & learning</p>
+                    </div>
+                    <div className="text-2xl font-bold text-cyan-300">$397</div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-blue-600">$197</div>
-                    <div className="text-xs text-blue-500">per month starter</div>
-                  </div>
+                  <ul className="text-sm text-cyan-200 space-y-1">
+                    <li>• AI learns from last 100 conversations</li>
+                    <li>• Personality pattern recognition</li>
+                    <li>• Psychological tone optimization</li>
+                  </ul>
                 </div>
                 
-                <div className="text-center p-4 bg-emerald-100 border border-emerald-200 rounded-lg">
-                  <div className="text-2xl font-bold text-emerald-600">90% Cost Savings</div>
-                  <div className="text-sm text-emerald-700">with SurFox AI automation</div>
+                <div className="bg-gradient-to-br from-blue-900/60 to-indigo-900/60 border border-blue-400/30 rounded-2xl p-6 backdrop-blur-xl">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h4 className="text-lg font-bold text-blue-300">Scale - $997/month</h4>
+                      <p className="text-sm text-blue-200">1000+ conversation memory</p>
+                    </div>
+                    <div className="text-2xl font-bold text-blue-300">$997</div>
+                  </div>
+                  <ul className="text-sm text-blue-200 space-y-1">
+                    <li>• Advanced behavioral adaptation</li>
+                    <li>• Comprehensive psychological insights</li>
+                    <li>• Custom learning models</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            {/* Results Comparison */}
-            <div className="bg-gray-100 border border-gray-200 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <TrendingUp className="w-6 h-6 mr-3 text-blue-600" />
-                Results Comparison
+            {/* Competitor Static Pricing */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-400 mb-6 flex items-center">
+                <MessageSquare className="w-6 h-6 mr-3" />
+                Competitor Static Plans
               </h3>
               
-              <div className="space-y-6">
-                <div className="p-4 bg-gray-200 border border-gray-300 rounded-lg">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-gray-700">TextUs Results</span>
-                    <span className="text-gray-600">per 1,000 leads</span>
+              <div className="space-y-4">
+                <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 border border-gray-600/30 rounded-2xl p-6 backdrop-blur-xl">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-400">TextUs</h4>
+                      <p className="text-sm text-gray-500">Manual messaging platform</p>
+                    </div>
+                    <div className="text-2xl font-bold text-gray-400">$500+</div>
                   </div>
-                  <div className="text-2xl font-bold text-red-600">2-4 deals</div>
-                  <div className="text-sm text-gray-500">High manual effort required</div>
+                  <ul className="text-sm text-gray-500 space-y-1">
+                    <li>• Manual message crafting</li>
+                    <li>• No AI or learning</li>
+                    <li>• Basic inbox management</li>
+                  </ul>
                 </div>
                 
-                <div className="p-4 bg-blue-100 border border-blue-200 rounded-lg">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-blue-700">SurFox Results</span>
-                    <span className="text-blue-600">per 1,000 leads</span>
+                <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 border border-gray-600/30 rounded-2xl p-6 backdrop-blur-xl">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-400">Launch Control</h4>
+                      <p className="text-sm text-gray-500">Basic SMS automation</p>
+                    </div>
+                    <div className="text-2xl font-bold text-gray-400">$300+</div>
                   </div>
-                  <div className="text-2xl font-bold text-blue-600">15-25 deals</div>
-                  <div className="text-sm text-blue-700">AI handles qualification</div>
+                  <ul className="text-sm text-gray-500 space-y-1">
+                    <li>• Fixed automation sequences</li>
+                    <li>• No psychological analysis</li>
+                    <li>• Template-based messaging</li>
+                  </ul>
                 </div>
                 
-                <div className="text-center p-4 bg-emerald-100 border border-emerald-200 rounded-lg">
-                  <div className="text-2xl font-bold text-emerald-600">6x Better ROI</div>
-                  <div className="text-sm text-emerald-700">with intelligent automation</div>
+                <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 border border-gray-600/30 rounded-2xl p-6 backdrop-blur-xl">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-400">Smarter Contact</h4>
+                      <p className="text-sm text-gray-500">Contact management focus</p>
+                    </div>
+                    <div className="text-2xl font-bold text-gray-400">$400+</div>
+                  </div>
+                  <ul className="text-sm text-gray-500 space-y-1">
+                    <li>• Contact database management</li>
+                    <li>• Limited AI capabilities</li>
+                    <li>• Manual lead qualification</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Time Investment */}
-          <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Time Investment Comparison</h3>
-            <div className="grid md:grid-cols-3 gap-8">
+          
+          {/* Value Proposition */}
+          <div className="mt-12 bg-gradient-to-r from-purple-900/40 to-blue-900/40 border border-purple-400/30 rounded-2xl p-8 text-center backdrop-blur-xl">
+            <h3 className="text-2xl font-bold text-white mb-4">The Clear Choice</h3>
+            <p className="text-lg text-purple-200 mb-6">
+              Get more advanced AI capability for less money. Plus, your AI actually gets smarter over time instead of staying static forever.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-lg text-gray-600 mb-2">Setup Time</div>
-                <div className="text-3xl font-bold text-red-600 mb-2">2-3 hours</div>
-                <div className="text-sm text-gray-500">TextUs training</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">50% Less</div>
+                <div className="text-sm text-purple-300">Starting price vs competitors</div>
               </div>
               <div className="text-center">
-                <div className="text-lg text-gray-600 mb-2">vs</div>
-                <div className="text-3xl font-bold text-blue-600 mb-2">15 minutes</div>
-                <div className="text-sm text-gray-600">SurFox AI setup</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">90% Automation</div>
+                <div className="text-sm text-cyan-300">vs 0% with manual platforms</div>
               </div>
               <div className="text-center">
-                <div className="text-lg text-gray-600 mb-2">Daily Management</div>
-                <div className="text-3xl font-bold text-red-600 mb-2">4+ hours</div>
-                <div className="text-sm text-gray-500">vs 30 minutes</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">Always Learning</div>
+                <div className="text-sm text-green-300">vs static capabilities</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Migration Section */}
-      <section className="py-20 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* The Technology Advantage */}
+      <section className="relative py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50 backdrop-blur-xl border-y border-purple-500/30">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Switch from TextUs in Minutes
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
+              What 50+ Psychological Dimensions Actually Means
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join hundreds of businesses who've upgraded from manual messaging to AI-powered conversations.
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+              While competitors track basic metrics like "opened" and "replied," SurFox analyzes the psychology behind every interaction.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Database, title: 'Export Your Data', desc: 'Download your TextUs contact list - we\'ll help you import everything seamlessly.' },
-              { icon: FileText, title: 'Train Your AI', desc: 'Upload your scripts and materials. AI learns your messaging style in minutes.' },
-              { icon: Settings, title: 'Configure Campaigns', desc: 'Set up intelligent campaigns with AI personas and automated follow-ups.' },
-              { icon: Sparkles, title: 'Start Converting', desc: 'Watch AI engage prospects and deliver qualified leads automatically.' }
-            ].map((step, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:border-gray-300 transition-all">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-6 h-6 text-white" />
+              {
+                icon: Eye,
+                title: 'Personality Profiling',
+                desc: 'Decisiveness level, skepticism index, motivation patterns, communication preferences',
+                items: ['Decision-making speed', 'Trust building requirements', 'Information processing style', 'Response to urgency'],
+                gradient: 'from-purple-500 to-cyan-500'
+              },
+              {
+                icon: Activity,
+                title: 'Behavioral Patterns',
+                desc: 'Engagement curves, sentiment trends, conversation flow preferences, timing patterns',
+                items: ['Best contact times', 'Message length preferences', 'Question response patterns', 'Escalation triggers'],
+                gradient: 'from-cyan-500 to-blue-500'
+              },
+              {
+                icon: Lightbulb,
+                title: 'Conversation Intelligence',
+                desc: 'Depth analysis, timing optimization, flow patterns, psychological adaptation',
+                items: ['Conversation depth scores', 'Optimal follow-up timing', 'Successful sequence patterns', 'Psychological state changes'],
+                gradient: 'from-blue-500 to-purple-500'
+              }
+            ].map((feature, index) => (
+              <div key={index} className="bg-gradient-to-br from-gray-900/60 to-black/60 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-xl hover:border-purple-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+                <div className={`w-12 h-12 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center mb-4`}>
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-600 text-sm">{step.desc}</p>
+                <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 text-sm mb-4">{feature.desc}</p>
+                <div className="space-y-2">
+                  {feature.items.map((item, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-gray-400">
+                      <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3"></div>
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-bold text-red-400 mb-4">What Competitors Track:</h3>
+                <div className="space-y-2">
+                  {['Message delivered', 'Message opened', 'Message replied', 'Contact information', 'Basic timestamps'].map((item, idx) => (
+                    <div key={idx} className="flex items-center text-gray-400">
+                      <X className="w-4 h-4 text-red-400 mr-3" />
+                      <span className="text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-purple-300 mb-4">What SurFox Analyzes:</h3>
+                <div className="space-y-2">
+                  {['50+ psychological dimensions', 'Behavioral learning patterns', 'Conversation intelligence', 'Personality-based optimization', 'Predictive engagement scoring'].map((item, idx) => (
+                    <div key={idx} className="flex items-center text-purple-200">
+                      <Check className="w-4 h-4 text-green-400 mr-3" />
+                      <span className="text-sm font-medium">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section id="cta" className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-            Stop Paying More for Less
+      <section id="cta" className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+            Ready to Upgrade from Manual to Psychological?
           </h2>
-          <p className="text-xl text-gray-700 mb-4 max-w-2xl mx-auto">
-            TextUs charges $500+ per month for basic messaging. SurFox delivers AI-powered conversations starting at $197.
+          <p className="text-2xl text-purple-200 mb-4 max-w-3xl mx-auto leading-relaxed">
+            Stop paying more for less. Join the Sales Psychology AI revolution and watch your conversion rates transform.
           </p>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            <strong className="text-gray-800">Free 14-day trial.</strong> No setup fees. See results in your first week or keep using TextUs.
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            <strong className="text-white">Free 14-day trial.</strong> No setup fees. Experience the psychological advantage risk-free.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a href="#" className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all inline-flex items-center justify-center">
-              Start Free Trial
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a href="#" className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all">
-              Schedule Demo
+          <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
+            <button className="group relative px-12 py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
+              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative flex items-center justify-center">
+                Start Free Trial
+                <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </button>
+            <a href="#" className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
+              See Psychology AI Demo
             </a>
           </div>
           
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-purple-200">
             <div className="flex items-center">
-              <Shield className="w-4 h-4 mr-2 text-emerald-500" />
+              <Shield className="w-4 h-4 mr-2 text-green-400" />
               No credit card required
             </div>
             <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2 text-emerald-500" />
-              15-minute setup
+              <Brain className="w-4 h-4 mr-2 text-green-400" />
+              AI learns from day one
             </div>
             <div className="flex items-center">
-              <Award className="w-4 h-4 mr-2 text-emerald-500" />
+              <Award className="w-4 h-4 mr-2 text-green-400" />
               Cancel anytime
             </div>
           </div>
 
           <div className="mt-12">
-            <p className="text-sm text-gray-500 mb-4">Join teams who've already made the switch</p>
-            <div className="flex items-center justify-center space-x-8 opacity-60">
-              {['TechFlow', 'SalesCore', 'GrowthTeam', 'LeadGen Pro'].map((company, index) => (
-                <div key={index} className="text-gray-600 font-medium">{company}</div>
-              ))}
+            <p className="text-sm text-gray-400 mb-4">The future of sales is psychological, not manual</p>
+            <div className="text-xs text-gray-500">
+              * SurFox is currently in development. Features and pricing subject to change.
             </div>
           </div>
         </div>
@@ -521,4 +719,4 @@ const SurFoxVsTextUs = () => {
   )
 }
 
-export default SurFoxVsTextUs
+export default SurFoxCompetitorComparison
