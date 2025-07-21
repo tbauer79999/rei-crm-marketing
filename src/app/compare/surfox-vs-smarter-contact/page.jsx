@@ -576,24 +576,24 @@ const SurFoxVsSmarterContact = () => {
             </div>
           </div>
 
-          {/* ROI Comparison */}
+          {/* Approach Comparison */}
           <div className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 border border-purple-400/30 rounded-2xl p-8 text-center backdrop-blur-xl">
-            <h3 className="text-2xl font-bold text-white mb-6">Value Delivered Comparison</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Fundamental Approach Difference</h3>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-lg text-purple-200 mb-2">Smarter Contact Approach</div>
+                <div className="text-lg text-purple-200 mb-2">Smarter Contact Philosophy</div>
                 <div className="text-3xl font-bold text-green-400 mb-2">Volume</div>
                 <div className="text-sm text-gray-400">Send thousands, hope for responses</div>
               </div>
               <div className="text-center">
                 <div className="text-lg text-purple-200 mb-2">vs</div>
-                <div className="text-3xl font-bold text-purple-400 mb-2">Quality</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">Intelligence</div>
                 <div className="text-sm text-purple-300">AI delivers qualified prospects</div>
               </div>
               <div className="text-center">
-                <div className="text-lg text-purple-200 mb-2">Result</div>
-                <div className="text-3xl font-bold text-cyan-400 mb-2">6x More</div>
-                <div className="text-sm text-gray-400">deals closed per 1,000 leads</div>
+                <div className="text-lg text-purple-200 mb-2">Expected Result</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">Higher Quality</div>
+                <div className="text-sm text-gray-400">leads per conversation</div>
               </div>
             </div>
             <div className="mt-6 p-4 bg-purple-900/30 rounded-xl">
