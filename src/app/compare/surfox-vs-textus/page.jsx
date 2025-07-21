@@ -353,10 +353,10 @@ const SurFoxVsTextUs = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              The Numbers Don't Lie
+              The Logical Advantage
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              SurFox delivers better results at a fraction of the cost — with less work required from your team.
+              SurFox delivers superior capabilities at a fraction of the cost. Here's why the math works in your favor.
             </p>
           </div>
 
@@ -365,68 +365,84 @@ const SurFoxVsTextUs = () => {
             <div className="bg-gradient-to-br from-gray-900/60 to-black/60 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-xl">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <DollarSign className="w-6 h-6 mr-3 text-green-400" />
-                Cost Analysis
+                True Cost Analysis
               </h3>
               
               <div className="space-y-6">
-                <div className="flex justify-between items-center p-4 bg-red-900/40 border border-red-400/30 rounded-xl">
-                  <div>
-                    <div className="font-semibold text-red-300">TextUs</div>
-                    <div className="text-sm text-red-200">Base plan + team time</div>
+                <div className="p-4 bg-red-900/40 border border-red-400/30 rounded-xl">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <div className="font-semibold text-red-300">TextUs Total Cost</div>
+                      <div className="text-sm text-red-200">Platform + hidden costs</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-red-400">$2,000+</div>
+                      <div className="text-xs text-red-300">per month</div>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-red-400">$2,000+</div>
-                    <div className="text-xs text-red-300">per month all-in</div>
+                  <div className="text-xs text-red-200 space-y-1">
+                    <div>• $500+ base subscription</div>
+                    <div>• $1,200+ salary costs (manual work)</div>
+                    <div>• $300+ lost opportunity cost</div>
                   </div>
                 </div>
                 
-                <div className="flex justify-between items-center p-4 bg-purple-900/40 border border-purple-400/30 rounded-xl">
-                  <div>
-                    <div className="font-semibold text-purple-300">SurFox</div>
-                    <div className="text-sm text-purple-200">AI automation included</div>
+                <div className="p-4 bg-purple-900/40 border border-purple-400/30 rounded-xl">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <div className="font-semibold text-purple-300">SurFox Total Cost</div>
+                      <div className="text-sm text-purple-200">AI does the work</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-purple-400">$197</div>
+                      <div className="text-xs text-purple-300">per month</div>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-purple-400">$197</div>
-                    <div className="text-xs text-purple-300">per month starter</div>
+                  <div className="text-xs text-purple-200 space-y-1">
+                    <div>• $197 all-inclusive subscription</div>
+                    <div>• $0 manual qualification time</div>
+                    <div>• $0 message writing time</div>
                   </div>
                 </div>
                 
                 <div className="text-center p-4 bg-green-900/40 border border-green-400/30 rounded-xl">
-                  <div className="text-2xl font-bold text-green-400">90% Cost Savings</div>
-                  <div className="text-sm text-green-300">with SurFox AI automation</div>
+                  <div className="text-2xl font-bold text-green-400">90% Cost Reduction</div>
+                  <div className="text-sm text-green-300">by eliminating manual work</div>
                 </div>
               </div>
             </div>
 
-            {/* Results Comparison */}
+            {/* Capability Comparison */}
             <div className="bg-gradient-to-br from-gray-900/60 to-black/60 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-xl">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <TrendingUp className="w-6 h-6 mr-3 text-cyan-400" />
-                Results Comparison
+                <Brain className="w-6 h-6 mr-3 text-cyan-400" />
+                Intelligence Comparison
               </h3>
               
               <div className="space-y-6">
                 <div className="p-4 bg-gray-800/40 border border-gray-600/30 rounded-xl">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-gray-300">TextUs Results</span>
-                    <span className="text-gray-400">per 1,000 leads</span>
+                  <h4 className="font-semibold text-gray-300 mb-2">TextUs Capabilities</h4>
+                  <div className="space-y-2 text-sm text-gray-400">
+                    <div className="flex items-center"><X className="w-3 h-3 mr-2 text-red-400" />No AI intelligence</div>
+                    <div className="flex items-center"><X className="w-3 h-3 mr-2 text-red-400" />Manual message crafting</div>
+                    <div className="flex items-center"><X className="w-3 h-3 mr-2 text-red-400" />No learning or adaptation</div>
+                    <div className="flex items-center"><X className="w-3 h-3 mr-2 text-red-400" />No psychological profiling</div>
                   </div>
-                  <div className="text-2xl font-bold text-red-400">2-4 deals</div>
-                  <div className="text-sm text-gray-400">High manual effort required</div>
                 </div>
                 
                 <div className="p-4 bg-purple-900/40 border border-purple-400/30 rounded-xl">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-purple-300">SurFox Results</span>
-                    <span className="text-purple-200">per 1,000 leads</span>
+                  <h4 className="font-semibold text-purple-300 mb-2">SurFox Capabilities</h4>
+                  <div className="space-y-2 text-sm text-purple-200">
+                    <div className="flex items-center"><Check className="w-3 h-3 mr-2 text-green-400" />50+ psychological dimensions</div>
+                    <div className="flex items-center"><Check className="w-3 h-3 mr-2 text-green-400" />AI learns & improves</div>
+                    <div className="flex items-center"><Check className="w-3 h-3 mr-2 text-green-400" />Behavioral adaptation</div>
+                    <div className="flex items-center"><Check className="w-3 h-3 mr-2 text-green-400" />Conversation intelligence</div>
                   </div>
-                  <div className="text-2xl font-bold text-purple-400">15-25 deals</div>
-                  <div className="text-sm text-purple-300">AI handles qualification</div>
                 </div>
                 
-                <div className="text-center p-4 bg-green-900/40 border border-green-400/30 rounded-xl">
-                  <div className="text-2xl font-bold text-green-400">6x Better ROI</div>
-                  <div className="text-sm text-green-300">with intelligent automation</div>
+                <div className="text-center p-4 bg-gradient-to-r from-purple-900/50 to-cyan-900/50 border border-purple-400/30 rounded-xl">
+                  <div className="text-xl font-bold text-white mb-2">Revolutionary Advantage</div>
+                  <div className="text-sm text-purple-200">First-ever Sales Psychology AI vs manual messaging</div>
                 </div>
               </div>
             </div>
@@ -434,12 +450,12 @@ const SurFoxVsTextUs = () => {
 
           {/* Time Investment */}
           <div className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 border border-purple-400/30 rounded-2xl p-8 text-center backdrop-blur-xl">
-            <h3 className="text-2xl font-bold text-white mb-6">Time Investment Comparison</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Team Productivity Comparison</h3>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-lg text-purple-200 mb-2">Setup Time</div>
+                <div className="text-lg text-purple-200 mb-2">Setup Complexity</div>
                 <div className="text-3xl font-bold text-red-400 mb-2">2-3 hours</div>
-                <div className="text-sm text-gray-400">TextUs training</div>
+                <div className="text-sm text-gray-400">TextUs training + setup</div>
               </div>
               <div className="text-center">
                 <div className="text-lg text-purple-200 mb-2">vs</div>
@@ -447,10 +463,15 @@ const SurFoxVsTextUs = () => {
                 <div className="text-sm text-purple-300">SurFox AI setup</div>
               </div>
               <div className="text-center">
-                <div className="text-lg text-purple-200 mb-2">Daily Management</div>
+                <div className="text-lg text-purple-200 mb-2">Daily Manual Work</div>
                 <div className="text-3xl font-bold text-red-400 mb-2">4+ hours</div>
-                <div className="text-sm text-gray-400">vs 30 minutes</div>
+                <div className="text-sm text-gray-400">vs 30 minutes with AI</div>
               </div>
+            </div>
+            <div className="mt-6 p-4 bg-purple-900/30 rounded-xl">
+              <p className="text-purple-200 font-medium">
+                <strong className="text-white">The logical advantage:</strong> AI that works 24/7 vs humans that need sleep, vacation, and sick days.
+              </p>
             </div>
           </div>
         </div>
