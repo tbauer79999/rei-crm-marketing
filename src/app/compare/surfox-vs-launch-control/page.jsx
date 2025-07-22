@@ -132,67 +132,32 @@ const SurFoxVsLaunchControl = () => {
                 </div>
                 <div className="pl-6 space-y-2">
                   <a
-                    href="/vs-twilio"
+                    href="/compare/surfox-vs-all-competitors"
                     onClick={handleMenuItemClick}
                     className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
                   >
-                    vs Twilio
+                    vs All Competitors
                   </a>
                   <a
-                    href="/vs-salesloft"
-                    onClick={handleMenuItemClick}
-                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
-                  >
-                    vs SalesLoft
-                  </a>
-                  <a
-                    href="/vs-outreach"
-                    onClick={handleMenuItemClick}
-                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
-                  >
-                    vs Outreach
-                  </a>
-                  <a
-                    href="/vs-hubspot"
-                    onClick={handleMenuItemClick}
-                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
-                  >
-                    vs HubSpot
-                  </a>
-                  <a
-                    href="/vs-salesforce"
-                    onClick={handleMenuItemClick}
-                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
-                  >
-                    vs Salesforce
-                  </a>
-                  <a
-                    href="/vs-textus"
-                    onClick={handleMenuItemClick}
-                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
-                  >
-                    vs TextUs
-                  </a>
-                  <a
-                    href="/vs-smarter-contact"
-                    onClick={handleMenuItemClick}
-                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
-                  >
-                    vs Smarter Contact
-                  </a>
-                  <a
-                    href="/vs-launch-control"
+                    href="/compare/surfox-vs-launch-control"
                     onClick={handleMenuItemClick}
                     className="block px-4 py-2 text-base text-purple-200 bg-purple-500/30 hover:text-white hover:bg-purple-500/40 rounded-lg transition-all border border-purple-400/30"
                   >
                     vs Launch Control (Current)
                   </a>
                   <a
-                    href="/vs-all-competitors"
+                    href="/compare/surfox-vs-smarter-contact"
                     onClick={handleMenuItemClick}
                     className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
                   >
-                    vs All Competitors
+                    vs Smarter Contact
+                  </a>
+                  <a
+                    href="/compare/surfox-vs-textus"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+                  >
+                    vs Textus
                   </a>
                 </div>
               </div>
