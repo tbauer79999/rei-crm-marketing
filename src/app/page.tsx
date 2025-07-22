@@ -916,7 +916,7 @@ const SurFoxHomepage = () => {
               <ul className="text-left space-y-3 mb-8 text-sm">
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>500 monthly leads</span>
+                  <span>1,000 monthly leads</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
@@ -964,7 +964,7 @@ const SurFoxHomepage = () => {
               <ul className="text-left space-y-3 mb-8 text-sm">
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>2,500 monthly leads</span>
+                  <span>5,000 monthly leads</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
