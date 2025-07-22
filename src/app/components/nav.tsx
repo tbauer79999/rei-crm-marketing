@@ -44,7 +44,7 @@ export default function Nav() {
             <Link href="/#psychology-ai" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
               Psychology AI
             </Link>
-            <Link href="/#how-it-works" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
+            <Link href="/how-it-works" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
               How It Works
             </Link>
             <Link href="/toms-story" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
