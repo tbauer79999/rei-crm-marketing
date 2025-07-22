@@ -166,81 +166,17 @@ const FoundersLetter = () => {
                   <div className="flex flex-col">
                     <p className="text-lg text-gray-700 mb-6">Sincerely,</p>
                     
-                    {/* Recreated Handwritten Signature - Tom Bauer */}
+                    {/* Stylized Cursive Signature - Not Real Signature */}
                     <div className="mb-4">
-                      <svg 
-                        width="320" 
-                        height="90" 
-                        viewBox="0 0 320 90" 
-                        className="h-20 w-auto"
-                        style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.1))' }}
+                      <div 
+                        className="text-4xl text-gray-700 transform -rotate-1 select-none"
+                        style={{
+                          fontFamily: 'Brush Script MT, Dancing Script, cursive',
+                          letterSpacing: '2px'
+                        }}
                       >
-                        {/* Tom - First stroke (T) */}
-                        <path 
-                          d="M15 25 Q25 15 35 25 Q45 35 40 45" 
-                          fill="none" 
-                          stroke="#1f2937" 
-                          strokeWidth="3" 
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        
-                        {/* Tom - "om" part */}
-                        <path 
-                          d="M42 42 Q52 35 62 45 Q72 55 75 45 Q78 35 85 42 Q92 50 88 55 Q84 60 80 55" 
-                          fill="none" 
-                          stroke="#1f2937" 
-                          strokeWidth="3" 
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        
-                        {/* Small connecting line between Tom and Bauer */}
-                        <path 
-                          d="M88 50 Q105 45 120 50" 
-                          fill="none" 
-                          stroke="#1f2937" 
-                          strokeWidth="2.5" 
-                          strokeLinecap="round"
-                        />
-                        
-                        {/* Bauer - "B" with large loop */}
-                        <path 
-                          d="M125 30 Q135 15 150 25 Q165 35 155 50 Q145 65 135 55 Q125 45 130 35 Q135 25 145 30 Q155 35 160 45" 
-                          fill="none" 
-                          stroke="#1f2937" 
-                          strokeWidth="3" 
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        
-                        {/* Bauer - "auer" flowing script */}
-                        <path 
-                          d="M165 45 Q175 40 185 50 Q195 60 200 50 Q205 40 215 48 Q225 56 230 48 Q235 40 245 45 Q255 50 260 55 Q265 60 270 55 Q275 50 280 55" 
-                          fill="none" 
-                          stroke="#1f2937" 
-                          strokeWidth="3" 
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        
-                        {/* Final flourish at end */}
-                        <path 
-                          d="M280 55 Q290 50 295 58 Q300 65 295 60" 
-                          fill="none" 
-                          stroke="#1f2937" 
-                          strokeWidth="2.5" 
-                          strokeLinecap="round"
-                        />
-                        
-                        {/* Dot over i in signature style */}
-                        <circle 
-                          cx="200" 
-                          cy="35" 
-                          r="2" 
-                          fill="#1f2937"
-                        />
-                      </svg>
+                        Tom Bauer
+                      </div>
                     </div>
                     
                     <div className="text-gray-600">
