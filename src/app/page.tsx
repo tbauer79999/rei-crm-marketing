@@ -61,7 +61,7 @@ const SurFoxHomepage = () => {
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                  Why are you texting them like they do?
+                  So why are you texting them like they do?
                 </span>
               </h1>
               
