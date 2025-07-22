@@ -69,7 +69,7 @@ const SurFoxHomepage = () => {
                 <p>After 20 years in sales, I realized we were texting all prospects the same way.</p>
                 <p className="text-lg text-gray-300">
                   <strong className="text-white"> Some people are skeptical, others decisive. Some need data, others need emotion.</strong>
-                  <br />SurFox SMS AI learns their psychology and adapts every text message.
+                  <br />SurFox learns their psychology and adapts every text message.
                 </p>
               </div>
               
