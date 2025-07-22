@@ -102,7 +102,7 @@ export default function Nav() {
         <div className="md:hidden bg-slate-800/95 backdrop-blur-xl border-t border-purple-500/30">
           <div className="px-4 py-6 space-y-4">
             <Link href="/smarter-Texting" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">Psychology AI</Link>
-            <Link href="/#how-it-works" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">How It Works</Link>
+            <Link href="/how-it-works" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">How It Works</Link>
             <Link href="/toms-story" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">Tom's Story</Link>
             <Link href="/#industries" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">Industries</Link>
             <Link href="/#pricing" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">Pricing</Link>
