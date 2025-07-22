@@ -45,17 +45,17 @@ const SurFoxHomepage = () => {
         <div className="absolute bottom-40 right-40 w-60 h-60 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
-      {/* Hero Section - Completely Reimagined */}
-      <section className="relative py-20 pt-32 min-h-screen flex items-center">
+      {/* Hero Section - Fixed Above Fold */}
+      <section className="relative py-12 pt-24 min-h-[85vh] flex items-center">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 backdrop-blur-sm">
-                <MessageSquare className="w-5 h-5 mr-3 text-purple-300" />
-                <span className="text-purple-200 font-medium">World's First SMS Psychology AI Engine</span>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 backdrop-blur-sm">
+                <MessageSquare className="w-4 h-4 mr-2 text-purple-300" />
+                <span className="text-purple-200 font-medium text-sm">World's First SMS Psychology AI Engine</span>
               </div>
               
-              <h1 className="text-6xl md:text-7xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
                   I built an SMS messaging
                 </span>
@@ -65,7 +65,7 @@ const SurFoxHomepage = () => {
                 </span>
               </h1>
               
-              <div className="text-2xl text-purple-200 space-y-4">
+              <div className="text-xl text-purple-200 space-y-4">
                 <p>After 20 years in sales, I realized we were texting all prospects the same way.</p>
                 <p className="text-lg text-gray-300">
                   <strong className="text-white"> Some people are skeptical, others decisive. Some need data, others need emotion.</strong>
@@ -73,23 +73,23 @@ const SurFoxHomepage = () => {
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-6">
-                <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <button className="group relative px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative flex items-center justify-center">
-                    <Play className="w-6 h-6 mr-3" />
+                    <Play className="w-5 h-5 mr-2" />
                     Watch Tom's Story
                   </div>
                 </button>
-                <a href="#how-it-works" className="px-8 py-4 border-2 border-purple-400/50 rounded-2xl font-bold text-lg backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-300">
+                <a href="#how-it-works" className="px-6 py-3 border-2 border-purple-400/50 rounded-xl font-bold text-lg backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-300">
                   See The AI In Action
                 </a>
               </div>
 
-              {/* Tom's Quote */}
-              <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-6 mt-8">
-                <p className="text-purple-200 text-lg mb-4 italic">
-                  "While other platforms blast the same SMS to everyone, SurFox reads human psychology and adapts each text message. Our AI learns which personality types respond to which approaches, creating personalized SMS conversations that feel human but scale like technology."
+              {/* Tom's Quote - Condensed */}
+              <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-xl rounded-xl border border-purple-500/30 p-6 mt-6">
+                <p className="text-purple-200 text-base mb-3 italic">
+                  "While other platforms blast the same SMS to everyone, SurFox reads human psychology and adapts each text message."
                 </p>
                 <p className="text-purple-300 text-sm">
                   Tom Bauer, Founder & CEO
@@ -97,23 +97,23 @@ const SurFoxHomepage = () => {
               </div>
             </div>
 
-            {/* Live AI Demo */}
+            {/* Live AI Demo - More Compact */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-3xl border border-purple-500/30 p-8 shadow-2xl">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-bold text-purple-200">Live Psychology AI</h3>
+              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-6 shadow-2xl">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-bold text-purple-200">Live Psychology AI</h3>
                   <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-green-300 text-sm">LEARNING</span>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="text-green-300 text-xs">LEARNING</span>
                   </div>
                 </div>
                 
-                {/* AI Analysis Display */}
-                <div className="space-y-4 mb-6">
-                  <div className="bg-black/40 rounded-xl p-4 border border-cyan-500/30">
-                    <div className="text-cyan-300 text-sm mb-2">AI Analyzing Prospect Psychology...</div>
-                    <div className="grid grid-cols-2 gap-4 text-xs">
-                      <div className="space-y-2">
+                {/* AI Analysis Display - Smaller */}
+                <div className="space-y-3 mb-4">
+                  <div className="bg-black/40 rounded-lg p-3 border border-cyan-500/30">
+                    <div className="text-cyan-300 text-xs mb-2">AI Analyzing Prospect Psychology...</div>
+                    <div className="grid grid-cols-2 gap-3 text-xs">
+                      <div className="space-y-1">
                         <div className="flex justify-between">
                           <span className="text-gray-400">Decision Style:</span>
                           <span className="text-yellow-400 font-bold">Analytical</span>
@@ -123,7 +123,7 @@ const SurFoxHomepage = () => {
                           <span className="text-red-400 font-bold">Skeptical</span>
                         </div>
                       </div>
-                      <div className="space-y-2">
+                      <div className="space-y-1">
                         <div className="flex justify-between">
                           <span className="text-gray-400">Motivation:</span>
                           <span className="text-green-400 font-bold">ROI-Driven</span>
@@ -136,29 +136,29 @@ const SurFoxHomepage = () => {
                     </div>
                   </div>
                   
-                  {/* Live SMS Generation */}
-                  <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-xl p-4 border border-purple-400/30">
-                    <div className="text-purple-300 text-sm mb-2">Generating Personalized SMS:</div>
-                    <div className="bg-black/60 rounded-lg p-3 font-mono text-sm text-green-300 min-h-[60px] flex items-center">
+                  {/* Live SMS Generation - Smaller */}
+                  <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-lg p-3 border border-purple-400/30">
+                    <div className="text-purple-300 text-xs mb-2">Generating Personalized SMS:</div>
+                    <div className="bg-black/60 rounded-lg p-2 font-mono text-xs text-green-300 min-h-[40px] flex items-center">
                       {typingText}<span className="animate-pulse">|</span>
                     </div>
                   </div>
                 </div>
                 
                 <div className="text-center">
-                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-full border border-green-400/30">
-                    <Zap className="w-4 h-4 mr-2 text-green-400" />
-                    <span className="text-green-300 text-sm font-medium">Psychology Match: 94%</span>
+                  <div className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-full border border-green-400/30">
+                    <Zap className="w-3 h-3 mr-2 text-green-400" />
+                    <span className="text-green-300 text-xs font-medium">Psychology Match: 94%</span>
                   </div>
                 </div>
               </div>
               
-              {/* Floating Elements */}
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center transform rotate-12 shadow-xl">
-                <Brain className="w-12 h-12 text-white" />
+              {/* Floating Elements - Smaller */}
+              <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center transform rotate-12 shadow-xl">
+                <Brain className="w-8 h-8 text-white" />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center transform -rotate-12 shadow-xl">
-                <Sparkles className="w-8 h-8 text-white" />
+              <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center transform -rotate-12 shadow-xl">
+                <Sparkles className="w-6 h-6 text-white" />
               </div>
             </div>
           </div>
