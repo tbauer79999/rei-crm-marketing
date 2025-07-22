@@ -113,11 +113,11 @@ const FoundersLetter = () => {
               <div className="prose prose-lg prose-gray max-w-none">
                 
                 <p className="text-lg text-gray-800 leading-relaxed mb-6 font-medium">
-                  I grew up in a tiny town in Michigan — youngest of seven. My parents weren't the book-smart, business-type people. They were the hard work, show-up-for-your-neighbor kind. They raised us with grit, decency, and a simple rule: treat people right.
+                  I grew up in a tiny town in Michigan, youngest of seven. My parents weren't the book-smart, business-type people. They were the hard work, show-up-for-your-neighbor kind. They raised us with grit, decency, and a simple rule: treat people right.
                 </p>
                 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  I spent the next 20 years in sales. And through all of it — good years, rough years, huge wins, dry spells — one truth kept rising to the top:
+                  I spent the next 20 years in sales. And through all of it, good years, rough years, huge wins, dry spells, one truth kept rising to the top:
                 </p>
                 
                 <div className="text-center my-8">
@@ -132,11 +132,11 @@ const FoundersLetter = () => {
                 </div>
                 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  People don't care how much you know until they know how much you care. The sales that stick — the ones that turn into long-term relationships — come from dignity, from listening, from <em className="text-purple-600 font-semibold">real</em> respect.
+                  People don't care how much you know until they know how much you care. The sales that stick, the ones that turn into long-term relationships, come from dignity, from listening, from <em className="text-purple-600 font-semibold">real</em> respect.
                 </p>
                 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Most companies treat sales like a numbers game. Hammer the phones. Burn the list. Spray and pray. I've never believed in that. It's not a numbers game — it's an <em className="text-cyan-600 font-semibold">efficiency</em> game.
+                  Most companies treat sales like a numbers game. Hammer the phones. Burn the list. Spray and pray. I've never believed in that. It's not a numbers game, it's an <em className="text-cyan-600 font-semibold">efficiency</em> game.
                 </p>
                 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -148,7 +148,7 @@ const FoundersLetter = () => {
                 </p>
                 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Most platforms scan 2–4 data points and call it "lead scoring." SurFox looks at 50. Not just surface data like open rates or replies — but behavior, timing, tone, engagement signals, and more.
+                  Most platforms scan 2–4 data points and call it "lead scoring." SurFox looks at 50. Not just surface data like open rates or replies, but behavior, timing, tone, engagement signals, and more.
                 </p>
                 
                 <div className="bg-gradient-to-r from-purple-50 to-cyan-50 rounded-xl p-6 my-8 border border-purple-200/50">
