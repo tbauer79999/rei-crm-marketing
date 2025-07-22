@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const FoundersLetter = () => {
   return (
@@ -108,12 +109,12 @@ const FoundersLetter = () => {
                 <p>Ready to see what SurFox can do for your business?</p>
               </div>
               <div className="flex gap-4">
-                <a href="/#demo" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all">
+                <Link href="/#demo" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all">
                   Try SurFox Free
-                </a>
-                <a href="/" className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all">
+                </Link>
+                <Link href="/" className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all">
                   Learn More
-                </a>
+                </Link>
               </div>
             </div>
           </div>
