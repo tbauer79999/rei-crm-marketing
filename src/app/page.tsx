@@ -2,18 +2,24 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Play, Check, X, Brain, MessageSquare, Target, User, ChevronRight, Phone, Mail, Zap, Activity, Shield, Eye, TrendingUp, BarChart3, Clock, ArrowRight, Building, Users, Cpu, Database, Lightbulb, Layers, Gauge, Sparkles, Send, Bot } from 'lucide-react'
+import { Play, Check, X, Brain, MessageSquare, Target, User, ChevronRight, Phone, Mail, Zap, Activity, Shield, Eye, TrendingUp, BarChart3, Clock, ArrowRight, Building, Users, Cpu, Database, Lightbulb, Layers, Gauge, Sparkles, Send, Bot, Menu } from 'lucide-react'
 
 const SurFoxHomepage = () => {
   const [activeTab, setActiveTab] = useState('psychology')
   const [typingText, setTypingText] = useState('')
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   
   const messages = [
     "Hi Sarah, quick question about your recent inquiry...",
     "Mark, following up on your demo request from last week...",
     "Jennifer, noticed you've been researching solutions like ours..."
   ]
+
+  // Add this function to handle menu item clicks
+  const handleMenuItemClick = () => {
+    setIsMobileMenuOpen(false)
+  }
 
   // Typing animation effect
   useEffect(() => {
@@ -38,6 +44,96 @@ const SurFoxHomepage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
 
+      {/* Mobile Navigation Header */}
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-slate-900/95 to-purple-900/95 backdrop-blur-xl border-b border-purple-500/30">
+        <div className="flex items-center justify-between px-6 py-4">
+          <div className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            SurFox
+          </div>
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2 text-gray-300 hover:text-white transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-50 lg:hidden">
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+          
+          {/* Menu Panel */}
+          <div className="fixed top-0 right-0 w-80 h-full bg-gradient-to-br from-slate-900 to-purple-900 border-l border-purple-500/30 p-6 overflow-y-auto">
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            
+            {/* Menu Items */}
+            <nav className="mt-12 space-y-4">
+              <a
+                href="#how-it-works"
+                onClick={handleMenuItemClick}
+                className="block px-4 py-3 text-lg font-medium text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+              >
+                How It Works
+              </a>
+              <a
+                href="#pricing"
+                onClick={handleMenuItemClick}
+                className="block px-4 py-3 text-lg font-medium text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+              >
+                Pricing
+              </a>
+              <Link
+                href="/toms-story"
+                onClick={handleMenuItemClick}
+                className="block px-4 py-3 text-lg font-medium text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+              >
+                Tom's Story
+              </Link>
+              <a
+                href="#demo"
+                onClick={handleMenuItemClick}
+                className="block px-4 py-3 text-lg font-medium text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+              >
+                Request Demo
+              </a>
+              
+              {/* CTA Buttons */}
+              <div className="pt-6 border-t border-purple-500/30 space-y-3">
+                <button
+                  onClick={handleMenuItemClick}
+                  className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-white hover:shadow-lg transition-all"
+                >
+                  Start Free Trial
+                </button>
+                <button
+                  onClick={handleMenuItemClick}
+                  className="w-full px-6 py-3 border border-purple-400/50 rounded-xl font-medium text-gray-300 hover:bg-purple-500/20 transition-all"
+                >
+                  Contact Sales
+                </button>
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
+
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -46,7 +142,7 @@ const SurFoxHomepage = () => {
       </div>
 
       {/* Hero Section - Fixed Above Fold */}
-      <section className="relative py-12 pt-24 min-h-[85vh] flex items-center">
+      <section className="relative py-12 pt-24 lg:pt-12 min-h-[85vh] flex items-center">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -715,7 +811,7 @@ const SurFoxHomepage = () => {
       </section>
 
       {/* Enhanced Pricing with Learning Tiers */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-xl">
+      <section id="pricing" className="relative py-20 bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
