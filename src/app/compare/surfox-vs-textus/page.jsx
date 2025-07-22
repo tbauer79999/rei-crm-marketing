@@ -118,25 +118,129 @@ const SurFoxVsTextUs = () => {
             {/* Menu Items */}
             <nav className="mt-12 space-y-4">
               <a
-                href="#comparison"
+                href="/#how-it-works"
                 onClick={handleMenuItemClick}
                 className="block px-4 py-3 text-lg font-medium text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
               >
-                Feature Comparison
+                How It Works
               </a>
+              
+              {/* SurFox vs Everyone Dropdown */}
+              <div className="space-y-2">
+                <div className="px-4 py-3 text-lg font-medium text-purple-300 border-b border-purple-500/30">
+                  SurFox vs Everyone
+                </div>
+                <div className="pl-6 space-y-2">
+                  <a
+                    href="/vs-twilio"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+                  >
+                    vs Twilio
+                  </a>
+                  <a
+                    href="/vs-salesloft"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+                  >
+                    vs SalesLoft
+                  </a>
+                  <a
+                    href="/vs-outreach"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+                  >
+                    vs Outreach
+                  </a>
+                  <a
+                    href="/vs-hubspot"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+                  >
+                    vs HubSpot
+                  </a>
+                  <a
+                    href="/vs-salesforce"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+                  >
+                    vs Salesforce
+                  </a>
+                  <a
+                    href="/vs-textus"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-purple-200 bg-purple-500/30 hover:text-white hover:bg-purple-500/40 rounded-lg transition-all border border-purple-400/30"
+                  >
+                    vs TextUs (Current)
+                  </a>
+                  <a
+                    href="/vs-all-competitors"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+                  >
+                    vs All Competitors
+                  </a>
+                </div>
+              </div>
+              
+              <a
+                href="/#pricing"
+                onClick={handleMenuItemClick}
+                className="block px-4 py-3 text-lg font-medium text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+              >
+                Pricing
+              </a>
+              
+              {/* Resources Dropdown */}
+              <div className="space-y-2">
+                <div className="px-4 py-3 text-lg font-medium text-purple-300 border-b border-purple-500/30">
+                  Resources
+                </div>
+                <div className="pl-6 space-y-2">
+                  <a
+                    href="/toms-story"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+                  >
+                    Tom's Story
+                  </a>
+                  <a
+                    href="/case-studies"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+                  >
+                    Case Studies
+                  </a>
+                  <a
+                    href="/blog"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+                  >
+                    Sales Psychology Blog
+                  </a>
+                  <a
+                    href="/webinars"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+                  >
+                    Webinars
+                  </a>
+                  <a
+                    href="/help"
+                    onClick={handleMenuItemClick}
+                    className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
+                  >
+                    Help Center
+                  </a>
+                </div>
+              </div>
+              
               <a
                 href="#cta"
                 onClick={handleMenuItemClick}
                 className="block px-4 py-3 text-lg font-medium text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
               >
-                Start Free Trial
-              </a>
-              <a
-                href="/"
-                onClick={handleMenuItemClick}
-                className="block px-4 py-3 text-lg font-medium text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all"
-              >
-                Back to Home
+                Request Demo
               </a>
               
               {/* CTA Buttons */}
@@ -151,7 +255,7 @@ const SurFoxVsTextUs = () => {
                   onClick={handleMenuItemClick}
                   className="w-full px-6 py-3 border border-purple-400/50 rounded-xl font-medium text-gray-300 hover:bg-purple-500/20 transition-all"
                 >
-                  Schedule Demo
+                  Contact Sales
                 </button>
               </div>
             </nav>
