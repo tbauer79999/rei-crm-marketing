@@ -41,9 +41,6 @@ export default function Nav() {
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/#psychology-ai" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
-              Psychology AI
-            </Link>
             <Link href="/how-it-works" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
               How It Works
             </Link>
