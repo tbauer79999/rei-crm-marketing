@@ -166,83 +166,79 @@ const FoundersLetter = () => {
                   <div className="flex flex-col">
                     <p className="text-lg text-gray-700 mb-6">Sincerely,</p>
                     
-                    {/* Recreated Handwritten Signature */}
+                    {/* Recreated Handwritten Signature - Tom Bauer */}
                     <div className="mb-4">
                       <svg 
-                        width="280" 
-                        height="80" 
-                        viewBox="0 0 280 80" 
-                        className="h-16 w-auto"
+                        width="320" 
+                        height="90" 
+                        viewBox="0 0 320 90" 
+                        className="h-20 w-auto"
                         style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.1))' }}
                       >
-                        {/* Tom */}
+                        {/* Tom - First stroke (T) */}
                         <path 
-                          d="M10 25 Q15 15 25 20 Q35 25 30 35 Q25 45 35 40 Q45 35 50 45 Q55 55 45 50 Q35 45 40 35" 
+                          d="M15 25 Q25 15 35 25 Q45 35 40 45" 
                           fill="none" 
-                          stroke="#374151" 
-                          strokeWidth="2.5" 
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <path 
-                          d="M55 40 Q65 30 75 45 Q85 60 90 45 Q95 30 105 50 Q110 65 100 55" 
-                          fill="none" 
-                          stroke="#374151" 
-                          strokeWidth="2.5" 
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <path 
-                          d="M115 45 Q125 35 135 50 Q145 65 150 50 Q155 35 160 45" 
-                          fill="none" 
-                          stroke="#374151" 
-                          strokeWidth="2.5" 
+                          stroke="#1f2937" 
+                          strokeWidth="3" 
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         />
                         
-                        {/* Bauer */}
+                        {/* Tom - "om" part */}
                         <path 
-                          d="M180 30 Q190 15 205 25 Q220 35 210 50 Q200 65 190 55 Q180 45 185 35 Q190 25 200 30 Q210 35 215 45 Q220 55 210 60" 
+                          d="M42 42 Q52 35 62 45 Q72 55 75 45 Q78 35 85 42 Q92 50 88 55 Q84 60 80 55" 
                           fill="none" 
-                          stroke="#374151" 
-                          strokeWidth="2.5" 
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <path 
-                          d="M225 35 Q235 25 245 40 Q255 55 260 40 Q265 25 270 35 Q275 45 270 50" 
-                          fill="none" 
-                          stroke="#374151" 
-                          strokeWidth="2.5" 
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <path 
-                          d="M230 50 Q240 60 250 55 Q260 50 265 55 Q270 60 265 65" 
-                          fill="none" 
-                          stroke="#374151" 
-                          strokeWidth="2.5" 
+                          stroke="#1f2937" 
+                          strokeWidth="3" 
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         />
                         
-                        {/* Connecting flourish */}
+                        {/* Small connecting line between Tom and Bauer */}
                         <path 
-                          d="M165 40 Q175 35 180 40" 
+                          d="M88 50 Q105 45 120 50" 
                           fill="none" 
-                          stroke="#374151" 
-                          strokeWidth="2" 
+                          stroke="#1f2937" 
+                          strokeWidth="2.5" 
                           strokeLinecap="round"
                         />
                         
-                        {/* Final flourish */}
+                        {/* Bauer - "B" with large loop */}
                         <path 
-                          d="M270 45 Q275 40 280 45 Q275 50 270 55" 
+                          d="M125 30 Q135 15 150 25 Q165 35 155 50 Q145 65 135 55 Q125 45 130 35 Q135 25 145 30 Q155 35 160 45" 
                           fill="none" 
-                          stroke="#374151" 
-                          strokeWidth="2" 
+                          stroke="#1f2937" 
+                          strokeWidth="3" 
                           strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        
+                        {/* Bauer - "auer" flowing script */}
+                        <path 
+                          d="M165 45 Q175 40 185 50 Q195 60 200 50 Q205 40 215 48 Q225 56 230 48 Q235 40 245 45 Q255 50 260 55 Q265 60 270 55 Q275 50 280 55" 
+                          fill="none" 
+                          stroke="#1f2937" 
+                          strokeWidth="3" 
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        
+                        {/* Final flourish at end */}
+                        <path 
+                          d="M280 55 Q290 50 295 58 Q300 65 295 60" 
+                          fill="none" 
+                          stroke="#1f2937" 
+                          strokeWidth="2.5" 
+                          strokeLinecap="round"
+                        />
+                        
+                        {/* Dot over i in signature style */}
+                        <circle 
+                          cx="200" 
+                          cy="35" 
+                          r="2" 
+                          fill="#1f2937"
                         />
                       </svg>
                     </div>
