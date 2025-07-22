@@ -10,9 +10,9 @@ const SurFoxHomepage = () => {
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0)
   
   const messages = [
-    "Hi Sarah, noticed your company just raised Series B...",
-    "Mark, quick question about your Q4 goals...",
-    "Jennifer, saw your LinkedIn post about scaling challenges..."
+    "Hi Sarah, quick question about your recent inquiry...",
+    "Mark, following up on your demo request from last week...",
+    "Jennifer, noticed you've been researching solutions like ours..."
   ]
 
   // Typing animation effect
@@ -51,25 +51,25 @@ const SurFoxHomepage = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 backdrop-blur-sm">
-                <Brain className="w-5 h-5 mr-3 text-purple-300" />
-                <span className="text-purple-200 font-medium">World's First Sales Psychology AI Learning Engine</span>
+                <MessageSquare className="w-5 h-5 mr-3 text-purple-300" />
+                <span className="text-purple-200 font-medium">World's First SMS Psychology AI Engine</span>
               </div>
               
               <h1 className="text-6xl md:text-7xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-                  I spent 20 years
+                  I built an SMS messaging
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                  watching good prospects slip away.
+                  intelligent engine that reads human psychology
                 </span>
               </h1>
               
               <div className="text-2xl text-purple-200 space-y-4">
-                <p>So I built an AI that reads human psychology.</p>
+                <p>After 20 years in sales, I realized we were texting all prospects the same way.</p>
                 <p className="text-lg text-gray-300">
-                  After two decades in sales, I realized we were treating all prospects the same. 
                   <strong className="text-white"> Some people are skeptical, others decisive. Some need data, others need emotion.</strong>
+                  <br />SurFox SMS AI learns their psychology and adapts every text message.
                 </p>
               </div>
               
@@ -89,7 +89,7 @@ const SurFoxHomepage = () => {
               {/* Tom's Quote */}
               <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-6 mt-8">
                 <p className="text-purple-200 text-lg mb-4 italic">
-                  "While other platforms blast the same message to everyone, SurFox reads human psychology and adapts. Our AI learns which personality types respond to which approaches, creating personalized conversations that feel human but scale like technology."
+                  "While other platforms blast the same SMS to everyone, SurFox reads human psychology and adapts each text message. Our AI learns which personality types respond to which approaches, creating personalized SMS conversations that feel human but scale like technology."
                 </p>
                 <p className="text-purple-300 text-sm">
                   Tom Bauer, Founder & CEO
@@ -136,9 +136,9 @@ const SurFoxHomepage = () => {
                     </div>
                   </div>
                   
-                  {/* Live Message Generation */}
+                  {/* Live SMS Generation */}
                   <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-xl p-4 border border-purple-400/30">
-                    <div className="text-purple-300 text-sm mb-2">Generating Personalized Message:</div>
+                    <div className="text-purple-300 text-sm mb-2">Generating Personalized SMS:</div>
                     <div className="bg-black/60 rounded-lg p-3 font-mono text-sm text-green-300 min-h-[60px] flex items-center">
                       {typingText}<span className="animate-pulse">|</span>
                     </div>
@@ -172,7 +172,7 @@ const SurFoxHomepage = () => {
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
               This isn't SMS automation.
               <br />
-              This is <span className="text-white">Sales Psychology AI</span>.
+              This is <span className="text-white">SMS Psychology AI</span>.
             </h2>
           </div>
 
@@ -180,20 +180,20 @@ const SurFoxHomepage = () => {
             <div className="bg-gradient-to-br from-red-900/40 to-red-600/40 rounded-2xl border border-red-400/30 p-8 backdrop-blur-sm">
               <h3 className="text-2xl font-bold text-red-300 mb-6 flex items-center">
                 <X className="w-8 h-8 mr-3" />
-                Traditional Platforms:
+                Traditional SMS Platforms:
               </h3>
               <div className="space-y-4 text-red-200">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                  <span>Send messages, track delivery</span>
+                  <span>Send text messages, track delivery</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                  <span>Same approach for everyone</span>
+                  <span>Same SMS approach for everyone</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                  <span>Static, rule-based automation</span>
+                  <span>Static, rule-based SMS automation</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-red-400 rounded-full"></div>
@@ -204,25 +204,25 @@ const SurFoxHomepage = () => {
             
             <div className="bg-gradient-to-br from-purple-900/40 to-cyan-900/40 rounded-2xl border border-purple-400/30 p-8 backdrop-blur-sm">
               <h3 className="text-2xl font-bold text-purple-300 mb-6 flex items-center">
-                <Brain className="w-8 h-8 mr-3" />
-                SurFox Psychology AI:
+                <MessageSquare className="w-8 h-8 mr-3" />
+                SurFox SMS Psychology AI:
               </h3>
               <div className="space-y-4 text-purple-200">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                  <span>Reads human psychology patterns</span>
+                  <span>Reads human psychology from SMS responses</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  <span>Learns behavioral preferences</span>
+                  <span>Learns behavioral preferences via text</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span>Adapts to personality types</span>
+                  <span>Adapts SMS tone to personality types</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  <span>Gets smarter with every conversation</span>
+                  <span>Gets smarter with every text conversation</span>
                 </div>
               </div>
             </div>
@@ -914,7 +914,7 @@ const SurFoxHomepage = () => {
                 Start Free Trial
               </div>
             </button>
-            <Link href="/about-the-founder" className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
+            <Link href="/toms-story" className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
               Learn More About Tom
             </Link>
           </div>
