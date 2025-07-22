@@ -166,11 +166,85 @@ const FoundersLetter = () => {
                   <div className="flex flex-col">
                     <p className="text-lg text-gray-700 mb-6">Sincerely,</p>
                     
-                    {/* Handwritten Signature */}
+                    {/* Recreated Handwritten Signature */}
                     <div className="mb-4">
-                      <div className="text-4xl font-bold text-purple-600 transform -rotate-1 select-none" style={{fontFamily: 'Brush Script MT, cursive'}}>
-                        Tom Bauer
-                      </div>
+                      <svg 
+                        width="280" 
+                        height="80" 
+                        viewBox="0 0 280 80" 
+                        className="h-16 w-auto"
+                        style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.1))' }}
+                      >
+                        {/* Tom */}
+                        <path 
+                          d="M10 25 Q15 15 25 20 Q35 25 30 35 Q25 45 35 40 Q45 35 50 45 Q55 55 45 50 Q35 45 40 35" 
+                          fill="none" 
+                          stroke="#374151" 
+                          strokeWidth="2.5" 
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path 
+                          d="M55 40 Q65 30 75 45 Q85 60 90 45 Q95 30 105 50 Q110 65 100 55" 
+                          fill="none" 
+                          stroke="#374151" 
+                          strokeWidth="2.5" 
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path 
+                          d="M115 45 Q125 35 135 50 Q145 65 150 50 Q155 35 160 45" 
+                          fill="none" 
+                          stroke="#374151" 
+                          strokeWidth="2.5" 
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        
+                        {/* Bauer */}
+                        <path 
+                          d="M180 30 Q190 15 205 25 Q220 35 210 50 Q200 65 190 55 Q180 45 185 35 Q190 25 200 30 Q210 35 215 45 Q220 55 210 60" 
+                          fill="none" 
+                          stroke="#374151" 
+                          strokeWidth="2.5" 
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path 
+                          d="M225 35 Q235 25 245 40 Q255 55 260 40 Q265 25 270 35 Q275 45 270 50" 
+                          fill="none" 
+                          stroke="#374151" 
+                          strokeWidth="2.5" 
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path 
+                          d="M230 50 Q240 60 250 55 Q260 50 265 55 Q270 60 265 65" 
+                          fill="none" 
+                          stroke="#374151" 
+                          strokeWidth="2.5" 
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        
+                        {/* Connecting flourish */}
+                        <path 
+                          d="M165 40 Q175 35 180 40" 
+                          fill="none" 
+                          stroke="#374151" 
+                          strokeWidth="2" 
+                          strokeLinecap="round"
+                        />
+                        
+                        {/* Final flourish */}
+                        <path 
+                          d="M270 45 Q275 40 280 45 Q275 50 270 55" 
+                          fill="none" 
+                          stroke="#374151" 
+                          strokeWidth="2" 
+                          strokeLinecap="round"
+                        />
+                      </svg>
                     </div>
                     
                     <div className="text-gray-600">
