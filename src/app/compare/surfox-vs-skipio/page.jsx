@@ -22,51 +22,51 @@ const SurFoxVsSkipio = () => {
 
   const featureSets = [
     {
-      category: 'AI Intelligence',
+      category: 'AI Power',
       icon: Brain,
       color: 'purple',
       features: [
-        { name: 'AI message generation', surfox: 'Fully autonomous, real-time outbound & reply messages', skipio: 'Optional drafts with manual review required' },
-        { name: 'Conversation understanding', surfox: 'Context-aware AI that understands conversation flow', skipio: 'Basic rule triggers (Away Mode, etc.) but cannot understand content' },
-        { name: 'Learning capability', surfox: 'AI Knowledge Uploads (SOPs, documents) - learns your company', skipio: 'No knowledge base or learning capability' },
-        { name: 'Sentiment detection', surfox: 'Advanced NLP with emotional recognition', skipio: 'No sentiment analysis or emotional understanding' },
-        { name: 'Conversation memory', surfox: 'Simulated memory from prior conversations', skipio: 'No conversation memory between interactions' }
+        { name: 'AI handles your conversations', surfox: 'AI writes every message and handles responses automatically', skipio: 'You write drafts manually, then review every response' },
+        { name: 'Remembers every conversation', surfox: 'AI knows the full conversation history with each lead', skipio: 'No memory - treats every message as first contact' },
+        { name: 'Gets smarter over time', surfox: 'AI learns your business and improves with every conversation', skipio: 'Same templates forever - no learning or improvement' },
+        { name: 'Detects buying signals', surfox: 'AI reads when prospects are ready to buy and alerts you', skipio: 'You manually read every message to find hot leads' },
+        { name: 'Understands what prospects mean', surfox: 'AI reads between the lines and responds appropriately', skipio: 'Basic keyword triggers only - misses context and tone' }
       ]
     },
     {
-      category: 'Lead Intelligence',
+      category: 'Lead Results',
       icon: Target,
       color: 'cyan',
       features: [
-        { name: 'Lead behavior tracking', surfox: 'Psychological scoring (intent, motivation, urgency)', skipio: 'Basic reply tagging & campaign history only' },
-        { name: 'Hot lead detection', surfox: 'AI flags & routes based on psychological scoring', skipio: 'No escalation logic or hot lead identification' },
-        { name: 'Lead qualification', surfox: 'Automated psychology-based qualification', skipio: 'Manual qualification based on basic interactions' },
-        { name: 'Buying signal recognition', surfox: 'AI reads psychological readiness signals', skipio: 'No buying signal detection capability' },
-        { name: 'Lead prioritization', surfox: 'AI ranks leads by conversion probability', skipio: 'Manual prioritization only' }
+        { name: 'Automatically finds hot leads', surfox: 'AI scores every lead and flags the ones ready to buy', skipio: 'You manually sort through all responses to find good ones' },
+        { name: 'Qualification without your time', surfox: 'AI asks the right questions and qualifies leads for you', skipio: 'You have to qualify every lead manually' },
+        { name: 'Knows when to escalate', surfox: 'AI alerts you only when prospects are sales-ready', skipio: 'You monitor everything - no intelligent escalation' },
+        { name: 'Prioritizes your best opportunities', surfox: 'AI ranks leads by likelihood to close', skipio: 'All leads look the same - you decide priority manually' },
+        { name: 'Delivers ready-to-close prospects', surfox: 'AI hands you leads that are motivated and qualified', skipio: 'You get raw responses - good luck figuring out who to call' }
       ]
     },
     {
-      category: 'Automation Logic',
+      category: 'Automation Intelligence',
       icon: Zap,
       color: 'blue',
       features: [
-        { name: 'Campaign flow logic', surfox: 'AI-driven real-time conversation flows that adapt mid-conversation', skipio: 'Rule-based campaigns & SMART drips in linear sequences' },
-        { name: 'Follow-up optimization', surfox: 'AI logic based on lead status and behavior patterns', skipio: 'Manual step building with fixed scheduling' },
-        { name: 'Response timing', surfox: 'AI pacing and delay logic based on psychology', skipio: 'Fixed drips, delays, and manual pausing' },
-        { name: 'Campaign adaptation', surfox: 'Dynamic adjustment based on conversation outcomes', skipio: 'Static campaigns that run as programmed' },
-        { name: 'Escalation workflows', surfox: 'Intelligent escalation when prospects show buying intent', skipio: 'No automated escalation capabilities' }
+        { name: 'Adapts to each conversation', surfox: 'AI changes approach based on how each prospect responds', skipio: 'Same linear sequence for everyone regardless of responses' },
+        { name: 'Perfect timing every time', surfox: 'AI knows when each prospect is most likely to respond', skipio: 'Fixed schedules that ignore individual behavior patterns' },
+        { name: 'Handles objections intelligently', surfox: 'AI responds to concerns and keeps conversations moving forward', skipio: 'Basic auto-replies that often miss the point' },
+        { name: 'Never drops the ball', surfox: 'AI ensures every lead gets the right follow-up at the right time', skipio: 'You manually manage all follow-ups and timing' },
+        { name: 'Scales without more work', surfox: 'Handle 10x more leads without hiring more people', skipio: 'More leads = more manual work for your team' }
       ]
     },
     {
-      category: 'Platform Focus',
+      category: 'Business Focus',
       icon: Building,
       color: 'green',
       features: [
-        { name: 'Core purpose', surfox: 'Turn cold leads into hot ones with AI - outcome focused', skipio: 'SMS follow-up & appointment setting - communication focused' },
-        { name: 'Industry specialization', surfox: 'Sales orgs, wholesalers, recruiters, agencies', skipio: 'Small business, coaches, medical, general services' },
-        { name: 'Multi-channel support', surfox: 'SMS-first with Email/Voice roadmap', skipio: 'SMS, call forwarding, webchat' },
-        { name: 'Pricing philosophy', surfox: 'Outcome-based pricing tiers (conversion-focused ROI)', skipio: '$99–$299/mo based on usage and features' },
-        { name: 'Success metrics', surfox: 'Lead conversion and deal closure rates', skipio: 'Communication efficiency and appointment booking' }
+        { name: 'Built for deal-makers', surfox: 'Designed for businesses that need to close sales', skipio: 'Built for appointment booking and basic follow-ups' },
+        { name: 'Success = closed deals', surfox: 'Measures success by qualified leads and revenue generated', skipio: 'Measures success by appointments booked and messages sent' },
+        { name: 'ROI-focused pricing', surfox: 'Pay based on the value you get from better conversions', skipio: 'Pay per message regardless of results' },
+        { name: 'Scales with your growth', surfox: 'AI gets better as your business grows', skipio: 'Same basic tools whether you have 10 or 10,000 leads' },
+        { name: 'Built for sales teams', surfox: 'Everything designed around converting prospects to customers', skipio: 'General communication tool adapted for sales' }
       ]
     }
   ]
@@ -160,47 +160,47 @@ const SurFoxVsSkipio = () => {
             {/* Platform Logos */}
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8 mb-12">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-2xl flex items-center justify-center">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-purple-500/50">
                   <Brain className="w-6 h-6 md:w-8 md:h-8 text-white" />
                 </div>
                 <div className="text-left">
                   <div className="text-2xl md:text-3xl font-bold text-white">SurFox</div>
-                  <div className="text-xs md:text-sm text-purple-300">Sales Psychology AI</div>
+                  <div className="text-xs md:text-sm text-purple-300">AI That Closes Deals</div>
                 </div>
               </div>
               
               <div className="text-gray-400 text-2xl md:text-4xl font-bold">VS</div>
               
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-600/50 rounded-2xl flex items-center justify-center">
-                  <Calendar className="w-6 h-6 md:w-8 md:h-8 text-blue-400" />
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-600/30 rounded-2xl flex items-center justify-center">
+                  <Calendar className="w-6 h-6 md:w-8 md:h-8 text-gray-500" />
                 </div>
                 <div className="text-left">
-                  <div className="text-2xl md:text-3xl font-bold text-gray-400">Skipio</div>
-                  <div className="text-xs md:text-sm text-gray-500">SMS Follow-up & Scheduling</div>
+                  <div className="text-2xl md:text-3xl font-bold text-gray-500">Skipio</div>
+                  <div className="text-xs md:text-sm text-gray-600">Appointment Booking</div>
                 </div>
               </div>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
               <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-                AI That
+                AI That Actually
               </span>
               <br />
               <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Converts Leads
+                Closes Deals
               </span>
               <br />
               <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-                vs Appointment Setting
+                vs Basic Scheduling
               </span>
             </h1>
             
             <div className="text-lg md:text-2xl text-purple-200 space-y-4 mb-8">
-              <p>Skipio excels at scheduling appointments and basic follow-ups.</p>
+              <p>Skipio helps you book appointments efficiently.</p>
               <p className="text-base md:text-lg text-gray-300">
-                <strong className="text-white">SurFox uses AI to understand psychology and convert cold leads into hot prospects.</strong> 
-                See why outcome-focused AI beats appointment-focused automation.
+                <strong className="text-white">SurFox turns your dead leads into actual deals that close.</strong> 
+                See why AI that gets results beats basic appointment booking.
               </p>
             </div>
             
@@ -208,7 +208,7 @@ const SurFoxVsSkipio = () => {
               <button className="group relative px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl font-bold text-base md:text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative flex items-center justify-center">
-                  See Full Comparison
+                  See How SurFox Wins
                   <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
               </button>
@@ -220,20 +220,20 @@ const SurFoxVsSkipio = () => {
 
             {/* Key Stats Preview */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-4 md:p-6 text-center shadow-2xl">
-                <div className="text-2xl md:text-3xl font-bold text-green-400 mb-2">$197</div>
-                <div className="text-sm text-purple-200">SurFox Starting Price</div>
-                <div className="text-xs text-gray-400 mt-2">vs $99+ Skipio</div>
+              <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 backdrop-blur-xl rounded-2xl border-2 border-purple-400/50 p-4 md:p-6 text-center shadow-2xl shadow-purple-500/25">
+                <div className="text-2xl md:text-3xl font-bold text-green-400 mb-2">3-5X</div>
+                <div className="text-sm text-white font-medium">More Deals Closed</div>
+                <div className="text-xs text-purple-300 mt-2">vs appointment tools</div>
               </div>
-              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-4 md:p-6 text-center shadow-2xl">
-                <div className="text-2xl md:text-3xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-sm text-purple-200">Psychology Dimensions</div>
-                <div className="text-xs text-gray-400 mt-2">vs 0 in Skipio</div>
+              <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 backdrop-blur-xl rounded-2xl border-2 border-purple-400/50 p-4 md:p-6 text-center shadow-2xl shadow-purple-500/25">
+                <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">90%</div>
+                <div className="text-sm text-white font-medium">AI Handles Everything</div>
+                <div className="text-xs text-purple-300 mt-2">vs manual work</div>
               </div>
-              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-4 md:p-6 text-center shadow-2xl">
-                <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">AI</div>
-                <div className="text-sm text-purple-200">Lead Conversion</div>
-                <div className="text-xs text-gray-400 mt-2">vs appointment booking</div>
+              <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 backdrop-blur-xl rounded-2xl border-2 border-purple-400/50 p-4 md:p-6 text-center shadow-2xl shadow-purple-500/25">
+                <div className="text-2xl md:text-3xl font-bold text-yellow-400 mb-2">Zero</div>
+                <div className="text-sm text-white font-medium">Manual Qualification</div>
+                <div className="text-xs text-purple-300 mt-2">AI does it all</div>
               </div>
             </div>
           </div>
@@ -245,108 +245,108 @@ const SurFoxVsSkipio = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              Two Different Goals
+              Two Different Results
             </h2>
             <p className="text-lg md:text-xl text-purple-200 max-w-3xl mx-auto">
-              Skipio optimizes for scheduling efficiency. SurFox optimizes for lead conversion psychology.
+              Skipio gets you appointments. SurFox gets you deals.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
-            {/* Skipio Approach */}
-            <div className="bg-gradient-to-br from-blue-900/40 to-blue-600/40 rounded-2xl border border-blue-400/30 p-6 md:p-8 backdrop-blur-sm">
+            {/* Skipio Approach - Muted */}
+            <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 rounded-2xl border border-gray-600/30 p-6 md:p-8 backdrop-blur-sm">
               <div className="flex items-center mb-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-600/50 rounded-xl flex items-center justify-center mr-4">
-                  <Calendar className="w-5 h-5 md:w-6 md:h-6 text-blue-400" />
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-600/50 rounded-xl flex items-center justify-center mr-4">
+                  <Calendar className="w-5 h-5 md:w-6 md:h-6 text-gray-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-blue-300">Skipio</h3>
-                  <p className="text-blue-200 text-sm md:text-base">Appointment & Follow-up Focused</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-300">Skipio</h3>
+                  <p className="text-gray-400 text-sm md:text-base">Basic Appointment Booking</p>
                 </div>
               </div>
               
               <div className="space-y-4">
-                <div className="bg-blue-900/40 border border-blue-400/30 rounded-xl p-3 md:p-4">
-                  <h4 className="font-semibold text-blue-300 mb-2 text-sm md:text-base">The Strategy:</h4>
-                  <p className="text-xs md:text-sm text-blue-200">"Automate follow-ups and appointment setting with rule-based workflows"</p>
+                <div className="bg-gray-800/40 border border-gray-600/30 rounded-xl p-3 md:p-4">
+                  <h4 className="font-semibold text-gray-300 mb-2 text-sm md:text-base">What You Get:</h4>
+                  <p className="text-xs md:text-sm text-gray-400">"Help with scheduling appointments and basic follow-up automation"</p>
                 </div>
                 
                 <div className="space-y-3">
-                  <div className="flex items-start text-blue-200 text-sm md:text-base">
-                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>Excellent for appointment scheduling</span>
+                  <div className="flex items-start text-gray-400 text-sm md:text-base">
+                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-gray-500 flex-shrink-0" />
+                    <span>Good for booking appointments</span>
                   </div>
-                  <div className="flex items-start text-blue-200 text-sm md:text-base">
-                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>Strong multi-channel communication</span>
+                  <div className="flex items-start text-gray-400 text-sm md:text-base">
+                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-gray-500 flex-shrink-0" />
+                    <span>Multi-channel communication</span>
                   </div>
-                  <div className="flex items-start text-blue-200 text-sm md:text-base">
-                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>SMART drips and campaign sequencing</span>
+                  <div className="flex items-start text-gray-400 text-sm md:text-base">
+                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-gray-500 flex-shrink-0" />
+                    <span>Basic campaign sequencing</span>
                   </div>
-                  <div className="flex items-start text-blue-200 text-sm md:text-base">
-                    <X className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-red-400 flex-shrink-0" />
-                    <span>No psychological understanding</span>
+                  <div className="flex items-start text-gray-400 text-sm md:text-base">
+                    <X className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-red-500 flex-shrink-0" />
+                    <span>You manually write and review everything</span>
                   </div>
-                  <div className="flex items-start text-blue-200 text-sm md:text-base">
-                    <X className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-red-400 flex-shrink-0" />
-                    <span>Manual message drafts and review</span>
+                  <div className="flex items-start text-gray-400 text-sm md:text-base">
+                    <X className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-red-500 flex-shrink-0" />
+                    <span>No AI to find your best leads</span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 p-3 md:p-4 bg-blue-900/40 border border-blue-400/30 rounded-xl">
-                <p className="text-blue-200 text-xs md:text-sm font-medium">
-                  <strong>Best For:</strong> Service businesses focused on booking appointments and basic follow-up automation
+              <div className="mt-6 p-3 md:p-4 bg-gray-800/40 border border-gray-600/30 rounded-xl">
+                <p className="text-gray-400 text-xs md:text-sm font-medium">
+                  <strong>Result:</strong> Appointments booked, but you still do all the selling work
                 </p>
               </div>
             </div>
 
-            {/* SurFox Approach */}
-            <div className="bg-gradient-to-br from-purple-900/40 to-cyan-900/40 rounded-2xl border-2 border-purple-400/50 p-6 md:p-8 backdrop-blur-sm shadow-lg shadow-purple-500/25">
+            {/* SurFox Approach - Bright & Prominent */}
+            <div className="bg-gradient-to-br from-purple-900/80 to-cyan-900/80 rounded-2xl border-2 border-purple-400/70 p-6 md:p-8 backdrop-blur-sm shadow-2xl shadow-purple-500/50 transform hover:scale-105 transition-transform duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-xl flex items-center justify-center mr-4 shadow-lg">
                   <Brain className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-purple-300">SurFox</h3>
-                  <p className="text-purple-200 text-sm md:text-base">AI Psychology & Conversion Focused</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-white">SurFox</h3>
+                  <p className="text-purple-200 text-sm md:text-base font-medium">AI That Closes Deals</p>
                 </div>
               </div>
               
               <div className="space-y-4">
-                <div className="bg-purple-900/40 border border-purple-400/30 rounded-xl p-3 md:p-4">
-                  <h4 className="font-semibold text-purple-300 mb-2 text-sm md:text-base">The Strategy:</h4>
-                  <p className="text-xs md:text-sm text-purple-200">"Use AI psychology to convert cold leads into hot prospects ready to buy"</p>
+                <div className="bg-purple-900/50 border border-purple-400/50 rounded-xl p-3 md:p-4">
+                  <h4 className="font-semibold text-white mb-2 text-sm md:text-base">What You Get:</h4>
+                  <p className="text-xs md:text-sm text-purple-200">"AI that turns your dead leads into actual deals that close"</p>
                 </div>
                 
                 <div className="space-y-3">
-                  <div className="flex items-start text-purple-200 text-sm md:text-base">
+                  <div className="flex items-start text-white text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>AI understands buyer psychology</span>
+                    <span>AI handles all conversations for you</span>
                   </div>
-                  <div className="flex items-start text-purple-200 text-sm md:text-base">
+                  <div className="flex items-start text-white text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>Autonomous conversation management</span>
+                    <span>Automatically finds your hottest leads</span>
                   </div>
-                  <div className="flex items-start text-purple-200 text-sm md:text-base">
+                  <div className="flex items-start text-white text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>Real-time lead qualification scoring</span>
+                    <span>Delivers qualified prospects ready to buy</span>
                   </div>
-                  <div className="flex items-start text-purple-200 text-sm md:text-base">
+                  <div className="flex items-start text-white text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>Hot lead escalation intelligence</span>
+                    <span>Gets smarter with every conversation</span>
                   </div>
-                  <div className="flex items-start text-purple-200 text-sm md:text-base">
+                  <div className="flex items-start text-white text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>Conversation memory and learning</span>
+                    <span>Works 24/7 without breaks or oversight</span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 p-3 md:p-4 bg-purple-900/40 border border-purple-400/30 rounded-xl">
-                <p className="text-purple-200 text-xs md:text-sm font-medium">
-                  <strong>Best For:</strong> Sales organizations focused on converting cold prospects into qualified buyers
+              <div className="mt-6 p-3 md:p-4 bg-gradient-to-r from-purple-900/50 to-cyan-900/50 border border-purple-400/50 rounded-xl">
+                <p className="text-white text-xs md:text-sm font-bold">
+                  <strong>Result:</strong> More deals closed with less work from your team
                 </p>
               </div>
             </div>
@@ -359,115 +359,115 @@ const SurFoxVsSkipio = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              See the Difference in Action
+              Same Lead, Different Results
             </h2>
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-              Same cold real estate lead, completely different approaches and outcomes.
+              Watch how SurFox turns a cold real estate lead into a hot prospect while Skipio just tries to book a meeting.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-            {/* Skipio Conversation */}
-            <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 border border-blue-400/30 rounded-2xl p-4 md:p-6 backdrop-blur-xl">
+            {/* Skipio Conversation - Muted */}
+            <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 border border-gray-600/30 rounded-2xl p-4 md:p-6 backdrop-blur-xl">
               <div className="flex items-center mb-6">
-                <div className="w-6 h-6 md:w-8 md:h-8 bg-blue-600/50 rounded-lg flex items-center justify-center mr-3">
-                  <Calendar className="w-3 h-3 md:w-4 md:h-4 text-blue-400" />
+                <div className="w-6 h-6 md:w-8 md:h-8 bg-gray-600/50 rounded-lg flex items-center justify-center mr-3">
+                  <Calendar className="w-3 h-3 md:w-4 md:h-4 text-gray-400" />
                 </div>
-                <h3 className="text-base md:text-lg font-semibold text-blue-300">Skipio Approach</h3>
+                <h3 className="text-base md:text-lg font-semibold text-gray-300">Skipio: Appointment Focused</h3>
               </div>
               
               <div className="space-y-3 md:space-y-4 mb-6">
                 <div className="bg-gray-700/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
                   <div className="flex items-center mb-2">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-                    <span className="text-blue-300 text-xs">Day 1 - Rule-Based Message</span>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mr-2"></div>
+                    <span className="text-gray-400 text-xs">Day 1 - Template Message</span>
                   </div>
-                  <p className="text-gray-200">"Hi [NAME], I'd love to schedule a quick call to discuss your home selling needs. When works better for you - mornings or afternoons?"</p>
+                  <p className="text-gray-300">"Hi Sarah, I'd love to schedule a quick call to discuss your home selling needs. When works better - mornings or afternoons?"</p>
                 </div>
                 
-                <div className="text-center text-gray-400 text-xs py-2">
+                <div className="text-center text-gray-500 text-xs py-2">
                   ... no response for 3 days ...
                 </div>
                 
                 <div className="bg-gray-700/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
                   <div className="flex items-center mb-2">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-                    <span className="text-blue-300 text-xs">Day 4 - SMART Drip Follow-up</span>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mr-2"></div>
+                    <span className="text-gray-400 text-xs">Day 4 - Follow-up Template</span>
                   </div>
-                  <p className="text-gray-200">"Hi [NAME], just following up on scheduling that call. I have some slots open this week. Let me know what works!"</p>
+                  <p className="text-gray-300">"Hi Sarah, just following up on scheduling that call. I have slots open this week. Let me know what works!"</p>
                 </div>
                 
-                <div className="text-center text-gray-400 text-xs py-2">
-                  ... no response for 7 days ...
+                <div className="text-center text-gray-500 text-xs py-2">
+                  ... still no response ...
                 </div>
                 
                 <div className="bg-gray-700/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
                   <div className="flex items-center mb-2">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-                    <span className="text-blue-300 text-xs">Day 11 - Final Follow-up</span>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mr-2"></div>
+                    <span className="text-gray-400 text-xs">Day 11 - Final Attempt</span>
                   </div>
-                  <p className="text-gray-200">"Hi [NAME], haven't heard back. Should I remove you from my list or try again next month?"</p>
+                  <p className="text-gray-300">"Hi Sarah, haven't heard back. Should I remove you from my list?"</p>
                 </div>
               </div>
               
-              <div className="bg-yellow-900/40 border border-yellow-400/30 rounded-lg p-3 md:p-4 text-center">
-                <Calendar className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 mx-auto mb-2" />
-                <p className="text-yellow-300 font-medium text-sm md:text-base">Result: No Appointment</p>
-                <p className="text-yellow-400 text-xs md:text-sm">Focus on scheduling, not psychology</p>
+              <div className="bg-red-900/40 border border-red-400/30 rounded-lg p-3 md:p-4 text-center">
+                <X className="w-5 h-5 md:w-6 md:h-6 text-red-400 mx-auto mb-2" />
+                <p className="text-red-300 font-medium text-sm md:text-base">Result: Lead Lost</p>
+                <p className="text-red-400 text-xs md:text-sm">Generic templates, no psychology, no deal</p>
               </div>
             </div>
 
-            {/* SurFox AI Conversation */}
-            <div className="bg-gradient-to-br from-purple-900/40 to-cyan-900/40 border-2 border-purple-400/50 rounded-2xl p-4 md:p-6 backdrop-blur-xl shadow-lg shadow-purple-500/25">
+            {/* SurFox AI Conversation - Bright & Prominent */}
+            <div className="bg-gradient-to-br from-purple-900/80 to-cyan-900/80 border-2 border-purple-400/70 rounded-2xl p-4 md:p-6 backdrop-blur-xl shadow-2xl shadow-purple-500/50">
               <div className="flex items-center mb-6">
-                <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center mr-3">
+                <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center mr-3 shadow-lg">
                   <Brain className="w-3 h-3 md:w-4 md:h-4 text-white" />
                 </div>
-                <h3 className="text-base md:text-lg font-semibold text-purple-300">SurFox AI Approach</h3>
+                <h3 className="text-base md:text-lg font-semibold text-white">SurFox: AI Deal Closer</h3>
               </div>
               
               <div className="space-y-3 md:space-y-4 mb-6">
-                <div className="bg-purple-900/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
+                <div className="bg-purple-900/50 rounded-lg p-2 md:p-3 text-xs md:text-sm border border-purple-400/30">
                   <div className="flex items-center mb-2">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
                     <span className="text-purple-300 text-xs">Day 1 - AI Psychology Opening</span>
                   </div>
-                  <p className="text-purple-200">"Hey Sarah — noticed you filled out that home valuation form. Most folks do that when they're just curious, but occasionally someone's actually ready to move. Which camp are you in?"</p>
+                  <p className="text-white">"Hey Sarah — noticed you filled out that home valuation form. Most folks do that when they're just curious, but occasionally someone's actually ready to move. Which camp are you in?"</p>
                 </div>
                 
-                <div className="text-center text-gray-400 text-xs py-2">
-                  ... AI detects no immediate response, adjusts timing ...
+                <div className="text-center text-purple-300 text-xs py-2">
+                  ... AI waits for optimal timing ...
                 </div>
                 
-                <div className="bg-purple-900/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
+                <div className="bg-purple-900/50 rounded-lg p-2 md:p-3 text-xs md:text-sm border border-purple-400/30">
                   <div className="flex items-center mb-2">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
-                    <span className="text-purple-300 text-xs">Day 4 - AI Psychological Reframe</span>
+                    <span className="text-purple-300 text-xs">Day 4 - AI Reframes Approach</span>
                   </div>
-                  <p className="text-purple-200">"Sarah, totally get it if you're not ready. Real estate can feel overwhelming. But I'm curious — what would need to happen for selling to make sense for you?"</p>
+                  <p className="text-white">"Sarah, totally get it if you're not ready. Real estate can feel overwhelming. But I'm curious — what would need to happen for selling to make sense for you?"</p>
                 </div>
                 
-                <div className="bg-emerald-900/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
+                <div className="bg-emerald-900/50 rounded-lg p-2 md:p-3 text-xs md:text-sm border border-emerald-400/30">
                   <div className="flex items-center mb-2">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></div>
-                    <span className="text-emerald-300 text-xs">Day 5 - Lead Response</span>
+                    <span className="text-emerald-300 text-xs">Day 5 - Lead Responds!</span>
                   </div>
                   <p className="text-emerald-200">"Honestly? We're thinking about it but worried about timing and market conditions."</p>
                 </div>
                 
-                <div className="bg-purple-900/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
+                <div className="bg-purple-900/50 rounded-lg p-2 md:p-3 text-xs md:text-sm border border-purple-400/30">
                   <div className="flex items-center mb-2">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
-                    <span className="text-purple-300 text-xs">AI Psychology Response</span>
+                    <span className="text-purple-300 text-xs">AI Reads Psychology & Responds</span>
                   </div>
-                  <p className="text-purple-200">"That's smart thinking, Sarah. Timing matters more than most people realize. What's driving the 'thinking about it' part? New job, family changes, or just ready for something different?"</p>
+                  <p className="text-white">"That's smart thinking, Sarah. What's driving the 'thinking about it' part? New job, family changes, or just ready for something different?"</p>
                 </div>
               </div>
               
-              <div className="bg-emerald-900/40 border border-emerald-400/30 rounded-lg p-3 md:p-4 text-center">
+              <div className="bg-emerald-900/40 border border-emerald-400/50 rounded-lg p-3 md:p-4 text-center">
                 <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-emerald-400 mx-auto mb-2" />
-                <p className="text-emerald-300 font-medium text-sm md:text-base">Result: Hot Lead Engaged!</p>
-                <p className="text-emerald-400 text-xs md:text-sm">AI flags as ready for sales conversation</p>
+                <p className="text-emerald-300 font-bold text-sm md:text-base">Result: Hot Lead Ready!</p>
+                <p className="text-emerald-200 text-xs md:text-sm">AI understands psychology, lead is motivated to sell</p>
               </div>
             </div>
           </div>
@@ -479,10 +479,10 @@ const SurFoxVsSkipio = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              Feature-by-Feature Breakdown
+              Why SurFox Wins Every Time
             </h2>
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-              See exactly where SurFox's AI psychology approach differs from Skipio's appointment-focused automation.
+              See exactly why AI that closes deals beats basic appointment booking.
             </p>
           </div>
 
@@ -517,25 +517,25 @@ const SurFoxVsSkipio = () => {
                 <h4 className="font-medium text-white mb-3 text-sm">{item.name}</h4>
                 
                 <div className="space-y-3">
-                  <div className="bg-purple-900/40 border border-purple-400/30 rounded-lg p-3">
+                  <div className="bg-gradient-to-br from-purple-900/60 to-cyan-900/60 border-2 border-purple-400/50 rounded-lg p-3 shadow-lg">
                     <div className="flex items-center mb-2">
                       <div className="w-3 h-3 bg-gradient-to-br from-purple-600 to-cyan-600 rounded mr-2"></div>
-                      <span className="font-medium text-purple-300 text-xs">SurFox</span>
+                      <span className="font-bold text-white text-xs">SurFox</span>
                     </div>
                     <div className="flex items-start">
                       <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-green-300 text-xs">{item.surfox}</span>
+                      <span className="text-white font-medium text-xs">{item.surfox}</span>
                     </div>
                   </div>
                   
                   <div className="bg-gray-800/40 border border-gray-600/30 rounded-lg p-3">
                     <div className="flex items-center mb-2">
-                      <div className="w-3 h-3 bg-blue-500 rounded mr-2"></div>
-                      <span className="font-medium text-gray-300 text-xs">Skipio</span>
+                      <div className="w-3 h-3 bg-gray-500 rounded mr-2"></div>
+                      <span className="font-medium text-gray-400 text-xs">Skipio</span>
                     </div>
                     <div className="flex items-start">
-                      <X className="w-4 h-4 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-yellow-300 text-xs">{item.skipio}</span>
+                      <X className="w-4 h-4 text-red-400 mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-400 text-xs">{item.skipio}</span>
                     </div>
                   </div>
                 </div>
@@ -547,7 +547,7 @@ const SurFoxVsSkipio = () => {
           <div className="hidden md:block bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-3xl border border-purple-500/30 overflow-hidden shadow-2xl">
             <div className="grid grid-cols-12 bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-400/30">
               <div className="col-span-6 p-6">
-                <h3 className="font-bold text-white text-lg">Feature</h3>
+                <h3 className="font-bold text-white text-lg">Capability</h3>
               </div>
               <div className="col-span-3 p-6 text-center border-l border-purple-400/30">
                 <div className="flex items-center justify-center">
@@ -557,8 +557,8 @@ const SurFoxVsSkipio = () => {
               </div>
               <div className="col-span-3 p-6 text-center border-l border-purple-400/30">
                 <div className="flex items-center justify-center">
-                  <div className="w-4 h-4 bg-blue-500 rounded mr-2"></div>
-                  <span className="font-medium text-gray-300">Skipio</span>
+                  <div className="w-4 h-4 bg-gray-500 rounded mr-2"></div>
+                  <span className="font-medium text-gray-400">Skipio</span>
                 </div>
               </div>
             </div>
@@ -566,18 +566,18 @@ const SurFoxVsSkipio = () => {
             {featureSets[activeFeatureSet].features.map((item, index) => (
               <div key={index} className="grid grid-cols-12 border-b border-gray-700/50 hover:bg-purple-900/20 transition-colors">
                 <div className="col-span-6 p-6">
-                  <span className="text-gray-200 font-medium">{item.name}</span>
+                  <span className="text-white font-medium">{item.name}</span>
                 </div>
                 <div className="col-span-3 p-6 border-l border-gray-700/50">
                   <div className="flex items-start">
                     <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-green-300 font-medium text-sm">{item.surfox}</span>
+                    <span className="text-white font-medium text-sm">{item.surfox}</span>
                   </div>
                 </div>
                 <div className="col-span-3 p-6 border-l border-gray-700/50">
                   <div className="flex items-start">
-                    <X className="w-5 h-5 text-yellow-400 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-yellow-300 text-sm">{item.skipio}</span>
+                    <X className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-400 text-sm">{item.skipio}</span>
                   </div>
                 </div>
               </div>
@@ -591,67 +591,67 @@ const SurFoxVsSkipio = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              When to Choose What
+              Choose The Right Tool
             </h2>
             <p className="text-lg md:text-xl text-purple-200 max-w-3xl mx-auto">
-              Both platforms serve different needs. Here's how to decide which approach fits your business goals.
+              Both have their place, but they solve very different problems.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-12 md:mb-16">
-            {/* Choose Skipio When */}
-            <div className="bg-gradient-to-br from-gray-900/60 to-black/60 border border-blue-400/30 rounded-2xl p-6 md:p-8 backdrop-blur-xl">
-              <h3 className="text-xl md:text-2xl font-bold text-blue-300 mb-6 flex items-center">
+            {/* Choose Skipio When - Muted */}
+            <div className="bg-gradient-to-br from-gray-800/60 to-gray-700/60 border border-gray-600/30 rounded-2xl p-6 md:p-8 backdrop-blur-xl">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-300 mb-6 flex items-center">
                 <Calendar className="w-5 h-5 md:w-6 md:h-6 mr-3" />
                 Choose Skipio When
               </h3>
               
               <div className="space-y-4 md:space-y-6">
-                <div className="p-3 md:p-4 bg-blue-900/40 border border-blue-400/30 rounded-xl">
-                  <div className="font-semibold text-blue-300 mb-2 text-sm md:text-base">Your Primary Goal:</div>
-                  <div className="text-xs md:text-sm text-blue-200">Scheduling appointments and managing follow-ups efficiently</div>
+                <div className="p-3 md:p-4 bg-gray-800/40 border border-gray-600/30 rounded-xl">
+                  <div className="font-semibold text-gray-300 mb-2 text-sm md:text-base">Your Main Problem:</div>
+                  <div className="text-xs md:text-sm text-gray-400">You just need help booking appointments</div>
                 </div>
                 
-                <div className="space-y-3 text-xs md:text-sm text-blue-200">
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You need multi-channel communication (SMS, voice, webchat)</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />Your business is appointment-driven (coaching, medical, services)</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You prefer manual message control and review</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />Budget is a primary concern ($99-$299/mo)</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You want proven, established platform with CRM integrations</div>
+                <div className="space-y-3 text-xs md:text-sm text-gray-400">
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-gray-500 flex-shrink-0" />You're happy writing all your own messages</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-gray-500 flex-shrink-0" />Your business is appointment-driven (coaching, medical)</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-gray-500 flex-shrink-0" />You need multiple communication channels</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-gray-500 flex-shrink-0" />Budget is your main concern</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-gray-500 flex-shrink-0" />You want manual control over everything</div>
                 </div>
                 
-                <div className="p-3 md:p-4 bg-blue-900/30 rounded-xl">
-                  <div className="text-blue-200 font-medium text-xs md:text-sm">
-                    <strong>Perfect For:</strong> Service businesses, coaches, medical practices, and anyone focused on appointment booking efficiency
+                <div className="p-3 md:p-4 bg-gray-800/30 rounded-xl">
+                  <div className="text-gray-400 font-medium text-xs md:text-sm">
+                    <strong>Good For:</strong> Service businesses that just need appointment scheduling help
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Choose SurFox When */}
-            <div className="bg-gradient-to-br from-purple-900/60 to-cyan-900/60 border-2 border-purple-400/50 rounded-2xl p-6 md:p-8 backdrop-blur-xl shadow-lg shadow-purple-500/25">
-              <h3 className="text-xl md:text-2xl font-bold text-purple-300 mb-6 flex items-center">
+            {/* Choose SurFox When - Bright & Prominent */}
+            <div className="bg-gradient-to-br from-purple-900/80 to-cyan-900/80 border-2 border-purple-400/70 rounded-2xl p-6 md:p-8 backdrop-blur-xl shadow-2xl shadow-purple-500/50 transform hover:scale-105 transition-transform duration-300">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-6 flex items-center">
                 <Brain className="w-5 h-5 md:w-6 md:h-6 mr-3" />
                 Choose SurFox When
               </h3>
               
               <div className="space-y-4 md:space-y-6">
-                <div className="p-3 md:p-4 bg-purple-900/40 border border-purple-400/30 rounded-xl">
-                  <div className="font-semibold text-purple-300 mb-2 text-sm md:text-base">Your Primary Goal:</div>
-                  <div className="text-xs md:text-sm text-purple-200">Converting cold leads into qualified buyers using psychology</div>
+                <div className="p-3 md:p-4 bg-purple-900/50 border border-purple-400/50 rounded-xl">
+                  <div className="font-semibold text-white mb-2 text-sm md:text-base">Your Main Problem:</div>
+                  <div className="text-xs md:text-sm text-purple-200">Your leads aren't turning into deals</div>
                 </div>
                 
-                <div className="space-y-3 text-xs md:text-sm text-purple-200">
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You have cold leads that need nurturing and qualification</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />Your business is sales-focused (real estate, wholesale, recruiting)</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You want AI to handle conversations autonomously</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You need psychological lead scoring and qualification</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />ROI matters more than monthly cost</div>
+                <div className="space-y-3 text-xs md:text-sm text-white">
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />Your follow-ups aren't working</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You need more deals, not just appointments</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You want AI to handle conversations for you</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You have leads that go cold and never respond</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />Results matter more than monthly cost</div>
                 </div>
                 
-                <div className="p-3 md:p-4 bg-purple-900/30 rounded-xl">
-                  <div className="text-purple-200 font-medium text-xs md:text-sm">
-                    <strong>Perfect For:</strong> Sales organizations focused on converting cold prospects into qualified opportunities
+                <div className="p-3 md:p-4 bg-gradient-to-r from-purple-900/50 to-cyan-900/50 border border-purple-400/50 rounded-xl">
+                  <div className="text-white font-bold text-xs md:text-sm">
+                    <strong>Perfect For:</strong> Businesses that need to convert prospects into actual customers
                   </div>
                 </div>
               </div>
@@ -659,28 +659,28 @@ const SurFoxVsSkipio = () => {
           </div>
 
           {/* Outcome Comparison */}
-          <div className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 border border-purple-400/30 rounded-2xl p-6 md:p-8 text-center backdrop-blur-xl">
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-6">Different Tools, Different Outcomes</h3>
+          <div className="bg-gradient-to-br from-purple-900/60 to-cyan-900/60 border-2 border-purple-400/50 rounded-2xl p-6 md:p-8 text-center backdrop-blur-xl shadow-xl">
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-6">The Bottom Line</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               <div className="text-center">
-                <div className="text-base md:text-lg text-purple-200 mb-2">Skipio Success Metric</div>
-                <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-2">Appointments Booked</div>
-                <div className="text-xs md:text-sm text-gray-400">Efficiency in scheduling</div>
+                <div className="text-base md:text-lg text-purple-200 mb-2">Skipio Gives You</div>
+                <div className="text-2xl md:text-3xl font-bold text-gray-400 mb-2">Appointments</div>
+                <div className="text-xs md:text-sm text-gray-500">But you still do all the selling</div>
               </div>
               <div className="text-center">
                 <div className="text-base md:text-lg text-purple-200 mb-2">vs</div>
-                <div className="text-2xl md:text-3xl font-bold text-purple-400 mb-2">Psychology</div>
-                <div className="text-xs md:text-sm text-purple-300">Understanding + conversion</div>
+                <div className="text-2xl md:text-3xl font-bold text-purple-400 mb-2">AI</div>
+                <div className="text-xs md:text-sm text-purple-300">That does the selling for you</div>
               </div>
               <div className="text-center">
-                <div className="text-base md:text-lg text-purple-200 mb-2">SurFox Success Metric</div>
-                <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">Qualified Leads</div>
-                <div className="text-xs md:text-sm text-gray-400">Ready-to-buy prospects</div>
+                <div className="text-base md:text-lg text-purple-200 mb-2">SurFox Gives You</div>
+                <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">Deals</div>
+                <div className="text-xs md:text-sm text-cyan-300">Qualified prospects ready to buy</div>
               </div>
             </div>
             <div className="mt-6 p-3 md:p-4 bg-purple-900/30 rounded-xl">
-              <p className="text-purple-200 font-medium text-sm md:text-base">
-                <strong className="text-white">The key difference:</strong> Skipio optimizes for communication efficiency. SurFox optimizes for conversion psychology.
+              <p className="text-white font-bold text-sm md:text-base">
+                <strong>Simple choice:</strong> Do you want help booking meetings, or do you want more deals?
               </p>
             </div>
           </div>
@@ -692,20 +692,20 @@ const SurFoxVsSkipio = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-            Ready for AI Psychology?
+            Ready for More Deals?
           </h2>
           <p className="text-lg md:text-2xl text-purple-200 mb-4 max-w-3xl mx-auto leading-relaxed">
-            If you want to convert cold leads into hot prospects, SurFox's AI psychology approach is your answer.
+            Stop settling for appointments. Get AI that turns your leads into actual deals.
           </p>
           <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            <strong className="text-white">14-day free trial.</strong> No setup fees. See how AI psychology converts your cold leads.
+            <strong className="text-white">14-day free trial.</strong> No setup fees. See how many more deals you close.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center mb-8">
             <button className="group relative px-8 md:px-12 py-4 md:py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-lg md:text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative flex items-center justify-center">
-                Start Free Trial
+                Start Closing More Deals
                 <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
               </div>
             </button>
@@ -721,11 +721,11 @@ const SurFoxVsSkipio = () => {
             </div>
             <div className="flex items-center">
               <Brain className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
-              AI starts learning immediately
+              AI starts working immediately
             </div>
             <div className="flex items-center">
-              <Award className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
-              Cancel anytime
+              <Target className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
+              See results in your first week
             </div>
           </div>
         </div>

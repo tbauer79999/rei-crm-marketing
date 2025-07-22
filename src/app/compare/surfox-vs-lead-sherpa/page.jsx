@@ -26,47 +26,47 @@ const SurFoxVsLeadSherpa = () => {
       icon: Shield,
       color: 'purple',
       features: [
-        { name: 'Skip trace integration', surfox: 'None (future integration possible)', sherpa: 'Built-in PropStack® & skip trace API' },
-        { name: 'TCPA/A2P compliance', surfox: 'Must implement compliance per deployment', sherpa: 'Attorney-vetted, human-triggered sending' },
-        { name: 'Lead data stacking', surfox: 'CRM-integrated behavior profiles (future)', sherpa: 'Automatic consolidation & tagging' },
-        { name: 'Contact intelligence', surfox: 'Psychological profiling and behavior analysis', sherpa: 'Skip trace data and contact consolidation' },
-        { name: 'Legal protection', surfox: 'Standard compliance implementation', sherpa: 'Attorney-vetted processes and documentation' }
+        { name: 'Contact Data Acquisition', surfox: 'Integrates with your existing sources', sherpa: 'Built-in PropStack® skip tracing' },
+        { name: 'TCPA/A2P Compliance', surfox: 'Standard compliance implementation', sherpa: 'Attorney-vetted compliance processes' },
+        { name: 'Lead Data Management', surfox: 'Smart CRM integration with behavior profiles', sherpa: 'Automatic data consolidation & tagging' },
+        { name: 'Contact Intelligence', surfox: 'Advanced psychological & behavioral analysis', sherpa: 'Skip trace data and contact verification' },
+        { name: 'Legal Protection', surfox: 'Industry-standard compliance tools', sherpa: 'Attorney-backed legal documentation' }
       ]
     },
     {
-      category: 'AI Intelligence',
+      category: 'Conversion Power',
       icon: Brain,
       color: 'cyan',
       features: [
-        { name: 'AI auto-response generation', surfox: 'Fully autonomous, intelligent replies', sherpa: 'Manual or template-based responses' },
-        { name: 'Sentiment/intent detection', surfox: 'Real-time NLP engagement analysis', sherpa: 'None - no sentiment analysis' },
-        { name: 'Psychological profiling', surfox: 'Lead acuity, urgency, motivation scoring', sherpa: 'Not supported' },
-        { name: 'Conversation adaptation', surfox: 'AI-adaptive sequences based on lead psychology', sherpa: 'Manual drip sequences with pause-on-reply' },
-        { name: 'Learning capability', surfox: 'AI learns from every conversation', sherpa: 'Static workflows and templates' }
+        { name: 'Response Generation', surfox: 'Fully autonomous AI replies that adapt to each lead', sherpa: 'Manual responses or basic templates' },
+        { name: 'Lead Intelligence', surfox: 'Real-time NLP analysis of motivation & urgency', sherpa: 'No sentiment or motivation analysis' },
+        { name: 'Conversation Quality', surfox: 'AI learns and adapts to maximize conversions', sherpa: 'Static drip sequences with manual management' },
+        { name: 'Hot Lead Detection', surfox: 'AI scores and prioritizes high-intent prospects', sherpa: 'Manual tagging and organization only' },
+        { name: 'Learning Capability', surfox: 'Gets smarter with every conversation', sherpa: 'No learning - same approach every time' }
       ]
     },
     {
-      category: 'Campaign Management',
+      category: 'Campaign Results',
       icon: Target,
       color: 'blue',
       features: [
-        { name: 'SMS campaigns', surfox: 'AI-adaptive sequences based on lead psychology', sherpa: 'Manual drip sequences with pause-on-reply' },
-        { name: 'Auto-reply system', surfox: 'Contextual AI replies in real time', sherpa: 'Quick replies & Prospect Relay forwarding' },
-        { name: 'Campaign analytics', surfox: 'Conversational insights, conversion scoring', sherpa: 'Volume, open rates, replies, DNC logs' },
-        { name: 'Multi-device access', surfox: 'Web interface with fully automated AI', sherpa: 'Web + mobile forwarding' },
-        { name: 'Lead prioritization', surfox: 'AI ranks leads by conversion probability', sherpa: 'Manual tagging and organization' }
+        { name: 'SMS Campaigns', surfox: 'AI-adaptive sequences that respond to lead behavior', sherpa: 'Standard drip sequences with pause-on-reply' },
+        { name: 'Real-Time Responses', surfox: 'Contextual AI replies 24/7 without human input', sherpa: 'Quick replies with manual forwarding system' },
+        { name: 'Performance Analytics', surfox: 'Conversion insights, lead scoring, ROI tracking', sherpa: 'Basic metrics: volume, opens, replies, DNC' },
+        { name: 'Lead Qualification', surfox: 'AI identifies and escalates motivated sellers', sherpa: 'Manual review and qualification process' },
+        { name: 'Conversion Optimization', surfox: 'Continuous AI improvement of messaging', sherpa: 'Manual A/B testing and template updates' }
       ]
     },
     {
-      category: 'Platform Focus',
+      category: 'Business Focus',
       icon: Building,
       color: 'green',
       features: [
-        { name: 'Core purpose', surfox: 'AI-first SMS engagement to convert cold leads', sherpa: 'Real-estate skip tracing + TCPA-compliant SMS outreach' },
-        { name: 'Primary user base', surfox: 'Sales-centric (wholesale, agencies, recruiters)', sherpa: 'Real-estate investors, wholesalers' },
-        { name: 'Pricing model', surfox: 'Outcome-tiered pricing based on conversions', sherpa: '$1,299+/mo for 15k msgs + skip trace' },
-        { name: 'Multi-channel support', surfox: 'SMS-first with Email/voice roadmap', sherpa: 'SMS + call forwarding' },
-        { name: 'Integration approach', surfox: 'Zapier, Make, custom AI workflows', sherpa: 'Zapier, Podio, Twilio/Telnyx' }
+        { name: 'Primary Purpose', surfox: 'Convert cold leads into qualified appointments', sherpa: 'Compliant lead acquisition and basic outreach' },
+        { name: 'Target Market', surfox: 'Any sales team with leads to convert', sherpa: 'Real estate investors and wholesalers' },
+        { name: 'Pricing Strategy', surfox: 'Performance-based: pay for results, not volume', sherpa: '$1,299+/month plus per-message costs' },
+        { name: 'Channel Support', surfox: 'SMS-first with email/voice expansion planned', sherpa: 'SMS messaging with call forwarding' },
+        { name: 'Integration Approach', surfox: 'Zapier, Make, API, custom AI workflows', sherpa: 'Zapier, Podio, Twilio/Telnyx carriers' }
       ]
     }
   ]
@@ -162,21 +162,19 @@ const SurFoxVsLeadSherpa = () => {
           <div className="text-center mb-16">
             {/* Platform Logos */}
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8 mb-12">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-2xl flex items-center justify-center">
-                  <Brain className="w-6 h-6 md:w-8 md:h-8 text-white" />
-                </div>
+              <div className="flex items-center space-x-4 p-6 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 rounded-2xl border-2 border-purple-400/50 shadow-lg shadow-purple-500/25">
+                <img src="/logo.png" alt="SurFox" className="w-12 h-12 md:w-16 md:h-16" />
                 <div className="text-left">
                   <div className="text-2xl md:text-3xl font-bold text-white">SurFox</div>
-                  <div className="text-xs md:text-sm text-purple-300">Sales Psychology AI</div>
+                  <div className="text-xs md:text-sm text-purple-300">AI Conversion Engine</div>
                 </div>
               </div>
               
               <div className="text-gray-400 text-2xl md:text-4xl font-bold">VS</div>
               
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-orange-600/50 rounded-2xl flex items-center justify-center">
-                  <Search className="w-6 h-6 md:w-8 md:h-8 text-orange-400" />
+              <div className="flex items-center space-x-4 p-4 bg-gradient-to-br from-gray-800/40 to-gray-700/40 rounded-2xl border border-gray-600/30">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-600/50 rounded-2xl flex items-center justify-center">
+                  <Search className="w-6 h-6 md:w-8 md:h-8 text-gray-400" />
                 </div>
                 <div className="text-left">
                   <div className="text-2xl md:text-3xl font-bold text-gray-400">Lead Sherpa</div>
@@ -186,24 +184,20 @@ const SurFoxVsLeadSherpa = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
-              <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-                AI Psychology
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                vs Skip Tracing
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                3x Higher Close Rates
               </span>
               <br />
               <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-                Excellence
+                vs Manual Messaging
               </span>
             </h1>
             
             <div className="text-lg md:text-2xl text-purple-200 space-y-4 mb-8">
-              <p>Lead Sherpa dominates skip tracing and compliance for real estate investors.</p>
+              <p><strong className="text-white">Lead Sherpa excels at finding contacts legally.</strong></p>
+              <p><strong className="text-cyan-400">SurFox excels at converting those contacts into sales.</strong></p>
               <p className="text-base md:text-lg text-gray-300">
-                <strong className="text-white">SurFox excels at converting those leads with AI psychology.</strong> 
-                See why you might need both approaches for maximum success.
+                One gets you compliant data. The other gets you qualified appointments.
               </p>
             </div>
             
@@ -211,32 +205,32 @@ const SurFoxVsLeadSherpa = () => {
               <button className="group relative px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl font-bold text-base md:text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative flex items-center justify-center">
-                  See Full Comparison
+                  Start Converting More Leads
                   <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
               </button>
-              <a href="#demo" className="px-6 md:px-8 py-3 md:py-4 border-2 border-purple-400/50 rounded-2xl font-bold text-base md:text-lg backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-300">
+              <a href="#demo" className="px-6 md:px-8 py-3 md:py-4 border-2 border-gray-500/50 rounded-2xl font-bold text-base md:text-lg backdrop-blur-sm hover:bg-gray-500/20 transition-all duration-300">
                 <Play className="mr-2 w-4 h-4 md:w-5 md:h-5 inline" />
-                Watch Demo
+                See the Difference
               </a>
             </div>
 
             {/* Key Stats Preview */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-4 md:p-6 text-center shadow-2xl">
-                <div className="text-2xl md:text-3xl font-bold text-green-400 mb-2">$197</div>
+              <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 backdrop-blur-xl rounded-2xl border-2 border-purple-400/50 p-4 md:p-6 text-center shadow-2xl shadow-purple-500/25">
+                <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">$197</div>
                 <div className="text-sm text-purple-200">SurFox Starting Price</div>
                 <div className="text-xs text-gray-400 mt-2">vs $1,299+ Lead Sherpa</div>
               </div>
-              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-4 md:p-6 text-center shadow-2xl">
-                <div className="text-2xl md:text-3xl font-bold text-purple-400 mb-2">AI</div>
-                <div className="text-sm text-purple-200">Psychology Engine</div>
+              <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 backdrop-blur-xl rounded-2xl border-2 border-purple-400/50 p-4 md:p-6 text-center shadow-2xl shadow-purple-500/25">
+                <div className="text-2xl md:text-3xl font-bold text-purple-400 mb-2">24/7</div>
+                <div className="text-sm text-purple-200">AI Conversation</div>
                 <div className="text-xs text-gray-400 mt-2">vs manual templates</div>
               </div>
-              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-4 md:p-6 text-center shadow-2xl">
-                <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-sm text-purple-200">Psychology Dimensions</div>
-                <div className="text-xs text-gray-400 mt-2">vs basic data points</div>
+              <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 backdrop-blur-xl rounded-2xl border-2 border-purple-400/50 p-4 md:p-6 text-center shadow-2xl shadow-purple-500/25">
+                <div className="text-2xl md:text-3xl font-bold text-green-400 mb-2">3x</div>
+                <div className="text-sm text-purple-200">More Appointments</div>
+                <div className="text-xs text-gray-400 mt-2">vs basic messaging</div>
               </div>
             </div>
           </div>
@@ -244,112 +238,110 @@ const SurFoxVsLeadSherpa = () => {
       </section>
 
       {/* Philosophy Comparison */}
-      <section className="relative py-16 md:py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50 backdrop-blur-xl border-y border-purple-500/30">
+      <section className="relative py-16 md:py-20 bg-gradient-to-r from-gray-900/50 to-slate-900/50 backdrop-blur-xl border-y border-gray-500/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              Two Essential Parts of the Sales Process
+              Two Different Business Problems
             </h2>
-            <p className="text-lg md:text-xl text-purple-200 max-w-3xl mx-auto">
-              Lead Sherpa excels at finding and reaching prospects legally. SurFox excels at converting them psychologically.
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              Lead Sherpa solves the "how do I find contacts legally?" problem. SurFox solves the "how do I convert contacts into sales?" problem.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
             {/* Lead Sherpa Approach */}
-            <div className="bg-gradient-to-br from-orange-900/40 to-red-600/40 rounded-2xl border border-orange-400/30 p-6 md:p-8 backdrop-blur-sm">
+            <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 rounded-2xl border border-gray-500/30 p-6 md:p-8 backdrop-blur-sm">
               <div className="flex items-center mb-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-orange-600/50 rounded-xl flex items-center justify-center mr-4">
-                  <Search className="w-5 h-5 md:w-6 md:h-6 text-orange-400" />
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-600/50 rounded-xl flex items-center justify-center mr-4">
+                  <Search className="w-5 h-5 md:w-6 md:h-6 text-gray-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-orange-300">Lead Sherpa</h3>
-                  <p className="text-orange-200 text-sm md:text-base">Data & Compliance Excellence</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-300">Lead Sherpa</h3>
+                  <p className="text-gray-400 text-sm md:text-base">Data Acquisition Excellence</p>
                 </div>
               </div>
               
               <div className="space-y-4">
-                <div className="bg-orange-900/40 border border-orange-400/30 rounded-xl p-3 md:p-4">
-                  <h4 className="font-semibold text-orange-300 mb-2 text-sm md:text-base">The Strategy:</h4>
-                  <p className="text-xs md:text-sm text-orange-200">"Find every possible contact method legally and reach prospects with compliant messaging"</p>
+                <div className="bg-gray-700/40 border border-gray-500/30 rounded-xl p-3 md:p-4">
+                  <h4 className="font-semibold text-gray-300 mb-2 text-sm md:text-base">The Problem They Solve:</h4>
+                  <p className="text-xs md:text-sm text-gray-400">"I need to find property owners legally and stay TCPA compliant"</p>
                 </div>
                 
                 <div className="space-y-3">
-                  <div className="flex items-start text-orange-200 text-sm md:text-base">
+                  <div className="flex items-start text-gray-300 text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
                     <span>Built-in PropStack® skip tracing</span>
                   </div>
-                  <div className="flex items-start text-orange-200 text-sm md:text-base">
+                  <div className="flex items-start text-gray-300 text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
                     <span>Attorney-vetted TCPA compliance</span>
                   </div>
-                  <div className="flex items-start text-orange-200 text-sm md:text-base">
+                  <div className="flex items-start text-gray-300 text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
                     <span>Automatic lead data consolidation</span>
                   </div>
-                  <div className="flex items-start text-orange-200 text-sm md:text-base">
+                  <div className="flex items-start text-gray-300 text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
                     <span>Real estate focused workflows</span>
                   </div>
-                  <div className="flex items-start text-orange-200 text-sm md:text-base">
+                  <div className="flex items-start text-gray-400 text-sm md:text-base">
                     <X className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-red-400 flex-shrink-0" />
-                    <span>No psychological conversion intelligence</span>
+                    <span>Basic templated messaging only</span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 p-3 md:p-4 bg-orange-900/40 border border-orange-400/30 rounded-xl">
-                <p className="text-orange-200 text-xs md:text-sm font-medium">
-                  <strong>Best For:</strong> Real estate investors who need compliant skip tracing and basic outreach automation
+              <div className="mt-6 p-3 md:p-4 bg-gray-700/40 border border-gray-500/30 rounded-xl">
+                <p className="text-gray-300 text-xs md:text-sm font-medium">
+                  <strong>Best For:</strong> Real estate investors who need compliant contact acquisition
                 </p>
               </div>
             </div>
 
             {/* SurFox Approach */}
-            <div className="bg-gradient-to-br from-purple-900/40 to-cyan-900/40 rounded-2xl border-2 border-purple-400/50 p-6 md:p-8 backdrop-blur-sm shadow-lg shadow-purple-500/25">
+            <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 rounded-2xl border-2 border-purple-400/50 p-6 md:p-8 backdrop-blur-sm shadow-lg shadow-purple-500/25">
               <div className="flex items-center mb-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-xl flex items-center justify-center mr-4">
-                  <Brain className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                </div>
+                <img src="/logo.png" alt="SurFox" className="w-10 h-10 md:w-12 md:h-12 mr-4" />
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-purple-300">SurFox</h3>
-                  <p className="text-purple-200 text-sm md:text-base">AI Psychology & Conversion</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-white">SurFox</h3>
+                  <p className="text-purple-200 text-sm md:text-base">AI Conversion Engine</p>
                 </div>
               </div>
               
               <div className="space-y-4">
-                <div className="bg-purple-900/40 border border-purple-400/30 rounded-xl p-3 md:p-4">
-                  <h4 className="font-semibold text-purple-300 mb-2 text-sm md:text-base">The Strategy:</h4>
-                  <p className="text-xs md:text-sm text-purple-200">"Once you have contacts, use AI psychology to convert them into motivated sellers"</p>
+                <div className="bg-purple-800/40 border border-purple-400/30 rounded-xl p-3 md:p-4">
+                  <h4 className="font-semibold text-white mb-2 text-sm md:text-base">The Problem We Solve:</h4>
+                  <p className="text-xs md:text-sm text-purple-200">"I have contacts but my response rates suck and I'm not closing enough deals"</p>
                 </div>
                 
                 <div className="space-y-3">
-                  <div className="flex items-start text-purple-200 text-sm md:text-base">
+                  <div className="flex items-start text-white text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>AI reads prospect psychology in real-time</span>
+                    <span>AI reads and responds to prospects 24/7</span>
                   </div>
-                  <div className="flex items-start text-purple-200 text-sm md:text-base">
+                  <div className="flex items-start text-white text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>Autonomous conversation management</span>
+                    <span>Automatically identifies motivated sellers</span>
                   </div>
-                  <div className="flex items-start text-purple-200 text-sm md:text-base">
+                  <div className="flex items-start text-white text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>Motivation and urgency scoring</span>
+                    <span>Escalates hot leads immediately</span>
                   </div>
-                  <div className="flex items-start text-purple-200 text-sm md:text-base">
+                  <div className="flex items-start text-white text-sm md:text-base">
                     <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>Hot lead escalation intelligence</span>
+                    <span>Learns and improves with each conversation</span>
                   </div>
-                  <div className="flex items-start text-purple-200 text-sm md:text-base">
-                    <X className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-red-400 flex-shrink-0" />
-                    <span>No built-in skip tracing capabilities</span>
+                  <div className="flex items-start text-purple-300 text-sm md:text-base">
+                    <X className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-yellow-400 flex-shrink-0" />
+                    <span>Requires contact data from external sources</span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 p-3 md:p-4 bg-purple-900/40 border border-purple-400/30 rounded-xl">
-                <p className="text-purple-200 text-xs md:text-sm font-medium">
-                  <strong>Best For:</strong> Sales teams who have contacts and want AI to convert them into qualified opportunities
+              <div className="mt-6 p-3 md:p-4 bg-purple-800/40 border border-purple-400/30 rounded-xl">
+                <p className="text-white text-xs md:text-sm font-medium">
+                  <strong>Best For:</strong> Sales teams who have contacts but want 3x more qualified appointments
                 </p>
               </div>
             </div>
@@ -362,36 +354,36 @@ const SurFoxVsLeadSherpa = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              Different Strengths, Different Outcomes
+              Same Lead, Different Results
             </h2>
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-              Same property owner prospect, different platform focuses and conversation approaches.
+              Both platforms reach the same property owner, but see how the conversation approaches and outcomes differ.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {/* Lead Sherpa Conversation */}
-            <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 border border-orange-400/30 rounded-2xl p-4 md:p-6 backdrop-blur-xl">
+            <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 border border-gray-500/30 rounded-2xl p-4 md:p-6 backdrop-blur-xl">
               <div className="flex items-center mb-6">
-                <div className="w-6 h-6 md:w-8 md:h-8 bg-orange-600/50 rounded-lg flex items-center justify-center mr-3">
-                  <Search className="w-3 h-3 md:w-4 md:h-4 text-orange-400" />
+                <div className="w-6 h-6 md:w-8 md:h-8 bg-gray-600/50 rounded-lg flex items-center justify-center mr-3">
+                  <Search className="w-3 h-3 md:w-4 md:h-4 text-gray-400" />
                 </div>
-                <h3 className="text-base md:text-lg font-semibold text-orange-300">Lead Sherpa Approach</h3>
+                <h3 className="text-base md:text-lg font-semibold text-gray-300">Lead Sherpa Approach</h3>
               </div>
               
               <div className="space-y-3 md:space-y-4 mb-6">
                 <div className="bg-green-900/40 rounded-lg p-2 md:p-3 text-xs md:text-sm border border-green-400/30">
                   <div className="flex items-center mb-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                    <span className="text-green-300 text-xs">Data Collection Success</span>
+                    <span className="text-green-300 text-xs">Data Success</span>
                   </div>
                   <p className="text-green-200">✅ Found 4 phone numbers via PropStack®<br/>✅ Verified property ownership<br/>✅ TCPA compliance confirmed</p>
                 </div>
                 
                 <div className="bg-gray-700/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
                   <div className="flex items-center mb-2">
-                    <div className="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
-                    <span className="text-orange-300 text-xs">Day 1 - Compliant Message</span>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mr-2"></div>
+                    <span className="text-gray-300 text-xs">Day 1 - Template Message</span>
                   </div>
                   <p className="text-gray-200">"Hi [NAME], I'm a local real estate investor. I'd like to make you a fair cash offer on your property at [ADDRESS]. Are you interested in selling?"</p>
                 </div>
@@ -402,8 +394,8 @@ const SurFoxVsLeadSherpa = () => {
                 
                 <div className="bg-gray-700/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
                   <div className="flex items-center mb-2">
-                    <div className="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
-                    <span className="text-orange-300 text-xs">Day 6 - Follow-up Template</span>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mr-2"></div>
+                    <span className="text-gray-300 text-xs">Day 6 - Follow-up Template</span>
                   </div>
                   <p className="text-gray-200">"Hi [NAME], following up on my offer for [ADDRESS]. We close quickly and pay cash. Still interested?"</p>
                 </div>
@@ -412,57 +404,55 @@ const SurFoxVsLeadSherpa = () => {
               <div className="bg-yellow-900/40 border border-yellow-400/30 rounded-lg p-3 md:p-4 text-center">
                 <Shield className="w-5 h-5 md:w-6 md:h-6 text-yellow-400 mx-auto mb-2" />
                 <p className="text-yellow-300 font-medium text-sm md:text-base">Result: Compliant Outreach</p>
-                <p className="text-yellow-400 text-xs md:text-sm">Perfect data, legal protection, basic response</p>
+                <p className="text-yellow-200 text-xs md:text-sm">Legal protection ✅, low response rate</p>
               </div>
             </div>
 
             {/* SurFox AI Conversation */}
-            <div className="bg-gradient-to-br from-purple-900/40 to-cyan-900/40 border-2 border-purple-400/50 rounded-2xl p-4 md:p-6 backdrop-blur-xl shadow-lg shadow-purple-500/25">
+            <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 border-2 border-purple-400/50 rounded-2xl p-4 md:p-6 backdrop-blur-xl shadow-lg shadow-purple-500/25">
               <div className="flex items-center mb-6">
-                <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center mr-3">
-                  <Brain className="w-3 h-3 md:w-4 md:h-4 text-white" />
-                </div>
-                <h3 className="text-base md:text-lg font-semibold text-purple-300">SurFox AI Approach</h3>
+                <img src="/logo.png" alt="SurFox" className="w-6 h-6 md:w-8 md:h-8 mr-3" />
+                <h3 className="text-base md:text-lg font-semibold text-white">SurFox AI Approach</h3>
               </div>
               
               <div className="space-y-3 md:space-y-4 mb-6">
                 <div className="bg-blue-900/40 rounded-lg p-2 md:p-3 text-xs md:text-sm border border-blue-400/30">
                   <div className="flex items-center mb-2">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-                    <span className="text-blue-300 text-xs">Uses Provided Contact Data</span>
+                    <span className="text-blue-300 text-xs">Uses Your Contact Data</span>
                   </div>
-                  <p className="text-blue-200">📱 Takes contact info from your source<br/>🧠 Builds psychological profile<br/>🎯 Optimizes for conversion psychology</p>
+                  <p className="text-blue-200">📱 Takes contact from your CRM/lists<br/>🧠 Builds psychological profile<br/>🎯 Optimizes messaging for conversion</p>
                 </div>
                 
-                <div className="bg-purple-900/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
+                <div className="bg-purple-800/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
                   <div className="flex items-center mb-2">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
-                    <span className="text-purple-300 text-xs">Day 1 - AI Psychology Opening</span>
+                    <span className="text-purple-300 text-xs">Day 1 - AI Smart Opening</span>
                   </div>
-                  <p className="text-purple-200">"Hey Sarah — I buy houses in your neighborhood, but I'm picky. Yours caught my eye because it's exactly what my buyers want. Ever think about selling, or are you staying put?"</p>
+                  <p className="text-white">"Hey Sarah — I buy houses in your neighborhood, but I'm picky. Yours caught my eye because it's exactly what my buyers want. Ever think about selling, or are you staying put?"</p>
                 </div>
                 
                 <div className="bg-emerald-900/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
                   <div className="flex items-center mb-2">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></div>
-                    <span className="text-emerald-300 text-xs">Day 2 - Lead Response</span>
+                    <span className="text-emerald-300 text-xs">Day 2 - Lead Responds!</span>
                   </div>
                   <p className="text-emerald-200">"Maybe... depends on the offer. What are you thinking?"</p>
                 </div>
                 
-                <div className="bg-purple-900/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
+                <div className="bg-purple-800/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
                   <div className="flex items-center mb-2">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
-                    <span className="text-purple-300 text-xs">AI Psychology Response</span>
+                    <span className="text-purple-300 text-xs">AI Qualification Response</span>
                   </div>
-                  <p className="text-purple-200">"Fair question, Sarah. I don't lowball people — it's bad for business. What would make you seriously consider selling? Is it the price, or is there something else motivating you?"</p>
+                  <p className="text-white">"Fair question, Sarah. I don't lowball people — it's bad for business. What would make you seriously consider selling? Is it the price, or is there something else motivating you?"</p>
                 </div>
               </div>
               
               <div className="bg-emerald-900/40 border border-emerald-400/30 rounded-lg p-3 md:p-4 text-center">
                 <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-emerald-400 mx-auto mb-2" />
-                <p className="text-emerald-300 font-medium text-sm md:text-base">Result: Engaged Conversation</p>
-                <p className="text-emerald-400 text-xs md:text-sm">AI flags as motivated seller, psychology understood</p>
+                <p className="text-emerald-300 font-medium text-sm md:text-base">Result: Qualified Lead</p>
+                <p className="text-emerald-200 text-xs md:text-sm">AI flags as motivated seller, call scheduled</p>
               </div>
             </div>
           </div>
@@ -477,7 +467,7 @@ const SurFoxVsLeadSherpa = () => {
               Feature-by-Feature Breakdown
             </h2>
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-              See exactly where each platform excels and how they complement different parts of the sales process.
+              See exactly where each platform excels and how they solve different parts of the sales process.
             </p>
           </div>
 
@@ -512,31 +502,31 @@ const SurFoxVsLeadSherpa = () => {
                 <h4 className="font-medium text-white mb-3 text-sm">{item.name}</h4>
                 
                 <div className="space-y-3">
-                  <div className="bg-purple-900/40 border border-purple-400/30 rounded-lg p-3">
+                  <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 border-2 border-purple-400/50 rounded-lg p-3 shadow-lg shadow-purple-500/25">
                     <div className="flex items-center mb-2">
-                      <div className="w-3 h-3 bg-gradient-to-br from-purple-600 to-cyan-600 rounded mr-2"></div>
-                      <span className="font-medium text-purple-300 text-xs">SurFox</span>
+                      <img src="/logo.png" alt="SurFox" className="w-3 h-3 mr-2" />
+                      <span className="font-medium text-white text-xs">SurFox</span>
                     </div>
                     <div className="flex items-start">
-                      {item.surfox.includes('None') || item.surfox.includes('Must implement') ? 
-                        <X className="w-4 h-4 text-red-400 mr-2 mt-0.5 flex-shrink-0" /> :
+                      {item.surfox.includes('Standard compliance') || item.surfox.includes('Integrates') || item.surfox.includes('Requires') ? 
+                        <AlertCircle className="w-4 h-4 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /> :
                         <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                       }
-                      <span className={`text-xs ${item.surfox.includes('None') || item.surfox.includes('Must implement') ? 'text-red-300' : 'text-green-300'}`}>{item.surfox}</span>
+                      <span className={`text-xs ${item.surfox.includes('Standard compliance') || item.surfox.includes('Integrates') || item.surfox.includes('Requires') ? 'text-yellow-300' : 'text-green-300'}`}>{item.surfox}</span>
                     </div>
                   </div>
                   
                   <div className="bg-gray-800/40 border border-gray-600/30 rounded-lg p-3">
                     <div className="flex items-center mb-2">
-                      <div className="w-3 h-3 bg-orange-500 rounded mr-2"></div>
+                      <div className="w-3 h-3 bg-gray-500 rounded mr-2"></div>
                       <span className="font-medium text-gray-300 text-xs">Lead Sherpa</span>
                     </div>
                     <div className="flex items-start">
-                      {item.sherpa.includes('Manual') || item.sherpa.includes('None') || item.sherpa.includes('Not supported') ? 
+                      {item.sherpa.includes('Manual') || item.sherpa.includes('No') || item.sherpa.includes('Basic') || item.sherpa.includes('Static') ? 
                         <X className="w-4 h-4 text-red-400 mr-2 mt-0.5 flex-shrink-0" /> :
                         <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                       }
-                      <span className={`text-xs ${item.sherpa.includes('Manual') || item.sherpa.includes('None') || item.sherpa.includes('Not supported') ? 'text-red-300' : 'text-green-300'}`}>{item.sherpa}</span>
+                      <span className={`text-xs ${item.sherpa.includes('Manual') || item.sherpa.includes('No') || item.sherpa.includes('Basic') || item.sherpa.includes('Static') ? 'text-red-300' : 'text-green-300'}`}>{item.sherpa}</span>
                     </div>
                   </div>
                 </div>
@@ -552,13 +542,13 @@ const SurFoxVsLeadSherpa = () => {
               </div>
               <div className="col-span-3 p-6 text-center border-l border-purple-400/30">
                 <div className="flex items-center justify-center">
-                  <div className="w-4 h-4 bg-gradient-to-br from-purple-600 to-cyan-600 rounded mr-2"></div>
+                  <img src="/logo.png" alt="SurFox" className="w-4 h-4 mr-2" />
                   <span className="font-bold text-white">SurFox</span>
                 </div>
               </div>
               <div className="col-span-3 p-6 text-center border-l border-purple-400/30">
                 <div className="flex items-center justify-center">
-                  <div className="w-4 h-4 bg-orange-500 rounded mr-2"></div>
+                  <div className="w-4 h-4 bg-gray-500 rounded mr-2"></div>
                   <span className="font-medium text-gray-300">Lead Sherpa</span>
                 </div>
               </div>
@@ -571,20 +561,20 @@ const SurFoxVsLeadSherpa = () => {
                 </div>
                 <div className="col-span-3 p-6 border-l border-gray-700/50">
                   <div className="flex items-start">
-                    {item.surfox.includes('None') || item.surfox.includes('Must implement') ? 
-                      <X className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" /> :
+                    {item.surfox.includes('Standard compliance') || item.surfox.includes('Integrates') || item.surfox.includes('Requires') ? 
+                      <AlertCircle className="w-5 h-5 text-yellow-400 mr-3 mt-0.5 flex-shrink-0" /> :
                       <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                     }
-                    <span className={`font-medium text-sm ${item.surfox.includes('None') || item.surfox.includes('Must implement') ? 'text-red-300' : 'text-green-300'}`}>{item.surfox}</span>
+                    <span className={`font-medium text-sm ${item.surfox.includes('Standard compliance') || item.surfox.includes('Integrates') || item.surfox.includes('Requires') ? 'text-yellow-300' : 'text-green-300'}`}>{item.surfox}</span>
                   </div>
                 </div>
                 <div className="col-span-3 p-6 border-l border-gray-700/50">
                   <div className="flex items-start">
-                    {item.sherpa.includes('Manual') || item.sherpa.includes('None') || item.sherpa.includes('Not supported') ? 
+                    {item.sherpa.includes('Manual') || item.sherpa.includes('No') || item.sherpa.includes('Basic') || item.sherpa.includes('Static') ? 
                       <X className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" /> :
                       <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                     }
-                    <span className={`text-sm ${item.sherpa.includes('Manual') || item.sherpa.includes('None') || item.sherpa.includes('Not supported') ? 'text-red-300' : 'text-green-300'}`}>{item.sherpa}</span>
+                    <span className={`text-sm ${item.sherpa.includes('Manual') || item.sherpa.includes('No') || item.sherpa.includes('Basic') || item.sherpa.includes('Static') ? 'text-red-300' : 'text-green-300'}`}>{item.sherpa}</span>
                   </div>
                 </div>
               </div>
@@ -594,71 +584,71 @@ const SurFoxVsLeadSherpa = () => {
       </section>
 
       {/* When to Choose What */}
-      <section className="relative py-16 md:py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50 backdrop-blur-xl border-y border-purple-500/30">
+      <section className="relative py-16 md:py-20 bg-gradient-to-r from-gray-900/50 to-slate-900/50 backdrop-blur-xl border-y border-gray-500/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              The Strategic Decision
+              Which Platform Is Right for You?
             </h2>
-            <p className="text-lg md:text-xl text-purple-200 max-w-3xl mx-auto">
-              Both platforms excel in different areas. Here's how to choose based on your primary business challenge.
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+              Both solve real problems, but different ones. Here's how to decide based on your biggest challenge.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-12 md:mb-16">
             {/* Choose Lead Sherpa When */}
-            <div className="bg-gradient-to-br from-gray-900/60 to-black/60 border border-orange-400/30 rounded-2xl p-6 md:p-8 backdrop-blur-xl">
-              <h3 className="text-xl md:text-2xl font-bold text-orange-300 mb-6 flex items-center">
+            <div className="bg-gradient-to-br from-gray-800/60 to-gray-700/60 border border-gray-500/30 rounded-2xl p-6 md:p-8 backdrop-blur-xl">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-300 mb-6 flex items-center">
                 <Search className="w-5 h-5 md:w-6 md:h-6 mr-3" />
                 Choose Lead Sherpa When
               </h3>
               
               <div className="space-y-4 md:space-y-6">
-                <div className="p-3 md:p-4 bg-orange-900/40 border border-orange-400/30 rounded-xl">
-                  <div className="font-semibold text-orange-300 mb-2 text-sm md:text-base">Your Primary Challenge:</div>
-                  <div className="text-xs md:text-sm text-orange-200">Finding contact info and staying legally compliant</div>
+                <div className="p-3 md:p-4 bg-gray-700/40 border border-gray-500/30 rounded-xl">
+                  <div className="font-semibold text-gray-300 mb-2 text-sm md:text-base">Your Primary Goal:</div>
+                  <div className="text-xs md:text-sm text-gray-400">Get more contacts legally and stay compliant</div>
                 </div>
                 
-                <div className="space-y-3 text-xs md:text-sm text-orange-200">
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You're in real estate investing and need skip tracing</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />TCPA compliance is your biggest concern</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You need data consolidation and contact management</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />Your team handles conversations manually anyway</div>
+                <div className="space-y-3 text-xs md:text-sm text-gray-300">
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You're in real estate investing</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />TCPA compliance keeps you up at night</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You need to find property owner contact info</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />Your team manually handles conversations anyway</div>
                   <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />Volume and legal protection matter most</div>
                 </div>
                 
-                <div className="p-3 md:p-4 bg-orange-900/30 rounded-xl">
-                  <div className="text-orange-200 font-medium text-xs md:text-sm">
-                    <strong>Perfect For:</strong> Real estate investors who need compliant lead acquisition and basic outreach
+                <div className="p-3 md:p-4 bg-gray-700/30 rounded-xl">
+                  <div className="text-gray-300 font-medium text-xs md:text-sm">
+                    <strong>Perfect For:</strong> Real estate teams who need compliant data acquisition
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Choose SurFox When */}
-            <div className="bg-gradient-to-br from-purple-900/60 to-cyan-900/60 border-2 border-purple-400/50 rounded-2xl p-6 md:p-8 backdrop-blur-xl shadow-lg shadow-purple-500/25">
-              <h3 className="text-xl md:text-2xl font-bold text-purple-300 mb-6 flex items-center">
-                <Brain className="w-5 h-5 md:w-6 md:h-6 mr-3" />
+            <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 border-2 border-purple-400/50 rounded-2xl p-6 md:p-8 backdrop-blur-xl shadow-lg shadow-purple-500/25">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-6 flex items-center">
+                <img src="/logo.png" alt="SurFox" className="w-5 h-5 md:w-6 md:h-6 mr-3" />
                 Choose SurFox When
               </h3>
               
               <div className="space-y-4 md:space-y-6">
-                <div className="p-3 md:p-4 bg-purple-900/40 border border-purple-400/30 rounded-xl">
-                  <div className="font-semibold text-purple-300 mb-2 text-sm md:text-base">Your Primary Challenge:</div>
-                  <div className="text-xs md:text-sm text-purple-200">Converting contacts into qualified, motivated prospects</div>
+                <div className="p-3 md:p-4 bg-purple-800/40 border border-purple-400/30 rounded-xl">
+                  <div className="font-semibold text-white mb-2 text-sm md:text-base">Your Primary Goal:</div>
+                  <div className="text-xs md:text-sm text-purple-200">Get more qualified appointments and close more deals</div>
                 </div>
                 
-                <div className="space-y-3 text-xs md:text-sm text-purple-200">
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You already have contact sources (bought lists, referrals, etc.)</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />Your challenge is low response rates and poor qualification</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You want AI to handle conversations intelligently</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />Psychology-based conversion matters more than data acquisition</div>
-                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You measure success by qualified leads, not contact volume</div>
+                <div className="space-y-3 text-xs md:text-sm text-white">
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You already have contact sources (lists, referrals, etc.)</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />Your response rates are terrible</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You want more qualified appointments, not just responses</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You'd rather AI handle conversations 24/7</div>
+                  <div className="flex items-start"><Check className="w-4 h-4 mr-3 mt-0.5 text-green-400 flex-shrink-0" />You measure success by deals closed, not messages sent</div>
                 </div>
                 
-                <div className="p-3 md:p-4 bg-purple-900/30 rounded-xl">
-                  <div className="text-purple-200 font-medium text-xs md:text-sm">
-                    <strong>Perfect For:</strong> Sales teams who have contacts but need AI psychology to convert them
+                <div className="p-3 md:p-4 bg-purple-800/30 rounded-xl">
+                  <div className="text-white font-medium text-xs md:text-sm">
+                    <strong>Perfect For:</strong> Sales teams who have contacts but want 3x more conversions
                   </div>
                 </div>
               </div>
@@ -667,16 +657,16 @@ const SurFoxVsLeadSherpa = () => {
 
           {/* Complementary Approach */}
           <div className="bg-gradient-to-r from-green-900/40 to-emerald-900/40 border border-green-400/30 rounded-2xl p-6 md:p-8 text-center backdrop-blur-xl">
-            <h3 className="text-xl md:text-2xl font-bold text-green-300 mb-6">The Powerful Combination</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-green-300 mb-6">The Ultimate Combination</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               <div className="text-center">
                 <div className="text-base md:text-lg text-green-200 mb-2">Step 1: Lead Sherpa</div>
-                <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">Find Contacts</div>
+                <div className="text-2xl md:text-3xl font-bold text-gray-400 mb-2">Find Contacts</div>
                 <div className="text-xs md:text-sm text-gray-400">Compliant skip tracing</div>
               </div>
               <div className="text-center">
                 <div className="text-base md:text-lg text-green-200 mb-2">Step 2: SurFox</div>
-                <div className="text-2xl md:text-3xl font-bold text-purple-400 mb-2">Convert Psychology</div>
+                <div className="text-2xl md:text-3xl font-bold text-purple-400 mb-2">Convert to Sales</div>
                 <div className="text-xs md:text-sm text-green-300">AI-powered conversations</div>
               </div>
               <div className="text-center">
@@ -687,7 +677,7 @@ const SurFoxVsLeadSherpa = () => {
             </div>
             <div className="mt-6 p-3 md:p-4 bg-green-900/30 rounded-xl">
               <p className="text-green-200 font-medium text-sm md:text-base">
-                <strong className="text-white">Pro tip:</strong> Many successful teams use Lead Sherpa for compliant data acquisition, then SurFox for AI conversion.
+                <strong className="text-white">Smart strategy:</strong> Many successful teams use Lead Sherpa for compliant data, then SurFox for AI conversion.
               </p>
             </div>
           </div>
@@ -698,26 +688,30 @@ const SurFoxVsLeadSherpa = () => {
       <section id="cta" className="relative py-16 md:py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <div className="flex justify-center mb-8">
+            <img src="/logo.png" alt="SurFox" className="w-16 h-16 md:w-20 md:h-20" />
+          </div>
+          
           <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-            Ready for AI Conversion?
+            Ready to 3x Your Close Rates?
           </h2>
           <p className="text-lg md:text-2xl text-purple-200 mb-4 max-w-3xl mx-auto leading-relaxed">
-            If you have contacts but need better conversion rates, SurFox's AI psychology approach is your solution.
+            If you have contacts but want better conversion rates, SurFox's AI will get you there.
           </p>
           <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            <strong className="text-white">14-day free trial.</strong> No setup fees. See how AI psychology converts your existing contacts.
+            <strong className="text-white">14-day free trial.</strong> No setup fees. See how AI converts your existing contacts into qualified appointments.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center mb-8">
             <button className="group relative px-8 md:px-12 py-4 md:py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-lg md:text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative flex items-center justify-center">
-                Start Free Trial
+                Start Converting More Leads
                 <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
               </div>
             </button>
-            <a href="#" className="px-8 md:px-12 py-4 md:py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-lg md:text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
-              Book a Demo
+            <a href="#" className="px-8 md:px-12 py-4 md:py-6 border-2 border-gray-400/50 rounded-2xl font-bold text-lg md:text-2xl backdrop-blur-sm hover:bg-gray-500/20 transition-all duration-500 hover:scale-105">
+              See SurFox Demo
             </a>
           </div>
           
@@ -728,7 +722,7 @@ const SurFoxVsLeadSherpa = () => {
             </div>
             <div className="flex items-center">
               <Brain className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
-              AI starts learning immediately
+              AI starts working immediately
             </div>
             <div className="flex items-center">
               <Award className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
