@@ -218,7 +218,7 @@ const SurFoxHomepage = () => {
       </div>
 
       {/* Hero Section - Fixed Above Fold */}
-      <section className="relative py-12 pt-24 lg:pt-12 min-h-[85vh] flex items-center">
+      <section className="relative py-12 pt-32 lg:pt-12 min-h-[85vh] flex items-center">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
