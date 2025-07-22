@@ -66,11 +66,14 @@ export default function Nav() {
                 <Link href="/compare/surfox-vs-smarter-contact" className="block px-4 py-2 text-sm text-gray-300 hover:bg-purple-500/20 hover:text-white transition-colors">
                   ↳ vs Smarter Contact
                 </Link>
+                <Link href="/compare/surfox-vs-skipio" className="block px-4 py-2 text-sm text-gray-300 hover:bg-purple-500/20 hover:text-white transition-colors">
+                  ↳ vs Skipio
+                </Link>
+                <Link href="/compare/surfox-vs-lead-sherpa" className="block px-4 py-2 text-sm text-gray-300 hover:bg-purple-500/20 hover:text-white transition-colors">
+                  ↳ vs Lead Sherpa
+                </Link>
                 <Link href="/compare/surfox-vs-launch-control" className="block px-4 py-2 text-sm text-gray-300 hover:bg-purple-500/20 hover:text-white transition-colors">
                   ↳ vs Launch Control
-                </Link>
-                <Link href="/compare/surfox-vs-all-competitors" className="block px-4 py-2 text-sm text-white hover:bg-purple-500/20 transition-colors font-semibold border-t border-purple-500/30">
-                  ↳ All Comparisons
                 </Link>
               </div>
             </div>
