@@ -488,50 +488,51 @@ const SurFoxGeneralComparison = () => {
       </section>
 
       {/* Professional CTA */}
-      <section className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
-        <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-            Experience The New Category
-          </h2>
-          <p className="text-2xl text-purple-200 mb-6 max-w-4xl mx-auto leading-relaxed font-medium">
-            Be among the first to experience the industry's most advanced sales communication platform.
-          </p>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            See why SurFox represents the future of sales communication. 
-            <strong className="text-white">Start your 14-day free trial</strong> and experience 
-            what true AI intelligence can do for your sales conversations.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-8 justify-center mb-16">
-            <button className="group relative px-16 py-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-3xl font-bold text-3xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
-              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative flex items-center justify-center">
-                <Brain className="mr-4 w-10 h-10" />
-                Start Free Trial
-                <ArrowRight className="ml-4 w-10 h-10 group-hover:translate-x-2 transition-transform" />
-              </div>
-            </button>
-            <a href="#" className="px-16 py-8 border-2 border-purple-400/50 rounded-3xl font-bold text-3xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
-              <Play className="mr-4 w-8 h-8 inline" />
-              Schedule Demo
-            </a>
-          </div>
-          
-          <div className="flex flex-wrap items-center justify-center gap-8 text-lg text-purple-200 mb-12">
-            <div className="flex items-center">
-              <Shield className="w-6 h-6 mr-3 text-green-400" />
-              No credit card required
-            </div>
-            <div className="flex items-center">
-              <Brain className="w-6 h-6 mr-3 text-green-400" />
-              AI starts learning immediately
-            </div>
-            <div className="flex items-center">
-              <Rocket className="w-6 h-6 mr-3 text-green-400" />
-              Full platform access
-            </div>
-          </div>
+      // Professional CTA section updates
+<section className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
+  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
+  <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
+    <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+      Experience The New Category
+    </h2>
+    <p className="text-2xl text-purple-200 mb-6 max-w-4xl mx-auto leading-relaxed font-medium">
+      Be among the first to experience the industry's most advanced sales communication platform.
+    </p>
+    <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+      See why SurFox represents the future of sales communication. 
+      <strong className="text-white">30-day money back guarantee</strong> and experience 
+      what true AI intelligence can do for your sales conversations.
+    </p>
+    
+    <div className="flex flex-col sm:flex-row gap-8 justify-center mb-16">
+      <button className="group relative px-16 py-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-3xl font-bold text-3xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
+        <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="relative flex items-center justify-center">
+          <Brain className="mr-4 w-10 h-10" />
+          Get Started Risk-Free
+          <ArrowRight className="ml-4 w-10 h-10 group-hover:translate-x-2 transition-transform" />
+        </div>
+      </button>
+      <a href="#" className="px-16 py-8 border-2 border-purple-400/50 rounded-3xl font-bold text-3xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
+        <Play className="mr-4 w-8 h-8 inline" />
+        Schedule Demo
+      </a>
+    </div>
+    
+    <div className="flex flex-wrap items-center justify-center gap-8 text-lg text-purple-200 mb-12">
+      <div className="flex items-center">
+        <Shield className="w-6 h-6 mr-3 text-green-400" />
+        No credit card required
+      </div>
+      <div className="flex items-center">
+        <Brain className="w-6 h-6 mr-3 text-green-400" />
+        AI starts learning immediately
+      </div>
+      <div className="flex items-center">
+        <Rocket className="w-6 h-6 mr-3 text-green-400" />
+        Full platform access
+      </div>
+    </div>
 
           {/* Technical Leadership Stats */}
           <div className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 border border-purple-400/30 rounded-3xl p-8 backdrop-blur-xl">

@@ -127,7 +127,7 @@ const SurFoxVsTextUs = () => {
               <button className="group relative px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl font-bold text-base md:text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative flex items-center justify-center">
-                  Stop Paying More for Less
+                  Get Started Risk-Free
                   <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
               </button>
@@ -516,52 +516,53 @@ const SurFoxVsTextUs = () => {
       </section>
 
       {/* Final CTA */}
-      <section id="cta" className="relative py-16 md:py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <div className="flex justify-center mb-8">
-            <img src="/logo.png" alt="SurFox" className="w-16 h-16 md:w-20 md:h-20" />
-          </div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-            Stop Paying More for Less
-          </h2>
-          <p className="text-lg md:text-2xl text-purple-200 mb-4 max-w-3xl mx-auto leading-relaxed">
-            TextUs charges $2,000+ for manual work. SurFox delivers AI automation for $197.
-          </p>
-          <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            <strong className="text-white">14-day free trial.</strong> No setup fees. See 90% cost savings in your first week.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center mb-8">
-            <button className="group relative px-8 md:px-12 py-4 md:py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-lg md:text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
-              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative flex items-center justify-center">
-                Save $1,800+ Per Month
-                <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </button>
-            <a href="#" className="px-8 md:px-12 py-4 md:py-6 border-2 border-gray-400/50 rounded-2xl font-bold text-lg md:text-2xl backdrop-blur-sm hover:bg-gray-500/20 transition-all duration-500 hover:scale-105">
-              See SurFox Demo
-            </a>
-          </div>
-          
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-xs md:text-sm text-purple-200">
-            <div className="flex items-center">
-              <Shield className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
-              No credit card required
-            </div>
-            <div className="flex items-center">
-              <Clock className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
-              15-minute setup
-            </div>
-            <div className="flex items-center">
-              <Award className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
-              Cancel anytime
-            </div>
-          </div>
+      // Final CTA section updates
+<section id="cta" className="relative py-16 md:py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
+  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
+  <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+    <div className="flex justify-center mb-8">
+      <img src="/logo.png" alt="SurFox" className="w-16 h-16 md:w-20 md:h-20" />
+    </div>
+    
+    <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+      Stop Paying More for Less
+    </h2>
+    <p className="text-lg md:text-2xl text-purple-200 mb-4 max-w-3xl mx-auto leading-relaxed">
+      TextUs charges $2,000+ for manual work. SurFox delivers AI automation for $197.
+    </p>
+    <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+      <strong className="text-white">30-day money back guarantee.</strong> No setup fees. See 90% cost savings in your first week.
+    </p>
+    
+    <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center mb-8">
+      <button className="group relative px-8 md:px-12 py-4 md:py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-lg md:text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
+        <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="relative flex items-center justify-center">
+          Save $1,800+ Per Month
+          <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
         </div>
-      </section>
+      </button>
+      <a href="#" className="px-8 md:px-12 py-4 md:py-6 border-2 border-gray-400/50 rounded-2xl font-bold text-lg md:text-2xl backdrop-blur-sm hover:bg-gray-500/20 transition-all duration-500 hover:scale-105">
+        See SurFox Demo
+      </a>
+    </div>
+    
+    <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-xs md:text-sm text-purple-200">
+      <div className="flex items-center">
+        <Shield className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
+        No credit card required
+      </div>
+      <div className="flex items-center">
+        <Clock className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
+        15-minute setup
+      </div>
+      <div className="flex items-center">
+        <Award className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
+        Cancel anytime
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   )
 }
