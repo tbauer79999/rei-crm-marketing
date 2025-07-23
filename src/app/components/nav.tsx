@@ -113,6 +113,8 @@ export default function Nav() {
                 <Link href="/compare/surfox-vs-textus" className="block text-gray-400 hover:text-white transition-colors text-sm">vs TextUs</Link>
                 <Link href="/compare/surfox-vs-smarter-contact" className="block text-gray-400 hover:text-white transition-colors text-sm">vs Smarter Contact</Link>
                 <Link href="/compare/surfox-vs-launch-control" className="block text-gray-400 hover:text-white transition-colors text-sm">vs Launch Control</Link>
+                <Link href="/compare/surfox-vs-skipio" className="block text-gray-400 hover:text-white transition-colors text-sm">vs Skipio</Link>
+                <Link href="/compare/surfox-vs-lead-sherpa" className="block text-gray-400 hover:text-white transition-colors text-sm">vs Lead Sherpa</Link>
                 <Link href="/compare/surfox-vs-all-competitors" className="block text-white hover:text-purple-300 transition-colors text-sm font-medium">All Comparisons</Link>
               </div>
             </div>
