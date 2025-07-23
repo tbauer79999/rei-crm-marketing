@@ -1,8 +1,13 @@
+'use client'
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Nav from './components/nav'
 import Footer from './components/footer'
 import "./globals.css";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import posthog from "./lib/posthog";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +29,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    posthog.capture('$pageview');
+  }, [pathname]);
+
   return (
     <html lang="en">
       <body
