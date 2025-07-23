@@ -457,7 +457,7 @@ const SurFoxIndustries = () => {
                   industries[activeIndustry].color === 'indigo' ? 'from-indigo-600 to-indigo-700' :
                   'from-purple-600 to-purple-700'
                 } rounded-2xl flex items-center justify-center mb-4 md:mb-0 md:mr-6 shadow-xl`}>
-                  <industries[activeIndustry].icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                  {React.createElement(industries[activeIndustry].icon, { className: "w-8 h-8 md:w-10 md:h-10 text-white" })}
                 </div>
                 <div className="text-center md:text-left">
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">{industries[activeIndustry].title}</h3>
