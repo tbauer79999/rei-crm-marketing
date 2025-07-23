@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, MessageSquare, Clock, Sparkles, AlertCircle, Star, Crown, DollarSign, Workflow, Bot, User, FileText, Settings, Timer, Phone, Mail, Eye, Lightbulb, Layers, Activity, Search, Building, MapPin, Scale } from 'lucide-react'
-import Nav from './components/nav'
+import Nav from '../../components/nav'
 
 const SurFoxVsLeadSherpa = () => {
   const [activeFeatureSet, setActiveFeatureSet] = useState(0)
