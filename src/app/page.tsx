@@ -5,12 +5,6 @@ import Link from 'next/link'
 import { Play, Check, X, Brain, MessageSquare, Target, User, ChevronRight, Phone, Mail, Zap, Activity, Shield, Eye, TrendingUp, BarChart3, Clock, ArrowRight, Building, Users, Cpu, Database, Lightbulb, Layers, Gauge, Sparkles, Send, Bot, Menu } from 'lucide-react'
 import Nav from './components/nav'
 import posthog from './lib/posthog'
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "SurFox — Convert Cold Leads Into Hot Conversations with AI",
-  description: "The world's first Messaging Intelligence platform that reads buyer psychology and converts conversations into revenue.",
-};
 
 const SurFoxHomepage = () => {
   const [activeTab, setActiveTab] = useState('psychology')
