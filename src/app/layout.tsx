@@ -15,10 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "SurFox — Convert Cold Leads Into Hot Conversations with AI",
-  description: "The world's first Messaging Intelligence platform that reads buyer psychology and converts conversations into revenue.",
-};
+
 
 export default function RootLayout({
   children,
