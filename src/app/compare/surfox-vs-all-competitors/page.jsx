@@ -1,15 +1,10 @@
 'use client'
 
 import React, { useState } from 'react'
-import { ArrowRight, Rocket, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Menu, Shield, Database, Cpu, MessageSquare, Clock, Sparkles, Crown, Mail, Activity, Eye, Layers, Inbox, Building2, TrendingDown } from 'lucide-react'
+import { ArrowRight, Rocket, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Shield, Database, Cpu, MessageSquare, Clock, Sparkles, Crown, Mail, Activity, Eye, Layers, Inbox, Building2, TrendingDown } from 'lucide-react'
+import Nav from './components/nav'
 
 const SurFoxGeneralComparison = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  const handleMenuItemClick = () => {
-    setIsMobileMenuOpen(false)
-  }
-
   const competitorCategories = [
     {
       category: 'Mass Messaging Platforms',
@@ -160,71 +155,7 @@ const SurFoxGeneralComparison = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white">
-
-      {/* Mobile Navigation Header */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-slate-900/95 to-purple-900/95 backdrop-blur-xl border-b border-purple-500/30">
-        <div className="flex items-center justify-between px-6 py-4">
-          <div className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-            SurFox vs Competition
-          </div>
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 text-gray-300 hover:text-white transition-colors"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Navigation Menu */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div 
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm"
-            onClick={() => setIsMobileMenuOpen(false)}
-          />
-          <div className="fixed top-0 right-0 w-80 h-full bg-gradient-to-br from-slate-900 to-purple-900 border-l border-purple-500/30 p-6 overflow-y-auto">
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
-            
-            <nav className="mt-12 space-y-4">
-              <a href="/#how-it-works" onClick={handleMenuItemClick} className="block px-4 py-3 text-lg font-medium text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all">
-                How It Works
-              </a>
-              
-              <div className="space-y-2">
-                <div className="px-4 py-3 text-lg font-medium text-purple-300 border-b border-purple-500/30">
-                  Competitive Analysis
-                </div>
-                <div className="pl-6 space-y-2">
-                  <a href="/compare/surfox-vs-textus" onClick={handleMenuItemClick} className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all">
-                    vs TextUs
-                  </a>
-                  <a href="/compare/surfox-vs-smarter-contact" onClick={handleMenuItemClick} className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all">
-                    vs Smarter Contact
-                  </a>
-                  <a href="/compare/surfox-vs-launch-control" onClick={handleMenuItemClick} className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all">
-                    vs Launch Control
-                  </a>
-                </div>
-              </div>
-              
-              <div className="pt-6 border-t border-purple-500/30 space-y-3">
-                <button onClick={handleMenuItemClick} className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-white hover:shadow-lg transition-all">
-                  Start Free Trial
-                </button>
-                <button onClick={handleMenuItemClick} className="w-full px-6 py-3 border border-purple-400/50 rounded-xl font-medium text-gray-300 hover:bg-purple-500/20 transition-all">
-                  Schedule Demo
-                </button>
-              </div>
-            </nav>
-          </div>
-        </div>
-      )}
+      <Nav />
 
       {/* Hero Section */}
       <section className="relative py-20 pt-32 min-h-screen flex items-center">

@@ -1,16 +1,12 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Menu, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, MessageSquare, Clock, Sparkles, AlertCircle, Star, Crown, DollarSign, Workflow, Bot, User, FileText, Settings, Timer, Phone, Mail, Eye, Lightbulb, Layers, Activity, Calendar, Building, Headphones } from 'lucide-react'
+import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, MessageSquare, Clock, Sparkles, AlertCircle, Star, Crown, DollarSign, Workflow, Bot, User, FileText, Settings, Timer, Phone, Mail, Eye, Lightbulb, Layers, Activity, Calendar, Building, Headphones } from 'lucide-react'
+import Nav from './components/nav'
 
 const SurFoxVsSkipio = () => {
   const [activeFeatureSet, setActiveFeatureSet] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  const handleMenuItemClick = () => {
-    setIsMobileMenuOpen(false)
-  }
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -73,78 +69,7 @@ const SurFoxVsSkipio = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
-
-      {/* Mobile Navigation Header */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-gradient-to-r from-slate-900/95 to-purple-900/95 backdrop-blur-xl border-b border-purple-500/30">
-        <div className="flex items-center justify-between px-6 py-4">
-          <div className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-            SurFox vs Skipio
-          </div>
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 text-gray-300 hover:text-white transition-colors"
-            aria-label="Toggle mobile menu"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Navigation Menu */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div 
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm"
-            onClick={() => setIsMobileMenuOpen(false)}
-          />
-          <div className="fixed top-0 right-0 w-80 h-full bg-gradient-to-br from-slate-900 to-purple-900 border-l border-purple-500/30 p-6 overflow-y-auto">
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
-            
-            <nav className="mt-12 space-y-4">
-              <a href="/#how-it-works" onClick={handleMenuItemClick} className="block px-4 py-3 text-lg font-medium text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all">
-                How It Works
-              </a>
-              
-              <div className="space-y-2">
-                <div className="px-4 py-3 text-lg font-medium text-purple-300 border-b border-purple-500/30">
-                  SurFox vs Everyone
-                </div>
-                <div className="pl-6 space-y-2">
-                  <a href="/compare/surfox-vs-all-competitors" onClick={handleMenuItemClick} className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all">
-                    vs All Competitors
-                  </a>
-                  <a href="/compare/surfox-vs-launch-control" onClick={handleMenuItemClick} className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all">
-                    vs Launch Control
-                  </a>
-                  <a href="/compare/surfox-vs-smarter-contact" onClick={handleMenuItemClick} className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all">
-                    vs Smarter Contact
-                  </a>
-                  <a href="/compare/surfox-vs-textus" onClick={handleMenuItemClick} className="block px-4 py-2 text-base text-gray-300 hover:text-white hover:bg-purple-500/20 rounded-lg transition-all">
-                    vs Textus
-                  </a>
-                  <a href="/compare/surfox-vs-skipio" onClick={handleMenuItemClick} className="block px-4 py-2 text-base text-purple-200 bg-purple-500/30 hover:text-white hover:bg-purple-500/40 rounded-lg transition-all border border-purple-400/30">
-                    vs Skipio (Current)
-                  </a>
-                </div>
-              </div>
-              
-              <div className="pt-6 border-t border-purple-500/30 space-y-3">
-                <button onClick={handleMenuItemClick} className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-white hover:shadow-lg transition-all">
-                  Start Free Trial
-                </button>
-                <button onClick={handleMenuItemClick} className="w-full px-6 py-3 border border-purple-400/50 rounded-xl font-medium text-gray-300 hover:bg-purple-500/20 transition-all">
-                  Contact Sales
-                </button>
-              </div>
-            </nav>
-          </div>
-        </div>
-      )}
+      <Nav />
 
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -159,10 +84,8 @@ const SurFoxVsSkipio = () => {
           <div className="text-center mb-16">
             {/* Platform Logos */}
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8 mb-12">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-purple-500/50">
-                  <Brain className="w-6 h-6 md:w-8 md:h-8 text-white" />
-                </div>
+              <div className="flex items-center space-x-4 p-6 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 rounded-2xl border-2 border-purple-400/50 shadow-lg shadow-purple-500/25">
+                <img src="/logo.png" alt="SurFox" className="w-12 h-12 md:w-16 md:h-16" />
                 <div className="text-left">
                   <div className="text-2xl md:text-3xl font-bold text-white">SurFox</div>
                   <div className="text-xs md:text-sm text-purple-300">AI That Closes Deals</div>
@@ -171,13 +94,13 @@ const SurFoxVsSkipio = () => {
               
               <div className="text-gray-400 text-2xl md:text-4xl font-bold">VS</div>
               
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-600/30 rounded-2xl flex items-center justify-center">
-                  <Calendar className="w-6 h-6 md:w-8 md:h-8 text-gray-500" />
+              <div className="flex items-center space-x-4 p-4 bg-gradient-to-br from-gray-800/40 to-gray-700/40 rounded-2xl border border-gray-600/30">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-600/50 rounded-2xl flex items-center justify-center">
+                  <Calendar className="w-6 h-6 md:w-8 md:h-8 text-gray-400" />
                 </div>
                 <div className="text-left">
-                  <div className="text-2xl md:text-3xl font-bold text-gray-500">Skipio</div>
-                  <div className="text-xs md:text-sm text-gray-600">Appointment Booking</div>
+                  <div className="text-2xl md:text-3xl font-bold text-gray-400">Skipio</div>
+                  <div className="text-xs md:text-sm text-gray-500">Appointment Booking</div>
                 </div>
               </div>
             </div>
@@ -305,9 +228,7 @@ const SurFoxVsSkipio = () => {
             {/* SurFox Approach - Bright & Prominent */}
             <div className="bg-gradient-to-br from-purple-900/80 to-cyan-900/80 rounded-2xl border-2 border-purple-400/70 p-6 md:p-8 backdrop-blur-sm shadow-2xl shadow-purple-500/50 transform hover:scale-105 transition-transform duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-xl flex items-center justify-center mr-4 shadow-lg">
-                  <Brain className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                </div>
+                <img src="/logo.png" alt="SurFox" className="w-10 h-10 md:w-12 md:h-12 mr-4" />
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold text-white">SurFox</h3>
                   <p className="text-purple-200 text-sm md:text-base font-medium">AI That Closes Deals</p>
@@ -420,9 +341,7 @@ const SurFoxVsSkipio = () => {
             {/* SurFox AI Conversation - Bright & Prominent */}
             <div className="bg-gradient-to-br from-purple-900/80 to-cyan-900/80 border-2 border-purple-400/70 rounded-2xl p-4 md:p-6 backdrop-blur-xl shadow-2xl shadow-purple-500/50">
               <div className="flex items-center mb-6">
-                <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center mr-3 shadow-lg">
-                  <Brain className="w-3 h-3 md:w-4 md:h-4 text-white" />
-                </div>
+                <img src="/logo.png" alt="SurFox" className="w-6 h-6 md:w-8 md:h-8 mr-3" />
                 <h3 className="text-base md:text-lg font-semibold text-white">SurFox: AI Deal Closer</h3>
               </div>
               
@@ -519,7 +438,7 @@ const SurFoxVsSkipio = () => {
                 <div className="space-y-3">
                   <div className="bg-gradient-to-br from-purple-900/60 to-cyan-900/60 border-2 border-purple-400/50 rounded-lg p-3 shadow-lg">
                     <div className="flex items-center mb-2">
-                      <div className="w-3 h-3 bg-gradient-to-br from-purple-600 to-cyan-600 rounded mr-2"></div>
+                      <img src="/logo.png" alt="SurFox" className="w-3 h-3 mr-2" />
                       <span className="font-bold text-white text-xs">SurFox</span>
                     </div>
                     <div className="flex items-start">
@@ -551,7 +470,7 @@ const SurFoxVsSkipio = () => {
               </div>
               <div className="col-span-3 p-6 text-center border-l border-purple-400/30">
                 <div className="flex items-center justify-center">
-                  <div className="w-4 h-4 bg-gradient-to-br from-purple-600 to-cyan-600 rounded mr-2"></div>
+                  <img src="/logo.png" alt="SurFox" className="w-4 h-4 mr-2" />
                   <span className="font-bold text-white">SurFox</span>
                 </div>
               </div>
@@ -631,7 +550,7 @@ const SurFoxVsSkipio = () => {
             {/* Choose SurFox When - Bright & Prominent */}
             <div className="bg-gradient-to-br from-purple-900/80 to-cyan-900/80 border-2 border-purple-400/70 rounded-2xl p-6 md:p-8 backdrop-blur-xl shadow-2xl shadow-purple-500/50 transform hover:scale-105 transition-transform duration-300">
               <h3 className="text-xl md:text-2xl font-bold text-white mb-6 flex items-center">
-                <Brain className="w-5 h-5 md:w-6 md:h-6 mr-3" />
+                <img src="/logo.png" alt="SurFox" className="w-5 h-5 md:w-6 md:h-6 mr-3" />
                 Choose SurFox When
               </h3>
               
@@ -691,6 +610,10 @@ const SurFoxVsSkipio = () => {
       <section id="cta" className="relative py-16 md:py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <div className="flex justify-center mb-8">
+            <img src="/logo.png" alt="SurFox" className="w-16 h-16 md:w-20 md:h-20" />
+          </div>
+          
           <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
             Ready for More Deals?
           </h2>
