@@ -257,7 +257,7 @@ const SurFoxIndustries = () => {
               <button className="group relative px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl font-bold text-base md:text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative flex items-center justify-center">
-                  Find Your Industry
+                  Get Started Risk-Free
                   <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
               </button>
@@ -515,14 +515,14 @@ const SurFoxIndustries = () => {
             Stop letting expensive leads go to waste. See how SurFox can transform your industry's results.
           </p>
           <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            <strong className="text-white">14-day free trial.</strong> No setup fees. Works with any industry, any lead source.
+            <strong className="text-white">30-day money back guarantee.</strong> No setup fees. Works with any industry, any lead source.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center mb-8">
             <button className="group relative px-8 md:px-12 py-4 md:py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-lg md:text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative flex items-center justify-center">
-                Start Free Trial
+                Get Started Risk-Free
                 <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
               </div>
             </button>
@@ -534,7 +534,7 @@ const SurFoxIndustries = () => {
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-xs md:text-sm text-purple-200">
             <div className="flex items-center">
               <Shield className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
-              No credit card required
+              30-day money back guarantee
             </div>
             <div className="flex items-center">
               <Target className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />

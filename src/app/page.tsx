@@ -771,7 +771,7 @@ const SurFoxHomepage = () => {
               </ul>
               
               <button className="w-full border border-gray-600 text-gray-300 px-6 py-3 rounded-xl hover:bg-gray-800/50 transition-colors font-medium">
-                Start Free Trial
+                Get Started Risk-Free
               </button>
             </div>
 
@@ -827,7 +827,7 @@ const SurFoxHomepage = () => {
               </ul>
               
               <button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:shadow-lg hover:shadow-purple-500/50 transition-all font-bold shadow-lg">
-                Start Free Trial
+                Get Started Risk-Free
               </button>
             </div>
 
@@ -885,7 +885,7 @@ const SurFoxHomepage = () => {
           
           <div className="text-center mt-12">
             <p className="text-sm text-gray-400 mb-4">
-              All plans include: 14-day free trial • No setup fees • Cancel anytime
+              All plans include: 30-day money back guarantee • No setup fees • Cancel anytime
             </p>
             <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-lg p-4 max-w-2xl mx-auto border border-purple-500/30">
               <p className="text-sm text-purple-300 font-medium flex items-center justify-center">
@@ -913,7 +913,7 @@ const SurFoxHomepage = () => {
             <button className="group relative px-12 py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative">
-                Start Free Trial
+                Get Started Risk-Free
               </div>
             </button>
             <Link href="/toms-story" className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
