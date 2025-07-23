@@ -47,7 +47,7 @@ export default function Nav() {
             <Link href="/toms-story" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
               Tom's Story
             </Link>
-            <Link href="/#industries" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
+            <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
               Industries
             </Link>
 
@@ -104,7 +104,7 @@ export default function Nav() {
             <Link href="/smarter-Texting" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">Psychology AI</Link>
             <Link href="/how-it-works" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">How It Works</Link>
             <Link href="/toms-story" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">Tom's Story</Link>
-            <Link href="/#industries" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">Industries</Link>
+            <Link href="/industries" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">Industries</Link>
             <Link href="/#pricing" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium">Pricing</Link>
             
             {/* Compare section for mobile */}
