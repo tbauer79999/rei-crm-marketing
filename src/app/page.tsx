@@ -4,12 +4,17 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Play, Check, X, Brain, MessageSquare, Target, User, ChevronRight, Phone, Mail, Zap, Activity, Shield, Eye, TrendingUp, BarChart3, Clock, ArrowRight, Building, Users, Cpu, Database, Lightbulb, Layers, Gauge, Sparkles, Send, Bot, Menu } from 'lucide-react'
 import Nav from './components/nav'
+import posthog from './lib/posthog'
 
 const SurFoxHomepage = () => {
   const [activeTab, setActiveTab] = useState('psychology')
   const [typingText, setTypingText] = useState('')
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0)
   
+  useEffect(() => {
+  posthog.capture('surfox_homepage_loaded')
+}, [])
+
   const messages = [
     "Hi Sarah, quick question about your recent inquiry...",
     "Mark, following up on your demo request from last week...",
@@ -76,16 +81,24 @@ const SurFoxHomepage = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="group relative px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="relative flex items-center justify-center">
-                    <Play className="w-5 h-5 mr-2" />
-                    Watch Tom's Story
-                  </div>
-                </button>
-                <a href="#how-it-works" className="px-6 py-3 border-2 border-purple-400/50 rounded-xl font-bold text-lg backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-300">
-                  See The AI In Action
-                </a>
+<button
+  onClick={() => posthog.capture('cta_watch_toms_story')}
+  className="group relative px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50"
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  <div className="relative flex items-center justify-center">
+    <Play className="w-5 h-5 mr-2" />
+    Watch Tom's Story
+  </div>
+</button>
+
+<a
+  href="#how-it-works"
+  onClick={() => posthog.capture('cta_see_ai_in_action')}
+  className="px-6 py-3 border-2 border-purple-400/50 rounded-xl font-bold text-lg backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-300"
+>
+  See The AI In Action
+</a>
               </div>
 
               {/* Tom's Quote - Condensed */}
