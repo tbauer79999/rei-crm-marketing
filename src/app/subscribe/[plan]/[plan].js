@@ -1,4 +1,6 @@
-import { useRouter } from 'next/router';
+'use client'
+
+import { useParams } from 'next/navigation';
 
 const PLANS = {
   starter: {
@@ -19,8 +21,8 @@ const PLANS = {
 };
 
 export default function Subscribe() {
-  const router = useRouter();
-  const { plan } = router.query;
+  const params = useParams();
+  const plan = params.plan;
   const selectedPlan = PLANS[plan];
 
   const handleSubscribe = async () => {
