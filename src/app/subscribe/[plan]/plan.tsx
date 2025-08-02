@@ -22,10 +22,12 @@ const PLANS = {
 
 export default function Subscribe() {
   const params = useParams();
-  const plan = params.plan;
-  const selectedPlan = PLANS[plan];
+  const plan = Array.isArray(params.plan) ? params.plan[0] : params.plan;
+  const selectedPlan = plan ? PLANS[plan as keyof typeof PLANS] : null;
 
   const handleSubscribe = async () => {
+    if (!selectedPlan) return;
+    
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stripe/create-checkout-session`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
