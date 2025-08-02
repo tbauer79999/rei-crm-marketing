@@ -24,8 +24,7 @@ export default function Subscribe() {
   const selectedPlan = PLANS[plan];
 
   const handleSubscribe = async () => {
-    // Call your Express backend API
-    const response = await fetch('http://localhost:10000/api/stripe/create-checkout-session', {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stripe/create-checkout-session`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ priceId: selectedPlan.priceId })
