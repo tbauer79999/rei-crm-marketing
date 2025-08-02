@@ -777,9 +777,9 @@ const SurFoxHomepage = () => {
                 </li>
               </ul>
               
-              <button className="w-full border border-gray-600 text-gray-300 px-6 py-3 rounded-xl hover:bg-gray-800/50 transition-colors font-medium">
-                Get Started Risk-Free
-              </button>
+              <button onClick={() => window.location.href = '/subscribe/starter'}>
+  Get Started Risk-Free
+</button>
             </div>
 
             {/* Growth Plan */}
@@ -833,9 +833,9 @@ const SurFoxHomepage = () => {
                 </li>
               </ul>
               
-              <button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:shadow-lg hover:shadow-purple-500/50 transition-all font-bold shadow-lg">
-                Get Started Risk-Free
-              </button>
+              <button onClick={() => window.location.href = '/subscribe/growth'}>
+  Get Started Risk-Free  
+</button>
             </div>
 
             {/* Scale Plan */}
@@ -919,9 +919,9 @@ const SurFoxHomepage = () => {
           <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
             <button className="group relative px-12 py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative">
-                Get Started Risk-Free
-              </div>
+              <button onClick={() => window.location.href = '/subscribe/scale'}>
+  Get Started Risk-Free
+</button>
             </button>
             <Link href="/toms-story" className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
               Learn More About Tom
