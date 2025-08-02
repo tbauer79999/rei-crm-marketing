@@ -6,17 +6,17 @@ const PLANS = {
   starter: {
     name: 'Starter',
     price: 197,
-    priceId: 'price_1RrUsuG76DDD8srY1vlotYI5'
+    priceId: 'price_1RrVuSG76DDD8srYqxbf5wPF'
   },
   growth: {
     name: 'Growth', 
     price: 397,
-    priceId: 'price_1RrUz6G76DDD8srYjVAr3d2Y'
+    priceId: 'price_1RrVueG76DDD8srYmSGMWvRt'
   },
   scale: {
     name: 'Scale',
     price: 997, 
-    priceId: 'price_1RrUzhG76DDD8srY21GALug4'
+    priceId: 'price_1RrVupG76DDD8srY32NzCyHl'
   }
 };
 
