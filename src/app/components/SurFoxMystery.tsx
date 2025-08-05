@@ -173,41 +173,72 @@ const SurFoxMystery = () => {
 
               {/* Email Capture */}
               <div className="max-w-md md:max-w-lg mx-auto px-4 pt-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="text-center space-y-4">
-                    <h3 className="text-xl font-semibold text-white">Be among the first to know</h3>
-                    <p className="text-gray-400 text-base">Join the waitlist for early access to revolutionary sales technology</p>
+                <div className="text-center space-y-4 mb-6">
+                  <h3 className="text-xl font-semibold text-white">Be among the first to know</h3>
+                  <p className="text-gray-400 text-base">Join the waitlist for early access to revolutionary sales technology</p>
+                </div>
+                
+                <div className="relative mb-6">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email for early access"
+                    className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 backdrop-blur-xl focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                    required
+                  />
+                </div>
+                
+                <button
+                  onClick={async (e) => {
+                    e.preventDefault()
+                    if (!email) return
+                    
+                    setIsSubmitting(true)
+                    
+                    try {
+                      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                        method: 'POST',
+                        headers: {
+                          'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                          service_id: 'service_38foyus',
+                          template_id: 'template_26breuf',
+                          user_id: 'pX0lVTbWCpKUVhPwR',
+                          template_params: {
+                            user_email: email,
+                            reply_to: email
+                          }
+                        })
+                      })
+                      
+                      if (response.ok) {
+                        setSubmitted(true)
+                      } else {
+                        alert('Error sending email. Please try again.')
+                      }
+                    } catch (error) {
+                      alert('Network error. Please try again.')
+                    }
+                    
+                    setIsSubmitting(false)
+                  }}
+                  disabled={isSubmitting || !email}
+                  className="w-full group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl font-semibold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="relative flex items-center justify-center">
+                    {isSubmitting ? (
+                      <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                    ) : (
+                      <>
+                        <Lock className="w-5 h-5 mr-2" />
+                        Get Early Access
+                      </>
+                    )}
                   </div>
-                  
-                  <div className="relative">
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Enter your email for early access"
-                      className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 backdrop-blur-xl focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
-                      required
-                    />
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl font-semibold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="relative flex items-center justify-center">
-                      {isSubmitting ? (
-                        <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                      ) : (
-                        <>
-                          <Lock className="w-5 h-5 mr-2" />
-                          Get Early Access
-                        </>
-                      )}
-                    </div>
-                  </button>
-                </form>
+                </button>
               </div>
 
               {/* Mysterious Footer */}
