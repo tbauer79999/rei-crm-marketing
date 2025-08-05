@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Brain, Shield, Eye, Zap, Lock, ChevronDown, X } from 'lucide-react'
+import { Brain, Shield, Eye, Zap, Lock, X } from 'lucide-react'
 
 const SurFoxMystery = () => {
   const [email, setEmail] = useState('')
@@ -88,7 +88,7 @@ const SurFoxMystery = () => {
       } else {
         alert('Error sending email. Please try again.')
       }
-    } catch (error) {
+    } catch {
       alert('Network error. Please try again.')
     }
     
