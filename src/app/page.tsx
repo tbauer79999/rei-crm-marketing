@@ -47,7 +47,7 @@ const SurFoxMystery = () => {
     return () => clearInterval(cursorInterval)
   }, [])
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!email) return
     
