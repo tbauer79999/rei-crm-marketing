@@ -63,39 +63,9 @@ const SurFoxMystery = () => {
       {/* Simple Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"></div>
       
-      {/* Subtle Mystery Particles */}
+      {/* Static Neural Network Lines Only */}
       <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-purple-400 rounded-full animate-pulse"
-            style={{
-              left: `${20 + Math.random() * 60}%`,
-              top: `${20 + Math.random() * 60}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`,
-              opacity: 0.4
-            }}
-          />
-        ))}
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={`blue-${i}`}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
-            style={{
-              left: `${10 + Math.random() * 80}%`,
-              top: `${10 + Math.random() * 80}%`,
-              animationDelay: `${Math.random() * 4}s`,
-              animationDuration: `${3 + Math.random() * 2}s`,
-              opacity: 0.3
-            }}
-          />
-        ))}
-      </div>
-      
-      {/* Neural Network Lines */}
-      <div className="absolute inset-0">
-        <svg className="w-full h-full" style={{ opacity: 0.2 }}>
+        <svg className="w-full h-full" style={{ opacity: 0.15 }}>
           <defs>
             <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#8b5cf6" />
@@ -109,13 +79,13 @@ const SurFoxMystery = () => {
           <line x1="10%" y1="50%" x2="30%" y2="35%" stroke="url(#line-gradient)" strokeWidth="1" />
           <line x1="70%" y1="55%" x2="90%" y2="25%" stroke="url(#line-gradient)" strokeWidth="1" />
           
-          {/* Connection nodes */}
-          <circle cx="15%" cy="25%" r="2" fill="#8b5cf6" opacity="0.6" />
-          <circle cx="35%" cy="45%" r="2" fill="#06b6d4" opacity="0.6" />
-          <circle cx="65%" cy="20%" r="2" fill="#8b5cf6" opacity="0.6" />
-          <circle cx="85%" cy="40%" r="2" fill="#06b6d4" opacity="0.6" />
-          <circle cx="25%" cy="70%" r="2" fill="#8b5cf6" opacity="0.6" />
-          <circle cx="45%" cy="85%" r="2" fill="#06b6d4" opacity="0.6" />
+          {/* Static connection nodes */}
+          <circle cx="15%" cy="25%" r="1.5" fill="#8b5cf6" opacity="0.4" />
+          <circle cx="35%" cy="45%" r="1.5" fill="#06b6d4" opacity="0.4" />
+          <circle cx="65%" cy="20%" r="1.5" fill="#8b5cf6" opacity="0.4" />
+          <circle cx="85%" cy="40%" r="1.5" fill="#06b6d4" opacity="0.4" />
+          <circle cx="25%" cy="70%" r="1.5" fill="#8b5cf6" opacity="0.4" />
+          <circle cx="45%" cy="85%" r="1.5" fill="#06b6d4" opacity="0.4" />
         </svg>
       </div>
 
