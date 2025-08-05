@@ -59,17 +59,17 @@ const SurFoxMystery = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-auto relative">
+    <div className="fixed inset-0 z-50 bg-black text-white overflow-y-auto">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-black to-blue-900/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"></div>
         
         {/* Floating Neural Network Pattern */}
-        <div className="absolute inset-0 opacity-20">
-          {[...Array(100)].map((_, i) => (
+        <div className="absolute inset-0 opacity-10">
+          {[...Array(30)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-2 h-2 bg-purple-400 rounded-full animate-pulse"
+              className="absolute w-1 h-1 bg-purple-400 rounded-full animate-pulse"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -78,34 +78,6 @@ const SurFoxMystery = () => {
               }}
             />
           ))}
-        </div>
-        
-        {/* Dynamic Connecting Lines */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full">
-            {[...Array(20)].map((_, i) => (
-              <line
-                key={i}
-                x1={`${Math.random() * 100}%`}
-                y1={`${Math.random() * 100}%`}
-                x2={`${Math.random() * 100}%`}
-                y2={`${Math.random() * 100}%`}
-                stroke="url(#gradient)"
-                strokeWidth="1"
-                className="animate-pulse"
-                style={{
-                  animationDelay: `${Math.random() * 2}s`,
-                  animationDuration: `${3 + Math.random() * 2}s`
-                }}
-              />
-            ))}
-            <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#8b5cf6" />
-                <stop offset="100%" stopColor="#06b6d4" />
-              </linearGradient>
-            </defs>
-          </svg>
         </div>
         
         {/* Subtle Grid */}
