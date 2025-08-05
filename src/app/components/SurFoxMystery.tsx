@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Brain, Shield, Eye, Zap, Lock, ChevronDown } from 'lucide-react'
+import { Brain, Shield, Eye, Zap, Lock, ChevronDown, X } from 'lucide-react'
 
 const SurFoxMystery = () => {
   const [email, setEmail] = useState('')
@@ -116,8 +116,8 @@ const SurFoxMystery = () => {
                 </h1>
                 
                 {/* Typing Animation */}
-                <div className="h-12 md:h-16 flex items-center justify-center px-4">
-                  <p className="text-lg md:text-2xl text-purple-300 font-light text-center">
+                <div className="h-16 md:h-20 flex items-center justify-center px-4">
+                  <p className="text-lg md:text-2xl text-purple-300 font-light text-center leading-relaxed">
                     Imagine <span className="text-white font-medium">{typingText}</span>
                     <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
                   </p>
@@ -215,7 +215,16 @@ const SurFoxMystery = () => {
               <Shield className="w-8 h-8 md:w-10 md:h-10 text-white" />
             </div>
             <h3 className="text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6 animate-slide-up">You're in</h3>
-            <p className="text-gray-400 text-lg md:text-xl max-w-md mx-auto leading-relaxed animate-slide-up-delay">You'll be among the first to experience what we're building.</p>
+            <p className="text-gray-400 text-lg md:text-xl max-w-md mx-auto leading-relaxed animate-slide-up-delay mb-8">You'll be among the first to experience what we're building.</p>
+            
+            {/* Close Tab Button */}
+            <button
+              onClick={handleCloseTab}
+              className="inline-flex items-center px-6 py-3 bg-gray-800/50 hover:bg-gray-700/50 border border-gray-600/50 rounded-xl font-medium text-gray-300 hover:text-white transition-all duration-300 animate-slide-up-delay"
+            >
+              <X className="w-4 h-4 mr-2" />
+              Close Tab
+            </button>
           </div>
         </div>
       )}
@@ -268,5 +277,5 @@ const SurFoxMystery = () => {
     </div>
   )
 }
-console.log("hello")
+
 export default SurFoxMystery
