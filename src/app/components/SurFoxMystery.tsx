@@ -59,7 +59,7 @@ const SurFoxMystery = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden relative">
+    <div className="fixed inset-0 z-50 min-h-screen bg-black text-white overflow-hidden">
       {/* Animated Background */}
       <div className="fixed inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"></div>
