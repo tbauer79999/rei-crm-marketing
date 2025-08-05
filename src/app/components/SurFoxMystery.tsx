@@ -10,6 +10,7 @@ const SurFoxMystery = () => {
   const [currentPhrase, setCurrentPhrase] = useState(0)
   const [typingText, setTypingText] = useState('')
   const [showCursor, setShowCursor] = useState(true)
+  const [debugInfo, setDebugInfo] = useState('')
 
   const mysteryPhrases = [
     "reading minds through conversations",
@@ -61,14 +62,50 @@ const SurFoxMystery = () => {
     }
   }
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    if (!email) return
+  const handleEmailSubmit = async () => {
+    if (!email) {
+      setDebugInfo('❌ No email provided')
+      return
+    }
     
     setIsSubmitting(true)
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    setSubmitted(true)
+    setDebugInfo('🔄 Attempting to send email...')
+    
+    try {
+      console.log('Sending email with:', { email })
+      
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          service_id: 'service_38foyus',
+          template_id: 'template_26breuf',
+          user_id: 'pX0lVTbWCpKUVhPwR',
+          template_params: {
+            user_email: email,
+            reply_to: email,
+            to_email: 'your-email@example.com' // Add this if your template expects it
+          }
+        })
+      })
+      
+      console.log('Response status:', response.status)
+      const responseText = await response.text()
+      console.log('Response body:', responseText)
+      
+      if (response.ok) {
+        setDebugInfo('✅ Email sent successfully!')
+        setTimeout(() => setSubmitted(true), 1000)
+      } else {
+        setDebugInfo(`❌ Error: ${response.status} - ${responseText}`)
+      }
+    } catch (error) {
+      console.error('Network error:', error)
+      setDebugInfo(`❌ Network error: ${error.message}`)
+    }
+    
     setIsSubmitting(false)
   }
 
@@ -178,6 +215,13 @@ const SurFoxMystery = () => {
                   <p className="text-gray-400 text-base">Join the waitlist for early access to revolutionary sales technology</p>
                 </div>
                 
+                {/* Debug Info */}
+                {debugInfo && (
+                  <div className="mb-4 p-3 bg-gray-900/70 border border-gray-700 rounded-lg text-sm text-center">
+                    {debugInfo}
+                  </div>
+                )}
+                
                 <div className="relative mb-6">
                   <input
                     type="email"
@@ -190,40 +234,7 @@ const SurFoxMystery = () => {
                 </div>
                 
                 <button
-                  onClick={async (e) => {
-                    e.preventDefault()
-                    if (!email) return
-                    
-                    setIsSubmitting(true)
-                    
-                    try {
-                      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-                        method: 'POST',
-                        headers: {
-                          'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                          service_id: 'service_38foyus',
-                          template_id: 'template_26breuf',
-                          user_id: 'pX0lVTbWCpKUVhPwR',
-                          template_params: {
-                            user_email: email,
-                            reply_to: email
-                          }
-                        })
-                      })
-                      
-                      if (response.ok) {
-                        setSubmitted(true)
-                      } else {
-                        alert('Error sending email. Please try again.')
-                      }
-                    } catch (error) {
-                      alert('Network error. Please try again.')
-                    }
-                    
-                    setIsSubmitting(false)
-                  }}
+                  onClick={handleEmailSubmit}
                   disabled={isSubmitting || !email}
                   className="w-full group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl font-semibold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
