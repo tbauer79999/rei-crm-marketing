@@ -47,6 +47,10 @@ const SurFoxMystery = () => {
     return () => clearInterval(cursorInterval)
   }, [])
 
+  const handleCloseTab = () => {
+    window.close()
+  }
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!email) return
