@@ -10,12 +10,12 @@ const PLANS = {
   },
   growth: {
     name: 'Growth', 
-    price: 397,
+    price: 497,
     priceId: 'price_1RrVueG76DDD8srYmSGMWvRt'
   },
   scale: {
     name: 'Scale',
-    price: 997, 
+    price: 1997, 
     priceId: 'price_1RrVupG76DDD8srY32NzCyHl'
   }
 };
