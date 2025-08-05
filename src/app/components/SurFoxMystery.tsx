@@ -268,5 +268,5 @@ const SurFoxMystery = () => {
     </div>
   )
 }
-
+console.log("hello")
 export default SurFoxMystery
