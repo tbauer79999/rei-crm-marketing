@@ -53,8 +53,8 @@ const SurFoxHomepage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 backdrop-blur-sm">
-                <MessageSquare className="w-4 h-4 mr-2 text-purple-300" />
-                <span className="text-purple-200 font-medium text-sm">World's First SMS Psychology AI Engine</span>
+                <Shield className="w-4 h-4 mr-2 text-purple-300" />
+                <span className="text-purple-200 font-medium text-sm">Patent Pending • World's First SMS Psychology AI</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -73,6 +73,10 @@ const SurFoxHomepage = () => {
                   <strong className="text-white"> Some people are skeptical, others decisive. Some need data, others need emotion.</strong>
                   <br />SurFox learns their psychology and adapts every text message.
                 </p>
+                <div className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full border border-yellow-400/30 backdrop-blur-sm">
+                  <Shield className="w-4 h-4 mr-2 text-yellow-400" />
+                  <span className="text-yellow-200 font-medium text-sm">Patent Pending Innovation</span>
+                </div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -181,8 +185,12 @@ const SurFoxHomepage = () => {
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
               This isn't SMS automation.
               <br />
-              This is <span className="text-white">SMS Psychology AI</span>.
+              This is <span className="text-white">Patent Pending SMS Psychology AI</span>.
             </h2>
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full border border-yellow-400/30 backdrop-blur-sm mb-6">
+              <Shield className="w-5 h-5 mr-3 text-yellow-400" />
+              <span className="text-yellow-200 font-bold">Patent Pending Technology</span>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -211,12 +219,18 @@ const SurFoxHomepage = () => {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-900/40 to-cyan-900/40 rounded-2xl border border-purple-400/30 p-8 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-purple-300 mb-6 flex items-center">
-                <MessageSquare className="w-8 h-8 mr-3" />
+            <div className="bg-gradient-to-br from-blue-900/40 to-cyan-600/40 rounded-2xl border border-cyan-400/30 p-8 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-cyan-300 mb-4 flex items-center">
+                <Brain className="w-8 h-8 mr-3" />
                 SurFox SMS Psychology AI:
               </h3>
-              <div className="space-y-4 text-purple-200">
+              <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-lg p-2 mb-4 border border-yellow-400/30">
+                <div className="text-xs font-bold text-yellow-300 flex items-center justify-center">
+                  <Shield className="w-3 h-3 mr-2" />
+                  PATENT PENDING TECHNOLOGY
+                </div>
+              </div>
+              <div className="space-y-4 text-cyan-200">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                   <span>Reads human psychology from SMS responses</span>
@@ -569,11 +583,15 @@ const SurFoxHomepage = () => {
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
               Let me be crystal clear about what this is
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-4">
               I built SurFox to solve one specific problem that was costing companies millions in lost revenue. 
               It's not trying to be everything to everyone — it's laser-focused on one thing: 
               <strong className="text-white"> intelligently reviving cold prospects using sales psychology.</strong>
             </p>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full border border-yellow-400/30 backdrop-blur-sm">
+              <Shield className="w-4 h-4 mr-2 text-yellow-400" />
+              <span className="text-yellow-200 font-bold text-sm">Protected by Patent Pending Technology</span>
+            </div>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -777,9 +795,9 @@ const SurFoxHomepage = () => {
                 </li>
               </ul>
               
-              <button onClick={() => window.location.href = '/subscribe/starter'}>
-  Get Started Risk-Free
-</button>
+              <button className="w-full bg-gradient-to-r from-gray-700 to-gray-600 text-white px-6 py-3 rounded-xl hover:from-gray-600 hover:to-gray-500 transition-colors font-medium">
+                Get Started Risk-Free
+              </button>
             </div>
 
             {/* Growth Plan */}
@@ -833,9 +851,9 @@ const SurFoxHomepage = () => {
                 </li>
               </ul>
               
-              <button onClick={() => window.location.href = '/subscribe/growth'}>
-  Get Started Risk-Free  
-</button>
+              <button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-colors font-medium shadow-lg">
+                Get Started Risk-Free  
+              </button>
             </div>
 
             {/* Scale Plan */}
@@ -919,9 +937,10 @@ const SurFoxHomepage = () => {
           <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
             <button className="group relative px-12 py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <button onClick={() => window.location.href = '/subscribe/scale'}>
-  Get Started Risk-Free
-</button>
+              <div className="relative flex items-center justify-center">
+                <Play className="w-6 h-6 mr-3" />
+                Get Started Risk-Free
+              </div>
             </button>
             <Link href="/toms-story" className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
               Learn More About Tom
