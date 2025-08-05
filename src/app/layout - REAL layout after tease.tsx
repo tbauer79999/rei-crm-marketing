@@ -1,6 +1,4 @@
-'use client'
-
-import { usePathname } from 'next/navigation'
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Nav from './components/nav'
 import Footer from './components/footer'
@@ -16,22 +14,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata: Metadata = {
+  title: "SurFox — Convert Cold Leads Into Hot Conversations with AI",
+  description: "The world's first Messaging Intelligence platform that reads buyer psychology and converts conversations into revenue.",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname()
-  const isMysteryPage = pathname === '/'  // Homepage is mystery mode
-
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {!isMysteryPage && <Nav />}
+        <Nav />
         <main>{children}</main>
-        {!isMysteryPage && <Footer />}
+        <Footer />
       </body>
     </html>
   );

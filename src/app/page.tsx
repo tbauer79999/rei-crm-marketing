@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "SurFox — Something Revolutionary is Coming",
+  description: "Patent pending technology that will change how sales teams operate forever. Join the waitlist for early access.",
+};
+
 'use client'
 
 import React, { useState, useEffect } from 'react'
