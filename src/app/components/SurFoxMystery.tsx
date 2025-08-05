@@ -108,6 +108,12 @@ const SurFoxMystery = () => {
             <svg className="w-full h-full" style={{ opacity: 0.15 }}>
               <defs>
                 
+                {/* Debug Info */}
+                {debugInfo && (
+                  <div className="mb-4 p-3 bg-gray-900/70 border border-gray-700 rounded-lg text-sm text-center">
+                    {debugInfo}
+                  </div>
+                )}
                 <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#8b5cf6" />
                   <stop offset="100%" stopColor="#06b6d4" />
@@ -127,7 +133,7 @@ const SurFoxMystery = () => {
             <div className="max-w-4xl mx-auto text-center space-y-8 w-full">
               
               {/* Logo/Brand */}
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <div className="inline-flex items-center space-x-3">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center">
                     <Brain className="w-6 h-6 md:w-7 md:h-7 text-white" />
