@@ -86,7 +86,7 @@ const SurFoxMystery = () => {
           template_params: {
             user_email: email,
             reply_to: email,
-            to_email: 'your-email@example.com' // Add this if your template expects it
+            to_email: 'thomasbauer799@gmail.com' // Where you want to receive the emails
           }
         })
       })
