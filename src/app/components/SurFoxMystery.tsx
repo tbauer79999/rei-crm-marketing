@@ -107,13 +107,7 @@ const SurFoxMystery = () => {
           <div className="absolute inset-0">
             <svg className="w-full h-full" style={{ opacity: 0.15 }}>
               <defs>
-                
-                {/* Debug Info */}
-                {debugInfo && (
-                  <div className="mb-4 p-3 bg-gray-900/70 border border-gray-700 rounded-lg text-sm text-center">
-                    {debugInfo}
-                  </div>
-                )}
+ 
                 <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#8b5cf6" />
                   <stop offset="100%" stopColor="#06b6d4" />
