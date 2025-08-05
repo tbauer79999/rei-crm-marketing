@@ -48,7 +48,17 @@ const SurFoxMystery = () => {
   }, [])
 
   const handleCloseTab = () => {
-    window.close()
+    // Try multiple methods to close the tab
+    if (window.opener) {
+      window.close()
+    } else {
+      // If that doesn't work, try going back or redirecting
+      if (window.history.length > 1) {
+        window.history.back()
+      } else {
+        window.location.href = 'about:blank'
+      }
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -120,7 +130,7 @@ const SurFoxMystery = () => {
                 </h1>
                 
                 {/* Typing Animation */}
-                <div className="h-16 md:h-20 flex items-center justify-center px-4">
+                <div className="h-20 md:h-24 flex items-center justify-center px-4 pt-4">
                   <p className="text-lg md:text-2xl text-purple-300 font-light text-center leading-relaxed">
                     Imagine <span className="text-white font-medium">{typingText}</span>
                     <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
