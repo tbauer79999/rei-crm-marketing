@@ -103,7 +103,7 @@ const SurFoxMystery = () => {
       }
     } catch (error) {
       console.error('Network error:', error)
-      setDebugInfo(`❌ Network error: ${error.message}`)
+      setDebugInfo(`❌ Network error: ${error instanceof Error ? error.message : 'Unknown error'}`)
     }
     
     setIsSubmitting(false)
