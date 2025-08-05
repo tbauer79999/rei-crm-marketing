@@ -64,54 +64,85 @@ const SurFoxMystery = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"></div>
       
       {/* Subtle Mystery Particles */}
-      <div className="absolute inset-0 opacity-20">
-        {[...Array(15)].map((_, i) => (
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-purple-400/60 rounded-full"
+            className="absolute w-2 h-2 bg-purple-400 rounded-full animate-pulse"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `pulse ${3 + Math.random() * 2}s infinite ${Math.random() * 2}s`
+              left: `${20 + Math.random() * 60}%`,
+              top: `${20 + Math.random() * 60}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 2}s`,
+              opacity: 0.4
+            }}
+          />
+        ))}
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={`blue-${i}`}
+            className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
+            style={{
+              left: `${10 + Math.random() * 80}%`,
+              top: `${10 + Math.random() * 80}%`,
+              animationDelay: `${Math.random() * 4}s`,
+              animationDuration: `${3 + Math.random() * 2}s`,
+              opacity: 0.3
             }}
           />
         ))}
       </div>
       
       {/* Neural Network Lines */}
-      <div className="absolute inset-0 opacity-10">
-        <svg className="w-full h-full">
-          <line x1="10%" y1="20%" x2="30%" y2="40%" stroke="#8b5cf6" strokeWidth="1" opacity="0.3" />
-          <line x1="70%" y1="15%" x2="85%" y2="35%" stroke="#06b6d4" strokeWidth="1" opacity="0.3" />
-          <line x1="20%" y1="70%" x2="40%" y2="85%" stroke="#8b5cf6" strokeWidth="1" opacity="0.3" />
-          <line x1="60%" y1="60%" x2="80%" y2="80%" stroke="#06b6d4" strokeWidth="1" opacity="0.3" />
+      <div className="absolute inset-0">
+        <svg className="w-full h-full" style={{ opacity: 0.2 }}>
+          <defs>
+            <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#8b5cf6" />
+              <stop offset="100%" stopColor="#06b6d4" />
+            </linearGradient>
+          </defs>
+          <line x1="15%" y1="25%" x2="35%" y2="45%" stroke="url(#line-gradient)" strokeWidth="1" />
+          <line x1="65%" y1="20%" x2="85%" y2="40%" stroke="url(#line-gradient)" strokeWidth="1" />
+          <line x1="25%" y1="70%" x2="45%" y2="85%" stroke="url(#line-gradient)" strokeWidth="1" />
+          <line x1="60%" y1="65%" x2="80%" y2="80%" stroke="url(#line-gradient)" strokeWidth="1" />
+          <line x1="10%" y1="50%" x2="30%" y2="35%" stroke="url(#line-gradient)" strokeWidth="1" />
+          <line x1="70%" y1="55%" x2="90%" y2="25%" stroke="url(#line-gradient)" strokeWidth="1" />
+          
+          {/* Connection nodes */}
+          <circle cx="15%" cy="25%" r="2" fill="#8b5cf6" opacity="0.6" />
+          <circle cx="35%" cy="45%" r="2" fill="#06b6d4" opacity="0.6" />
+          <circle cx="65%" cy="20%" r="2" fill="#8b5cf6" opacity="0.6" />
+          <circle cx="85%" cy="40%" r="2" fill="#06b6d4" opacity="0.6" />
+          <circle cx="25%" cy="70%" r="2" fill="#8b5cf6" opacity="0.6" />
+          <circle cx="45%" cy="85%" r="2" fill="#06b6d4" opacity="0.6" />
         </svg>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 py-16">
-        <div className="max-w-4xl mx-auto text-center space-y-12 w-full">
+      <div className="relative z-10 h-full flex flex-col items-center justify-start px-4 py-8 overflow-y-auto">
+        <div className="max-w-4xl mx-auto text-center space-y-8 w-full min-h-full flex flex-col justify-center">
           
           {/* Logo/Brand */}
           <div className="space-y-4">
-            <div className="inline-flex items-center space-x-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center relative overflow-hidden">
-                <Brain className="w-7 h-7 text-white relative z-10" />
+            <div className="inline-flex items-center space-x-3 mb-4">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center relative overflow-hidden">
+                <Brain className="w-6 h-6 md:w-7 md:h-7 text-white relative z-10" />
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 animate-pulse"></div>
               </div>
-              <span className="text-2xl font-bold tracking-wider">SurFox</span>
+              <span className="text-xl md:text-2xl font-bold tracking-wider">SurFox</span>
             </div>
             
             {/* Patent Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full border border-yellow-400/30 backdrop-blur-sm">
-              <Shield className="w-4 h-4 mr-2 text-yellow-400" />
-              <span className="text-yellow-200 font-medium text-sm">Patent Pending Technology</span>
+            <div className="inline-flex items-center px-3 py-2 md:px-4 md:py-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full border border-yellow-400/30 backdrop-blur-sm">
+              <Shield className="w-3 h-3 md:w-4 md:h-4 mr-2 text-yellow-400" />
+              <span className="text-yellow-200 font-medium text-xs md:text-sm">Patent Pending Technology</span>
             </div>
           </div>
 
           {/* Mystery Headline */}
-          <div className="space-y-8">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
                 We're building something
               </span>
@@ -122,8 +153,8 @@ const SurFoxMystery = () => {
             </h1>
             
             {/* Typing Animation */}
-            <div className="h-16 flex items-center justify-center">
-              <p className="text-2xl text-purple-300 font-light">
+            <div className="h-12 md:h-16 flex items-center justify-center px-4">
+              <p className="text-lg md:text-2xl text-purple-300 font-light text-center">
                 Imagine <span className="text-white font-medium">{typingText}</span>
                 <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
               </p>
@@ -131,45 +162,45 @@ const SurFoxMystery = () => {
           </div>
 
           {/* Mysterious Hints */}
-          <div className="grid md:grid-cols-3 gap-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8">
             <div className="group">
-              <div className="bg-gradient-to-br from-purple-900/40 to-black/40 rounded-2xl border border-purple-500/30 p-6 backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:border-purple-400/50">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
-                  <Brain className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-purple-900/40 to-black/40 rounded-2xl border border-purple-500/30 p-4 md:p-6 backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:border-purple-400/50">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-3 md:mb-4 group-hover:rotate-12 transition-transform duration-300">
+                  <Brain className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Psychology AI</h3>
-                <p className="text-purple-300 text-sm">Understanding human behavior at a level never seen before</p>
+                <h3 className="text-base md:text-lg font-bold text-white mb-2">Psychology AI</h3>
+                <p className="text-purple-300 text-sm leading-relaxed">Understanding human behavior at a level never seen before</p>
               </div>
             </div>
             
             <div className="group">
-              <div className="bg-gradient-to-br from-blue-900/40 to-black/40 rounded-2xl border border-blue-500/30 p-6 backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:border-blue-400/50">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
-                  <Eye className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-blue-900/40 to-black/40 rounded-2xl border border-blue-500/30 p-4 md:p-6 backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:border-blue-400/50">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-3 md:mb-4 group-hover:rotate-12 transition-transform duration-300">
+                  <Eye className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Hidden Insights</h3>
-                <p className="text-blue-300 text-sm">Seeing patterns in communication that others miss entirely</p>
+                <h3 className="text-base md:text-lg font-bold text-white mb-2">Hidden Insights</h3>
+                <p className="text-blue-300 text-sm leading-relaxed">Seeing patterns in communication that others miss entirely</p>
               </div>
             </div>
             
             <div className="group">
-              <div className="bg-gradient-to-br from-green-900/40 to-black/40 rounded-2xl border border-green-500/30 p-6 backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:border-green-400/50">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
-                  <Zap className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-green-900/40 to-black/40 rounded-2xl border border-green-500/30 p-4 md:p-6 backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:border-green-400/50">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-3 md:mb-4 group-hover:rotate-12 transition-transform duration-300">
+                  <Zap className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Instant Impact</h3>
-                <p className="text-green-300 text-sm">Results that will reshape how sales teams operate forever</p>
+                <h3 className="text-base md:text-lg font-bold text-white mb-2">Instant Impact</h3>
+                <p className="text-green-300 text-sm leading-relaxed">Results that will reshape how sales teams operate forever</p>
               </div>
             </div>
           </div>
 
           {/* Email Capture */}
-          <div className="max-w-lg mx-auto">
+          <div className="max-w-md md:max-w-lg mx-auto px-4">
             {!submitted ? (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="text-center space-y-3">
-                  <h3 className="text-xl font-semibold text-white">Be among the first to know</h3>
-                  <p className="text-gray-400">Join the waitlist for early access to revolutionary sales technology</p>
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                <div className="text-center space-y-2 md:space-y-3">
+                  <h3 className="text-lg md:text-xl font-semibold text-white">Be among the first to know</h3>
+                  <p className="text-gray-400 text-sm md:text-base">Join the waitlist for early access to revolutionary sales technology</p>
                 </div>
                 
                 <div className="relative">
@@ -178,7 +209,7 @@ const SurFoxMystery = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email for early access"
-                    className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 backdrop-blur-xl focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                    className="w-full px-4 py-3 md:px-6 md:py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 backdrop-blur-xl focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all text-sm md:text-base"
                     required
                   />
                 </div>
@@ -186,15 +217,15 @@ const SurFoxMystery = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl font-semibold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full group relative px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl font-semibold text-base md:text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative flex items-center justify-center">
                     {isSubmitting ? (
-                      <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      <div className="w-5 h-5 md:w-6 md:h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                     ) : (
                       <>
-                        <Lock className="w-5 h-5 mr-2" />
+                        <Lock className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                         Get Early Access
                       </>
                     )}
@@ -203,18 +234,18 @@ const SurFoxMystery = () => {
               </form>
             ) : (
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                  <Shield className="w-6 h-6 md:w-8 md:h-8 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-4">You're in</h3>
-                <p className="text-gray-400">You'll be among the first to experience what we're building.</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 md:mb-4">You're in</h3>
+                <p className="text-gray-400 text-sm md:text-base">You'll be among the first to experience what we're building.</p>
               </div>
             )}
           </div>
 
           {/* Mysterious Footer */}
-          <div className="pt-16 pb-8">
-            <div className="flex items-center justify-center space-x-2 text-gray-500 text-sm">
+          <div className="pt-8 pb-4">
+            <div className="flex items-center justify-center space-x-2 text-gray-500 text-xs md:text-sm">
               <span>Building in stealth mode</span>
               <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
               <span>Launch: Soon</span>
