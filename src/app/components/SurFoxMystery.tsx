@@ -62,6 +62,31 @@ const SurFoxMystery = () => {
     <div className="fixed inset-0 z-50 bg-black text-white overflow-hidden">
       {/* Simple Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"></div>
+      
+      {/* Subtle Mystery Particles */}
+      <div className="absolute inset-0 opacity-20">
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-purple-400/60 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `pulse ${3 + Math.random() * 2}s infinite ${Math.random() * 2}s`
+            }}
+          />
+        ))}
+      </div>
+      
+      {/* Neural Network Lines */}
+      <div className="absolute inset-0 opacity-10">
+        <svg className="w-full h-full">
+          <line x1="10%" y1="20%" x2="30%" y2="40%" stroke="#8b5cf6" strokeWidth="1" opacity="0.3" />
+          <line x1="70%" y1="15%" x2="85%" y2="35%" stroke="#06b6d4" strokeWidth="1" opacity="0.3" />
+          <line x1="20%" y1="70%" x2="40%" y2="85%" stroke="#8b5cf6" strokeWidth="1" opacity="0.3" />
+          <line x1="60%" y1="60%" x2="80%" y2="80%" stroke="#06b6d4" strokeWidth="1" opacity="0.3" />
+        </svg>
+      </div>
 
       {/* Main Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 py-16">
@@ -156,7 +181,6 @@ const SurFoxMystery = () => {
                     className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 backdrop-blur-xl focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
                     required
                   />
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 opacity-0 transition-opacity pointer-events-none focus-within:opacity-100"></div>
                 </div>
                 
                 <button
@@ -178,12 +202,12 @@ const SurFoxMystery = () => {
                 </button>
               </form>
             ) : (
-              <div className="bg-gradient-to-r from-green-900/40 to-emerald-900/40 rounded-2xl border border-green-500/30 p-8 backdrop-blur-xl text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">You're In</h3>
-                <p className="text-green-300">You'll be among the first to experience what we're building. Something big is coming.</p>
+                <h3 className="text-3xl font-bold text-white mb-4">You're in</h3>
+                <p className="text-gray-400">You'll be among the first to experience what we're building.</p>
               </div>
             )}
           </div>
