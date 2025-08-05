@@ -59,48 +59,13 @@ const SurFoxMystery = () => {
   }
 
   return (
-    <div className="fixed inset-0 z-50 bg-black text-white overflow-y-auto">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"></div>
-        
-        {/* Floating Neural Network Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          {[...Array(30)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-purple-400 rounded-full animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 2}s`
-              }}
-            />
-          ))}
-        </div>
-        
-        {/* Subtle Grid */}
-        <div className="absolute inset-0 opacity-10" 
-             style={{
-               backgroundImage: `
-                 linear-gradient(rgba(147, 51, 234, 0.3) 1px, transparent 1px),
-                 linear-gradient(90deg, rgba(147, 51, 234, 0.3) 1px, transparent 1px)
-               `,
-               backgroundSize: '50px 50px'
-             }}
-        />
-        
-        {/* Moving Orbs */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-40 left-40 w-36 h-36 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        <div className="absolute bottom-20 right-40 w-28 h-28 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
-      </div>
+    <div className="fixed inset-0 z-50 bg-black text-white overflow-hidden">
+      {/* Simple Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6">
-        <div className="max-w-4xl mx-auto text-center space-y-12">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 py-16">
+        <div className="max-w-4xl mx-auto text-center space-y-12 w-full">
           
           {/* Logo/Brand */}
           <div className="space-y-4">
@@ -121,21 +86,21 @@ const SurFoxMystery = () => {
 
           {/* Mystery Headline */}
           <div className="space-y-8">
-            <h1 className="text-6xl md:text-8xl font-black leading-tight">
-              <span className="bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent drop-shadow-2xl">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+              <span className="bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
                 We're building something
               </span>
               <br />
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 revolutionary
               </span>
             </h1>
             
             {/* Typing Animation */}
-            <div className="h-20 flex items-center justify-center">
-              <p className="text-3xl text-purple-300 font-light">
-                Imagine <span className="text-white font-semibold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">{typingText}</span>
-                <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity text-cyan-400 font-bold text-4xl`}>|</span>
+            <div className="h-16 flex items-center justify-center">
+              <p className="text-2xl text-purple-300 font-light">
+                Imagine <span className="text-white font-medium">{typingText}</span>
+                <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
               </p>
             </div>
           </div>
@@ -143,32 +108,32 @@ const SurFoxMystery = () => {
           {/* Mysterious Hints */}
           <div className="grid md:grid-cols-3 gap-8 py-12">
             <div className="group">
-              <div className="bg-gradient-to-br from-purple-900/60 to-black/60 rounded-3xl border-2 border-purple-500/50 p-8 backdrop-blur-2xl transition-all duration-700 group-hover:scale-110 group-hover:border-purple-400/80 group-hover:shadow-2xl group-hover:shadow-purple-500/50">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-purple-500/50">
-                  <Brain className="w-8 h-8 text-white" />
+              <div className="bg-gradient-to-br from-purple-900/40 to-black/40 rounded-2xl border border-purple-500/30 p-6 backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:border-purple-400/50">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
+                  <Brain className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Psychology AI</h3>
-                <p className="text-purple-300 leading-relaxed">Understanding human behavior at a level never seen before</p>
+                <h3 className="text-lg font-bold text-white mb-2">Psychology AI</h3>
+                <p className="text-purple-300 text-sm">Understanding human behavior at a level never seen before</p>
               </div>
             </div>
             
             <div className="group">
-              <div className="bg-gradient-to-br from-blue-900/60 to-black/60 rounded-3xl border-2 border-blue-500/50 p-8 backdrop-blur-2xl transition-all duration-700 group-hover:scale-110 group-hover:border-blue-400/80 group-hover:shadow-2xl group-hover:shadow-blue-500/50">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-blue-500/50">
-                  <Eye className="w-8 h-8 text-white" />
+              <div className="bg-gradient-to-br from-blue-900/40 to-black/40 rounded-2xl border border-blue-500/30 p-6 backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:border-blue-400/50">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
+                  <Eye className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Hidden Insights</h3>
-                <p className="text-blue-300 leading-relaxed">Seeing patterns in communication that others miss entirely</p>
+                <h3 className="text-lg font-bold text-white mb-2">Hidden Insights</h3>
+                <p className="text-blue-300 text-sm">Seeing patterns in communication that others miss entirely</p>
               </div>
             </div>
             
             <div className="group">
-              <div className="bg-gradient-to-br from-green-900/60 to-black/60 rounded-3xl border-2 border-green-500/50 p-8 backdrop-blur-2xl transition-all duration-700 group-hover:scale-110 group-hover:border-green-400/80 group-hover:shadow-2xl group-hover:shadow-green-500/50">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-500 shadow-lg shadow-green-500/50">
-                  <Zap className="w-8 h-8 text-white" />
+              <div className="bg-gradient-to-br from-green-900/40 to-black/40 rounded-2xl border border-green-500/30 p-6 backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:border-green-400/50">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform duration-300">
+                  <Zap className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Instant Impact</h3>
-                <p className="text-green-300 leading-relaxed">Results that will reshape how sales teams operate forever</p>
+                <h3 className="text-lg font-bold text-white mb-2">Instant Impact</h3>
+                <p className="text-green-300 text-sm">Results that will reshape how sales teams operate forever</p>
               </div>
             </div>
           </div>
@@ -232,18 +197,6 @@ const SurFoxMystery = () => {
             </div>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-6 h-6 text-purple-400" />
-        </div>
-      </div>
-
-      {/* Ambient Glow Effects */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
     </div>
   )
