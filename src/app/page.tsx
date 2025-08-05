@@ -790,7 +790,7 @@ const SurFoxHomepage = () => {
                 </span>
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Growth</h3>
-              <div className="text-3xl font-bold text-white mb-4">$397<span className="text-lg text-gray-400">/month</span></div>
+              <div className="text-3xl font-bold text-white mb-4">$497<span className="text-lg text-gray-400">/month</span></div>
               <p className="text-gray-300 mb-4">For growing sales teams</p>
               
               <div className="bg-gradient-to-r from-purple-800/50 to-blue-800/50 rounded-lg p-3 mb-6 border border-purple-400/30">
@@ -841,7 +841,7 @@ const SurFoxHomepage = () => {
             {/* Scale Plan */}
             <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-8 text-center backdrop-blur-xl">
               <h3 className="text-xl font-bold text-white mb-2">Scale</h3>
-              <div className="text-3xl font-bold text-white mb-4">$997<span className="text-lg text-gray-400">/month</span></div>
+              <div className="text-3xl font-bold text-white mb-4">$1,997<span className="text-lg text-gray-400">/month</span></div>
               <p className="text-gray-300 mb-4">For enterprise sales organizations</p>
               
               <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 rounded-lg p-3 mb-6 border border-purple-400/30">
