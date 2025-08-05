@@ -12,10 +12,10 @@ const SurFoxMystery = () => {
   const [showCursor, setShowCursor] = useState(true)
 
   const mysteryPhrases = [
-    "reading minds through text messages",
+    "reading minds through conversations",
     "understanding human psychology at scale", 
-    "seeing what others miss in conversations",
-    "turning cold leads into warm prospects",
+    "seeing what others miss entirely",
+    "turning cold prospects into believers",
     "decoding the language of buying intent"
   ]
 
@@ -291,5 +291,5 @@ const SurFoxMystery = () => {
     </div>
   )
 }
-console.log("hello")
+
 export default SurFoxMystery
