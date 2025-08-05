@@ -131,9 +131,9 @@ const SurFoxMystery = () => {
                 
                 {/* Typing Animation */}
                 <div className="py-8">
-                  <p className="text-lg md:text-xl text-purple-300 font-light text-center leading-relaxed min-h-[60px] flex items-center justify-center">
-                    Imagine <span className="text-white font-medium">{typingText}</span>
-                    <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
+                  <p className="text-lg md:text-xl text-purple-300 font-light text-center leading-relaxed min-h-[80px] flex items-center justify-center px-8">
+                    Imagine <span className="text-white font-medium ml-2">{typingText}</span>
+                    <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity ml-1`}>|</span>
                   </p>
                 </div>
               </div>
