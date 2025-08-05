@@ -126,8 +126,9 @@ const SurFoxMystery = () => {
           <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 py-8">
             <div className="max-w-4xl mx-auto text-center space-y-8 w-full">
               
+
               {/* Logo/Brand */}
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <div className="inline-flex items-center space-x-3">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center">
                     <Brain className="w-6 h-6 md:w-7 md:h-7 text-white" />
