@@ -820,7 +820,7 @@ const SurFoxHomepage = () => {
               </ul>
               
               <button 
-                onClick={() => window.location.href = '#start'}
+                onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/starter'}
                 className="w-full bg-gradient-to-r from-gray-700 to-gray-600 text-white px-6 py-3 rounded-xl hover:from-gray-600 hover:to-gray-500 transition-colors font-medium"
               >
                 Start Free Trial
@@ -884,7 +884,7 @@ const SurFoxHomepage = () => {
               </ul>
               
               <button 
-                onClick={() => window.location.href = '#start'}
+                onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/growth'}
                 className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-colors font-medium shadow-lg"
               >
                 Start Free Trial
@@ -939,7 +939,7 @@ const SurFoxHomepage = () => {
               </ul>
               
               <button 
-                onClick={() => window.location.href = '/contact'}
+                onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/scale'}
                 className="w-full border border-gray-600 text-gray-300 px-6 py-3 rounded-xl hover:bg-gray-800/50 transition-colors font-medium"
               >
                 Contact Sales
