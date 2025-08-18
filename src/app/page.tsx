@@ -795,15 +795,11 @@ const SurFoxHomepage = () => {
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>AI has real conversations (no blasting)</span>
+                  <span>AI-generated initial SMS</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Basic psychological profiling</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>AI auto-replies to prospects</span>
+                  <span>AI auto-replies</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
@@ -811,7 +807,15 @@ const SurFoxHomepage = () => {
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                  <span>AI tone/persona selector</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                   <span>Basic analytics</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                  <span>CSV exports</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
@@ -871,11 +875,23 @@ const SurFoxHomepage = () => {
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                  <span>AI reply pacing mode config</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                   <span>Chrome extension</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                  <span>100 conversation memory/learning</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                   <span>5 team seats</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                  <span>Admin + user permissions</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
@@ -922,6 +938,10 @@ const SurFoxHomepage = () => {
                 </li>
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                  <span>1000 conversation memory/learning</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                   <span>15+ team seats</span>
                 </li>
                 <li className="flex items-center text-gray-300">
@@ -935,6 +955,10 @@ const SurFoxHomepage = () => {
                 <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                   <span>White-glove onboarding & CSM</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                  <span>SLA-backed priority routing</span>
                 </li>
               </ul>
               
