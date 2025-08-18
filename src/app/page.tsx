@@ -9,7 +9,8 @@ const SurFoxHomepage = () => {
   const [activeTab, setActiveTab] = useState('psychology')
   const [typingText, setTypingText] = useState('')
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0)
-  const [showTooltip, setShowTooltip] = useState(false)
+  const [showHeroTooltip, setShowHeroTooltip] = useState(false)
+  const [showDemoTooltip, setShowDemoTooltip] = useState(false)
 
   const messages = [
     "Hi Sarah, I see you're analytical - here's the exact ROI data you need...",
@@ -74,13 +75,13 @@ const SurFoxHomepage = () => {
                   <strong className="text-white">Some prospects need data, others need emotion. Some respond to pressure, others to patience.</strong>
                   <br />SurFox is <span className="relative inline-block">
                     <button
-                      onMouseEnter={() => setShowTooltip(true)}
-                      onMouseLeave={() => setShowTooltip(false)}
+                      onMouseEnter={() => setShowHeroTooltip(true)}
+                      onMouseLeave={() => setShowHeroTooltip(false)}
                       className="text-cyan-400 underline decoration-dotted hover:text-cyan-300 cursor-help"
                     >
                       agentic AI
                     </button>
-                    {showTooltip && (
+                    {showHeroTooltip && (
                       <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 z-50">
                         <div className="bg-gray-900 text-white text-sm rounded-lg p-3 border border-gray-700 shadow-xl">
                           <div className="text-cyan-400 font-semibold mb-1">Agentic means:</div>
@@ -135,13 +136,13 @@ const SurFoxHomepage = () => {
                   <h3 className="text-lg font-bold text-purple-200">
                     <span className="relative inline-block">
                       <button
-                        onMouseEnter={() => setShowTooltip(true)}
-                        onMouseLeave={() => setShowTooltip(false)}
+                        onMouseEnter={() => setShowDemoTooltip(true)}
+                        onMouseLeave={() => setShowDemoTooltip(false)}
                         className="text-purple-200 hover:text-purple-100 cursor-help"
                       >
                         Agentic AI Conversations
                       </button>
-                      {showTooltip && (
+                      {showDemoTooltip && (
                         <div className="absolute bottom-full left-0 mb-2 w-64 z-50">
                           <div className="bg-gray-900 text-white text-sm rounded-lg p-3 border border-gray-700 shadow-xl">
                             <div className="text-cyan-400 font-semibold mb-1">Agentic means:</div>
