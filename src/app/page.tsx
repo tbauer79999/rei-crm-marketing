@@ -9,6 +9,7 @@ const SurFoxHomepage = () => {
   const [activeTab, setActiveTab] = useState('psychology')
   const [typingText, setTypingText] = useState('')
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0)
+  const [showTooltip, setShowTooltip] = useState(false)
 
   const messages = [
     "Hi Sarah, I see you're analytical - here's the exact ROI data you need...",
@@ -71,7 +72,24 @@ const SurFoxHomepage = () => {
                 <p>I spent 20 years watching text blasters fail because they treat every prospect the same.</p>
                 <p className="text-lg text-gray-300">
                   <strong className="text-white">Some prospects need data, others need emotion. Some respond to pressure, others to patience.</strong>
-                  <br />SurFox is agentic AI that has real conversations and learns each prospect's psychology.
+                  <br />SurFox is <span className="relative inline-block">
+                    <button
+                      onMouseEnter={() => setShowTooltip(true)}
+                      onMouseLeave={() => setShowTooltip(false)}
+                      className="text-cyan-400 underline decoration-dotted hover:text-cyan-300 cursor-help"
+                    >
+                      agentic AI
+                    </button>
+                    {showTooltip && (
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 z-50">
+                        <div className="bg-gray-900 text-white text-sm rounded-lg p-3 border border-gray-700 shadow-xl">
+                          <div className="text-cyan-400 font-semibold mb-1">Agentic means:</div>
+                          <div>The AI acts on its own, not just responding with templates</div>
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                        </div>
+                      </div>
+                    )}
+                  </span> that has real conversations and learns each prospect's psychology.
                 </p>
                 <div className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full border border-yellow-400/30 backdrop-blur-sm">
                   <Target className="w-4 h-4 mr-2 text-yellow-400" />
@@ -114,7 +132,26 @@ const SurFoxHomepage = () => {
             <div className="relative">
               <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-6 shadow-2xl">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-bold text-purple-200">Agentic AI Conversations</h3>
+                  <h3 className="text-lg font-bold text-purple-200">
+                    <span className="relative inline-block">
+                      <button
+                        onMouseEnter={() => setShowTooltip(true)}
+                        onMouseLeave={() => setShowTooltip(false)}
+                        className="text-purple-200 hover:text-purple-100 cursor-help"
+                      >
+                        Agentic AI Conversations
+                      </button>
+                      {showTooltip && (
+                        <div className="absolute bottom-full left-0 mb-2 w-64 z-50">
+                          <div className="bg-gray-900 text-white text-sm rounded-lg p-3 border border-gray-700 shadow-xl">
+                            <div className="text-cyan-400 font-semibold mb-1">Agentic means:</div>
+                            <div>The AI acts on its own, not just responding with templates</div>
+                            <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                          </div>
+                        </div>
+                      )}
+                    </span>
+                  </h3>
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <span className="text-green-300 text-xs">CONVERSING</span>
@@ -603,7 +640,7 @@ const SurFoxHomepage = () => {
               Let me be crystal clear about what this is
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-4">
-              I built SurFox because I was tired of watching sales teams waste time with text blasting tools. 
+              We built SurFox because we were tired of watching sales teams waste time with text blasting tools. 
               This isn't another mass texting platform — <strong className="text-white">this is agentic AI that completely replaces manual texting.</strong>
             </p>
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 backdrop-blur-sm">
