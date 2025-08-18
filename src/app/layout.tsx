@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Nav from './components/nav'
+import Footer from './components/footer'
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SurFox — Something Revolutionary is Coming",
-  description: "Patent pending technology that will change how sales teams operate forever. Join the waitlist for early access.",
+  title: "SurFox — Convert Cold Leads Into Hot Conversations with AI",
+  description: "The world's first Messaging Intelligence platform that reads buyer psychology and converts conversations into revenue.",
 };
 
 export default function RootLayout({
@@ -27,7 +29,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Nav />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
