@@ -942,7 +942,7 @@ const SurFoxHomepage = () => {
                 onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/scale'}
                 className="w-full border border-gray-600 text-gray-300 px-6 py-3 rounded-xl hover:bg-gray-800/50 transition-colors font-medium"
               >
-                Contact Sales
+                Start Free Trial
               </button>
             </div>
           </div>
