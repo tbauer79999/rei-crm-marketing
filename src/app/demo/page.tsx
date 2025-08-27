@@ -72,16 +72,16 @@ const SurFoxVideoDemo = () => {
 </div>
 
           
-          <button
+                    <button
             onClick={() => scrollToSection(1)}
             className="mt-12 inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all group"
           >
             Begin Your Journey
             <ChevronDown className="w-5 h-5 animate-bounce" />
           </button>
-        </div>
-        
+
         {/* Scroll indicator */}
+
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ChevronDown className="w-8 h-8 text-purple-400" />
         </div>
