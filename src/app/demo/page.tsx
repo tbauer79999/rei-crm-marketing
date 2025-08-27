@@ -92,17 +92,16 @@ const SurFoxVideoDemo = () => {
           <div 
             style={{ position: 'relative', boxSizing: 'content-box', maxHeight: '80vh', width: '100%', aspectRatio: '2.0317460317460316', padding: '40px 0' }}
           >
-            <iframe 
-              src="https://app.supademo.com/embed/cmeui5tem6h8wv9kqd6x6rxev?embed_v=2&utm_source=embed" 
-              loading="lazy" 
-              title="Surfox Demo" 
-              allow="clipboard-write" 
-              frameBorder="0" 
-              webkitAllowFullScreen={true} 
-              mozAllowFullScreen={true} 
-              allowFullScreen 
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-            ></iframe>
+<iframe
+  src="https://app.supademo.com/embed/cmeui5tem6h8wv9kqd6x6rxev?embed_v=2&utm_source=embed"
+  loading="lazy"
+  title="Surfox Demo"
+  allow="clipboard-write"
+  frameBorder="0"
+  allowFullScreen
+  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+/>
+
           </div>
         </div>
       </section>
