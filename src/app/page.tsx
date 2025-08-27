@@ -1043,9 +1043,11 @@ const SurFoxHomepage = () => {
                 Join The Evolution
               </div>
             </button>
-            <button className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
-              See AI In Action
-            </button>
+            <Link href="/demo">
+              <button className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
+                See AI In Action
+              </button>
+            </Link>
           </div>
           
           <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-xl rounded-2xl p-6 max-w-2xl mx-auto border border-purple-500/30">
