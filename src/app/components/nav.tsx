@@ -121,7 +121,7 @@ export default function Nav() {
             
             <div className="pt-4 border-t border-purple-500/30">
               <a href="https://app.getsurfox.com" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium mb-3">Sign In</a>
-              <a href="#" className="block bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium text-center border border-purple-500/30">
+              <a href="#pricing" className="block bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium text-center border border-purple-500/30">
                 Start Free Trial
               </a>
             </div>
