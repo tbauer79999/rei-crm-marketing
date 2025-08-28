@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+const API_URL = 'https://app.getsurfox.com/api/public/contact-sales';
 
 const ContactSalesPage = () => {
   const [formData, setFormData] = useState({
@@ -9,18 +10,36 @@ const ContactSalesPage = () => {
     company: '',
     message: '',
   })
+  const [submitting, setSubmitting] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // TODO: connect to Supabase, API route, or email service
-    console.log('Form submitted:', formData)
-    alert('Thanks for reaching out! Our sales team will contact you shortly.')
-    setFormData({ name: '', email: '', company: '', message: '' })
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setSubmitting(true);
+  try {
+    const res = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        message: formData.message,
+      }),
+    });
+    const data = await res.json();
+    if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');
+    alert('Thanks! Our sales team will contact you shortly.');
+    setFormData({ name: '', email: '', company: '', message: '' });
+  } catch (err) {
+    alert('Something went wrong—email sales@getsurfox.com and we’ll jump on it.');
+  } finally {
+    setSubmitting(false);
   }
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 flex items-center justify-center px-6 py-20">
@@ -84,12 +103,13 @@ const ContactSalesPage = () => {
             />
           </div>
 
-          <button
-            type="submit"
-            className="w-full py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold rounded-lg hover:from-yellow-400 hover:to-orange-400 transition-all shadow-lg"
-          >
-            Submit Inquiry
-          </button>
+<button
+  type="submit"
+  disabled={submitting}
+  className="w-full py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold rounded-lg hover:from-yellow-400 hover:to-orange-400 transition-all shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
+>
+  {submitting ? 'Sending…' : 'Submit Inquiry'}
+</button>
         </form>
       </div>
     </div>
