@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-const API_URL = 'https://app.getsurfox.com/api/public/contact-sales';
+const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
 
 const ContactSalesPage = () => {
   const [formData, setFormData] = useState({
