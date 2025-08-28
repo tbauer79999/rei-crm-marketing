@@ -98,8 +98,9 @@ const SurFoxHomepage = () => {
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+<div className="flex flex-col sm:flex-row gap-4 pt-4">
 <button
+  onClick={() => window.location.href = '/demo'}
   className="group relative px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50"
 >
   <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -865,7 +866,7 @@ const SurFoxHomepage = () => {
                 onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/starter'}
                 className="w-full bg-gradient-to-r from-gray-700 to-gray-600 text-white px-6 py-3 rounded-xl hover:from-gray-600 hover:to-gray-500 transition-colors font-medium"
               >
-                Start Free Trial
+                Get Started Now
               </button>
             </div>
 
@@ -941,7 +942,7 @@ const SurFoxHomepage = () => {
                 onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/growth'}
                 className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-colors font-medium shadow-lg"
               >
-                Start Free Trial
+                Get Started Now
               </button>
             </div>
 
@@ -1036,13 +1037,21 @@ const SurFoxHomepage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
-            <button className="group relative px-12 py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
-              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative flex items-center justify-center">
-                <Zap className="w-6 h-6 mr-3" />
-                Join The Evolution
-              </div>
-            </button>
+<button 
+  onClick={() => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }}
+  className="group relative px-12 py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50"
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+  <div className="relative flex items-center justify-center">
+    <Zap className="w-6 h-6 mr-3" />
+    Join The Evolution
+  </div>
+</button>
             <Link href="/demo">
               <button className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
                 See AI In Action
