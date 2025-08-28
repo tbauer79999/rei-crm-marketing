@@ -1017,12 +1017,13 @@ const SurFoxHomepage = () => {
               <p className="text-gray-300 mb-6">
                 Interested in partnering with SurFox at the franchise or white label level? Let’s talk.
               </p>
-              <a 
-                href="mailto:sales@surfox.com" 
-                className="inline-block px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-xl font-semibold hover:from-yellow-400 hover:to-orange-400 transition-all shadow-lg"
-              >
-                Contact Sales
-              </a>
+         <button
+  onClick={() => window.location.href = '/contact-sales'}
+  className="inline-block px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-xl font-semibold hover:from-yellow-400 hover:to-orange-400 transition-all shadow-lg"
+>
+  Contact Sales
+</button>
+
             </div>
           </div>
           
