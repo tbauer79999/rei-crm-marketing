@@ -815,40 +815,40 @@ const SurFoxHomepage = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Starter Plan */}
-            <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-8 text-center backdrop-blur-xl">
-              <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
-              <div className="text-3xl font-bold text-white mb-4">$197<span className="text-lg text-gray-400">/month</span></div>
-              <p className="text-gray-300 mb-4">Perfect for individual sales professionals tired of manual texting</p>
-              
-              <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-lg p-3 mb-6 border border-gray-600/30">
-                <div className="text-sm font-medium text-gray-300">AI Capability:</div>
-                <div className="text-sm text-gray-400">Basic conversations with context</div>
-                <div className="text-xs text-gray-500 mt-1">No learning, but still way better than blasting</div>
-              </div>
-              
-              <ul className="text-left space-y-3 mb-8 text-sm">
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>500 monthly leads</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>AI-generated initial SMS</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>AI auto-replies</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Cold follow-up automations</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>AI tone/persona selector</span>
-                </li>
-                <li className="flex items-center text-gray-300">
+        {/* Starter Plan */}
+        <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-8 text-center backdrop-blur-xl">
+          <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
+          <div className="text-3xl font-bold text-white mb-4">$197<span className="text-lg text-gray-400">/month</span></div>
+          <p className="text-gray-300 mb-4">Perfect for individual sales professionals tired of manual texting</p>
+          
+          <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-lg p-3 mb-6 border border-gray-600/30">
+            <div className="text-sm font-medium text-gray-300">AI Capability:</div>
+            <div className="text-sm text-gray-400">Basic conversations with context</div>
+            <div className="text-xs text-gray-500 mt-1">No learning, but still way better than blasting</div>
+          </div>
+          
+          <ul className="text-left space-y-3 mb-8 text-sm">
+            <li className="flex items-center text-gray-300">
+              <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+              <span>500 monthly leads</span>
+            </li>
+            <li className="flex items-center text-gray-300">
+              <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+              <span>AI-generated initial SMS</span>
+            </li>
+            <li className="flex items-center text-gray-300">
+              <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+              <span>AI auto-replies</span>
+            </li>
+            <li className="flex items-center text-gray-300">
+              <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+              <span>Cold follow-up automations</span>
+            </li>
+            <li className="flex items-center text-gray-300">
+              <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+              <span>AI tone/persona selector</span>
+            </li>
+                            <li className="flex items-center text-gray-300">
                   <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                   <span>Basic analytics</span>
                 </li>
@@ -1009,6 +1009,22 @@ const SurFoxHomepage = () => {
               </button>
             </div>
           </div>
+
+          {/* Franchise / White Label CTA */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-yellow-700/30 to-orange-700/30 rounded-xl p-6 max-w-3xl mx-auto border border-yellow-500/40">
+              <h3 className="text-xl font-bold text-yellow-300 mb-4">Franchise & White Label Opportunities</h3>
+              <p className="text-gray-300 mb-6">
+                Interested in partnering with SurFox at the franchise or white label level? Let’s talk.
+              </p>
+              <a 
+                href="mailto:sales@surfox.com" 
+                className="inline-block px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-xl font-semibold hover:from-yellow-400 hover:to-orange-400 transition-all shadow-lg"
+              >
+                Contact Sales
+              </a>
+            </div>
+          </div>
           
           <div className="text-center mt-12">
             <p className="text-sm text-gray-400 mb-4">
@@ -1023,6 +1039,7 @@ const SurFoxHomepage = () => {
           </div>
         </div>
       </section>
+
 
       {/* Final CTA - Updated to be more aggressive */}
       <section className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
