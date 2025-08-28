@@ -1005,14 +1005,14 @@ const SurFoxHomepage = () => {
                 onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/scale'}
                 className="w-full border border-gray-600 text-gray-300 px-6 py-3 rounded-xl hover:bg-gray-800/50 transition-colors font-medium"
               >
-                Start Free Trial
+                Get Started Now
               </button>
             </div>
           </div>
           
           <div className="text-center mt-12">
             <p className="text-sm text-gray-400 mb-4">
-              All plans include: 14-day free trial • No setup fees • Cancel anytime
+              All plans include: 30 day money back guarantee • Cancel anytime within 30 days
             </p>
             <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 rounded-lg p-4 max-w-2xl mx-auto border border-red-500/30">
               <p className="text-sm text-red-300 font-medium flex items-center justify-center">
