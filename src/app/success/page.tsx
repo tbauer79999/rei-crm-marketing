@@ -17,7 +17,7 @@ export default function Success() {
             Say goodbye to generic text blasts and manual follow-ups.
           </p>
           <p>
-            Your AI-powered lead qualification system is ready to turn cold prospects into qualified appointments while you focus on closing deals.
+            Your AI-powered lead qualification system is ready to turn cold prospects into HOT conversations so you focus on closing deals.
           </p>
         </div>
 
