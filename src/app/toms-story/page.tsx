@@ -196,7 +196,7 @@ const FoundersLetter = () => {
                 </div>
                 <div className="flex gap-4">
                   <Link href="/#demo" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all">
-                    Try SurFox Free
+                    Try SurFox
                   </Link>
                   <Link href="/" className="border border-purple-300 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-all">
                     Learn More

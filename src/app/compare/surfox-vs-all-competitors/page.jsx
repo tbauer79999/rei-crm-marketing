@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { ArrowRight, Rocket, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Shield, Database, Cpu, MessageSquare, Clock, Sparkles, Crown, Mail, Activity, Eye, Layers, Inbox, Building2, TrendingDown } from 'lucide-react'
 import Nav from '../../components/nav'
+import Link from 'next/link'
 
 const SurFoxGeneralComparison = () => {
   const competitorCategories = [
