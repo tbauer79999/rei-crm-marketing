@@ -1084,10 +1084,6 @@ const SurFoxHomepage = () => {
                 <Mail className="w-4 h-4 mr-2" />
                 tom@surfox.com
               </a>
-              <a href="tel:+15551234567" className="flex items-center text-purple-200 hover:text-white transition-colors">
-                <Phone className="w-4 h-4 mr-2" />
-                (555) 123-4567
-              </a>
             </div>
           </div>
         </div>
