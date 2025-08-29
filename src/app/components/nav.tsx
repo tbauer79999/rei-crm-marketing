@@ -80,7 +80,7 @@ export default function Nav() {
             </Link>
 
             <div className="w-px h-6 bg-purple-500/30"></div>
-            <a href="https://app.getsurfox.com" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
+            <a href="https://surfox.ai" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
               Sign In
             </a>
             <a href="#pricing" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all border border-purple-500/30">
@@ -120,7 +120,7 @@ export default function Nav() {
             </div>
             
             <div className="pt-4 border-t border-purple-500/30">
-              <a href="https://app.getsurfox.com" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium mb-3">Sign In</a>
+              <a href="https://surfox.ai" className="block text-gray-300 hover:text-white transition-colors text-sm font-medium mb-3">Sign In</a>
               <a href="#pricing" className="block bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium text-center border border-purple-500/30">
                 Get Started Now
               </a>
