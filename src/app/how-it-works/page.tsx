@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { Brain, MessageSquare, TrendingUp, Users, Target, Zap, ArrowRight, Play, Eye, Lightbulb, Activity, Database, Cpu, Layers, CheckCircle, XCircle, Clock, Sparkles, BarChart3, HeartHandshake, Search, Filter, Send } from 'lucide-react'
+import Link from 'next/link';
 
 const HowItWorksPage = () => {
   const [activeStep, setActiveStep] = useState(0)
@@ -25,10 +26,12 @@ const HowItWorksPage = () => {
           <p className="text-2xl text-purple-200 mb-8 max-w-4xl mx-auto">
             While other platforms blast the same message to everyone, SurFox analyzes <strong className="text-white">50+ psychological dimensions</strong> to understand exactly how each prospect thinks, decides, and communicates.
           </p>
-          <button className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-xl hover:scale-105 transition-all">
-            <Play className="w-6 h-6 mr-3 inline" />
-            Watch 2-Minute Demo
-          </button>
+          <Link href="/demo">
+  <button className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-xl hover:scale-105 transition-all">
+    <Play className="w-6 h-6 mr-3 inline" />
+    Watch 2-Minute Demo
+  </button>
+</Link>
         </div>
       </section>
 
