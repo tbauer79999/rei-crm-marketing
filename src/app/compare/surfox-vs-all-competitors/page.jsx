@@ -523,7 +523,7 @@ const SurFoxGeneralComparison = () => {
     <div className="flex flex-wrap items-center justify-center gap-8 text-lg text-purple-200 mb-12">
       <div className="flex items-center">
         <Shield className="w-6 h-6 mr-3 text-green-400" />
-        No credit card required
+        30 day money back guarantee
       </div>
       <div className="flex items-center">
         <Brain className="w-6 h-6 mr-3 text-green-400" />

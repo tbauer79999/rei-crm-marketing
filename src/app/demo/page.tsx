@@ -176,7 +176,7 @@ const SurFoxVideoDemo = () => {
           <div className="mt-8 flex items-center justify-center gap-6 text-sm text-gray-400">
             <div className="flex items-center">
               <span className="text-green-400 mr-2">✓</span>
-              No credit card required
+              Cancel anytime
             </div>
             <div className="flex items-center">
               <span className="text-green-400 mr-2">✓</span>
@@ -184,7 +184,7 @@ const SurFoxVideoDemo = () => {
             </div>
             <div className="flex items-center">
               <span className="text-green-400 mr-2">✓</span>
-              Setup in 5 minutes
+              Setup in 15 minutes
             </div>
           </div>
         </div>
