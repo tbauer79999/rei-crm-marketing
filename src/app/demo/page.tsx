@@ -169,7 +169,7 @@ const SurFoxVideoDemo = () => {
             className="group inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-6 rounded-full font-bold text-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-pulse hover:animate-none"
           >
             <span className="mr-2">🔥</span>
-            CLICK HERE TO START YOUR FREE, RISK-FREE TRIAL NOW
+            CLICK HERE TO START 30 DAY MONEY BACK GUARANTEE
             <span className="ml-2">🔥</span>
           </Link>
           
