@@ -435,12 +435,12 @@ const HowItWorksPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="px-12 py-6 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-2xl">
+            <Link href="https://www.getsurfox.com/#pricing" className="px-12 py-6 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-2xl">
               Get Starter Now
-            </button>
-            <button className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-xl hover:bg-purple-500/20 transition-all">
+            </Link>
+            <Link href="/demo"> className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-xl hover:bg-purple-500/20 transition-all">
               Schedule Live Demo
-            </button>
+            </Link>
           </div>
         </div>
       </section>
