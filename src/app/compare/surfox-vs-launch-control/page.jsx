@@ -4,15 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, MessageSquare, Clock, Sparkles, AlertCircle, Star, Crown, DollarSign, Workflow, Bot, User, FileText, Settings, Timer, Phone, Mail, Eye, Lightbulb, Layers, Activity, Rocket } from 'lucide-react'
 import Nav from '../../components/nav'
 import Link from 'next/link'
-
-export const metadata = {
-  title: "SurFox vs Launch Control | AI Messaging vs Manual Campaigns",
-  description:
-    "Compare SurFox with Launch Control. SurFox AI automates 90% of conversations, saves 25+ hours weekly, and cuts costs by 87% compared to manual campaign management.",
-  alternates: {
-    canonical: "https://www.getsurfox.com/compare/launchcontrol"
-  }
-};
+import Head from 'next/head'
 
 const SurFoxVsLaunchControl = () => {
   const [activeFeatureSet, setActiveFeatureSet] = useState(0)
@@ -78,6 +70,15 @@ const SurFoxVsLaunchControl = () => {
   ]
 
   return (
+    <>
+  <Head>
+    <title>SurFox vs Launch Control | AI Messaging vs Manual Campaigns</title>
+    <meta
+      name="description"
+      content="Compare SurFox with Launch Control. SurFox AI automates 90% of conversations, saves 25+ hours weekly, and cuts costs by 87% compared to manual campaign management."
+    />
+    <link rel="canonical" href="https://www.getsurfox.com/compare/launchcontrol" />
+  </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
       <Nav />
 
@@ -692,6 +693,7 @@ const SurFoxVsLaunchControl = () => {
   </div>
 </section>
     </div>
+    </>
   )
 }
 

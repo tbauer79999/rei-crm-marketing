@@ -4,15 +4,8 @@ import React, { useState, useEffect } from 'react'
 import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, MessageSquare, Clock, Sparkles, AlertCircle, Star, Crown, DollarSign, Workflow, Bot, User, FileText, Settings, Timer, Phone, Mail, Eye, Lightbulb, Layers, Activity, Calendar, Building, Headphones } from 'lucide-react'
 import Nav from '../../components/nav'
 import Link from 'next/link'
+import Head from 'next/head'
 
-export const metadata = {
-  title: "SurFox vs Skipio | AI Deal Closer vs Appointment Booking",
-  description:
-    "Compare SurFox with Skipio. SurFox’s AI closes deals by handling conversations, qualifying leads, and surfacing hot prospects, while Skipio only books appointments.",
-  alternates: {
-    canonical: "https://www.getsurfox.com/compare/skipio"
-  }
-};
 
 
 const SurFoxVsSkipio = () => {
@@ -79,6 +72,15 @@ const SurFoxVsSkipio = () => {
   ]
 
   return (
+    <>
+  <Head>
+    <title>SurFox vs Skipio | AI Deal Closer vs Appointment Booking</title>
+    <meta
+      name="description"
+      content="Compare SurFox with Skipio. SurFox’s AI closes deals by handling conversations, qualifying leads, and surfacing hot prospects, while Skipio only books appointments."
+    />
+    <link rel="canonical" href="https://www.getsurfox.com/compare/skipio" />
+  </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
       <Nav />
 
@@ -664,6 +666,7 @@ const SurFoxVsSkipio = () => {
   </div>
 </section>
     </div>
+    </>
   )
 }
 

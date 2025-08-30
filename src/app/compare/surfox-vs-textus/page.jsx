@@ -4,15 +4,8 @@ import React, { useState, useEffect } from 'react'
 import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, MessageSquare, Clock, Sparkles, AlertCircle, Star, Crown, DollarSign, Workflow, Bot, User, FileText, Settings, Timer, Phone, Mail, Eye, Lightbulb, Layers, Activity } from 'lucide-react'
 import Nav from '../../components/nav'
 import Link from 'next/link'
+import Head from 'next/head'
 
-export const metadata = {
-  title: "SurFox vs TextUs | AI Messaging vs Manual Texting",
-  description:
-    "See how SurFox’s AI messaging engine compares to TextUs on cost, automation, qualification, and results. 90% cost savings with AI-driven conversations.",
-  alternates: {
-    canonical: "https://www.getsurfox.com/compare/textus"
-  }
-};
 
 
 const SurFoxVsTextUs = () => {
@@ -79,6 +72,15 @@ const SurFoxVsTextUs = () => {
   ]
 
   return (
+      <>
+    <Head>
+      <title>SurFox vs TextUs | AI Messaging vs Manual Texting</title>
+      <meta
+        name="description"
+        content="See how SurFox’s AI messaging engine compares to TextUs on cost, automation, qualification, and results. 90% cost savings with AI-driven conversations."
+      />
+      <link rel="canonical" href="https://www.getsurfox.com/compare/textus" />
+    </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
       <Nav />
 
@@ -575,6 +577,7 @@ const SurFoxVsTextUs = () => {
   </div>
 </section>
     </div>
+     </>
   )
 }
 

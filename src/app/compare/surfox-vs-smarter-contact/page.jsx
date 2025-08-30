@@ -4,15 +4,8 @@ import React, { useState, useEffect } from 'react'
 import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, MessageSquare, Clock, Sparkles, AlertCircle, Star, Crown, DollarSign, Workflow, Bot, User, FileText, Settings, Timer, Phone, Mail, Eye, Lightbulb, Layers, Activity } from 'lucide-react'
 import Nav from '../../components/nav'
 import Link from 'next/link'
+import Head from 'next/head'
 
-export const metadata = {
-  title: "SurFox vs Smarter Contact | AI Conversations vs Mass Blasting",
-  description:
-    "Compare SurFox with Smarter Contact. See how SurFox’s AI messaging engine books qualified appointments, scores leads, and reduces costs vs template-based mass blasting.",
-  alternates: {
-    canonical: "https://www.getsurfox.com/compare/smartercontact"
-  }
-};
 
 const SurFoxVsSmarterContact = () => {
   const [activeFeatureSet, setActiveFeatureSet] = useState(0)
@@ -78,6 +71,15 @@ const SurFoxVsSmarterContact = () => {
   ]
 
   return (
+    <>
+  <Head>
+    <title>SurFox vs Smarter Contact | AI Conversations vs Mass Blasting</title>
+    <meta
+      name="description"
+      content="Compare SurFox with Smarter Contact. See how SurFox’s AI messaging engine books qualified appointments, scores leads, and reduces costs vs template-based mass blasting."
+    />
+    <link rel="canonical" href="https://www.getsurfox.com/compare/smartercontact" />
+  </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
       <Nav />
 
@@ -692,6 +694,7 @@ const SurFoxVsSmarterContact = () => {
   </div>
 </section>
     </div>
+    </>
   )
 }
 

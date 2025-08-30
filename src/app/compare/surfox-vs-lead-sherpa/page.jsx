@@ -4,15 +4,8 @@ import React, { useState, useEffect } from 'react'
 import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, MessageSquare, Clock, Sparkles, AlertCircle, Star, Crown, DollarSign, Workflow, Bot, User, FileText, Settings, Timer, Phone, Mail, Eye, Lightbulb, Layers, Activity, Search, Building, MapPin, Scale } from 'lucide-react'
 import Nav from '../../components/nav'
 import Link from 'next/link'
+import Head from 'next/head'
 
-export const metadata = {
-  title: "SurFox vs Lead Sherpa | AI Conversion vs Skip Tracing",
-  description:
-    "Compare SurFox with Lead Sherpa. Lead Sherpa excels at compliant data acquisition, while SurFox’s AI engine converts those contacts into 3x more qualified appointments.",
-  alternates: {
-    canonical: "https://www.getsurfox.com/compare/leadsherpa"
-  }
-};
 
 const SurFoxVsLeadSherpa = () => {
   const [activeFeatureSet, setActiveFeatureSet] = useState(0)
@@ -78,6 +71,15 @@ const SurFoxVsLeadSherpa = () => {
   ]
 
   return (
+    <>
+  <Head>
+    <title>SurFox vs Lead Sherpa | AI Conversion vs Skip Tracing</title>
+    <meta
+      name="description"
+      content="Compare SurFox with Lead Sherpa. Lead Sherpa excels at compliant data acquisition, while SurFox’s AI engine converts those contacts into 3x more qualified appointments."
+    />
+    <link rel="canonical" href="https://www.getsurfox.com/compare/leadsherpa" />
+  </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
       <Nav />
 
@@ -663,6 +665,7 @@ const SurFoxVsLeadSherpa = () => {
   </div>
 </section>
     </div>
+    </>
   )
 }
 

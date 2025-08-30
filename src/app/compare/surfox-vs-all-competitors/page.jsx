@@ -4,15 +4,7 @@ import React, { useState } from 'react'
 import { ArrowRight, Rocket, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Shield, Database, Cpu, MessageSquare, Clock, Sparkles, Crown, Mail, Activity, Eye, Layers, Inbox, Building2, TrendingDown } from 'lucide-react'
 import Nav from '../../components/nav'
 import Link from 'next/link'
-
-export const metadata = {
-  title: "Why SurFox | The AI Messaging Intelligence Category Creator",
-  description:
-    "Discover why SurFox created an entirely new category: Sales Psychology AI. Unlike mass texting tools or CRMs, SurFox adapts every conversation in real-time to human psychology, converting cold outreach into qualified conversations.",
-  alternates: {
-    canonical: "https://www.getsurfox.com/compare"
-  }
-};
+import Head from 'next/head'
 
 const SurFoxGeneralComparison = () => {
   const competitorCategories = [
@@ -164,6 +156,15 @@ const SurFoxGeneralComparison = () => {
   ]
 
   return (
+    <>
+  <Head>
+    <title>Why SurFox | The AI Messaging Intelligence Category Creator</title>
+    <meta
+      name="description"
+      content="Discover why SurFox created an entirely new category: Sales Psychology AI. Unlike mass texting tools or CRMs, SurFox adapts every conversation in real-time to human psychology, converting cold outreach into qualified conversations."
+    />
+    <link rel="canonical" href="https://www.getsurfox.com/compare" />
+  </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white">
       <Nav />
 
@@ -569,6 +570,7 @@ const SurFoxGeneralComparison = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 
