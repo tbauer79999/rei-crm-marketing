@@ -26,7 +26,13 @@ const HowItWorksPage = () => {
         {/* Hero Section */}
         <section className="relative py-20 pt-32 min-h-[60vh] flex items-center">
           <div className="max-w-7xl mx-auto px-6 text-center">
-            ...
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+  How Psychology AI Turns Cold Leads into Conversations
+</h1>
+<p className="text-xl text-purple-200/90 max-w-3xl mx-auto">
+  SurFox analyzes 50+ behavioral signals and adapts every message to the way each person thinks.
+</p>
+
           </div>
         </section>
 
