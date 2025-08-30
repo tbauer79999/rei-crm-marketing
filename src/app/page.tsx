@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Play, Check, X, Brain, MessageSquare, Target, User, ChevronRight, Phone, Mail, Zap, Activity, Shield, Eye, TrendingUp, BarChart3, Clock, ArrowRight, Building, Users, Cpu, Database, Lightbulb, Layers, Gauge, Sparkles, Send, Bot, Menu } from 'lucide-react'
 import Nav from './components/nav'
+import Head from "next/head"
 
 const SurFoxHomepage = () => {
   const [activeTab, setActiveTab] = useState('psychology')
@@ -39,6 +40,56 @@ const SurFoxHomepage = () => {
   }, [currentMessageIndex])
 
   return (
+    <>
+  <Head>
+    <title>SurFox | AI Messaging Intelligence That Converts Cold Leads</title>
+    
+    <meta name="keywords" content="AI messaging, sales AI, cold outreach, conversation AI, SurFox, text blasting alternative, AI sales assistant" />
+    <meta
+      name="description"
+      content="SurFox is the AI messaging engine that replaces text blasting. Engage cold leads with psychology-driven AI that adapts in real time and delivers only qualified conversations."
+/>
+    <link rel="canonical" href="https://www.getsurfox.com/" />
+
+{/* Open Graph */}
+<meta property="og:title" content="SurFox | AI Messaging That Converts Cold Leads" />
+<meta property="og:description" content="Stop blasting texts. SurFox uses AI to engage cold leads with real conversations and deliver qualified prospects." />
+<meta property="og:url" content="https://www.getsurfox.com" />
+<meta property="og:site_name" content="SurFox" />
+<meta property="og:image" content="https://www.getsurfox.com/og-image.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+
+{/* Twitter */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@getSurFox" />
+<meta name="twitter:title" content="SurFox | AI Messaging That Converts Cold Leads" />
+<meta name="twitter:description" content="AI messaging engine that adapts to psychology, turns cold outreach into qualified conversations, and saves hours every week." />
+<meta name="twitter:image" content="https://www.getsurfox.com/og-image.jpg" />
+<meta name="twitter:creator" content="@TomFromSurFox" />
+
+
+    {/* JSON-LD Structured Data */}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "SurFox",
+          applicationCategory: "Sales & Marketing AI",
+          description:
+            "SurFox is an AI messaging intelligence engine that adapts to psychology and turns cold leads into conversations.",
+          url: "https://www.getsurfox.com",
+          logo: "https://www.getsurfox.com/logo.png",
+          sameAs: [
+            "https://twitter.com/getSurFox",
+            "https://www.linkedin.com/company/surfox",
+          ],
+        }),
+      }}
+    />
+  </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
         <Nav /> 
 
@@ -60,6 +111,11 @@ const SurFoxHomepage = () => {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <p className="mt-4 text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
+  SurFox is an <strong>AI messaging engine</strong> that replaces <strong>text blasting</strong>. 
+  Our <strong>psychology-driven, agentic AI</strong> runs real conversations, adapts replies in real time, 
+  and sends sales only <strong>qualified prospects</strong>—not noise.
+</p>
                 <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
                   Stop blasting thousands of texts.
                 </span>
@@ -1088,7 +1144,7 @@ const SurFoxHomepage = () => {
           </div>
         </div>
       </section>
-    </div>
+    </div></>
   )
 }
 
