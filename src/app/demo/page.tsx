@@ -78,25 +78,23 @@ const SurFoxVideoDemo = () => {
         </div>
       </section>
 
-      {/* Section 1 - Supademo Video Embed */}
-      <section id="section-1" className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-        <div className="w-full max-w-5xl mx-auto">
-          <div 
-            style={{ position: 'relative', boxSizing: 'content-box', maxHeight: '80vh', width: '100%', aspectRatio: '2.0317460317460316', padding: '40px 0' }}
-          >
-<iframe
-  src="https://app.supademo.com/embed/cmeui5tem6h8wv9kqd6x6rxev?embed_v=2&utm_source=embed"
-  loading="lazy"
-  title="Surfox Demo"
-  allow="clipboard-write"
-  frameBorder="0"
-  allowFullScreen
-  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-/>
+{/* Section 1 - Supademo Video Embed */}
+<section id="section-1" className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
+  <div className="w-full max-w-6xl mx-auto">
+    <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+      <iframe
+        src="https://app.supademo.com/embed/cmeui5tem6h8wv9kqd6x6rxev?embed_v=2&utm_source=embed"
+        loading="lazy"
+        title="Surfox Demo"
+        allow="clipboard-write"
+        frameBorder="0"
+        allowFullScreen
+        className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+      />
+    </div>
+  </div>
+</section>
 
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA Section */}
       <section id="section-2" className="min-h-screen bg-gradient-to-br from-gray-900 to-black flex items-center justify-center px-4 py-20 relative overflow-hidden">
