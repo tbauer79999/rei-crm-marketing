@@ -71,9 +71,11 @@ const SurFoxHomepage = () => {
     return () => clearInterval(timer)
   }, [currentMessageIndex])
 
-  const toggleFAQ = (index) => {
-    setActiveFAQ(activeFAQ === index ? null : index)
-  }
+const [activeFAQ, setActiveFAQ] = useState<number | null>(null)
+
+const toggleFAQ = (index: number) => {
+  setActiveFAQ(activeFAQ === index ? null : index)
+}
 
   return (
     <>
