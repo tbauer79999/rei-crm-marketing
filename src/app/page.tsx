@@ -111,11 +111,7 @@ const SurFoxHomepage = () => {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                <p className="mt-4 text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
-  SurFox is an <strong>AI messaging engine</strong> that replaces <strong>text blasting</strong>. 
-  Our <strong>psychology-driven, agentic AI</strong> runs real conversations, adapts replies in real time, 
-  and sends sales only <strong>qualified prospects</strong>—not noise.
-</p>
+                
                 <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
                   Stop blasting thousands of texts.
                 </span>
