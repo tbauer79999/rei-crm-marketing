@@ -1,9 +1,10 @@
 'use client'
-// this is a test
+
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, ChevronDown } from 'lucide-react'
+
 
 export default function Nav() {
   const [isScrolled, setIsScrolled] = useState(false)

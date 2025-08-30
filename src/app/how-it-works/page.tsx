@@ -3,12 +3,23 @@
 import React, { useState, useEffect } from 'react'
 import { Brain, MessageSquare, TrendingUp, Users, Target, Zap, ArrowRight, Play, Eye, Lightbulb, Activity, Database, Cpu, Layers, CheckCircle, XCircle, Clock, Sparkles, BarChart3, HeartHandshake, Search, Filter, Send } from 'lucide-react'
 import Link from 'next/link';
+import Head from 'next/head';
+
 
 const HowItWorksPage = () => {
   const [activeStep, setActiveStep] = useState(0)
   const [psychologyDemo, setPsychologyDemo] = useState('skeptical')
   
   return (
+       <>  <Head>
+      <title>How SurFox Works | AI Messaging Intelligence</title>
+      <meta 
+        name="description" 
+        content="Learn how SurFox's Psychology AI analyzes 50+ behavioral dimensions to adapt messages in real-time and turn cold leads into qualified conversations." 
+      />
+      <link rel="canonical" href="https://www.getsurfox.com/how-it-works" />
+    </Head>
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white">
       
       {/* Hero Section */}
@@ -33,6 +44,7 @@ const HowItWorksPage = () => {
   </button>
 </Link>
         </div>
+        </>
       </section>
 
       {/* The Psychology Problem */}
