@@ -29,7 +29,8 @@ const HowItWorksPage = () => {
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
   How Psychology AI Turns Cold Leads into Conversations
 </h1>
-<p className="text-xl text-purple-200/90 max-w-3xl mx-auto">
+<p className="text-xl text-purple-200 max-w-3xl mx-auto">
+
   SurFox analyzes 50+ behavioral signals and adapts every message to the way each person thinks.
 </p>
 
@@ -54,7 +55,8 @@ const HowItWorksPage = () => {
                 Watch how the AI adapts each one based on psychological analysis.
               </p>
               
-              <div className="flex gap-4 mb-8">
+              <div className="flex gap-4 mb-8" role="group" aria-label="Select prospect personality">
+
                 {[
                   { id: 'skeptical', label: 'Skeptical Buyer', color: 'red' },
                   { id: 'analytical', label: 'Analytical Type', color: 'blue' },
@@ -63,6 +65,7 @@ const HowItWorksPage = () => {
                   <button
                     key={type.id}
                     onClick={() => setPsychologyDemo(type.id)}
+                    aria-pressed={psychologyDemo === type.id}
                     className={`px-4 py-2 rounded-lg font-medium transition-all ${
                       psychologyDemo === type.id
                         ? `bg-${type.color}-600 text-white`
@@ -71,11 +74,15 @@ const HowItWorksPage = () => {
                   >
                     {type.label}
                   </button>
+
                 ))}
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 rounded-2xl border border-purple-500/30 p-8">
+            <div
+  className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 rounded-2xl border border-purple-500/30 p-8"
+  aria-live="polite"
+>
               {psychologyDemo === 'skeptical' && (
                 <div>
                   <div className="flex items-center mb-4">
@@ -156,14 +163,16 @@ const HowItWorksPage = () => {
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
               The 4-Step Psychology AI Process
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-200">
+
               From cold lead to psychological profile to conversion - here's exactly how it works
             </p>
           </div>
           
           {/* Interactive Step Navigator */}
           <div className="flex justify-center mb-12">
-            <div className="bg-gray-800/50 rounded-2xl p-2 backdrop-blur-sm">
+            <div className="bg-gray-800/50 rounded-2xl p-2 backdrop-blur-sm" role="tablist" aria-label="Psychology AI process steps">
+
               {[
                 { id: 0, label: 'Import', icon: Database },
                 { id: 1, label: 'Analyze', icon: Brain },
@@ -173,6 +182,10 @@ const HowItWorksPage = () => {
                 <button
                   key={step.id}
                   onClick={() => setActiveStep(step.id)}
+                  role="tab"
+                  id={`step-tab-${step.id}`}
+                  aria-selected={activeStep === step.id}
+                  aria-controls={`step-panel-${step.id}`}
                   className={`px-6 py-3 rounded-xl text-sm font-medium transition-all flex items-center ${
                     activeStep === step.id
                       ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg'
@@ -182,6 +195,7 @@ const HowItWorksPage = () => {
                   <step.icon className="w-5 h-5 mr-2" />
                   {step.label}
                 </button>
+
               ))}
             </div>
           </div>
@@ -189,7 +203,13 @@ const HowItWorksPage = () => {
           {/* Step Content */}
           <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 rounded-3xl border border-purple-500/30 p-8 min-h-[500px]">
             {activeStep === 0 && (
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div
+                role="tabpanel"
+                id="step-panel-0"
+                aria-labelledby="step-tab-0"
+                className="grid lg:grid-cols-2 gap-12 items-center"
+              >
+
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
                     <Database className="w-8 h-8 mr-3 text-blue-400" />
@@ -232,8 +252,14 @@ const HowItWorksPage = () => {
               </div>
             )}
 
-            {activeStep === 1 && (
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+{activeStep === 1 && (
+  <div
+    role="tabpanel"
+    id="step-panel-1"
+    aria-labelledby="step-tab-1"
+    className="grid lg:grid-cols-2 gap-12 items-center"
+  >
+
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
                     <Brain className="w-8 h-8 mr-3 text-purple-400" />
@@ -280,8 +306,14 @@ const HowItWorksPage = () => {
               </div>
             )}
 
-            {activeStep === 2 && (
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+{activeStep === 2 && (
+  <div
+    role="tabpanel"
+    id="step-panel-2"
+    aria-labelledby="step-tab-2"
+    className="grid lg:grid-cols-2 gap-12 items-center"
+  >
+
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
                     <Zap className="w-8 h-8 mr-3 text-cyan-400" />
@@ -325,8 +357,14 @@ const HowItWorksPage = () => {
               </div>
             )}
 
-            {activeStep === 3 && (
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+{activeStep === 3 && (
+  <div
+    role="tabpanel"
+    id="step-panel-3"
+    aria-labelledby="step-tab-3"
+    className="grid lg:grid-cols-2 gap-12 items-center"
+  >
+
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
                     <TrendingUp className="w-8 h-8 mr-3 text-green-400" />
