@@ -15,8 +15,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SurFox — Convert Cold Leads Into Hot Conversations with AI",
-  description: "The world's first Messaging Intelligence platform that reads buyer psychology and converts conversations into revenue.",
+  // keep only site-wide, non-conflicting defaults
+  metadataBase: new URL("https://www.getsurfox.com"),
+  openGraph: {
+    siteName: "SurFox",
+    type: "website",
+    url: "https://www.getsurfox.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@getSurFox",
+  },
+  // DO NOT set title or description here, so per-page <Head> wins
 };
 
 export default function RootLayout({
