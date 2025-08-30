@@ -2,16 +2,48 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Play, Check, X, Brain, MessageSquare, Target, User, ChevronRight, Phone, Mail, Zap, Activity, Shield, Eye, TrendingUp, BarChart3, Clock, ArrowRight, Building, Users, Cpu, Database, Lightbulb, Layers, Gauge, Sparkles, Send, Bot, Menu } from 'lucide-react'
+import {
+  Play,
+  Check,
+  X,
+  Brain,
+  MessageSquare,
+  Target,
+  User,
+  ChevronRight,
+  Phone,
+  Mail,
+  Zap,
+  Activity,
+  Shield,
+  Eye,
+  TrendingUp,
+  BarChart3,
+  Clock,
+  ArrowRight,
+  Building,
+  Users,
+  Cpu,
+  Database,
+  Lightbulb,
+  Layers,
+  Gauge,
+  Sparkles,
+  Send,
+  Bot,
+  Menu,
+  HelpCircle,
+  Plus,
+  Minus
+} from 'lucide-react'
 import Nav from './components/nav'
-import Head from "next/head"
+import Head from 'next/head'
 
 const SurFoxHomepage = () => {
   const [activeTab, setActiveTab] = useState('psychology')
   const [typingText, setTypingText] = useState('')
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0)
-  const [showHeroTooltip, setShowHeroTooltip] = useState(false)
-  const [showDemoTooltip, setShowDemoTooltip] = useState(false)
+  const [activeFAQ, setActiveFAQ] = useState(null)
 
   const messages = [
     "Hi Sarah, I see you're analytical - here's the exact ROI data you need...",
@@ -39,1108 +71,998 @@ const SurFoxHomepage = () => {
     return () => clearInterval(timer)
   }, [currentMessageIndex])
 
+  const toggleFAQ = (index) => {
+    setActiveFAQ(activeFAQ === index ? null : index)
+  }
+
   return (
     <>
-  <Head>
-    <title>SurFox | AI Messaging Intelligence That Converts Cold Leads</title>
-    
-    <meta name="keywords" content="AI messaging, sales AI, cold outreach, conversation AI, SurFox, text blasting alternative, AI sales assistant" />
-    <meta
-      name="description"
-      content="SurFox is the AI messaging engine that replaces text blasting. Engage cold leads with psychology-driven AI that adapts in real time and delivers only qualified conversations."
-/>
-    <link rel="canonical" href="https://www.getsurfox.com/" />
+      <Head>
+        <title>AI Sales Automation Software | SurFox Conversation Intelligence Platform</title>
 
-{/* Open Graph */}
-<meta property="og:title" content="SurFox | AI Messaging That Converts Cold Leads" />
-<meta property="og:description" content="Stop blasting texts. SurFox uses AI to engage cold leads with real conversations and deliver qualified prospects." />
-<meta property="og:url" content="https://www.getsurfox.com" />
-<meta property="og:site_name" content="SurFox" />
-<meta property="og:image" content="https://www.getsurfox.com/og-image.jpg" />
-<meta property="og:type" content="website" />
-<meta property="og:locale" content="en_US" />
+        <meta
+          name="description"
+          content="Transform cold outreach with AI sales automation that reads prospect psychology, qualifies leads automatically, and delivers only ready-to-buy conversations. Replace manual texting with intelligent AI agents."
+        />
+        <meta
+          name="keywords"
+          content="AI sales automation, conversation intelligence, cold outreach AI, lead qualification software, sales psychology AI, automated lead nurturing, sales AI platform, prospect qualification, agentic AI sales"
+        />
+        <link rel="canonical" href="https://www.getsurfox.com/" />
 
-{/* Twitter */}
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@getSurFox" />
-<meta name="twitter:title" content="SurFox | AI Messaging That Converts Cold Leads" />
-<meta name="twitter:description" content="AI messaging engine that adapts to psychology, turns cold outreach into qualified conversations, and saves hours every week." />
-<meta name="twitter:image" content="https://www.getsurfox.com/og-image.jpg" />
-<meta name="twitter:creator" content="@TomFromSurFox" />
+        {/* Open Graph */}
+        <meta property="og:title" content="AI Sales Automation That Reads Prospect Psychology | SurFox" />
+        <meta
+          property="og:description"
+          content="Revolutionary AI sales platform that has real conversations with prospects, reads their psychology, and delivers only qualified leads ready to buy."
+        />
+        <meta property="og:url" content="https://www.getsurfox.com" />
+        <meta property="og:site_name" content="SurFox" />
+        <meta property="og:image" content="https://www.getsurfox.com/og-image.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
 
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@getSurFox" />
+        <meta name="twitter:title" content="AI Sales Automation That Reads Prospect Psychology | SurFox" />
+        <meta
+          name="twitter:description"
+          content="Stop manual texting. AI agents have real conversations, qualify prospects automatically, and deliver only ready buyers."
+        />
+        <meta name="twitter:image" content="https://www.getsurfox.com/og-image.jpg" />
+        <meta name="twitter:creator" content="@TomFromSurFox" />
 
-    {/* JSON-LD Structured Data */}
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          name: "SurFox",
-          applicationCategory: "Sales & Marketing AI",
-          description:
-            "SurFox is an AI messaging intelligence engine that adapts to psychology and turns cold leads into conversations.",
-          url: "https://www.getsurfox.com",
-          logo: "https://www.getsurfox.com/logo.png",
-          sameAs: [
-            "https://twitter.com/getSurFox",
-            "https://www.linkedin.com/company/surfox",
-          ],
-        }),
-      }}
-    />
-  </Head>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
-        <Nav /> 
+        {/* Structured Data - Software Application */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'SoftwareApplication',
+              name: 'SurFox',
+              applicationCategory: 'Sales & Marketing AI Software',
+              description:
+                'AI sales automation platform that reads prospect psychology and conducts intelligent conversations to qualify leads automatically.',
+              url: 'https://www.getsurfox.com',
+              logo: 'https://www.getsurfox.com/logo.png',
+              offers: {
+                '@type': 'AggregateOffer',
+                lowPrice: '197',
+                highPrice: '1997',
+                priceCurrency: 'USD'
+              },
+              sameAs: ['https://twitter.com/getSurFox', 'https://www.linkedin.com/company/surfox']
+            })
+          }}
+        />
 
-      {/* Animated Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-40 right-40 w-60 h-60 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
+        {/* FAQ Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'What is agentic AI in sales automation?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text:
+                      'Agentic AI in sales automation refers to artificial intelligence that acts independently to conduct full sales conversations, make decisions based on prospect psychology, and qualify leads without human intervention. Unlike template-based systems, agentic AI adapts its approach in real-time based on how prospects respond.'
+                  }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'How does AI sales automation differ from text blasting?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text:
+                      'AI sales automation conducts personalized conversations with each prospect, reads their psychology and communication style, and adapts messaging accordingly. Text blasting sends identical messages to thousands of prospects without personalization or intelligence.'
+                  }
+                }
+              ]
+            })
+          }}
+        />
+      </Head>
 
-      {/* Hero Section - Fixed Above Fold */}
-      <section className="relative py-12 pt-24 lg:pt-20 min-h-[85vh] flex items-center">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-400/30 backdrop-blur-sm">
-                <Zap className="w-4 h-4 mr-2 text-red-300" />
-                <span className="text-red-200 font-medium text-sm">The Evolution Is Here • Text Blasting Is Dead</span>
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                
-                <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-                  Stop blasting thousands of texts.
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                  Start having conversations.
-                </span>
-              </h1>
-              
-              <div className="text-xl text-purple-200 space-y-4">
-                <p>I spent 20 years watching text blasters fail because they treat every prospect the same.</p>
-                <p className="text-lg text-gray-300">
-                  <strong className="text-white">Some prospects need data, others need emotion. Some respond to pressure, others to patience.</strong>
-                  <br />SurFox is <span className="relative inline-block">
-                    <button aria-label="More information about SurFox agentic AI"
-                      onMouseEnter={() => setShowHeroTooltip(true)}
-                      onMouseLeave={() => setShowHeroTooltip(false)}
-                      className="text-cyan-400 underline decoration-dotted hover:text-cyan-300 cursor-help"
-                    >
-                      agentic AI
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
+        <Nav />
+
+        {/* Animated Background Elements */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-40 right-40 w-60 h-60 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        </div>
+
+        {/* Hero Section */}
+        <section className="relative py-12 pt-24 lg:pt-20 min-h-[85vh] flex items-center">
+          <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-400/30 backdrop-blur-sm">
+                  <Zap className="w-4 h-4 mr-2 text-red-300" />
+                  <span className="text-red-200 font-medium text-sm">The Evolution Is Here • Text Blasting Is Dead</span>
+                </div>
+
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+                    AI Sales Automation That Reads Prospect Psychology
+                  </span>
+                </h1>
+
+                <div className="text-xl text-purple-200 space-y-4">
+                  <p className="text-lg text-gray-300 font-medium">
+                    Revolutionary conversation intelligence platform that qualifies leads automatically
+                  </p>
+                  <p className="text-lg text-gray-300">
+                    Transform cold outreach with <strong className="text-white">agentic AI</strong> that conducts real
+                    conversations, adapts to each prospect's psychology, and delivers only qualified leads ready to buy.{' '}
+                    <strong className="text-white">No more manual texting or sorting through "not interested" replies.</strong>
+                  </p>
+                  <div className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full border border-yellow-400/30 backdrop-blur-sm">
+                    <Target className="w-4 h-4 mr-2 text-yellow-400" />
+                    <span className="text-yellow-200 font-medium text-sm">End Of Manual Outreach Era</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <button
+                    onClick={() => {
+                      const pricingSection = document.getElementById('pricing')
+                      if (pricingSection) {
+                        pricingSection.scrollIntoView({ behavior: 'smooth' })
+                      }
+                    }}
+                    className="group relative px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative flex items-center justify-center">
+                      <Zap className="w-5 h-5 mr-2" />
+                      Start Free Trial
+                    </div>
+                  </button>
+
+                  <Link href="#how-it-works">
+                    <button className="px-6 py-3 border-2 border-purple-400/50 rounded-xl font-bold text-lg backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-300">
+                      See How It Works
                     </button>
-                    {showHeroTooltip && (
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-64 z-50">
-                        <div className="bg-gray-900 text-white text-sm rounded-lg p-3 border border-gray-700 shadow-xl">
-                          <div className="text-cyan-400 font-semibold mb-1">Agentic means:</div>
-                          <div>The AI acts on its own, not just responding with templates</div>
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
-                        </div>
-                      </div>
-                    )}
-                  </span> that has real conversations and learns each prospect's psychology.
-                </p>
-                <div className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full border border-yellow-400/30 backdrop-blur-sm">
-                  <Target className="w-4 h-4 mr-2 text-yellow-400" />
-                  <span className="text-yellow-200 font-medium text-sm">End Of Text Blasting Era</span>
+                  </Link>
+                </div>
+
+                {/* Tom's Quote */}
+                <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-xl rounded-xl border border-purple-500/30 p-6 mt-6">
+                  <p className="text-purple-200 text-base mb-3 italic">
+                    "Text blasters send 10,000 generic messages and waste hours sorting replies. SurFox has intelligent conversations
+                    and only gives you qualified prospects."
+                  </p>
+                  <p className="text-purple-300 text-sm">Tom Bauer, Founder & CEO</p>
                 </div>
               </div>
-              
-<div className="flex flex-col sm:flex-row gap-4 pt-4">
-<button aria-label="See AI Conversations demo"
-  onClick={() => window.location.href = '/demo'}
-  className="group relative px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50"
->
-  <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-  <div className="relative flex items-center justify-center">
-    <Play className="w-5 h-5 mr-2" />
-    See AI Conversations
-  </div>
-</button>
 
-<a
-  href="#how-it-works"
-  className="px-6 py-3 border-2 border-purple-400/50 rounded-xl font-bold text-lg backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-300"
->
-  Why Blasting Failed
-</a>
+              {/* Live AI Demo */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-6 shadow-2xl">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-bold text-purple-200">Live AI Conversation Intelligence</h3>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-green-300 text-xs">ANALYZING</span>
+                    </div>
+                  </div>
 
-              </div>
-
-              {/* Tom's Quote - Updated */}
-              <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-xl rounded-xl border border-purple-500/30 p-6 mt-6">
-                <p className="text-purple-200 text-base mb-3 italic">
-                  "Text blasters send 10,000 generic messages and waste hours sorting replies. SurFox has intelligent conversations and only gives you qualified prospects."
-                </p>
-                <p className="text-purple-300 text-sm">
-                  Tom Bauer, Founder & CEO
-                </p>
-              </div>
-            </div>
-
-            {/* Live AI Demo - Updated */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-6 shadow-2xl">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-bold text-purple-200">
-                    <span className="relative inline-block">
-                      <button aria-label="More information about SurFox agentic AI"
-                        onMouseEnter={() => setShowDemoTooltip(true)}
-                        onMouseLeave={() => setShowDemoTooltip(false)}
-                        className="text-purple-200 hover:text-purple-100 cursor-help"
-                      >
-                        Agentic AI Conversations
-                      </button>
-                      {showDemoTooltip && (
-                        <div className="absolute bottom-full left-0 mb-2 w-64 z-50">
-                          <div className="bg-gray-900 text-white text-sm rounded-lg p-3 border border-gray-700 shadow-xl">
-                            <div className="text-cyan-400 font-semibold mb-1">Agentic means:</div>
-                            <div>The AI acts on its own, not just responding with templates</div>
-                            <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                  <div className="space-y-3 mb-4">
+                    <div className="bg-black/40 rounded-lg p-3 border border-cyan-500/30">
+                      <div className="text-cyan-300 text-xs mb-2">AI Reading Prospect Psychology...</div>
+                      <div className="grid grid-cols-2 gap-3 text-xs">
+                        <div className="space-y-1">
+                          <div className="flex justify-between">
+                            <span className="text-gray-400">Decision Style:</span>
+                            <span className="text-yellow-400 font-bold">Analytical</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-gray-400">Trust Level:</span>
+                            <span className="text-red-400 font-bold">Skeptical</span>
                           </div>
                         </div>
-                      )}
-                    </span>
-                  </h3>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-green-300 text-xs">CONVERSING</span>
-                  </div>
-                </div>
-                
-                {/* AI Analysis Display - Updated */}
-                <div className="space-y-3 mb-4">
-                  <div className="bg-black/40 rounded-lg p-3 border border-cyan-500/30">
-                    <div className="text-cyan-300 text-xs mb-2">AI Reading Prospect Psychology...</div>
-                    <div className="grid grid-cols-2 gap-3 text-xs">
-                      <div className="space-y-1">
-                        <div className="flex justify-between">
-                          <span className="text-gray-400">Decision Style:</span>
-                          <span className="text-yellow-400 font-bold">Analytical</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-400">Trust Level:</span>
-                          <span className="text-red-400 font-bold">Skeptical</span>
-                        </div>
-                      </div>
-                      <div className="space-y-1">
-                        <div className="flex justify-between">
-                          <span className="text-gray-400">Motivation:</span>
-                          <span className="text-green-400 font-bold">ROI-Driven</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-400">Communication:</span>
-                          <span className="text-blue-400 font-bold">Direct</span>
+                        <div className="space-y-1">
+                          <div className="flex justify-between">
+                            <span className="text-gray-400">Motivation:</span>
+                            <span className="text-green-400 font-bold">ROI-Driven</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-gray-400">Communication:</span>
+                            <span className="text-blue-400 font-bold">Direct</span>
+                          </div>
                         </div>
                       </div>
                     </div>
+
+                    <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-lg p-3 border border-purple-400/30">
+                      <div className="text-purple-300 text-xs mb-2">Adaptive Conversation:</div>
+                      <div className="bg-black/60 rounded-lg p-2 font-mono text-xs text-green-300 min-h-[40px] flex items-center">
+                        {typingText}
+                        <span className="animate-pulse">|</span>
+                      </div>
+                    </div>
                   </div>
-                  
-                  {/* Live Conversation Generation */}
-                  <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-lg p-3 border border-purple-400/30">
-                    <div className="text-purple-300 text-xs mb-2">Adaptive Conversation:</div>
-                    <div className="bg-black/60 rounded-lg p-2 font-mono text-xs text-green-300 min-h-[40px] flex items-center">
-                      {typingText}<span className="animate-pulse">|</span>
+
+                  <div className="text-center">
+                    <div className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-full border border-green-400/30">
+                      <Zap className="w-3 h-3 mr-2 text-green-400" />
+                      <span className="text-green-300 text-xs font-medium">Psychology Match: 94%</span>
                     </div>
                   </div>
                 </div>
-                
-                <div className="text-center">
-                  <div className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-full border border-green-400/30">
-                    <Zap className="w-3 h-3 mr-2 text-green-400" />
-                    <span className="text-green-300 text-xs font-medium">Psychology Match: 94%</span>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center transform rotate-12 shadow-xl">
-                <Brain className="w-8 h-8 text-white" />
-              </div>
-              <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center transform -rotate-12 shadow-xl">
-                <Sparkles className="w-6 h-6 text-white" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Revolutionary Declaration Section */}
-      <section className="relative py-20 bg-gradient-to-r from-red-900/50 to-orange-900/50 backdrop-blur-xl border-y border-red-500/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent">
-              The Text Blasting Era Is Over.
-              <br />
-              <span className="text-white">The Conversation Era Begins Now.</span>
-            </h2>
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 backdrop-blur-sm mb-6">
-              <Target className="w-5 h-5 mr-3 text-red-400" />
-              <span className="text-red-200 font-bold">We're Taking Over</span>
-            </div>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-red-900/40 to-red-600/40 rounded-2xl border border-red-400/30 p-8 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-red-300 mb-6 flex items-center">
-                <X className="w-8 h-8 mr-3" />
-                Text Blasters (The Old Way):
-              </h3>
-              <div className="space-y-4 text-red-200">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                  <span>Send 10,000 identical messages</span>
+                {/* Floating Elements */}
+                <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center transform rotate-12 shadow-xl">
+                  <Brain className="w-8 h-8 text-white" />
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                  <span>Manually sort through garbage replies</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                  <span>Waste hours on "not interested" responses</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                  <span>Treat analytical prospects like emotional ones</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                  <span>Never learn what actually works</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-900/40 to-cyan-600/40 rounded-2xl border border-cyan-400/30 p-8 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-cyan-300 mb-4 flex items-center">
-                <Brain className="w-8 h-8 mr-3" />
-                SurFox Agentic AI (The Future):
-              </h3>
-              <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-lg p-2 mb-4 border border-yellow-400/30">
-                <div className="text-xs font-bold text-yellow-300 flex items-center justify-center">
-                  <Zap className="w-3 h-3 mr-2" />
-                  INTELLIGENT CONVERSATIONS
-                </div>
-              </div>
-              <div className="space-y-4 text-cyan-200">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                  <span>AI has real conversations with prospects</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  <span>Only qualified prospects reach you</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span>Reads psychology and adapts in real-time</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  <span>Learns from every conversation</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                  <span>Gets smarter while you sleep</span>
+                <div className="absolute -bottom-3 -right-3 w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center transform -rotate-12 shadow-xl">
+                  <Sparkles className="w-6 h-6 text-white" />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Problem Definition - Updated */}
-      <section className="relative py-20 bg-black/20 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-5xl mx-auto text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent">
-              You're drowning in replies you can't use
-            </h2>
-            <p className="text-xl text-gray-300 leading-relaxed">
-              Text blasters create more work, not less. You send thousands of messages, then spend hours sorting through 
-              "stop," "not interested," and "maybe later" responses. <em>That's not scaling — that's suffering.</em>
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-red-900/40 to-red-600/40 rounded-2xl border border-red-400/30 p-8 backdrop-blur-sm">
-              <div className="flex items-center mb-6">
-                <X className="w-8 h-8 text-red-400 mr-3" />
-                <h3 className="text-2xl font-bold text-red-300">Text Blasting Reality:</h3>
+        {/* Revolutionary Declaration Section */}
+        <section className="relative py-20 bg-gradient-to-r from-red-900/50 to-orange-900/50 backdrop-blur-xl border-y border-red-500/30">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent">
+                The Text Blasting Era Is Over.
+                <br />
+                <span className="text-white">The Conversation Era Begins Now.</span>
+              </h2>
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 backdrop-blur-sm mb-6">
+                <Target className="w-5 h-5 mr-3 text-red-400" />
+                <span className="text-red-200 font-bold">We're Taking Over</span>
               </div>
-              <ul className="space-y-4 text-red-200">
-                <li className="flex items-start">
-                  <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
-                  <div>
-                    <strong>Mass generic messages</strong> — Same SMS to everyone, no personalization
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
-                  <div>
-                    <strong>Manual reply sorting</strong> — Hours wasted reading "not interested" responses
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
-                  <div>
-                    <strong>Zero psychology awareness</strong> — Treating skeptical prospects like decisive ones
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
-                  <div>
-                    <strong>Sales reps become text operators</strong> — Spending day typing instead of selling
-                  </div>
-                </li>
-              </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-900/40 to-cyan-600/40 rounded-2xl border border-cyan-400/30 p-8 backdrop-blur-sm">
-              <div className="flex items-center mb-6">
-                <Brain className="w-8 h-8 text-cyan-400 mr-3" />
-                <h3 className="text-2xl font-bold text-cyan-300">SurFox Conversation AI:</h3>
-              </div>
-              <ul className="space-y-4 text-cyan-200">
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
-                  <div>
-                    <strong>AI handles all conversations</strong> — No manual texting or reply sorting
+            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              <div className="bg-gradient-to-br from-red-900/40 to-red-600/40 rounded-2xl border border-red-400/30 p-8 backdrop-blur-sm">
+                <h3 className="text-2xl font-bold text-red-300 mb-6 flex items-center">
+                  <X className="w-8 h-8 mr-3" />
+                  Text Blasters (The Old Way):
+                </h3>
+                <div className="space-y-4 text-red-200">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span>Send 10,000 identical messages</span>
                   </div>
-                </li>
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
-                  <div>
-                    <strong>Only qualified prospects escalated</strong> — You only talk to ready buyers
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span>Manually sort through garbage replies</span>
                   </div>
-                </li>
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
-                  <div>
-                    <strong>Psychology-based adaptation</strong> — Different approach for each personality type
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span>Waste hours on "not interested" responses</span>
                   </div>
-                </li>
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
-                  <div>
-                    <strong>Sales reps focus on closing</strong> — AI does the work, you get the results
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span>Treat analytical prospects like emotional ones</span>
                   </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works - Updated */}
-      <section id="how-it-works" className="relative py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              How Agentic AI Replaces Text Blasting
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              While text blasters send and hope, our AI reads psychology, has real conversations, and learns what works. 
-              You get qualified prospects, not message volume.
-            </p>
-          </div>
-          
-          {/* Updated Steps */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="relative group">
-              <div className="bg-gradient-to-br from-purple-900/60 to-purple-600/60 rounded-3xl border border-purple-400/40 p-8 text-center backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-purple-500/50">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-500">
-                  <Bot className="w-10 h-10 text-white" />
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <span>Never learn what actually works</span>
+                  </div>
                 </div>
-                <div className="text-4xl font-bold text-purple-300 mb-3">1</div>
-                <h3 className="text-2xl font-bold text-white mb-4">AI Initiates Conversations</h3>
-                <p className="text-purple-200 leading-relaxed">
-                  Upload your cold leads. AI immediately begins personalized conversations based on industry, role, 
-                  and available context. No generic blasting.
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-900/40 to-cyan-600/40 rounded-2xl border border-cyan-400/30 p-8 backdrop-blur-sm">
+                <h3 className="text-2xl font-bold text-cyan-300 mb-4 flex items-center">
+                  <Brain className="w-8 h-8 mr-3" />
+                  SurFox Agentic AI (The Future):
+                </h3>
+                <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-lg p-2 mb-4 border border-yellow-400/30">
+                  <div className="text-xs font-bold text-yellow-300 flex items-center justify-center">
+                    <Zap className="w-3 h-3 mr-2" />
+                    INTELLIGENT CONVERSATIONS
+                  </div>
+                </div>
+                <div className="space-y-4 text-cyan-200">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                    <span>AI has real conversations with prospects</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                    <span>Only qualified prospects reach you</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <span>Reads psychology and adapts in real-time</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                    <span>Learns from every conversation</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                    <span>Gets smarter while you sleep</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Problem Definition - Original Section */}
+        <section className="relative py-20 bg-black/20 backdrop-blur-xl">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-5xl mx-auto text-center mb-16">
+              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent">
+                You're drowning in replies you can't use
+              </h2>
+              <p className="text-xl text-gray-300 leading-relaxed">
+                Text blasters create more work, not less. You send thousands of messages, then spend hours sorting through "stop," "not
+                interested," and "maybe later" responses. That's not scaling — that's suffering.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              <div className="bg-gradient-to-br from-red-900/40 to-red-600/40 rounded-2xl border border-red-400/30 p-8 backdrop-blur-sm">
+                <div className="flex items-center mb-6">
+                  <X className="w-8 h-8 text-red-400 mr-3" />
+                  <h3 className="text-2xl font-bold text-red-300">Text Blasting Reality:</h3>
+                </div>
+                <ul className="space-y-4 text-red-200">
+                  <li className="flex items-start">
+                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
+                    <div>
+                      <strong>Mass generic messages</strong> — Same SMS to everyone, no personalization
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
+                    <div>
+                      <strong>Manual reply sorting</strong> — Hours wasted reading "not interested" responses
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
+                    <div>
+                      <strong>Zero psychology awareness</strong> — Treating skeptical prospects like decisive ones
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
+                    <div>
+                      <strong>Sales reps become text operators</strong> — Spending day typing instead of selling
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-900/40 to-cyan-600/40 rounded-2xl border border-cyan-400/30 p-8 backdrop-blur-sm">
+                <div className="flex items-center mb-6">
+                  <Brain className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-2xl font-bold text-cyan-300">SurFox Conversation AI:</h3>
+                </div>
+                <ul className="space-y-4 text-cyan-200">
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
+                    <div>
+                      <strong>AI handles all conversations</strong> — No manual texting or reply sorting
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
+                    <div>
+                      <strong>Only qualified prospects escalated</strong> — You only talk to ready buyers
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
+                    <div>
+                      <strong>Psychology-based adaptation</strong> — Different approach for each personality type
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
+                    <div>
+                      <strong>Sales reps focus on closing</strong> — AI does the work, you get the results
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What is Agentic AI Section */}
+        <section className="relative py-20" id="features">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
+                What is Agentic AI for Sales?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Agentic AI goes beyond chatbots and templates. It's artificial intelligence that acts independently, makes decisions,
+                and adapts strategies based on real-time conversation analysis and prospect psychology.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-xl">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Psychology-Based Conversations</h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  Unlike template-based systems that send identical messages, agentic AI reads each prospect's communication style,
+                  decision-making patterns, and psychological triggers to create personalized conversation strategies.
                 </p>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-start">
+                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    Identifies analytical vs emotional decision-makers
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    Adapts to skeptical vs trusting personalities
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    Matches communication pace and style preferences
+                  </li>
+                </ul>
               </div>
-              <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500"></div>
-            </div>
-            
-            <div className="relative group">
-              <div className="bg-gradient-to-br from-blue-900/60 to-cyan-600/60 rounded-3xl border border-cyan-400/40 p-8 text-center backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-cyan-500/50">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-500">
-                  <Brain className="w-10 h-10 text-white" />
+
+              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-xl">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
+                  <Bot className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-4xl font-bold text-cyan-300 mb-3">2</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Reads Psychology & Adapts</h3>
-                <p className="text-cyan-200 leading-relaxed">
-                  As conversations develop, AI reads each prospect's psychology in real-time. 
-                  Skeptical? Gets proof. Decisive? Moves fast. Analytical? Provides data.
+                <h3 className="text-xl font-bold text-white mb-3">Autonomous Decision Making</h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  Agentic AI makes real-time decisions about conversation flow, qualification questions, objection handling, and
+                  escalation timing without human intervention or pre-programmed scripts.
                 </p>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-start">
+                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    Chooses optimal response strategies dynamically
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    Determines when to provide proof vs build rapport
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    Adapts follow-up sequences to prospect behavior
+                  </li>
+                </ul>
               </div>
-              <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-cyan-500 to-green-500"></div>
-            </div>
-            
-            <div className="relative group">
-              <div className="bg-gradient-to-br from-green-900/60 to-green-600/60 rounded-3xl border border-green-400/40 p-8 text-center backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-green-500/50">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-500">
-                  <Target className="w-10 h-10 text-white" />
+
+              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-xl">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
+                  <Lightbulb className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-4xl font-bold text-green-300 mb-3">3</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Delivers Qualified Prospects</h3>
-                <p className="text-green-200 leading-relaxed">
-                  Only when AI detects genuine buying interest do you get notified. 
-                  No more sorting replies — just qualified prospects ready to close.
+                <h3 className="text-xl font-bold text-white mb-3">Continuous Learning System</h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  Each conversation improves the AI's understanding of what works for different prospect types, industries, and
+                  objection patterns, creating a self-improving sales intelligence system.
                 </p>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-start">
+                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    Maps successful conversation patterns by personality
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    Learns industry-specific language and concerns
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    Improves objection handling through pattern recognition
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+        </section>
 
-          {/* Keep the existing interactive demo but with updated content */}
-          <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-3xl border border-purple-500/30 p-8 shadow-2xl">
-            <h3 className="text-3xl font-bold text-center text-white mb-8">Live Psychology vs Blasting Demo</h3>
-            
-            <div className="flex justify-center mb-8">
-              <div className="bg-gray-800/50 rounded-2xl p-2 backdrop-blur-sm">
-                {[
-                  { id: 'psychology', label: 'Psychology Engine', icon: Brain },
-                  { id: 'learning', label: 'Learning System', icon: Lightbulb },
-                  { id: 'adaptation', label: 'Real-Time Adaptation', icon: Zap }
-                ].map((tab) => (
-                  <button 
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`px-6 py-3 rounded-xl text-sm font-medium transition-all flex items-center ${
-                      activeTab === tab.id
-                        ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg'
-                        : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
-                    }`}
+        {/* Problem/Solution Section */}
+        <section className="relative py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent">
+                Why Traditional Cold Outreach Fails
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Mass texting and generic email campaigns create more work, not more sales. Here's why the old approach is broken and
+                how AI conversation intelligence fixes it.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              <div className="bg-gradient-to-br from-red-900/40 to-red-600/40 rounded-2xl border border-red-400/30 p-8 backdrop-blur-sm">
+                <div className="flex items-center mb-6">
+                  <X className="w-8 h-8 text-red-400 mr-3" />
+                  <h3 className="text-2xl font-bold text-red-300">Traditional Mass Outreach Problems</h3>
+                </div>
+                <ul className="space-y-4 text-red-200">
+                  <li className="flex items-start">
+                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
+                    <div>
+                      <strong>Generic Message Blasting</strong> - Same message to thousands of prospects regardless of industry, role,
+                      or psychology
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
+                    <div>
+                      <strong>Manual Reply Management</strong> - Hours spent sorting through "not interested," "stop," and "maybe later"
+                      responses
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
+                    <div>
+                      <strong>No Psychology Awareness</strong> - Treating analytical prospects like emotional ones, skeptical like
+                      trusting
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
+                    <div>
+                      <strong>Poor Qualification Process</strong> - No systematic way to identify truly interested prospects vs polite
+                      responses
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-900/40 to-cyan-600/40 rounded-2xl border border-cyan-400/30 p-8 backdrop-blur-sm">
+                <div className="flex items-center mb-6">
+                  <Brain className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-2xl font-bold text-cyan-300">SurFox Agentic AI Solution</h3>
+                </div>
+                <ul className="space-y-4 text-cyan-200">
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
+                    <div>
+                      <strong>Personalized Conversations</strong> - AI crafts unique approaches based on prospect's industry, role, and
+                      psychological profile
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
+                    <div>
+                      <strong>Qualified Prospects Only</strong> - AI handles all conversations and escalates only genuinely interested,
+                      sales-ready prospects
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
+                    <div>
+                      <strong>Real-Time Psychology Reading</strong> - Adapts conversation style, proof level, and pacing to match each
+                      prospect's personality
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
+                    <div>
+                      <strong>Intelligent Qualification Scoring</strong> - Multi-factor analysis of buying signals, timeline, budget,
+                      and decision-making authority
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works */}
+        <section id="how-it-works" className="relative py-20 bg-black/20 backdrop-blur-xl">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
+                How AI Conversation Intelligence Works
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                Our agentic AI system follows a systematic process to identify, engage, qualify, and convert cold leads into
+                sales-ready prospects using advanced conversation intelligence.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  number: '1',
+                  icon: Target,
+                  title: 'AI Analyzes Prospect Data',
+                  description:
+                    "The system analyzes prospect information including industry, role, company size, and any available background data to create an initial psychological profile and conversation strategy.",
+                  color: 'from-purple-500 to-cyan-500'
+                },
+                {
+                  number: '2',
+                  icon: MessageSquare,
+                  title: 'Initiates Personalized Conversation',
+                  description:
+                    "AI crafts a personalized opening message based on the prospect's profile and begins a natural conversation, avoiding generic templates or obvious automation.",
+                  color: 'from-cyan-500 to-blue-500'
+                },
+                {
+                  number: '3',
+                  icon: Brain,
+                  title: 'Reads Psychology & Adapts',
+                  description:
+                    'As the conversation develops, AI analyzes response patterns, communication style, objection types, and buying signals to refine its psychological understanding.',
+                  color: 'from-blue-500 to-purple-500'
+                },
+                {
+                  number: '4',
+                  icon: BarChart3,
+                  title: 'Qualifies Based on Multiple Factors',
+                  description:
+                    'AI evaluates prospects using advanced qualification criteria including budget indicators, timeline signals, decision-making authority, and genuine interest level.',
+                  color: 'from-green-500 to-emerald-500'
+                },
+                {
+                  number: '5',
+                  icon: TrendingUp,
+                  title: 'Escalates Only Qualified Prospects',
+                  description:
+                    'When AI determines a prospect meets qualification thresholds and shows genuine buying interest, it escalates to your sales team with full conversation context.',
+                  color: 'from-orange-500 to-red-500'
+                },
+                {
+                  number: '6',
+                  icon: Lightbulb,
+                  title: 'Learns & Improves Continuously',
+                  description:
+                    'The system learns from every conversation outcome, refining its psychological models, qualification criteria, and conversation strategies to improve performance over time.',
+                  color: 'from-pink-500 to-purple-500'
+                }
+              ].map((step, index) => (
+                <div key={index} className="relative group">
+                  <div className="bg-gradient-to-br from-gray-900/60 to-purple-900/60 rounded-3xl border border-purple-400/40 p-8 text-center backdrop-blur-xl transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-purple-500/50">
+                    <div
+                      className={`w-20 h-20 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-500`}
+                    >
+                      <step.icon className="w-10 h-10 text-white" />
+                    </div>
+                    <div className="text-4xl font-bold text-purple-300 mb-3">{step.number}</div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
+                    <p className="text-purple-200 leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="relative py-20" id="faq">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from white to-purple-300 bg-clip-text text-transparent">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to know about AI sales automation and conversation intelligence
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              {[
+                {
+                  question: 'What makes agentic AI different from chatbots or templates?',
+                  answer:
+                    "Agentic AI operates independently and makes real-time decisions about conversation flow, unlike chatbots that follow predetermined scripts. It reads prospect psychology, adapts its communication style, and chooses optimal strategies based on each individual's responses and behavior patterns."
+                },
+                {
+                  question: 'How does the AI read prospect psychology?',
+                  answer:
+                    'The AI analyzes communication patterns, response timing, language choices, objection types, and question patterns to identify psychological traits like decision-making style (analytical vs intuitive), trust levels (skeptical vs accepting), communication preferences (direct vs relationship-focused), and motivation triggers.'
+                },
+                {
+                  question: 'What industries work best with AI sales automation?',
+                  answer:
+                    "AI conversation intelligence works across all B2B industries including SaaS, real estate, financial services, professional services, healthcare, manufacturing, and more. The AI adapts to industry-specific language, concerns, and buying cycles automatically."
+                },
+                {
+                  question: 'How does AI qualification compare to human qualification?',
+                  answer:
+                    'AI qualification is more consistent and thorough than human qualification because it analyzes multiple data points simultaneously, never gets tired or distracted, and applies consistent criteria across all prospects. It also learns from successful outcomes to improve qualification accuracy over time.'
+                },
+                {
+                  question: "What happens to prospects who aren't qualified?",
+                  answer:
+                    "Unqualified prospects continue in AI-managed nurture sequences tailored to their specific objections or timeline. The AI maintains these relationships and re-evaluates qualification status as circumstances change, ensuring no opportunities are lost."
+                },
+                {
+                  question: 'How long does it take to see results?',
+                  answer:
+                    "Most clients see qualified prospects within the first week of launch. The AI's conversation quality and qualification accuracy improve continuously, with significant optimization typically occurring within the first month as the system learns your specific market and prospect patterns."
+                }
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 mb-4 backdrop-blur-xl overflow-hidden"
+                >
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-purple-500/10 transition-colors"
                   >
-                    <tab.icon className="w-5 h-5 mr-2" />
-                    {tab.label}
+                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                    {activeFAQ === index ? (
+                      <Minus className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                    ) : (
+                      <Plus className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                    )}
                   </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="min-h-[400px]">
-              {activeTab === 'psychology' && (
-                <div className="grid lg:grid-cols-2 gap-8">
-                  <div className="bg-black/40 rounded-2xl p-6 border border-cyan-500/30">
-                    <h4 className="text-xl font-bold text-cyan-300 mb-6 flex items-center">
-                      <User className="w-6 h-6 mr-3" />
-                      Sarah Chen - Tech Executive
-                    </h4>
-                    <div className="space-y-4">
-                      {[
-                        { label: 'Communication Style', value: 'Direct & Data-Driven', color: 'blue' },
-                        { label: 'Decision Making', value: 'Analytical & Cautious', color: 'yellow' },
-                        { label: 'Trust Building', value: 'Skeptical - Needs Proof', color: 'red' },
-                        { label: 'Motivation Trigger', value: 'ROI & Efficiency', color: 'green' }
-                      ].map((trait, index) => (
-                        <div key={index} className="flex items-center justify-between p-3 bg-gray-900/50 rounded-xl">
-                          <span className="text-gray-300">{trait.label}</span>
-                          <span className={`font-bold ${
-                            trait.color === 'blue' ? 'text-blue-400' :
-                            trait.color === 'yellow' ? 'text-yellow-400' :
-                            trait.color === 'red' ? 'text-red-400' :
-                            'text-green-400'
-                          }`}>{trait.value}</span>
-                        </div>
-                      ))}
+                  {activeFAQ === index && (
+                    <div className="px-6 pb-4">
+                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                     </div>
-                  </div>
-                  
-                  <div className="bg-black/40 rounded-2xl p-6 border border-purple-500/30">
-                    <h4 className="text-xl font-bold text-purple-300 mb-6 flex items-center">
-                      <Bot className="w-6 h-6 mr-3" />
-                      AI-Generated Conversation
-                    </h4>
-                    <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 rounded-xl p-4 border border-purple-400/30 mb-4">
-                      <div className="text-white leading-relaxed text-sm">
-                        <strong>AI:</strong> "Hi Sarah, I see you're in fintech. We helped a similar company reduce sales cycle by 34%. Here's the breakdown: [ROI data]. Worth a brief call to see if it applies to your situation?"
-                        <br/><br/>
-                        <strong>Sarah:</strong> "I'm skeptical. We've tried solutions before."
-                        <br/><br/>
-                        <strong>AI:</strong> "I completely understand. Here are 3 specific case studies from companies that had the same concern: [detailed proof]. No pitch, just facts."
-                      </div>
-                    </div>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex items-center text-green-400">
-                        <Check className="w-4 h-4 mr-2" />
-                        Adapts to skepticism with proof
-                      </div>
-                      <div className="flex items-center text-green-400">
-                        <Check className="w-4 h-4 mr-2" />
-                        Data-focused for analytical type
-                      </div>
-                      <div className="flex items-center text-green-400">
-                        <Check className="w-4 h-4 mr-2" />
-                        Acknowledges concerns directly
-                      </div>
-                      <div className="flex items-center text-green-400">
-                        <Check className="w-4 h-4 mr-2" />
-                        Industry-specific relevance
-                      </div>
-                    </div>
-                  </div>
+                  )}
                 </div>
-              )}
-
-              {activeTab === 'learning' && (
-                <div className="max-w-5xl mx-auto">
-                  <div className="grid md:grid-cols-3 gap-6 mb-8">
-                    {[
-                      {
-                        icon: MessageSquare,
-                        title: 'Conversation Patterns',
-                        desc: 'Learns which conversation flows work for skeptical vs decisive prospects, optimal response timing, objection handling that builds trust',
-                        gradient: 'from-blue-500 to-cyan-500'
-                      },
-                      {
-                        icon: Brain,
-                        title: 'Psychology Mapping',
-                        desc: 'Identifies communication styles that resonate with different personality types, builds psychological profiles for better targeting',
-                        gradient: 'from-purple-500 to-pink-500'
-                      },
-                      {
-                        icon: TrendingUp,
-                        title: 'Qualification Intelligence',
-                        desc: 'Maps successful prospect qualification sequences, learns buying signals vs polite interest, optimizes conversion timing',
-                        gradient: 'from-green-500 to-emerald-500'
-                      }
-                    ].map((item, index) => (
-                      <div key={index} className="bg-black/40 rounded-2xl p-6 border border-gray-700/50 text-center">
-                        <div className={`w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                          <item.icon className="w-8 h-8 text-white" />
-                        </div>
-                        <h4 className="text-lg font-bold text-white mb-3">{item.title}</h4>
-                        <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-2xl p-6 border border-purple-400/30 text-center">
-                    <h4 className="text-xl font-bold text-white mb-4">AI Learning Scales By Plan</h4>
-                    <div className="grid md:grid-cols-3 gap-4 text-sm">
-                      <div className="bg-black/40 rounded-xl p-4">
-                        <div className="font-bold text-gray-400 mb-2">Starter Plan</div>
-                        <div className="text-gray-400 font-bold">No Learning (Static AI)</div>
-                        <div className="text-xs text-gray-500 mt-1">Same responses always</div>
-                      </div>
-                      <div className="bg-black/40 rounded-xl p-4">
-                        <div className="font-bold text-gray-400 mb-2">Growth Plan</div>
-                        <div className="text-purple-400 font-bold">100 Conversation Memory</div>
-                        <div className="text-xs text-purple-300 mt-1">Learns patterns & improves</div>
-                      </div>
-                      <div className="bg-black/40 rounded-xl p-4">
-                        <div className="font-bold text-gray-400 mb-2">Scale Plan</div>
-                        <div className="text-cyan-400 font-bold">1,000 Conversation Memory</div>
-                        <div className="text-xs text-cyan-300 mt-1">Advanced psychology insights</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {activeTab === 'adaptation' && (
-                <div className="grid lg:grid-cols-2 gap-8">
-                  <div className="bg-gradient-to-br from-red-900/40 to-red-600/40 rounded-2xl p-6 border border-red-400/30">
-                    <h4 className="text-xl font-bold text-red-300 mb-4 flex items-center">
-                      <X className="w-6 h-6 mr-3" />
-                      Text Blaster Approach
-                    </h4>
-                    <div className="bg-black/60 rounded-xl p-4 mb-4">
-                      <div className="text-red-200 text-sm mb-3"><strong>Generic Message:</strong></div>
-                      <div className="text-white text-sm leading-relaxed">
-                        "Hi! I have a great solution for your business. Click here to learn more!"
-                      </div>
-                    </div>
-                    <div className="bg-black/60 rounded-xl p-4 mb-4">
-                      <div className="text-red-200 text-sm mb-3"><strong>Prospect Response:</strong></div>
-                      <div className="text-gray-300 text-sm italic">"I've heard this before from other vendors..."</div>
-                    </div>
-                    <div className="text-xs text-red-300 bg-red-900/30 rounded-lg p-3">
-                      <strong>Result:</strong> Manual sorting required, low trust, generic follow-up or give up
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-br from-green-900/40 to-green-600/40 rounded-2xl p-6 border border-green-400/30">
-                    <h4 className="text-xl font-bold text-green-300 mb-4 flex items-center">
-                      <Brain className="w-6 h-6 mr-3" />
-                      SurFox AI Approach
-                    </h4>
-                    <div className="bg-black/60 rounded-xl p-4 mb-4">
-                      <div className="text-green-200 text-sm mb-3"><strong>AI Detects Skepticism:</strong></div>
-                      <div className="text-white text-sm leading-relaxed">
-                        "I understand the skepticism - you've probably been burned before. Here are 3 verified results from companies just like yours: [specific data, case studies]. No sales pitch, just facts. Worth 10 minutes?"
-                      </div>
-                    </div>
-                    <div className="text-xs text-green-300 bg-green-900/30 rounded-lg p-3">
-                      <strong>Psychology Adaptation:</strong> Acknowledges skepticism, provides proof, builds trust, low-pressure ask
-                    </div>
-                  </div>
-                </div>
-              )}
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* What It Is / Isn't - Updated to be more aggressive */}
-      <section className="relative py-20 bg-black/20 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              Let me be crystal clear about what this is
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-4">
-              We built SurFox because we were tired of watching sales teams waste time with text blasting tools. 
-              This isn't another mass texting platform — <strong className="text-white">this is agentic AI that completely replaces manual texting.</strong>
-            </p>
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 backdrop-blur-sm">
-              <Target className="w-4 h-4 mr-2 text-red-400" />
-              <span className="text-red-200 font-bold text-sm">The End of Text Blasting Era</span>
-            </div>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-red-900/40 to-red-600/40 rounded-2xl border border-red-400/30 p-8 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-red-300 mb-8">This is NOT another text blaster:</h3>
-              <ul className="space-y-6 text-red-200">
-                <li className="flex items-start">
-                  <X className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-red-400" />
-                  <div>
-                    <strong className="block">Textus, Skipio, Launch Control clones</strong>
-                    <span className="text-red-300">We don't blast thousands of identical messages</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <X className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-red-400" />
-                  <div>
-                    <strong className="block">Manual reply management</strong>
-                    <span className="text-red-300">You won't sort through "stop" and "not interested" replies</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <X className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-red-400" />
-                  <div>
-                    <strong className="block">Generic message templates</strong>
-                    <span className="text-red-300">No more one-size-fits-all SMS campaigns</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <X className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-red-400" />
-                  <div>
-                    <strong className="block">Sales reps as text operators</strong>
-                    <span className="text-red-300">Your team won't spend days typing messages</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-900/40 to-cyan-600/40 rounded-2xl border border-cyan-400/30 p-8 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-cyan-300 mb-8">This IS the evolution:</h3>
-              <ul className="space-y-6 text-cyan-200">
-                <li className="flex items-start">
-                  <Bot className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-cyan-400" />
-                  <div>
-                    <strong className="block">Agentic AI that has conversations</strong>
-                    <span className="text-cyan-300">AI conducts full conversations without human intervention</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <Brain className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-cyan-400" />
-                  <div>
-                    <strong className="block">Psychology-based engagement</strong>
-                    <span className="text-cyan-300">Reads personality and adapts conversation style in real-time</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <Lightbulb className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-cyan-400" />
-                  <div>
-                    <strong className="block">Self-improving system</strong>
-                    <span className="text-cyan-300">Gets smarter with every conversation, learns what works</span>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <Target className="w-6 h-6 mr-3 mt-1 flex-shrink-0 text-cyan-400" />
-                  <div>
-                    <strong className="block">Qualified-prospect-only delivery</strong>
-                    <span className="text-cyan-300">Only escalates prospects who are actually ready to buy</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Industry Applications - Keep the same but updated messaging */}
-      <section className="relative py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              Every industry is ready for the upgrade
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Text blasting failed across every industry. SurFox adapts to each industry's unique psychology, 
-              terminology, and buying patterns. Real conversations replace generic blasts.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { 
-                icon: Building, 
-                title: 'Real Estate', 
-                desc: 'Stop blasting "Are you still looking?" to every lead. AI has real conversations about their timeline and needs.',
-                psychology: 'Adapts to emotional vs logical buyer personalities',
-                gradient: 'from-blue-500 to-cyan-500'
-              },
-              { 
-                icon: Cpu, 
-                title: 'SaaS & Technology', 
-                desc: 'End generic demo requests. AI understands technical vs business stakeholders and qualifies properly.',
-                psychology: 'Technical depth for engineers, ROI focus for executives',
-                gradient: 'from-purple-500 to-pink-500'
-              },
-              { 
-                icon: Users, 
-                title: 'Professional Services', 
-                desc: 'Replace "When can we chat?" blasts with conversations about actual project needs and timing.',
-                psychology: 'Decision-maker vs influencer conversation styles',
-                gradient: 'from-green-500 to-emerald-500'
-              },
-              { 
-                icon: TrendingUp, 
-                title: 'Financial Services', 
-                desc: 'Stop mass texting about loans. AI qualifies financial readiness and risk tolerance through conversation.',
-                psychology: 'Conservative vs aggressive risk tolerance detection',
-                gradient: 'from-yellow-500 to-orange-500'
-              },
-              { 
-                icon: Shield, 
-                title: 'Healthcare', 
-                desc: 'End generic procedure reminders. AI understands comfort levels and decision-making preferences.',
-                psychology: 'Adapts to anxiety levels and information needs',
-                gradient: 'from-red-500 to-pink-500'
-              },
-              { 
-                icon: Target, 
-                title: 'Manufacturing', 
-                desc: 'Replace procurement blasts with conversations that understand buying cycles and approval processes.',
-                psychology: 'Engineering vs procurement vs executive mindsets',
-                gradient: 'from-indigo-500 to-purple-500'
-              }
-            ].map((industry, index) => (
-              <div key={index} className="group relative bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-purple-500/50">
-                <div className={`w-12 h-12 bg-gradient-to-br ${industry.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <industry.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-3">{industry.title}</h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">{industry.desc}</p>
-                <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-lg p-3 border border-purple-500/30">
-                  <div className="text-sm text-purple-300 font-medium flex items-center">
-                    <Brain className="w-4 h-4 mr-2" />
-                    {industry.psychology}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Enhanced Pricing - Updated for anti-blasting messaging */}
-      <section id="pricing" className="relative py-20 bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              Choose your plan
-            </h2>
-            <p className="text-xl text-gray-300 mb-4">
-              Stop paying for text blasting tools that create more work. Start with AI that actually gets results.
-            </p>
-            <p className="text-lg text-purple-300 font-medium">
-              Higher tiers = Smarter AI = Better conversations = More qualified prospects
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {/* Starter Plan */}
-        <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-8 text-center backdrop-blur-xl">
-          <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
-          <div className="text-3xl font-bold text-white mb-4">$197<span className="text-lg text-gray-400">/month</span></div>
-          <p className="text-gray-300 mb-4">Perfect for individual sales professionals tired of manual texting</p>
-          
-          <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-lg p-3 mb-6 border border-gray-600/30">
-            <div className="text-sm font-medium text-gray-300">AI Capability:</div>
-            <div className="text-sm text-gray-400">Basic conversations with context</div>
-            <div className="text-xs text-gray-500 mt-1">No learning, but still way better than blasting</div>
-          </div>
-          
-          <ul className="text-left space-y-3 mb-8 text-sm">
-            <li className="flex items-center text-gray-300">
-              <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-              <span>500 monthly leads</span>
-            </li>
-            <li className="flex items-center text-gray-300">
-              <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-              <span>AI-generated initial SMS</span>
-            </li>
-            <li className="flex items-center text-gray-300">
-              <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-              <span>AI auto-replies</span>
-            </li>
-            <li className="flex items-center text-gray-300">
-              <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-              <span>Cold follow-up automations</span>
-            </li>
-            <li className="flex items-center text-gray-300">
-              <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-              <span>AI tone/persona selector</span>
-            </li>
-                            <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Basic analytics</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>CSV exports</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>1 team seat</span>
-                </li>
-              </ul>
-              
-              <button aria-label="Get started with SurFox"
-                onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/starter'}
-                className="w-full bg-gradient-to-r from-gray-700 to-gray-600 text-white px-6 py-3 rounded-xl hover:from-gray-600 hover:to-gray-500 transition-colors font-medium"
-              >
-                Get Started Now
-              </button>
-            </div>
-
-            {/* Growth Plan */}
-            <div className="relative bg-gradient-to-br from-purple-900/60 to-blue-900/60 rounded-2xl border-2 border-purple-400/50 p-8 text-center backdrop-blur-xl transform scale-105 shadow-2xl shadow-purple-500/25">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                <span className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-1 rounded-full text-xs font-bold shadow-lg">
-                  Most Popular
-                </span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Growth</h3>
-              <div className="text-3xl font-bold text-white mb-4">$497<span className="text-lg text-gray-400">/month</span></div>
-              <p className="text-gray-300 mb-4">For teams ready to completely eliminate manual texting</p>
-              
-              <div className="bg-gradient-to-r from-purple-800/50 to-blue-800/50 rounded-lg p-3 mb-6 border border-purple-400/30">
-                <div className="text-sm font-medium text-purple-300">AI Capability:</div>
-                <div className="text-sm text-purple-200">Learning AI with 100 conversation memory</div>
-                <div className="text-xs text-purple-300 mt-1">Gets smarter with every conversation</div>
-              </div>
-              
-              <ul className="text-left space-y-3 mb-8 text-sm">
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>2,500 monthly leads</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Everything in Starter, plus:</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Funnel module (Cold → Escalated)</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Escalation score threshold control</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>After-hours AI override toggle</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>1 AI knowledge base file upload</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>AI reply pacing mode config</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Chrome extension</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>100 conversation memory/learning</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>5 team seats</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Admin + user permissions</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Zapier/API integration</span>
-                </li>
-              </ul>
-              
-              <button aria-label="Get started with SurFox Growth plan"
-                onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/growth'}
-                className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-colors font-medium shadow-lg"
-              >
-                Get Started Now
-              </button>
-            </div>
-
-            {/* Scale Plan */}
-            <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-8 text-center backdrop-blur-xl">
-              <h3 className="text-xl font-bold text-white mb-2">Scale</h3>
-              <div className="text-3xl font-bold text-white mb-4">$1,997<span className="text-lg text-gray-400">/month</span></div>
-              <p className="text-gray-300 mb-4">For enterprise teams replacing text blasting completely</p>
-              
-              <div className="bg-gradient-to-r from-cyan-800/50 to-green-800/50 rounded-lg p-3 mb-6 border border-cyan-400/30">
-                <div className="text-sm font-medium text-cyan-300">AI Capability:</div>
-                <div className="text-sm text-cyan-200">Advanced AI with 1,000 conversation memory</div>
-                <div className="text-xs text-cyan-300 mt-1">Expert-level psychology insights</div>
-              </div>
-              
-              <ul className="text-left space-y-3 mb-8 text-sm">
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>10,000+ monthly leads</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Everything in Growth, plus:</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Unlimited AI knowledge base uploads</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Full access + team metrics</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>1000 conversation memory/learning</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>15+ team seats</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Full RBAC (role-based access)</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>Message A/B testing (AI)</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>White-glove onboarding & CSM</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                  <span>SLA-backed priority routing</span>
-                </li>
-              </ul>
-              
-              <button aria-label="Get started with SurFox Scale plan"
-                onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/scale'}
-                className="w-full border border-gray-600 text-gray-300 px-6 py-3 rounded-xl hover:bg-gray-800/50 transition-colors font-medium"
-              >
-                Get Started Now
-              </button>
-            </div>
-          </div>
-
-          {/* Franchise / White Label CTA */}
-          <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-yellow-700/30 to-orange-700/30 rounded-xl p-6 max-w-3xl mx-auto border border-yellow-500/40">
-              <h3 className="text-xl font-bold text-yellow-300 mb-4">Franchise & White Label Opportunities</h3>
-              <p className="text-gray-300 mb-6">
-                Interested in partnering with SurFox at the franchise or white label level? Let’s talk.
+        {/* Pricing Section */}
+        <section id="pricing" className="relative py-20 bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-xl">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from white to-purple-300 bg-clip-text text-transparent">
+                AI Sales Automation Pricing
+              </h2>
+              <p className="text-xl text-gray-300 mb-4">
+                Choose the plan that scales with your sales team's needs. All plans include AI conversation intelligence,
+                psychology-based qualification, and continuous learning capabilities.
               </p>
-         <button aria-label="Contact SurFox Sales"
-  onClick={() => window.location.href = '/contact-sales'}
-  className="inline-block px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-xl font-semibold hover:from-yellow-400 hover:to-orange-400 transition-all shadow-lg"
->
-  Contact Sales
-</button>
+              <p className="text-lg text-purple-300 font-medium">Higher tiers = Smarter AI = Better conversations = More qualified prospects</p>
+            </div>
 
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Starter Plan */}
+              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-8 text-center backdrop-blur-xl">
+                <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
+                <div className="text-3xl font-bold text-white mb-4">
+                  $197<span className="text-lg text-gray-400">/month</span>
+                </div>
+                <p className="text-gray-300 mb-4">
+                  Perfect for individual sales professionals ready to eliminate manual outreach
+                </p>
+
+                <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-lg p-3 mb-6 border border-gray-600/30">
+                  <div className="text-sm font-medium text-gray-300">AI Capability:</div>
+                  <div className="text-sm text-gray-400">Basic conversations with context</div>
+                  <div className="text-xs text-gray-500 mt-1">No learning, but still way better than blasting</div>
+                </div>
+
+                <ul className="text-left space-y-3 mb-8 text-sm">
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>500 monthly leads</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>AI conversation intelligence</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Psychology-based qualification</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Automated follow-up sequences</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Basic analytics dashboard</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>1 team member</span>
+                  </li>
+                </ul>
+
+                <button
+                  onClick={() => (window.location.href = 'https://www.getsurfox.com/subscribe/starter')}
+                  className="w-full bg-gradient-to-r from-gray-700 to-gray-600 text-white px-6 py-3 rounded-xl hover:from-gray-600 hover:to-gray-500 transition-colors font-medium"
+                >
+                  Start Free Trial
+                </button>
+              </div>
+
+              {/* Growth Plan */}
+              <div className="relative bg-gradient-to-br from-purple-900/60 to-blue-900/60 rounded-2xl border-2 border-purple-400/50 p-8 text-center backdrop-blur-xl transform scale-105 shadow-2xl shadow-purple-500/25">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <span className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-1 rounded-full text-xs font-bold shadow-lg">
+                    Most Popular
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Growth</h3>
+                <div className="text-3xl font-bold text-white mb-4">
+                  $497<span className="text-lg text-gray-400">/month</span>
+                </div>
+                <p className="text-gray-300 mb-4">For growing sales teams ready to scale AI-powered conversations</p>
+
+                <div className="bg-gradient-to-r from-purple-800/50 to-blue-800/50 rounded-lg p-3 mb-6 border border-purple-400/30">
+                  <div className="text-sm font-medium text-purple-300">AI Capability:</div>
+                  <div className="text-sm text-purple-200">Learning AI with 100 conversation memory</div>
+                  <div className="text-xs text-purple-300 mt-1">Gets smarter with every conversation</div>
+                </div>
+
+                <ul className="text-left space-y-3 mb-8 text-sm">
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>2,500 monthly leads</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Everything in Starter, plus:</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Advanced learning AI (100 conversation memory)</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Custom qualification scoring</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Team performance analytics</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>5 team members</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Priority support</span>
+                  </li>
+                </ul>
+
+                <button
+                  onClick={() => (window.location.href = 'https://www.getsurfox.com/subscribe/growth')}
+                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-colors font-medium shadow-lg"
+                >
+                  Start Free Trial
+                </button>
+              </div>
+
+              {/* Scale Plan */}
+              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-8 text-center backdrop-blur-xl">
+                <h3 className="text-xl font-bold text-white mb-2">Scale</h3>
+                <div className="text-3xl font-bold text-white mb-4">
+                  $1,997<span className="text-lg text-gray-400">/month</span>
+                </div>
+                <p className="text-gray-300 mb-4">For enterprise teams replacing all manual outreach with AI automation</p>
+
+                <div className="bg-gradient-to-r from-cyan-800/50 to-green-800/50 rounded-lg p-3 mb-6 border border-cyan-400/30">
+                  <div className="text-sm font-medium text-cyan-300">AI Capability:</div>
+                  <div className="text-sm text-cyan-200">Expert-level AI (1,000 conversation memory)</div>
+                  <div className="text-xs text-cyan-300 mt-1">Advanced psychology insights</div>
+                </div>
+
+                <ul className="text-left space-y-3 mb-8 text-sm">
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>10,000+ monthly leads</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Everything in Growth, plus:</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Expert-level AI (1,000 conversation memory)</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Custom AI training & optimization</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>White-glove onboarding</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Unlimited team members</span>
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                    <span>Dedicated success manager</span>
+                  </li>
+                </ul>
+
+                <button
+                  onClick={() => (window.location.href = 'https://www.getsurfox.com/subscribe/scale')}
+                  className="w-full border border-gray-600 text-gray-300 px-6 py-3 rounded-xl hover:bg-gray-800/50 transition-colors font-medium"
+                >
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+
+            <div className="text-center mt-16">
+              <div className="bg-gradient-to-r from-yellow-700/30 to-orange-700/30 rounded-xl p-6 max-w-3xl mx-auto border border-yellow-500/40">
+                <h3 className="text-xl font-bold text-yellow-300 mb-4">Franchise & White Label Opportunities</h3>
+                <p className="text-gray-300 mb-6">Interested in partnering with SurFox at the franchise or white label level? Let's talk.</p>
+                <button
+                  onClick={() => (window.location.href = '/contact-sales')}
+                  className="inline-block px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-xl font-semibold hover:from-yellow-400 hover:to-orange-400 transition-all shadow-lg"
+                >
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <p className="text-sm text-gray-400 mb-4">All plans include: 30-day money-back guarantee • Cancel anytime • No setup fees</p>
+              <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 rounded-lg p-4 max-w-2xl mx-auto border border-red-500/30">
+                <p className="text-sm text-red-300 font-medium flex items-center justify-center">
+                  <Target className="w-4 h-4 mr-2" />
+                  Ready to transform your sales process? Start with a free trial and see qualified prospects within 7 days.
+                </p>
+              </div>
             </div>
           </div>
-          
-          <div className="text-center mt-12">
-            <p className="text-sm text-gray-400 mb-4">
-              All plans include: 30 day money back guarantee • Cancel anytime within 30 days
+        </section>
+
+        {/* Final CTA */}
+        <section className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
+          <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+              Stop Manual Outreach. Start AI Conversations.
+            </h2>
+            <p className="text-2xl text-purple-200 mb-12 max-w-4xl mx-auto leading-relaxed">
+              You've got prospects sitting in your CRM right now who are ready to buy - they just need someone who understands their
+              psychology. Let SurFox AI find them and deliver them to you qualified and sales-ready.
             </p>
-            <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 rounded-lg p-4 max-w-2xl mx-auto border border-red-500/30">
-              <p className="text-sm text-red-300 font-medium flex items-center justify-center">
-                <Target className="w-4 h-4 mr-2" />
-                Stop paying for text blasting tools that create more work. Pay for AI that delivers qualified prospects.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-
-      {/* Final CTA - Updated to be more aggressive */}
-      <section className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-            Text blasting is dead. The future is here.
-          </h2>
-          <p className="text-2xl text-purple-200 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Stop wasting time sorting through "not interested" replies. You've got prospects sitting in your CRM right now 
-            who are ready to buy — they just need someone who understands their psychology. Let SurFox find them for you.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
-<button aria-label="Join The Evolution"
-  onClick={() => {
-    const pricingSection = document.getElementById('pricing');
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }}
-  className="group relative px-12 py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50"
->
-  <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-  <div className="relative flex items-center justify-center">
-    <Zap className="w-6 h-6 mr-3" />
-    Join The Evolution
-  </div>
-</button>
-            <Link href="/demo">
-              <button aria-label="See AI In Action" className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
-                See AI In Action
+            <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
+              <button
+                onClick={() => {
+                  const pricingSection = document.getElementById('pricing')
+                  if (pricingSection) {
+                    pricingSection.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+                className="group relative px-12 py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative flex items-center justify-center">
+                  <Zap className="w-6 h-6 mr-3" />
+                  Start Free Trial
+                </div>
               </button>
-            </Link>
-          </div>
-          
-          <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-xl rounded-2xl p-6 max-w-2xl mx-auto border border-purple-500/30">
-            <h3 className="font-bold mb-4 text-xl">Questions? Ready to eliminate manual texting?</h3>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
-              <a href="mailto:tom@surfox.com" className="flex items-center text-purple-200 hover:text-white transition-colors">
-                <Mail className="w-4 h-4 mr-2" />
-                tom@surfox.com
-              </a>
+              <Link href="/demo">
+                <button className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
+                  See AI In Action
+                </button>
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-xl rounded-2xl p-6 max-w-2xl mx-auto border border-purple-500/30">
+              <h3 className="font-bold mb-4 text-xl">Questions? Ready to eliminate manual outreach?</h3>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
+                <a href="mailto:tom@surfox.com" className="flex items-center text-purple-200 hover:text-white transition-colors">
+                  <Mail className="w-4 h-4 mr-2" />
+                  tom@surfox.com
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div></>
+        </section>
+      </div>
+    </>
   )
 }
 
