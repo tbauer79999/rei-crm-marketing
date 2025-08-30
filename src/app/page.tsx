@@ -74,7 +74,7 @@ const SurFoxHomepage = () => {
                 <p className="text-lg text-gray-300">
                   <strong className="text-white">Some prospects need data, others need emotion. Some respond to pressure, others to patience.</strong>
                   <br />SurFox is <span className="relative inline-block">
-                    <button
+                    <button aria-label="More information about SurFox agentic AI"
                       onMouseEnter={() => setShowHeroTooltip(true)}
                       onMouseLeave={() => setShowHeroTooltip(false)}
                       className="text-cyan-400 underline decoration-dotted hover:text-cyan-300 cursor-help"
@@ -99,7 +99,7 @@ const SurFoxHomepage = () => {
               </div>
               
 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-<button
+<button aria-label="See AI Conversations demo"
   onClick={() => window.location.href = '/demo'}
   className="group relative px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50"
 >
@@ -136,7 +136,7 @@ const SurFoxHomepage = () => {
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-bold text-purple-200">
                     <span className="relative inline-block">
-                      <button
+                      <button aria-label="More information about SurFox agentic AI"
                         onMouseEnter={() => setShowDemoTooltip(true)}
                         onMouseLeave={() => setShowDemoTooltip(false)}
                         className="text-purple-200 hover:text-purple-100 cursor-help"
@@ -454,7 +454,7 @@ const SurFoxHomepage = () => {
                   { id: 'learning', label: 'Learning System', icon: Lightbulb },
                   { id: 'adaptation', label: 'Real-Time Adaptation', icon: Zap }
                 ].map((tab) => (
-                  <button
+                  <button 
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     className={`px-6 py-3 rounded-xl text-sm font-medium transition-all flex items-center ${
@@ -862,7 +862,7 @@ const SurFoxHomepage = () => {
                 </li>
               </ul>
               
-              <button 
+              <button aria-label="Get started with SurFox"
                 onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/starter'}
                 className="w-full bg-gradient-to-r from-gray-700 to-gray-600 text-white px-6 py-3 rounded-xl hover:from-gray-600 hover:to-gray-500 transition-colors font-medium"
               >
@@ -938,7 +938,7 @@ const SurFoxHomepage = () => {
                 </li>
               </ul>
               
-              <button 
+              <button aria-label="Get started with SurFox Growth plan"
                 onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/growth'}
                 className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-colors font-medium shadow-lg"
               >
@@ -1001,7 +1001,7 @@ const SurFoxHomepage = () => {
                 </li>
               </ul>
               
-              <button 
+              <button aria-label="Get started with SurFox Scale plan"
                 onClick={() => window.location.href = 'https://www.getsurfox.com/subscribe/scale'}
                 className="w-full border border-gray-600 text-gray-300 px-6 py-3 rounded-xl hover:bg-gray-800/50 transition-colors font-medium"
               >
@@ -1017,7 +1017,7 @@ const SurFoxHomepage = () => {
               <p className="text-gray-300 mb-6">
                 Interested in partnering with SurFox at the franchise or white label level? Let’s talk.
               </p>
-         <button
+         <button aria-label="Contact SurFox Sales"
   onClick={() => window.location.href = '/contact-sales'}
   className="inline-block px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-xl font-semibold hover:from-yellow-400 hover:to-orange-400 transition-all shadow-lg"
 >
@@ -1055,7 +1055,7 @@ const SurFoxHomepage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-8 justify-center mb-8">
-<button 
+<button aria-label="Join The Evolution"
   onClick={() => {
     const pricingSection = document.getElementById('pricing');
     if (pricingSection) {
@@ -1071,7 +1071,7 @@ const SurFoxHomepage = () => {
   </div>
 </button>
             <Link href="/demo">
-              <button className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
+              <button aria-label="See AI In Action" className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-2xl backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-500 hover:scale-105">
                 See AI In Action
               </button>
             </Link>
