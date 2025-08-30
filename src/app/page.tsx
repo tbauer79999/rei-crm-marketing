@@ -43,7 +43,7 @@ const SurFoxHomepage = () => {
   const [activeTab, setActiveTab] = useState('psychology')
   const [typingText, setTypingText] = useState('')
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0)
-  const [activeFAQ, setActiveFAQ] = useState(null)
+  const [activeFAQ, setActiveFAQ] = useState<number | null>(null)
 
   const messages = [
     "Hi Sarah, I see you're analytical - here's the exact ROI data you need...",
