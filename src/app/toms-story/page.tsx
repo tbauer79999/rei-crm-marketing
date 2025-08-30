@@ -3,9 +3,23 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 
 const FoundersLetter = () => {
   return (
+    <>
+    <Head>
+  <title>Tom’s Story | Why I Built SurFox</title>
+  <meta
+    name="description"
+    content="Tom Bauer’s founder story behind SurFox: how Sales Psychology AI and messaging intelligence turn cold outreach into qualified conversations."
+  />
+  <link rel="canonical" href="https://www.getsurfox.com/toms-story" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Tom’s Story | Why I Built SurFox" />
+  <meta property="og:description" content="The origin of SurFox and the Sales Psychology AI behind it." />
+  <meta property="og:url" content="https://www.getsurfox.com/toms-story" />
+</Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       
       {/* Animated Background Elements - Match Homepage */}
@@ -215,6 +229,7 @@ const FoundersLetter = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
