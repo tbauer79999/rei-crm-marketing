@@ -78,10 +78,11 @@ const SurFoxVideoDemo = () => {
         </div>
       </section>
 
-{/* Section 1 - Supademo Video Embed */}
-<section id="section-1" className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-  <div className="w-full max-w-6xl mx-auto">
-    <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+{/* Section 1 - Supademo Video Embed (hero-sized) */}
+<section id="section-1" className="bg-gray-900">
+  <div className="mx-auto w-full max-w-[1600px] px-4">
+    {/* Use most of the viewport height; adjust numbers to taste */}
+    <div className="relative w-full h-[82vh] md:h-[86vh]">
       <iframe
         src="https://app.supademo.com/embed/cmeui5tem6h8wv9kqd6x6rxev?embed_v=2&utm_source=embed"
         loading="lazy"
@@ -89,11 +90,12 @@ const SurFoxVideoDemo = () => {
         allow="clipboard-write"
         frameBorder="0"
         allowFullScreen
-        className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+        className="absolute inset-0 w-full h-full rounded-2xl shadow-2xl"
       />
     </div>
   </div>
 </section>
+
 
 
       {/* Final CTA Section */}
