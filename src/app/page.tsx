@@ -678,9 +678,8 @@ const toggleFAQ = (index: number) => {
                 {
                   number: '1',
                   icon: Target,
-                  title: 'AI Analyzes Prospect Data',
-                  description:
-                    "The system analyzes prospect information including industry, role, company size, and any available background data to create an initial psychological profile and conversation strategy.",
+                  title: 'Upload Leads & AI Starts Texting',
+                  description: 'Simply upload your cold leads and phone numbers. The AI immediately begins personalized text conversations with each prospect - no setup, no delays, no manual work required.',
                   color: 'from-purple-500 to-cyan-500'
                 },
                 {
