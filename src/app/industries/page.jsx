@@ -4,6 +4,16 @@ import React, { useState } from 'react'
 import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Shield, Database, Cpu, MessageSquare, Clock, Sparkles, Crown, Mail, Activity, Eye, Layers, Inbox, Building2, TrendingDown, Home, DollarSign, UserCheck, Phone, Briefcase, Handshake, Calendar, Building } from 'lucide-react'
 import Nav from '../components/nav'
 
+export const metadata = {
+  title: "SurFox for Every Industry | AI Messaging Intelligence",
+  description:
+    "See how SurFox transforms results in real estate, wholesale, insurance, solar, recruiting, and B2B sales. Our AI revives dead leads across every industry by adapting to human psychology.",
+  alternates: {
+    canonical: "https://www.getsurfox.com/industries"
+  }
+};
+
+
 const SurFoxIndustries = () => {
   const [activeIndustry, setActiveIndustry] = useState(0)
 
