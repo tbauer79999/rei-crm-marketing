@@ -5,6 +5,15 @@ import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, 
 import Nav from '../../components/nav'
 import Link from 'next/link'
 
+export const metadata = {
+  title: "SurFox vs Launch Control | AI Messaging vs Manual Campaigns",
+  description:
+    "Compare SurFox with Launch Control. SurFox AI automates 90% of conversations, saves 25+ hours weekly, and cuts costs by 87% compared to manual campaign management.",
+  alternates: {
+    canonical: "https://www.getsurfox.com/compare/launchcontrol"
+  }
+};
+
 const SurFoxVsLaunchControl = () => {
   const [activeFeatureSet, setActiveFeatureSet] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })

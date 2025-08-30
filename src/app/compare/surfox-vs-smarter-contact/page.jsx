@@ -5,6 +5,15 @@ import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, 
 import Nav from '../../components/nav'
 import Link from 'next/link'
 
+export const metadata = {
+  title: "SurFox vs Smarter Contact | AI Conversations vs Mass Blasting",
+  description:
+    "Compare SurFox with Smarter Contact. See how SurFox’s AI messaging engine books qualified appointments, scores leads, and reduces costs vs template-based mass blasting.",
+  alternates: {
+    canonical: "https://www.getsurfox.com/compare/smartercontact"
+  }
+};
+
 const SurFoxVsSmarterContact = () => {
   const [activeFeatureSet, setActiveFeatureSet] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })

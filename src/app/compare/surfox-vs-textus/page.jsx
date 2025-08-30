@@ -5,6 +5,16 @@ import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, 
 import Nav from '../../components/nav'
 import Link from 'next/link'
 
+export const metadata = {
+  title: "SurFox vs TextUs | AI Messaging vs Manual Texting",
+  description:
+    "See how SurFox’s AI messaging engine compares to TextUs on cost, automation, qualification, and results. 90% cost savings with AI-driven conversations.",
+  alternates: {
+    canonical: "https://www.getsurfox.com/compare/textus"
+  }
+};
+
+
 const SurFoxVsTextUs = () => {
   const [activeFeatureSet, setActiveFeatureSet] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })

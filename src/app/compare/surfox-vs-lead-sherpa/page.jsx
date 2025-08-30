@@ -5,6 +5,15 @@ import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, 
 import Nav from '../../components/nav'
 import Link from 'next/link'
 
+export const metadata = {
+  title: "SurFox vs Lead Sherpa | AI Conversion vs Skip Tracing",
+  description:
+    "Compare SurFox with Lead Sherpa. Lead Sherpa excels at compliant data acquisition, while SurFox’s AI engine converts those contacts into 3x more qualified appointments.",
+  alternates: {
+    canonical: "https://www.getsurfox.com/compare/leadsherpa"
+  }
+};
+
 const SurFoxVsLeadSherpa = () => {
   const [activeFeatureSet, setActiveFeatureSet] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })

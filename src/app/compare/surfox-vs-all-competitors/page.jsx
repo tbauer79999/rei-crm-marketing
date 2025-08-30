@@ -5,6 +5,15 @@ import { ArrowRight, Rocket, Play, Check, X, Zap, Target, Users, TrendingUp, Bar
 import Nav from '../../components/nav'
 import Link from 'next/link'
 
+export const metadata = {
+  title: "Why SurFox | The AI Messaging Intelligence Category Creator",
+  description:
+    "Discover why SurFox created an entirely new category: Sales Psychology AI. Unlike mass texting tools or CRMs, SurFox adapts every conversation in real-time to human psychology, converting cold outreach into qualified conversations.",
+  alternates: {
+    canonical: "https://www.getsurfox.com/compare"
+  }
+};
+
 const SurFoxGeneralComparison = () => {
   const competitorCategories = [
     {

@@ -73,6 +73,10 @@ export default function Nav() {
                 <Link href="/compare/surfox-vs-launch-control" className="block px-4 py-2 text-sm text-gray-300 hover:bg-purple-500/20 hover:text-white transition-colors">
                   ↳ vs Launch Control
                 </Link>
+                <Link href="/compare/surfox-vs-all-competitors"
+                  className="block px-4 py-2 text-sm text-gray-300 hover:bg-purple-500/20 hover:text-white transition-colors">
+                  ↳ All Comparisons
+                </Link>
               </div>
             </div>
 

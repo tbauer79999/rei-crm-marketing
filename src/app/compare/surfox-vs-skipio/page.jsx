@@ -5,6 +5,16 @@ import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, 
 import Nav from '../../components/nav'
 import Link from 'next/link'
 
+export const metadata = {
+  title: "SurFox vs Skipio | AI Deal Closer vs Appointment Booking",
+  description:
+    "Compare SurFox with Skipio. SurFox’s AI closes deals by handling conversations, qualifying leads, and surfacing hot prospects, while Skipio only books appointments.",
+  alternates: {
+    canonical: "https://www.getsurfox.com/compare/skipio"
+  }
+};
+
+
 const SurFoxVsSkipio = () => {
   const [activeFeatureSet, setActiveFeatureSet] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
