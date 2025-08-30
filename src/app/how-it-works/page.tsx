@@ -10,42 +10,25 @@ const HowItWorksPage = () => {
   const [activeStep, setActiveStep] = useState(0)
   const [psychologyDemo, setPsychologyDemo] = useState('skeptical')
   
-  return (
-       <>  <Head>
-      <title>How SurFox Works | AI Messaging Intelligence</title>
-      <meta 
-        name="description" 
-        content="Learn how SurFox's Psychology AI analyzes 50+ behavioral dimensions to adapt messages in real-time and turn cold leads into qualified conversations." 
-      />
-      <link rel="canonical" href="https://www.getsurfox.com/how-it-works" />
-    </Head>
+    return (
+    <>
+      <Head>
+        <title>How SurFox Works | AI Messaging Intelligence</title>
+        <meta
+          name="description"
+          content="Learn how SurFox's Psychology AI analyzes 50+ behavioral dimensions to adapt messages in real-time and turn cold leads into qualified conversations."
+        />
+        <link rel="canonical" href="https://www.getsurfox.com/how-it-works" />
+      </Head>
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white">
       
-      {/* Hero Section */}
-      <section className="relative py-20 pt-32 min-h-[60vh] flex items-center">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-6xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-              How Psychology AI
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Reads Human Behavior
-            </span>
-          </h1>
-          <p className="text-2xl text-purple-200 mb-8 max-w-4xl mx-auto">
-            While other platforms blast the same message to everyone, SurFox analyzes <strong className="text-white">50+ psychological dimensions</strong> to understand exactly how each prospect thinks, decides, and communicates.
-          </p>
-          <Link href="/demo">
-  <button className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-xl hover:scale-105 transition-all">
-    <Play className="w-6 h-6 mr-3 inline" />
-    Watch 2-Minute Demo
-  </button>
-</Link>
-        </div>
-        </>
-      </section>
+        {/* Hero Section */}
+        <section className="relative py-20 pt-32 min-h-[60vh] flex items-center">
+          <div className="max-w-7xl mx-auto px-6 text-center">
+            ...
+          </div>
+        </section>
 
       {/* The Psychology Problem */}
       <section className="py-20 bg-black/20 backdrop-blur-xl">
@@ -456,8 +439,8 @@ const HowItWorksPage = () => {
           </div>
         </div>
       </section>
-    </div>
+        </div>
+    </>
   )
 }
-console.log("hello")
 export default HowItWorksPage
