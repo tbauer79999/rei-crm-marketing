@@ -45,7 +45,7 @@ export default function Nav() {
               How It Works
             </Link>
             <Link href="/toms-story" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
-              Tom's Story
+              Founder's Story
             </Link>
             <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
               Industries
