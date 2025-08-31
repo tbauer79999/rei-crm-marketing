@@ -223,7 +223,7 @@ const toggleFAQ = (index: number) => {
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      Start Free Trial
+                      Get Started Now
                     </div>
                   </button>
 
@@ -873,7 +873,7 @@ const toggleFAQ = (index: number) => {
                   onClick={() => (window.location.href = 'https://www.getsurfox.com/subscribe/starter')}
                   className="w-full bg-gradient-to-r from-gray-700 to-gray-600 text-white px-6 py-3 rounded-xl hover:from-gray-600 hover:to-gray-500 transition-colors font-medium"
                 >
-                  Start Free Trial
+                  Start Today
                 </button>
               </div>
 
@@ -931,7 +931,7 @@ const toggleFAQ = (index: number) => {
                   onClick={() => (window.location.href = 'https://www.getsurfox.com/subscribe/growth')}
                   className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-colors font-medium shadow-lg"
                 >
-                  Start Free Trial
+                  Begin Setup
                 </button>
               </div>
 
@@ -1039,7 +1039,7 @@ const toggleFAQ = (index: number) => {
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative flex items-center justify-center">
                   <Zap className="w-6 h-6 mr-3" />
-                  Start Free Trial
+                  Try Risk-Free
                 </div>
               </button>
               <Link href="/demo">
