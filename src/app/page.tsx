@@ -845,7 +845,7 @@ const toggleFAQ = (index: number) => {
                 <ul className="text-left space-y-3 mb-8 text-sm">
                   <li className="flex items-center text-gray-300">
                     <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>500 monthly leads</span>
+                    <span>1000 monthly leads</span>
                   </li>
                   <li className="flex items-center text-gray-300">
                     <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
@@ -899,7 +899,7 @@ const toggleFAQ = (index: number) => {
                 <ul className="text-left space-y-3 mb-8 text-sm">
                   <li className="flex items-center text-gray-300">
                     <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>2,500 monthly leads</span>
+                    <span>10,000 monthly leads</span>
                   </li>
                   <li className="flex items-center text-gray-300">
                     <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
@@ -952,7 +952,7 @@ const toggleFAQ = (index: number) => {
                 <ul className="text-left space-y-3 mb-8 text-sm">
                   <li className="flex items-center text-gray-300">
                     <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>10,000+ monthly leads</span>
+                    <span>50,000+ monthly leads</span>
                   </li>
                   <li className="flex items-center text-gray-300">
                     <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
