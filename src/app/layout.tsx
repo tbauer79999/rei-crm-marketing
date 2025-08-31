@@ -4,8 +4,8 @@ import Script from "next/script";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
 import "./globals.css";
+import { Suspense } from "react";
 import GtmPageViewPusher from "./GtmPageViewPusher";
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -64,7 +64,12 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-<GtmPageViewPusher />
+
+        {/* Wrap client router hooks in Suspense per Next.js 15 requirement */}
+        <Suspense fallback={null}>
+          <GtmPageViewPusher />
+        </Suspense>
+
         <Nav />
         <main>{children}</main>
         <Footer />
