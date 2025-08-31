@@ -83,7 +83,7 @@ export default function Nav() {
               </div>
             </div>
 
-            <Link href="/#pricing" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
+            <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
               Pricing
             </Link>
 
@@ -91,7 +91,7 @@ export default function Nav() {
             <a href="https://surfox.ai" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
               Sign In
             </a>
-            <a href="#pricing" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all border border-purple-500/30">
+            <a href="/pricing" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all border border-purple-500/30">
               Get Started Now
             </a>
           </div>
