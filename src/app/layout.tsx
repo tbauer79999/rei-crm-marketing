@@ -4,6 +4,8 @@ import Script from "next/script";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
 import "./globals.css";
+import GtmPageViewPusher from "./GtmPageViewPusher";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,7 +64,7 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-
+<GtmPageViewPusher />
         <Nav />
         <main>{children}</main>
         <Footer />
