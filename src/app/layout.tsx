@@ -38,6 +38,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+        <head>
+    {/* Favicons */}
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+  </head>
       {/* Google Tag Manager */}
       <Script 
         id="gtm-script" 
