@@ -163,7 +163,8 @@ const SurFoxGeneralComparison = () => {
       name="description"
       content="Discover why SurFox created an entirely new category: Sales Psychology AI. Unlike mass texting tools or CRMs, SurFox adapts every conversation in real-time to human psychology, converting cold outreach into qualified conversations."
     />
-    <link rel="canonical" href="https://www.getsurfox.com/compare" />
+    <link rel="canonical" href="https://www.getsurfox.com/compare/surfox-vs-all-competitors" />
+
   </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white">
       <Nav />

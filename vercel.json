@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/compare/textus", "destination": "/compare/surfox-vs-textus", "permanent": true },
+    { "source": "/compare/launch-control", "destination": "/compare/surfox-vs-launch-control", "permanent": true },
+    { "source": "/compare/lead-sherpa", "destination": "/compare/surfox-vs-lead-sherpa", "permanent": true },
+    { "source": "/compare/skipio", "destination": "/compare/surfox-vs-skipio", "permanent": true },
+    { "source": "/compare/smarter-contact", "destination": "/compare/surfox-vs-smarter-contact", "permanent": true },
+    { "source": "/compare/all-competitors", "destination": "/compare/surfox-vs-all-competitors", "permanent": true }
+  ]
+}

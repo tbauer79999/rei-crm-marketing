@@ -78,7 +78,8 @@ const SurFoxVsLeadSherpa = () => {
       name="description"
       content="Compare SurFox with Lead Sherpa. Lead Sherpa excels at compliant data acquisition, while SurFox’s AI engine converts those contacts into 3x more qualified appointments."
     />
-    <link rel="canonical" href="https://www.getsurfox.com/compare/leadsherpa" />
+    <link rel="canonical" href="https://www.getsurfox.com/compare/surfox-vs-lead-sherpa" />
+
   </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
       <Nav />

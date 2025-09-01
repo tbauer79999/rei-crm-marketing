@@ -79,7 +79,7 @@ const SurFoxVsTextUs = () => {
         name="description"
         content="See how SurFox’s AI messaging engine compares to TextUs on cost, automation, qualification, and results. 90% cost savings with AI-driven conversations."
       />
-      <link rel="canonical" href="https://www.getsurfox.com/compare/textus" />
+      <link rel="canonical" href="https://www.getsurfox.com/compare/surfox-vs-textus" />
     </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
       <Nav />

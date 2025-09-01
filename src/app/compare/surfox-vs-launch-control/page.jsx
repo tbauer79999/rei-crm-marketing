@@ -77,7 +77,7 @@ const SurFoxVsLaunchControl = () => {
       name="description"
       content="Compare SurFox with Launch Control. SurFox AI automates 90% of conversations, saves 25+ hours weekly, and cuts costs by 87% compared to manual campaign management."
     />
-    <link rel="canonical" href="https://www.getsurfox.com/compare/launchcontrol" />
+    <link rel="canonical" href="https://www.getsurfox.com/compare/surfox-vs-launch-control" />
   </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
       <Nav />

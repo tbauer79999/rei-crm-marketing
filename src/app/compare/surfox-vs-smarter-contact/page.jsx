@@ -78,7 +78,8 @@ const SurFoxVsSmarterContact = () => {
       name="description"
       content="Compare SurFox with Smarter Contact. See how SurFox’s AI messaging engine books qualified appointments, scores leads, and reduces costs vs template-based mass blasting."
     />
-    <link rel="canonical" href="https://www.getsurfox.com/compare/smartercontact" />
+    <link rel="canonical" href="https://www.getsurfox.com/compare/surfox-vs-smarter-contact" />
+
   </Head>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
       <Nav />
