@@ -1,12 +1,24 @@
 'use client'
 
 import { useState } from 'react'
-import { Check, X, Mail, Target } from 'lucide-react'
+import { Check, X, Mail, Target } from 'lucide-react';
+import Head from 'next/head';
 
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState('monthly')
 
-  return (
+    return (
+    <>
+<Head>
+  <title>Pricing | SurFox AI Messaging Intelligence</title>
+  <meta
+    name="description"
+    content="Explore SurFox pricing plans designed for AI sales automation. Compare packages and choose the plan that helps you turn cold outreach into qualified conversations."
+  />
+  <link rel="canonical" href="https://www.getsurfox.com/pricing" />
+</Head>
+
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-6 py-12">
         
@@ -362,5 +374,6 @@ export default function PricingPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
