@@ -20,6 +20,27 @@ const HowItWorksPage = () => {
         />
         <link rel="canonical" href="https://www.getsurfox.com/how-it-works" />
       </Head>
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "How SurFox Works",
+      description:
+        "Learn how SurFox's Psychology AI adapts messages in real-time across 50+ behavioral dimensions, turning cold outreach into qualified conversations.",
+      url: "https://www.getsurfox.com/how-it-works",
+      publisher: {
+        "@type": "Organization",
+        name: "SurFox",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://www.getsurfox.com/logo.png",
+        },
+      },
+    }),
+  }}
+/>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white">
       
