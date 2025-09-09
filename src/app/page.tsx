@@ -97,7 +97,7 @@ const toggleFAQ = (index: number) => {
         <meta property="og:title" content="SMS Sales Automation That Qualifies Leads | SurFox" />
         <meta
           property="og:description"
-          content="AI handles your SMS outreach from initial contact to qualified handoff. No more manual texting or sorting replies."
+          content="SurFox your SMS outreach from initial contact to qualified handoff. No more manual texting or sorting replies."
         />
         <meta property="og:url" content="https://www.getsurfox.com" />
         <meta property="og:site_name" content="SurFox" />
