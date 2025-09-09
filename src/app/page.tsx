@@ -779,7 +779,7 @@ const toggleFAQ = (index: number) => {
                   onClick={() => (window.location.href = 'https://www.getsurfox.com/subscribe/growth')}
                   className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-colors font-medium shadow-lg"
                 >
-                  Start Trial
+                  Start Rick Free
                 </button>
               </div>
 
@@ -873,7 +873,7 @@ const toggleFAQ = (index: number) => {
               >
                 <div className="relative flex items-center justify-center">
                   <ArrowRight className="w-5 h-5 mr-2" />
-                  Start 30-Day Trial
+                  Start Risk Free
                 </div>
               </button>
               <Link href="/demo">
