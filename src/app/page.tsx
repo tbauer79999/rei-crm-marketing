@@ -163,13 +163,13 @@ const toggleFAQ = (index: number) => {
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-                    AI Handles Your Entire SMS Outreach Process
+                    SurFox Handles Your Entire SMS Outreach Process
                   </span>
                 </h1>
 
                 <div className="text-xl text-purple-200 space-y-4">
                   <p className="text-lg text-gray-300">
-                    Upload your leads. SurFox texts them, qualifies them through natural conversations, and delivers only sales-ready prospects to your team.
+                    Upload your leads. AI texts them, qualifies them through natural conversations, and delivers only sales-ready prospects to your team.
                   </p>
                   <p className="text-lg text-gray-300">
                     No more manual texting, sorting through replies, or chasing unqualified leads. Focus on closing deals while AI handles the qualification process.
