@@ -590,19 +590,19 @@ const toggleFAQ = (index: number) => {
             <div className="max-w-4xl mx-auto">
               {[
                 {
-                  question: 'How does AI SMS automation work?',
+                  question: 'How does the autonomous follow-up system work?',
                   answer:
-                    "Our AI conducts SMS conversations with prospects using natural language processing. It maintains context throughout conversations, asks relevant qualification questions, and escalates qualified prospects to your sales team with complete conversation history."
+                    "The AI analyzes prospect response patterns, engagement levels, and behavioral signals to determine optimal follow-up timing. It automatically schedules and sends follow-up messages without manual intervention, adjusting frequency and timing based on each prospect's interaction history."
                 },
                 {
-                  question: 'What makes this different from mass texting tools?',
+                  question: 'What types of documents can I upload to the knowledge base?',
                   answer:
-                    'Unlike mass texting that sends identical messages to everyone, our AI has unique conversations with each prospect. It adapts questions and responses based on their replies, industry, and role, creating a personalized qualification experience.'
+                    'You can upload product specifications, case studies, pricing sheets, company information, FAQs, sales presentations, and any other documents relevant to your sales process. The AI references this information during conversations to provide accurate, company-specific answers.'
                 },
                 {
-                  question: 'How does the qualification process work?',
+                  question: 'How does the AI learning system improve over time?',
                   answer:
-                    'The AI evaluates prospects across multiple criteria including budget indicators, project timeline, decision-making authority, and expressed interest level. Only prospects meeting your qualification thresholds are escalated to your team.'
+                    'The AI analyzes conversation outcomes, response rates, and qualification success to identify patterns that work best for different prospect types. As conversation volume increases, the system becomes more effective at personalizing approaches and identifying high-quality leads.'
                 },
                 {
                   question: 'What industries can use this platform?',
@@ -615,9 +615,9 @@ const toggleFAQ = (index: number) => {
                     "We follow TCPA guidelines and industry best practices for automated communications. This includes proper opt-in procedures, clear identification, and easy opt-out mechanisms. We recommend reviewing compliance requirements with your legal team."
                 },
                 {
-                  question: 'Can I customize the qualification criteria?',
+                  question: 'Can I customize the qualification criteria and knowledge base?',
                   answer:
-                    "Yes, qualification criteria can be customized based on your sales process and ideal customer profile. This includes budget thresholds, timeline requirements, authority levels, and specific qualifying questions relevant to your industry."
+                    "Yes, qualification criteria can be customized based on your sales process and ideal customer profile. You can also continuously update your knowledge base with new documents, and the AI will immediately begin using this information in conversations."
                 }
               ].map((faq, index) => (
                 <div
