@@ -97,7 +97,7 @@ const toggleFAQ = (index: number) => {
         <meta property="og:title" content="SMS Sales Automation That Qualifies Leads | SurFox" />
         <meta
           property="og:description"
-          content="SurFox your SMS outreach from initial contact to qualified handoff. No more manual texting or sorting replies."
+          content="AI handles your SMS outreach from initial contact to qualified handoff. No more manual texting or sorting replies."
         />
         <meta property="og:url" content="https://www.getsurfox.com" />
         <meta property="og:site_name" content="SurFox" />
@@ -169,11 +169,38 @@ const toggleFAQ = (index: number) => {
 
                 <div className="text-xl text-purple-200 space-y-4">
                   <p className="text-lg text-gray-300">
-                    Upload your leads. AI texts them, qualifies them through natural conversations, and delivers only sales-ready prospects to your team.
+                    Upload your leads. SurFox texts them, qualifies them through natural conversations, and delivers only sales-ready prospects to your team.
                   </p>
                   <p className="text-lg text-gray-300">
-                    No more manual texting, sorting through replies, or chasing unqualified leads. Focus on closing deals while AI handles the qualification process.
+                    No more manual texting, sorting through replies, or chasing unqualified leads. Focus on closing deals while SurFox handles the qualification process.
                   </p>
+                </div>
+
+                {/* Key Features Highlight */}
+                <div className="grid md:grid-cols-3 gap-4 py-6">
+                  <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-xl rounded-lg border border-purple-500/30 p-4">
+                    <div className="flex items-center mb-2">
+                      <Clock className="w-5 h-5 mr-2 text-purple-400" />
+                      <h4 className="font-bold text-white text-sm">Smart Follow-Up</h4>
+                    </div>
+                    <p className="text-xs text-purple-200">Decides when and how to follow up autonomously</p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-cyan-900/40 to-blue-900/40 backdrop-blur-xl rounded-lg border border-cyan-500/30 p-4">
+                    <div className="flex items-center mb-2">
+                      <FileText className="w-5 h-5 mr-2 text-cyan-400" />
+                      <h4 className="font-bold text-white text-sm">Your Knowledge</h4>
+                    </div>
+                    <p className="text-xs text-cyan-200">Upload docs - SurFox references them in conversations</p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-green-900/40 to-emerald-900/40 backdrop-blur-xl rounded-lg border border-green-500/30 p-4">
+                    <div className="flex items-center mb-2">
+                      <TrendingUp className="w-5 h-5 mr-2 text-green-400" />
+                      <h4 className="font-bold text-white text-sm">Gets Smarter</h4>
+                    </div>
+                    <p className="text-xs text-green-200">More conversations = better qualification accuracy</p>
+                  </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
