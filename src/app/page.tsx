@@ -169,7 +169,7 @@ const toggleFAQ = (index: number) => {
 
                 <div className="text-xl text-purple-200 space-y-4">
                   <p className="text-lg text-gray-300">
-                    Upload your leads. AI texts them, qualifies them through natural conversations, and delivers only sales-ready prospects to your team.
+                    Upload your leads. SurFox texts them, qualifies them through natural conversations, and delivers only sales-ready prospects to your team.
                   </p>
                   <p className="text-lg text-gray-300">
                     No more manual texting, sorting through replies, or chasing unqualified leads. Focus on closing deals while AI handles the qualification process.
