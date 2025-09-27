@@ -7,7 +7,7 @@ const PLANS = {
     name: 'Starter',
     price: 197,
     priceId: 'price_1RrUsuG76DDD8srY1vlotYI5',
-    leads: '1,000 monthly leads',
+    leads: '1,000 monthly messages',
     keyFeatures: [
       'AI-generated initial SMS',
       'AI auto-replies',
@@ -21,7 +21,7 @@ const PLANS = {
     name: 'Growth', 
     price: 497,
     priceId: 'price_1RrUz6G76DDD8srYjVAr3d2Y',
-    leads: '5,000 monthly leads',
+    leads: '5,000 monthly messages',
     keyFeatures: [
       'Everything in Starter, plus:',
       'Funnel module (Cold → Escalated)',
@@ -35,7 +35,7 @@ const PLANS = {
     name: 'Scale',
     price: 1997, 
     priceId: 'price_1RrUzhG76DDD8srY21GALug4',
-    leads: '50,000+ monthly leads',
+    leads: '50,000+ monthly messages',
     keyFeatures: [
       'Everything in Growth, plus:',
       'Unlimited AI knowledge base uploads',
