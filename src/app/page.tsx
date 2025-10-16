@@ -81,65 +81,109 @@ const toggleFAQ = (index: number) => {
   return (
     <>
       <Head>
-        <title>SMS Sales Automation Software | SurFox AI Platform</title>
+  <title>SMS Sales Automation Software | SurFox AI Platform</title>
 
-        <meta
-          name="description"
-          content="AI-powered SMS automation that handles your entire outreach process. Upload leads, AI qualifies prospects through conversations, deliver only sales-ready contacts to your team."
-        />
-        <meta
-          name="keywords"
-          content="SMS sales automation, AI lead qualification, automated texting, sales AI platform, lead nurturing, prospect qualification, SMS outreach"
-        />
-        <link rel="canonical" href="https://www.getsurfox.com/" />
+  {/* Favicon and Icons */}
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="/logo.png" />
 
-        {/* Open Graph */}
-        <meta property="og:title" content="SMS Sales Automation That Qualifies Leads | SurFox" />
-        <meta
-          property="og:description"
-          content="AI handles your SMS outreach from initial contact to qualified handoff. No more manual texting or sorting replies."
-        />
-        <meta property="og:url" content="https://www.getsurfox.com" />
-        <meta property="og:site_name" content="SurFox" />
-        <meta property="og:image" content="https://www.getsurfox.com/og-image.jpg" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_US" />
+  <meta
+    name="description"
+    content="AI-powered SMS automation that handles your entire outreach process. Upload leads, AI qualifies prospects through conversations, deliver only sales-ready contacts to your team."
+  />
+  <meta
+    name="keywords"
+    content="SMS sales automation, AI lead qualification, automated texting, sales AI platform, lead nurturing, prospect qualification, SMS outreach"
+  />
+  <link rel="canonical" href="https://www.getsurfox.com/" />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@getSurFox" />
-        <meta name="twitter:title" content="SMS Sales Automation That Qualifies Leads | SurFox" />
-        <meta
-          name="twitter:description"
-          content="AI handles SMS outreach and qualification. You get only sales-ready prospects."
-        />
-        <meta name="twitter:image" content="https://www.getsurfox.com/og-image.jpg" />
-        <meta name="twitter:creator" content="@TomFromSurFox" />
+  {/* Open Graph */}
+  <meta property="og:title" content="SMS Sales Automation That Qualifies Leads | SurFox" />
+  <meta
+    property="og:description"
+    content="AI handles your SMS outreach from initial contact to qualified handoff. No more manual texting or sorting replies."
+  />
+  <meta property="og:url" content="https://www.getsurfox.com" />
+  <meta property="og:site_name" content="SurFox" />
+  <meta property="og:image" content="https://www.getsurfox.com/logo.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
 
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'SoftwareApplication',
-              name: 'SurFox',
-              applicationCategory: 'Sales Automation Software',
-              description:
-                'AI-powered SMS automation platform that qualifies leads through intelligent conversations.',
-              url: 'https://www.getsurfox.com',
-              logo: 'https://www.getsurfox.com/logo.png',
-              offers: {
-                '@type': 'AggregateOffer',
-                lowPrice: '197',
-                highPrice: '1997',
-                priceCurrency: 'USD'
-              },
-              sameAs: ['https://twitter.com/getSurFox', 'https://www.linkedin.com/company/surfox']
-            })
-          }}
-        />
-      </Head>
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@getSurFox" />
+  <meta name="twitter:title" content="SMS Sales Automation That Qualifies Leads | SurFox" />
+  <meta
+    name="twitter:description"
+    content="AI handles SMS outreach and qualification. You get only sales-ready prospects."
+  />
+  <meta name="twitter:image" content="https://www.getsurfox.com/logo.png" />
+  <meta name="twitter:creator" content="@TomFromSurFox" />
+
+  {/* Structured Data - SoftwareApplication */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'SurFox',
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Web Browser',
+        description:
+          'AI-powered SMS automation platform that qualifies leads through intelligent conversations and delivers sales-ready prospects to your team.',
+        url: 'https://www.getsurfox.com',
+        offers: {
+          '@type': 'AggregateOffer',
+          lowPrice: '197',
+          highPrice: '1997',
+          priceCurrency: 'USD',
+          priceValidUntil: '2025-12-31'
+        },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.8',
+          ratingCount: '27'
+        }
+      })
+    }}
+  />
+
+  {/* Structured Data - Organization (CRITICAL FOR GOOGLE LOGO) */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'SurFox',
+        alternateName: 'SurFox AI',
+        url: 'https://www.getsurfox.com',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.getsurfox.com/logo.png',
+          width: 512,
+          height: 512
+        },
+        description: 'AI-powered SMS automation platform for sales teams',
+        sameAs: [
+          'https://twitter.com/getSurFox',
+          'https://www.linkedin.com/company/surfox'
+        ],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'Customer Service',
+          email: 'tom@surfox.com',
+          url: 'https://www.getsurfox.com'
+        }
+      })
+    }}
+  />
+</Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
         <Nav />
