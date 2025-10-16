@@ -123,70 +123,65 @@ const toggleFAQ = (index: number) => {
   />
   <meta name="twitter:image" content="https://www.getsurfox.com/logo.png" />
   <meta name="twitter:creator" content="@TomFromSurFox" />
-
-  {/* Structured Data - SoftwareApplication */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'SoftwareApplication',
-        name: 'SurFox',
-        applicationCategory: 'BusinessApplication',
-        operatingSystem: 'Web Browser',
-        description:
-          'AI-powered SMS automation platform that qualifies leads through intelligent conversations and delivers sales-ready prospects to your team.',
-        url: 'https://www.getsurfox.com',
-        offers: {
-          '@type': 'AggregateOffer',
-          lowPrice: '197',
-          highPrice: '1997',
-          priceCurrency: 'USD',
-          priceValidUntil: '2025-12-31'
-        },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.8',
-          ratingCount: '27'
-        }
-      })
-    }}
-  />
-
-  {/* Structured Data - Organization (CRITICAL FOR GOOGLE LOGO) */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        name: 'SurFox',
-        alternateName: 'SurFox AI',
-        url: 'https://www.getsurfox.com',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://www.getsurfox.com/logo.png',
-          width: 512,
-          height: 512
-        },
-        description: 'AI-powered SMS automation platform for sales teams',
-        sameAs: [
-          'https://twitter.com/getSurFox',
-          'https://www.linkedin.com/company/surfox'
-        ],
-        contactPoint: {
-          '@type': 'ContactPoint',
-          contactType: 'Customer Service',
-          email: 'tom@surfox.com',
-          url: 'https://www.getsurfox.com'
-        }
-      })
-    }}
-  />
+  
 </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
-        <Nav />
+{/* Structured Data - Organization (for Google logo) */}
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'SurFox',
+      alternateName: 'SurFox AI',
+      url: 'https://www.getsurfox.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.getsurfox.com/logo.png',
+        width: 512,
+        height: 512
+      },
+      description: 'AI-powered SMS automation platform for sales teams',
+      sameAs: [
+        'https://twitter.com/getSurFox',
+        'https://www.linkedin.com/company/surfox'
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'Customer Service',
+        email: 'tom@surfox.com',
+        url: 'https://www.getsurfox.com'
+      }
+    })
+  }}
+/>
+
+{/* Structured Data - SoftwareApplication */}
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: 'SurFox',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web Browser',
+      description: 'AI-powered SMS automation platform that qualifies leads through intelligent conversations.',
+      url: 'https://www.getsurfox.com',
+      offers: {
+        '@type': 'AggregateOffer',
+        lowPrice: '197',
+        highPrice: '1997',
+        priceCurrency: 'USD',
+        priceValidUntil: '2025-12-31'
+      }
+    })
+  }}
+/>
+
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
+  <Nav />
 
         {/* Subtle Background Elements */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
