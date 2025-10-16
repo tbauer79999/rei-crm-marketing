@@ -63,7 +63,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-600 text-sm">© 2024 SurFox AI, Inc. Creating the Sales Psychology AI revolution.</p>
+          <p className="text-gray-600 text-sm">© 2025 SurFox AI, Inc. Creating the Sales Psychology AI revolution.</p>
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
             <span className="text-emerald-600 text-sm flex items-center">
               <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></div>
