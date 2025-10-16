@@ -119,7 +119,7 @@ const FoundersLetter = () => {
               </div>
               
               <h2 className="text-3xl font-bold text-gray-900 mb-2">A Letter from the Founder</h2>
-              <p className="text-gray-600">December 2024</p>
+              <p className="text-gray-600">October 2025</p>
             </div>
             
             {/* Letter Content */}
