@@ -57,7 +57,7 @@ export default function PricingPage() {
                 <div className="text-sm font-semibold text-white mb-2">Monthly Limits:</div>
                 <div className="text-sm text-gray-300 flex items-center">
                   <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                  1,000 new prospects per month
+                  1,000 new messages per month
                 </div>
                 <div className="text-sm text-gray-300 flex items-center">
                   <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -134,7 +134,7 @@ export default function PricingPage() {
                 <div className="text-sm font-semibold text-white mb-2">Monthly Limits:</div>
                 <div className="text-sm text-gray-300 flex items-center">
                   <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                  10,000 new prospects per month
+                  10,000 new messages per month
                 </div>
                 <div className="text-sm text-gray-300 flex items-center">
                   <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -206,7 +206,7 @@ export default function PricingPage() {
                 <div className="text-sm font-semibold text-white mb-2">Monthly Limits:</div>
                 <div className="text-sm text-gray-300 flex items-center">
                   <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                  50,000+ new prospects per month
+                  50,000+ new messages per month
                 </div>
                 <div className="text-sm text-gray-300 flex items-center">
                   <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
