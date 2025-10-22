@@ -84,7 +84,8 @@ export default function SurFoxUniverse() {
   const [currentSection, setCurrentSection] = useState(0);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
+
       setMousePosition({
         x: (e.clientX / window.innerWidth) * 2 - 1,
         y: -(e.clientY / window.innerHeight) * 2 + 1
