@@ -9,16 +9,26 @@ import { useRouter } from 'next/navigation';
 // Simple Neural Node with ripple effect
 import * as THREE from "three";
 
+// ✅ Top of file, right under imports
+
 type NeuralNodeProps = {
   position: [number, number, number];
   color: string;
   label: string;
   id: string;
   onHover: (id: string | null) => void;
-  onClick: (id: string) => void; // onClick expects just the id
+  onClick: (id: string) => void;
   isHovered: boolean;
   anyNodeHovered: boolean;
 };
+
+type ConnectionLineProps = {
+  start: [number, number, number];
+  end: [number, number, number];
+  color?: string;
+};
+
+
 
 function NeuralNode({
   position,
@@ -37,25 +47,27 @@ function NeuralNode({
 
 
   
-  useFrame((state) => {
+    useFrame((state) => {
     if (meshRef.current) {
       const pulse = Math.sin(state.clock.getElapsedTime() * 0.8) * 0.15 + 1;
       meshRef.current.scale.setScalar(isHovered ? 1.8 : pulse);
     }
+
     if (glowRef.current) {
       const pulse = Math.sin(state.clock.getElapsedTime() * 0.8) * 0.2 + 1;
       glowRef.current.scale.setScalar(isHovered ? 3.5 : pulse * 2.5);
     }
-    
-if (rippleRef.current && isHovered) {
-  const rippleTime = (state.clock.getElapsedTime() * 1.5) % 1;
-  rippleRef.current.scale.setScalar(1 + rippleTime * 2);
 
-  const material = rippleRef.current.material as THREE.MeshBasicMaterial;
-  material.opacity = 0.6 * (1 - rippleTime);
-}
+    // Ripple effect on hover
+    if (rippleRef.current && isHovered) {
+      const rippleTime = (state.clock.getElapsedTime() * 1.5) % 1;
+      rippleRef.current.scale.setScalar(1 + rippleTime * 2);
 
-  
+      const material = rippleRef.current.material as THREE.MeshBasicMaterial;
+      material.opacity = 0.6 * (1 - rippleTime);
+    }
+  }); // ✅ this line was missing
+
   // Dim this node if another node is hovered
   const dimmed = anyNodeHovered && !isHovered;
 
@@ -73,15 +85,14 @@ if (rippleRef.current && isHovered) {
           />
         </mesh>
       )}
-      
-      {/* Large glow */}
-<mesh 
-  ref={glowRef}
-  onPointerOver={() => onHover(id)}
-  onPointerOut={() => onHover(null)}
-  onClick={() => onClick(id)}
->
 
+      {/* Large glow */}
+      <mesh 
+        ref={glowRef}
+        onPointerOver={() => onHover(id)}
+        onPointerOut={() => onHover(null)}
+        onClick={() => onClick(id)}
+      >
         <sphereGeometry args={[0.6, 32, 32]} />
         <meshBasicMaterial 
           color={color} 
@@ -89,15 +100,14 @@ if (rippleRef.current && isHovered) {
           opacity={dimmed ? 0.1 : (isHovered ? 0.5 : 0.25)}
         />
       </mesh>
-      
-      {/* Bright core */}
-<mesh 
-  ref={meshRef}
-  onPointerOver={() => onHover(id)}
-  onPointerOut={() => onHover(null)}
-  onClick={() => onClick(id)}
->
 
+      {/* Bright core */}
+      <mesh 
+        ref={meshRef}
+        onPointerOver={() => onHover(id)}
+        onPointerOut={() => onHover(null)}
+        onClick={() => onClick(id)}
+      >
         <sphereGeometry args={[0.3, 32, 32]} />
         <meshBasicMaterial 
           color={color}
@@ -109,12 +119,6 @@ if (rippleRef.current && isHovered) {
   );
 }
 
-// Connection Lines with flowing light animation
-type ConnectionLineProps = {
-  start: [number, number, number];
-  end: [number, number, number];
-  color?: string;
-};
 
 function ConnectionLine({ start, end, color = "#818cf8" }: ConnectionLineProps) {
   const lineRef = useRef<THREE.Line<THREE.BufferGeometry, THREE.LineBasicMaterial>>(null);
