@@ -143,7 +143,8 @@ function ConnectionLine({ start, end, color = "#818cf8" }: ConnectionLineProps) 
   
 return (
   <group>
-    <line ref={lineRef as any} geometry={geometry}>
+    {/* @ts-expect-error: R3F line typing conflicts with SVG JSX */}
+    <line ref={lineRef} args={[geometry]}>
       <lineBasicMaterial
         attach="material"
         color={color}
@@ -153,13 +154,13 @@ return (
       />
     </line>
 
-    {/* Optional: glowing dot along the line */}
     <mesh ref={glowRef}>
       <sphereGeometry args={[0.05, 16, 16]} />
       <meshBasicMaterial color={color} />
     </mesh>
   </group>
 );
+
 }
 
 
