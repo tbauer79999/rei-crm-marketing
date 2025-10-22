@@ -61,7 +61,7 @@ export default function Footer() {
           {/* Right Section - Legal & Copyright */}
           <div className="text-center md:text-right">
             <p className="text-xs text-gray-500">
-              © 2025 SurFox Inc. All rights reserved.
+              © 2025 SurFox Ai, Inc. All rights reserved.
             </p>
           </div>
 
