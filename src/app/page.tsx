@@ -221,7 +221,7 @@ export default function SurFoxCorporate() {
               SurFox Infinity
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-              The unified AI intelligence layer that powers every SurFox product
+              The unified AI intelligence layer that powers every SurFox product - learning, optimizing, and scaling with every interaction.
             </p>
           </motion.div>
           
@@ -229,7 +229,7 @@ export default function SurFoxCorporate() {
             {[
               { 
                 title: 'Unified Learning', 
-                desc: 'One AI brain learns from every conversation across all products, continuously improving intelligence for all users.'
+                desc: 'Today, SurFox learns within each enterprise. Tomorrow, aggregated pattern learning will help every customer benefit from collective intelligence - without compromising data privacy.'
               },
               { 
                 title: 'Cross-Product Intelligence', 
