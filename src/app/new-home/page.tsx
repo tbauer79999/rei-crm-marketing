@@ -47,7 +47,8 @@ function ParticleField({ scrollProgress }: { scrollProgress: number }) {
 
 // Glowing Orbs Component
 function GlowingOrbs() {
-  const groupRef = useRef();
+  const groupRef = useRef<THREE.Group | null>(null);
+
   
   useFrame((state) => {
     if (groupRef.current) {
