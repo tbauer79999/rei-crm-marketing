@@ -8,7 +8,8 @@ import { Brain, Sparkles, Zap, ArrowRight, Play } from 'lucide-react';
 import * as THREE from 'three';
 
 // Particle Field Component for Three.js
-function ParticleField({ scrollProgress }) {
+function ParticleField({ scrollProgress }: { scrollProgress: number }) {
+
   const pointsRef = useRef();
   const particleCount = 2000;
   
