@@ -8,7 +8,10 @@ import { Brain, Sparkles, Zap, ArrowRight, Play } from 'lucide-react';
 import * as THREE from 'three';
 
 // Particle Field Component for Three.js
-function ParticleField({ scrollProgress }: { scrollProgress: number }) {
+import { MotionValue } from "framer-motion";
+
+function ParticleField({ scrollProgress }: { scrollProgress: MotionValue<number> }) {
+
 
   const pointsRef = useRef<THREE.Points | null>(null);
 
