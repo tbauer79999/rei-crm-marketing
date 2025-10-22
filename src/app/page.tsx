@@ -52,28 +52,8 @@ export default function SurFoxCorporate() {
         }
       `}</style>
 
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 flex items-center justify-between">
-          <div className="text-xl sm:text-2xl font-semibold text-navy">
-            SurFox
-          </div>
-          
-          <div className="hidden md:flex items-center gap-8 lg:gap-10 text-sm font-medium text-gray-600">
-            <a href="#vision" className="hover:text-navy transition">Vision</a>
-            <a href="#ecosystem" className="hover:text-navy transition">Ecosystem</a>
-            <a href="#proof" className="hover:text-navy transition">Proof</a>
-            <a href="#contact" className="hover:text-navy transition">Contact</a>
-          </div>
-          
-          <button className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg bg-orange text-white text-sm font-semibold hover:bg-orange-600 transition">
-            Explore Platform
-          </button>
-        </div>
-      </nav>
-
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20">
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -187,30 +167,24 @@ export default function SurFoxCorporate() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
               The SurFox Ecosystem
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Three integrated products, one unified intelligence layer
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
+              A suite of intelligence products powered by a unified AI foundation
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 px-4">
             {[
               { 
                 name: 'SurFox Engage', 
-                desc: 'AI-powered conversation management that qualifies, nurtures, and converts leads automatically.',
-                borderColor: 'hover:border-orange-200',
-                bgHover: 'hover:bg-orange-50/30'
+                desc: 'AI-powered conversation intelligence for sales teams. Automatically qualify leads, predict outcomes, and accelerate pipeline velocity.',
+                borderColor: 'hover:border-orange/30',
+                bgHover: 'hover:bg-orange/5'
               },
               { 
-                name: 'SurFox Pulse', 
-                desc: 'Real-time communication analytics that surface patterns, sentiment, and signals across your organization.',
-                borderColor: 'hover:border-blue-200',
-                bgHover: 'hover:bg-blue-50/30'
-              },
-              { 
-                name: 'SurFox Insight', 
-                desc: 'Strategic intelligence platform that transforms communication data into business foresight.',
-                borderColor: 'hover:border-purple-200',
-                bgHover: 'hover:bg-purple-50/30'
+                name: 'SurFox Insights', 
+                desc: 'Enterprise communication analytics platform. Transform message data into strategic intelligence across your organization.',
+                borderColor: 'hover:border-cyan-500/30',
+                bgHover: 'hover:bg-cyan-50/50'
               }
             ].map((product, i) => (
               <motion.div
@@ -367,27 +341,6 @@ export default function SurFoxCorporate() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
-            <div className="text-xl sm:text-2xl font-semibold text-navy">
-              SurFox
-            </div>
-            
-            <div className="flex gap-6 sm:gap-8 text-sm text-gray-600">
-              <a href="#" className="hover:text-navy transition">Privacy</a>
-              <a href="#" className="hover:text-navy transition">Terms</a>
-              <a href="#" className="hover:text-navy transition">Security</a>
-            </div>
-          </div>
-          
-          <div className="text-center text-gray-500 text-sm mt-8 sm:mt-12">
-            © 2025 SurFox AI, Inc. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
