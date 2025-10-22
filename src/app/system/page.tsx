@@ -141,24 +141,29 @@ function ConnectionLine({ start, end, color = "#818cf8" }: ConnectionLineProps) 
   const points = [new THREE.Vector3(...start), new THREE.Vector3(...end)];
   const geometry = new THREE.BufferGeometry().setFromPoints(points);
   
-  return (
-<group>
-  <line ref={lineRef} geometry={geometry}>
-    <lineBasicMaterial 
-      attach="material" 
-      color={color} 
-      transparent 
+ return (
+  <group>
+    {/* The line */}
+    <primitive object={lineRef.current as THREE.Line} />
+
+    {/* Material */}
+    <lineBasicMaterial
+      attach="material"
+      color={color}
+      transparent
       opacity={0.5}
       linewidth={2}
     />
-      </line>
-      <mesh ref={glowRef}>
-        <sphereGeometry args={[0.08, 16, 16]} />
-        <meshBasicMaterial color={color} transparent opacity={0.8} />
-      </mesh>
-    </group>
-  );
-}
+
+    {/* Glowing particle */}
+<mesh ref={glowRef}>
+  <sphereGeometry args={[0.05, 16, 16]} />
+  <meshBasicMaterial color={color} />
+</mesh>
+
+  </group>
+);
+
 
 
 // Particle Field with occasional shimmer
@@ -202,25 +207,24 @@ function Particles() {
     }
   });
   
-  return (
-    <points ref={particlesRef}>
-      <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={count}
-          array={positions}
-          itemSize={3}
-        />
-      </bufferGeometry>
-      <pointsMaterial
-        size={0.05}
-        color="#ffffff"
-        transparent
-        opacity={0.5}
-        sizeAttenuation
+return (
+  <points ref={particlesRef}>
+    <bufferGeometry>
+      <primitive
+        attachObject={['attributes', 'position']}
+        object={new THREE.BufferAttribute(positions, 3)}
       />
-    </points>
-  );
+    </bufferGeometry>
+    <pointsMaterial
+      size={0.05}
+      color="#ffffff"
+      transparent
+      opacity={0.5}
+      sizeAttenuation
+    />
+  </points>
+);
+
 }
 
 // Gentle Camera Movement
