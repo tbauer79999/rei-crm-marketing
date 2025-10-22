@@ -6,7 +6,7 @@ import { Points, PointMaterial, OrbitControls } from '@react-three/drei';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Brain, Sparkles, Zap, ArrowRight, Play } from 'lucide-react';
 import * as THREE from 'three';
-
+import { useRouter } from "next/navigation";
 // Particle Field Component for Three.js
 import { MotionValue } from "framer-motion";
 
@@ -77,6 +77,7 @@ function GlowingOrbs() {
 
 // Main Component
 export default function SurFoxUniverse() {
+    const router = useRouter();
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -196,13 +197,18 @@ export default function SurFoxUniverse() {
             <a href="#company" className="hover:text-orange-400 transition-colors">Company</a>
           </div>
           
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-6 py-2 rounded-full bg-gradient-to-r from-orange-500 to-indigo-500 hover:from-orange-600 hover:to-indigo-600 transition-all duration-300 font-medium text-sm"
-          >
-            Enter the System
-          </motion.button>
+<motion.button
+  whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(251, 146, 60, 0.5)" }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => router.push("/system")}
+  className="px-10 py-5 rounded-full bg-gradient-to-r from-orange-500 to-coral-400 
+             hover:from-orange-600 hover:to-coral-500 transition-all duration-300 
+             font-medium text-lg flex items-center gap-3 group"
+>
+  Explore the System
+  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+</motion.button>
+
         </div>
       </nav>
 
