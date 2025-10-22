@@ -4,14 +4,38 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
-import * as THREE from 'three';
 import { useRouter } from 'next/navigation';
 
 // Simple Neural Node with ripple effect
-function NeuralNode({ position, color, label, id, onHover, onClick, isHovered, anyNodeHovered }) {
-  const meshRef = useRef();
-  const glowRef = useRef();
-  const rippleRef = useRef();
+import * as THREE from "three";
+
+type NeuralNodeProps = {
+  position: [number, number, number];
+  color: string;
+  label: string;
+  id: string;
+  onHover: (id: string | null) => void;
+  onClick: (id: string) => void; // onClick expects just the id
+  isHovered: boolean;
+  anyNodeHovered: boolean;
+};
+
+function NeuralNode({
+  position,
+  color,
+  label,
+  id,
+  onHover,
+  onClick,
+  isHovered,
+  anyNodeHovered,
+}: NeuralNodeProps) {
+
+  const meshRef = useRef<THREE.Mesh>(null);
+  const glowRef = useRef<THREE.Mesh>(null);
+  const rippleRef = useRef<THREE.Mesh>(null);
+
+
   
   useFrame((state) => {
     if (meshRef.current) {
@@ -23,13 +47,14 @@ function NeuralNode({ position, color, label, id, onHover, onClick, isHovered, a
       glowRef.current.scale.setScalar(isHovered ? 3.5 : pulse * 2.5);
     }
     
-    // Ripple effect on hover
-    if (rippleRef.current && isHovered) {
-      const rippleTime = (state.clock.getElapsedTime() * 1.5) % 1;
-      rippleRef.current.scale.setScalar(1 + rippleTime * 2);
-      rippleRef.current.material.opacity = 0.6 * (1 - rippleTime);
-    }
-  });
+if (rippleRef.current && isHovered) {
+  const rippleTime = (state.clock.getElapsedTime() * 1.5) % 1;
+  rippleRef.current.scale.setScalar(1 + rippleTime * 2);
+
+  const material = rippleRef.current.material as THREE.MeshBasicMaterial;
+  material.opacity = 0.6 * (1 - rippleTime);
+}
+
   
   // Dim this node if another node is hovered
   const dimmed = anyNodeHovered && !isHovered;
@@ -50,12 +75,13 @@ function NeuralNode({ position, color, label, id, onHover, onClick, isHovered, a
       )}
       
       {/* Large glow */}
-      <mesh 
-        ref={glowRef}
-        onPointerOver={() => onHover(id)}
-        onPointerOut={() => onHover(null)}
-        onClick={() => onClick({ id, label })}
-      >
+<mesh 
+  ref={glowRef}
+  onPointerOver={() => onHover(id)}
+  onPointerOut={() => onHover(null)}
+  onClick={() => onClick(id)}
+>
+
         <sphereGeometry args={[0.6, 32, 32]} />
         <meshBasicMaterial 
           color={color} 
@@ -65,12 +91,13 @@ function NeuralNode({ position, color, label, id, onHover, onClick, isHovered, a
       </mesh>
       
       {/* Bright core */}
-      <mesh 
-        ref={meshRef}
-        onPointerOver={() => onHover(id)}
-        onPointerOut={() => onHover(null)}
-        onClick={() => onClick({ id, label })}
-      >
+<mesh 
+  ref={meshRef}
+  onPointerOver={() => onHover(id)}
+  onPointerOut={() => onHover(null)}
+  onClick={() => onClick(id)}
+>
+
         <sphereGeometry args={[0.3, 32, 32]} />
         <meshBasicMaterial 
           color={color}
@@ -83,17 +110,21 @@ function NeuralNode({ position, color, label, id, onHover, onClick, isHovered, a
 }
 
 // Connection Lines with flowing light animation
-function ConnectionLine({ start, end, color = "#818cf8" }) {
-  const lineRef = useRef();
-  const glowRef = useRef();
+type ConnectionLineProps = {
+  start: [number, number, number];
+  end: [number, number, number];
+  color?: string;
+};
+
+function ConnectionLine({ start, end, color = "#818cf8" }: ConnectionLineProps) {
+  const lineRef = useRef<THREE.Line<THREE.BufferGeometry, THREE.LineBasicMaterial>>(null);
+  const glowRef = useRef<THREE.Mesh>(null);
   
   useFrame((state) => {
     if (lineRef.current) {
-      // Pulsing opacity
-      lineRef.current.material.opacity = 0.4 + Math.sin(state.clock.getElapsedTime() * 0.5) * 0.2;
+      const mat = lineRef.current.material as THREE.LineBasicMaterial;
+      mat.opacity = 0.4 + Math.sin(state.clock.getElapsedTime() * 0.5) * 0.2;
     }
-    
-    // Flowing light effect - move a bright spot along the line
     if (glowRef.current) {
       const t = (state.clock.getElapsedTime() * 0.3) % 1;
       const x = start[0] + (end[0] - start[0]) * t;
@@ -103,25 +134,20 @@ function ConnectionLine({ start, end, color = "#818cf8" }) {
     }
   });
   
-  const points = [
-    new THREE.Vector3(...start),
-    new THREE.Vector3(...end)
-  ];
-  
+  const points = [new THREE.Vector3(...start), new THREE.Vector3(...end)];
   const geometry = new THREE.BufferGeometry().setFromPoints(points);
   
   return (
-    <group>
-      <line ref={lineRef} geometry={geometry}>
-        <lineBasicMaterial 
-          attach="material" 
-          color={color} 
-          transparent 
-          opacity={0.5}
-          linewidth={2}
-        />
+<group>
+  <line ref={lineRef} geometry={geometry}>
+    <lineBasicMaterial 
+      attach="material" 
+      color={color} 
+      transparent 
+      opacity={0.5}
+      linewidth={2}
+    />
       </line>
-      {/* Flowing light dot */}
       <mesh ref={glowRef}>
         <sphereGeometry args={[0.08, 16, 16]} />
         <meshBasicMaterial color={color} transparent opacity={0.8} />
@@ -130,14 +156,15 @@ function ConnectionLine({ start, end, color = "#818cf8" }) {
   );
 }
 
+
 // Particle Field with occasional shimmer
 function Particles() {
-  const particlesRef = useRef();
+  const particlesRef = useRef<THREE.Points>(null);
   const count = 500;
-  
+
   const { positions, shimmerIndices } = React.useMemo(() => {
     const positions = new Float32Array(count * 3);
-    const shimmerIndices = [];
+    const shimmerIndices: number[] = [];
     
     for (let i = 0; i < count; i++) {
       positions[i * 3] = (Math.random() - 0.5) * 25;
@@ -202,19 +229,25 @@ function CameraRig() {
 }
 
 // Main Scene
-function NeuralScene({ hoveredNode, setHoveredNode, onNodeClick }) {
+type NeuralSceneProps = {
+  hoveredNode: string | null;
+  setHoveredNode: (id: string | null) => void;
+  onNodeClick: (id: string) => void;
+};
+
+function NeuralScene({ hoveredNode, setHoveredNode, onNodeClick }: NeuralSceneProps) {
   const nodes = [
-    { position: [-3, 2, 0], color: '#fb923c', label: 'SurFox Engage', id: 'engage' },
-    { position: [3, 2, 0], color: '#a78bfa', label: 'SurFox Recruit', id: 'recruit' },
-    { position: [3, -2, 0], color: '#60a5fa', label: 'SurFox Insight', id: 'insight' },
-    { position: [-3, -2, 0], color: '#f472b6', label: 'Analytics', id: 'analytics' },
-    { position: [0, 0, 0], color: '#818cf8', label: 'Infinity Core', id: 'infinity' }
+    { position: [-3, 2, 0] as [number, number, number], color: '#fb923c', label: 'SurFox Engage', id: 'engage' },
+    { position: [3, 2, 0] as [number, number, number], color: '#a78bfa', label: 'SurFox Recruit', id: 'recruit' },
+    { position: [3, -2, 0] as [number, number, number], color: '#60a5fa', label: 'SurFox Insight', id: 'insight' },
+    { position: [-3, -2, 0] as [number, number, number], color: '#f472b6', label: 'Analytics', id: 'analytics' },
+    { position: [0, 0, 0] as [number, number, number], color: '#818cf8', label: 'Infinity Core', id: 'infinity' }
   ];
 
-  const connections = [
-    [0, 1], [1, 2], [2, 3], [3, 0], // Square
-    [0, 2], [1, 3], // Diagonals
-    [0, 4], [1, 4], [2, 4], [3, 4] // To center
+  const connections: [number, number][] = [
+    [0, 1], [1, 2], [2, 3], [3, 0],
+    [0, 2], [1, 3],
+    [0, 4], [1, 4], [2, 4], [3, 4]
   ];
 
   return (
@@ -259,9 +292,9 @@ function NeuralScene({ hoveredNode, setHoveredNode, onNodeClick }) {
 
 export default function SystemPage() {
   const router = useRouter();
-  const [phase, setPhase] = useState('entering');
+  const [phase, setPhase] = useState<'entering' | 'inside' | 'exiting'>('entering');
   const [showUI, setShowUI] = useState(false);
-  const [hoveredNode, setHoveredNode] = useState(null);
+  const [hoveredNode, setHoveredNode] = useState<string | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -279,17 +312,17 @@ export default function SystemPage() {
     }, 2000);
   };
 
-  const handleNodeClick = (node) => {
-    console.log('Clicked node:', node);
-    // router.push(`/products/${node.id}`);
+  const handleNodeClick = (id: string) => {
+    console.log('Clicked node:', id);
+    // router.push(`/products/${id}`);
   };
 
-  const nodeLabels = {
-    'engage': 'SurFox Engage',
-    'recruit': 'SurFox Recruit',
-    'insight': 'SurFox Insight',
-    'analytics': 'Analytics Dashboard',
-    'infinity': 'Infinity Core'
+  const nodeLabels: Record<string, string> = {
+    engage: 'SurFox Engage',
+    recruit: 'SurFox Recruit',
+    insight: 'SurFox Insight',
+    analytics: 'Analytics Dashboard',
+    infinity: 'Infinity Core'
   };
 
   return (
