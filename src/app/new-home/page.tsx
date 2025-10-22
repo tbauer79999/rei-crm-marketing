@@ -10,7 +10,8 @@ import * as THREE from 'three';
 // Particle Field Component for Three.js
 function ParticleField({ scrollProgress }: { scrollProgress: number }) {
 
-  const pointsRef = useRef();
+  const pointsRef = useRef<THREE.Points | null>(null);
+
   const particleCount = 2000;
   
   const positions = React.useMemo(() => {
