@@ -1,942 +1,393 @@
-'use client'
+"use client"
 
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
-import {
-  Play,
-  Check,
-  X,
-  Brain,
-  MessageSquare,
-  Target,
-  User,
-  ChevronRight,
-  Phone,
-  Mail,
-  Zap,
-  Activity,
-  Shield,
-  Eye,
-  TrendingUp,
-  BarChart3,
-  Clock,
-  ArrowRight,
-  Building,
-  Users,
-  Cpu,
-  Database,
-  Lightbulb,
-  Layers,
-  Gauge,
-  Sparkles,
-  Send,
-  Bot,
-  Menu,
-  HelpCircle,
-  Plus,
-  Minus,
-  FileText,
-  Award,
-  Globe
-} from 'lucide-react'
-import Head from 'next/head'
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { ArrowRight, Brain, TrendingUp, Zap, Shield, CheckCircle, Activity } from 'lucide-react';
 
-const SurFoxHomepage = () => {
-  const [activeTab, setActiveTab] = useState('psychology')
-  const [typingText, setTypingText] = useState('')
-  const [currentMessageIndex, setCurrentMessageIndex] = useState(0)
-  const [activeFAQ, setActiveFAQ] = useState<number | null>(null)
-
-  const messages = [
-    "Analyzing prospect response patterns...",
-    "Identifying communication preferences...",
-    "Qualifying based on budget and timeline..."
-  ]
-
-  // Typing animation effect
-  useEffect(() => {
-    const currentMessage = messages[currentMessageIndex]
-    let index = 0
-    const timer = setInterval(() => {
-      if (index <= currentMessage.length) {
-        setTypingText(currentMessage.slice(0, index))
-        index++
-      } else {
-        setTimeout(() => {
-          setCurrentMessageIndex((prev) => (prev + 1) % messages.length)
-          setTypingText('')
-        }, 2000)
-        clearInterval(timer)
-      }
-    }, 100)
-
-    return () => clearInterval(timer)
-  }, [currentMessageIndex])
-
-const toggleFAQ = (index: number) => {
-  setActiveFAQ(activeFAQ === index ? null : index)
-}
+export default function SurFoxCorporate() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
 
   return (
-    <>
-      <Head>
-  <title>SMS Sales Automation Software | SurFox AI Platform</title>
+    <div ref={containerRef} className="bg-white text-gray-900">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .text-navy {
+          color: #1e293b;
+        }
+        
+        .bg-navy {
+          background-color: #1e293b;
+        }
+        
+        .border-navy {
+          border-color: #1e293b;
+        }
+        
+        .text-orange {
+          color: #ea580c;
+        }
+        
+        .bg-orange {
+          background-color: #ea580c;
+        }
+        
+        .hover-lift {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+      `}</style>
 
-  {/* Favicon and Icons */}
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" href="/logo.png" />
-
-  <meta
-    name="description"
-    content="AI-powered SMS automation that handles your entire outreach process. Upload leads, AI qualifies prospects through conversations, deliver only sales-ready contacts to your team."
-  />
-  <meta
-    name="keywords"
-    content="SMS sales automation, AI lead qualification, automated texting, sales AI platform, lead nurturing, prospect qualification, SMS outreach"
-  />
-  <link rel="canonical" href="https://www.getsurfox.com/" />
-
-  {/* Open Graph */}
-  <meta property="og:title" content="SMS Sales Automation That Qualifies Leads | SurFox" />
-  <meta
-    property="og:description"
-    content="AI handles your SMS outreach from initial contact to qualified handoff. No more manual texting or sorting replies."
-  />
-  <meta property="og:url" content="https://www.getsurfox.com" />
-  <meta property="og:site_name" content="SurFox" />
-  <meta property="og:image" content="https://www.getsurfox.com/logo.png" />
-  <meta property="og:image:width" content="512" />
-  <meta property="og:image:height" content="512" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_US" />
-
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@getSurFox" />
-  <meta name="twitter:title" content="SMS Sales Automation That Qualifies Leads | SurFox" />
-  <meta
-    name="twitter:description"
-    content="AI handles SMS outreach and qualification. You get only sales-ready prospects."
-  />
-  <meta name="twitter:image" content="https://www.getsurfox.com/logo.png" />
-  <meta name="twitter:creator" content="@TomFromSurFox" />
-  
-</Head>
-
-{/* Structured Data - Organization (for Google logo) */}
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'SurFox',
-      alternateName: 'SurFox AI',
-      url: 'https://www.getsurfox.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.getsurfox.com/logo.png',
-        width: 512,
-        height: 512
-      },
-      description: 'AI-powered SMS automation platform for sales teams',
-      sameAs: [
-        'https://twitter.com/getSurFox',
-        'https://www.linkedin.com/company/surfox'
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        contactType: 'Customer Service',
-        email: 'tom@surfox.com',
-        url: 'https://www.getsurfox.com'
-      }
-    })
-  }}
-/>
-
-{/* Structured Data - SoftwareApplication */}
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'SoftwareApplication',
-      name: 'SurFox',
-      applicationCategory: 'BusinessApplication',
-      operatingSystem: 'Web Browser',
-      description: 'AI-powered SMS automation platform that qualifies leads through intelligent conversations.',
-      url: 'https://www.getsurfox.com',
-      offers: {
-        '@type': 'AggregateOffer',
-        lowPrice: '197',
-        highPrice: '1997',
-        priceCurrency: 'USD',
-        priceValidUntil: '2025-12-31'
-      }
-    })
-  }}
-/>
-
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
-  
-
-        {/* Subtle Background Elements */}
-        <div className="fixed inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute top-40 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-40 right-40 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl"></div>
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-4 sm:py-5 flex items-center justify-between">
+          <div className="text-xl sm:text-2xl font-semibold text-navy">
+            SurFox
+          </div>
+          
+          <div className="hidden md:flex items-center gap-8 lg:gap-10 text-sm font-medium text-gray-600">
+            <a href="#vision" className="hover:text-navy transition">Vision</a>
+            <a href="#ecosystem" className="hover:text-navy transition">Ecosystem</a>
+            <a href="#proof" className="hover:text-navy transition">Proof</a>
+            <a href="#contact" className="hover:text-navy transition">Contact</a>
+          </div>
+          
+          <button className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg bg-orange text-white text-sm font-semibold hover:bg-orange-600 transition">
+            Explore Platform
+          </button>
         </div>
+      </nav>
 
-        {/* Hero Section */}
-        <section className="relative py-12 pt-24 lg:pt-20 min-h-[85vh] flex items-center">
-          <div className="max-w-7xl mx-auto px-6 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 backdrop-blur-sm">
-                  <MessageSquare className="w-4 h-4 mr-2 text-blue-300" />
-                  <span className="text-blue-200 font-medium text-sm">AI SMS Automation Platform</span>
-                </div>
-
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-                    SurFox Handles Your Entire SMS Outreach Process
-                  </span>
-                </h1>
-
-                <div className="text-xl text-purple-200 space-y-4">
-                  <p className="text-lg text-gray-300">
-                    Upload your leads. SurFox texts them, qualifies them through natural conversations, and delivers only sales-ready prospects to your team.
-                  </p>
-                  <p className="text-lg text-gray-300">
-                    No more manual texting, sorting through replies, or chasing unqualified leads. Focus on closing deals while SurFox handles the qualification process.
-                  </p>
-                </div>
-
-                {/* Key Features Highlight */}
-                <div className="grid md:grid-cols-3 gap-4 py-6">
-                  <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-xl rounded-lg border border-purple-500/30 p-4">
-                    <div className="flex items-center mb-2">
-                      <Clock className="w-5 h-5 mr-2 text-purple-400" />
-                      <h4 className="font-bold text-white text-sm">Smart Follow-Up</h4>
-                    </div>
-                    <p className="text-xs text-purple-200">Decides when and how to follow up autonomously</p>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-cyan-900/40 to-blue-900/40 backdrop-blur-xl rounded-lg border border-cyan-500/30 p-4">
-                    <div className="flex items-center mb-2">
-                      <FileText className="w-5 h-5 mr-2 text-cyan-400" />
-                      <h4 className="font-bold text-white text-sm">Your Knowledge</h4>
-                    </div>
-                    <p className="text-xs text-cyan-200">Upload docs - SurFox references them in conversations</p>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-green-900/40 to-emerald-900/40 backdrop-blur-xl rounded-lg border border-green-500/30 p-4">
-                    <div className="flex items-center mb-2">
-                      <TrendingUp className="w-5 h-5 mr-2 text-green-400" />
-                      <h4 className="font-bold text-white text-sm">Gets Smarter</h4>
-                    </div>
-                    <p className="text-xs text-green-200">More conversations = better qualification accuracy</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <button
-                    onClick={() => {
-                      const pricingSection = document.getElementById('pricing')
-                      if (pricingSection) {
-                        pricingSection.scrollIntoView({ behavior: 'smooth' })
-                      }
-                    }}
-                    className="group relative px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                  >
-                    <div className="relative flex items-center justify-center">
-                      <ArrowRight className="w-5 h-5 mr-2" />
-                      Get Started
-                    </div>
-                  </button>
-
-                  <Link href="#how-it-works">
-                    <button className="px-6 py-3 border-2 border-purple-400/50 rounded-xl font-bold text-lg backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-300">
-                      See How It Works
-                    </button>
-                  </Link>
-                </div>
-
-                {/* Company Info */}
-                <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-xl rounded-xl border border-purple-500/30 p-6 mt-6">
-                  <p className="text-purple-200 text-base mb-3">
-                    SurFox automates the SMS qualification process that typically requires hours of manual work per day. Our AI conducts natural conversations to identify prospects ready for sales calls.
-                  </p>
-                  <p className="text-purple-300 text-sm">Currently in beta with select partners</p>
-                </div>
-              </div>
-
-              {/* AI Process Demo */}
-              <div className="relative">
-                <div className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-6 shadow-xl">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-bold text-purple-200">AI Qualification Process</h3>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                      <span className="text-green-300 text-xs">ACTIVE</span>
-                    </div>
-                  </div>
-
-                  <div className="space-y-3 mb-4">
-                    <div className="bg-black/40 rounded-lg p-3 border border-cyan-500/30">
-                      <div className="text-cyan-300 text-xs mb-2">Conversation Analysis</div>
-                      <div className="grid grid-cols-2 gap-3 text-xs">
-                        <div className="space-y-1">
-                          <div className="flex justify-between">
-                            <span className="text-gray-400">Response Style:</span>
-                            <span className="text-yellow-400 font-bold">Professional</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-gray-400">Engagement:</span>
-                            <span className="text-green-400 font-bold">High</span>
-                          </div>
-                        </div>
-                        <div className="space-y-1">
-                          <div className="flex justify-between">
-                            <span className="text-gray-400">Timeline:</span>
-                            <span className="text-blue-400 font-bold">Q1 2025</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-gray-400">Budget:</span>
-                            <span className="text-green-400 font-bold">Qualified</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-lg p-3 border border-purple-400/30">
-                      <div className="text-purple-300 text-xs mb-2">AI Processing:</div>
-                      <div className="bg-black/60 rounded-lg p-2 font-mono text-xs text-green-300 min-h-[40px] flex items-center">
-                        {typingText}
-                        <span className="animate-pulse">|</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="text-center">
-                    <div className="inline-flex items-center px-3 py-2 bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-full border border-green-400/30">
-                      <Check className="w-3 h-3 mr-2 text-green-400" />
-                      <span className="text-green-300 text-xs font-medium">Qualified for Handoff</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating Elements */}
-                <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center transform rotate-12 shadow-xl">
-                  <MessageSquare className="w-8 h-8 text-white" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Problem Statement */}
-        <section className="relative py-20 bg-black/20 backdrop-blur-xl">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="max-w-5xl mx-auto text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-                Manual SMS Outreach Doesn't Scale
-              </h2>
-              <p className="text-xl text-gray-300 leading-relaxed">
-                Sales teams spend hours each day sending texts, reading replies, and trying to identify which prospects are actually interested. This manual process limits your team's capacity and creates inconsistent qualification.
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              <div className="bg-gradient-to-br from-red-900/40 to-red-600/40 rounded-2xl border border-red-400/30 p-8 backdrop-blur-sm">
-                <div className="flex items-center mb-6">
-                  <Clock className="w-8 h-8 text-red-400 mr-3" />
-                  <h3 className="text-2xl font-bold text-red-300">Current Manual Process</h3>
-                </div>
-                <ul className="space-y-4 text-red-200">
-                  <li className="flex items-start">
-                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
-                    <div>
-                      <strong>Time-consuming texting</strong> - Sales reps spend hours crafting and sending individual messages
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
-                    <div>
-                      <strong>Inconsistent qualification</strong> - Different reps ask different questions and interpret responses differently
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
-                    <div>
-                      <strong>Limited capacity</strong> - Can only handle a small number of prospects effectively
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <X className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-red-400" />
-                    <div>
-                      <strong>Poor lead tracking</strong> - Conversations scattered across personal phones and systems
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-blue-900/40 to-cyan-600/40 rounded-2xl border border-cyan-400/30 p-8 backdrop-blur-sm">
-                <div className="flex items-center mb-6">
-                  <Bot className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h3 className="text-2xl font-bold text-cyan-300">SurFox Automated Process</h3>
-                </div>
-                <ul className="space-y-4 text-cyan-200">
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
-                    <div>
-                      <strong>Automated conversations</strong> - AI handles all initial outreach and follow-up sequences
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
-                    <div>
-                      <strong>Consistent qualification</strong> - Same qualification criteria applied to every prospect
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
-                    <div>
-                      <strong>Unlimited scale</strong> - Handle thousands of prospects simultaneously
-                    </div>
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0 text-cyan-400" />
-                    <div>
-                      <strong>Complete visibility</strong> - All conversations tracked and analyzed in one platform
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* How It Works */}
-        <section id="how-it-works" className="relative py-20">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-                How SurFox Works
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                A systematic approach to SMS qualification that removes manual work while improving consistency and scale.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  number: '1',
-                  icon: Database,
-                  title: 'Upload Lead Lists',
-                  description: 'Import your prospect lists with phone numbers. SurFox integrates with your existing CRM or accepts CSV uploads.',
-                  color: 'from-purple-500 to-cyan-500'
-                },
-                {
-                  number: '2',
-                  icon: MessageSquare,
-                  title: 'AI Initiates Contact',
-                  description: 'AI begins personalized SMS conversations with each prospect, adapting messaging based on industry and role.',
-                  color: 'from-cyan-500 to-blue-500'
-                },
-                {
-                  number: '3',
-                  icon: Brain,
-                  title: 'Conversation Management',
-                  description: 'AI maintains natural conversations, answers questions, handles objections, and gathers qualification information.',
-                  color: 'from-blue-500 to-purple-500'
-                },
-                {
-                  number: '4',
-                  icon: BarChart3,
-                  title: 'Qualification Scoring',
-                  description: 'AI evaluates prospects based on budget, timeline, authority, and interest level using consistent criteria.',
-                  color: 'from-green-500 to-emerald-500'
-                },
-                {
-                  number: '5',
-                  icon: TrendingUp,
-                  title: 'Qualified Handoff',
-                  description: 'Sales-ready prospects are escalated to your team with full conversation history and qualification notes.',
-                  color: 'from-orange-500 to-red-500'
-                },
-                {
-                  number: '6',
-                  icon: Activity,
-                  title: 'Continuous Optimization',
-                  description: 'System learns from outcomes to improve conversation quality and qualification accuracy over time.',
-                  color: 'from-pink-500 to-purple-500'
-                }
-              ].map((step, index) => (
-                <div key={index} className="relative group">
-                  <div className="bg-gradient-to-br from-gray-900/60 to-purple-900/60 rounded-3xl border border-purple-400/40 p-8 text-center backdrop-blur-xl transition-all duration-300 hover:scale-105">
-                    <div
-                      className={`w-20 h-20 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}
-                    >
-                      <step.icon className="w-10 h-10 text-white" />
-                    </div>
-                    <div className="text-4xl font-bold text-purple-300 mb-3">{step.number}</div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
-                    <p className="text-purple-200 leading-relaxed">{step.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Key Features */}
-        <section className="relative py-20 bg-black/20 backdrop-blur-xl" id="features">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-                Platform Capabilities
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Built for sales teams who need to scale personalized outreach without sacrificing conversation quality or qualification consistency.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
-                  <MessageSquare className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Natural Conversation Flow</h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  AI maintains contextual conversations that feel natural to prospects. Handles common questions and objections without breaking conversation flow.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    Contextual response generation
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    Objection handling protocols
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    Conversation memory and context
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
-                  <Target className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Qualification Framework</h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  Systematic qualification process that evaluates prospects across multiple criteria to ensure only sales-ready leads reach your team.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    Budget and timeline assessment
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    Decision-making authority verification
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    Interest and urgency scoring
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
-                  <Activity className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Performance Analytics</h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  Complete visibility into conversation performance, qualification rates, and optimization opportunities across your entire outreach program.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    Conversation success metrics
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    Qualification rate tracking
-                  </li>
-                  <li className="flex items-start">
-                    <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    Performance optimization insights
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Company Information */}
-        <section className="relative py-20">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-                About SurFox
-              </h2>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
-              <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-white">Building the Future of Sales Automation</h3>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  SurFox was founded to solve a fundamental problem in sales: the manual, time-consuming process of qualifying leads through individual conversations. Our AI platform enables sales teams to scale personalized outreach while maintaining conversation quality and improving qualification consistency.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  We're currently in beta with select partners, refining our platform based on real-world usage and feedback from sales teams across various industries.
-                </p>
-                
-                <div className="grid md:grid-cols-2 gap-6 mt-8">
-                  <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/40 rounded-xl p-6 border border-purple-500/30">
-                    <Building className="w-8 h-8 text-purple-400 mb-3" />
-                    <h4 className="text-lg font-bold text-white mb-2">Company Stage</h4>
-                    <p className="text-gray-300">Pre-launch beta with select enterprise partners</p>
-                  </div>
-                  
-                  <div className="bg-gradient-to-br from-cyan-900/40 to-blue-900/40 rounded-xl p-6 border border-cyan-500/30">
-                    <Target className="w-8 h-8 text-cyan-400 mb-3" />
-                    <h4 className="text-lg font-bold text-white mb-2">Mission</h4>
-                    <p className="text-gray-300">Eliminate manual SMS qualification while improving conversion rates</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-gray-900/60 to-purple-900/60 rounded-2xl border border-purple-500/30 p-8 backdrop-blur-xl">
-                <h4 className="text-xl font-bold text-white mb-4">Platform Development</h4>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span className="text-gray-300">Core AI conversation engine</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <span className="text-gray-300">Qualification framework and scoring</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                    <span className="text-gray-300">Analytics and reporting dashboard</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                    <span className="text-gray-300">CRM integrations and API development</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="relative py-20 bg-black/20 backdrop-blur-xl" id="faq">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Common questions about AI SMS automation and our platform capabilities
-              </p>
-            </div>
-
-            <div className="max-w-4xl mx-auto">
-              {[
-                {
-                  question: 'How does the autonomous follow-up system work?',
-                  answer:
-                    "The AI analyzes prospect response patterns, engagement levels, and behavioral signals to determine optimal follow-up timing. It automatically schedules and sends follow-up messages without manual intervention, adjusting frequency and timing based on each prospect's interaction history."
-                },
-                {
-                  question: 'What types of documents can I upload to the knowledge base?',
-                  answer:
-                    'You can upload product specifications, case studies, pricing sheets, company information, FAQs, sales presentations, and any other documents relevant to your sales process. The AI references this information during conversations to provide accurate, company-specific answers.'
-                },
-                {
-                  question: 'How does the AI learning system improve over time?',
-                  answer:
-                    'The AI analyzes conversation outcomes, response rates, and qualification success to identify patterns that work best for different prospect types. As conversation volume increases, the system becomes more effective at personalizing approaches and identifying high-quality leads.'
-                },
-                {
-                  question: 'What industries can use this platform?',
-                  answer:
-                    "Our platform works across B2B industries including SaaS, professional services, real estate, financial services, and more. The AI adapts its conversation style and qualification questions based on your industry and target market."
-                },
-                {
-                  question: 'How do you ensure compliance with SMS regulations?',
-                  answer:
-                    "We follow TCPA guidelines and industry best practices for automated communications. This includes proper opt-in procedures, clear identification, and easy opt-out mechanisms. We recommend reviewing compliance requirements with your legal team."
-                },
-                {
-                  question: 'Can I customize the qualification criteria and knowledge base?',
-                  answer:
-                    "Yes, qualification criteria can be customized based on your sales process and ideal customer profile. You can also continuously update your knowledge base with new documents, and the AI will immediately begin using this information in conversations."
-                }
-              ].map((faq, index) => (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 mb-4 backdrop-blur-xl overflow-hidden"
-                >
-                  <button
-                    onClick={() => toggleFAQ(index)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-purple-500/10 transition-colors"
-                  >
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    {activeFAQ === index ? (
-                      <Minus className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                    ) : (
-                      <Plus className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                    )}
-                  </button>
-                  {activeFAQ === index && (
-                    <div className="px-6 pb-4">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section id="pricing" className="relative py-20">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-                Platform Pricing
-              </h2>
-              <p className="text-xl text-gray-300 mb-4">
-                Transparent pricing based on your outreach volume and team size. All plans include core AI conversation and qualification capabilities.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {/* Starter Plan */}
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-8 text-center backdrop-blur-xl">
-                <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
-                <div className="text-3xl font-bold text-white mb-4">
-                  $197<span className="text-lg text-gray-400">/month</span>
-                </div>
-                <p className="text-gray-300 mb-6">
-                  For individual sales professionals getting started with AI automation
-                </p>
-
-                <ul className="text-left space-y-3 mb-8 text-sm">
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>1,000 monthly messages</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>AI conversation management</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Basic qualification framework</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Performance dashboard</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>1 team member</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Email support</span>
-                  </li>
-                </ul>
-
-                <button
-                  onClick={() => (window.location.href = 'https://www.getsurfox.com/subscribe/starter')}
-                  className="w-full bg-gradient-to-r from-gray-700 to-gray-600 text-white px-6 py-3 rounded-xl hover:from-gray-600 hover:to-gray-500 transition-colors font-medium"
-                >
-                  Get Started
-                </button>
-              </div>
-
-              {/* Growth Plan */}
-              <div className="relative bg-gradient-to-br from-purple-900/60 to-blue-900/60 rounded-2xl border-2 border-purple-400/50 p-8 text-center backdrop-blur-xl transform scale-105 shadow-xl">
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                  <span className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-1 rounded-full text-xs font-bold shadow-lg">
-                    Recommended
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Growth</h3>
-                <div className="text-3xl font-bold text-white mb-4">
-                  $497<span className="text-lg text-gray-400">/month</span>
-                </div>
-                <p className="text-gray-300 mb-6">For growing sales teams scaling their outreach operations</p>
-
-                <ul className="text-left space-y-3 mb-8 text-sm">
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>10,000 monthly messages</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Everything in Starter, plus:</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Advanced conversation learning</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Custom qualification criteria</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Team performance analytics</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>5 team members</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Priority support</span>
-                  </li>
-                </ul>
-
-                <button
-                  onClick={() => (window.location.href = 'https://www.getsurfox.com/subscribe/growth')}
-                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-colors font-medium shadow-lg"
-                >
-                  Start Rick Free
-                </button>
-              </div>
-
-              {/* Scale Plan */}
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-2xl border border-gray-700/50 p-8 text-center backdrop-blur-xl">
-                <h3 className="text-xl font-bold text-white mb-2">Scale</h3>
-                <div className="text-3xl font-bold text-white mb-4">
-                  $1,997<span className="text-lg text-gray-400">/month</span>
-                </div>
-                <p className="text-gray-300 mb-6">For enterprise teams with high-volume outreach requirements</p>
-
-                <ul className="text-left space-y-3 mb-8 text-sm">
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>50,000+ monthly messages</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Everything in Growth, plus:</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Advanced AI optimization</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Custom integration development</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>White-glove onboarding</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Unlimited team members</span>
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                    <span>Dedicated success manager</span>
-                  </li>
-                </ul>
-
-                <button
-                  onClick={() => (window.location.href = 'https://www.getsurfox.com/subscribe/scale')}
-                  className="w-full border border-gray-600 text-gray-300 px-6 py-3 rounded-xl hover:bg-gray-800/50 transition-colors font-medium"
-                >
-                  Contact Sales
-                </button>
-              </div>
-            </div>
-
-            <div className="text-center mt-16">
-              <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-xl p-6 max-w-3xl mx-auto border border-blue-500/40">
-                <h3 className="text-xl font-bold text-blue-300 mb-4">Enterprise & Custom Solutions</h3>
-                <p className="text-gray-300 mb-6">Need higher volume limits, custom integrations, or white-label options? We offer tailored solutions for enterprise requirements.</p>
-                <button
-                  onClick={() => (window.location.href = '/contact-sales')}
-                  className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:from-blue-500 hover:to-purple-500 transition-all shadow-lg"
-                >
-                  Discuss Enterprise Needs
-                </button>
-              </div>
-            </div>
-
-            <div className="text-center mt-12">
-              <p className="text-sm text-gray-400 mb-4">All plans include: 30-day trial period • No setup fees • Cancel anytime</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-cyan-500/10"></div>
-          <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-            <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-              Ready to Scale Your SMS Outreach?
-            </h2>
-            <p className="text-xl text-purple-200 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Join our beta program and see how AI automation can transform your lead qualification process. Start with a 30-day trial and experience the difference automated conversations can make for your sales team.
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20">
+        <div className="max-w-5xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+              The AI Intelligence Layer behind<br className="hidden sm:block" />
+              <span className="sm:inline"> </span> Communication
+            </h1>
+            
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+              SurFox transforms unstructured communication data into actionable intelligence, empowering enterprises to understand, predict, and activate.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-              <button
-                onClick={() => {
-                  const pricingSection = document.getElementById('pricing')
-                  if (pricingSection) {
-                    pricingSection.scrollIntoView({ behavior: 'smooth' })
-                  }
-                }}
-                className="group relative px-10 py-4 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
               >
-                <div className="relative flex items-center justify-center">
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  Start Risk Free
-                </div>
-              </button>
-              <Link href="/demo">
-                <button className="px-10 py-4 border-2 border-purple-400/50 rounded-xl font-bold text-lg backdrop-blur-sm hover:bg-purple-500/20 transition-all duration-300">
-                  Schedule Demo
-                </button>
-              </Link>
+                Learn More
+                <ArrowRight className="w-5 h-5" />
+              </motion.button>
+              
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
+              >
+                Explore Platform
+              </motion.button>
             </div>
+          </motion.div>
+        </div>
+      </section>
 
-            <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-xl rounded-xl p-6 max-w-2xl mx-auto border border-purple-500/30">
-              <h3 className="font-bold mb-4 text-lg">Questions about our platform?</h3>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
-                <a href="mailto:tom@surfox.com" className="flex items-center text-purple-200 hover:text-white transition-colors">
-                  <Mail className="w-4 h-4 mr-2" />
-                  tom@surfox.com
-                </a>
-                <span className="text-gray-400">•</span>
-                <span className="text-gray-300">Currently accepting beta partners</span>
-              </div>
+      {/* Vision Section */}
+      <section id="vision" className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16 sm:mb-20 md:mb-24"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+              Our Vision
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+              Every conversation contains insight. SurFox makes that insight visible, predictable, and actionable — transforming communication from noise into intelligence.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 relative px-4">
+            {/* Connecting line - hide on mobile */}
+            <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-orange/20 via-orange/40 to-orange/20" />
+            
+            {[
+              { 
+                icon: Brain, 
+                title: 'Understanding', 
+                desc: 'Extract meaning from unstructured communication across every channel and medium.'
+              },
+              { 
+                icon: TrendingUp, 
+                title: 'Prediction', 
+                desc: 'Identify patterns and forecast outcomes before they emerge in your data.'
+              },
+              { 
+                icon: Zap, 
+                title: 'Activation', 
+                desc: 'Turn insights into action with intelligent automation and real-time alerts.'
+              }
+            ].map((pillar, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.2 }}
+                className="text-center relative z-10"
+              >
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.2 + 0.2 }}
+                  className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 sm:mb-6 rounded-2xl bg-orange/10 flex items-center justify-center"
+                >
+                  <pillar.icon className="w-7 h-7 sm:w-8 sm:h-8 text-orange" />
+                </motion.div>
+                <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">{pillar.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{pillar.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ecosystem Overview */}
+      <section id="ecosystem" className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16 md:mb-20"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+              The SurFox Ecosystem
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+              Three integrated products, one unified intelligence layer
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 px-4">
+            {[
+              { 
+                name: 'SurFox Engage', 
+                desc: 'AI-powered conversation management that qualifies, nurtures, and converts leads automatically.',
+                borderColor: 'hover:border-orange-200',
+                bgHover: 'hover:bg-orange-50/30'
+              },
+              { 
+                name: 'SurFox Pulse', 
+                desc: 'Real-time communication analytics that surface patterns, sentiment, and signals across your organization.',
+                borderColor: 'hover:border-blue-200',
+                bgHover: 'hover:bg-blue-50/30'
+              },
+              { 
+                name: 'SurFox Insight', 
+                desc: 'Strategic intelligence platform that transforms communication data into business foresight.',
+                borderColor: 'hover:border-purple-200',
+                bgHover: 'hover:bg-purple-50/30'
+              }
+            ].map((product, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                whileHover={{ scale: 1.02, y: -4 }}
+                className={`p-8 sm:p-10 rounded-2xl border border-gray-200 bg-white transition-all duration-300 ${product.borderColor} ${product.bgHover} cursor-pointer`}
+                style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)' }}
+              >
+                <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">{product.name}</h3>
+                <p className="text-gray-600 leading-relaxed">{product.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Security & Compliance Section */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16 md:mb-20"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+              Built for Enterprise Standards
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
+              Architected from day one with SOC 2 and ISO 27001 compliance in mind.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 px-4">
+            {[
+              { 
+                icon: Shield, 
+                title: 'Data Encryption', 
+                desc: 'Industry-standard TLS and AES encryption across all systems.'
+              },
+              { 
+                icon: CheckCircle, 
+                title: 'SOC 2 & ISO Roadmap', 
+                desc: 'Architected to meet enterprise security frameworks.'
+              },
+              { 
+                icon: Activity, 
+                title: 'Continuous Reliability', 
+                desc: 'Redundant infrastructure and 24/7 uptime monitoring.'
+              }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                className="text-center"
+              >
+                <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 sm:mb-6 rounded-2xl bg-orange/10 flex items-center justify-center">
+                  <item.icon className="w-7 h-7 sm:w-8 sm:h-8 text-orange" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold text-navy mb-3">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Infrastructure & Expertise Section */}
+      <section id="proof" className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-14 md:mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+              Proven Infrastructure, Real Expertise
+            </h2>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">Built on Enterprise Stack</h3>
+              <p className="text-orange font-medium mb-3 sm:mb-4 text-sm sm:text-base">
+                AWS | Google Cloud | Twilio | OpenAI | Supabase
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Global-scale infrastructure with encryption, redundancy, and carrier-grade reliability.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-center"
+            >
+              <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">Operator-Led Development</h3>
+              <p className="text-orange font-medium mb-3 sm:mb-4 text-sm sm:text-base">
+                Founded by communication system experts
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Purpose-built to turn unstructured conversations into actionable intelligence.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing Section */}
+      <section id="contact" className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6 sm:mb-8 px-4 leading-tight">
+              Ready to transform your<br className="hidden sm:block" />
+              <span className="sm:inline"> </span>communication intelligence?
+            </h2>
+            
+            <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4">
+              SurFox is building the future of communication intelligence - architected for scale, security, and enterprise readiness.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4">
+              <a href="#" className="text-base font-semibold text-navy hover:text-orange transition">
+                Company
+              </a>
+              <span className="hidden sm:block text-gray-300">•</span>
+              <a href="#" className="text-base font-semibold text-navy hover:text-orange transition">
+                Careers
+              </a>
+              <span className="hidden sm:block text-gray-300">•</span>
+              <a href="#" className="text-base font-semibold text-navy hover:text-orange transition">
+                Contact
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
+            <div className="text-xl sm:text-2xl font-semibold text-navy">
+              SurFox
+            </div>
+            
+            <div className="flex gap-6 sm:gap-8 text-sm text-gray-600">
+              <a href="#" className="hover:text-navy transition">Privacy</a>
+              <a href="#" className="hover:text-navy transition">Terms</a>
+              <a href="#" className="hover:text-navy transition">Security</a>
             </div>
           </div>
-        </section>
-      </div>
-    </>
-  )
+          
+          <div className="text-center text-gray-500 text-sm mt-8 sm:mt-12">
+            © 2025 SurFox AI, Inc. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 }
-
-export default SurFoxHomepage
