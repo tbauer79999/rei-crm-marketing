@@ -143,7 +143,7 @@ function ConnectionLine({ start, end, color = "#818cf8" }: ConnectionLineProps) 
   
 return (
   <group>
-    <line ref={lineRef} geometry={geometry}>
+    <line ref={lineRef as any} geometry={geometry}>
       <lineBasicMaterial
         attach="material"
         color={color}
