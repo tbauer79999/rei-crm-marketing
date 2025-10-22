@@ -296,7 +296,7 @@ function NeuralScene({ hoveredNode, setHoveredNode, onNodeClick }: NeuralScenePr
       <CameraRig />
     </>
   );
-
+}
 
 export default function SystemPage() {
   const router = useRouter();
