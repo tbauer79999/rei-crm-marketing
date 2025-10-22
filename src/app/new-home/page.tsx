@@ -81,8 +81,8 @@ export default function SurFoxCorporate() {
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
-              The AI Intelligence Layer<br className="hidden sm:block" />
-              <span className="sm:inline"> </span>for Communication
+              The AI Intelligence Layer behind<br className="hidden sm:block" />
+              <span className="sm:inline"> </span> Communication
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
