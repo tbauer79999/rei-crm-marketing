@@ -205,6 +205,57 @@ export default function SurFoxCorporate() {
         </div>
       </section>
 
+      {/* SurFox Infinity Section */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16 md:mb-20"
+          >
+            <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-orange/10 to-purple/10 border border-orange/20 mb-6">
+              <span className="text-sm font-semibold text-orange">POWERED BY</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+              SurFox Infinity
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
+              The unified AI intelligence layer that powers every SurFox product
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 px-4">
+            {[
+              { 
+                title: 'Unified Learning', 
+                desc: 'One AI brain learns from every conversation across all products, continuously improving intelligence for all users.'
+              },
+              { 
+                title: 'Cross-Product Intelligence', 
+                desc: 'Insights from sales conversations inform communication analytics. Analytics patterns enhance sales predictions.'
+              },
+              { 
+                title: 'Enterprise Scale', 
+                desc: 'Built to process millions of conversations simultaneously while maintaining accuracy and speed.'
+              }
+            ].map((feature, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+                className="text-center"
+              >
+                <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Security & Compliance Section */}
       <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
