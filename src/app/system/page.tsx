@@ -162,8 +162,8 @@ function ConnectionLine({ start, end, color = "#818cf8" }: ConnectionLineProps) 
 </mesh>
 
   </group>
-);
-
+  );
+}
 
 
 // Particle Field with occasional shimmer
