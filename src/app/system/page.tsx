@@ -141,28 +141,25 @@ function ConnectionLine({ start, end, color = "#818cf8" }: ConnectionLineProps) 
   const points = [new THREE.Vector3(...start), new THREE.Vector3(...end)];
   const geometry = new THREE.BufferGeometry().setFromPoints(points);
   
- return (
+return (
   <group>
-    {/* The line */}
-    <primitive object={lineRef.current as THREE.Line} />
+    <line ref={lineRef} geometry={geometry}>
+      <lineBasicMaterial
+        attach="material"
+        color={color}
+        transparent
+        opacity={0.5}
+        linewidth={2}
+      />
+    </line>
 
-    {/* Material */}
-    <lineBasicMaterial
-      attach="material"
-      color={color}
-      transparent
-      opacity={0.5}
-      linewidth={2}
-    />
-
-    {/* Glowing particle */}
-<mesh ref={glowRef}>
-  <sphereGeometry args={[0.05, 16, 16]} />
-  <meshBasicMaterial color={color} />
-</mesh>
-
+    {/* Optional: glowing dot along the line */}
+    <mesh ref={glowRef}>
+      <sphereGeometry args={[0.05, 16, 16]} />
+      <meshBasicMaterial color={color} />
+    </mesh>
   </group>
-  );
+);
 }
 
 

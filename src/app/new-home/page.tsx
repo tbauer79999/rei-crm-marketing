@@ -289,14 +289,18 @@ export default function SurFoxUniverse() {
               transition={{ duration: 1, delay: 1.1 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <motion.button 
-                whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(251, 146, 60, 0.5)" }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-5 rounded-full bg-gradient-to-r from-orange-500 to-coral-400 hover:from-orange-600 hover:to-coral-500 transition-all duration-300 font-medium text-lg flex items-center gap-3 group"
-              >
-                Explore the System
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+<motion.button
+  whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(251, 146, 60, 0.5)" }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => router.push("/system")}
+  className="px-10 py-5 rounded-full bg-gradient-to-r from-orange-500 to-coral-400 
+             hover:from-orange-600 hover:to-coral-500 transition-all duration-300 
+             font-medium text-lg flex items-center gap-3 group"
+>
+  Explore the System
+  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+</motion.button>
+
               
               <motion.button 
                 whileHover={{ scale: 1.05 }}
