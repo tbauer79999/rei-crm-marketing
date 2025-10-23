@@ -32,8 +32,8 @@ export default function Nav() {
   return (
     <nav className={`fixed top-0 w-full z-40 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-gradient-to-r from-gray-50 via-purple-50/40 to-cyan-50/40 shadow-lg border-b border-purple-200/60' 
-        : 'bg-gradient-to-r from-gray-50 via-purple-50/40 to-cyan-50/40 border-b border-gray-200'
+        ? 'bg-gradient-to-r from-gray-50 via-purple-50 to-cyan-50 shadow-lg border-b border-purple-200' 
+        : 'bg-gradient-to-r from-gray-50 via-purple-50 to-cyan-50 border-b border-gray-200'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
