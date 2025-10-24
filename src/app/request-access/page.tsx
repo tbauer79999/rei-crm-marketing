@@ -125,7 +125,7 @@ export default function RequestAccess() {
               {
                 icon: TrendingUp,
                 title: 'Early Adopter Pricing',
-                desc: 'Lock in preferential pricing as a founding customer — rates that will not be available later.'
+                desc: 'Lock in preferential pricing as a founding customer - rates that will not be available later.'
               },
               {
                 icon: Zap,

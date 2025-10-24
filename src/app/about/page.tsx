@@ -57,7 +57,7 @@ export default function About() {
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              SurFox transforms human interaction data into strategic intelligence. We believe every conversation, every signal, every interaction contains insight — and businesses deserve the tools to see it.
+              SurFox transforms human interaction data into strategic intelligence. We believe every conversation, every signal, every interaction contains insight - and businesses deserve the tools to see it.
             </p>
           </motion.div>
         </div>
@@ -82,7 +82,7 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Make human interaction intelligence accessible to every business. Not just Fortune 500 companies with unlimited budgets — but any organization that wants to understand their customers better.
+                Make human interaction intelligence accessible to every business. Not just Fortune 500 companies with unlimited budgets - but any organization that wants to understand their customers better.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 We are building the infrastructure that turns unstructured interaction data into strategic advantage.
@@ -106,7 +106,7 @@ export default function About() {
                 A future where every business decision is informed by deep customer understanding. Where AI does not replace human judgment but enhances it with visibility, foresight, and intelligence.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                We are building the foundational layer that makes this possible — one product, one customer, one insight at a time.
+                We are building the foundational layer that makes this possible - one product, one customer, one insight at a time.
               </p>
             </motion.div>
           </div>
@@ -138,7 +138,7 @@ export default function About() {
           >
             <div className="space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed">
-                SurFox was born from 20+ years in the trenches of sales and revenue operations. Our founder spent decades watching businesses generate massive amounts of interaction data — calls, messages, emails, transactions — and struggle to make sense of it.
+                SurFox was born from 20+ years in the trenches of sales and revenue operations. Our founder spent decades watching businesses generate massive amounts of interaction data - calls, messages, emails, transactions - and struggle to make sense of it.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -155,7 +155,7 @@ export default function About() {
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                So we built SurFox. An AI-powered platform that does not just track interactions — it understands them. That does not just report on the past — it predicts the future. That does not just give you data — it gives you intelligence.
+                So we built SurFox. An AI-powered platform that does not just track interactions - it understands them. That does not just report on the past - it predicts the future. That does not just give you data - it gives you intelligence.
               </p>
             </div>
           </motion.div>
@@ -189,7 +189,7 @@ export default function About() {
               {
                 icon: Shield,
                 title: 'Privacy by Design',
-                desc: 'Complete tenant isolation is not negotiable. Your data remains yours — always encrypted, never shared, fully under your control.'
+                desc: 'Complete tenant isolation is not negotiable. Your data remains yours - always encrypted, never shared, fully under your control.'
               },
               {
                 icon: Brain,
@@ -452,7 +452,7 @@ export default function About() {
             </h2>
             
             <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-              We are building the intelligence infrastructure that every business will eventually need. Join us on this journey — as a customer, a team member, or a partner.
+              We are building the intelligence infrastructure that every business will eventually need. Join us on this journey - as a customer, a team member, or a partner.
             </p>
 
             <p className="text-base sm:text-lg font-semibold text-orange px-4">

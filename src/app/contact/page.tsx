@@ -78,7 +78,7 @@ export default function Contact() {
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              Whether you have questions, want to see a demo, or are ready to get started — we're here to help.
+              Whether you have questions, want to see a demo, or are ready to get started - we're here to help.
             </p>
           </motion.div>
         </div>

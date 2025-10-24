@@ -129,7 +129,7 @@ export default function SurFoxPulse() {
                 number: '03',
                 icon: LineChart,
                 title: 'Insight Generation', 
-                desc: 'Raw data transforms into clear, actionable insights — trend detection, performance scoring, and anomaly identification.'
+                desc: 'Raw data transforms into clear, actionable insights - trend detection, performance scoring, and anomaly identification.'
               },
               { 
                 number: '04',
@@ -306,7 +306,7 @@ export default function SurFoxPulse() {
               { 
                 icon: Eye,
                 title: 'Complete Transparency', 
-                desc: 'See exactly how your AI is performing. No black boxes, no guesswork — just clear, honest metrics.'
+                desc: 'See exactly how your AI is performing. No black boxes, no guesswork - just clear, honest metrics.'
               },
               { 
                 icon: Zap,

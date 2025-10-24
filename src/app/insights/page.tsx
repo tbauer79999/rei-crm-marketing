@@ -68,7 +68,7 @@ export default function SurFoxInsights() {
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              Go beyond visibility. SurFox Insights forecasts trends, models outcomes, and recommends optimizations — turning your data into strategic advantage.
+              Go beyond visibility. SurFox Insights forecasts trends, models outcomes, and recommends optimizations - turning your data into strategic advantage.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
@@ -366,7 +366,7 @@ export default function SurFoxInsights() {
               { 
                 icon: Lightbulb,
                 title: 'Actionable Recommendations', 
-                desc: 'Not just predictions — concrete suggestions on what to do next, backed by data and modeled outcomes.'
+                desc: 'Not just predictions - concrete suggestions on what to do next, backed by data and modeled outcomes.'
               },
               { 
                 icon: Zap,
@@ -413,7 +413,7 @@ export default function SurFoxInsights() {
                     Insights + Pulse = Complete Intelligence
                   </h3>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    SurFox Pulse shows you what's happening now. SurFox Insights shows you what happens next. Together, they create a complete intelligence layer — awareness plus foresight.
+                    SurFox Pulse shows you what's happening now. SurFox Insights shows you what happens next. Together, they create a complete intelligence layer - awareness plus foresight.
                   </p>
                 </div>
               </div>
@@ -455,7 +455,7 @@ export default function SurFoxInsights() {
               Predictive Intelligence, Privately
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Your models, your data, your predictions — completely isolated
+              Your models, your data, your predictions - completely isolated
             </p>
           </motion.div>
           
