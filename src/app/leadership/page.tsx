@@ -67,13 +67,13 @@ export default function Leadership() {
                 {/* Profile Image Section */}
                 <div className="md:col-span-2 bg-gradient-to-br from-orange/5 to-gray-50 p-8 flex items-center justify-center">
                   <div className="relative">
-<div className="w-64 h-64 rounded-2xl bg-gradient-to-br from-orange/20 to-gray-200 flex items-center justify-center overflow-hidden">
+<div className="w-72 h-72 rounded-2xl bg-gradient-to-br from-orange/20 to-gray-200 flex items-center justify-center overflow-hidden">
   <Image
-    src="/team/tom-bauer.jpg"
+    src="/tom-bauer.jpg"
     alt="Tom Bauer"
-    width={256}
-    height={256}
-    className="rounded-2xl object-cover"
+    width={288}
+    height={288}
+    className="rounded-2xl object-contain bg-white p-10"
   />
 </div>
                     {/* Optional: Add actual image when available */}
