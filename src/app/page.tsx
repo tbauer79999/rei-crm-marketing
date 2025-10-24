@@ -62,11 +62,11 @@ export default function SurFoxCorporate() {
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               The AI Intelligence Layer behind<br className="hidden sm:block" />
-              <span className="sm:inline"> </span> Communication
+              <span className="sm:inline"> </span> Human Interaction
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              SurFox transforms unstructured communication data into actionable intelligence, empowering enterprises to understand, predict, and activate.
+              SurFox transforms unstructured human interaction data into actionable intelligence, empowering enterprises to understand, predict, and activate.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
@@ -105,7 +105,7 @@ export default function SurFoxCorporate() {
               Our Vision
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Every conversation contains insight. SurFox makes that insight visible, predictable, and actionable — transforming communication from noise into intelligence.
+              Every human interaction contains insight. SurFox makes that insight visible, predictable, and actionable - transforming signals from noise into intelligence.
             </p>
           </motion.div>
           
@@ -221,23 +221,23 @@ export default function SurFoxCorporate() {
               SurFox Infinity
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-              The unified AI intelligence layer that powers every SurFox product - learning, optimizing, and scaling with every interaction.
+              The unified intelligence engine combining advanced predictive analytics, machine learning, and LLM orchestration - powering every SurFox product with forecasting and pattern recognition within each isolated tenant.
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 px-4">
             {[
               { 
-                title: 'Unified Learning', 
-                desc: 'Today, SurFox learns within each enterprise. Tomorrow, aggregated pattern learning will help every customer benefit from collective intelligence - without compromising data privacy.'
+                title: 'Tenant-Only Learning', 
+                desc: 'SurFox Infinity learns exclusively within each tenant environment. Advanced predictive analytics and machine learning models improve accuracy over time - using only your data within your isolated infrastructure.'
               },
               { 
                 title: 'Cross-Product Intelligence', 
-                desc: 'Insights from sales conversations inform communication analytics. Analytics patterns enhance sales predictions.'
+                desc: 'Within your environment, insights from engagement interactions inform analytics. Analytics patterns enhance predictions - creating a unified intelligence layer across all your data.'
               },
               { 
                 title: 'Enterprise Scale', 
-                desc: 'Built to process millions of conversations simultaneously while maintaining accuracy and speed.'
+                desc: 'Built to process millions of human interactions simultaneously while maintaining accuracy and speed.'
               }
             ].map((feature, i) => (
               <motion.div

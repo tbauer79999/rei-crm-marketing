@@ -364,7 +364,7 @@ const SurFoxVsLeadSherpa = () => {
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
                     <span className="text-purple-300 text-xs">Day 1 - AI Smart Opening</span>
                   </div>
-                  <p className="text-white">"Hey Sarah — I buy houses in your neighborhood, but I'm picky. Yours caught my eye because it's exactly what my buyers want. Ever think about selling, or are you staying put?"</p>
+                  <p className="text-white">"Hey Sarah - I buy houses in your neighborhood, but I'm picky. Yours caught my eye because it's exactly what my buyers want. Ever think about selling, or are you staying put?"</p>
                 </div>
                 
                 <div className="bg-emerald-900/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
@@ -380,7 +380,7 @@ const SurFoxVsLeadSherpa = () => {
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
                     <span className="text-purple-300 text-xs">AI Qualification Response</span>
                   </div>
-                  <p className="text-white">"Fair question, Sarah. I don't lowball people — it's bad for business. What would make you seriously consider selling? Is it the price, or is there something else motivating you?"</p>
+                  <p className="text-white">"Fair question, Sarah. I don't lowball people - it's bad for business. What would make you seriously consider selling? Is it the price, or is there something else motivating you?"</p>
                 </div>
               </div>
               

@@ -365,7 +365,7 @@ const SurFoxVsSkipio = () => {
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
                     <span className="text-purple-300 text-xs">Day 1 - AI Psychology Opening</span>
                   </div>
-                  <p className="text-white">"Hey Sarah — noticed you filled out that home valuation form. Most folks do that when they're just curious, but occasionally someone's actually ready to move. Which camp are you in?"</p>
+                  <p className="text-white">"Hey Sarah - noticed you filled out that home valuation form. Most folks do that when they're just curious, but occasionally someone's actually ready to move. Which camp are you in?"</p>
                 </div>
                 
                 <div className="text-center text-purple-300 text-xs py-2">
@@ -377,7 +377,7 @@ const SurFoxVsSkipio = () => {
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
                     <span className="text-purple-300 text-xs">Day 4 - AI Reframes Approach</span>
                   </div>
-                  <p className="text-white">"Sarah, totally get it if you're not ready. Real estate can feel overwhelming. But I'm curious — what would need to happen for selling to make sense for you?"</p>
+                  <p className="text-white">"Sarah, totally get it if you're not ready. Real estate can feel overwhelming. But I'm curious - what would need to happen for selling to make sense for you?"</p>
                 </div>
                 
                 <div className="bg-emerald-900/50 rounded-lg p-2 md:p-3 text-xs md:text-sm border border-emerald-400/30">

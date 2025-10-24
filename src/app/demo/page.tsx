@@ -133,7 +133,7 @@ const SurFoxVideoDemo = () => {
   </p>
 
   <p>
-    It reads personality, adapts tone in real time, learns from outcomes, and escalates only qualified prospects — 24/7.
+    It reads personality, adapts tone in real time, learns from outcomes, and escalates only qualified prospects - 24/7.
     Fewer messages, more meetings, clearer signal.
   </p>
 

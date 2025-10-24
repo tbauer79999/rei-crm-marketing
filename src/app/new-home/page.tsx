@@ -125,7 +125,7 @@ export default function SurFoxCorporate() {
               Our Vision
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Every conversation contains insight. SurFox makes that insight visible, predictable, and actionable — transforming communication from noise into intelligence.
+              Every conversation contains insight. SurFox makes that insight visible, predictable, and actionable - transforming communication from noise into intelligence.
             </p>
           </motion.div>
           

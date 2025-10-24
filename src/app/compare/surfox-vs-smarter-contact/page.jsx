@@ -360,7 +360,7 @@ const SurFoxVsSmarterContact = () => {
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
                     <span className="text-purple-300 text-xs">Day 1 - AI Smart Opening</span>
                   </div>
-                  <p className="text-white">"Hey Sarah — wasn't sure if this was still your number. If you're still thinking about selling, I can keep it simple for you."</p>
+                  <p className="text-white">"Hey Sarah - wasn't sure if this was still your number. If you're still thinking about selling, I can keep it simple for you."</p>
                 </div>
                 
                 <div className="text-center text-gray-400 text-xs py-2">
@@ -372,7 +372,7 @@ const SurFoxVsSmarterContact = () => {
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
                     <span className="text-purple-300 text-xs">Day 4 - AI Follow-up</span>
                   </div>
-                  <p className="text-white">"Just checking in — totally fine if not the right time. Market's been pretty good for sellers lately."</p>
+                  <p className="text-white">"Just checking in - totally fine if not the right time. Market's been pretty good for sellers lately."</p>
                 </div>
                 
                 <div className="bg-emerald-900/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">

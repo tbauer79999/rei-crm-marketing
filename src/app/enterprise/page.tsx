@@ -30,7 +30,7 @@ export default function EnterprisePage() {
               <h2 className="text-xl font-semibold text-white">Custom AI Behavior</h2>
             </div>
             <p className="text-slate-400">
-              Train SurFox to behave like your best sales rep — not a chatbot. Customize tone, persona, urgency rules, escalation score, and knowledge base per org.
+              Train SurFox to behave like your best sales rep - not a chatbot. Customize tone, persona, urgency rules, escalation score, and knowledge base per org.
             </p>
           </div>
 
