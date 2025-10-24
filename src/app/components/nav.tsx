@@ -16,6 +16,7 @@ export default function Nav() {
     if (pathname.startsWith('/engage')) return 'Engage'
     if (pathname.startsWith('/pulse')) return 'Pulse'
     if (pathname.startsWith('/insights')) return 'Insights'
+    if (pathname.startsWith('/orchestrate')) return 'Orchestrate'
     return null
   }
   
@@ -77,9 +78,13 @@ export default function Nav() {
                   <div className="font-semibold">SurFox Pulse</div>
                   <div className="text-xs text-gray-500 mt-1">AI Signal Intelligence</div>
                 </Link>
-                <Link href="/insights" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors">
+                <Link href="/insights" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors border-b border-gray-100">
                   <div className="font-semibold">SurFox Insights</div>
                   <div className="text-xs text-gray-500 mt-1">AI for Communication Intelligence</div>
+                </Link>
+                <Link href="/orchestrate" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors">
+                  <div className="font-semibold">SurFox Orchestrate</div>
+                  <div className="text-xs text-gray-500 mt-1">Automation & Workflows</div>
                 </Link>
               </div>
             </div>
@@ -208,6 +213,10 @@ export default function Nav() {
               <Link href="/insights" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">
                 <div className="font-medium">SurFox Insights</div>
                 <div className="text-xs text-gray-500">AI for Communication Intelligence</div>
+              </Link>
+              <Link href="/orchestrate" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">
+                <div className="font-medium">SurFox Orchestrate</div>
+                <div className="text-xs text-gray-500">Automation & Workflows</div>
               </Link>
             </div>
 
