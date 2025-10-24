@@ -14,6 +14,7 @@ export default function Nav() {
   // Determine product name based on route
   const getProductName = () => {
     if (pathname.startsWith('/engage')) return 'Engage'
+    if (pathname.startsWith('/pulse')) return 'Pulse'
     if (pathname.startsWith('/insights')) return 'Insights'
     return null
   }
@@ -71,6 +72,10 @@ export default function Nav() {
                 <Link href="/engage" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors border-b border-gray-100">
                   <div className="font-semibold">SurFox Engage</div>
                   <div className="text-xs text-gray-500 mt-1">AI for Sales Conversations</div>
+                </Link>
+                <Link href="/pulse" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors border-b border-gray-100">
+                  <div className="font-semibold">SurFox Pulse</div>
+                  <div className="text-xs text-gray-500 mt-1">AI Signal Intelligence</div>
                 </Link>
                 <Link href="/insights" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors">
                   <div className="font-semibold">SurFox Insights</div>
@@ -195,6 +200,10 @@ export default function Nav() {
               <Link href="/engage" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">
                 <div className="font-medium">SurFox Engage</div>
                 <div className="text-xs text-gray-500">AI for Sales Conversations</div>
+              </Link>
+              <Link href="/pulse" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">
+                <div className="font-medium">SurFox Pulse</div>
+                <div className="text-xs text-gray-500">AI Signal Intelligence</div>
               </Link>
               <Link href="/insights" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">
                 <div className="font-medium">SurFox Insights</div>
