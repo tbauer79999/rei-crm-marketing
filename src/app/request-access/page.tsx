@@ -3,6 +3,7 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, CheckCircle, Zap, Users, TrendingUp, ArrowRight, Shield, Clock } from 'lucide-react';
+import Link from 'next/link';
 
 export default function RequestAccess() {
   const containerRef = useRef(null);
@@ -581,19 +582,19 @@ export default function RequestAccess() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
-              <a
+              <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
               >
                 Contact Us
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#demo"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition"
               >
                 Schedule a Demo
                 <ArrowRight className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
