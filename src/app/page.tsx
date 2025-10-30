@@ -66,7 +66,7 @@ export default function SurFoxCorporate() {
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              SurFox transforms unstructured human interaction data into actionable intelligence, empowering enterprises to understand, predict, and activate.
+              SurFox is the AI layer that understands every business conversation, across sales, support, and every customer touchpoint.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
