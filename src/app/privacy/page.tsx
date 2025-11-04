@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Bell, Lock, Eye, FileText, AlertCircle } from 'lucide-react';
 
@@ -479,17 +480,17 @@ export default function PrivacyPolicy() {
       <section className="py-12 px-4 sm:px-6 md:px-8 bg-gray-50 border-t border-gray-200">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <a href="/" className="text-base font-semibold text-navy hover:text-orange transition">
+            <Link href="/" className="text-base font-semibold text-navy hover:text-orange transition">
               Home
-            </a>
+            </Link>
             <span className="hidden sm:block text-gray-300">•</span>
-            <a href="/terms" className="text-base font-semibold text-navy hover:text-orange transition">
+            <Link href="/terms" className="text-base font-semibold text-navy hover:text-orange transition">
               Terms of Service
-            </a>
+            </Link>
             <span className="hidden sm:block text-gray-300">•</span>
-            <a href="/contact" className="text-base font-semibold text-navy hover:text-orange transition">
+            <Link href="/contact" className="text-base font-semibold text-navy hover:text-orange transition">
               Contact
-            </a>
+            </Link>
           </div>
           <p className="text-gray-500 text-sm mt-6">
             © 2025 SurFox, Inc. All rights reserved.
