@@ -1,350 +1,501 @@
-'use client'
+"use client"
 
-import React from 'react'
-import Link from 'next/link'
-import { Shield, Lock, Eye, FileText, Mail, ArrowLeft } from 'lucide-react'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Shield, Bell, Lock, Eye, FileText, AlertCircle } from 'lucide-react';
 
-const PrivacyPage = () => {
+export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white">
-      {/* Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-40 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
-      </div>
+    <div className="bg-white text-gray-900">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .text-navy {
+          color: #1e293b;
+        }
+        
+        .bg-navy {
+          background-color: #1e293b;
+        }
+        
+        .text-orange {
+          color: #ea580c;
+        }
+        
+        .bg-orange {
+          background-color: #ea580c;
+        }
+      `}</style>
 
-      {/* Header */}
-      <header className="relative border-b border-gray-800/50 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/">
-              <div className="flex items-center space-x-3 cursor-pointer">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-xl flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">S</span>
-                </div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-                  SurFox
-                </span>
-              </div>
-            </Link>
-            <Link href="/">
-              <button className="flex items-center text-gray-300 hover:text-white transition-colors">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Home
-              </button>
-            </Link>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="relative py-20">
-        <div className="max-w-4xl mx-auto px-6">
-          {/* Header Section */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-600 to-cyan-600 rounded-2xl mb-6">
-              <Shield className="w-10 h-10 text-white" />
+      {/* Hero Section */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange/10 flex items-center justify-center">
+              <Shield className="w-8 h-8 text-orange" />
             </div>
-            <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-navy mb-6 leading-tight">
               Privacy Policy
             </h1>
-            <p className="text-xl text-gray-300">
-              Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+              Last Updated: November 4, 2025
             </p>
-          </div>
-
-          {/* Privacy Content */}
-          <div className="space-y-12">
-            {/* Introduction */}
-            <section className="bg-gradient-to-br from-gray-900/60 to-purple-900/60 rounded-2xl border border-purple-500/30 p-8 backdrop-blur-xl">
-              <h2 className="text-2xl font-bold text-white mb-4">Introduction</h2>
-              <p className="text-gray-300 leading-relaxed">
-                SurFox ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our SurFox Lead Pusher Chrome extension and our SMS automation platform.
-              </p>
-            </section>
-
-            {/* Information We Collect - Extension */}
-            <section>
-              <div className="flex items-center mb-6">
-                <Eye className="w-6 h-6 text-purple-400 mr-3" />
-                <h2 className="text-3xl font-bold text-white">Information We Collect</h2>
-              </div>
-
-              <div className="space-y-6">
-                <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                  <h3 className="text-xl font-bold text-purple-300 mb-3">Chrome Extension Data</h3>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">•</span>
-                      <span><strong>Authentication Information:</strong> Email address, password (encrypted), and authentication tokens when you log in</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">•</span>
-                      <span><strong>Selected Text Data:</strong> Contact information you highlight and choose to send to SurFox (names, phone numbers, email addresses, job titles, company names)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">•</span>
-                      <span><strong>Usage Data:</strong> Timestamps of actions taken, campaign assignments, and extension interaction data</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">•</span>
-                      <span><strong>Preferences:</strong> Extension settings including floating widget position and user preferences</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                  <h3 className="text-xl font-bold text-cyan-300 mb-3">Platform Data</h3>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-start">
-                      <span className="text-cyan-400 mr-2">•</span>
-                      <span><strong>Account Information:</strong> Name, email address, company information, and billing details</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-cyan-400 mr-2">•</span>
-                      <span><strong>Lead Data:</strong> Contact information for prospects you upload or import to our platform</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-cyan-400 mr-2">•</span>
-                      <span><strong>Conversation Data:</strong> SMS conversations conducted through our AI automation system</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-cyan-400 mr-2">•</span>
-                      <span><strong>Analytics Data:</strong> Performance metrics, qualification rates, and usage statistics</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-
-            {/* How We Use Information */}
-            <section>
-              <div className="flex items-center mb-6">
-                <Lock className="w-6 h-6 text-cyan-400 mr-3" />
-                <h2 className="text-3xl font-bold text-white">How We Use Your Information</h2>
-              </div>
-
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-2">✓</span>
-                    <span><strong>To provide our services:</strong> Process lead information, conduct AI-powered SMS conversations, and deliver qualified prospects to your team</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-2">✓</span>
-                    <span><strong>To authenticate users:</strong> Verify your identity and maintain secure access to your account</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-2">✓</span>
-                    <span><strong>To improve our AI:</strong> Analyze conversation patterns and outcomes to enhance qualification accuracy and response quality</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-2">✓</span>
-                    <span><strong>To provide analytics:</strong> Generate performance reports and insights about your outreach campaigns</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-2">✓</span>
-                    <span><strong>To communicate with you:</strong> Send service updates, support responses, and important notifications</span>
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-            {/* Data Storage and Security */}
-            <section>
-              <div className="flex items-center mb-6">
-                <FileText className="w-6 h-6 text-green-400 mr-3" />
-                <h2 className="text-3xl font-bold text-white">Data Storage and Security</h2>
-              </div>
-
-              <div className="space-y-4">
-                <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                  <h3 className="text-lg font-bold text-white mb-3">Where Your Data is Stored</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    Your data is transmitted to and stored on our secure servers at api.surfox.ai, app.surfox.com, and getsurfox.com. We use industry-standard encryption for data transmission (HTTPS/TLS) and storage.
-                  </p>
-                </div>
-
-                <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                  <h3 className="text-lg font-bold text-white mb-3">Security Measures</h3>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">•</span>
-                      <span>Encrypted data transmission using HTTPS/TLS protocols</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">•</span>
-                      <span>Secure authentication using industry-standard token-based systems</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">•</span>
-                      <span>Regular security audits and updates</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-purple-400 mr-2">•</span>
-                      <span>Access controls limiting who can view your data</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-
-            {/* Data Sharing */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">Data Sharing and Disclosure</h2>
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  We do not sell, rent, or trade your personal information to third parties. We may share your information only in the following circumstances:
-                </p>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">•</span>
-                    <span><strong>Service Providers:</strong> Third-party services that help us operate our platform (e.g., hosting, analytics)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">•</span>
-                    <span><strong>Legal Requirements:</strong> When required by law or to protect our rights and safety</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyan-400 mr-2">•</span>
-                    <span><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</span>
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-            {/* User Rights */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">Your Rights and Choices</h2>
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                <p className="text-gray-300 leading-relaxed mb-4">You have the following rights regarding your data:</p>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-2">✓</span>
-                    <span><strong>Access:</strong> Request a copy of the personal data we hold about you</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-2">✓</span>
-                    <span><strong>Correction:</strong> Request correction of inaccurate or incomplete data</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-2">✓</span>
-                    <span><strong>Deletion:</strong> Request deletion of your account and associated data</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-2">✓</span>
-                    <span><strong>Export:</strong> Request a portable copy of your data in a structured format</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-2">✓</span>
-                    <span><strong>Opt-out:</strong> Uninstall the extension and close your account at any time</span>
-                  </li>
-                </ul>
-                <p className="text-gray-300 mt-4 leading-relaxed">
-                  To exercise these rights, contact us at <a href="mailto:privacy@surfox.com" className="text-purple-400 hover:text-purple-300">privacy@surfox.com</a> or through your account settings at app.surfox.com.
-                </p>
-              </div>
-            </section>
-
-            {/* Chrome Extension Specific */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">Chrome Extension Specific Information</h2>
-              <div className="bg-gradient-to-br from-purple-900/60 to-blue-900/60 rounded-xl border border-purple-500/30 p-6 backdrop-blur-xl">
-                <h3 className="text-lg font-bold text-purple-300 mb-3">How the Extension Works</h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  The SurFox Lead Pusher extension only collects data when you explicitly take action:
-                </p>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-start">
-                    <span className="text-purple-400 mr-2">1.</span>
-                    <span>You highlight contact information on any webpage</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-purple-400 mr-2">2.</span>
-                    <span>You right-click and select "Send to SurFox"</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-purple-400 mr-2">3.</span>
-                    <span>You review and confirm the extracted data before submission</span>
-                  </li>
-                </ul>
-                <p className="text-gray-300 mt-4 leading-relaxed">
-                  The extension does not automatically collect, scan, or transmit data from websites you visit. It only processes information you explicitly select and choose to send.
-                </p>
-              </div>
-            </section>
-
-            {/* Retention */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">Data Retention</h2>
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                <p className="text-gray-300 leading-relaxed">
-                  We retain your data for as long as your account is active or as needed to provide our services. When you delete your account, we will delete or anonymize your personal data within 30 days, except where we are required to retain it for legal or regulatory purposes.
-                </p>
-              </div>
-            </section>
-
-            {/* Children's Privacy */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">Children's Privacy</h2>
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                <p className="text-gray-300 leading-relaxed">
-                  Our services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.
-                </p>
-              </div>
-            </section>
-
-            {/* Changes to Policy */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">Changes to This Privacy Policy</h2>
-              <div className="bg-gradient-to-br from-gray-900/60 to-black/60 rounded-xl border border-gray-700/50 p-6 backdrop-blur-xl">
-                <p className="text-gray-300 leading-relaxed">
-                  We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically for any changes.
-                </p>
-              </div>
-            </section>
-
-            {/* Contact */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">Contact Us</h2>
-              <div className="bg-gradient-to-br from-purple-900/60 to-blue-900/60 rounded-xl border border-purple-500/30 p-8 backdrop-blur-xl">
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  If you have any questions about this Privacy Policy or our data practices, please contact us:
-                </p>
-                <div className="space-y-3 text-gray-300">
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-purple-400 mr-3" />
-                    <span>Email: <a href="mailto:privacy@surfox.com" className="text-purple-400 hover:text-purple-300">privacy@surfox.com</a></span>
-                  </div>
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-purple-400 mr-3" />
-                    <span>General Inquiries: <a href="mailto:tom@surfox.com" className="text-purple-400 hover:text-purple-300">tom@surfox.com</a></span>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          {/* Back to Home */}
-          <div className="text-center mt-16">
-            <Link href="/">
-              <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl font-bold text-lg hover:from-purple-500 hover:to-cyan-500 transition-all shadow-lg">
-                <ArrowLeft className="w-5 h-5 mr-2" />
-                Back to Home
-              </button>
-            </Link>
-          </div>
+          </motion.div>
         </div>
-      </main>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8">
+        <div className="max-w-4xl mx-auto">
+          
+          {/* Introduction */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              SurFox ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform and services.
+            </p>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              By using SurFox, you agree to the collection and use of information in accordance with this policy.
+            </p>
+          </motion.div>
+
+          {/* SMS Consent Section - Prominent Placement */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16 bg-orange/5 border-2 border-orange/20 rounded-2xl p-8"
+          >
+            <div className="flex items-start gap-4 mb-4">
+              <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
+                <Bell className="w-6 h-6 text-orange" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-navy">
+                SMS Notifications & Consent
+              </h2>
+            </div>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+              End users explicitly consent to receive SurFox platform notifications during account creation. Consent is collected when users create a SurFox account and agree to the Terms of Service and Privacy Policy, which authorize transactional SMS notifications related to account security and platform activity. Users may opt-out at any time by replying STOP. Our Privacy Policy is publicly available here: https://www.getsurfox.com/privacy
+            </p>
+          </motion.div>
+
+          {/* Information We Collect */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
+                <FileText className="w-6 h-6 text-orange" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-navy">
+                Information We Collect
+              </h2>
+            </div>
+            
+            <div className="space-y-6 ml-16">
+              <div>
+                <h3 className="text-xl font-semibold text-navy mb-3">Personal Information</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We collect information that you provide directly to us, including:
+                </p>
+                <ul className="mt-3 space-y-2 text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-orange mt-1">•</span>
+                    <span>Name, email address, phone number, and company information</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-orange mt-1">•</span>
+                    <span>Account credentials and authentication information</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-orange mt-1">•</span>
+                    <span>Payment and billing information</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-orange mt-1">•</span>
+                    <span>Communication preferences and contact details</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-navy mb-3">Usage Data</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  We automatically collect information about your use of our platform, including:
+                </p>
+                <ul className="mt-3 space-y-2 text-gray-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-orange mt-1">•</span>
+                    <span>Device information, IP address, and browser type</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-orange mt-1">•</span>
+                    <span>Platform usage patterns and feature interactions</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-orange mt-1">•</span>
+                    <span>Conversation and communication data processed through our services</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-orange mt-1">•</span>
+                    <span>Performance metrics and analytics data</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* How We Use Your Information */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
+                <Eye className="w-6 h-6 text-orange" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-navy">
+                How We Use Your Information
+              </h2>
+            </div>
+            
+            <div className="ml-16 space-y-3 text-gray-600">
+              <p className="leading-relaxed">We use the collected information to:</p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Provide, maintain, and improve our services</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Process transactions and send transactional communications</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Send SMS notifications related to account security and platform activity</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Analyze conversation data to generate insights and intelligence</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Detect, prevent, and address technical issues and security concerns</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Comply with legal obligations and enforce our terms of service</span>
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+
+          {/* Data Security */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
+                <Lock className="w-6 h-6 text-orange" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-navy">
+                Data Security
+              </h2>
+            </div>
+            
+            <div className="ml-16 space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                We implement industry-standard security measures to protect your information, including:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>TLS encryption for data in transit and AES encryption for data at rest</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Secure infrastructure hosted on enterprise-grade cloud providers</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Regular security audits and compliance assessments</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Access controls and authentication mechanisms</span>
+                </li>
+              </ul>
+              <p>
+                While we strive to protect your information, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security but continuously work to enhance our security practices.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Data Isolation & Tenant Privacy */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
+                <Shield className="w-6 h-6 text-orange" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-navy">
+                Data Isolation & Tenant Privacy
+              </h2>
+            </div>
+            
+            <div className="ml-16 text-gray-600 leading-relaxed space-y-4">
+              <p>
+                SurFox operates with strict tenant isolation. Each organization's data is completely segregated and processed independently:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Your data is never shared with or accessible to other SurFox tenants</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Machine learning models train exclusively on your tenant's data</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Analytics and insights are generated only from your isolated dataset</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>No cross-tenant data aggregation or model training occurs</span>
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+
+          {/* Data Sharing */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
+                <AlertCircle className="w-6 h-6 text-orange" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-navy">
+                How We Share Your Information
+              </h2>
+            </div>
+            
+            <div className="ml-16 space-y-4 text-gray-600 leading-relaxed">
+              <p>We may share your information with:</p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span><strong>Service Providers:</strong> Third-party vendors who assist in operating our platform (e.g., cloud hosting, payment processing, communication services)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span><strong>Business Transfers:</strong> In connection with mergers, acquisitions, or asset sales</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span><strong>Legal Requirements:</strong> When required by law or to protect our rights and safety</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span><strong>With Your Consent:</strong> When you explicitly authorize us to share your information</span>
+                </li>
+              </ul>
+              <p>
+                We do not sell your personal information to third parties.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Your Rights */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-6">
+              Your Rights
+            </h2>
+            
+            <div className="text-gray-600 leading-relaxed space-y-4">
+              <p>Depending on your location, you may have the following rights:</p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Access, correct, or delete your personal information</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Object to or restrict certain processing of your data</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Request data portability</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Opt-out of SMS notifications by replying STOP to any message</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange mt-1">•</span>
+                  <span>Withdraw consent where processing is based on consent</span>
+                </li>
+              </ul>
+              <p>
+                To exercise these rights, please contact us at privacy@getsurfox.com
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Data Retention */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-6">
+              Data Retention
+            </h2>
+            
+            <div className="text-gray-600 leading-relaxed space-y-4">
+              <p>
+                We retain your information for as long as necessary to provide our services and fulfill the purposes outlined in this Privacy Policy. When you close your account, we will delete or anonymize your personal information within a reasonable timeframe, except where we are required to retain it for legal or regulatory purposes.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* International Transfers */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-6">
+              International Data Transfers
+            </h2>
+            
+            <div className="text-gray-600 leading-relaxed space-y-4">
+              <p>
+                Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place to protect your information in accordance with this Privacy Policy and applicable data protection laws.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Children's Privacy */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-6">
+              Children's Privacy
+            </h2>
+            
+            <div className="text-gray-600 leading-relaxed space-y-4">
+              <p>
+                Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Changes to Policy */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-6">
+              Changes to This Privacy Policy
+            </h2>
+            
+            <div className="text-gray-600 leading-relaxed space-y-4">
+              <p>
+                We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. Your continued use of our services after such modifications constitutes your acceptance of the updated Privacy Policy.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Contact */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-8"
+          >
+            <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-6">
+              Contact Us
+            </h2>
+            
+            <div className="text-gray-600 leading-relaxed space-y-4">
+              <p>
+                If you have questions about this Privacy Policy or our data practices, please contact us:
+              </p>
+              <div className="bg-gray-50 rounded-xl p-6 space-y-2">
+                <p><strong className="text-navy">Email:</strong> privacy@getsurfox.com</p>
+                <p><strong className="text-navy">Address:</strong> SurFox, Inc.</p>
+                <p><strong className="text-navy">Website:</strong> https://www.getsurfox.com</p>
+              </div>
+            </div>
+          </motion.div>
+
+        </div>
+      </section>
 
       {/* Footer */}
-      <footer className="relative border-t border-gray-800/50 backdrop-blur-xl py-8 mt-20">
-        <div className="max-w-7xl mx-auto px-6 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} SurFox. All rights reserved.</p>
+      <section className="py-12 px-4 sm:px-6 md:px-8 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+            <a href="/" className="text-base font-semibold text-navy hover:text-orange transition">
+              Home
+            </a>
+            <span className="hidden sm:block text-gray-300">•</span>
+            <a href="/terms" className="text-base font-semibold text-navy hover:text-orange transition">
+              Terms of Service
+            </a>
+            <span className="hidden sm:block text-gray-300">•</span>
+            <a href="/contact" className="text-base font-semibold text-navy hover:text-orange transition">
+              Contact
+            </a>
+          </div>
+          <p className="text-gray-500 text-sm mt-6">
+            © 2025 SurFox, Inc. All rights reserved.
+          </p>
         </div>
-      </footer>
+      </section>
     </div>
-  )
+  );
 }
-
-export default PrivacyPage
