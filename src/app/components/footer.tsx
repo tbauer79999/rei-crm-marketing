@@ -31,32 +31,38 @@ export default function Footer() {
           </div>
 
           {/* Center Section - Navigation Links */}
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-6">
-            <Link 
-              href="/about" 
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-150"
-            >
-              About
-            </Link>
-            <Link 
-              href="/platform" 
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-150"
-            >
-              Technology
-            </Link>
-            <Link 
-              href="/careers" 
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-150"
-            >
-              Careers
-            </Link>
-            <Link 
-              href="/contact" 
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-150"
-            >
-              Contact
-            </Link>
-          </div>
+<div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-6">
+  <Link 
+    href="/about" 
+    className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-150"
+  >
+    About
+  </Link>
+  <Link 
+    href="/platform" 
+    className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-150"
+  >
+    Technology
+  </Link>
+  <Link 
+    href="/careers" 
+    className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-150"
+  >
+    Careers
+  </Link>
+  <Link 
+    href="/contact" 
+    className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-150"
+  >
+    Contact
+  </Link>
+  <Link 
+    href="https://www.getsurfox.com/privacy" 
+    className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-150"
+  >
+    Privacy
+  </Link>
+</div>
 
           {/* Right Section - Legal & Copyright */}
           <div className="text-center md:text-right">
