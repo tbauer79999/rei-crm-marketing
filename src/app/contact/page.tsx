@@ -14,13 +14,21 @@ export default function Contact() {
     role: '',
     phone: '',
     interest: '',
-    message: ''
+    message: '',
+    smsConsent: false
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
+    });
+  };
+
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.checked
     });
   };
 
@@ -370,6 +378,21 @@ export default function Contact() {
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition resize-none"
                       placeholder="Tell us about your needs..."
                     />
+                  </div>
+
+                  {/* SMS Consent Checkbox */}
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      id="smsConsent"
+                      name="smsConsent"
+                      checked={formData.smsConsent}
+                      onChange={handleCheckboxChange}
+                      className="mt-1 w-4 h-4 rounded border-gray-300 text-orange focus:ring-orange focus:ring-2 focus:ring-orange/20"
+                    />
+                    <label htmlFor="smsConsent" className="text-sm text-gray-600 leading-relaxed">
+                      By submitting this form you agree to receive SMS notifications related to your SurFox account, product updates, and platform communications. Message and data rates may apply. Reply STOP to unsubscribe.
+                    </label>
                   </div>
 
                   {/* Submit Button */}
