@@ -6,7 +6,7 @@ const PLANS = {
   starter: {
     name: 'Starter',
     price: 197,
-    priceId: 'price_1RrUsuG76DDD8srY1vlotYI5',
+    priceId: 'price_1SaOOv2Mug1fO97sDD1Buqly',
     leads: '1,000 monthly messages',
     keyFeatures: [
       'AI-generated initial SMS',
@@ -20,7 +20,7 @@ const PLANS = {
   growth: {
     name: 'Growth', 
     price: 497,
-    priceId: 'price_1RrUz6G76DDD8srYjVAr3d2Y',
+    priceId: 'price_1SaOPD2Mug1fO97s0oMNNBEA',
     leads: '5,000 monthly messages',
     keyFeatures: [
       'Everything in Starter, plus:',
@@ -34,7 +34,7 @@ const PLANS = {
   scale: {
     name: 'Scale',
     price: 1997, 
-    priceId: 'price_1RrUzhG76DDD8srY21GALug4',
+    priceId: 'price_1SaOPS2Mug1fO97svlsAiEBI',
     leads: '50,000+ monthly messages',
     keyFeatures: [
       'Everything in Growth, plus:',
