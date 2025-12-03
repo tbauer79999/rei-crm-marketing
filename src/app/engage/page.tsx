@@ -75,6 +75,7 @@ export default function SurFoxRevamped() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
+                onClick={() => window.location.href = 'https://www.getsurfox.com/pricing'}
                 className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
               >
                 Get Started
@@ -616,6 +617,7 @@ export default function SurFoxRevamped() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              onClick={() => window.location.href = 'https://www.getsurfox.com/pricing'}
               className="px-10 sm:px-12 py-4 sm:py-5 rounded-lg bg-orange text-white text-lg font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-3 mx-auto"
             >
               Start Qualifying Leads Today
