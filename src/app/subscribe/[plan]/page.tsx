@@ -1,6 +1,7 @@
 'use client'
 
 import { useParams } from 'next/navigation';
+import { useEffect } from 'react';
 
 const PLANS = {
   starter: {
@@ -52,18 +53,39 @@ export default function Subscribe() {
   const plan = Array.isArray(params.plan) ? params.plan[0] : params.plan;
   const selectedPlan = plan ? PLANS[plan as keyof typeof PLANS] : null;
 
+    // Capture referral code from URL and store in localStorage
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const refCode = urlParams.get('ref');
+    if (refCode) {
+      localStorage.setItem('surfox_ref', refCode);
+    }
+  }, []);
+
   const handleSubscribe = async () => {
-    if (!selectedPlan) return;
-    
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stripe/create-checkout-session`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ priceId: selectedPlan.priceId })
-    });
-    
-    const { url } = await response.json();
-    window.location.href = url;
-  };
+  if (!selectedPlan) return;
+  
+  // Get referral code from URL OR localStorage
+  const urlParams = new URLSearchParams(window.location.search);
+  let referralCode = urlParams.get('ref');
+  
+  // If not in URL, check localStorage (set from pricing page or initial landing)
+  if (!referralCode) {
+    referralCode = localStorage.getItem('surfox_ref');
+  }
+  
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stripe/create-checkout-session`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ 
+      priceId: selectedPlan.priceId,
+      referralCode: referralCode
+    })
+  });
+  
+  const { url } = await response.json();
+  window.location.href = url;
+};
 
   if (!selectedPlan) {
     return <div className="p-8">Plan not found</div>;
