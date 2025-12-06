@@ -142,11 +142,16 @@ export default function PricingPage() {
               </div>
               
               <button
-                onClick={() => (window.location.href = 'https://www.getsurfox.com/subscribe/starter')}
-                className="w-full bg-gray-200 text-navy px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold"
-              >
-                Start Today
-              </button>
+              onClick={() => {
+                const ref = new URLSearchParams(window.location.search).get('ref');
+                window.location.href = ref 
+                  ? `https://www.getsurfox.com/subscribe/starter?ref=${ref}`
+                  : 'https://www.getsurfox.com/subscribe/starter';
+              }}
+              className="w-full bg-gray-200 text-navy px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold"
+            >
+              Start Today
+            </button>
             </div>
 
             {/* Growth - Most Popular */}
@@ -224,11 +229,16 @@ export default function PricingPage() {
               </div>
               
               <button
-                onClick={() => (window.location.href = 'https://www.getsurfox.com/subscribe/growth')}
-                className="w-full bg-orange text-white px-6 py-3 rounded-xl hover:bg-orange-600 transition-colors font-semibold"
-              >
-                Try Risk-Free
-              </button>
+              onClick={() => {
+                const ref = new URLSearchParams(window.location.search).get('ref');
+                window.location.href = ref 
+                  ? `https://www.getsurfox.com/subscribe/growth?ref=${ref}`
+                  : 'https://www.getsurfox.com/subscribe/growth';
+              }}
+              className="w-full bg-orange text-white px-6 py-3 rounded-xl hover:bg-orange-600 transition-colors font-semibold"
+            >
+              Try Risk-Free
+            </button>
             </div>
 
             {/* Scale */}
@@ -296,11 +306,16 @@ export default function PricingPage() {
               </div>
 
               <button
-                onClick={() => (window.location.href = 'https://www.getsurfox.com/subscribe/scale')}
-                className="w-full bg-gray-200 text-navy px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold"
-              >
-                Try Risk-Free
-              </button>
+              onClick={() => {
+                const ref = new URLSearchParams(window.location.search).get('ref');
+                window.location.href = ref 
+                  ? `https://www.getsurfox.com/subscribe/scale?ref=${ref}`
+                  : 'https://www.getsurfox.com/subscribe/scale';
+              }}
+              className="w-full bg-gray-200 text-navy px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold"
+            >
+              Try Risk-Free
+            </button>
             </div>
           </div>
 
