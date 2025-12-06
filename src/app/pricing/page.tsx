@@ -144,9 +144,10 @@ export default function PricingPage() {
               <button
               onClick={() => {
                 const ref = new URLSearchParams(window.location.search).get('ref');
-                window.location.href = ref 
-                  ? `https://www.getsurfox.com/subscribe/starter?ref=${ref}`
-                  : 'https://www.getsurfox.com/subscribe/starter';
+                const url = ref 
+                  ? `/subscribe/starter?ref=${ref}`
+                  : '/subscribe/starter';
+                window.location.href = url;
               }}
               className="w-full bg-gray-200 text-navy px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold"
             >
@@ -231,9 +232,10 @@ export default function PricingPage() {
               <button
               onClick={() => {
                 const ref = new URLSearchParams(window.location.search).get('ref');
-                window.location.href = ref 
-                  ? `https://www.getsurfox.com/subscribe/growth?ref=${ref}`
-                  : 'https://www.getsurfox.com/subscribe/growth';
+                const url = ref 
+                  ? `/subscribe/growth?ref=${ref}`
+                  : '/subscribe/growth';
+                window.location.href = url;
               }}
               className="w-full bg-orange text-white px-6 py-3 rounded-xl hover:bg-orange-600 transition-colors font-semibold"
             >
@@ -306,16 +308,17 @@ export default function PricingPage() {
               </div>
 
               <button
-              onClick={() => {
-                const ref = new URLSearchParams(window.location.search).get('ref');
-                window.location.href = ref 
-                  ? `https://www.getsurfox.com/subscribe/scale?ref=${ref}`
-                  : 'https://www.getsurfox.com/subscribe/scale';
-              }}
-              className="w-full bg-gray-200 text-navy px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold"
-            >
-              Try Risk-Free
-            </button>
+                onClick={() => {
+                  const ref = new URLSearchParams(window.location.search).get('ref');
+                  const url = ref 
+                    ? `/subscribe/scale?ref=${ref}`
+                    : '/subscribe/scale';
+                  window.location.href = url;
+                }}
+                className="w-full bg-gray-200 text-navy px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold"
+              >
+                Try Risk-Free
+              </button>
             </div>
           </div>
 
