@@ -101,9 +101,10 @@ function BusinessSignupContent() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          plan,
-          interval,
+          email: invitation.email,
           metadata: {
+            plan,
+            interval,
             invitation_id: invitationId,
             email: invitation.email,
             first_name: invitation.first_name,
