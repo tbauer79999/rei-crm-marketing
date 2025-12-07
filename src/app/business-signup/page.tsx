@@ -97,7 +97,7 @@ function BusinessSignupContent() {
     setProcessingPayment(true);
 
     try {
-      const response = await fetch('https://api.surfox.ai/api/stripe/create-checkout-session', {
+      const response = await fetch('/api/stripe/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -180,7 +180,7 @@ function BusinessSignupContent() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 pt-24">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -377,7 +377,7 @@ function BusinessSignupContent() {
         {/* 14-Day Trial Notice */}
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
           <p className="text-blue-900 font-medium">
-            ✨ Start with a 14-day free trial • Cancel anytime • No credit card required to start
+            ✨ 14-day free trial included • Cancel anytime
           </p>
         </div>
 
