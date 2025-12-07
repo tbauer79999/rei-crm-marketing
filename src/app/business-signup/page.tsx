@@ -254,7 +254,7 @@ function BusinessSignupContent() {
               </ul>
 
               <button
-                onClick={() => handleCheckout('starter', 'monthly')}
+                onClick={() => handleCheckout('starter', 'month')}
                 disabled={processingPayment}
                 className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50"
               >
@@ -311,7 +311,7 @@ function BusinessSignupContent() {
               </ul>
 
               <button
-                onClick={() => handleCheckout('growth', 'monthly')}
+                onClick={() => handleCheckout('growth', 'month')}
                 disabled={processingPayment}
                 className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50"
               >
@@ -365,7 +365,7 @@ function BusinessSignupContent() {
               </ul>
 
               <button
-                onClick={() => handleCheckout('scale', 'monthly')}
+                onClick={() => handleCheckout('scale', 'month')}
                 disabled={processingPayment}
                 className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50"
               >
