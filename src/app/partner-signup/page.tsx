@@ -1,0 +1,317 @@
+'use client'
+
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+
+interface PartnerInvite {
+  id: string;
+  invite_code: string;
+  partner_name: string;
+  partner_email: string;
+  partner_company: string;
+  monthly_price: number;
+  status: string;
+  expires_at: string;
+}
+
+export default function PartnerSignup() {
+  const searchParams = useSearchParams();
+  const code = searchParams.get('code');
+  
+  const [invite, setInvite] = useState<PartnerInvite | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!code) {
+      setError('No invite code provided');
+      setLoading(false);
+      return;
+    }
+
+    fetchInvite();
+  }, [code]);
+
+  const fetchInvite = async () => {
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/get-partner-invite`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`
+        },
+        body: JSON.stringify({ invite_code: code })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Invalid or expired invite code');
+      }
+
+      const data = await response.json();
+      setInvite(data);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to load invite');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSubscribe = async () => {
+    if (!invite) return;
+    
+    // Call your Stripe checkout endpoint with partner metadata
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stripe/create-checkout-session`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        customPrice: invite.monthly_price,
+        metadata: {
+          partner_invite_id: invite.id,
+          partner_invite_code: invite.invite_code,
+          role: 'partner_admin',
+          partner_company: invite.partner_company
+        }
+      })
+    });
+    
+    const { url } = await response.json();
+    window.location.href = url;
+  };
+
+  if (loading) {
+    return (
+      <>
+        <style>{`
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+          
+          * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        `}</style>
+        <div className="min-h-screen bg-white flex items-center justify-center">
+          <div className="text-center">
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-orange-600 border-r-transparent"></div>
+            <p className="mt-4 text-gray-600">Loading your partner invitation...</p>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  if (error || !invite) {
+    return (
+      <>
+        <style>{`
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+          
+          * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+          
+          .text-navy {
+            color: #1e293b;
+          }
+          
+          .bg-navy {
+            background-color: #1e293b;
+          }
+        `}</style>
+        <div className="min-h-screen bg-white flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-white rounded-2xl border-2 border-red-200 p-8 shadow-xl text-center">
+            <div className="text-6xl mb-4">⚠️</div>
+            <h1 className="text-2xl font-semibold text-navy mb-4">Invalid Invite</h1>
+            <p className="text-gray-600 mb-6">
+              {error || 'This invitation link is invalid or has expired.'}
+            </p>
+            <p className="text-sm text-gray-500">
+              Please contact your SurFox representative for a new invitation link.
+            </p>
+          </div>
+        </div>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .text-navy {
+          color: #1e293b;
+        }
+        
+        .bg-navy {
+          background-color: #1e293b;
+        }
+        
+        .text-orange {
+          color: #ea580c;
+        }
+        
+        .bg-orange {
+          background-color: #ea580c;
+        }
+
+        .text-purple {
+          color: #7c3aed;
+        }
+
+        .bg-purple {
+          background-color: #7c3aed;
+        }
+      `}</style>
+
+      <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
+        <div className="max-w-2xl w-full bg-white rounded-2xl border-2 border-purple-200 p-8 shadow-xl">
+          
+          {/* Header - Partner Badge */}
+          <div className="text-center mb-8">
+            <div className="inline-block bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-4 border-2 border-purple-300">
+              ⭐ PARTNER INVITATION
+            </div>
+            <h1 className="text-4xl font-semibold text-navy mb-2">
+              Welcome, {invite.partner_name}!
+            </h1>
+            <h2 className="text-3xl font-bold text-purple-600 mb-2">SurFox Enterprise Partner</h2>
+            <p className="text-gray-600">
+              You've been invited to join SurFox as a white-label partner
+            </p>
+          </div>
+
+          {/* Partner Info */}
+          <div className="bg-purple-50 rounded-xl p-6 mb-6 border-2 border-purple-200">
+            <div className="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <div className="text-gray-500 font-medium mb-1">Partner Company</div>
+                <div className="text-navy font-semibold">{invite.partner_company}</div>
+              </div>
+              <div>
+                <div className="text-gray-500 font-medium mb-1">Account Email</div>
+                <div className="text-navy font-semibold">{invite.partner_email}</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Plan Details */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {/* Left Column - Pricing */}
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <div className="text-center mb-4">
+                <div className="text-sm text-gray-500 font-medium mb-2">CUSTOM ENTERPRISE PRICING</div>
+                <div className="text-4xl font-bold text-navy mb-1">
+                  ${invite.monthly_price}
+                </div>
+                <div className="text-gray-600">per month</div>
+                <div className="text-purple-600 font-semibold mt-2">
+                  Unlimited messages
+                </div>
+              </div>
+              
+              {/* Trust indicators */}
+              <div className="space-y-2 text-sm text-gray-700">
+                <div className="flex items-center justify-center gap-2">
+                  <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
+                  Cancel anytime
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
+                  White-label ready
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
+                  Priority support
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Features */}
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 className="text-xl font-semibold text-navy mb-4">Enterprise Partner Benefits:</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                    <span className="text-white text-xs">✓</span>
+                  </span>
+                  <span className="text-gray-700 text-sm">Full platform white-labeling</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                    <span className="text-white text-xs">✓</span>
+                  </span>
+                  <span className="text-gray-700 text-sm">Unlimited client sub-accounts</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                    <span className="text-white text-xs">✓</span>
+                  </span>
+                  <span className="text-gray-700 text-sm">Unlimited team seats</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                    <span className="text-white text-xs">✓</span>
+                  </span>
+                  <span className="text-gray-700 text-sm">Dedicated partner success manager</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                    <span className="text-white text-xs">✓</span>
+                  </span>
+                  <span className="text-gray-700 text-sm">Custom AI training & optimization</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Next Steps */}
+          <div className="bg-purple-50 rounded-xl p-6 mb-8 border-2 border-purple-200">
+            <h3 className="text-lg font-semibold text-navy mb-4">What happens next?</h3>
+            <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-700">
+              <div className="text-center">
+                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">1</div>
+                <div>Secure checkout with Stripe</div>
+              </div>
+              <div className="text-center">
+                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">2</div>
+                <div>Partner account activation</div>
+              </div>
+              <div className="text-center">
+                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">3</div>
+                <div>Onboarding with your success manager</div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <button 
+            onClick={handleSubscribe}
+            className="w-full bg-purple-600 text-white px-8 py-4 rounded-xl hover:bg-purple-700 transition-all font-semibold text-lg shadow-lg"
+          >
+            Continue to Secure Checkout
+          </button>
+
+          {/* Security notice */}
+          <div className="text-center mt-4 text-sm text-gray-500">
+            🔒 Secured by Stripe • SSL Encrypted
+          </div>
+
+          {/* Expiry notice */}
+          <div className="text-center mt-3 text-xs text-gray-400">
+            This invitation expires on {new Date(invite.expires_at).toLocaleDateString()}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
