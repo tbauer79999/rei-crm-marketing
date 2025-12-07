@@ -135,7 +135,7 @@ export default function BusinessSignupPage() {
   const getPartnerBadge = () => {
     if (!invitation?.partner_type) return null;
 
-    const badges = {
+    const badges: Record<string, { text: string; color: string }> = {
       franchise: { text: 'Franchise Partner', color: 'bg-blue-100 text-blue-800' },
       white_label: { text: 'White Label Partner', color: 'bg-purple-100 text-purple-800' },
       enterprise: { text: 'Enterprise Partner', color: 'bg-green-100 text-green-800' }
