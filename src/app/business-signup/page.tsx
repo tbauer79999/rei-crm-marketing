@@ -1,15 +1,32 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { Check, AlertCircle, Building2, Sparkles } from 'lucide-react';
+
+interface Invitation {
+  id: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  phone_number: string;
+  role: string;
+  status: string;
+  tenant_id: string;
+  parent_tenant_id: string;
+  business_admin_discount: number;
+  partner_name: string;
+  partner_type: string;
+  expires_at: string;
+  created_at: string;
+}
 
 export default function BusinessSignupPage() {
   const searchParams = useSearchParams();
   const invitationId = searchParams.get('invitation_id');
 
   const [loading, setLoading] = useState(true);
-  const [invitation, setInvitation] = useState(null);
+  const [invitation, setInvitation] = useState<Invitation | null>(null);
   const [error, setError] = useState('');
   const [processingPayment, setProcessingPayment] = useState(false);
 
@@ -65,13 +82,18 @@ export default function BusinessSignupPage() {
     fetchInvitation();
   }, [invitationId]);
 
-  const calculateDiscountedPrice = (price) => {
+  const calculateDiscountedPrice = (price: number) => {
     if (!invitation?.business_admin_discount) return price;
     const discount = invitation.business_admin_discount / 100;
     return Math.round(price * (1 - discount));
   };
 
-  const handleCheckout = async (plan, interval) => {
+  const handleCheckout = async (plan: string, interval: string) => {
+    if (!invitation) {
+      setError('Invitation data not loaded');
+      return;
+    }
+
     setProcessingPayment(true);
 
     try {
@@ -81,17 +103,19 @@ export default function BusinessSignupPage() {
         body: JSON.stringify({
           plan,
           interval,
-          invitation_id: invitationId,
-          email: invitation.email,
-          first_name: invitation.first_name,
-          last_name: invitation.last_name,
-          phone_number: invitation.phone_number,
-          role: 'business_admin',
-          tenant_id: invitation.tenant_id,
-          parent_tenant_id: invitation.parent_tenant_id,
-          business_admin_discount: invitation.business_admin_discount,
-          partner_name: invitation.partner_name,
-          is_business_admin: 'true'
+          metadata: {
+            invitation_id: invitationId,
+            email: invitation.email,
+            first_name: invitation.first_name,
+            last_name: invitation.last_name,
+            phone_number: invitation.phone_number,
+            role: 'business_admin',
+            tenant_id: invitation.tenant_id,
+            parent_tenant_id: invitation.parent_tenant_id,
+            business_admin_discount: invitation.business_admin_discount,
+            partner_name: invitation.partner_name,
+            is_business_admin: 'true'
+          }
         })
       });
 
@@ -147,6 +171,14 @@ export default function BusinessSignupPage() {
     );
   }
 
+  if (!invitation) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -181,9 +213,7 @@ export default function BusinessSignupPage() {
         {/* Pricing Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Starter Plan */}
-          <div className={`bg-white rounded-2xl shadow-lg overflow-hidden border-2 ${
-            selectedPlan === 'starter' ? 'border-blue-500' : 'border-gray-200'
-          }`}>
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-200">
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Starter</h3>
               <p className="text-gray-600 text-sm mb-4">Perfect for getting started</p>
@@ -233,9 +263,7 @@ export default function BusinessSignupPage() {
           </div>
 
           {/* Growth Plan */}
-          <div className={`bg-white rounded-2xl shadow-xl overflow-hidden border-2 ${
-            selectedPlan === 'growth' ? 'border-blue-500' : 'border-blue-300'
-          } relative`}>
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-blue-300 relative">
             <div className="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 text-sm font-semibold rounded-bl-lg">
               RECOMMENDED
             </div>
@@ -292,9 +320,7 @@ export default function BusinessSignupPage() {
           </div>
 
           {/* Scale Plan */}
-          <div className={`bg-white rounded-2xl shadow-lg overflow-hidden border-2 ${
-            selectedPlan === 'scale' ? 'border-blue-500' : 'border-gray-200'
-          }`}>
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-200">
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Scale</h3>
               <p className="text-gray-600 text-sm mb-4">For enterprise teams</p>
