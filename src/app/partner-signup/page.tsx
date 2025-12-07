@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 interface PartnerInvite {
@@ -14,7 +14,7 @@ interface PartnerInvite {
   expires_at: string;
 }
 
-export default function PartnerSignup() {
+function PartnerSignupContent() {
   const searchParams = useSearchParams();
   const code = searchParams.get('code');
   
@@ -313,5 +313,31 @@ export default function PartnerSignup() {
         </div>
       </div>
     </>
+  );
+}
+
+export default function PartnerSignup() {
+  return (
+    <Suspense fallback={
+      <>
+        <style>{`
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+          
+          * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        `}</style>
+        <div className="min-h-screen bg-white flex items-center justify-center">
+          <div className="text-center">
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-orange-600 border-r-transparent"></div>
+            <p className="mt-4 text-gray-600">Loading...</p>
+          </div>
+        </div>
+      </>
+    }>
+      <PartnerSignupContent />
+    </Suspense>
   );
 }
