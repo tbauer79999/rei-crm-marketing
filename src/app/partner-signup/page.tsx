@@ -6,10 +6,15 @@ import { useSearchParams } from 'next/navigation';
 interface PartnerInvite {
   id: string;
   invite_code: string;
+  partner_type: string;
   partner_name: string;
   partner_email: string;
   partner_company: string;
-  monthly_price: number;
+  one_time_payment: number | null;
+  recurring_payment: number | null;
+  recurring_interval: string | null;
+  business_admin_discount: number;
+  max_business_admins: number | null;
   status: string;
   expires_at: string;
 }
@@ -60,23 +65,44 @@ function PartnerSignupContent() {
   const handleSubscribe = async () => {
     if (!invite) return;
     
-    // Call your Stripe checkout endpoint with partner metadata
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stripe/create-checkout-session`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 
-        customPrice: invite.monthly_price,
-        metadata: {
-          partner_invite_id: invite.id,
-          partner_invite_code: invite.invite_code,
-          role: 'partner_admin',
-          partner_company: invite.partner_company
-        }
-      })
-    });
-    
-    const { url } = await response.json();
-    window.location.href = url;
+    try {
+      // Call your Stripe checkout endpoint with partner metadata
+      const response = await fetch('/api/stripe/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          email: invite.partner_email,
+          metadata: {
+            partner_invite_id: invite.id,
+            partner_invite_code: invite.invite_code,
+            partner_company: invite.partner_company,
+            partner_type: invite.partner_type,
+            role: 'partner_admin',
+            is_partner: 'true',
+            one_time_payment: invite.one_time_payment,
+            recurring_payment: invite.recurring_payment,
+            recurring_interval: invite.recurring_interval,
+            business_admin_discount: invite.business_admin_discount,
+            max_business_admins: invite.max_business_admins
+          }
+        })
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to create checkout session');
+      }
+      
+      const { url } = await response.json();
+      
+      if (!url) {
+        throw new Error('No checkout URL returned');
+      }
+      
+      window.location.href = url;
+    } catch (error) {
+      console.error('Checkout error:', error);
+      alert('Failed to start checkout. Please try again.');
+    }
   };
 
   if (loading) {
@@ -209,12 +235,33 @@ function PartnerSignupContent() {
             {/* Left Column - Pricing */}
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
               <div className="text-center mb-4">
-                <div className="text-sm text-gray-500 font-medium mb-2">CUSTOM ENTERPRISE PRICING</div>
-                <div className="text-4xl font-bold text-navy mb-1">
-                  ${invite.monthly_price}
+                <div className="text-sm text-gray-500 font-medium mb-2 uppercase">
+                  {invite.partner_type.replace('_', ' ')} Partner Pricing
                 </div>
-                <div className="text-gray-600">per month</div>
-                <div className="text-purple-600 font-semibold mt-2">
+                
+                {/* One-time payment */}
+                {invite.one_time_payment && (
+                  <div className="mb-4">
+                    <div className="text-3xl font-bold text-navy mb-1">
+                      ${invite.one_time_payment.toLocaleString()}
+                    </div>
+                    <div className="text-gray-600">one-time setup fee</div>
+                  </div>
+                )}
+                
+                {/* Recurring payment */}
+                {invite.recurring_payment && (
+                  <div className={invite.one_time_payment ? 'border-t border-gray-300 pt-4' : ''}>
+                    <div className="text-3xl font-bold text-navy mb-1">
+                      ${invite.recurring_payment.toLocaleString()}
+                    </div>
+                    <div className="text-gray-600">
+                      per {invite.recurring_interval || 'month'}
+                    </div>
+                  </div>
+                )}
+                
+                <div className="text-purple-600 font-semibold mt-4">
                   Unlimited messages
                 </div>
               </div>
@@ -244,19 +291,29 @@ function PartnerSignupContent() {
                   <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
                     <span className="text-white text-xs">✓</span>
                   </span>
+                  <span className="text-gray-700 text-sm">
+                    Invite business admins with {invite.business_admin_discount}% discount
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                    <span className="text-white text-xs">✓</span>
+                  </span>
+                  <span className="text-gray-700 text-sm">
+                    {invite.max_business_admins ? `Up to ${invite.max_business_admins} business admin accounts` : 'Unlimited business admin accounts'}
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                    <span className="text-white text-xs">✓</span>
+                  </span>
                   <span className="text-gray-700 text-sm">Full platform white-labeling</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
                     <span className="text-white text-xs">✓</span>
                   </span>
-                  <span className="text-gray-700 text-sm">Unlimited client sub-accounts</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-700 text-sm">Unlimited team seats</span>
+                  <span className="text-gray-700 text-sm">Unlimited team seats per business admin</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
