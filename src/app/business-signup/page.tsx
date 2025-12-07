@@ -5,14 +5,12 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { Check, AlertCircle, Building2, Sparkles } from 'lucide-react';
 
 export default function BusinessSignupPage() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const invitationId = searchParams.get('invitation_id');
 
   const [loading, setLoading] = useState(true);
   const [invitation, setInvitation] = useState(null);
   const [error, setError] = useState('');
-  const [selectedPlan, setSelectedPlan] = useState('growth');
   const [processingPayment, setProcessingPayment] = useState(false);
 
   // Standard pricing (before discount)
@@ -23,6 +21,41 @@ export default function BusinessSignupPage() {
   };
 
   useEffect(() => {
+    const fetchInvitation = async () => {
+      try {
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/get-business-invitation`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ invitation_id: invitationId })
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch invitation');
+        }
+
+        const data = await response.json();
+
+        // Validate invitation
+        if (data.status !== 'pending') {
+          throw new Error('This invitation has already been used or expired');
+        }
+
+        if (new Date(data.expires_at) < new Date()) {
+          throw new Error('This invitation has expired. Please contact your partner administrator.');
+        }
+
+        setInvitation(data);
+        setLoading(false);
+      } catch (err) {
+        console.error('Error fetching invitation:', err);
+        setError(err instanceof Error ? err.message : 'Failed to load invitation details');
+        setLoading(false);
+      }
+    };
+
     if (!invitationId) {
       setError('Invalid invitation link. Please contact your partner administrator.');
       setLoading(false);
@@ -31,41 +64,6 @@ export default function BusinessSignupPage() {
 
     fetchInvitation();
   }, [invitationId]);
-
-  const fetchInvitation = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/get-business-invitation`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ invitation_id: invitationId })
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch invitation');
-      }
-
-      const data = await response.json();
-
-      // Validate invitation
-      if (data.status !== 'pending') {
-        throw new Error('This invitation has already been used or expired');
-      }
-
-      if (new Date(data.expires_at) < new Date()) {
-        throw new Error('This invitation has expired. Please contact your partner administrator.');
-      }
-
-      setInvitation(data);
-      setLoading(false);
-    } catch (err) {
-      console.error('Error fetching invitation:', err);
-      setError(err.message || 'Failed to load invitation details');
-      setLoading(false);
-    }
-  };
 
   const calculateDiscountedPrice = (price) => {
     if (!invitation?.business_admin_discount) return price;
