@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Mail, ArrowRight } from 'lucide-react';
+import { Mail, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -31,7 +31,7 @@ export default function Leadership() {
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              Led by operators who understand what it takes to turn human signals into actionable intelligence at scale.
+              Led by an operator who understands what it takes to turn human signals into actionable intelligence at scale.
             </p>
           </motion.div>
         </div>
@@ -67,23 +67,15 @@ export default function Leadership() {
                 {/* Profile Image Section */}
                 <div className="md:col-span-2 bg-gradient-to-br from-orange/5 to-gray-50 p-8 flex items-center justify-center">
                   <div className="relative">
-<div className="w-72 h-72 rounded-2xl bg-gradient-to-br from-orange/20 to-gray-200 flex items-center justify-center overflow-hidden">
-  <Image
-    src="/tom-bauer.jpg"
-    alt="Tom Bauer"
-    width={288}
-    height={288}
-    className="rounded-2xl object-contain bg-white p-10"
-  />
-</div>
-                    {/* Optional: Add actual image when available */}
-                    {/* <Image 
-                      src="/team/tom-bauer.jpg" 
-                      alt="Tom Bauer" 
-                      width={256} 
-                      height={256}
-                      className="rounded-2xl"
-                    /> */}
+                    <div className="w-72 h-72 rounded-2xl bg-gradient-to-br from-orange/20 to-gray-200 flex items-center justify-center overflow-hidden">
+                      <Image
+                        src="/tom-bauer.jpg"
+                        alt="Tom Bauer"
+                        width={288}
+                        height={288}
+                        className="rounded-2xl object-contain bg-white p-10"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -108,7 +100,7 @@ export default function Leadership() {
 
                   <div className="flex gap-4">
                     <a 
-                      href="mailto:tom@surfox.ai"
+                      href="mailto:tom@getsurfox.com"
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-gray-300 text-navy font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
                     >
                       <Mail className="w-5 h-5" />
@@ -132,10 +124,10 @@ export default function Leadership() {
             className="text-center mb-16 sm:mb-20 md:mb-24"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
-              Our Founding Principles
+              Founding Principles
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              The values that guide every decision we make
+              The values that guide every decision
             </p>
           </motion.div>
           
@@ -144,22 +136,22 @@ export default function Leadership() {
               { 
                 number: '01',
                 title: 'Operator-Led Development', 
-                desc: 'Built by people who have actually done the work. Every feature solves a real problem we\'ve encountered in the field.'
+                desc: 'Built by someone who has actually done the work. Every feature solves a real problem encountered in the field.'
               },
               { 
                 number: '02',
                 title: 'Intelligence Over Volume', 
-                desc: 'It\'s not about processing more data - it\'s about extracting better insights. Quality over quantity, always.'
+                desc: 'It is not about processing more data - it is about extracting better insights. Quality over quantity, always.'
               },
               { 
                 number: '03',
                 title: 'Respect for Privacy', 
-                desc: 'Complete tenant isolation isn\'t just a technical choice, it\'s a moral one. Your data remains yours, period.'
+                desc: 'Complete tenant isolation is not just a technical choice, it is a moral one. Your data remains yours, period.'
               },
               { 
                 number: '04',
                 title: 'Transparent Communication', 
-                desc: 'No hype, no empty promises. We tell you what we can do, what we\'re building, and what we can\'t do yet.'
+                desc: 'No hype, no empty promises. We tell you what we can do, what we are building, and what we cannot do yet.'
               }
             ].map((principle, i) => (
               <motion.div
@@ -189,7 +181,7 @@ export default function Leadership() {
             className="text-center mb-16 sm:mb-20"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
-              Where We're Headed
+              Where We Are Headed
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               Building the infrastructure for human interaction intelligence
@@ -209,12 +201,12 @@ export default function Leadership() {
                 </p>
                 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  We're building the platform that makes sense of it all. Not just for one use case or one industry, but as foundational infrastructure that any business can leverage to understand their customers better.
+                  I am building the platform that makes sense of it all. Not just for one use case or one industry, but as foundational infrastructure that any business can leverage to understand their customers better.
                 </p>
                 
                 <div className="bg-orange/5 border-l-4 border-orange rounded-lg p-6 my-8">
                   <p className="text-xl font-semibold text-navy mb-3">
-                    Our goal is ambitious but clear:
+                    The goal is ambitious but clear:
                   </p>
                   <p className="text-lg text-gray-700 leading-relaxed">
                     Become the intelligence layer that powers every human-to-business interaction - from sales to support, recruiting to retail, and everything in between.
@@ -222,7 +214,7 @@ export default function Leadership() {
                 </div>
 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  We're assembling a team of operators, engineers, and data scientists who share this vision. If you're someone who sees the opportunity in unstructured data and wants to help build the future of business intelligence, we want to hear from you.
+                  As SurFox grows, the team will grow with it - bringing on operators, engineers, and data scientists who share this vision and want to help build the future of business intelligence.
                 </p>
               </div>
             </motion.div>
@@ -230,7 +222,7 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Join Us CTA */}
+      {/* CTA */}
       <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -239,28 +231,27 @@ export default function Leadership() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6 sm:mb-8 px-4 leading-tight">
-              Want to Help Build SurFox?
+              Want to Connect?
             </h2>
             
             <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-              We're growing thoughtfully, bringing on people who are as committed to solving hard problems as we are. Check out our open positions or reach out directly.
+              Whether you are interested in SurFox as a customer, partner, or just want to talk about the future of human interaction intelligence - I would love to hear from you.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <Link 
-                href="/careers"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition"
               >
-                View Open Positions
+                Get in Touch
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <a 
-                href="mailto:careers@getsurfox.com"
+              <Link 
+                href="/platform"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
               >
-                <Mail className="w-5 h-5" />
-                Get in Touch
-              </a>
+                See the Platform Vision
+              </Link>
             </div>
           </motion.div>
         </div>
