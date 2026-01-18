@@ -1,21 +1,12 @@
 "use client"
 
-import React, { useRef, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Layers, Zap, Lock, Brain, Database, Workflow, FileText, Network, Shield, CheckCircle, Activity, Code, Gauge } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle, Circle, MessageSquare, BarChart3, Brain, Workflow } from 'lucide-react';
 
-export default function PlatformOverview() {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
-  });
-
-  const [hoveredLayer, setHoveredLayer] = useState<number | null>(null);
-  const [hoveredCapability, setHoveredCapability] = useState<number | null>(null);
-
+export default function PlatformPage() {
   return (
-    <div ref={containerRef} className="bg-white text-gray-900">
+    <div className="bg-white text-gray-900">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         
@@ -33,10 +24,6 @@ export default function PlatformOverview() {
           background-color: #1e293b;
         }
         
-        .border-navy {
-          border-color: #1e293b;
-        }
-        
         .text-orange {
           color: #ea580c;
         }
@@ -44,458 +31,290 @@ export default function PlatformOverview() {
         .bg-orange {
           background-color: #ea580c;
         }
-        
-        .hover-lift {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        }
-
-        @keyframes subtle-pulse {
-          0%, 100% { opacity: 0.3; }
-          50% { opacity: 0.6; }
-        }
-
-        .animate-network {
-          animation: subtle-pulse 3s ease-in-out infinite;
-        }
-
-        @keyframes data-flow {
-          0% { transform: translateY(-10px); opacity: 0; }
-          50% { opacity: 0.4; }
-          100% { transform: translateY(10px); opacity: 0; }
-        }
-
-        .data-flow {
-          animation: data-flow 2s ease-in-out infinite;
-        }
       `}</style>
 
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 relative overflow-hidden">
-        {/* Subtle animated background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-orange/5 rounded-full blur-3xl animate-network" />
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange/5 rounded-full blur-3xl animate-network" style={{ animationDelay: '1s' }} />
-        </div>
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
+      {/* Hero - The Problem */}
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
-              Built for the Future of<br className="hidden sm:block" />
-              <span className="sm:inline"> </span>Human Interaction Intelligence
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-8 leading-[1.1] tracking-tight">
+              Every customer interaction<br className="hidden sm:block" />
+              contains insight.<br className="hidden sm:block" />
+              <span className="text-gray-400">Most of it is lost.</span>
             </h1>
             
-            <p className="text-base sm:text-lg font-semibold text-orange mb-6 sm:mb-8">
-              Powered by SurFox Infinity
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Calls. Texts. Transactions. Reviews. Bookings. Support tickets. Your customers are telling you everything — but the data lives in silos, and no one sees the full picture.
             </p>
             
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              The SurFox Platform unifies data, context, and AI reasoning to understand and act on every human signal - not just conversations.
+            <p className="text-lg sm:text-xl text-navy font-medium">
+              SurFox is building the AI layer that connects it all.
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* The Vision */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-8 text-center">
+              The Vision
+            </h2>
             
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => document.getElementById('architecture')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2 mx-auto"
-            >
-              Explore the Architecture
-              <ArrowRight className="w-5 h-5" />
-            </motion.button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Architecture Overview */}
-      <section id="architecture" className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16 sm:mb-20 md:mb-24"
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
-              Architecture Overview
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              A unified AI architecture - powered by SurFox Infinity - built for clarity, security, and scale
-            </p>
-          </motion.div>
-          
-          <div className="space-y-4 sm:space-y-6 px-4 relative">
-            {/* Connecting vertical line */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-orange/20 via-orange/40 to-orange/20 -ml-px" />
-
-            {[
-              { 
-                layer: 1,
-                title: 'Applications', 
-                subtitle: 'User-Facing Layer',
-                items: ['Communication Intelligence', 'Analytics Interfaces', 'Automation Tools'],
-                icon: Layers,
-                description: 'Applications built on the SurFox Platform that interpret human interactions and deliver intelligence to end users'
-              },
-              { 
-                layer: 2,
-                title: 'Intelligence Engine', 
-                subtitle: 'AI Core',
-                items: ['LLM Orchestration', 'Contextual Memory', 'AI Tuning & Optimization'],
-                icon: Brain,
-                description: 'Advanced intelligence engine combining LLMs with predictive analytics to forecast outcomes, identify patterns, and drive data-driven decisions within each isolated tenant'
-              },
-              { 
-                layer: 3,
-                title: 'Integration Layer', 
-                subtitle: 'Signal & Data Connectors',
-                items: ['REST APIs', 'Webhooks', 'Communication Channels', 'CRM Systems', 'Transaction Data'],
-                icon: Network,
-                description: 'Flexible connectors for ingesting signals from any human interaction source'
-              },
-              { 
-                layer: 4,
-                title: 'Infrastructure', 
-                subtitle: 'Foundation & Security',
-                items: ['Supabase (Database)', 'Twilio (Communications)', 'Edge Functions', 'End-to-End Encryption'],
-                icon: Database,
-                description: 'Enterprise-grade infrastructure ensuring reliability, security, and performance'
-              }
-            ].map((layer, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                onMouseEnter={() => setHoveredLayer(i)}
-                onMouseLeave={() => setHoveredLayer(null)}
-                className="relative"
-              >
-                <div className={`
-                  p-6 sm:p-8 rounded-2xl border-2 transition-all duration-300 cursor-pointer
-                  ${hoveredLayer === i 
-                    ? 'border-orange bg-white shadow-lg scale-[1.02]' 
-                    : 'border-gray-200 bg-white hover:border-gray-300'
-                  }
-                `}>
-                  <div className="flex items-start gap-4 sm:gap-6">
-                    <div className={`
-                      w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex-shrink-0 flex items-center justify-center transition-all duration-300
-                      ${hoveredLayer === i ? 'bg-orange' : 'bg-orange/10'}
-                    `}>
-                      <layer.icon className={`w-6 h-6 sm:w-7 sm:h-7 ${hoveredLayer === i ? 'text-white' : 'text-orange'}`} />
-                    </div>
-
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className="text-xs font-semibold text-orange bg-orange/10 px-2 py-1 rounded">
-                          LAYER {layer.layer}
-                        </span>
-                        <h3 className="text-xl sm:text-2xl font-semibold text-navy">{layer.title}</h3>
-                      </div>
-                      
-                      <p className="text-sm text-orange font-medium mb-3">{layer.subtitle}</p>
-                      
-                      <p className="text-gray-600 leading-relaxed mb-4">{layer.description}</p>
-                      
-                      <div className="flex flex-wrap gap-2">
-                        {layer.items.map((item, idx) => (
-                          <span 
-                            key={idx}
-                            className="text-xs font-medium text-navy bg-gray-100 px-3 py-1.5 rounded-lg"
-                          >
-                            {item}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Show additional details on hover */}
-                  {hoveredLayer === i && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.2, ease: "easeOut" }}
-                      className="mt-4 pt-4 border-t border-orange/20"
-                    >
-                      <p className="text-sm text-gray-500 italic leading-relaxed">
-                        {layer.layer === 1 && "These applications leverage the unified intelligence engine to deliver insights directly to users across different use cases."}
-                        {layer.layer === 2 && "This layer processes and understands all incoming signals, maintaining context and learning patterns to improve over time."}
-                        {layer.layer === 3 && "Flexible APIs and connectors enable SurFox to ingest data from any source, creating a complete view of human interactions."}
-                        {layer.layer === 4 && "Enterprise-grade infrastructure ensures data security, system reliability, and seamless scalability."}
-                      </p>
-                    </motion.div>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Key Capabilities */}
-      <section className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16 sm:mb-20 md:mb-24"
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
-              Key Capabilities
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              The foundation that powers human interaction intelligence at enterprise scale
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 px-4">
-            {[
-              { 
-                icon: Brain,
-                title: 'Unified AI Core', 
-                desc: 'SurFox Infinity powers all applications with advanced predictive analytics and machine learning models. Learns from every interaction type - messages, transactions, engagements - within your isolated tenant environment to forecast outcomes and identify patterns.',
-                gradient: 'from-orange/10 to-orange/5'
-              },
-              { 
-                icon: Zap,
-                title: 'Adaptive Behavior', 
-                desc: 'Tone and personality adjust dynamically per tenant and use case, ensuring relevant and contextually appropriate responses.',
-                gradient: 'from-purple-500/10 to-purple-500/5'
-              },
-              { 
-                icon: FileText,
-                title: 'Unified Signal Memory', 
-                desc: 'Stores and leverages context from all interaction types within your tenant to enhance understanding, prediction accuracy, and decision quality over time.',
-                gradient: 'from-cyan-500/10 to-cyan-500/5'
-              },
-              { 
-                icon: Lock,
-                title: 'Secure by Design', 
-                desc: 'Multi-tenant isolation ensures complete customer data separation with enterprise-grade encryption and access controls. SurFox Infinity learns exclusively from your data within your isolated environment.',
-                gradient: 'from-emerald-500/10 to-emerald-500/5'
-              }
-            ].map((capability, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                onMouseEnter={() => setHoveredCapability(i)}
-                onMouseLeave={() => setHoveredCapability(null)}
-                className={`
-                  p-8 sm:p-10 rounded-2xl border-2 transition-all duration-300 cursor-pointer
-                  ${hoveredCapability === i 
-                    ? 'border-orange bg-gradient-to-br ' + capability.gradient + ' shadow-lg scale-[1.02]' 
-                    : 'border-gray-200 bg-white hover:border-gray-300'
-                  }
-                `}
-              >
-                <div className={`
-                  w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center mb-5 sm:mb-6 transition-all duration-300
-                  ${hoveredCapability === i ? 'bg-orange' : 'bg-orange/10'}
-                `}>
-                  <capability.icon className={`w-7 h-7 sm:w-8 sm:h-8 ${hoveredCapability === i ? 'text-white' : 'text-orange'}`} />
-                </div>
-                
-                <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">{capability.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{capability.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16 sm:mb-20 md:mb-24"
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
-              How SurFox Thinks
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Three steps to intelligent communication
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 relative px-4">
-            {/* Connecting arrows - hide on mobile */}
-            <div className="hidden md:block absolute top-24 left-1/3 right-1/3 flex items-center justify-between px-16">
-              <ArrowRight className="w-8 h-8 text-orange/30" />
-              <ArrowRight className="w-8 h-8 text-orange/30" />
+            <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-6">
+              <p>
+                Imagine a system that ingests every human interaction your business has — not just the conversations, but the transactions, the behaviors, the signals that happen before and after someone talks to you.
+              </p>
+              
+              <p>
+                A customer walks into a Walgreens and buys something. That's a signal. They call support three times in a week. That's a signal. They leave a review. They book an appointment. They ghost your sales team after three texts. All signals.
+              </p>
+              
+              <p>
+                Today, this data lives in a dozen different systems. No one connects it. No one learns from it at scale.
+              </p>
+              
+              <p className="text-navy font-medium">
+                SurFox will be the AI middle layer that ingests all of it — understands what's happening, predicts what's next, and tells you what to do about it.
+              </p>
             </div>
-
-            {[
-              { 
-                step: 1,
-                icon: Network,
-                title: 'Connect Signals', 
-                desc: 'SurFox ingests from any source - SMS, email, CRM, receipts, behavioral data, and more - creating a unified intelligence layer.',
-                color: 'orange'
-              },
-              { 
-                step: 2,
-                icon: Brain,
-                title: 'Activate AI Layer', 
-                desc: 'SurFox combines LLM analysis with statistical modeling to understand meaning, emotion, and intent - then predicts outcomes and identifies behavioral patterns invisible to traditional analytics.',
-                color: 'purple-500'
-              },
-              { 
-                step: 3,
-                icon: Activity,
-                title: 'Deliver Intelligence', 
-                desc: 'Structured insights feed back into systems or teams, enabling smarter decisions and automated responses across every touchpoint.',
-                color: 'cyan-500'
-              }
-            ].map((step, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-                className="text-center relative z-10"
-              >
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.2 + 0.2 }}
-                  className="relative mx-auto mb-6"
-                  style={{ width: 'fit-content' }}
-                >
-                  <div className={`w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-${step.color}/10 flex items-center justify-center mx-auto`}>
-                    <step.icon className={`w-10 h-10 sm:w-12 sm:h-12 text-${step.color}`} />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-orange text-white flex items-center justify-center text-sm font-bold shadow-lg">
-                    {step.step}
-                  </div>
-                </motion.div>
-
-                <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{step.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* The SurFox Engine - Technical Deep Dive */}
-      <section className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16 sm:mb-20 md:mb-24"
-          >
-            <div className="inline-block px-4 py-2 rounded-full bg-navy/5 border border-navy/20 mb-6">
-              <span className="text-sm font-semibold text-navy">TECHNICAL OVERVIEW</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
-              Inside SurFox Infinity
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              The orchestration engine driving real-time intelligence across every human interaction
-            </p>
           </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 px-4">
-            {[
-              { 
-                icon: Code,
-                title: 'LLM Orchestration', 
-                desc: 'Handles GPT model calls, prompts, and contextual adjustments as one component of SurFox Infinity. Dynamically routes requests to optimize for speed, accuracy, and cost based on task complexity.',
-                features: ['Multi-model support', 'Prompt optimization', 'Context management']
-              },
-              { 
-                icon: Gauge,
-                title: 'Predictive Analytics Engine', 
-                desc: 'Statistical models and machine learning algorithms analyze interaction patterns to forecast outcomes, predict customer behavior, and identify opportunities before they emerge.',
-                features: ['Pattern recognition', 'Behavioral forecasting', 'Anomaly detection']
-              },
-              { 
-                icon: FileText,
-                title: 'Knowledge Injection', 
-                desc: 'Merges uploaded documents and structured data into AI reasoning. Enables context-aware responses that reflect company-specific knowledge and policies.',
-                features: ['Document processing', 'Structured data integration', 'Context retrieval']
-              }
-            ].map((engine, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-6 sm:p-8 rounded-2xl border border-gray-200 bg-white hover:border-orange/30 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange/10 flex items-center justify-center mb-5">
-                  <engine.icon className="w-6 h-6 sm:w-7 sm:h-7 text-orange" />
-                </div>
-                
-                <h3 className="text-lg sm:text-xl font-semibold text-navy mb-3">{engine.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-4">{engine.desc}</p>
-                
-                <div className="space-y-2">
-                  {engine.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-orange flex-shrink-0" />
-                      <span className="text-sm text-gray-600">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Closing Section - Designed for Scale and Trust */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-gray-50 to-white">
+      {/* The Brain: Infinity */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6 sm:mb-8 px-4 leading-tight">
-              Designed for Scale and Trust
+            <div className="inline-block px-4 py-2 rounded-full bg-orange/10 border border-orange/20 mb-6">
+              <span className="text-sm font-semibold text-orange">THE ENGINE</span>
+            </div>
+            
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6">
+              SurFox Infinity
             </h2>
             
-            <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-              The SurFox Platform delivers enterprise-grade intelligence across every human interaction - architected for scale, security, and reliability. All learning occurs exclusively within your isolated tenant environment.
-            </p>
-
-            <p className="text-base sm:text-lg font-semibold text-orange mb-10 sm:mb-12 px-4">
-              Every SurFox capability - from engagement to analytics - runs on one foundation: SurFox Infinity.
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+              Infinity is the AI brain that powers everything. It ingests interaction data, learns patterns within your environment, predicts outcomes, and recommends actions. Every capability we build runs on this single foundation.
             </p>
             
-            <motion.a
-              href="#integrations"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 text-base font-semibold text-navy hover:text-orange transition group"
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
+              {[
+                { label: 'Understands', desc: 'Extracts meaning from unstructured conversations and signals' },
+                { label: 'Predicts', desc: 'Identifies patterns and forecasts what happens next' },
+                { label: 'Acts', desc: 'Automates responses and surfaces recommendations' }
+              ].map((item, i) => (
+                <div key={i} className="text-center p-6">
+                  <h3 className="text-xl font-semibold text-navy mb-2">{item.label}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* The Roadmap */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6">
+              Where We're Going
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              We're building this one layer at a time. Here's the roadmap.
+            </p>
+          </motion.div>
+          
+          <div className="space-y-6">
+            {/* Engage - Live */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
             >
-              See Integrations
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.a>
+              <div className="p-8 rounded-2xl border-2 border-orange bg-white shadow-lg">
+                <div className="flex items-start gap-6">
+                  <div className="w-14 h-14 rounded-xl bg-orange flex items-center justify-center flex-shrink-0">
+                    <MessageSquare className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-2xl font-semibold text-navy">Engage</h3>
+                      <span className="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                        LIVE NOW
+                      </span>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      AI-powered SMS lead qualification. Upload cold leads, let AI engage and score them, your team only talks to hot prospects. This is Infinity's first proof point — demonstrating that our AI can understand conversations, track intent, and take intelligent action.
+                    </p>
+                    <a 
+                      href="/engage" 
+                      className="inline-flex items-center gap-2 text-orange font-semibold hover:underline"
+                    >
+                      Learn more about Engage
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Pulse - Next */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="relative"
+            >
+              <div className="p-8 rounded-2xl border-2 border-gray-200 bg-white">
+                <div className="flex items-start gap-6">
+                  <div className="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0">
+                    <BarChart3 className="w-7 h-7 text-gray-400" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-2xl font-semibold text-navy">Pulse</h3>
+                      <span className="px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-semibold">
+                        COMING NEXT
+                      </span>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed">
+                      Real-time analytics and visibility into what's happening across all your conversations. See trends, track performance, understand what's working. Pulse turns Engage's conversation data into dashboards and insights your whole team can use.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Insights - Future */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="relative"
+            >
+              <div className="p-8 rounded-2xl border-2 border-gray-200 bg-white">
+                <div className="flex items-start gap-6">
+                  <div className="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0">
+                    <Brain className="w-7 h-7 text-gray-400" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-2xl font-semibold text-navy">Insights</h3>
+                      <span className="px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-semibold">
+                        2026
+                      </span>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed">
+                      Predictive intelligence. Not just what's happening — what's going to happen. Revenue forecasting, churn prediction, conversion optimization. Insights uses Infinity's pattern recognition to tell you what comes next and what to do about it.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Orchestrate - Future */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="relative"
+            >
+              <div className="p-8 rounded-2xl border-2 border-gray-200 bg-white">
+                <div className="flex items-start gap-6">
+                  <div className="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0">
+                    <Workflow className="w-7 h-7 text-gray-400" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-2xl font-semibold text-navy">Orchestrate</h3>
+                      <span className="px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-semibold">
+                        FUTURE
+                      </span>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed">
+                      Automated workflows that connect everything. When a lead goes cold, trigger a follow-up. When sentiment drops, escalate to a human. When a prediction fires, take action automatically. Orchestrate is the layer that turns intelligence into execution.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Beyond SMS */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 p-8 rounded-2xl bg-navy text-white text-center"
+          >
+            <h3 className="text-2xl font-semibold mb-4">Beyond SMS</h3>
+            <p className="text-gray-300 leading-relaxed max-w-2xl mx-auto">
+              Today we start with text conversations. Tomorrow, Infinity ingests calls, emails, transactions, reviews, bookings — every signal a customer sends. The architecture is built for it. We just need to prove each layer works before we add the next.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* For Investors / Enterprise */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-semibold text-navy mb-6">
+              Want to go deeper?
+            </h2>
+            
+            <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+              If you're an investor, enterprise buyer, or potential partner interested in where SurFox is headed, we'd love to talk.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <motion.a
+                href="/contact"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-8 py-4 rounded-lg bg-orange text-white font-semibold hover:bg-orange-600 transition inline-flex items-center gap-2"
+              >
+                Get in Touch
+                <ArrowRight className="w-5 h-5" />
+              </motion.a>
+              
+              <motion.a
+                href="/engage"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-8 py-4 rounded-lg border-2 border-gray-300 text-navy font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
+              >
+                See What's Live Today
+              </motion.a>
+            </div>
           </motion.div>
         </div>
       </section>

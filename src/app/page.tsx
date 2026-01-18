@@ -274,33 +274,6 @@ export default function SurFoxHome() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 md:px-8 bg-gray-50 border-t border-gray-200">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="text-navy font-semibold text-lg">SurFox</div>
-            
-            <div className="flex items-center gap-6 sm:gap-8">
-              <a href="/engage" className="text-sm font-medium text-gray-600 hover:text-orange transition">
-                Engage
-              </a>
-              <a href="/platform" className="text-sm font-medium text-gray-600 hover:text-orange transition">
-                Platform
-              </a>
-              <a href="/pricing" className="text-sm font-medium text-gray-600 hover:text-orange transition">
-                Pricing
-              </a>
-              <a href="/contact" className="text-sm font-medium text-gray-600 hover:text-orange transition">
-                Contact
-              </a>
-            </div>
-            
-            <div className="text-sm text-gray-500">
-              © 2025 SurFox AI Inc.
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
