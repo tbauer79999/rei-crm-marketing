@@ -373,7 +373,7 @@ export default function PrivacyPolicy() {
                 </li>
               </ul>
               <p>
-                To exercise these rights, please contact us at privacy@getsurfox.com
+                To exercise these rights, please contact us at tom@getsurfox.com
               </p>
             </div>
           </motion.div>
@@ -466,35 +466,13 @@ export default function PrivacyPolicy() {
                 If you have questions about this Privacy Policy or our data practices, please contact us:
               </p>
               <div className="bg-gray-50 rounded-xl p-6 space-y-2">
-                <p><strong className="text-navy">Email:</strong> privacy@getsurfox.com</p>
+                <p><strong className="text-navy">Email:</strong> tom@getsurfox.com</p>
                 <p><strong className="text-navy">Address:</strong> SurFox, Inc.</p>
                 <p><strong className="text-navy">Website:</strong> https://www.getsurfox.com</p>
               </div>
             </div>
           </motion.div>
 
-        </div>
-      </section>
-
-      {/* Footer */}
-      <section className="py-12 px-4 sm:px-6 md:px-8 bg-gray-50 border-t border-gray-200">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <Link href="/" className="text-base font-semibold text-navy hover:text-orange transition">
-              Home
-            </Link>
-            <span className="hidden sm:block text-gray-300">•</span>
-            <Link href="/terms" className="text-base font-semibold text-navy hover:text-orange transition">
-              Terms of Service
-            </Link>
-            <span className="hidden sm:block text-gray-300">•</span>
-            <Link href="/contact" className="text-base font-semibold text-navy hover:text-orange transition">
-              Contact
-            </Link>
-          </div>
-          <p className="text-gray-500 text-sm mt-6">
-            © 2025 SurFox, Inc. All rights reserved.
-          </p>
         </div>
       </section>
     </div>
