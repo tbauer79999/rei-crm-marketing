@@ -35,7 +35,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     alert('Thanks! Our sales team will contact you shortly.');
     setFormData({ name: '', email: '', company: '', message: '' });
   } catch (err) {
-    alert('Something went wrong—email info@surfox.ai and we’ll jump on it.');
+    alert('Something went wrong-email info@surfox.ai and we'll jump on it.');
   } finally {
     setSubmitting(false);
   }

@@ -98,7 +98,7 @@ export default function AIPrinciples() {
                 icon: Lock,
                 number: '01',
                 title: 'Data Privacy is Sacred', 
-                desc: 'Your data remains yours. Complete tenant isolation means no cross-customer learning, no data sharing, no exceptions. We don\'t train our models on your proprietary information.',
+                desc: 'Your data remains yours. Complete tenant isolation means no cross-customer learning, no data sharing, no exceptions. We do not train our models on your proprietary information.',
                 commitment: 'Every tenant operates in a completely isolated environment with encrypted data boundaries.'
               },
               { 
@@ -126,14 +126,14 @@ export default function AIPrinciples() {
                 icon: TrendingUp,
                 number: '05',
                 title: 'Continuous Improvement', 
-                desc: 'AI ethics isn\'t static. As we learn more about responsible AI practices, we evolve our approach. We commit to staying current with research and best practices.',
+                desc: 'AI ethics is not static. As we learn more about responsible AI practices, we evolve our approach. We commit to staying current with research and best practices.',
                 commitment: 'Annual review of AI principles with updates based on new learnings and industry standards.'
               },
               { 
                 icon: FileText,
                 number: '06',
                 title: 'Clear Use Case Boundaries', 
-                desc: 'We\'re explicit about what SurFox should and shouldn\'t be used for. Our technology is designed for business intelligence, not surveillance or manipulation.',
+                desc: 'We are explicit about what SurFox should and should not be used for. Our technology is designed for business intelligence, not surveillance or manipulation.',
                 commitment: 'Acceptable use policies prohibit harmful applications and are enforced in our terms of service.'
               }
             ].map((principle, i) => (
@@ -166,7 +166,7 @@ export default function AIPrinciples() {
         </div>
       </section>
 
-      {/* What We Don't Do */}
+      {/* What We Do Not Do */}
       <section className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -176,7 +176,7 @@ export default function AIPrinciples() {
             className="text-center mb-16 sm:mb-20 md:mb-24"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
-              What We Don't Do
+              What We Do Not Do
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               Clear boundaries on how SurFox should never be used
@@ -195,7 +195,7 @@ export default function AIPrinciples() {
               },
               { 
                 title: 'No Deceptive Automation',
-                desc: 'When SurFox assists with communication, it\'s transparent. We don\'t enable bots pretending to be humans or automated systems designed to deceive.'
+                desc: 'When SurFox assists with communication, it is transparent. We do not enable bots pretending to be humans or automated systems designed to deceive.'
               },
               { 
                 title: 'No Discriminatory Practices',
@@ -203,11 +203,11 @@ export default function AIPrinciples() {
               },
               { 
                 title: 'No Surveillance Applications',
-                desc: 'SurFox is built for business intelligence, not employee surveillance. We don\'t enable monitoring that violates reasonable privacy expectations.'
+                desc: 'SurFox is built for business intelligence, not employee surveillance. We do not enable monitoring that violates reasonable privacy expectations.'
               },
               { 
                 title: 'No Model Training on Your Data',
-                desc: 'We don\'t use your proprietary data to train foundation models that serve other customers. Your competitive intelligence remains exclusively yours.'
+                desc: 'We do not use your proprietary data to train foundation models that serve other customers. Your competitive intelligence remains exclusively yours.'
               }
             ].map((item, i) => (
               <motion.div
@@ -326,7 +326,7 @@ export default function AIPrinciples() {
                 <div>
                   <h3 className="text-lg font-semibold text-navy mb-2">Right to Explanation</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    You can request an explanation for any prediction, score, or recommendation made by SurFox. We'll explain the factors that influenced the output.
+                    You can request an explanation for any prediction, score, or recommendation made by SurFox. We will explain the factors that influenced the output.
                   </p>
                 </div>
               </div>
@@ -374,7 +374,7 @@ export default function AIPrinciples() {
                 <div>
                   <h3 className="text-lg font-semibold text-navy mb-2">Right to Opt-Out</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Disable specific AI features if they don't align with your values. Use SurFox in ways that work for your organization.
+                    Disable specific AI features if they do not align with your values. Use SurFox in ways that work for your organization.
                   </p>
                 </div>
               </div>
@@ -409,7 +409,7 @@ export default function AIPrinciples() {
             >
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  These principles aren't marketing copy - they're operational commitments. We hold ourselves accountable through:
+                  These principles are not marketing copy - they are operational commitments. We hold ourselves accountable through:
                 </p>
 
                 <ul className="space-y-4">
@@ -444,7 +444,7 @@ export default function AIPrinciples() {
                     Have concerns about how SurFox handles AI?
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    We want to hear from you. Contact our ethics team at <a href="mailto:ethics@getsurfox.com" className="text-orange font-semibold hover:underline">ethics@getsurfox.com</a>
+                    We want to hear from you. Contact us at <a href="mailto:tom@getsurfox.com" className="text-orange font-semibold hover:underline">tom@getsurfox.com</a>
                   </p>
                 </div>
               </div>
@@ -466,11 +466,11 @@ export default function AIPrinciples() {
             </h2>
             
             <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-              These aren't aspirational statements - they're how we operate every day. Building powerful AI comes with responsibility, and we take that seriously.
+              These are not aspirational statements - they are how we operate every day. Building powerful AI comes with responsibility, and we take that seriously.
             </p>
 
             <p className="text-base sm:text-lg font-semibold text-orange px-4">
-              Intelligence with integrity. That's the SurFox way.
+              Intelligence with integrity. That is the SurFox way.
             </p>
           </motion.div>
         </div>

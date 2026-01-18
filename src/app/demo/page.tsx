@@ -56,7 +56,7 @@ const SurFoxVideoDemo = () => {
     </p>
 
     <p>
-      Whether you’re solo or leading a team, every minute counts—and every lead needs real qualification. 
+      Whether you're solo or leading a team, every minute counts-and every lead needs real qualification. 
       This demo isn’t a walkthrough; it’s how you spend less time sorting and more time closing.
     </p>
 
