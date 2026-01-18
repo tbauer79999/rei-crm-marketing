@@ -48,11 +48,11 @@ export default function PlatformPage() {
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Calls. Texts. Transactions. Reviews. Support tickets. Bookings. The signals are everywhere — but they live in silos, and no one connects them.
+              Calls. Texts. Transactions. Reviews. Support tickets. Bookings. The signals are everywhere - but they live in silos, and no one connects them.
             </p>
             
             <p className="text-lg sm:text-xl text-navy font-medium">
-              SurFox is the AI layer that listens to all of it — and knows what to do next.
+              SurFox is the AI layer that listens to all of it - and knows what to do next.
             </p>
           </motion.div>
         </div>
@@ -130,7 +130,7 @@ export default function PlatformPage() {
               <h3 className="text-2xl sm:text-3xl font-semibold text-navy mb-4">Actions Out</h3>
               
               <p className="text-gray-600 leading-relaxed mb-6">
-                AI-initiated outreach, follow-ups, and automations — triggered by what SurFox learns. The system doesn't just listen. It acts.
+                AI-initiated outreach, follow-ups, and automations - triggered by what SurFox learns. The system doesn't just listen. It acts.
               </p>
               
               <div className="space-y-3 mb-6">
@@ -148,7 +148,7 @@ export default function PlatformPage() {
               </div>
               
               <div className="pt-4 border-t border-orange/20">
-                <span className="text-sm font-semibold text-orange">This is where we start — live now</span>
+                <span className="text-sm font-semibold text-orange">This is where we start - live now</span>
               </div>
             </motion.div>
           </div>
@@ -172,7 +172,7 @@ export default function PlatformPage() {
             </h2>
             
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Infinity is the AI brain underneath everything. It ingests interaction data, learns patterns within your environment, predicts outcomes, and decides what actions to take. Both sides of the platform — signals in, actions out — run on this single foundation.
+              Infinity is the AI brain underneath everything. It ingests interaction data, learns patterns within your environment, predicts outcomes, and decides what actions to take. Both sides of the platform - signals in, actions out - run on this single foundation.
             </p>
           </motion.div>
         </div>
@@ -209,7 +209,7 @@ export default function PlatformPage() {
             </h3>
             
             <p className="text-gray-600 leading-relaxed mb-6">
-              Upload cold leads. AI reaches out via SMS, has personalized conversations, scores and qualifies each one. Your sales team only talks to prospects who are ready. This is Actions Out in its first form — proving that Infinity can understand conversations, track intent, and take intelligent action.
+              Upload cold leads. AI reaches out via SMS, has personalized conversations, scores and qualifies each one. Your sales team only talks to prospects who are ready. This is Actions Out in its first form - proving that Infinity can understand conversations, track intent, and take intelligent action.
             </p>
             
             <a 
@@ -271,7 +271,7 @@ export default function PlatformPage() {
               <div>
                 <h3 className="text-lg font-semibold text-navy mb-2">Prediction</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Not just what's happening — what's going to happen. Revenue forecasting, churn prediction, conversion optimization. Infinity learns patterns and tells you what comes next.
+                  Not just what's happening - what's going to happen. Revenue forecasting, churn prediction, conversion optimization. Infinity learns patterns and tells you what comes next.
                 </p>
               </div>
             </motion.div>
@@ -289,7 +289,7 @@ export default function PlatformPage() {
               <div>
                 <h3 className="text-lg font-semibold text-navy mb-2">Automation</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Workflows that connect everything. When a lead goes cold, trigger a follow-up. When sentiment drops, escalate to a human. When a prediction fires, take action automatically — without waiting for someone to notice.
+                  Workflows that connect everything. When a lead goes cold, trigger a follow-up. When sentiment drops, escalate to a human. When a prediction fires, take action automatically - without waiting for someone to notice.
                 </p>
               </div>
             </motion.div>
@@ -307,7 +307,7 @@ export default function PlatformPage() {
               <div>
                 <h3 className="text-lg font-semibold text-navy mb-2">Multi-signal ingestion</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Today we start with SMS. But the architecture is built to ingest calls, emails, transactions, reviews, bookings — every signal a customer sends. One intelligence layer that finally sees the full picture.
+                  Today we start with SMS. But the architecture is built to ingest calls, emails, transactions, reviews, bookings - every signal a customer sends. One intelligence layer that finally sees the full picture.
                 </p>
               </div>
             </motion.div>
@@ -332,12 +332,45 @@ export default function PlatformPage() {
             </p>
             
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
-              Every interaction flowing in. Predictions surfacing before you ask. Automations running in the background. A unified view of every customer — not just leads, everyone.
+              Every interaction flowing in. Predictions surfacing before you ask. Automations running in the background. A unified view of every customer - not just leads, everyone.
             </p>
             
             <p className="text-lg sm:text-xl text-white font-medium">
               That's the operating system for how your business understands and responds to humans.
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stay in the Know */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <div className="max-w-2xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-4">
+              Want to follow along?
+            </h2>
+            
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              We're building this one layer at a time. Drop your email and we'll share updates as new capabilities go live.
+            </p>
+            
+            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="you@company.com"
+                className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-orange focus:outline-none transition"
+              />
+              <button
+                type="submit"
+                className="px-6 py-3 rounded-lg bg-navy text-white font-semibold hover:bg-gray-800 transition"
+              >
+                Stay in the know
+              </button>
+            </form>
           </motion.div>
         </div>
       </section>
@@ -355,7 +388,7 @@ export default function PlatformPage() {
             </h2>
             
             <p className="text-lg text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-              AI-powered lead qualification is ready now. Your team only talks to hot prospects. That's Actions Out in its first form — and the foundation for everything that comes next.
+              AI-powered lead qualification is ready now. Your team only talks to hot prospects. That's Actions Out in its first form - and the foundation for everything that comes next.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

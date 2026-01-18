@@ -43,12 +43,12 @@ export default function SurFoxHome() {
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
               SurFox listens to every<br className="hidden sm:block" />
-              customer signal — and knows<br className="hidden sm:block" />
+              customer signal - and knows<br className="hidden sm:block" />
               when to reach out.
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              We're building the AI layer that understands all your customer interactions and takes intelligent action. Today, that starts with outbound — upload cold leads, let AI qualify them via SMS, your team only talks to hot prospects.
+              We're building the AI layer that understands all your customer interactions and takes intelligent action. Today, that starts with outbound - upload cold leads, let AI qualify them via SMS, your team only talks to hot prospects.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
@@ -174,7 +174,7 @@ export default function SurFoxHome() {
               </div>
               <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3">Signals In</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Every customer interaction — calls, texts, transactions, reviews, support tickets, bookings — flowing into one intelligence layer.
+                Every customer interaction - calls, texts, transactions, reviews, support tickets, bookings - flowing into one intelligence layer.
               </p>
               <span className="text-sm font-medium text-gray-400">Coming soon</span>
             </motion.div>
@@ -191,7 +191,7 @@ export default function SurFoxHome() {
               </div>
               <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3">Actions Out</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                AI-initiated outreach, follow-ups, escalations, and automations — triggered by what SurFox learns about your customers.
+                AI-initiated outreach, follow-ups, escalations, and automations - triggered by what SurFox learns about your customers.
               </p>
               <span className="text-sm font-semibold text-orange">This is where we start</span>
             </motion.div>

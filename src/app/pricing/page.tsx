@@ -375,7 +375,7 @@ export default function PricingPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-orange mb-3">The Process:</h3>
                   <ul className="space-y-2 text-sm text-gray-700">
-                    <li>• Upload at least 100 quality prospects</li>
+                    <li>• Upload at least 500 quality prospects</li>
                     <li>• Allow 7-14 days for initial conversations</li>
                     <li>• Email tom@surfox.com if not satisfied</li>
                     <li>• Full refund processed within 3 business days</li>
