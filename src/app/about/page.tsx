@@ -2,8 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Target, Lightbulb, Users, TrendingUp, Shield, Zap, Brain, Eye, Heart, Rocket, Award, Globe } from 'lucide-react';
-import Image from 'next/image';
+import { Target, Lightbulb, Users, TrendingUp, Shield, Brain, Eye, Heart, Globe, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function About() {
@@ -106,7 +105,7 @@ export default function About() {
                 A future where every business decision is informed by deep customer understanding. Where AI does not replace human judgment but enhances it with visibility, foresight, and intelligence.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                We are building the foundational layer that makes this possible - one product, one customer, one insight at a time.
+                We are building the foundational layer that makes this possible - one customer, one insight at a time.
               </p>
             </motion.div>
           </div>
@@ -126,7 +125,7 @@ export default function About() {
               Why SurFox Exists
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Built by operators who lived the problem
+              Built by an operator who lived the problem
             </p>
           </motion.div>
 
@@ -138,7 +137,7 @@ export default function About() {
           >
             <div className="space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed">
-                SurFox was born from 20+ years in the trenches of sales and revenue operations. Our founder spent decades watching businesses generate massive amounts of interaction data - calls, messages, emails, transactions - and struggle to make sense of it.
+                SurFox was born from 20+ years in the trenches of sales and revenue operations. After decades watching businesses generate massive amounts of interaction data - calls, messages, emails, transactions - and struggle to make sense of it, the gap became impossible to ignore.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -208,8 +207,8 @@ export default function About() {
               },
               {
                 icon: Users,
-                title: 'Team Empowerment',
-                desc: 'We hire smart people and trust them. Autonomy, ownership, and impact matter more than hierarchy.'
+                title: 'Earn Trust Daily',
+                desc: 'Trust is not given, it is earned. Every interaction, every feature, every decision is an opportunity to prove we deserve it.'
               }
             ].map((value, i) => (
               <motion.div
@@ -232,93 +231,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* What We're Building */}
-      <section className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16 sm:mb-20"
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
-              What We Are Building
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              The product roadmap we are executing on
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 px-4">
-            {[
-              {
-                icon: Zap,
-                title: 'SurFox Engage',
-                status: 'Live Now',
-                statusColor: 'green',
-                desc: 'AI-powered conversation platform that automates lead qualification via SMS and messaging.'
-              },
-              {
-                icon: Eye,
-                title: 'SurFox Pulse',
-                status: 'In Development',
-                statusColor: 'orange',
-                desc: 'Real-time analytics and visibility into all your human interactions. See what your AI sees.'
-              },
-              {
-                icon: TrendingUp,
-                title: 'SurFox Insights',
-                status: 'In Development',
-                statusColor: 'orange',
-                desc: 'Predictive intelligence layer. Forecast trends, model outcomes, and optimize performance.'
-              }
-            ].map((product, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-6 sm:p-8 rounded-2xl border-2 border-gray-200 bg-white hover:border-orange/30 hover:shadow-lg hover-lift"
-              >
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center">
-                    <product.icon className="w-6 h-6 text-orange" />
-                  </div>
-                  <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
-                    product.statusColor === 'green' 
-                      ? 'bg-green-100 text-green-700' 
-                      : 'bg-orange/10 text-orange'
-                  }`}>
-                    {product.status}
-                  </span>
-                </div>
-                
-                <h3 className="text-xl font-semibold text-navy mb-3">{product.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{product.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-12 text-center"
-          >
-            <Link
-              href="/vision"
-              className="inline-flex items-center gap-2 text-orange font-semibold hover:gap-3 transition-all"
-            >
-              View Full Roadmap
-              <span>→</span>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Where We're Going */}
-      <section className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -339,7 +253,7 @@ export default function About() {
           >
             <div className="space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed">
-                We started with sales (SurFox Engage) because that is where the pain was most acute. But the platform we are building is designed for so much more.
+                We started with AI-powered lead qualification because that is where the pain was most acute. But the platform we are building is designed for so much more.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -365,13 +279,23 @@ export default function About() {
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our goal is ambitious but clear: become the foundational intelligence layer that powers human-to-business interaction across every industry. One unified platform, infinite applications.
               </p>
+
+              <div className="pt-4">
+                <Link
+                  href="/platform"
+                  className="inline-flex items-center gap-2 text-orange font-semibold hover:gap-3 transition-all"
+                >
+                  See the full platform vision
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Join Us Section */}
-      <section className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-white">
+      {/* Get Involved */}
+      <section className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -380,28 +304,21 @@ export default function About() {
             className="text-center mb-16 sm:mb-20"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
-              Join the Journey
+              Get Involved
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               We are just getting started
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 px-4 max-w-4xl mx-auto">
             {[
-              {
-                icon: Rocket,
-                title: 'Work With Us',
-                desc: 'We are building a world-class team. If you want to solve hard problems with great people, we want to hear from you.',
-                link: '/careers',
-                linkText: 'View Open Positions'
-              },
               {
                 icon: Users,
                 title: 'Become a Customer',
                 desc: 'Join forward-thinking companies already using SurFox to transform their customer intelligence.',
-                link: '/request-access',
-                linkText: 'Request Access'
+                link: '/pricing',
+                linkText: 'Get Started'
               },
               {
                 icon: Globe,
@@ -431,7 +348,7 @@ export default function About() {
                   className="inline-flex items-center gap-2 text-orange font-semibold hover:gap-3 transition-all"
                 >
                   {cta.linkText}
-                  <span>→</span>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
             ))}
@@ -452,7 +369,7 @@ export default function About() {
             </h2>
             
             <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-              We are building the intelligence infrastructure that every business will eventually need. Join us on this journey - as a customer, a team member, or a partner.
+              We are building the intelligence infrastructure that every business will eventually need. Join us on this journey - as a customer or a partner.
             </p>
 
             <p className="text-base sm:text-lg font-semibold text-orange px-4">
