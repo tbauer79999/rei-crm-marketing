@@ -49,6 +49,7 @@ export default function PricingPage() {
         
         .hover-lift {
           transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
         }
         
         .hover-lift:hover {
@@ -87,7 +88,7 @@ export default function PricingPage() {
               
               <div className="bg-gray-50 rounded-lg p-4 mb-6 border border-gray-200">
                 <div className="text-sm font-semibold text-navy">What you get:</div>
-                <div className="text-sm text-gray-600 mt-1">Basic AI that handles conversations but doesn't learn</div>
+                <div className="text-sm text-gray-600 mt-1">Basic AI that handles conversations but does not learn</div>
                 <div className="text-xs text-gray-500 mt-1">Still way better than mass text blasting</div>
               </div>
 
@@ -149,7 +150,7 @@ export default function PricingPage() {
                   : '/subscribe/starter';
                 window.location.href = url;
               }}
-              className="w-full bg-gray-200 text-navy px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold"
+              className="w-full bg-gray-200 text-navy px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold cursor-pointer"
             >
               Start Today
             </button>
@@ -237,7 +238,7 @@ export default function PricingPage() {
                   : '/subscribe/growth';
                 window.location.href = url;
               }}
-              className="w-full bg-orange text-white px-6 py-3 rounded-xl hover:bg-orange-600 transition-colors font-semibold"
+              className="w-full bg-orange text-white px-6 py-3 rounded-xl hover:bg-orange-600 transition-colors font-semibold cursor-pointer"
             >
               Try Risk-Free
             </button>
@@ -315,7 +316,7 @@ export default function PricingPage() {
                     : '/subscribe/scale';
                   window.location.href = url;
                 }}
-                className="w-full bg-gray-200 text-navy px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold"
+                className="w-full bg-gray-200 text-navy px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold cursor-pointer"
               >
                 Try Risk-Free
               </button>
@@ -377,15 +378,15 @@ export default function PricingPage() {
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• Upload at least 500 quality prospects</li>
                     <li>• Allow 7-14 days for initial conversations</li>
-                    <li>• Email tom@surfox.com if not satisfied</li>
+                    <li>• Email tom@getsurfox.com if not satisfied</li>
                     <li>• Full refund processed within 3 business days</li>
                   </ul>
                 </div>
               </div>
               <div className="mt-6 p-4 bg-orange/10 rounded-lg border border-orange/30">
                 <p className="text-sm text-gray-700">
-                  <strong className="text-navy">No fine print:</strong> If you're not getting qualified prospects that are worth your time to call, 
-                  we'll refund your money. That's it.
+                  <strong className="text-navy">No fine print:</strong> If you are not getting qualified prospects that are worth your time to call, 
+                  we will refund your money. That is it.
                 </p>
               </div>
             </div>
@@ -397,12 +398,12 @@ export default function PricingPage() {
             <div className="space-y-4">
               <div className="bg-white rounded-xl border border-gray-200 p-6 hover-lift">
                 <h3 className="text-lg font-semibold text-navy mb-3">What happens if I exceed my prospect limit?</h3>
-                <p className="text-gray-700">Additional prospects are $0.20 each. We'll email you when you're approaching your limit. No surprise charges - you approve any overages first.</p>
+                <p className="text-gray-700">Additional prospects are $0.20 each. We will email you when you are approaching your limit. No surprise charges - you approve any overages first.</p>
               </div>
               
               <div className="bg-white rounded-xl border border-gray-200 p-6 hover-lift">
                 <h3 className="text-lg font-semibold text-navy mb-3">How is this different from text blasting tools?</h3>
-                <p className="text-gray-700">Text blasters send identical messages to thousands of people. Our AI has unique conversations with each prospect, reads their psychology, and only escalates genuinely interested buyers. You get fewer calls, but they're all worth taking.</p>
+                <p className="text-gray-700">Text blasters send identical messages to thousands of people. Our AI has unique conversations with each prospect, reads their psychology, and only escalates genuinely interested buyers. You get fewer calls, but they are all worth taking.</p>
               </div>
               
               <div className="bg-white rounded-xl border border-gray-200 p-6 hover-lift">
@@ -417,7 +418,7 @@ export default function PricingPage() {
 
               <div className="bg-white rounded-xl border border-gray-200 p-6 hover-lift">
                 <h3 className="text-lg font-semibold text-navy mb-3">Do you offer annual discounts?</h3>
-                <p className="text-gray-700">We're focused on monthly pricing for now since we're pre-launch. Annual options may be available in 2025 after we've proven consistent value delivery.</p>
+                <p className="text-gray-700">We are focused on monthly pricing while we are early stage. Annual options may be available later in 2025 after we have proven consistent value delivery.</p>
               </div>
             </div>
           </div>
@@ -427,8 +428,8 @@ export default function PricingPage() {
             <h3 className="text-3xl font-semibold text-navy mb-4">Questions About Pricing?</h3>
             <p className="text-gray-700 mb-6 text-lg">Talk directly with our founder about which plan fits your needs.</p>
             <a 
-              href="mailto:tom@surfox.com" 
-              className="inline-flex items-center px-8 py-4 bg-orange text-white rounded-xl font-semibold hover:bg-orange-600 transition-all shadow-lg"
+              href="mailto:tom@getsurfox.com" 
+              className="inline-flex items-center px-8 py-4 bg-orange text-white rounded-xl font-semibold hover:bg-orange-600 transition-all shadow-lg cursor-pointer"
             >
               <Mail className="w-5 h-5 mr-2" />
               Email Tom Directly
