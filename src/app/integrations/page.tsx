@@ -91,6 +91,69 @@ export default function Integrations() {
                 Two-way SMS conversations powered by Twilio. A2P 10DLC compliant with full message tracking and delivery confirmation.
               </p>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.05 }}
+              className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
+                  <Calendar className="w-6 h-6 text-green-600" />
+                </div>
+                <span className="px-2 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                  LIVE
+                </span>
+              </div>
+              <h3 className="text-lg font-semibold text-navy mb-2">Google Calendar</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Sync appointments and let AI schedule meetings with qualified leads directly on your Google Calendar.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
+                  <Calendar className="w-6 h-6 text-green-600" />
+                </div>
+                <span className="px-2 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                  LIVE
+                </span>
+              </div>
+              <h3 className="text-lg font-semibold text-navy mb-2">Microsoft Calendar</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Outlook calendar integration for enterprise scheduling. AI books meetings directly into your Microsoft 365 calendar.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+              className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
+                  <ArrowRight className="w-6 h-6 text-green-600" />
+                </div>
+                <span className="px-2 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                  LIVE
+                </span>
+              </div>
+              <h3 className="text-lg font-semibold text-navy mb-2">Zapier</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Connect to 5,000+ apps via webhook. Push hot leads to your CRM, trigger workflows, or notify your team automatically.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -127,16 +190,6 @@ export default function Integrations() {
                 icon: Phone, 
                 name: 'Voice Transcription', 
                 desc: 'Ingest call recordings and transcribe them for unified conversation intelligence.'
-              },
-              { 
-                icon: Calendar, 
-                name: 'Google Calendar', 
-                desc: 'Sync appointments and let AI schedule meetings with qualified leads.'
-              },
-              { 
-                icon: Calendar, 
-                name: 'Microsoft Calendar', 
-                desc: 'Outlook calendar integration for enterprise scheduling workflows.'
               }
             ].map((integration, i) => (
               <motion.div
