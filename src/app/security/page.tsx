@@ -82,10 +82,6 @@ export default function SecurityCompliance() {
               <span className="sm:inline"> </span>Every Layer
             </h1>
             
-            <p className="text-base sm:text-lg font-semibold text-orange mb-6 sm:mb-8">
-              Powered by SurFox Infinity
-            </p>
-            
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
               Enterprise-grade protection designed for the most sensitive human interaction data. Built for compliance, architected for trust.
             </p>
