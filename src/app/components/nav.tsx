@@ -124,11 +124,8 @@ export default function Nav() {
                 <Link href="/about" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors border-b border-gray-100">
                   About SurFox
                 </Link>
-                <Link href="/leadership" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors border-b border-gray-100">
+                <Link href="/leadership" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors">
                   Leadership
-                </Link>
-                <Link href="/careers" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors">
-                  Careers
                 </Link>
               </div>
             </div>
@@ -230,7 +227,6 @@ export default function Nav() {
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Company</div>
               <Link href="/about" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">About SurFox</Link>
               <Link href="/leadership" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Leadership</Link>
-              <Link href="/careers" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Careers</Link>
             </div>
 
             {/* Learn */}
