@@ -76,7 +76,7 @@ export default function PlatformPage() {
               </p>
               
               <p>
-                A customer walks into a Walgreens and buys something. That's a signal. They call support three times in a week. That's a signal. They leave a review. They book an appointment. They ghost your sales team after three texts. All signals.
+                A customer walks into a store and buys something. That's a signal. They call support three times in a week. That's a signal. They leave a review. They book an appointment. They ghost your sales team after three texts. All signals.
               </p>
               
               <p>
