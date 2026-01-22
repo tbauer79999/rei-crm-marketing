@@ -17,6 +17,13 @@ interface PartnerInvite {
   max_business_admins: number | null;
   status: string;
   expires_at: string;
+  target_role: string;
+  custom_plan_limits: {
+    sms_limit?: number;
+    campaigns_limit?: number;
+    knowledge_docs_limit?: number;
+    ai_learning_history_limit?: number;
+  } | null;
 }
 
 function PartnerSignupContent() {
@@ -66,7 +73,6 @@ function PartnerSignupContent() {
     if (!invite) return;
     
     try {
-      // Call your Stripe checkout endpoint with partner metadata
       const response = await fetch('https://api.surfox.ai/api/stripe/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -77,13 +83,15 @@ function PartnerSignupContent() {
             partner_invite_code: invite.invite_code,
             partner_company: invite.partner_company,
             partner_type: invite.partner_type,
-            role: 'partner_admin',
-            is_partner: 'true',
+            role: invite.target_role || 'partner_admin',
+            target_role: invite.target_role || 'partner_admin',
+            is_partner: (invite.target_role || 'partner_admin') === 'partner_admin' ? 'true' : 'false',
             one_time_payment: invite.one_time_payment,
             recurring_payment: invite.recurring_payment,
             recurring_interval: invite.recurring_interval,
             business_admin_discount: invite.business_admin_discount,
-            max_business_admins: invite.max_business_admins
+            max_business_admins: invite.max_business_admins,
+            custom_plan_limits: invite.custom_plan_limits
           }
         })
       });
@@ -105,6 +113,8 @@ function PartnerSignupContent() {
     }
   };
 
+  const isPartnerAdmin = (invite?.target_role || 'partner_admin') === 'partner_admin';
+
   if (loading) {
     return (
       <>
@@ -120,7 +130,7 @@ function PartnerSignupContent() {
         <div className="min-h-screen bg-white flex items-center justify-center">
           <div className="text-center">
             <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-orange-600 border-r-transparent"></div>
-            <p className="mt-4 text-gray-600">Loading your partner invitation...</p>
+            <p className="mt-4 text-gray-600">Loading your invitation...</p>
           </div>
         </div>
       </>
@@ -202,25 +212,35 @@ function PartnerSignupContent() {
       <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
         <div className="max-w-2xl w-full bg-white rounded-2xl border-2 border-purple-200 p-8 shadow-xl">
           
-          {/* Header - Partner Badge */}
+          {/* Header */}
           <div className="text-center mb-8">
-            <div className="inline-block bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-4 border-2 border-purple-300">
-              ⭐ PARTNER INVITATION
+            <div className={`inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 border-2 ${
+              isPartnerAdmin 
+                ? 'bg-purple-100 text-purple-700 border-purple-300'
+                : 'bg-orange-100 text-orange-700 border-orange-300'
+            }`}>
+              {isPartnerAdmin ? '⭐ PARTNER INVITATION' : '🚀 CUSTOM PLAN INVITATION'}
             </div>
             <h1 className="text-4xl font-semibold text-navy mb-2">
               Welcome, {invite.partner_name}!
             </h1>
-            <h2 className="text-3xl font-bold text-purple-600 mb-2">SurFox Enterprise Partner</h2>
+            <h2 className={`text-3xl font-bold mb-2 ${isPartnerAdmin ? 'text-purple-600' : 'text-orange-600'}`}>
+              {isPartnerAdmin ? 'SurFox Enterprise Partner' : 'SurFox Custom Plan'}
+            </h2>
             <p className="text-gray-600">
-              You've been invited to join SurFox as a white-label partner
+              {isPartnerAdmin 
+                ? "You've been invited to join SurFox as an enterprise partner"
+                : "You've been invited to join SurFox with a custom plan"}
             </p>
           </div>
 
-          {/* Partner Info */}
-          <div className="bg-purple-50 rounded-xl p-6 mb-6 border-2 border-purple-200">
+          {/* Account Info */}
+          <div className={`rounded-xl p-6 mb-6 border-2 ${
+            isPartnerAdmin ? 'bg-purple-50 border-purple-200' : 'bg-orange-50 border-orange-200'
+          }`}>
             <div className="grid md:grid-cols-2 gap-4 text-sm">
               <div>
-                <div className="text-gray-500 font-medium mb-1">Partner Company</div>
+                <div className="text-gray-500 font-medium mb-1">Company</div>
                 <div className="text-navy font-semibold">{invite.partner_company}</div>
               </div>
               <div>
@@ -236,7 +256,7 @@ function PartnerSignupContent() {
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
               <div className="text-center mb-4">
                 <div className="text-sm text-gray-500 font-medium mb-2 uppercase">
-                  {invite.partner_type.replace('_', ' ')} Partner Pricing
+                  {isPartnerAdmin ? `${invite.partner_type.replace('_', ' ')} Partner Pricing` : 'Custom Pricing'}
                 </div>
                 
                 {/* One-time payment */}
@@ -260,24 +280,41 @@ function PartnerSignupContent() {
                     </div>
                   </div>
                 )}
-                
-                <div className="text-purple-600 font-semibold mt-4">
-                  Unlimited messages
-                </div>
               </div>
               
+              {/* Custom limits if present */}
+              {invite.custom_plan_limits && (
+                <div className="border-t border-gray-200 pt-4 mt-4">
+                  <div className="text-sm font-medium text-gray-700 mb-2">Your Plan Includes:</div>
+                  <div className="space-y-1 text-sm text-gray-600">
+                    {invite.custom_plan_limits.sms_limit && (
+                      <div>• {invite.custom_plan_limits.sms_limit.toLocaleString()} SMS/month</div>
+                    )}
+                    {invite.custom_plan_limits.campaigns_limit && (
+                      <div>• {invite.custom_plan_limits.campaigns_limit} campaigns</div>
+                    )}
+                    {invite.custom_plan_limits.knowledge_docs_limit && (
+                      <div>• {invite.custom_plan_limits.knowledge_docs_limit} knowledge docs</div>
+                    )}
+                    {invite.custom_plan_limits.ai_learning_history_limit && (
+                      <div>• {invite.custom_plan_limits.ai_learning_history_limit} AI learning entries</div>
+                    )}
+                  </div>
+                </div>
+              )}
+              
               {/* Trust indicators */}
-              <div className="space-y-2 text-sm text-gray-700">
+              <div className={`space-y-2 text-sm text-gray-700 ${invite.custom_plan_limits ? 'mt-4 pt-4 border-t border-gray-200' : ''}`}>
                 <div className="flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
+                  <span className={`w-2 h-2 rounded-full ${isPartnerAdmin ? 'bg-purple-600' : 'bg-orange-600'}`}></span>
+                  14-day free trial
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <span className={`w-2 h-2 rounded-full ${isPartnerAdmin ? 'bg-purple-600' : 'bg-orange-600'}`}></span>
                   Cancel anytime
                 </div>
                 <div className="flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
-                  White-label ready
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
+                  <span className={`w-2 h-2 rounded-full ${isPartnerAdmin ? 'bg-purple-600' : 'bg-orange-600'}`}></span>
                   Priority support
                 </div>
               </div>
@@ -285,44 +322,77 @@ function PartnerSignupContent() {
 
             {/* Right Column - Features */}
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="text-xl font-semibold text-navy mb-4">Enterprise Partner Benefits:</h3>
+              <h3 className="text-xl font-semibold text-navy mb-4">
+                {isPartnerAdmin ? 'Enterprise Partner Benefits:' : 'What You Get:'}
+              </h3>
               <ul className="space-y-3">
+                {isPartnerAdmin ? (
+                  <>
+                    <li className="flex items-start gap-3">
+                      <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                        <span className="text-white text-xs">✓</span>
+                      </span>
+                      <span className="text-gray-700 text-sm">
+                        Invite business admins with {invite.business_admin_discount}% discount
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                        <span className="text-white text-xs">✓</span>
+                      </span>
+                      <span className="text-gray-700 text-sm">
+                        {invite.max_business_admins ? `Up to ${invite.max_business_admins} business admin accounts` : 'Unlimited business admin accounts'}
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                        <span className="text-white text-xs">✓</span>
+                      </span>
+                      <span className="text-gray-700 text-sm">Full platform white-labeling</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                        <span className="text-white text-xs">✓</span>
+                      </span>
+                      <span className="text-gray-700 text-sm">Dedicated partner success manager</span>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li className="flex items-start gap-3">
+                      <span className="w-5 h-5 bg-orange-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                        <span className="text-white text-xs">✓</span>
+                      </span>
+                      <span className="text-gray-700 text-sm">AI-powered SMS lead qualification</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-5 h-5 bg-orange-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                        <span className="text-white text-xs">✓</span>
+                      </span>
+                      <span className="text-gray-700 text-sm">Automated follow-up sequences</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-5 h-5 bg-orange-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                        <span className="text-white text-xs">✓</span>
+                      </span>
+                      <span className="text-gray-700 text-sm">Real-time conversation analytics</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-5 h-5 bg-orange-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                        <span className="text-white text-xs">✓</span>
+                      </span>
+                      <span className="text-gray-700 text-sm">CRM integrations</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-5 h-5 bg-orange-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                        <span className="text-white text-xs">✓</span>
+                      </span>
+                      <span className="text-gray-700 text-sm">Priority support</span>
+                    </li>
+                  </>
+                )}
                 <li className="flex items-start gap-3">
-                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-700 text-sm">
-                    Invite business admins with {invite.business_admin_discount}% discount
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-700 text-sm">
-                    {invite.max_business_admins ? `Up to ${invite.max_business_admins} business admin accounts` : 'Unlimited business admin accounts'}
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-700 text-sm">Full platform white-labeling</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-700 text-sm">Unlimited team seats per business admin</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
-                    <span className="text-white text-xs">✓</span>
-                  </span>
-                  <span className="text-gray-700 text-sm">Dedicated partner success manager</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-5 h-5 bg-purple-600 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                  <span className={`w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5 ${isPartnerAdmin ? 'bg-purple-600' : 'bg-orange-600'}`}>
                     <span className="text-white text-xs">✓</span>
                   </span>
                   <span className="text-gray-700 text-sm">Custom AI training & optimization</span>
@@ -332,20 +402,22 @@ function PartnerSignupContent() {
           </div>
 
           {/* Next Steps */}
-          <div className="bg-purple-50 rounded-xl p-6 mb-8 border-2 border-purple-200">
+          <div className={`rounded-xl p-6 mb-8 border-2 ${
+            isPartnerAdmin ? 'bg-purple-50 border-purple-200' : 'bg-orange-50 border-orange-200'
+          }`}>
             <h3 className="text-lg font-semibold text-navy mb-4">What happens next?</h3>
             <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-700">
               <div className="text-center">
-                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">1</div>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold ${isPartnerAdmin ? 'bg-purple-600' : 'bg-orange-600'}`}>1</div>
                 <div>Secure checkout with Stripe</div>
               </div>
               <div className="text-center">
-                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">2</div>
-                <div>Partner account activation</div>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold ${isPartnerAdmin ? 'bg-purple-600' : 'bg-orange-600'}`}>2</div>
+                <div>Account activation</div>
               </div>
               <div className="text-center">
-                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">3</div>
-                <div>Onboarding with your success manager</div>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold ${isPartnerAdmin ? 'bg-purple-600' : 'bg-orange-600'}`}>3</div>
+                <div>Guided onboarding</div>
               </div>
             </div>
           </div>
@@ -353,7 +425,9 @@ function PartnerSignupContent() {
           {/* CTA Button */}
           <button 
             onClick={handleSubscribe}
-            className="w-full bg-purple-600 text-white px-8 py-4 rounded-xl hover:bg-purple-700 transition-all font-semibold text-lg shadow-lg"
+            className={`w-full text-white px-8 py-4 rounded-xl hover:opacity-90 transition-all font-semibold text-lg shadow-lg ${
+              isPartnerAdmin ? 'bg-purple-600 hover:bg-purple-700' : 'bg-orange-600 hover:bg-orange-700'
+            }`}
           >
             Continue to Secure Checkout
           </button>
