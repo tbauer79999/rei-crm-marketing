@@ -502,8 +502,98 @@ export default function SurFoxVsLaunchControl() {
         </div>
       </section>
 
+      {/* Lead Resurrection Section */}
+      <section className="py-20 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12 sm:mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6">
+              The Hidden Gold Mine They Miss
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              Every competitor focuses on NEW leads. SurFox finds money in the OLD leads you already own.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* Traditional Platforms */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="p-6 sm:p-8 rounded-2xl border-2 border-red-200 bg-red-50"
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-xl bg-red-500 flex items-center justify-center mr-4">
+                  <X className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-navy">Traditional Platforms</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Only work on new leads flowing in. Your old CRM database sits there gathering dust.
+                Thousands of leads you already paid for, completely ignored.
+              </p>
+            </motion.div>
+
+            {/* SurFox Advantage */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="p-6 sm:p-8 rounded-2xl border-2 border-orange bg-orange/5"
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 rounded-xl bg-orange flex items-center justify-center mr-4">
+                  <Check className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-navy">SurFox Advantage</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Upload your entire old lead database. AI finds the 3-5% who are actually ready to buy
+                but nobody ever followed up with properly. Turn yesterday's dead leads into today's deals.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* ROI Callout */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="p-6 sm:p-8 rounded-2xl border-2 border-green-200 bg-green-50 text-center"
+          >
+            <h3 className="text-2xl font-semibold text-navy mb-6">Real ROI Example</h3>
+            <div className="space-y-3 text-gray-700 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg">
+                <strong>10,000 old leads × 3% AI engagement = 300 conversations</strong>
+              </p>
+              <p className="text-base sm:text-lg">
+                <strong>300 conversations × 10% conversion = 30 qualified appointments</strong>
+              </p>
+              <p className="text-base sm:text-lg">
+                <strong>30 appointments × $3,000 avg deal = $90,000 revenue</strong>
+              </p>
+              <p className="text-sm text-gray-600 italic mt-4">
+                From leads you already owned and paid for
+              </p>
+            </div>
+            <p className="text-xl font-bold text-green-700 mt-6">
+              This is why SurFox pays for itself in month one.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Cost Comparison */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
