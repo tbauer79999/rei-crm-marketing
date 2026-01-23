@@ -18,16 +18,44 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  // keep only site-wide, non-conflicting defaults
   metadataBase: new URL("https://www.getsurfox.com"),
+  title: {
+    template: '%s | SurFox',
+    default: 'SurFox | AI-Powered Sales Conversation Intelligence',
+  },
+  description: 'Transform your sales conversations with AI-powered intelligence. SurFox analyzes calls and messages to surface insights, qualify leads faster, and close more deals.',
+  keywords: ['AI sales intelligence', 'conversation intelligence', 'sales AI', 'lead qualification', 'sales analytics', 'conversation analysis', 'sales coaching', 'CRM intelligence'],
+  authors: [{ name: 'SurFox Team' }],
+  creator: 'SurFox',
+  publisher: 'SurFox',
   openGraph: {
     siteName: "SurFox",
     type: "website",
     url: "https://www.getsurfox.com",
+    title: 'SurFox | AI-Powered Sales Conversation Intelligence',
+    description: 'Transform your sales conversations with AI-powered intelligence. SurFox analyzes calls and messages to surface insights, qualify leads faster, and close more deals.',
+    locale: 'en_US',
   },
   twitter: {
     card: "summary_large_image",
     site: "@getSurFox",
+    creator: "@getSurFox",
+    title: 'SurFox | AI-Powered Sales Conversation Intelligence',
+    description: 'Transform your sales conversations with AI-powered intelligence. SurFox analyzes calls and messages to surface insights, qualify leads faster, and close more deals.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code', // TODO: Add actual Google Search Console verification code
   },
 };
 
