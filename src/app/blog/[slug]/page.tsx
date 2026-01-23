@@ -6,18 +6,22 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Calendar, Clock, User, ArrowLeft, Share2, Linkedin, Twitter, Mail } from 'lucide-react';
 import { getBlogPostBySlug, getRelatedPosts } from '@/data/blog-posts';
+import { use } from 'react';
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default function BlogPost({ params }: BlogPostPageProps) {
   const [showShareMenu, setShowShareMenu] = useState(false);
 
+  // Unwrap the params promise
+  const { slug } = use(params);
+
   // Get the blog post based on the slug from the URL
-  const blogPost = getBlogPostBySlug(params.slug);
+  const blogPost = getBlogPostBySlug(slug);
 
   // If no blog post found, show 404
   if (!blogPost) {
