@@ -4,11 +4,14 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   author: string;
+  authorUrl?: string;
   date: string;
   readTime: string;
   category: string;
   content: ContentBlock[];
   relatedPosts?: string[]; // Array of slugs
+  metaTitle?: string; // SEO title (50-60 chars)
+  metaDescription?: string; // SEO description (150-160 chars)
 }
 
 export interface ContentBlock {
@@ -26,6 +29,9 @@ export const blogPosts: BlogPost[] = [
     date: '2025-01-15',
     readTime: '5 min read',
     author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    metaTitle: 'Future of AI in Sales: Beyond Automation | SurFox',
+    metaDescription: 'Discover how AI transforms sales from simple automation to intelligent conversation analysis. Learn about predictive insights and sales intelligence platforms.',
     content: [
       {
         type: 'paragraph',
@@ -119,6 +125,8 @@ export const blogPosts: BlogPost[] = [
     date: '2025-01-10',
     readTime: '7 min read',
     author: 'SurFox Team',
+    metaTitle: 'Conversation Intelligence Platform Guide | SurFox',
+    metaDescription: 'Learn how conversation intelligence platforms analyze sales calls and communication patterns to surface actionable insights, detect deal risks, and improve coaching.',
     content: [
       {
         type: 'paragraph',
@@ -204,6 +212,8 @@ export const blogPosts: BlogPost[] = [
     date: '2025-01-05',
     readTime: '6 min read',
     author: 'SurFox Team',
+    metaTitle: 'AI Data Privacy Best Practices for Businesses | SurFox',
+    metaDescription: 'Essential data privacy and security practices for AI platforms. Learn about tenant isolation, encryption, compliance frameworks, and protecting customer data.',
     content: [
       {
         type: 'paragraph',
@@ -269,6 +279,9 @@ export const blogPosts: BlogPost[] = [
     date: '2024-12-28',
     readTime: '4 min read',
     author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    metaTitle: 'Qualify Leads Faster with AI Analysis | SurFox',
+    metaDescription: 'Practical AI strategies to identify high-quality leads faster. Learn how conversation analysis automatically extracts qualification signals from sales calls.',
     content: [
       {
         type: 'paragraph',
@@ -346,6 +359,8 @@ export const blogPosts: BlogPost[] = [
     date: '2024-12-20',
     readTime: '5 min read',
     author: 'SurFox Team',
+    metaTitle: 'Customer-First AI Strategy Guide | SurFox Insights',
+    metaDescription: 'Build an AI strategy that prioritizes customer value. Learn how to deploy sales AI that creates better experiences and stronger customer relationships.',
     content: [
       {
         type: 'paragraph',
@@ -419,6 +434,9 @@ export const blogPosts: BlogPost[] = [
     date: '2024-12-15',
     readTime: '8 min read',
     author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    metaTitle: 'ROI of Conversation Intelligence Platforms | SurFox',
+    metaDescription: 'Quantify the business impact of conversation intelligence. Learn how to measure win rate improvements, forecast accuracy, time savings, and revenue impact.',
     content: [
       {
         type: 'paragraph',
