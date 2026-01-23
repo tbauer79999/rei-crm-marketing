@@ -1,216 +1,285 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import { ChevronDown } from 'lucide-react'
-import Link from 'next/link'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Upload, MessageSquare, TrendingUp, Users, Check, AlertCircle } from 'lucide-react';
 
-const SurFoxVideoDemo = () => {
-  const [isLoading, setIsLoading] = useState(true)
-
-  // Loading animation
-  useEffect(() => {
-    setTimeout(() => setIsLoading(false), 1000)
-  }, [])
-
-  // Smooth scroll to section
-  const scrollToSection = (index: number) => {
-    const element = document.getElementById(`section-${index}`)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }
-
-  if (isLoading) {
-    return (
-      <div className="fixed inset-0 bg-gradient-to-br from-gray-900 to-black z-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-white text-lg font-semibold">Loading Your Demo Experience...</p>
-        </div>
-      </div>
-    )
-  }
-
+export default function DemoClient() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Hero Section - Text */}
-      <section id="section-0" className="min-h-screen flex items-center justify-center relative px-4 py-20">
-        {/* Animated gradient background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 -top-48 -right-24 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-          <div className="absolute w-96 h-96 -bottom-48 -left-24 bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-        </div>
-        
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-  <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
-    Welcome to the 
-    <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-      End of Text Blasting
-    </span>
-    Your SurFox AI Demo
-  </h1>
+    <div className="bg-white text-gray-900">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-  <div className="space-y-6 text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-    <p className="text-2xl font-bold text-white">
-      Welcome! You’re about to see how SurFox replaces text blasters with agentic, psychology-aware conversations that surface real buyers.
-    </p>
+        * {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
 
-    <p>
-      Whether you're solo or leading a team, every minute counts-and every lead needs real qualification. 
-      This demo isn’t a walkthrough; it’s how you spend less time sorting and more time closing.
-    </p>
+        .text-navy {
+          color: #1e293b;
+        }
 
-    <p>
-      We know the grind: blasting thousands, generic follow-ups, and sifting through “not interested.” 
-      SurFox reads psychology, adapts tone in real time, and only escalates genuine intent.
-    </p>
+        .bg-navy {
+          background-color: #1e293b;
+        }
 
-    <p className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-      Blasts create noise. Our AI creates buyers. Watch.
-    </p>
-  </div>
-</div>
+        .text-orange {
+          color: #ea580c;
+        }
 
-        {/* Scroll indicator */}
+        .bg-orange {
+          background-color: #ea580c;
+        }
+      `}</style>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-purple-400" />
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-8 leading-tight">
+              Welcome to the{' '}
+              <span className="text-orange">End of Text Blasting</span>
+            </h1>
+
+            <p className="text-2xl sm:text-3xl font-semibold text-navy mb-8">
+              Blasts create noise. SurFox creates buyers.
+            </p>
+
+            <div className="space-y-6 text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+              <p>
+                You're about to see how SurFox replaces text blasters with intelligent, psychology-aware conversations that surface real buyers.
+              </p>
+
+              <p>
+                Whether you're solo or leading a team, every minute counts—and every lead needs real qualification.
+                This isn't a walkthrough; it's how you spend less time sorting and more time closing.
+              </p>
+
+              <p>
+                We know the grind: blasting thousands, generic follow-ups, and sifting through "not interested."
+                SurFox reads psychology, adapts tone in real time, and only escalates genuine intent.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-{/* Section 1 - Supademo Video Embed (hero-sized) */}
-<section id="section-1" className="bg-gray-900">
-  <div className="mx-auto w-full max-w-[1600px] px-4">
-    {/* Use most of the viewport height; adjust numbers to taste */}
-    <div className="relative w-full h-[82vh] md:h-[86vh]">
-      <iframe
-        src="https://app.supademo.com/embed/cmeui5tem6h8wv9kqd6x6rxev?embed_v=2&utm_source=embed"
-        loading="lazy"
-        title="Surfox Demo"
-        allow="clipboard-write"
-        frameBorder="0"
-        allowFullScreen
-        className="absolute inset-0 w-full h-full rounded-2xl shadow-2xl"
-      />
-    </div>
-  </div>
-</section>
-
-
-
-      {/* Final CTA Section */}
-      <section id="section-2" className="min-h-screen bg-gradient-to-br from-gray-900 to-black flex items-center justify-center px-4 py-20 relative overflow-hidden">
-        {/* Animated background effects */}
-        <div className="absolute inset-0">
-          <div className="absolute w-96 h-96 -top-48 -right-24 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-          <div className="absolute w-96 h-96 -bottom-48 -left-24 bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-          <div className="absolute w-96 h-96 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-        </div>
-        
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              The Choice Is Clear.
-            </span>
-            <br />
-            <span className="text-white">The Future of Sales Is Now.</span>
-          </h2>
-          
-          <div className="space-y-6 text-lg md:text-xl text-gray-300 leading-relaxed mb-12">
-  <p>
-    You’ve just seen how SurFox replaces mass blasting with agentic, psychology-aware conversations that surface real intent.
-    No generic templates. No manual sifting.
-  </p>
-
-  <p>
-    In a competitive market, sticking with a blaster is choosing noise. Your competitors are wasting hours; 
-    <span className="italic text-purple-400">*you*</span> could be closing deals. They’re chasing ghosts; 
-    <span className="italic text-purple-400">*you*</span> could be building relationships with validated prospects.
-  </p>
-
-  <p className="text-2xl font-bold text-white">
-    SurFox isn’t a “better blaster.” It’s the blaster’s replacement.
-  </p>
-
-  <p>
-    It reads personality, adapts tone in real time, learns from outcomes, and escalates only qualified prospects - 24/7.
-    Fewer messages, more meetings, clearer signal.
-  </p>
-
-  <p className="text-2xl font-bold text-white">
-    Incremental tweaks won’t cut it. This is a step-change.
-  </p>
-
-  <p>
-    Stop equating volume with results. Stop guessing. Start compounding signal with conversations that convert.
-  </p>
-
-  <p className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-    Ready to ditch the blaster and let AI deliver real buyers?
-  </p>
-
-  <p className="text-xl font-bold text-white">
-    Don’t let another qualified lead hide in the noise. Make the switch now.
-  </p>
-</div>
-
-          
-          <Link
-            href="/#pricing"
-            className="group inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-6 rounded-full font-bold text-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-pulse hover:animate-none"
+      {/* How SurFox Works - Features Showcase */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16 md:mb-20"
           >
-            <span className="mr-2">🔥</span>
-            CLICK HERE TO START 30 DAY MONEY BACK GUARANTEE
-            <span className="ml-2">🔥</span>
-          </Link>
-          
-          <div className="mt-8 flex items-center justify-center gap-6 text-sm text-gray-400">
-            <div className="flex items-center">
-              <span className="text-green-400 mr-2">✓</span>
-              Cancel anytime
-            </div>
-            <div className="flex items-center">
-              <span className="text-green-400 mr-2">✓</span>
-              30-day money back guarantee
-            </div>
-            <div className="flex items-center">
-              <span className="text-green-400 mr-2">✓</span>
-              Setup in 15 minutes
-            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6">
+              How SurFox Works
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Four steps to turning cold leads into qualified conversations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {[
+              {
+                icon: Upload,
+                title: 'Upload Leads',
+                description: 'Bulk import, Chrome extension capture, or integrate with your CRM. Get your leads into the system in seconds.'
+              },
+              {
+                icon: MessageSquare,
+                title: 'SurFox Engages',
+                description: 'AI conversations with psychological analysis. Adapts tone and approach in real-time based on prospect responses.'
+              },
+              {
+                icon: TrendingUp,
+                title: 'Hot Leads Escalate',
+                description: 'Dashboard alerts you the moment buying signals are detected. No more sifting through noise.'
+              },
+              {
+                icon: Users,
+                title: 'Your Team Closes',
+                description: 'Only talk to qualified, ready-to-buy prospects. Your time goes to deals, not dead ends.'
+              }
+            ].map((feature, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="bg-white rounded-2xl border-2 border-gray-200 p-6 sm:p-8"
+              >
+                <div className="w-12 h-12 sm:w-14 sm:h-14 mb-6 rounded-xl bg-orange/10 flex items-center justify-center">
+                  <feature.icon className="w-6 h-6 sm:w-7 sm:h-7 text-orange" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
-      
-      <style jsx>{`
-        @keyframes blob {
-          0% {
-            transform: translate(0px, 0px) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-          100% {
-            transform: translate(0px, 0px) scale(1);
-          }
-        }
-        
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-      `}</style>
-    </div>
-  )
-}
 
-export default SurFoxVideoDemo
+      {/* Why This Matters - Problem/Solution */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6">
+              The Problem With Text Blasting
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              See the difference between old-school blasting and intelligent conversations.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
+            {/* Traditional Platforms */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-gray-50 rounded-2xl border-2 border-gray-200 p-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center">
+                  <AlertCircle className="w-6 h-6 text-gray-500" />
+                </div>
+                <h3 className="text-2xl font-semibold text-navy">Traditional Platforms</h3>
+              </div>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <span className="text-gray-400 mt-1 text-xl">×</span>
+                  <span><strong className="text-navy">Generic templates</strong> - Same message to everyone, regardless of personality or intent</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-gray-400 mt-1 text-xl">×</span>
+                  <span><strong className="text-navy">Manual qualification</strong> - Your team wastes hours reading every response</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-gray-400 mt-1 text-xl">×</span>
+                  <span><strong className="text-navy">High unsubscribe rates</strong> - Prospects feel spammed and opt out immediately</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-gray-400 mt-1 text-xl">×</span>
+                  <span><strong className="text-navy">Wasted time</strong> - Chase ghosts instead of close deals</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* SurFox Approach */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-orange/5 rounded-2xl border-2 border-orange p-8"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-orange flex items-center justify-center">
+                  <Check className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold text-navy">SurFox Approach</h3>
+              </div>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-orange mt-1 flex-shrink-0" />
+                  <span><strong className="text-navy">Psychology-based conversations</strong> - Reads personality and adapts messaging in real-time</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-orange mt-1 flex-shrink-0" />
+                  <span><strong className="text-navy">Automatic qualification</strong> - SurFox identifies buying signals and escalates hot leads</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-orange mt-1 flex-shrink-0" />
+                  <span><strong className="text-navy">Higher engagement</strong> - Personalized conversations feel human, not robotic</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-orange mt-1 flex-shrink-0" />
+                  <span><strong className="text-navy">Your time on deals</strong> - Only talk to prospects who are ready to buy</span>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA / Closer */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-8 leading-tight">
+              The Choice Is Clear.<br />
+              The Future of Sales Is Now.
+            </h2>
+
+            <div className="space-y-6 text-lg sm:text-xl text-gray-600 leading-relaxed mb-12">
+              <p>
+                SurFox isn't a "better blaster." It's the blaster's replacement. It reads personality, adapts tone in real time, learns from outcomes, and escalates only qualified prospects - 24/7.
+              </p>
+
+              <p>
+                In a competitive market, sticking with a blaster is choosing noise. Your competitors are wasting hours; you could be closing deals. They're chasing ghosts; you could be building relationships with validated prospects.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+              <motion.a
+                href="/pricing"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-10 py-4 rounded-lg bg-orange text-white text-lg font-semibold hover:bg-orange-600 transition shadow-lg"
+              >
+                Start 14-Day Free Trial
+              </motion.a>
+
+              <motion.a
+                href="/contact"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-10 py-4 rounded-lg border-2 border-gray-300 text-navy text-lg font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
+              >
+                Schedule Live Demo
+              </motion.a>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <Check className="w-5 h-5 text-orange flex-shrink-0" />
+                <span>14-day free trial</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-5 h-5 text-orange flex-shrink-0" />
+                <span>30-day results guarantee</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-5 h-5 text-orange flex-shrink-0" />
+                <span>Setup in 15 minutes</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
