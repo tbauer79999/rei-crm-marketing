@@ -1,29 +1,16 @@
-'use client'
+"use client"
 
-import React, { useState, useEffect } from 'react'
-import { ArrowRight, Play, Check, X, Zap, Target, Users, TrendingUp, BarChart3, Brain, Shield, Database, Cpu, Globe, Lock, Award, ChevronDown, Terminal, GitBranch, MessageSquare, Clock, Sparkles, AlertCircle, Star, Crown, DollarSign, Workflow, Bot, User, FileText, Settings, Timer, Phone, Mail, Eye, Lightbulb, Layers, Activity } from 'lucide-react'
-import Nav from '../../components/nav'
-import Link from 'next/link'
-import Head from 'next/head'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Check, X, Brain, MessageSquare, Target, Clock, DollarSign, Sparkles, Shield, Award, Zap } from 'lucide-react';
 
-
-const SurFoxVsSmarterContact = () => {
-  const [activeFeatureSet, setActiveFeatureSet] = useState(0)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
+export default function SurFoxVsSmarterContact() {
+  const [activeFeatureSet, setActiveFeatureSet] = useState(0);
 
   const featureSets = [
     {
-      category: 'Conversion Power',
+      category: 'AI vs Templates',
       icon: Brain,
-      color: 'purple',
       features: [
         { name: 'Response Generation', surfox: 'AI creates unique conversations for each lead', smarter: 'Template-based automation only' },
         { name: 'Conversation Intelligence', surfox: 'AI remembers and learns from every conversation', smarter: 'Basic contact management, no memory' },
@@ -35,7 +22,6 @@ const SurFoxVsSmarterContact = () => {
     {
       category: 'Sales Results',
       icon: Target,
-      color: 'cyan',
       features: [
         { name: 'Appointment Setting', surfox: 'AI identifies buying signals and books qualified calls', smarter: 'Manual signal interpretation required' },
         { name: 'Lead Scoring', surfox: 'Real-time motivation and urgency scoring', smarter: 'Basic engagement tracking only' },
@@ -45,9 +31,8 @@ const SurFoxVsSmarterContact = () => {
       ]
     },
     {
-      category: 'Automation Efficiency',
+      category: 'Automation Power',
       icon: Zap,
-      color: 'blue',
       features: [
         { name: 'Setup Time', surfox: '15-minute Chrome extension setup', smarter: 'Manual list upload and configuration' },
         { name: 'Conversation Handling', surfox: 'AI manages 90% of conversations autonomously', smarter: 'All conversations require manual handling' },
@@ -59,644 +44,650 @@ const SurFoxVsSmarterContact = () => {
     {
       category: 'Business Value',
       icon: DollarSign,
-      color: 'green',
       features: [
         { name: 'Pricing Model', surfox: 'All-inclusive subscription, no usage fees', smarter: 'Base fee plus per-message costs' },
         { name: 'Time Investment', surfox: 'Minimal ongoing management required', smarter: 'Constant manual conversation monitoring' },
         { name: 'ROI Tracking', surfox: 'Full conversion tracking from lead to close', smarter: 'Basic volume and open rate metrics' },
         { name: 'Scalability', surfox: 'AI scales conversations without adding staff', smarter: 'More leads = more manual work' },
-        { name: 'Total Cost of Ownership', surfox: '$197/month all-inclusive', smarter: '$199+ base + usage fees + labor costs' }
+        { name: 'Total Cost', surfox: '$197/month all-inclusive', smarter: '$199+ base + usage fees + labor costs' }
       ]
     }
-  ]
+  ];
 
   return (
-    <>
-  <Head>
-    <title>SurFox vs Smarter Contact | AI Conversations vs Mass Blasting</title>
-    <meta
-      name="description"
-      content="Compare SurFox with Smarter Contact. See how SurFox’s AI messaging engine books qualified appointments, scores leads, and reduces costs vs template-based mass blasting."
-    />
-    <link rel="canonical" href="https://www.getsurfox.com/compare/surfox-vs-smarter-contact" />
+    <div className="bg-white text-gray-900">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-  </Head>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white overflow-hidden">
-      <Nav />
+        * {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
 
-      {/* Animated Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-40 right-40 w-60 h-60 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
-      </div>
-      
+        .text-navy {
+          color: #1e293b;
+        }
+
+        .bg-navy {
+          background-color: #1e293b;
+        }
+
+        .text-orange {
+          color: #ea580c;
+        }
+
+        .bg-orange {
+          background-color: #ea580c;
+        }
+      `}</style>
+
       {/* Hero Section */}
-      <section className="relative py-12 pt-24 lg:pt-32 min-h-screen flex items-center">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            {/* Platform Logos */}
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8 mb-12">
-              <div className="flex items-center space-x-4 p-6 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 rounded-2xl border-2 border-purple-400/50 shadow-lg shadow-purple-500/25">
-                <img src="/logo.png" alt="SurFox" className="w-12 h-12 md:w-16 md:h-16" />
-                <div className="text-left">
-                  <div className="text-2xl md:text-3xl font-bold text-white">SurFox</div>
-                  <div className="text-xs md:text-sm text-purple-300">AI Conversion Engine</div>
-                </div>
-              </div>
-              
-              <div className="text-gray-400 text-2xl md:text-4xl font-bold">VS</div>
-              
-              <div className="flex items-center space-x-4 p-4 bg-gradient-to-br from-gray-800/40 to-gray-700/40 rounded-2xl border border-gray-600/30">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gray-600/50 rounded-2xl flex items-center justify-center">
-                  <MessageSquare className="w-6 h-6 md:w-8 md:h-8 text-gray-400" />
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
+        <div className="max-w-5xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            {/* Platform Comparison */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+              <div className="flex items-center gap-3 p-4 rounded-2xl border-2 border-orange bg-orange/5">
+                <div className="w-12 h-12 rounded-xl bg-orange flex items-center justify-center">
+                  <Brain className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-left">
-                  <div className="text-2xl md:text-3xl font-bold text-gray-400">Smarter Contact</div>
-                  <div className="text-xs md:text-sm text-gray-500">Mass Messaging</div>
+                  <div className="text-2xl font-semibold text-navy">SurFox</div>
+                  <div className="text-sm text-gray-600">AI Conversion Engine</div>
                 </div>
               </div>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                5x More Appointments
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-                vs Mass Blasting
-              </span>
-            </h1>
-            
-            <div className="text-lg md:text-2xl text-purple-200 space-y-4 mb-8">
-              <p><strong className="text-white">Most platforms blast thousands and pray for replies.</strong></p>
-              <p><strong className="text-cyan-400">SurFox has AI conversations that book qualified appointments.</strong></p>
-              <p className="text-base md:text-lg text-gray-300">
-                Same cost. Dramatically better results.
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-12">
-              <button className="group relative px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl font-bold text-base md:text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative flex items-center justify-center">
-                  <Link href="https://www.getsurfox.com/#pricing">Stop Blasting, Start Converting</Link>
-                  <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+
+              <div className="text-3xl font-semibold text-gray-400">VS</div>
+
+              <div className="flex items-center gap-3 p-4 rounded-2xl border-2 border-gray-200 bg-gray-50">
+                <div className="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center">
+                  <MessageSquare className="w-6 h-6 text-gray-500" />
                 </div>
-              </button>
-              <a href="#demo" className="px-6 md:px-8 py-3 md:py-4 border-2 border-gray-500/50 rounded-2xl font-bold text-base md:text-lg backdrop-blur-sm hover:bg-gray-500/20 transition-all duration-300">
-                <Play className="mr-2 w-4 h-4 md:w-5 md:h-5 inline" />
-                <Link href="/demo">See the Difference</Link>
-              </a>
+                <div className="text-left">
+                  <div className="text-2xl font-semibold text-gray-600">Smarter Contact</div>
+                  <div className="text-sm text-gray-500">Mass Messaging</div>
+                </div>
+              </div>
             </div>
 
-            {/* Key Stats Preview */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 backdrop-blur-xl rounded-2xl border-2 border-purple-400/50 p-4 md:p-6 text-center shadow-2xl shadow-purple-500/25">
-                <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">$197</div>
-                <div className="text-sm text-purple-200">SurFox All-Inclusive</div>
-                <div className="text-xs text-gray-400 mt-2">vs $199+ base + usage</div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
+              5x More Appointments<br className="hidden sm:block" />
+              vs Mass Blasting
+            </h1>
+
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+              <strong className="text-navy">Most platforms blast thousands and pray for replies.</strong>
+            </p>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+              <strong className="text-orange">SurFox has AI conversations that book qualified appointments.</strong>
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
+              <motion.a
+                href="/pricing"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
+              >
+                Stop Blasting, Start Converting
+                <ArrowRight className="w-5 h-5" />
+              </motion.a>
+
+              <motion.a
+                href="/contact"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
+              >
+                See the Difference
+              </motion.a>
+            </div>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4">
+              <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
+                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">$197</div>
+                <div className="text-sm text-gray-600">SurFox All-Inclusive</div>
+                <div className="text-xs text-gray-400 mt-1">vs $199+ Smarter</div>
               </div>
-              <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 backdrop-blur-xl rounded-2xl border-2 border-purple-400/50 p-4 md:p-6 text-center shadow-2xl shadow-purple-500/25">
-                <div className="text-2xl md:text-3xl font-bold text-purple-400 mb-2">90%</div>
-                <div className="text-sm text-purple-200">AI Automation</div>
-                <div className="text-xs text-gray-400 mt-2">vs 100% manual work</div>
+              <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
+                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">90%</div>
+                <div className="text-sm text-gray-600">AI Automation</div>
+                <div className="text-xs text-gray-400 mt-1">vs manual work</div>
               </div>
-              <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 backdrop-blur-xl rounded-2xl border-2 border-purple-400/50 p-4 md:p-6 text-center shadow-2xl shadow-purple-500/25">
-                <div className="text-2xl md:text-3xl font-bold text-green-400 mb-2">15min</div>
-                <div className="text-sm text-purple-200">Setup Time</div>
-                <div className="text-xs text-gray-400 mt-2">vs hours of templates</div>
+              <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
+                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">5x</div>
+                <div className="text-sm text-gray-600">Better Results</div>
+                <div className="text-xs text-gray-400 mt-1">vs mass blasting</div>
+              </div>
+              <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
+                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">15min</div>
+                <div className="text-sm text-gray-600">Setup Time</div>
+                <div className="text-xs text-gray-400 mt-1">vs hours of setup</div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Philosophy Comparison */}
-      <section className="relative py-16 md:py-20 bg-gradient-to-r from-gray-900/50 to-slate-900/50 backdrop-blur-xl border-y border-gray-500/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
+      {/* Core Difference */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
               Two Completely Different Approaches
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               Smarter Contact focuses on volume and templates. SurFox focuses on AI conversations that actually close deals.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
-            {/* Smarter Contact Approach */}
-            <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 rounded-2xl border border-gray-500/30 p-6 md:p-8 backdrop-blur-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
+            {/* Smarter Contact */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="p-6 sm:p-8 rounded-2xl border-2 border-gray-200 bg-white"
+            >
               <div className="flex items-center mb-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-600/50 rounded-xl flex items-center justify-center mr-4">
-                  <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-gray-400" />
+                <div className="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center mr-4">
+                  <MessageSquare className="w-6 h-6 text-gray-500" />
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-300">Smarter Contact</h3>
-                  <p className="text-gray-400 text-sm md:text-base">Mass Messaging Approach</p>
+                  <h3 className="text-xl font-semibold text-navy">Smarter Contact</h3>
+                  <p className="text-sm text-gray-600">Mass Messaging Approach</p>
                 </div>
               </div>
-              
-              <div className="space-y-4">
-                <div className="bg-gray-700/40 border border-gray-500/30 rounded-xl p-3 md:p-4">
-                  <h4 className="font-semibold text-gray-300 mb-2 text-sm md:text-base">The Problem They Solve:</h4>
-                  <p className="text-xs md:text-sm text-gray-400">"I need to send thousands of messages and hope some people respond"</p>
+
+              <div className="space-y-4 mb-6">
+                <div className="p-4 rounded-xl border border-gray-200 bg-gray-50">
+                  <h4 className="font-semibold text-navy mb-2 text-sm">The Problem They Solve:</h4>
+                  <p className="text-sm text-gray-700">"I need to send thousands of messages and hope some people respond"</p>
                 </div>
-                
+
                 <div className="space-y-3">
-                  <div className="flex items-start text-gray-300 text-sm md:text-base">
-                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-gray-700">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
                     <span>Bulk messaging capabilities</span>
                   </div>
-                  <div className="flex items-start text-gray-300 text-sm md:text-base">
-                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-gray-700">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
                     <span>Template library for messages</span>
                   </div>
-                  <div className="flex items-start text-gray-400 text-sm md:text-base">
-                    <X className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-red-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-gray-600">
+                    <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
                     <span>All responses require manual handling</span>
                   </div>
-                  <div className="flex items-start text-gray-400 text-sm md:text-base">
-                    <X className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-red-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-gray-600">
+                    <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
                     <span>No conversation memory or learning</span>
                   </div>
-                  <div className="flex items-start text-gray-400 text-sm md:text-base">
-                    <X className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-red-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-gray-600">
+                    <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
                     <span>Usage fees add up quickly</span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 p-3 md:p-4 bg-gray-700/40 border border-gray-500/30 rounded-xl">
-                <p className="text-gray-300 text-xs md:text-sm font-medium">
-                  <strong>Best For:</strong> Teams that want to send high volumes and manually handle all responses
+              <div className="p-4 rounded-xl border border-gray-200 bg-gray-50">
+                <p className="text-sm text-gray-700">
+                  <strong className="text-navy">Best For:</strong> Teams that want to send high volumes and manually handle all responses
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            {/* SurFox Approach */}
-            <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 rounded-2xl border-2 border-purple-400/50 p-6 md:p-8 backdrop-blur-sm shadow-lg shadow-purple-500/25">
+            {/* SurFox */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="p-6 sm:p-8 rounded-2xl border-2 border-orange bg-orange/5"
+            >
               <div className="flex items-center mb-6">
-                <img src="/logo.png" alt="SurFox" className="w-10 h-10 md:w-12 md:h-12 mr-4" />
+                <div className="w-12 h-12 rounded-xl bg-orange flex items-center justify-center mr-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-white">SurFox</h3>
-                  <p className="text-purple-200 text-sm md:text-base">AI Conversion Engine</p>
+                  <h3 className="text-xl font-semibold text-navy">SurFox</h3>
+                  <p className="text-sm text-gray-600">AI Conversion Engine</p>
                 </div>
               </div>
-              
-              <div className="space-y-4">
-                <div className="bg-purple-800/40 border border-purple-400/30 rounded-xl p-3 md:p-4">
-                  <h4 className="font-semibold text-white mb-2 text-sm md:text-base">The Problem We Solve:</h4>
-                  <p className="text-xs md:text-sm text-purple-200">"I need qualified appointments, not just random responses to filter through"</p>
+
+              <div className="space-y-4 mb-6">
+                <div className="p-4 rounded-xl border border-orange/20 bg-white">
+                  <h4 className="font-semibold text-navy mb-2 text-sm">The Problem We Solve:</h4>
+                  <p className="text-sm text-gray-700">"I need qualified appointments, not just random responses to filter through"</p>
                 </div>
-                
+
                 <div className="space-y-3">
-                  <div className="flex items-start text-white text-sm md:text-base">
-                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-gray-700">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
                     <span>AI creates unique conversations for each lead</span>
                   </div>
-                  <div className="flex items-start text-white text-sm md:text-base">
-                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-gray-700">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
                     <span>Automatically qualifies and scores prospects</span>
                   </div>
-                  <div className="flex items-start text-white text-sm md:text-base">
-                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-gray-700">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
                     <span>Escalates hot leads immediately</span>
                   </div>
-                  <div className="flex items-start text-white text-sm md:text-base">
-                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-gray-700">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
                     <span>Learns and improves with every conversation</span>
                   </div>
-                  <div className="flex items-start text-white text-sm md:text-base">
-                    <Check className="w-4 h-4 md:w-5 md:h-5 mr-3 mt-0.5 text-green-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-gray-700">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
                     <span>All-inclusive pricing, no usage fees</span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 p-3 md:p-4 bg-purple-800/40 border border-purple-400/30 rounded-xl">
-                <p className="text-white text-xs md:text-sm font-medium">
-                  <strong>Best For:</strong> Sales teams who want qualified appointments, not manual conversation filtering
+              <div className="p-4 rounded-xl border border-orange/20 bg-white">
+                <p className="text-sm text-gray-700">
+                  <strong className="text-navy">Best For:</strong> Sales teams who want qualified appointments, not manual conversation filtering
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Side-by-Side Conversation Example */}
-      <section className="relative py-16 md:py-20 bg-black/20 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
-              Same Lead, Completely Different Outcomes
+      {/* Daily Workflow */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+              Same Lead, Different Outcomes
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               Watch how the same prospect responds to mass messaging vs AI conversation.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-            {/* Smarter Contact Conversation */}
-            <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 border border-gray-500/30 rounded-2xl p-4 md:p-6 backdrop-blur-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
+            {/* Smarter Contact Example */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-6 sm:p-8 rounded-2xl border-2 border-red-200 bg-red-50"
+            >
               <div className="flex items-center mb-6">
-                <div className="w-6 h-6 md:w-8 md:h-8 bg-gray-600/50 rounded-lg flex items-center justify-center mr-3">
-                  <MessageSquare className="w-3 h-3 md:w-4 md:h-4 text-gray-400" />
-                </div>
-                <h3 className="text-base md:text-lg font-semibold text-gray-300">Smarter Contact Approach</h3>
+                <MessageSquare className="w-6 h-6 text-red-600 mr-3" />
+                <h3 className="text-lg font-semibold text-navy">Smarter Contact Approach</h3>
               </div>
-              
-              <div className="space-y-3 md:space-y-4 mb-6">
-                <div className="bg-gray-700/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
+
+              <div className="space-y-4 mb-6">
+                <div className="p-3 rounded-lg border border-red-200 bg-white">
                   <div className="flex items-center mb-2">
                     <div className="w-2 h-2 bg-gray-400 rounded-full mr-2"></div>
-                    <span className="text-gray-300 text-xs">Day 1 - Mass Template</span>
+                    <span className="text-xs font-medium text-gray-700">Day 1 - Mass Template</span>
                   </div>
-                  <p className="text-gray-200">"Hi [NAME], are you interested in selling your house?"</p>
+                  <p className="text-sm text-gray-700">"Hi [NAME], are you interested in selling your house?"</p>
                 </div>
-                
+
                 <div className="text-center text-gray-400 text-xs py-2">
                   ... no response for 3 days ...
                 </div>
-                
-                <div className="bg-gray-700/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
-                  <div className="flex items-center mb-2">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full mr-2"></div>
-                    <span className="text-gray-300 text-xs">Day 4 - Same Template</span>
-                  </div>
-                  <p className="text-gray-200">"Hi [NAME], are you interested in selling your house?"</p>
-                </div>
-                
-                <div className="text-center text-gray-400 text-xs py-2">
-                  ... no response for 7 more days ...
-                </div>
-                
-                <div className="bg-gray-700/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
-                  <div className="flex items-center mb-2">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full mr-2"></div>
-                    <span className="text-gray-300 text-xs">Day 11 - Final Template</span>
-                  </div>
-                  <p className="text-gray-200">"Hi [NAME], are you interested in selling your house?"</p>
-                </div>
-              </div>
-              
-              <div className="bg-red-900/40 border border-red-400/30 rounded-lg p-3 md:p-4 text-center">
-                <X className="w-5 h-5 md:w-6 md:h-6 text-red-400 mx-auto mb-2" />
-                <p className="text-red-300 font-medium text-sm md:text-base">Result: Lead Lost Forever</p>
-                <p className="text-red-200 text-xs md:text-sm">Blocked as spam, zero engagement</p>
-              </div>
-            </div>
 
-            {/* SurFox AI Conversation */}
-            <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 border-2 border-purple-400/50 rounded-2xl p-4 md:p-6 backdrop-blur-xl shadow-lg shadow-purple-500/25">
-              <div className="flex items-center mb-6">
-                <img src="/logo.png" alt="SurFox" className="w-6 h-6 md:w-8 md:h-8 mr-3" />
-                <h3 className="text-base md:text-lg font-semibold text-white">SurFox AI Approach</h3>
-              </div>
-              
-              <div className="space-y-3 md:space-y-4 mb-6">
-                <div className="bg-purple-800/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
+                <div className="p-3 rounded-lg border border-red-200 bg-white">
                   <div className="flex items-center mb-2">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
-                    <span className="text-purple-300 text-xs">Day 1 - AI Smart Opening</span>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mr-2"></div>
+                    <span className="text-xs font-medium text-gray-700">Day 4 - Same Template</span>
                   </div>
-                  <p className="text-white">"Hey Sarah - wasn't sure if this was still your number. If you're still thinking about selling, I can keep it simple for you."</p>
+                  <p className="text-sm text-gray-700">"Hi [NAME], are you interested in selling your house?"</p>
                 </div>
-                
+
+                <div className="text-center text-gray-400 text-xs py-2">
+                  ... no response ...
+                </div>
+              </div>
+
+              <div className="p-4 rounded-xl border-2 border-red-300 bg-red-100 text-center">
+                <X className="w-6 h-6 text-red-600 mx-auto mb-2" />
+                <p className="text-red-700 font-semibold">Result: Lead Lost Forever</p>
+                <p className="text-red-600 text-sm">Blocked as spam</p>
+              </div>
+            </motion.div>
+
+            {/* SurFox Example */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="p-6 sm:p-8 rounded-2xl border-2 border-green-200 bg-green-50"
+            >
+              <div className="flex items-center mb-6">
+                <Brain className="w-6 h-6 text-green-600 mr-3" />
+                <h3 className="text-lg font-semibold text-navy">SurFox AI Approach</h3>
+              </div>
+
+              <div className="space-y-4 mb-6">
+                <div className="p-3 rounded-lg border border-green-200 bg-white">
+                  <div className="flex items-center mb-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                    <span className="text-xs font-medium text-gray-700">Day 1 - AI Smart Opening</span>
+                  </div>
+                  <p className="text-sm text-gray-700">"Hey Sarah - wasn't sure if this was still your number. If you're still thinking about selling, I can keep it simple for you."</p>
+                </div>
+
                 <div className="text-center text-gray-400 text-xs py-2">
                   ... AI waits 3 days, adjusts approach ...
                 </div>
-                
-                <div className="bg-purple-800/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
+
+                <div className="p-3 rounded-lg border border-green-200 bg-white">
                   <div className="flex items-center mb-2">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
-                    <span className="text-purple-300 text-xs">Day 4 - AI Follow-up</span>
+                    <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                    <span className="text-xs font-medium text-gray-700">Day 4 - Lead Responds!</span>
                   </div>
-                  <p className="text-white">"Just checking in - totally fine if not the right time. Market's been pretty good for sellers lately."</p>
-                </div>
-                
-                <div className="bg-emerald-900/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
-                  <div className="flex items-center mb-2">
-                    <div className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></div>
-                    <span className="text-emerald-300 text-xs">Day 5 - Lead Responds!</span>
-                  </div>
-                  <p className="text-emerald-200">"Yeah I might be. What kind of offers are you seeing?"</p>
-                </div>
-                
-                <div className="bg-purple-800/40 rounded-lg p-2 md:p-3 text-xs md:text-sm">
-                  <div className="flex items-center mb-2">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
-                    <span className="text-purple-300 text-xs">AI Qualification Response</span>
-                  </div>
-                  <p className="text-white">"Great question! Most of my sellers in your area have been pleasantly surprised. Want me to pull some recent comps for your street?"</p>
+                  <p className="text-sm text-green-700">"Yeah I might be. What kind of offers are you seeing?"</p>
                 </div>
               </div>
-              
-              <div className="bg-emerald-900/40 border border-emerald-400/30 rounded-lg p-3 md:p-4 text-center">
-                <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-emerald-400 mx-auto mb-2" />
-                <p className="text-emerald-300 font-medium text-sm md:text-base">Result: Qualified Appointment</p>
-                <p className="text-emerald-200 text-xs md:text-sm">AI flags as hot lead, books call automatically</p>
+
+              <div className="p-4 rounded-xl border-2 border-green-300 bg-green-100 text-center">
+                <Sparkles className="w-6 h-6 text-green-600 mx-auto mb-2" />
+                <p className="text-green-700 font-semibold">Result: Qualified Appointment</p>
+                <p className="text-green-600 text-sm">AI books call automatically</p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Feature Comparison */}
-      <section id="comparison" className="relative py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
               Feature-by-Feature Breakdown
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               See exactly where SurFox outperforms traditional mass messaging platforms.
             </p>
-          </div>
+          </motion.div>
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12">
+          <div className="flex flex-wrap justify-center gap-3 mb-12 px-4">
             {featureSets.map((category, index) => (
               <button
                 key={index}
                 onClick={() => setActiveFeatureSet(index)}
-                className={`flex items-center px-3 md:px-6 py-2 md:py-3 rounded-xl font-medium transition-all text-xs md:text-base ${
+                className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all text-sm ${
                   activeFeatureSet === index
-                    ? `bg-gradient-to-r ${
-                        category.color === 'purple' ? 'from-purple-600 to-purple-700' :
-                        category.color === 'cyan' ? 'from-cyan-600 to-cyan-700' :
-                        category.color === 'blue' ? 'from-blue-600 to-blue-700' :
-                        'from-green-600 to-green-700'
-                      } text-white shadow-lg`
-                    : 'bg-gray-900/60 text-gray-300 hover:bg-gray-800/60 border border-gray-700/50 backdrop-blur-sm'
+                    ? 'bg-orange text-white'
+                    : 'bg-white border-2 border-gray-200 text-navy hover:border-gray-300'
                 }`}
               >
-                <category.icon className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
-                <span className="hidden sm:inline">{category.category}</span>
-                <span className="sm:hidden">{category.category.split(' ')[0]}</span>
+                <category.icon className="w-4 h-4 mr-2" />
+                {category.category}
               </button>
             ))}
           </div>
 
-          {/* Mobile-Optimized Feature Cards */}
-          <div className="md:hidden space-y-4">
+          {/* Feature Comparison Table */}
+          <div className="space-y-4 px-4">
             {featureSets[activeFeatureSet].features.map((item, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 p-4 shadow-2xl">
-                <h4 className="font-medium text-white mb-3 text-sm">{item.name}</h4>
-                
-                <div className="space-y-3">
-                  <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 border-2 border-purple-400/50 rounded-lg p-3 shadow-lg shadow-purple-500/25">
-                    <div className="flex items-center mb-2">
-                      <img src="/logo.png" alt="SurFox" className="w-3 h-3 mr-2" />
-                      <span className="font-medium text-white text-xs">SurFox</span>
-                    </div>
-                    <div className="flex items-start">
-                      <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-green-300 text-xs">{item.surfox}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gray-800/40 border border-gray-600/30 rounded-lg p-3">
-                    <div className="flex items-center mb-2">
-                      <div className="w-3 h-3 bg-gray-500 rounded mr-2"></div>
-                      <span className="font-medium text-gray-300 text-xs">Smarter Contact</span>
-                    </div>
-                    <div className="flex items-start">
-                      <X className="w-4 h-4 text-red-400 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-red-300 text-xs">{item.smarter}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="p-6 rounded-2xl border-2 border-gray-200 bg-white"
+              >
+                <h4 className="font-semibold text-navy mb-4">{item.name}</h4>
 
-          {/* Desktop Comparison Table */}
-          <div className="hidden md:block bg-gradient-to-br from-gray-900/90 to-purple-900/90 backdrop-blur-xl rounded-3xl border border-purple-500/30 overflow-hidden shadow-2xl">
-            <div className="grid grid-cols-12 bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-400/30">
-              <div className="col-span-6 p-6">
-                <h3 className="font-bold text-white text-lg">Feature</h3>
-              </div>
-              <div className="col-span-3 p-6 text-center border-l border-purple-400/30">
-                <div className="flex items-center justify-center">
-                  <img src="/logo.png" alt="SurFox" className="w-4 h-4 mr-2" />
-                  <span className="font-bold text-white">SurFox</span>
-                </div>
-              </div>
-              <div className="col-span-3 p-6 text-center border-l border-purple-400/30">
-                <div className="flex items-center justify-center">
-                  <div className="w-4 h-4 bg-gray-500 rounded mr-2"></div>
-                  <span className="font-medium text-gray-300">Smarter Contact</span>
-                </div>
-              </div>
-            </div>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="p-4 rounded-xl border border-orange bg-orange/5">
+                    <div className="flex items-center mb-2">
+                      <Check className="w-5 h-5 text-orange mr-2" />
+                      <span className="font-medium text-sm text-navy">SurFox</span>
+                    </div>
+                    <p className="text-sm text-gray-700">{item.surfox}</p>
+                  </div>
 
-            {featureSets[activeFeatureSet].features.map((item, index) => (
-              <div key={index} className="grid grid-cols-12 border-b border-gray-700/50 hover:bg-purple-900/20 transition-colors">
-                <div className="col-span-6 p-6">
-                  <span className="text-gray-200 font-medium">{item.name}</span>
-                </div>
-                <div className="col-span-3 p-6 border-l border-gray-700/50">
-                  <div className="flex items-start">
-                    <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-green-300 font-medium text-sm">{item.surfox}</span>
+                  <div className="p-4 rounded-xl border border-gray-200 bg-gray-50">
+                    <div className="flex items-center mb-2">
+                      <X className="w-5 h-5 text-red-600 mr-2" />
+                      <span className="font-medium text-sm text-gray-600">Smarter Contact</span>
+                    </div>
+                    <p className="text-sm text-gray-600">{item.smarter}</p>
                   </div>
                 </div>
-                <div className="col-span-3 p-6 border-l border-gray-700/50">
-                  <div className="flex items-start">
-                    <X className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-red-300 text-sm">{item.smarter}</span>
-                  </div>
-                </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Cost Comparison */}
-      <section className="relative py-16 md:py-20 bg-gradient-to-r from-gray-900/50 to-slate-900/50 backdrop-blur-xl border-y border-gray-500/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
               The Hidden Cost Reality
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               SurFox delivers superior AI while actually costing less when you factor in usage fees and manual work.
             </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center p-6 rounded-2xl border-2 border-red-200 bg-red-50"
+            >
+              <div className="text-sm text-gray-600 mb-2">Smarter Contact Reality</div>
+              <div className="text-4xl font-semibold text-red-600 mb-2">$600+</div>
+              <div className="text-xs text-gray-600 mb-4">per month</div>
+              <div className="text-xs text-gray-700 space-y-1">
+                <div>• $199+ base subscription</div>
+                <div>• $0.03/SMS + usage fees</div>
+                <div>• $300+ staff time</div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-center p-6 rounded-2xl border-2 border-green-200 bg-green-50"
+            >
+              <div className="text-sm text-gray-600 mb-2">SurFox All-Inclusive</div>
+              <div className="text-4xl font-semibold text-green-600 mb-2">$197</div>
+              <div className="text-xs text-gray-600 mb-4">per month</div>
+              <div className="text-xs text-gray-700 space-y-1">
+                <div>• $197 complete subscription</div>
+                <div>• $0 usage fees</div>
+                <div>• $0 additional staff time</div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-center p-6 rounded-2xl border-2 border-orange bg-orange/5"
+            >
+              <div className="text-sm text-gray-600 mb-2">You Save</div>
+              <div className="text-4xl font-semibold text-orange mb-2">67%</div>
+              <div className="text-xs text-gray-600 mb-4">cost savings</div>
+              <div className="text-xs text-gray-700 space-y-1">
+                <div>• Lower total cost</div>
+                <div>• Better results</div>
+                <div>• More appointments</div>
+              </div>
+            </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-12 md:mb-16">
-            {/* True Cost Analysis */}
-            <div className="bg-gradient-to-br from-gray-800/60 to-gray-700/60 border border-gray-500/30 rounded-2xl p-6 md:p-8 backdrop-blur-xl">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-300 mb-6 flex items-center">
-                <DollarSign className="w-5 h-5 md:w-6 md:h-6 mr-3 text-yellow-400" />
-                True Monthly Cost Breakdown
-              </h3>
-              
-              <div className="space-y-4 md:space-y-6">
-                <div className="p-3 md:p-4 bg-gray-700/40 border border-gray-500/30 rounded-xl">
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3">
-                    <div>
-                      <div className="font-semibold text-gray-300 text-sm md:text-base">Smarter Contact Reality</div>
-                      <div className="text-xs md:text-sm text-gray-400">Hidden costs add up fast</div>
-                    </div>
-                    <div className="text-left sm:text-right mt-2 sm:mt-0">
-                      <div className="text-xl md:text-2xl font-bold text-red-400">$600+</div>
-                      <div className="text-xs text-gray-400">per month</div>
-                    </div>
-                  </div>
-                  <div className="text-xs text-gray-300 space-y-1">
-                    <div>• $199+ base subscription</div>
-                    <div>• $0.03/SMS + usage fees</div>
-                    <div>• $300+ staff time manually handling responses</div>
-                    <div>• Additional carrier fees</div>
-                  </div>
-                </div>
-                
-                <div className="p-3 md:p-4 bg-purple-900/40 border border-purple-400/30 rounded-xl">
-                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3">
-                    <div>
-                      <div className="font-semibold text-white text-sm md:text-base">SurFox All-Inclusive</div>
-                      <div className="text-xs md:text-sm text-purple-200">True total cost</div>
-                    </div>
-                    <div className="text-left sm:text-right mt-2 sm:mt-0">
-                      <div className="text-xl md:text-2xl font-bold text-green-400">$197</div>
-                      <div className="text-xs text-purple-300">per month</div>
-                    </div>
-                  </div>
-                  <div className="text-xs text-purple-200 space-y-1">
-                    <div>• $197 complete subscription</div>
-                    <div>• $0 usage fees for core features</div>
-                    <div>• $0 additional staff time (AI handles it)</div>
-                    <div>• All features included</div>
-                  </div>
-                </div>
-                
-                <div className="text-center p-3 md:p-4 bg-green-900/40 border border-green-400/30 rounded-xl">
-                  <div className="text-xl md:text-2xl font-bold text-green-400">67% Cost Savings</div>
-                  <div className="text-xs md:text-sm text-green-300">Plus dramatically better results</div>
-                </div>
-              </div>
-            </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-8 rounded-2xl border-2 border-orange bg-orange/5 text-center"
+          >
+            <h3 className="text-2xl font-semibold text-navy mb-4">The Bottom Line</h3>
+            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+              <strong className="text-navy">Smart choice:</strong> Pay less, get AI automation, and close more deals.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-            {/* Value Comparison */}
-            <div className="bg-gradient-to-br from-purple-900/90 to-cyan-900/90 border-2 border-purple-400/50 rounded-2xl p-6 md:p-8 backdrop-blur-xl shadow-lg shadow-purple-500/25">
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-6 flex items-center">
-                <Award className="w-5 h-5 md:w-6 md:h-6 mr-3 text-cyan-400" />
-                Value Delivered Per Dollar
-              </h3>
-              
-              <div className="space-y-4 md:space-y-6">
-                <div className="p-3 md:p-4 bg-gray-800/40 border border-gray-600/30 rounded-xl">
-                  <h4 className="font-semibold text-gray-300 mb-2 text-sm md:text-base">What Smarter Contact Gives You</h4>
-                  <div className="space-y-2 text-xs md:text-sm text-gray-400">
-                    <div>• Template-based bulk messaging</div>
-                    <div>• Manual response handling (all day, every day)</div>
-                    <div>• Basic contact management</div>
-                    <div>• Pay-per-message pricing</div>
-                  </div>
-                </div>
-                
-                <div className="p-3 md:p-4 bg-purple-800/40 border border-purple-400/30 rounded-xl">
-                  <h4 className="font-semibold text-white mb-2 text-sm md:text-base">What SurFox Gives You</h4>
-                  <div className="space-y-2 text-xs md:text-sm text-white">
-                    <div>• AI creates unique conversations per lead</div>
-                    <div>• AI handles 90% of responses automatically</div>
-                    <div>• Automatic lead scoring and qualification</div>
-                    <div>• Hot lead escalation and appointment booking</div>
-                    <div>• Continuous learning and improvement</div>
-                  </div>
-                </div>
-                
-                <div className="text-center p-3 md:p-4 bg-gradient-to-r from-purple-900/50 to-cyan-900/50 border border-purple-400/30 rounded-xl">
-                  <div className="text-lg md:text-xl font-bold text-white mb-2">10x Better ROI</div>
-                  <div className="text-xs md:text-sm text-purple-200">AI automation vs manual labor</div>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* When to Choose */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+              Which Platform Is Right for You?
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+              Both solve real problems, but different ones. Here's how to decide.
+            </p>
+          </motion.div>
 
-          {/* Bottom Line Comparison */}
-          <div className="bg-gradient-to-r from-green-900/40 to-emerald-900/40 border border-green-400/30 rounded-2xl p-6 md:p-8 text-center backdrop-blur-xl">
-            <h3 className="text-xl md:text-2xl font-bold text-green-300 mb-6">The Bottom Line</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              <div className="text-center">
-                <div className="text-base md:text-lg text-green-200 mb-2">Smarter Contact</div>
-                <div className="text-2xl md:text-3xl font-bold text-red-400 mb-2">More Cost</div>
-                <div className="text-xs md:text-sm text-gray-400">Base + usage + manual work</div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="p-6 sm:p-8 rounded-2xl border-2 border-gray-200 bg-white"
+            >
+              <h3 className="text-xl font-semibold text-navy mb-4">Choose Smarter Contact When:</h3>
+              <div className="space-y-3">
+                <div className="flex items-start text-sm text-gray-700">
+                  <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
+                  <span>You want to send high volumes and manually handle responses</span>
+                </div>
+                <div className="flex items-start text-sm text-gray-700">
+                  <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
+                  <span>You have a team dedicated to managing conversations</span>
+                </div>
+                <div className="flex items-start text-sm text-gray-700">
+                  <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
+                  <span>Template-based messaging fits your needs</span>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-base md:text-lg text-green-200 mb-2">SurFox</div>
-                <div className="text-2xl md:text-3xl font-bold text-green-400 mb-2">Less Cost</div>
-                <div className="text-xs md:text-sm text-green-300">All-inclusive AI automation</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="p-6 sm:p-8 rounded-2xl border-2 border-orange bg-orange/5"
+            >
+              <h3 className="text-xl font-semibold text-navy mb-4">Choose SurFox When:</h3>
+              <div className="space-y-3">
+                <div className="flex items-start text-sm text-gray-700">
+                  <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
+                  <span>You want qualified appointments, not random responses</span>
+                </div>
+                <div className="flex items-start text-sm text-gray-700">
+                  <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
+                  <span>You'd rather AI handle conversations 24/7</span>
+                </div>
+                <div className="flex items-start text-sm text-gray-700">
+                  <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
+                  <span>You want better results at lower total cost</span>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-base md:text-lg text-green-200 mb-2">Result</div>
-                <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">5x Better ROI</div>
-                <div className="text-xs md:text-sm text-gray-400">More appointments, less work</div>
-              </div>
-            </div>
-            <div className="mt-6 p-3 md:p-4 bg-green-900/30 rounded-xl">
-              <p className="text-green-200 font-medium text-sm md:text-base">
-                <strong className="text-white">Smart choice:</strong> Pay less, get AI automation, and close more deals.
-              </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      // Final CTA section updates  
-<section id="cta" className="relative py-16 md:py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
-  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20"></div>
-  <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-    <div className="flex justify-center mb-8">
-      <img src="/logo.png" alt="SurFox" className="w-16 h-16 md:w-20 md:h-20" />
-    </div>
-    
-    <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-      Stop Blasting. Start Converting.
-    </h2>
-    <p className="text-lg md:text-2xl text-purple-200 mb-4 max-w-3xl mx-auto leading-relaxed">
-      Join thousands who've upgraded from mass messaging to AI-powered appointments.
-    </p>
-    <p className="text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-      <strong className="text-white">30-day money back guarantee.</strong> No setup fees. See 5x better results in your first week.
-    </p>
-    
-    <div className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center mb-8">
-      <button className="group relative px-8 md:px-12 py-4 md:py-6 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-2xl font-bold text-lg md:text-2xl overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50">
-        <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <div className="relative flex items-center justify-center">
-          <Link href="https://www.getsurfox.com/#pricing">Get Started Risk-Free</Link>
-          <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
-        </div>
-      </button>
-      <a href="/demo" className="px-8 md:px-12 py-4 md:py-6 border-2 border-gray-400/50 rounded-2xl font-bold text-lg md:text-2xl backdrop-blur-sm hover:bg-gray-500/20 transition-all duration-500 hover:scale-105">
-        See SurFox Demo
-      </a>
-    </div>
-    
-    <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-xs md:text-sm text-purple-200">
-      <div className="flex items-center">
-        <Shield className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
-        30 day money back guarantee
-      </div>
-      <div className="flex items-center">
-        <Brain className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
-        AI starts working immediately
-      </div>
-      <div className="flex items-center">
-        <Award className="w-3 h-3 md:w-4 md:h-4 mr-2 text-green-400" />
-        Cancel anytime
-      </div>
-    </div>
-  </div>
-</section>
-    </div>
-    </>
-  )
-}
+      {/* CTA */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6 sm:mb-8 px-4 leading-tight">
+              Stop Blasting.<br className="hidden sm:block" />
+              Start Converting.
+            </h2>
 
-export default SurFoxVsSmarterContact
+            <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
+              Join thousands who've upgraded from mass messaging to AI-powered appointments. <strong className="text-navy">30-day money back guarantee.</strong>
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">
+              <motion.a
+                href="/pricing"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
+              >
+                Get Started Risk-Free
+                <ArrowRight className="w-5 h-5" />
+              </motion.a>
+
+              <motion.a
+                href="/contact"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
+              >
+                See SurFox Demo
+              </motion.a>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600">
+              <div className="flex items-center">
+                <Shield className="w-5 h-5 mr-2 text-orange" />
+                30-day guarantee
+              </div>
+              <div className="flex items-center">
+                <Clock className="w-5 h-5 mr-2 text-orange" />
+                Setup in 15 minutes
+              </div>
+              <div className="flex items-center">
+                <Award className="w-5 h-5 mr-2 text-orange" />
+                Cancel anytime
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
