@@ -1,10 +1,27 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Footer() {
+  const [email, setEmail] = useState('')
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (email) {
+      // TODO: Add actual newsletter signup logic here
+      setIsSubmitted(true)
+      setEmail('')
+
+      // Reset after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false)
+      }, 5000)
+    }
+  }
+
   return (
     <footer className="bg-gray-900 text-gray-300 animate-fade-in">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
@@ -27,19 +44,35 @@ export default function Footer() {
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
               Join our newsletter to stay up to date on features and releases.
             </p>
-            <form className="space-y-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition"
-              />
-              <button
-                type="submit"
-                className="w-full px-4 py-2.5 bg-white text-gray-900 rounded-lg text-sm font-semibold hover:bg-gray-100 transition"
-              >
-                Submit
-              </button>
-            </form>
+
+            {isSubmitted ? (
+              <div className="space-y-3">
+                <div className="w-full px-4 py-3 bg-green-500/10 border border-green-500/50 rounded-lg text-sm text-green-400 flex items-center gap-2">
+                  <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                  <span>Thanks for subscribing!</span>
+                </div>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="w-full px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-lg text-sm text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition"
+                />
+                <button
+                  type="submit"
+                  className="w-full px-4 py-2.5 bg-white text-gray-900 rounded-lg text-sm font-semibold hover:bg-gray-100 transition"
+                >
+                  Submit
+                </button>
+              </form>
+            )}
+
             <p className="text-xs text-gray-500 mt-4 leading-relaxed">
               By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.
             </p>
