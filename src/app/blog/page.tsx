@@ -4,70 +4,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
+import { getAllBlogPosts } from '@/data/blog-posts';
 
-// Sample blog posts data
-const blogPosts = [
-  {
-    id: 1,
-    title: 'The Future of AI in Sales: Moving Beyond Automation',
-    excerpt: 'Discover how AI is transforming sales from simple automation to intelligent conversation analysis and predictive insights.',
-    category: 'AI & Technology',
-    date: '2025-01-15',
-    readTime: '5 min read',
-    author: 'Tom Bauer',
-    slug: 'future-of-ai-in-sales'
-  },
-  {
-    id: 2,
-    title: 'Understanding Conversation Intelligence: A Deep Dive',
-    excerpt: 'Learn how conversation intelligence platforms analyze communication patterns to surface actionable insights for your sales team.',
-    category: 'Product Insights',
-    date: '2025-01-10',
-    readTime: '7 min read',
-    author: 'SurFox Team',
-    slug: 'conversation-intelligence-deep-dive'
-  },
-  {
-    id: 3,
-    title: 'Data Privacy in the Age of AI: What Businesses Need to Know',
-    excerpt: 'Explore best practices for maintaining data privacy and security while leveraging AI-powered business intelligence.',
-    category: 'Security & Privacy',
-    date: '2025-01-05',
-    readTime: '6 min read',
-    author: 'SurFox Team',
-    slug: 'data-privacy-ai-businesses'
-  },
-  {
-    id: 4,
-    title: 'How to Qualify Leads Faster with AI Conversation Analysis',
-    excerpt: 'Practical strategies for using AI to identify high-quality leads and prioritize your sales efforts effectively.',
-    category: 'Sales Strategy',
-    date: '2024-12-28',
-    readTime: '4 min read',
-    author: 'Tom Bauer',
-    slug: 'qualify-leads-faster-ai'
-  },
-  {
-    id: 5,
-    title: 'Building a Customer-First AI Strategy',
-    excerpt: 'Why putting customer needs at the center of your AI implementation leads to better outcomes and stronger relationships.',
-    category: 'Strategy',
-    date: '2024-12-20',
-    readTime: '5 min read',
-    author: 'SurFox Team',
-    slug: 'customer-first-ai-strategy'
-  },
-  {
-    id: 6,
-    title: 'The ROI of Conversation Intelligence Platforms',
-    excerpt: 'Quantifying the business impact of implementing conversation intelligence tools in your sales organization.',
-    category: 'Business Impact',
-    date: '2024-12-15',
-    readTime: '8 min read',
-    author: 'Tom Bauer',
-    slug: 'roi-conversation-intelligence'
-  }
-];
+// Get all blog posts from centralized data
+const blogPosts = getAllBlogPosts();
 
 const categories = ['All', 'AI & Technology', 'Product Insights', 'Sales Strategy', 'Security & Privacy', 'Strategy', 'Business Impact'];
 
