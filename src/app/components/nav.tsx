@@ -128,6 +128,9 @@ export default function Nav() {
                 <ChevronDown className="w-4 h-4" />
               </div>
               <div className="absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-xl z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <Link href="/blog" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors border-b border-gray-100">
+                  Blog
+                </Link>
                 <Link href="/ai-principles" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors">
                   AI Principles
                 </Link>
@@ -205,6 +208,7 @@ export default function Nav() {
             {/* Learn */}
             <div className="border-t border-gray-200 pt-4">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Learn</div>
+              <Link href="/blog" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Blog</Link>
               <Link href="/ai-principles" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">AI Principles</Link>
             </div>
 
