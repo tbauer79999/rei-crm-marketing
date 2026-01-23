@@ -8,27 +8,55 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200 animate-fade-in">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        {/* Multi-column layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
 
-          {/* Brand Section */}
-          <div className="flex flex-col items-center md:items-start space-y-3">
-            <div className="flex items-center space-x-2">
-              <Image
-                src="/logo.png"
-                alt="SurFox Logo"
-                width={28}
-                height={28}
-                className="w-7 h-7"
-              />
-              <span className="text-base font-semibold tracking-tight">
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  SurFox
+        {/* Newsletter Section */}
+        <div className="mb-12 pb-12 border-b border-gray-200">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Left: Brand + Text */}
+            <div className="text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start space-x-2 mb-3">
+                <Image
+                  src="/logo.png"
+                  alt="SurFox Logo"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8"
+                />
+                <span className="text-lg font-semibold tracking-tight">
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    SurFox
+                  </span>
                 </span>
-              </span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Want to follow along?
+              </h3>
+              <p className="text-sm text-gray-600 max-w-md mx-auto lg:mx-0">
+                We're building this one layer at a time. Drop your email and we'll share updates as new capabilities go live.
+              </p>
             </div>
-            <p className="text-xs text-gray-600">AI Intelligence Layer</p>
+
+            {/* Right: Email Form */}
+            <div className="flex justify-center lg:justify-end">
+              <form className="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+                <input
+                  type="email"
+                  placeholder="you@company.com"
+                  className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-orange focus:outline-none transition text-sm"
+                />
+                <button
+                  type="submit"
+                  className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 transition whitespace-nowrap text-sm"
+                >
+                  Stay in the know
+                </button>
+              </form>
+            </div>
           </div>
+        </div>
+
+        {/* Multi-column layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
 
           {/* Company Section */}
           <div className="flex flex-col items-center md:items-start space-y-3">
