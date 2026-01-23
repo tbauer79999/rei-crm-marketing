@@ -639,7 +639,7 @@ export default function SurFoxVsLaunchControl() {
               <div className="text-xs text-gray-700 space-y-1">
                 <div>• $497 with learning AI included</div>
                 <div>• Starts at $197 for basic features</div>
-                <div>• $0 response handling</div>
+                <div>• 10,000 messages included</div>
               </div>
             </motion.div>
 

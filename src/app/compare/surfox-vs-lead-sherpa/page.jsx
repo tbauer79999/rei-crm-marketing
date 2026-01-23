@@ -641,7 +641,7 @@ export default function SurFoxVsLeadSherpa() {
               <div className="text-xs text-gray-700 space-y-1">
                 <div>• $497 with learning AI included</div>
                 <div>• Starts at $197 for basic features</div>
-                <div>• AI handles conversations</div>
+                <div>• 10,000 messages included</div>
               </div>
             </motion.div>
 
