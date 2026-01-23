@@ -55,7 +55,7 @@ export default function Page() {
             },
             sameAs: [
               'https://twitter.com/getSurFox',
-              'https://www.linkedin.com/company/surfox',
+              'https://www.linkedin.com/company/surfoxai',
             ],
             founder: {
               '@type': 'Person',
