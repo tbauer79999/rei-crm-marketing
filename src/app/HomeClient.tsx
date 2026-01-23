@@ -48,7 +48,7 @@ export default function SurFoxHome() {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              We're building the AI layer that understands all your customer interactions and takes intelligent action. Today, that starts with outbound - upload cold leads, let AI qualify them via SMS, your team only talks to hot prospects.
+              We're building the AI layer that understands all your customer interactions and takes intelligent action. Today, that starts with outbound - upload cold leads, let SurFox qualify them via SMS, your team only talks to hot prospects.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
@@ -91,7 +91,7 @@ export default function SurFoxHome() {
               AI-Powered Lead Qualification
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Your sales team only talks to hot leads. AI handles the rest.
+              Your sales team only talks to hot leads. SurFox handles the rest.
             </p>
           </motion.div>
 
@@ -104,7 +104,7 @@ export default function SurFoxHome() {
               },
               {
                 icon: MessageSquare,
-                title: 'AI qualifies via SMS',
+                title: 'SurFox qualifies via SMS',
                 desc: 'Personalized conversations at scale. Every lead gets engaged, scored, and qualified automatically.'
               },
               {
@@ -280,7 +280,7 @@ export default function SurFoxHome() {
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6 sm:mb-8 px-4 leading-tight">
               Stop chasing cold leads.<br className="hidden sm:block" />
-              Let AI find the ones who are ready.
+              Let SurFox find the ones who are ready.
             </h2>
 
             <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4">

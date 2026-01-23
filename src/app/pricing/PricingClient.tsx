@@ -192,7 +192,7 @@ export default function PricingClient() {
                   </div>
                   <div className="text-sm text-gray-700 flex items-center mt-1">
                     <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
-                    AI learns from 100 conversations
+                    SurFox learns from 100 conversations
                   </div>
                   <div className="text-sm text-gray-700 flex items-center mt-1">
                     <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
@@ -274,7 +274,7 @@ export default function PricingClient() {
                   </div>
                   <div className="text-sm text-gray-700 flex items-center mt-1">
                     <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
-                    AI learns from 1000 conversations
+                    SurFox learns from 1000 conversations
                   </div>
                   <div className="text-sm text-gray-700 flex items-center mt-1">
                     <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
@@ -372,7 +372,7 @@ export default function PricingClient() {
                     </li>
                     <li className="flex items-start">
                       <span className="mr-2">•</span>
-                      <span>AI successfully handles lead conversations</span>
+                      <span>SurFox successfully handles lead conversations</span>
                     </li>
                     <li className="flex items-start">
                       <span className="mr-2">•</span>
@@ -393,7 +393,7 @@ export default function PricingClient() {
                     </li>
                     <li className="flex items-start">
                       <span className="mr-2">•</span>
-                      <span>Allow 7-14 days for AI to start conversations</span>
+                      <span>Allow 7-14 days for SurFox to start conversations</span>
                     </li>
                     <li className="flex items-start">
                       <span className="mr-2">•</span>
@@ -418,7 +418,7 @@ export default function PricingClient() {
                 <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
                   <h4 className="text-sm font-semibold text-navy mb-2">What's a qualified lead?</h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    A lead that AI identifies as showing strong buying signals based on their conversation responses - either they've expressed clear interest, asked about next steps, or agreed to discuss further.
+                    A lead that SurFox identifies as showing strong buying signals based on their conversation responses - either they've expressed clear interest, asked about next steps, or agreed to discuss further.
                   </p>
                 </div>
               </div>
@@ -443,7 +443,7 @@ export default function PricingClient() {
 
               <div className="bg-white rounded-xl border border-gray-200 p-6 hover-lift">
                 <h3 className="text-lg font-semibold text-navy mb-3">How is this different from text blasting tools?</h3>
-                <p className="text-gray-700">Text blasters send identical messages to thousands of people. Our AI has unique conversations with each prospect, reads their psychology, and only escalates genuinely interested buyers. You get fewer calls, but they are all worth taking.</p>
+                <p className="text-gray-700">Text blasters send identical messages to thousands of people. SurFox has unique conversations with each prospect, reads their psychology, and only escalates genuinely interested buyers. You get fewer calls, but they are all worth taking.</p>
               </div>
 
               <div className="bg-white rounded-xl border border-gray-200 p-6 hover-lift">
@@ -453,7 +453,7 @@ export default function PricingClient() {
 
               <div className="bg-white rounded-xl border border-gray-200 p-6 hover-lift">
                 <h3 className="text-lg font-semibold text-navy mb-3">Can I cancel anytime?</h3>
-                <p className="text-gray-700">Yes, cancel anytime with 24 hours notice. No contracts, no cancellation fees. Your AI will finish any active conversations, then stop processing new prospects.</p>
+                <p className="text-gray-700">Yes, cancel anytime with 24 hours notice. No contracts, no cancellation fees. SurFox will finish any active conversations, then stop processing new prospects.</p>
               </div>
 
               <div className="bg-white rounded-xl border border-gray-200 p-6 hover-lift">

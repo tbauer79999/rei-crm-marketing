@@ -23,10 +23,10 @@ export default function SurFoxVsLeadSherpa() {
       category: 'Conversion Power',
       icon: Brain,
       features: [
-        { name: 'Response Generation', surfox: 'Fully autonomous AI replies that adapt to each lead', sherpa: 'Manual responses or basic templates' },
+        { name: 'Response Generation', surfox: 'Fully autonomous SurFox replies that adapt to each lead', sherpa: 'Manual responses or basic templates' },
         { name: 'Lead Intelligence', surfox: 'Real-time NLP analysis of motivation and urgency', sherpa: 'No sentiment or motivation analysis' },
-        { name: 'Conversation Quality', surfox: 'AI learns and adapts to maximize conversions', sherpa: 'Static drip sequences with manual management' },
-        { name: 'Hot Lead Detection', surfox: 'AI scores and prioritizes high-intent prospects', sherpa: 'Manual tagging and organization only' },
+        { name: 'Conversation Quality', surfox: 'SurFox learns and adapts to maximize conversions', sherpa: 'Static drip sequences with manual management' },
+        { name: 'Hot Lead Detection', surfox: 'SurFox scores and prioritizes high-intent prospects', sherpa: 'Manual tagging and organization only' },
         { name: 'Learning Capability', surfox: 'Gets smarter with every conversation', sherpa: 'No learning - same approach every time' }
       ]
     },
@@ -35,10 +35,10 @@ export default function SurFoxVsLeadSherpa() {
       icon: Target,
       features: [
         { name: 'SMS Campaigns', surfox: 'AI-adaptive sequences that respond to lead behavior', sherpa: 'Standard drip sequences with pause-on-reply' },
-        { name: 'Real-Time Responses', surfox: 'Contextual AI replies 24/7 without human input', sherpa: 'Quick replies with manual forwarding system' },
+        { name: 'Real-Time Responses', surfox: 'Contextual SurFox replies 24/7 without human input', sherpa: 'Quick replies with manual forwarding system' },
         { name: 'Performance Analytics', surfox: 'Conversion insights, lead scoring, ROI tracking', sherpa: 'Basic metrics: volume, opens, replies, DNC' },
-        { name: 'Lead Qualification', surfox: 'AI identifies and escalates motivated sellers', sherpa: 'Manual review and qualification process' },
-        { name: 'Conversion Optimization', surfox: 'AI learns what works and improves messaging', sherpa: 'Manual A/B testing and template updates' }
+        { name: 'Lead Qualification', surfox: 'SurFox identifies and escalates motivated sellers', sherpa: 'Manual review and qualification process' },
+        { name: 'Conversion Optimization', surfox: 'SurFox learns what works and improves messaging', sherpa: 'Manual A/B testing and template updates' }
       ]
     },
     {
@@ -273,7 +273,7 @@ export default function SurFoxVsLeadSherpa() {
                 <div className="space-y-3">
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                    <span>AI reads and responds to prospects 24/7</span>
+                    <span>SurFox reads and responds to prospects 24/7</span>
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
@@ -281,7 +281,7 @@ export default function SurFoxVsLeadSherpa() {
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                    <span>Escalates hot leads immediately</span>
+                    <span>SurFox escalates hot leads immediately</span>
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
@@ -393,7 +393,7 @@ export default function SurFoxVsLeadSherpa() {
                     <Clock className="w-4 h-4 mr-2 text-gray-600" />
                     <span className="text-xs font-medium text-gray-700">9:00 AM - Hot Lead Review (15 mins)</span>
                   </div>
-                  <p className="text-sm text-gray-700">Review leads AI flagged as "ready to buy" - complete conversation context provided</p>
+                  <p className="text-sm text-gray-700">Review leads SurFox flagged as "ready to buy" - complete conversation context provided</p>
                 </div>
 
                 <div className="p-3 rounded-lg border border-green-200 bg-white">
@@ -409,7 +409,7 @@ export default function SurFoxVsLeadSherpa() {
                     <Clock className="w-4 h-4 mr-2 text-gray-600" />
                     <span className="text-xs font-medium text-gray-700">5:00 PM - End of Day (10 mins)</span>
                   </div>
-                  <p className="text-sm text-gray-700">Review appointment bookings AI secured, check conversion metrics, done for the day</p>
+                  <p className="text-sm text-gray-700">Review appointment bookings SurFox secured, check conversion metrics, done for the day</p>
                 </div>
 
                 <div className="p-3 rounded-lg border border-green-200 bg-white">
@@ -417,7 +417,7 @@ export default function SurFoxVsLeadSherpa() {
                     <Sparkles className="w-4 h-4 mr-2 text-green-600" />
                     <span className="text-xs font-medium text-gray-700">24/7 - AI Works</span>
                   </div>
-                  <p className="text-sm text-gray-700">AI handles all conversations, follows up perfectly, learns from every interaction</p>
+                  <p className="text-sm text-gray-700">SurFox handles all conversations, follows up perfectly, learns from every interaction</p>
                 </div>
               </div>
 
@@ -558,7 +558,7 @@ export default function SurFoxVsLeadSherpa() {
                 <h3 className="text-xl font-semibold text-navy">SurFox Advantage</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                Upload your entire old lead database. AI finds the 3-5% who are actually ready to buy
+                Upload your entire old lead database. SurFox finds the 3-5% who are actually ready to buy
                 but nobody ever followed up with properly. Turn yesterday's dead leads into today's deals.
               </p>
             </motion.div>
@@ -747,7 +747,7 @@ export default function SurFoxVsLeadSherpa() {
                 </div>
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                  <span>You'd rather AI handle conversations 24/7</span>
+                  <span>You'd rather SurFox handle conversations 24/7</span>
                 </div>
               </div>
             </motion.div>

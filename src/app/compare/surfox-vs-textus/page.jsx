@@ -13,20 +13,20 @@ export default function SurFoxVsTextUs() {
       category: 'Conversion Power',
       icon: Brain,
       features: [
-        { name: 'Message Creation', surfox: 'AI creates unique conversations for each lead', textus: 'Manual or canned messages only' },
-        { name: 'Conversation Management', surfox: 'AI remembers and learns from every conversation', textus: 'No memory between conversations' },
-        { name: 'Lead Qualification', surfox: 'AI automatically qualifies and scores prospects', textus: 'Manual qualification required for everything' },
-        { name: 'Response Intelligence', surfox: 'AI adapts messaging based on prospect psychology', textus: 'One-size-fits-all messaging approach' }
+        { name: 'Message Creation', surfox: 'SurFox creates unique conversations for each lead', textus: 'Manual or canned messages only' },
+        { name: 'Conversation Management', surfox: 'SurFox remembers and learns from every conversation', textus: 'No memory between conversations' },
+        { name: 'Lead Qualification', surfox: 'SurFox automatically qualifies and scores prospects', textus: 'Manual qualification required for everything' },
+        { name: 'Response Intelligence', surfox: 'SurFox adapts messaging based on prospect psychology', textus: 'One-size-fits-all messaging approach' }
       ]
     },
     {
       category: 'Sales Results',
       icon: Target,
       features: [
-        { name: 'Appointment Setting', surfox: 'AI identifies buying signals and books qualified calls', textus: 'Manual signal interpretation required' },
+        { name: 'Appointment Setting', surfox: 'SurFox identifies buying signals and books qualified calls', textus: 'Manual signal interpretation required' },
         { name: 'Lead Scoring', surfox: 'Real-time psychological scoring and prioritization', textus: 'No native scoring capabilities' },
-        { name: 'Hot Lead Detection', surfox: 'AI escalates when prospects are ready to buy', textus: 'Basic inbox filtering only' },
-        { name: 'Conversion Optimization', surfox: 'AI learns what works and improves messaging', textus: 'No learning or adaptation capabilities' }
+        { name: 'Hot Lead Detection', surfox: 'SurFox escalates when prospects are ready to buy', textus: 'Basic inbox filtering only' },
+        { name: 'Conversion Optimization', surfox: 'SurFox learns what works and improves messaging', textus: 'No learning or adaptation capabilities' }
       ]
     },
     {
@@ -35,8 +35,8 @@ export default function SurFoxVsTextUs() {
       features: [
         { name: 'Setup Time', surfox: '15-minute Chrome extension setup', textus: '2-3 hours of training and configuration' },
         { name: 'Daily Management', surfox: '30 minutes to review escalated hot leads', textus: '4+ hours of manual conversation handling' },
-        { name: 'Message Writing', surfox: 'AI writes all messages automatically', textus: 'Your team writes every single message' },
-        { name: 'Spam Prevention', surfox: 'AI creates natural variants to avoid detection', textus: 'High risk of spam flagging with volume' }
+        { name: 'Message Writing', surfox: 'SurFox writes all messages automatically', textus: 'Your team writes every single message' },
+        { name: 'Spam Prevention', surfox: 'SurFox creates natural variants to avoid detection', textus: 'High risk of spam flagging with volume' }
       ]
     },
     {
@@ -46,7 +46,7 @@ export default function SurFoxVsTextUs() {
         { name: 'Pricing Model', surfox: 'Growth plan $497/month with learning AI, starts at $197', textus: '$500+ base with hidden fees and limits' },
         { name: 'Staff Requirements', surfox: 'No dedicated messaging staff needed', textus: 'Requires full-time manual management' },
         { name: 'ROI Tracking', surfox: 'Full conversion tracking from lead to close', textus: 'Basic message delivery metrics only' },
-        { name: 'Scalability', surfox: 'AI scales conversations without adding staff', textus: 'More leads = more manual work required' }
+        { name: 'Scalability', surfox: 'SurFox scales conversations without adding staff', textus: 'More leads = more manual work required' }
       ]
     }
   ];
@@ -185,7 +185,7 @@ export default function SurFoxVsTextUs() {
               Two Completely Different Approaches
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              TextUs forces your team to manually handle every message. SurFox has AI do it automatically.
+              TextUs forces your team to manually handle every message. SurFox does it automatically.
             </p>
           </motion.div>
 
@@ -274,7 +274,7 @@ export default function SurFoxVsTextUs() {
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                    <span>AI writes unique messages for each lead</span>
+                    <span>SurFox writes unique messages for each lead</span>
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
@@ -282,7 +282,7 @@ export default function SurFoxVsTextUs() {
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                    <span>AI handles 90% of conversations</span>
+                    <span>SurFox handles 90% of conversations</span>
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
@@ -390,7 +390,7 @@ export default function SurFoxVsTextUs() {
                     <Clock className="w-4 h-4 mr-2 text-gray-600" />
                     <span className="text-xs font-medium text-gray-700">9:00 AM - Hot Lead Review (15 mins)</span>
                   </div>
-                  <p className="text-sm text-gray-700">Review leads AI flagged as "ready to buy" - complete conversation context provided</p>
+                  <p className="text-sm text-gray-700">Review leads SurFox flagged as "ready to buy" - complete conversation context provided</p>
                 </div>
 
                 <div className="p-3 rounded-lg border border-green-200 bg-white">
@@ -406,7 +406,7 @@ export default function SurFoxVsTextUs() {
                     <Clock className="w-4 h-4 mr-2 text-gray-600" />
                     <span className="text-xs font-medium text-gray-700">5:00 PM - End of Day (10 mins)</span>
                   </div>
-                  <p className="text-sm text-gray-700">Review appointment bookings AI secured, check conversion metrics, done for the day</p>
+                  <p className="text-sm text-gray-700">Review appointment bookings SurFox secured, check conversion metrics, done for the day</p>
                 </div>
 
                 <div className="p-3 rounded-lg border border-green-200 bg-white">
@@ -414,7 +414,7 @@ export default function SurFoxVsTextUs() {
                     <Sparkles className="w-4 h-4 mr-2 text-green-600" />
                     <span className="text-xs font-medium text-gray-700">24/7 - AI Works</span>
                   </div>
-                  <p className="text-sm text-gray-700">AI handles all conversations, follows up perfectly, learns from every interaction</p>
+                  <p className="text-sm text-gray-700">SurFox handles all conversations, follows up perfectly, learns from every interaction</p>
                 </div>
               </div>
 
@@ -552,7 +552,7 @@ export default function SurFoxVsTextUs() {
                 <h3 className="text-xl font-semibold text-navy">SurFox Advantage</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                Upload your entire old lead database. AI finds the 3-5% who are actually ready to buy
+                Upload your entire old lead database. SurFox finds the 3-5% who are actually ready to buy
                 but nobody ever followed up with properly. Turn yesterday's dead leads into today's deals.
               </p>
             </motion.div>
@@ -722,7 +722,7 @@ export default function SurFoxVsTextUs() {
               <div className="space-y-3 mb-6">
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                  <span>You want AI to handle conversations automatically</span>
+                  <span>You want SurFox to handle conversations automatically</span>
                 </div>
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />

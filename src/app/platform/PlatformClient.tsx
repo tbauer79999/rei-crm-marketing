@@ -209,7 +209,7 @@ export default function PlatformPage() {
             </h3>
 
             <p className="text-gray-600 leading-relaxed mb-6">
-              Upload cold leads. AI reaches out via SMS, has personalized conversations, scores and qualifies each one. Your sales team only talks to prospects who are ready. This is Actions Out in its first form - proving that Infinity can understand conversations, track intent, and take intelligent action.
+              Upload cold leads. SurFox reaches out via SMS, has personalized conversations, scores and qualifies each one. Your sales team only talks to prospects who are ready. This is Actions Out in its first form - proving that Infinity can understand conversations, track intent, and take intelligent action.
             </p>
 
             <a

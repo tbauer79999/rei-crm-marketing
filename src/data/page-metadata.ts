@@ -86,6 +86,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['privacy policy', 'data protection', 'GDPR', 'data privacy'],
     path: '/privacy',
   },
+  terms: {
+    title: 'Terms of Service - Legal Agreement',
+    description: 'Read SurFox\'s Terms of Service. Understand your rights, responsibilities, and our service guarantees when using the platform.',
+    keywords: ['terms of service', 'terms and conditions', 'legal agreement', 'user agreement', 'TOS'],
+    path: '/terms',
+  },
   enterprise: {
     title: 'Enterprise Solutions - AI at Scale',
     description: 'Enterprise-grade AI sales intelligence for large teams. Custom deployment, dedicated support, and advanced security features.',

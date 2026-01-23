@@ -89,7 +89,7 @@ export default function SurFoxGeneralComparison() {
     {
       area: 'Scalability',
       traditional: 'Linear scaling requires proportional human resources',
-      surfox: 'AI handles 90% of interactions, exponential scaling possible',
+      surfox: 'SurFox handles 90% of interactions, exponential scaling possible',
       impact: 'Unlimited growth without proportional cost increases'
     },
     {
@@ -426,7 +426,7 @@ export default function SurFoxGeneralComparison() {
           >
             <h3 className="text-2xl font-semibold text-navy mb-4">Network Effects Advantage</h3>
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              As more conversations flow through SurFox, our AI becomes smarter about human psychology. This creates a compounding advantage that becomes stronger over time and harder for competitors to replicate.
+              As more conversations flow through SurFox, the AI becomes smarter about human psychology. This creates a compounding advantage that becomes stronger over time and harder for competitors to replicate.
             </p>
           </motion.div>
         </div>
@@ -486,7 +486,7 @@ export default function SurFoxGeneralComparison() {
                 <h3 className="text-xl font-semibold text-navy">SurFox Advantage</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                Upload your entire old lead database. AI finds the 3-5% who are actually ready to buy
+                Upload your entire old lead database. SurFox finds the 3-5% who are actually ready to buy
                 but nobody ever followed up with properly. Turn yesterday's dead leads into today's deals.
               </p>
             </motion.div>

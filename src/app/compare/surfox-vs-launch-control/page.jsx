@@ -13,10 +13,10 @@ export default function SurFoxVsLaunchControl() {
       category: 'Conversion Power',
       icon: Brain,
       features: [
-        { name: 'Message Creation', surfox: 'AI creates unique conversations for each lead', launch: 'Template-based messaging only' },
-        { name: 'Conversation Management', surfox: 'AI remembers and learns from every conversation', launch: 'Basic contact management, no memory' },
-        { name: 'Lead Qualification', surfox: 'AI automatically scores and prioritizes hot leads', launch: 'Manual lead qualification required' },
-        { name: 'Response Handling', surfox: 'AI handles 90% of conversations autonomously', launch: 'All conversations require manual handling' },
+        { name: 'Message Creation', surfox: 'SurFox creates unique conversations for each lead', launch: 'Template-based messaging only' },
+        { name: 'Conversation Management', surfox: 'SurFox remembers and learns from every conversation', launch: 'Basic contact management, no memory' },
+        { name: 'Lead Qualification', surfox: 'SurFox automatically scores and prioritizes hot leads', launch: 'Manual lead qualification required' },
+        { name: 'Response Handling', surfox: 'SurFox handles 90% of conversations autonomously', launch: 'All conversations require manual handling' },
         { name: 'Learning Capability', surfox: 'Gets smarter with every conversation', launch: 'No learning or adaptation' }
       ]
     },
@@ -24,10 +24,10 @@ export default function SurFoxVsLaunchControl() {
       category: 'Sales Results',
       icon: Target,
       features: [
-        { name: 'Appointment Setting', surfox: 'AI identifies buying signals and books qualified calls', launch: 'Manual signal interpretation required' },
+        { name: 'Appointment Setting', surfox: 'SurFox identifies buying signals and books qualified calls', launch: 'Manual signal interpretation required' },
         { name: 'Lead Scoring', surfox: 'Real-time motivation and urgency scoring', launch: 'Basic engagement tracking only' },
-        { name: 'Hot Lead Detection', surfox: 'AI escalates when prospects are ready to buy', launch: 'Manual monitoring and handoff' },
-        { name: 'Conversion Optimization', surfox: 'AI learns what works and improves messaging', launch: 'Fixed campaign sequences only' },
+        { name: 'Hot Lead Detection', surfox: 'SurFox escalates when prospects are ready to buy', launch: 'Manual monitoring and handoff' },
+        { name: 'Conversion Optimization', surfox: 'SurFox learns what works and improves messaging', launch: 'Fixed campaign sequences only' },
         { name: 'Deal Pipeline', surfox: 'Tracks leads from first contact to closed deal', launch: 'Basic list management' }
       ]
     },
@@ -37,9 +37,9 @@ export default function SurFoxVsLaunchControl() {
       features: [
         { name: 'Setup Time', surfox: '15-minute Chrome extension setup', launch: 'Hours of template creation and campaign setup' },
         { name: 'Daily Management', surfox: '30 minutes to review escalated hot leads', launch: '5+ hours of campaign monitoring and replies' },
-        { name: 'Message Writing', surfox: 'AI writes all messages automatically', launch: 'Manual template writing and variation' },
-        { name: 'Follow-up Strategy', surfox: 'AI determines optimal timing per lead', launch: 'Fixed drip schedules require constant adjustment' },
-        { name: 'Spam Prevention', surfox: 'AI prevents spam detection automatically', launch: 'Manual message variation to avoid spam flags' }
+        { name: 'Message Writing', surfox: 'SurFox writes all messages automatically', launch: 'Manual template writing and variation' },
+        { name: 'Follow-up Strategy', surfox: 'SurFox determines optimal timing per lead', launch: 'Fixed drip schedules require constant adjustment' },
+        { name: 'Spam Prevention', surfox: 'SurFox prevents spam detection automatically', launch: 'Manual message variation to avoid spam flags' }
       ]
     },
     {
@@ -49,7 +49,7 @@ export default function SurFoxVsLaunchControl() {
         { name: 'Pricing Model', surfox: 'Growth plan $497/month with learning AI, starts at $197', launch: '$497+ base plus staff time costs' },
         { name: 'Staff Requirements', surfox: 'No dedicated campaign manager needed', launch: 'Requires full-time campaign management' },
         { name: 'ROI Tracking', surfox: 'Full conversion tracking from lead to close', launch: 'Basic campaign metrics only' },
-        { name: 'Scalability', surfox: 'AI scales conversations without adding staff', launch: 'More campaigns = more manual work' },
+        { name: 'Scalability', surfox: 'SurFox scales conversations without adding staff', launch: 'More campaigns = more manual work' },
         { name: 'Total Cost of Ownership', surfox: 'Growth $497/month, Starter $197/month', launch: '$1,500+/month including labor costs' }
       ]
     }
@@ -189,7 +189,7 @@ export default function SurFoxVsLaunchControl() {
               Two Completely Different Approaches
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Launch Control makes you manage campaigns manually. SurFox makes AI manage conversations automatically.
+              Launch Control makes you manage campaigns manually. SurFox manages conversations automatically.
             </p>
           </motion.div>
 
@@ -274,7 +274,7 @@ export default function SurFoxVsLaunchControl() {
                 <div className="space-y-3">
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                    <span>AI creates unique conversations for each lead</span>
+                    <span>SurFox creates unique conversations for each lead</span>
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
@@ -394,7 +394,7 @@ export default function SurFoxVsLaunchControl() {
                     <Clock className="w-4 h-4 mr-2 text-gray-600" />
                     <span className="text-xs font-medium text-gray-700">9:00 AM - Hot Lead Review (15 mins)</span>
                   </div>
-                  <p className="text-sm text-gray-700">Review leads AI flagged as "ready to buy" - complete conversation context provided</p>
+                  <p className="text-sm text-gray-700">Review leads SurFox flagged as "ready to buy" - complete conversation context provided</p>
                 </div>
 
                 <div className="p-3 rounded-lg border border-green-200 bg-white">
@@ -410,7 +410,7 @@ export default function SurFoxVsLaunchControl() {
                     <Clock className="w-4 h-4 mr-2 text-gray-600" />
                     <span className="text-xs font-medium text-gray-700">5:00 PM - End of Day (10 mins)</span>
                   </div>
-                  <p className="text-sm text-gray-700">Review appointment bookings AI secured, check conversion metrics, done for the day</p>
+                  <p className="text-sm text-gray-700">Review appointment bookings SurFox secured, check conversion metrics, done for the day</p>
                 </div>
 
                 <div className="p-3 rounded-lg border border-green-200 bg-white">
@@ -418,7 +418,7 @@ export default function SurFoxVsLaunchControl() {
                     <Sparkles className="w-4 h-4 mr-2 text-green-600" />
                     <span className="text-xs font-medium text-gray-700">24/7 - AI Works</span>
                   </div>
-                  <p className="text-sm text-gray-700">AI handles all conversations, follows up perfectly, learns from every interaction</p>
+                  <p className="text-sm text-gray-700">SurFox handles all conversations, follows up perfectly, learns from every interaction</p>
                 </div>
               </div>
 
@@ -556,7 +556,7 @@ export default function SurFoxVsLaunchControl() {
                 <h3 className="text-xl font-semibold text-navy">SurFox Advantage</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                Upload your entire old lead database. AI finds the 3-5% who are actually ready to buy
+                Upload your entire old lead database. SurFox finds the 3-5% who are actually ready to buy
                 but nobody ever followed up with properly. Turn yesterday's dead leads into today's deals.
               </p>
             </motion.div>
