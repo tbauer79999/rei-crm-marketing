@@ -43,7 +43,7 @@ export default function SurFoxVsTextUs() {
       category: 'Business Value',
       icon: DollarSign,
       features: [
-        { name: 'Pricing Model', surfox: 'All-inclusive $197/month, predictable costs', textus: '$500+ base with hidden fees and limits' },
+        { name: 'Pricing Model', surfox: 'Growth plan $497/month with learning AI, starts at $197', textus: '$500+ base with hidden fees and limits' },
         { name: 'Staff Requirements', surfox: 'No dedicated messaging staff needed', textus: 'Requires full-time manual management' },
         { name: 'ROI Tracking', surfox: 'Full conversion tracking from lead to close', textus: 'Basic message delivery metrics only' },
         { name: 'Scalability', surfox: 'AI scales conversations without adding staff', textus: 'More leads = more manual work required' }
@@ -121,7 +121,7 @@ export default function SurFoxVsTextUs() {
               <strong className="text-navy">TextUs charges $500+ for basic messaging that requires manual work.</strong>
             </p>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              <strong className="text-orange">SurFox delivers AI-powered conversations for $197 that work automatically.</strong>
+              <strong className="text-orange">SurFox delivers AI-powered conversations starting at $197, with Growth at $497 for learning AI.</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
@@ -148,8 +148,8 @@ export default function SurFoxVsTextUs() {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4">
               <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
-                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">$197</div>
-                <div className="text-sm text-gray-600">SurFox All-Inclusive</div>
+                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">$497</div>
+                <div className="text-sm text-gray-600">SurFox Growth Plan</div>
                 <div className="text-xs text-gray-400 mt-1">vs $2,000+ total</div>
               </div>
               <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
@@ -270,7 +270,7 @@ export default function SurFoxVsTextUs() {
                 <div className="space-y-3">
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                    <span>$197/month all-inclusive pricing</span>
+                    <span>$497/month Growth plan with learning AI</span>
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
@@ -629,12 +629,12 @@ export default function SurFoxVsTextUs() {
               transition={{ delay: 0.1 }}
               className="text-center p-6 rounded-2xl border-2 border-green-200 bg-green-50"
             >
-              <div className="text-sm text-gray-600 mb-2">SurFox All-Inclusive</div>
-              <div className="text-4xl font-semibold text-green-600 mb-2">$197</div>
-              <div className="text-xs text-gray-600 mb-4">AI does all the work</div>
+              <div className="text-sm text-gray-600 mb-2">SurFox Growth</div>
+              <div className="text-4xl font-semibold text-green-600 mb-2">$497</div>
+              <div className="text-xs text-gray-600 mb-4">Learning AI does all the work</div>
               <div className="text-xs text-gray-700 space-y-1">
-                <div>• $197 complete subscription</div>
-                <div>• $0 manual work</div>
+                <div>• $497 with learning AI included</div>
+                <div>• Starts at $197 for basic features</div>
                 <div>• $0 response handling</div>
               </div>
             </motion.div>
@@ -753,6 +753,10 @@ export default function SurFoxVsTextUs() {
 
             <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
               Stop spending hours on manual messaging. Let SurFox AI deliver qualified appointments automatically. <strong className="text-navy">30-day money back guarantee.</strong>
+            </p>
+
+            <p className="text-base text-gray-300 mb-8 max-w-2xl mx-auto">
+              Plans start at $197/month. Most teams choose Growth at $497 for learning AI.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">
