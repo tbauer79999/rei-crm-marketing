@@ -368,11 +368,11 @@ export default function PricingClient() {
                   <ul className="space-y-3 text-sm text-gray-700">
                     <li className="flex items-start">
                       <span className="mr-2">•</span>
-                      <span>Upload at least 500 quality prospects with valid contact info</span>
+                      <span>Upload at least 500 quality leads with valid contact info</span>
                     </li>
                     <li className="flex items-start">
                       <span className="mr-2">•</span>
-                      <span>AI successfully handles prospect conversations</span>
+                      <span>AI successfully handles lead conversations</span>
                     </li>
                     <li className="flex items-start">
                       <span className="mr-2">•</span>
@@ -410,13 +410,13 @@ export default function PricingClient() {
               {/* Definition boxes */}
               <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-6">
                 <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
-                  <h4 className="text-sm font-semibold text-navy mb-2">What's a quality prospect?</h4>
+                  <h4 className="text-sm font-semibold text-navy mb-2">What's a quality lead?</h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
                     Someone you'd actually want to call if they showed interest. Valid phone number, correct contact information, fits your business model.
                   </p>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
-                  <h4 className="text-sm font-semibold text-navy mb-2">What's a qualified prospect?</h4>
+                  <h4 className="text-sm font-semibold text-navy mb-2">What's a qualified lead?</h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
                     A lead that AI identifies as showing strong buying signals based on their conversation responses - either they've expressed clear interest, asked about next steps, or agreed to discuss further.
                   </p>
@@ -426,7 +426,7 @@ export default function PricingClient() {
               {/* Bottom callout */}
               <div className="p-4 sm:p-5 bg-gray-50 rounded-xl border-2 border-navy">
                 <p className="text-sm text-gray-700 leading-relaxed">
-                  <strong className="text-navy">No fine print:</strong> If you are not getting qualified prospects that are worth your time to call within 30 days, we will refund your money. That is it.
+                  <strong className="text-navy">No fine print:</strong> If you are not getting qualified leads that are worth your time to call within 30 days, we will refund your money. That is it.
                 </p>
               </div>
             </div>
