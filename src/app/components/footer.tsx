@@ -193,7 +193,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-xs text-gray-500">
-            © 2025 SurFox.ai. All rights reserved.
+            © {new Date().getFullYear()} SurFox.ai. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-xs">
             <Link href="/privacy" className="text-gray-500 hover:text-white transition-colors">
