@@ -112,6 +112,11 @@ export default function Footer() {
                   SurFox AI vs Smarter Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/compare/surfox-vs-meera-ai" className="text-sm hover:text-white transition-colors">
+                  SurFox AI vs Meera AI
+                </Link>
+              </li>
             </ul>
           </div>
 

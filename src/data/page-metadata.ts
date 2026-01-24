@@ -98,6 +98,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['AI for real estate', 'AI for insurance', 'AI for solar', 'sales AI', 'lead qualification'],
     path: '/industries',
   },
+  'compare-meera-ai': {
+    title: 'SurFox AI vs Meera AI - Lead Intelligence vs Call Center AI',
+    description: 'Compare SurFox AI vs Meera AI. Meera gets leads on the phone. SurFox tells you which leads are worth calling. Dead lead resurrection, AI scoring, and tenant-only learning.',
+    keywords: ['SurFox vs Meera', 'Meera AI alternative', 'AI lead qualification', 'call center AI', 'lead intelligence', 'outbound reactivation'],
+    path: '/compare/surfox-vs-meera-ai',
+  },
 };
 
 /**
