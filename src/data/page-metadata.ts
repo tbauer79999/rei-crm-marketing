@@ -68,12 +68,6 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['CRM integration', 'API', 'webhooks', 'integrations', 'sales stack'],
     path: '/integrations',
   },
-  'request-access': {
-    title: 'Request Early Access - Join the SurFox AI Beta',
-    description: 'Get early access to SurFox AI and be among the first to experience AI-powered lead qualification. Limited beta spots available.',
-    keywords: ['early access', 'beta signup', 'SurFox AI beta', 'AI sales beta'],
-    path: '/request-access',
-  },
   'ai-principles': {
     title: 'AI Principles - Our Approach to Responsible AI',
     description: 'Learn about SurFox AI\'s commitment to ethical, transparent, and responsible AI. Our principles guide every product decision we make.',

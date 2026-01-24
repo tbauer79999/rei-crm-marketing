@@ -147,11 +147,8 @@ export default function Nav() {
                 <ChevronDown className="w-4 h-4" />
               </div>
               <div className="absolute left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-xl z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <Link href="/contact" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors border-b border-gray-100">
+                <Link href="/contact" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors">
                   Get in Touch
-                </Link>
-                <Link href="/request-access" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors">
-                  Request Early Access
                 </Link>
               </div>
             </div>
@@ -160,9 +157,6 @@ export default function Nav() {
             <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-200">
               <a href="https://surfox.ai" className="text-gray-700 hover:text-gray-900 transition-colors text-sm font-medium">
                 Sign In
-              </a>
-              <a href="/request-access" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all">
-                Request Access
               </a>
             </div>
           </div>
@@ -216,16 +210,12 @@ export default function Nav() {
             <div className="border-t border-gray-200 pt-4">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Contact</div>
               <Link href="/contact" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Get in Touch</Link>
-              <Link href="/request-access" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Request Early Access</Link>
             </div>
             
             {/* Actions */}
             <div className="pt-4 border-t border-gray-200 space-y-3">
               <a href="https://surfox.ai" className="block text-gray-700 hover:text-gray-900 transition-colors font-medium text-center py-2">
                 Sign In
-              </a>
-              <a href="/request-access" className="block bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-3 rounded-lg font-medium text-center">
-                Request Access
               </a>
             </div>
           </div>
