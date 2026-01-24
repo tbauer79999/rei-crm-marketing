@@ -298,22 +298,22 @@ function TimelineItem({ day, text, icon: Icon, side, index, inView, value, suffi
 function ScreenshotsSection() {
   const screenshots = [
     {
-      src: '/screenshots/control-room.png',
+      src: '/control-room.png',
       alt: 'SurFox Control Room Dashboard',
       caption: 'What you see when you check in'
     },
     {
-      src: '/screenshots/learning-dashboard-1.png',
+      src: '/learning-dashboard-1.png',
       alt: 'AI Learning Dashboard - Overview',
       caption: 'What SurFox learned from your leads'
     },
     {
-      src: '/screenshots/learning-dashboard-2.png',
+      src: '/learning-dashboard-2.png',
       alt: 'AI Learning Dashboard - Details',
       caption: 'How SurFox adapts to your market'
     },
     {
-      src: '/screenshots/hot-lead-detail.png',
+      src: '/hot-lead-detail.png',
       alt: 'Hot Lead Detail View',
       caption: "What you get when someone's ready to buy"
     }
@@ -382,24 +382,13 @@ function ScreenshotCard({ src, alt, caption, index, reverse }: ScreenshotCardPro
           isHovered ? 'border-orange' : 'border-gray-200'
         }`}
       >
-        {/* Placeholder for screenshot - replace with actual images */}
-        <div className="aspect-video bg-gray-100 relative flex items-center justify-center">
-          <div className="text-center p-8">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-orange/10 flex items-center justify-center">
-              <TrendingUp className="w-8 h-8 text-orange" />
-            </div>
-            <p className="text-gray-500 text-sm">Screenshot: {alt}</p>
-            <p className="text-gray-400 text-xs mt-2">Place image at: {src}</p>
-          </div>
-          {/* Uncomment when actual screenshots are available:
-          <Image
+        <div className="aspect-video bg-gray-100 relative">
+          <img
             src={src}
             alt={alt}
-            fill
-            className="object-cover"
+            className="w-full h-full object-cover"
             loading="lazy"
           />
-          */}
         </div>
       </motion.div>
 
