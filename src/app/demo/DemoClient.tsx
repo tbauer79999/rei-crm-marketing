@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
 import Lenis from '@studio-freight/lenis';
+import Image from 'next/image';
 import { Upload, Bell, TrendingUp, Check } from 'lucide-react';
 
 export default function DemoClient() {
@@ -108,7 +109,7 @@ function HeroSection() {
           transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.4 }}
           className="text-lg md:text-xl text-gray-700 mt-8 max-w-3xl mx-auto leading-relaxed"
         >
-          SurFox is different: you don't watch it work. You just get results.
+          SurFox AI is different: you don't watch it work. You just get results.
         </motion.p>
       </div>
     </section>
@@ -136,7 +137,7 @@ function TimelineSection() {
     },
     {
       day: 'Day 7',
-      text: 'Dashboard shows:',
+      text: 'Your team closes deals from hot leads SurFox AI identified:',
       value: 128,
       suffix: 'K pipeline added',
       icon: TrendingUp,
@@ -299,18 +300,18 @@ function ScreenshotsSection() {
   const screenshots = [
     {
       src: '/control-room.png',
-      alt: 'SurFox Control Room Dashboard',
+      alt: 'SurFox AI Control Room Dashboard',
       caption: 'What you see when you check in'
     },
     {
       src: '/learning-dashboard-1.png',
       alt: 'AI Learning Dashboard - Overview',
-      caption: 'What SurFox learned from your leads'
+      caption: 'What SurFox AI learned from your leads'
     },
     {
       src: '/learning-dashboard-2.png',
       alt: 'AI Learning Dashboard - Details',
-      caption: 'How SurFox adapts to your market'
+      caption: 'How SurFox AI adapts to your market'
     },
     {
       src: '/hot-lead-detail.png',
@@ -321,7 +322,7 @@ function ScreenshotsSection() {
 
   return (
     <section className="py-20 md:py-28 lg:py-32 px-4 sm:px-6 md:px-8 bg-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -329,16 +330,15 @@ function ScreenshotsSection() {
           transition={{ type: 'spring', damping: 20, stiffness: 100 }}
           className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy text-center mb-16 md:mb-20"
         >
-          What SurFox Does While You're Not Watching
+          What SurFox AI Does While You're Not Watching
         </motion.h2>
 
-        <div className="space-y-12 md:space-y-16 lg:space-y-20">
+        <div className="space-y-16 md:space-y-20 lg:space-y-24">
           {screenshots.map((screenshot, index) => (
             <ScreenshotCard
               key={index}
               {...screenshot}
               index={index}
-              reverse={index % 2 === 1}
             />
           ))}
         </div>
@@ -352,51 +352,37 @@ interface ScreenshotCardProps {
   alt: string;
   caption: string;
   index: number;
-  reverse: boolean;
 }
 
-function ScreenshotCard({ src, alt, caption, index, reverse }: ScreenshotCardProps) {
-  const [isHovered, setIsHovered] = useState(false);
+function ScreenshotCard({ src, alt, caption, index }: ScreenshotCardProps) {
+  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-100px' }}
-      transition={{ type: 'spring', damping: 20, stiffness: 100, delay: index * 0.1 }}
-      className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-8 lg:gap-12`}
+      ref={ref}
+      initial={{ scale: 0.95, opacity: 0 }}
+      animate={inView ? { scale: 1, opacity: 1 } : {}}
+      transition={{ type: 'spring', damping: 20, stiffness: 100 }}
+      className="flex flex-col items-center"
     >
-      {/* Screenshot Card */}
-      <motion.div
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        animate={{
-          y: isHovered ? -8 : 0,
-          scale: isHovered ? 1.01 : 1,
-          boxShadow: isHovered
-            ? '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)'
-            : '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)'
-        }}
-        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-        className={`flex-1 w-full bg-white rounded-2xl border-2 overflow-hidden transition-colors duration-300 ${
-          isHovered ? 'border-orange' : 'border-gray-200'
-        }`}
-      >
-        <div className="aspect-video bg-gray-100 relative">
-          <img
+      {/* Caption - Above Screenshot */}
+      <p className="text-lg md:text-xl text-gray-500 text-center mb-6 md:mb-8">
+        {caption}
+      </p>
+
+      {/* Screenshot - Large and Dominant */}
+      <div className="w-full max-w-[1400px] mx-auto">
+        <div className="rounded-2xl border-2 border-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <Image
             src={src}
             alt={alt}
-            className="w-full h-full object-cover"
-            loading="lazy"
+            width={1400}
+            height={800}
+            quality={95}
+            priority={index === 0}
+            className="w-full h-auto"
           />
         </div>
-      </motion.div>
-
-      {/* Caption */}
-      <div className={`lg:w-1/3 text-center lg:text-left ${reverse ? 'lg:text-right' : ''}`}>
-        <p className="text-xl md:text-2xl font-semibold text-navy leading-relaxed">
-          {caption}
-        </p>
       </div>
     </motion.div>
   );
@@ -426,42 +412,43 @@ function CTASection() {
           transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.2 }}
           className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed"
         >
-          Upload your leads. Let SurFox work autonomously. Get notified when prospects are ready to buy.
+          Upload your leads. Let SurFox AI work autonomously. Get notified when prospects are ready to buy.
         </motion.p>
 
+        {/* Single CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+          className="mb-6"
         >
           <motion.a
             href="/pricing"
             whileHover={{ scale: 1.03, boxShadow: '0 20px 25px -5px rgb(234 88 12 / 0.3)' }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-            className="w-full sm:w-auto px-10 py-4 rounded-xl bg-orange text-white text-lg font-semibold shadow-lg"
+            className="inline-block px-12 py-5 rounded-xl bg-orange text-white text-lg font-semibold shadow-lg"
           >
             Start 14-Day Free Trial
           </motion.a>
-
-          <motion.a
-            href="/contact"
-            whileHover={{ scale: 1.03, backgroundColor: '#f9fafb' }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-            className="w-full sm:w-auto px-10 py-4 rounded-xl border-2 border-gray-300 text-navy text-lg font-semibold"
-          >
-            Schedule Live Demo
-          </motion.a>
         </motion.div>
+
+        {/* Trial terms */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.5 }}
+          className="text-gray-600 mb-10"
+        >
+          Start your trial - cancel anytime before day 14 if it's not for you.
+        </motion.p>
 
         {/* Trust Badges */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-sm text-gray-600"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-sm text-gray-600 mb-8"
         >
           <div className="flex items-center gap-2">
             <Check className="w-5 h-5 text-orange flex-shrink-0" />
@@ -476,6 +463,19 @@ function CTASection() {
             <span>Setup in 15 minutes</span>
           </div>
         </motion.div>
+
+        {/* Fallback contact */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.7 }}
+          className="text-sm text-gray-500"
+        >
+          Prefer to talk first?{' '}
+          <a href="mailto:tom@getsurfox.com" className="text-orange hover:underline">
+            Email tom@getsurfox.com
+          </a>
+        </motion.p>
       </div>
     </section>
   );
