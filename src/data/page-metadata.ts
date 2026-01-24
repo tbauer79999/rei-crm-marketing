@@ -92,6 +92,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['enterprise AI', 'enterprise sales software', 'large team solutions', 'custom deployment'],
     path: '/enterprise',
   },
+  industries: {
+    title: 'Industries - AI Lead Qualification for Every Sales Team',
+    description: 'SurFox AI works across real estate, wholesale, insurance, solar, recruiting, and B2B sales. Human psychology is universal - our AI adapts to any industry.',
+    keywords: ['AI for real estate', 'AI for insurance', 'AI for solar', 'sales AI', 'lead qualification'],
+    path: '/industries',
+  },
 };
 
 /**
