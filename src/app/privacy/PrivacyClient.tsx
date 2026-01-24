@@ -70,7 +70,7 @@ export default function PrivacyPolicy() {
               SurFox ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform and services.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              By using SurFox, you agree to the collection and use of information in accordance with this policy.
+              By using SurFox AI, you agree to the collection and use of information in accordance with this policy.
             </p>
           </motion.div>
 
@@ -272,12 +272,12 @@ export default function PrivacyPolicy() {
 
             <div className="ml-16 text-gray-600 leading-relaxed space-y-4">
               <p>
-                SurFox operates with strict tenant isolation. Each organization's data is completely segregated and processed independently:
+                SurFox AI operates with strict tenant isolation. Each organization's data is completely segregated and processed independently:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-orange mt-1">•</span>
-                  <span>Your data is never shared with or accessible to other SurFox tenants</span>
+                  <span>Your data is never shared with or accessible to other SurFox AI tenants</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-orange mt-1">•</span>

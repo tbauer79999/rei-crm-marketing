@@ -83,11 +83,11 @@ export default function RequestAccess() {
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               Be Among the First<br className="hidden sm:block" />
-              <span className="sm:inline"> </span>to Experience SurFox
+              <span className="sm:inline"> </span>to Experience SurFox AI
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              Join forward-thinking teams already using SurFox to transform human interaction data into strategic intelligence.
+              Join forward-thinking teams already using SurFox AI to transform human interaction data into strategic intelligence.
             </p>
           </motion.div>
         </div>
@@ -115,12 +115,12 @@ export default function RequestAccess() {
               {
                 icon: Rocket,
                 title: 'Priority Access',
-                desc: 'Skip the waitlist and get immediate access to SurFox products as they launch.'
+                desc: 'Skip the waitlist and get immediate access to SurFox AI products as they launch.'
               },
               {
                 icon: Users,
                 title: 'Dedicated Onboarding',
-                desc: 'Work directly with our team to customize SurFox for your specific use case.'
+                desc: 'Work directly with our team to customize SurFox AI for your specific use case.'
               },
               {
                 icon: TrendingUp,
@@ -373,7 +373,7 @@ export default function RequestAccess() {
                         value={formData.useCase}
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition resize-none"
-                        placeholder="Tell us how you plan to use SurFox. What problem are you trying to solve?"
+                        placeholder="Tell us how you plan to use SurFox AI. What problem are you trying to solve?"
                       />
                     </div>
 
@@ -487,7 +487,7 @@ export default function RequestAccess() {
               {
                 number: '03',
                 title: 'Custom Setup',
-                desc: 'We configure SurFox for your environment, integrate with your existing tools, and set up your team.',
+                desc: 'We configure SurFox AI for your environment, integrate with your existing tools, and set up your team.',
                 icon: Zap
               },
               {

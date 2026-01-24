@@ -86,11 +86,11 @@ export default function Leadership() {
                   
                   <div className="space-y-4 mb-8">
                     <p className="text-gray-700 leading-relaxed">
-                      Tom founded SurFox with a clear mission: transform how businesses understand and act on human interactions. With over 20 years in sales and revenue operations, he witnessed firsthand how companies struggled to extract intelligence from their communication data.
+                      Tom founded SurFox AI with a clear mission: transform how businesses understand and act on human interactions. With over 20 years in sales and revenue operations, he witnessed firsthand how companies struggled to extract intelligence from their communication data.
                     </p>
                     
                     <p className="text-gray-700 leading-relaxed">
-                      His approach is rooted in practical experience - having built and scaled sales teams, Tom understands the gap between what AI promises and what operators actually need. SurFox bridges that gap.
+                      His approach is rooted in practical experience - having built and scaled sales teams, Tom understands the gap between what AI promises and what operators actually need. SurFox AI bridges that gap.
                     </p>
                     
                     <p className="text-gray-700 leading-relaxed">
@@ -197,7 +197,7 @@ export default function Leadership() {
             >
               <div className="space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  SurFox started with a simple observation: businesses generate massive amounts of interaction data but have no systematic way to understand it. Messages, transactions, behavioral signals - all sitting in silos, waiting to tell their story.
+                  SurFox AI started with a simple observation: businesses generate massive amounts of interaction data but have no systematic way to understand it. Messages, transactions, behavioral signals - all sitting in silos, waiting to tell their story.
                 </p>
                 
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -214,7 +214,7 @@ export default function Leadership() {
                 </div>
 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  As SurFox grows, the team will grow with it - bringing on operators, engineers, and data scientists who share this vision and want to help build the future of business intelligence.
+                  As SurFox AI grows, the team will grow with it - bringing on operators, engineers, and data scientists who share this vision and want to help build the future of business intelligence.
                 </p>
               </div>
             </motion.div>
@@ -235,7 +235,7 @@ export default function Leadership() {
             </h2>
             
             <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-              Whether you are interested in SurFox as a customer, partner, or just want to talk about the future of human interaction intelligence - I would love to hear from you.
+              Whether you are interested in SurFox AI as a customer, partner, or just want to talk about the future of human interaction intelligence - I would love to hear from you.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">

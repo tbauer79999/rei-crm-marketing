@@ -12,32 +12,32 @@ export default function SurFoxVsSkipio() {
       category: 'AI Power',
       icon: Brain,
       features: [
-        { name: 'Conversation Handling', surfox: 'SurFox writes every message and handles responses automatically', skipio: 'You write drafts manually, then review every response' },
-        { name: 'Conversation Memory', surfox: 'SurFox knows the full conversation history with each lead', skipio: 'No memory - treats every message as first contact' },
-        { name: 'Learning Capability', surfox: 'SurFox learns your business and improves with every conversation', skipio: 'Same templates forever - no learning or improvement' },
-        { name: 'Buying Signal Detection', surfox: 'SurFox reads when prospects are ready to buy and alerts you', skipio: 'You manually read every message to find hot leads' },
-        { name: 'Context Understanding', surfox: 'SurFox reads between the lines and responds appropriately', skipio: 'Basic keyword triggers only - misses context and tone' }
+        { name: 'Conversation Handling', surfox: 'SurFox AI writes every message and handles responses automatically', skipio: 'You write drafts manually, then review every response' },
+        { name: 'Conversation Memory', surfox: 'SurFox AI knows the full conversation history with each lead', skipio: 'No memory - treats every message as first contact' },
+        { name: 'Learning Capability', surfox: 'SurFox AI learns your business and improves with every conversation', skipio: 'Same templates forever - no learning or improvement' },
+        { name: 'Buying Signal Detection', surfox: 'SurFox AI reads when prospects are ready to buy and alerts you', skipio: 'You manually read every message to find hot leads' },
+        { name: 'Context Understanding', surfox: 'SurFox AI reads between the lines and responds appropriately', skipio: 'Basic keyword triggers only - misses context and tone' }
       ]
     },
     {
       category: 'Lead Results',
       icon: Target,
       features: [
-        { name: 'Hot Lead Identification', surfox: 'SurFox scores every lead and flags the ones ready to buy', skipio: 'You manually sort through all responses to find good ones' },
-        { name: 'Qualification Process', surfox: 'SurFox asks the right questions and qualifies leads for you', skipio: 'You have to qualify every lead manually' },
-        { name: 'Escalation Intelligence', surfox: 'SurFox alerts you only when prospects are sales-ready', skipio: 'You monitor everything - no intelligent escalation' },
-        { name: 'Lead Prioritization', surfox: 'SurFox ranks leads by likelihood to close', skipio: 'All leads look the same - you decide priority manually' },
-        { name: 'Appointment Quality', surfox: 'SurFox hands you leads that are motivated and qualified', skipio: 'You get raw responses - must figure out who to call' }
+        { name: 'Hot Lead Identification', surfox: 'SurFox AI scores every lead and flags the ones ready to buy', skipio: 'You manually sort through all responses to find good ones' },
+        { name: 'Qualification Process', surfox: 'SurFox AI asks the right questions and qualifies leads for you', skipio: 'You have to qualify every lead manually' },
+        { name: 'Escalation Intelligence', surfox: 'SurFox AI alerts you only when prospects are sales-ready', skipio: 'You monitor everything - no intelligent escalation' },
+        { name: 'Lead Prioritization', surfox: 'SurFox AI ranks leads by likelihood to close', skipio: 'All leads look the same - you decide priority manually' },
+        { name: 'Appointment Quality', surfox: 'SurFox AI hands you leads that are motivated and qualified', skipio: 'You get raw responses - must figure out who to call' }
       ]
     },
     {
       category: 'Automation Intelligence',
       icon: Zap,
       features: [
-        { name: 'Conversation Adaptation', surfox: 'SurFox changes approach based on how each prospect responds', skipio: 'Same linear sequence for everyone regardless of responses' },
-        { name: 'Timing Optimization', surfox: 'SurFox knows when each prospect is most likely to respond', skipio: 'Fixed schedules that ignore individual behavior patterns' },
-        { name: 'Objection Handling', surfox: 'SurFox responds to concerns and keeps conversations moving forward', skipio: 'Basic auto-replies that often miss the point' },
-        { name: 'Follow-up Management', surfox: 'SurFox ensures every lead gets the right follow-up at the right time', skipio: 'You manually manage all follow-ups and timing' },
+        { name: 'Conversation Adaptation', surfox: 'SurFox AI changes approach based on how each prospect responds', skipio: 'Same linear sequence for everyone regardless of responses' },
+        { name: 'Timing Optimization', surfox: 'SurFox AI knows when each prospect is most likely to respond', skipio: 'Fixed schedules that ignore individual behavior patterns' },
+        { name: 'Objection Handling', surfox: 'SurFox AI responds to concerns and keeps conversations moving forward', skipio: 'Basic auto-replies that often miss the point' },
+        { name: 'Follow-up Management', surfox: 'SurFox AI ensures every lead gets the right follow-up at the right time', skipio: 'You manually manage all follow-ups and timing' },
         { name: 'Scalability', surfox: 'Handle 10x more leads without hiring more people', skipio: 'More leads = more manual work for your team' }
       ]
     },
@@ -273,7 +273,7 @@ export default function SurFoxVsSkipio() {
                 <div className="space-y-3">
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                    <span>SurFox handles all conversations for you</span>
+                    <span>SurFox AI handles all conversations for you</span>
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
@@ -393,7 +393,7 @@ export default function SurFoxVsSkipio() {
                     <Clock className="w-4 h-4 mr-2 text-gray-600" />
                     <span className="text-xs font-medium text-gray-700">9:00 AM - Hot Lead Review (15 mins)</span>
                   </div>
-                  <p className="text-sm text-gray-700">Review leads SurFox flagged as "ready to buy" - complete conversation context provided</p>
+                  <p className="text-sm text-gray-700">Review leads SurFox AI flagged as "ready to buy" - complete conversation context provided</p>
                 </div>
 
                 <div className="p-3 rounded-lg border border-green-200 bg-white">
@@ -409,7 +409,7 @@ export default function SurFoxVsSkipio() {
                     <Clock className="w-4 h-4 mr-2 text-gray-600" />
                     <span className="text-xs font-medium text-gray-700">5:00 PM - End of Day (10 mins)</span>
                   </div>
-                  <p className="text-sm text-gray-700">Review appointment bookings SurFox secured, check conversion metrics, done for the day</p>
+                  <p className="text-sm text-gray-700">Review appointment bookings SurFox AI secured, check conversion metrics, done for the day</p>
                 </div>
 
                 <div className="p-3 rounded-lg border border-green-200 bg-white">
@@ -417,7 +417,7 @@ export default function SurFoxVsSkipio() {
                     <Sparkles className="w-4 h-4 mr-2 text-green-600" />
                     <span className="text-xs font-medium text-gray-700">24/7 - AI Works</span>
                   </div>
-                  <p className="text-sm text-gray-700">SurFox handles all conversations, follows up perfectly, learns from every interaction</p>
+                  <p className="text-sm text-gray-700">SurFox AI handles all conversations, follows up perfectly, learns from every interaction</p>
                 </div>
               </div>
 
@@ -555,7 +555,7 @@ export default function SurFoxVsSkipio() {
                 <h3 className="text-xl font-semibold text-navy">SurFox Advantage</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                Upload your entire old lead database. SurFox finds the 3-5% who are actually ready to buy
+                Upload your entire old lead database. SurFox AI finds the 3-5% who are actually ready to buy
                 but nobody ever followed up with properly. Turn yesterday's dead leads into today's deals.
               </p>
             </motion.div>
@@ -585,7 +585,7 @@ export default function SurFoxVsSkipio() {
               </p>
             </div>
             <p className="text-xl font-bold text-green-700 mt-6">
-              This is why SurFox pays for itself in month one.
+              This is why SurFox AI pays for itself in month one.
             </p>
           </motion.div>
         </div>
@@ -738,7 +738,7 @@ export default function SurFoxVsSkipio() {
                 </div>
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                  <span>You want SurFox to handle conversations for you</span>
+                  <span>You want SurFox AI to handle conversations for you</span>
                 </div>
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />

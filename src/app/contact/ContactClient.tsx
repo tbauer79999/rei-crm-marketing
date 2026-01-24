@@ -391,7 +391,7 @@ export default function Contact() {
                       className="mt-1 w-4 h-4 rounded border-gray-300 text-orange focus:ring-orange focus:ring-2 focus:ring-orange/20"
                     />
                     <label htmlFor="smsConsent" className="text-sm text-gray-600 leading-relaxed">
-                      By submitting this form you agree to receive SMS notifications related to your SurFox account, product updates, and platform communications. Message and data rates may apply. Reply STOP to unsubscribe.
+                      By submitting this form you agree to receive SMS notifications related to your SurFox AI account, product updates, and platform communications. Message and data rates may apply. Reply STOP to unsubscribe.
                     </label>
                   </div>
 
@@ -437,7 +437,7 @@ export default function Contact() {
               {
                 icon: MessageSquare,
                 title: 'Request a Demo',
-                desc: 'See SurFox in action with a personalized walkthrough.',
+                desc: 'See SurFox AI in action with a personalized walkthrough.',
                 link: '/request-access',
                 linkText: 'Schedule Demo'
               },
@@ -510,7 +510,7 @@ export default function Contact() {
               },
               {
                 q: 'Do you offer custom enterprise solutions?',
-                a: 'Absolutely. SurFox can be customized for enterprise deployments with dedicated support, custom integrations, and specialized configurations. Contact our sales team to discuss your needs.'
+                a: 'Absolutely. SurFox AI can be customized for enterprise deployments with dedicated support, custom integrations, and specialized configurations. Contact our sales team to discuss your needs.'
               },
               {
                 q: 'What if I am an existing customer with a technical issue?',

@@ -12,10 +12,10 @@ export default function SurFoxVsSmarterContact() {
       category: 'AI vs Templates',
       icon: Brain,
       features: [
-        { name: 'Response Generation', surfox: 'SurFox creates unique conversations for each lead', smarter: 'Template-based automation only' },
-        { name: 'Conversation Intelligence', surfox: 'SurFox remembers and learns from every conversation', smarter: 'Basic contact management, no memory' },
-        { name: 'Lead Qualification', surfox: 'SurFox automatically scores and prioritizes hot leads', smarter: 'Manual qualification required' },
-        { name: 'Message Personalization', surfox: 'SurFox adapts tone and approach per prospect', smarter: 'Fixed template variations' },
+        { name: 'Response Generation', surfox: 'SurFox AI creates unique conversations for each lead', smarter: 'Template-based automation only' },
+        { name: 'Conversation Intelligence', surfox: 'SurFox AI remembers and learns from every conversation', smarter: 'Basic contact management, no memory' },
+        { name: 'Lead Qualification', surfox: 'SurFox AI automatically scores and prioritizes hot leads', smarter: 'Manual qualification required' },
+        { name: 'Message Personalization', surfox: 'SurFox AI adapts tone and approach per prospect', smarter: 'Fixed template variations' },
         { name: 'Learning Capability', surfox: 'Gets smarter with every conversation', smarter: 'No learning or adaptation' }
       ]
     },
@@ -23,10 +23,10 @@ export default function SurFoxVsSmarterContact() {
       category: 'Sales Results',
       icon: Target,
       features: [
-        { name: 'Appointment Setting', surfox: 'SurFox identifies buying signals and books qualified calls', smarter: 'Manual signal interpretation required' },
+        { name: 'Appointment Setting', surfox: 'SurFox AI identifies buying signals and books qualified calls', smarter: 'Manual signal interpretation required' },
         { name: 'Lead Scoring', surfox: 'Real-time motivation and urgency scoring', smarter: 'Basic engagement tracking only' },
-        { name: 'Hot Lead Detection', surfox: 'SurFox escalates when prospects are ready to buy', smarter: 'Manual monitoring and handoff' },
-        { name: 'Conversion Optimization', surfox: 'SurFox learns what works and improves messaging', smarter: 'Fixed campaign sequences only' },
+        { name: 'Hot Lead Detection', surfox: 'SurFox AI escalates when prospects are ready to buy', smarter: 'Manual monitoring and handoff' },
+        { name: 'Conversion Optimization', surfox: 'SurFox AI learns what works and improves messaging', smarter: 'Fixed campaign sequences only' },
         { name: 'Deal Pipeline', surfox: 'Tracks leads from first contact to closed deal', smarter: 'Basic list management' }
       ]
     },
@@ -35,10 +35,10 @@ export default function SurFoxVsSmarterContact() {
       icon: Zap,
       features: [
         { name: 'Setup Time', surfox: '15-minute Chrome extension setup', smarter: 'Manual list upload and configuration' },
-        { name: 'Conversation Handling', surfox: 'SurFox manages 90% of conversations autonomously', smarter: 'All conversations require manual handling' },
+        { name: 'Conversation Handling', surfox: 'SurFox AI manages 90% of conversations autonomously', smarter: 'All conversations require manual handling' },
         { name: 'AI Training', surfox: 'Upload PDFs, SOPs to train AI on your business', smarter: 'Template library only' },
-        { name: 'Smart Follow-ups', surfox: 'SurFox determines optimal timing per lead', smarter: 'Fixed retry schedules' },
-        { name: 'Spam Prevention', surfox: 'SurFox prevents spam detection automatically', smarter: 'Risk of spam flags with volume' }
+        { name: 'Smart Follow-ups', surfox: 'SurFox AI determines optimal timing per lead', smarter: 'Fixed retry schedules' },
+        { name: 'Spam Prevention', surfox: 'SurFox AI prevents spam detection automatically', smarter: 'Risk of spam flags with volume' }
       ]
     },
     {
@@ -48,7 +48,7 @@ export default function SurFoxVsSmarterContact() {
         { name: 'Pricing Model', surfox: 'Growth plan $497/month with learning AI, starts at $197', smarter: 'Base fee plus per-message costs' },
         { name: 'Time Investment', surfox: 'Minimal ongoing management required', smarter: 'Constant manual conversation monitoring' },
         { name: 'ROI Tracking', surfox: 'Full conversion tracking from lead to close', smarter: 'Basic volume and open rate metrics' },
-        { name: 'Scalability', surfox: 'SurFox scales conversations without adding staff', smarter: 'More leads = more manual work' },
+        { name: 'Scalability', surfox: 'SurFox AI scales conversations without adding staff', smarter: 'More leads = more manual work' },
         { name: 'Total Cost', surfox: 'Growth $497/month, Starter $197/month', smarter: '$199+ base + usage fees + labor costs' }
       ]
     }
@@ -273,7 +273,7 @@ export default function SurFoxVsSmarterContact() {
                 <div className="space-y-3">
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                    <span>SurFox creates unique conversations for each lead</span>
+                    <span>SurFox AI creates unique conversations for each lead</span>
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
@@ -281,7 +281,7 @@ export default function SurFoxVsSmarterContact() {
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                    <span>SurFox escalates hot leads immediately</span>
+                    <span>SurFox AI escalates hot leads immediately</span>
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
@@ -537,7 +537,7 @@ export default function SurFoxVsSmarterContact() {
                 <h3 className="text-xl font-semibold text-navy">SurFox Advantage</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                Upload your entire old lead database. SurFox finds the 3-5% who are actually ready to buy
+                Upload your entire old lead database. SurFox AI finds the 3-5% who are actually ready to buy
                 but nobody ever followed up with properly. Turn yesterday's dead leads into today's deals.
               </p>
             </motion.div>
@@ -567,7 +567,7 @@ export default function SurFoxVsSmarterContact() {
               </p>
             </div>
             <p className="text-xl font-bold text-green-700 mt-6">
-              This is why SurFox pays for itself in month one.
+              This is why SurFox AI pays for itself in month one.
             </p>
           </motion.div>
         </div>
@@ -711,7 +711,7 @@ export default function SurFoxVsSmarterContact() {
                 </div>
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                  <span>You'd rather SurFox handle conversations 24/7</span>
+                  <span>You'd rather SurFox AI handle conversations 24/7</span>
                 </div>
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />

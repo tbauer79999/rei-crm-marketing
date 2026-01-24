@@ -87,11 +87,11 @@ export default function TermsOfService() {
             className="mb-16"
           >
             <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-6">
-              What SurFox Does
+              What SurFox AI Does
             </h2>
             <div className="text-gray-600 leading-relaxed space-y-4">
               <p>
-                SurFox provides AI-powered conversation intelligence software that automates lead qualification and engagement through SMS messaging. The Platform analyzes prospect responses, identifies buying signals, and escalates qualified leads to your sales team.
+                SurFox AI provides AI-powered conversation intelligence software that automates lead qualification and engagement through SMS messaging. The Platform analyzes prospect responses, identifies buying signals, and escalates qualified leads to your sales team.
               </p>
               <p className="font-semibold text-navy">
                 We provide the tools. You're responsible for how you use them.
@@ -115,7 +115,7 @@ export default function TermsOfService() {
               </h2>
             </div>
             <div className="ml-16 text-gray-600 leading-relaxed space-y-4">
-              <p>To use SurFox, you must:</p>
+              <p>To use SurFox AI, you must:</p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-orange mt-1">•</span>
@@ -162,7 +162,7 @@ export default function TermsOfService() {
 
             <div className="ml-16 space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-navy mb-3">You may use SurFox to:</h3>
+                <h3 className="text-xl font-semibold text-navy mb-3">You may use SurFox AI to:</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-orange mt-1">•</span>
@@ -184,7 +184,7 @@ export default function TermsOfService() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-navy mb-3">You may NOT use SurFox to:</h3>
+                <h3 className="text-xl font-semibold text-navy mb-3">You may NOT use SurFox AI to:</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-orange mt-1">•</span>
@@ -216,7 +216,7 @@ export default function TermsOfService() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-orange mt-1">•</span>
-                    <span>Resell or redistribute SurFox services without authorization</span>
+                    <span>Resell or redistribute SurFox AI services without authorization</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-orange mt-1">•</span>
@@ -499,7 +499,7 @@ export default function TermsOfService() {
                 For Growth and Scale plans only:
               </p>
               <p>
-                Upload at least 500 quality leads with valid contact info within your first 30 days. If SurFox doesn't deliver 10 qualified prospects within 30 days of your first payment, we'll refund your first month in full.
+                Upload at least 500 quality leads with valid contact info within your first 30 days. If SurFox AI doesn't deliver 10 qualified prospects within 30 days of your first payment, we'll refund your first month in full.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-6">
@@ -512,7 +512,7 @@ export default function TermsOfService() {
                 <div className="bg-white rounded-lg p-4">
                   <h4 className="font-semibold text-navy mb-2">What's a qualified prospect?</h4>
                   <p className="text-sm">
-                    A lead that SurFox identifies as showing strong buying signals based on their conversation responses - either they've expressed clear interest, asked about next steps, or agreed to discuss further.
+                    A lead that SurFox AI identifies as showing strong buying signals based on their conversation responses - either they've expressed clear interest, asked about next steps, or agreed to discuss further.
                   </p>
                 </div>
               </div>
@@ -526,7 +526,7 @@ export default function TermsOfService() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-orange mt-1">•</span>
-                    <span>Allow 7-14 days for SurFox to start conversations</span>
+                    <span>Allow 7-14 days for SurFox AI to start conversations</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-orange mt-1">•</span>
@@ -727,7 +727,7 @@ export default function TermsOfService() {
 
             <div className="ml-16 space-y-6 text-gray-600">
               <p className="font-semibold text-navy">
-                SurFox is provided "as is" without warranties.
+                SurFox AI is provided "as is" without warranties.
               </p>
 
               <div>
@@ -747,7 +747,7 @@ export default function TermsOfService() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-orange mt-1">•</span>
-                    <span>That SurFox will always make correct decisions</span>
+                    <span>That SurFox AI will always make correct decisions</span>
                   </li>
                 </ul>
               </div>
@@ -864,7 +864,7 @@ export default function TermsOfService() {
 
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                SurFox integrates with third-party services including:
+                SurFox AI integrates with third-party services including:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
@@ -903,11 +903,11 @@ export default function TermsOfService() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-orange mt-1">•</span>
-                  <span>Their downtime may affect SurFox availability</span>
+                  <span>Their downtime may affect SurFox AI availability</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-orange mt-1">•</span>
-                  <span>You must comply with their terms when using SurFox</span>
+                  <span>You must comply with their terms when using SurFox AI</span>
                 </li>
               </ul>
             </div>

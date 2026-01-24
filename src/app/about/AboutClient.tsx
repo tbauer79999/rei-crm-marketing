@@ -56,7 +56,7 @@ export default function About() {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              SurFox transforms human interaction data into strategic intelligence. We believe every conversation, every signal, every interaction contains insight - and businesses deserve the tools to see it.
+              SurFox AI transforms human interaction data into strategic intelligence. We believe every conversation, every signal, every interaction contains insight - and businesses deserve the tools to see it.
             </p>
           </motion.div>
         </div>
@@ -122,7 +122,7 @@ export default function About() {
             className="text-center mb-16 sm:mb-20"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
-              Why SurFox Exists
+              Why SurFox AI Exists
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               Built by an operator who lived the problem
@@ -137,7 +137,7 @@ export default function About() {
           >
             <div className="space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed">
-                SurFox was born from 20+ years in the trenches of sales and revenue operations. After decades watching businesses generate massive amounts of interaction data - calls, messages, emails, transactions - and struggle to make sense of it, the gap became impossible to ignore.
+                SurFox AI was born from 20+ years in the trenches of sales and revenue operations. After decades watching businesses generate massive amounts of interaction data - calls, messages, emails, transactions - and struggle to make sense of it, the gap became impossible to ignore.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -154,7 +154,7 @@ export default function About() {
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                So we built SurFox. An AI-powered platform that does not just track interactions - it understands them. That does not just report on the past - it predicts the future. That does not just give you data - it gives you intelligence.
+                So we built SurFox AI. An AI-powered platform that does not just track interactions - it understands them. That does not just report on the past - it predicts the future. That does not just give you data - it gives you intelligence.
               </p>
             </div>
           </motion.div>
@@ -316,14 +316,14 @@ export default function About() {
               {
                 icon: Users,
                 title: 'Become a Customer',
-                desc: 'Join forward-thinking companies already using SurFox to transform their customer intelligence.',
+                desc: 'Join forward-thinking companies already using SurFox AI to transform their customer intelligence.',
                 link: '/pricing',
                 linkText: 'Get Started'
               },
               {
                 icon: Globe,
                 title: 'Partner With Us',
-                desc: 'Building something complementary? Want to integrate with SurFox? Let us talk about partnership opportunities.',
+                desc: 'Building something complementary? Want to integrate with SurFox AI? Let us talk about partnership opportunities.',
                 link: '/contact',
                 linkText: 'Get in Touch'
               }

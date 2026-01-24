@@ -38,7 +38,7 @@ export default function Footer() {
                 className="w-8 h-8"
               />
               <span className="text-xl font-bold text-white">
-                SurFox
+                SurFox AI
               </span>
             </div>
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
@@ -84,32 +84,32 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="/compare/surfox-vs-all-competitors" className="text-sm hover:text-white transition-colors">
-                  SurFox vs All Competitors
+                  SurFox AI vs All Competitors
                 </Link>
               </li>
               <li>
                 <Link href="/compare/surfox-vs-textus" className="text-sm hover:text-white transition-colors">
-                  SurFox vs Textus
+                  SurFox AI vs Textus
                 </Link>
               </li>
               <li>
                 <Link href="/compare/surfox-vs-launch-control" className="text-sm hover:text-white transition-colors">
-                  SurFox vs Launch Control
+                  SurFox AI vs Launch Control
                 </Link>
               </li>
               <li>
                 <Link href="/compare/surfox-vs-lead-sherpa" className="text-sm hover:text-white transition-colors">
-                  SurFox vs Lead Sherpa
+                  SurFox AI vs Lead Sherpa
                 </Link>
               </li>
               <li>
                 <Link href="/compare/surfox-vs-skipio" className="text-sm hover:text-white transition-colors">
-                  SurFox vs Skipio
+                  SurFox AI vs Skipio
                 </Link>
               </li>
               <li>
                 <Link href="/compare/surfox-vs-smarter-contact" className="text-sm hover:text-white transition-colors">
-                  SurFox vs Smarter Contact
+                  SurFox AI vs Smarter Contact
                 </Link>
               </li>
             </ul>

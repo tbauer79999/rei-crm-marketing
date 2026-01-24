@@ -179,7 +179,7 @@ export default function SecurityCompliance() {
               { 
                 title: 'SOC 2 Type II',
                 status: 'Roadmap',
-                desc: 'SurFox is architected with SOC 2 Type II compliance in mind. Our infrastructure, policies, and controls are designed to meet Trust Services Criteria for security, availability, and confidentiality.',
+                desc: 'SurFox AI is architected with SOC 2 Type II compliance in mind. Our infrastructure, policies, and controls are designed to meet Trust Services Criteria for security, availability, and confidentiality.',
                 icon: Shield,
                 gradient: 'from-orange/10 to-orange/5'
               },
@@ -409,7 +409,7 @@ export default function SecurityCompliance() {
             </h2>
             
             <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-10 leading-relaxed px-4 max-w-3xl mx-auto">
-              Security and compliance are foundational to the SurFox Platform. We are committed to maintaining the highest standards of data protection as we grow.
+              Security and compliance are foundational to the SurFox AI Platform. We are committed to maintaining the highest standards of data protection as we grow.
             </p>
 
             <p className="text-base sm:text-lg font-semibold text-orange mb-10 sm:mb-12 px-4">

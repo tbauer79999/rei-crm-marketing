@@ -49,7 +49,7 @@ export default function Integrations() {
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              SurFox is built to ingest data from any source - communication channels, business systems, and transaction platforms. Today we start with SMS. Here's where we're headed.
+              SurFox AI is built to ingest data from any source - communication channels, business systems, and transaction platforms. Today we start with SMS. Here's where we're headed.
             </p>
           </motion.div>
         </div>
@@ -229,7 +229,7 @@ export default function Integrations() {
               <div className="w-3 h-3 rounded-full bg-gray-400"></div>
               <h2 className="text-2xl sm:text-3xl font-semibold text-navy">On the Roadmap</h2>
             </div>
-            <p className="text-gray-600">Planned integrations as SurFox expands to multi-signal intelligence.</p>
+            <p className="text-gray-600">Planned integrations as SurFox AI expands to multi-signal intelligence.</p>
           </motion.div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -281,11 +281,11 @@ export default function Integrations() {
             </h2>
             
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Today, SurFox starts with SMS - one channel, one signal type. But the architecture is built to ingest everything: calls, emails, transactions, reviews, bookings, support tickets.
+              Today, SurFox AI starts with SMS - one channel, one signal type. But the architecture is built to ingest everything: calls, emails, transactions, reviews, bookings, support tickets.
             </p>
             
             <p className="text-lg text-gray-300 leading-relaxed">
-              Each integration adds another signal to the intelligence layer. The more signals flow in, the smarter SurFox gets about your customers.
+              Each integration adds another signal to the intelligence layer. The more signals flow in, the smarter SurFox AI gets about your customers.
             </p>
           </motion.div>
         </div>

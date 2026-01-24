@@ -9,7 +9,7 @@ export default function EnterprisePage() {
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">Enterprise Solutions</h1>
           <p className="text-lg text-slate-400 max-w-2xl">
-            SurFox is purpose-built for enterprise B2B sales at scale. From multi-team coordination to enterprise-grade AI workflows, we help you engage faster and convert smarter.
+            SurFox AI is purpose-built for enterprise B2B sales at scale. From multi-team coordination to enterprise-grade AI workflows, we help you engage faster and convert smarter.
           </p>
         </div>
 
@@ -30,7 +30,7 @@ export default function EnterprisePage() {
               <h2 className="text-xl font-semibold text-white">Custom AI Behavior</h2>
             </div>
             <p className="text-slate-400">
-              Train SurFox to behave like your best sales rep - not a chatbot. Customize tone, persona, urgency rules, escalation score, and knowledge base per org.
+              Train SurFox AI to behave like your best sales rep - not a chatbot. Customize tone, persona, urgency rules, escalation score, and knowledge base per org.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export default function EnterprisePage() {
         <div className="text-center mt-20">
           <h3 className="text-2xl font-bold text-white mb-4">Talk to Sales</h3>
           <p className="text-slate-400 mb-6 max-w-xl mx-auto">
-            Let us show you how SurFox can adapt to your enterprise sales model and boost lead-to-close efficiency at scale.
+            Let us show you how SurFox AI can adapt to your enterprise sales model and boost lead-to-close efficiency at scale.
           </p>
           <a
             href="#"

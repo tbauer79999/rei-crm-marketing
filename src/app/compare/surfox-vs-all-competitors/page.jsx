@@ -89,7 +89,7 @@ export default function SurFoxGeneralComparison() {
     {
       area: 'Scalability',
       traditional: 'Linear scaling requires proportional human resources',
-      surfox: 'SurFox handles 90% of interactions, exponential scaling possible',
+      surfox: 'SurFox AI handles 90% of interactions, exponential scaling possible',
       impact: 'Unlimited growth without proportional cost increases'
     },
     {
@@ -486,7 +486,7 @@ export default function SurFoxGeneralComparison() {
                 <h3 className="text-xl font-semibold text-navy">SurFox Advantage</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                Upload your entire old lead database. SurFox finds the 3-5% who are actually ready to buy
+                Upload your entire old lead database. SurFox AI finds the 3-5% who are actually ready to buy
                 but nobody ever followed up with properly. Turn yesterday's dead leads into today's deals.
               </p>
             </motion.div>
@@ -516,7 +516,7 @@ export default function SurFoxGeneralComparison() {
               </p>
             </div>
             <p className="text-xl font-bold text-green-700 mt-6">
-              This is why SurFox pays for itself in month one.
+              This is why SurFox AI pays for itself in month one.
             </p>
           </motion.div>
         </div>

@@ -99,7 +99,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'As AI becomes more powerful, data privacy becomes more critical. At SurFox, we believe that intelligence shouldn\'t come at the cost of security. That\'s why we built our platform with complete tenant isolation - your data trains models exclusively for your organization, never shared or aggregated with others.'
+        content: 'As AI becomes more powerful, data privacy becomes more critical. At SurFox AI, we believe that intelligence shouldn\'t come at the cost of security. That\'s why we built our platform with complete tenant isolation - your data trains models exclusively for your organization, never shared or aggregated with others.'
       },
       {
         type: 'heading',
@@ -190,7 +190,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'With great power comes great responsibility. Conversation intelligence platforms handle sensitive customer data and internal sales communications. That\'s why SurFox built tenant isolation into our architecture from day one - ensuring your conversation data never mixes with other organizations\' data.'
+        content: 'With great power comes great responsibility. Conversation intelligence platforms handle sensitive customer data and internal sales communications. That\'s why SurFox AI built tenant isolation into our architecture from day one - ensuring your conversation data never mixes with other organizations\' data.'
       },
       {
         type: 'heading',
@@ -241,7 +241,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'At SurFox, we implement complete tenant isolation. Your conversation data trains models exclusively for your organization. Your insights come from your data alone. This isn\'t just good practice - it\'s a fundamental design principle.'
+        content: 'At SurFox AI, we implement complete tenant isolation. Your conversation data trains models exclusively for your organization. Your insights come from your data alone. This isn\'t just good practice - it\'s a fundamental design principle.'
       },
       {
         type: 'heading',

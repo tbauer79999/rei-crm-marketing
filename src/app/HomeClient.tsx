@@ -42,13 +42,13 @@ export default function SurFoxHome() {
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
-              SurFox listens to every<br className="hidden sm:block" />
+              SurFox AI listens to every<br className="hidden sm:block" />
               customer signal - and knows<br className="hidden sm:block" />
               when to reach out.
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              We're building the AI layer that understands all your customer interactions and takes intelligent action. Today, that starts with outbound - upload cold leads, let SurFox qualify them via SMS, your team only talks to hot prospects.
+              We're building the AI layer that understands all your customer interactions and takes intelligent action. Today, that starts with outbound - upload cold leads, let SurFox AI qualify them via SMS, your team only talks to hot prospects.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
@@ -91,7 +91,7 @@ export default function SurFoxHome() {
               AI-Powered Lead Qualification
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Your sales team only talks to hot leads. SurFox handles the rest.
+              Your sales team only talks to hot leads. SurFox AI handles the rest.
             </p>
           </motion.div>
 
@@ -104,7 +104,7 @@ export default function SurFoxHome() {
               },
               {
                 icon: MessageSquare,
-                title: 'SurFox qualifies via SMS',
+                title: 'SurFox AI qualifies via SMS',
                 desc: 'Personalized conversations at scale. Every lead gets engaged, scored, and qualified automatically.'
               },
               {
@@ -157,7 +157,7 @@ export default function SurFoxHome() {
               This is just the beginning.
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Lead qualification is where we start. But SurFox is being built to handle something much bigger.
+              Lead qualification is where we start. But SurFox AI is being built to handle something much bigger.
             </p>
           </motion.div>
 
@@ -191,7 +191,7 @@ export default function SurFoxHome() {
               </div>
               <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3">Actions Out</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                AI-initiated outreach, follow-ups, escalations, and automations - triggered by what SurFox learns about your customers.
+                AI-initiated outreach, follow-ups, escalations, and automations - triggered by what SurFox AI learns about your customers.
               </p>
               <span className="text-sm font-semibold text-orange">This is where we start</span>
             </motion.div>
@@ -280,11 +280,11 @@ export default function SurFoxHome() {
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6 sm:mb-8 px-4 leading-tight">
               Stop chasing cold leads.<br className="hidden sm:block" />
-              Let SurFox find the ones who are ready.
+              Let SurFox AI find the ones who are ready.
             </h2>
 
             <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4">
-              SurFox qualifies your leads automatically. Your team only talks to people who want to talk.
+              SurFox AI qualifies your leads automatically. Your team only talks to people who want to talk.
             </p>
 
             <motion.a

@@ -52,7 +52,7 @@ export default function PlatformPage() {
             </p>
 
             <p className="text-lg sm:text-xl text-navy font-medium">
-              SurFox is the AI layer that listens to all of it - and knows what to do next.
+              SurFox AI is the AI layer that listens to all of it - and knows what to do next.
             </p>
           </motion.div>
         </div>
@@ -71,7 +71,7 @@ export default function PlatformPage() {
               Two sides. One platform.
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              SurFox is being built to handle both directions of customer intelligence.
+              SurFox AI is being built to handle both directions of customer intelligence.
             </p>
           </motion.div>
 
@@ -90,7 +90,7 @@ export default function PlatformPage() {
               <h3 className="text-2xl sm:text-3xl font-semibold text-navy mb-4">Signals In</h3>
 
               <p className="text-gray-600 leading-relaxed mb-6">
-                Every customer interaction flowing into one intelligence layer. SurFox ingests, understands, and learns from all of it.
+                Every customer interaction flowing into one intelligence layer. SurFox AI ingests, understands, and learns from all of it.
               </p>
 
               <div className="grid grid-cols-2 gap-3 mb-6">
@@ -130,7 +130,7 @@ export default function PlatformPage() {
               <h3 className="text-2xl sm:text-3xl font-semibold text-navy mb-4">Actions Out</h3>
 
               <p className="text-gray-600 leading-relaxed mb-6">
-                AI-initiated outreach, follow-ups, and automations - triggered by what SurFox learns. The system doesn't just listen. It acts.
+                AI-initiated outreach, follow-ups, and automations - triggered by what SurFox AI learns. The system doesn't just listen. It acts.
               </p>
 
               <div className="space-y-3 mb-6">
@@ -209,7 +209,7 @@ export default function PlatformPage() {
             </h3>
 
             <p className="text-gray-600 leading-relaxed mb-6">
-              Upload cold leads. SurFox reaches out via SMS, has personalized conversations, scores and qualifies each one. Your sales team only talks to prospects who are ready. This is Actions Out in its first form - proving that Infinity can understand conversations, track intent, and take intelligent action.
+              Upload cold leads. SurFox AI reaches out via SMS, has personalized conversations, scores and qualifies each one. Your sales team only talks to prospects who are ready. This is Actions Out in its first form - proving that Infinity can understand conversations, track intent, and take intelligent action.
             </p>
 
             <a
@@ -328,7 +328,7 @@ export default function PlatformPage() {
             </h2>
 
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
-              When you log into SurFox in the future, you won't see a "lead qualification tool." You'll see your business's entire customer intelligence layer.
+              When you log into SurFox AI in the future, you won't see a "lead qualification tool." You'll see your business's entire customer intelligence layer.
             </p>
 
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
