@@ -1,10 +1,33 @@
-'use client'
+'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Upload, MessageSquare, TrendingUp, Users, Check, AlertCircle } from 'lucide-react';
+import { useInView } from 'react-intersection-observer';
+import CountUp from 'react-countup';
+import Lenis from '@studio-freight/lenis';
+import { Upload, Bell, TrendingUp, Check } from 'lucide-react';
 
 export default function DemoClient() {
+  // Lenis smooth scroll setup
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <div className="bg-white text-gray-900">
       <style>{`
@@ -31,255 +54,440 @@ export default function DemoClient() {
         .bg-orange {
           background-color: #ea580c;
         }
+
+        .border-orange {
+          border-color: #ea580c;
+        }
       `}</style>
 
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
+      <HeroSection />
+      <TimelineSection />
+      <ScreenshotsSection />
+      <CTASection />
+    </div>
+  );
+}
+
+// ============================================
+// Section 1: Hero
+// ============================================
+function HeroSection() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-white">
+      <div className="max-w-4xl mx-auto text-center">
+        <motion.h1
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          animate={{ scale: isHovered ? 1.02 : 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: 'spring', damping: 20, stiffness: 100 }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy leading-tight cursor-default"
+        >
+          We're Not Going to Show You a Flashy Demo
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.2 }}
+          className="text-xl md:text-2xl text-gray-600 mt-6 leading-relaxed"
+        >
+          Most tools want you to watch animated dashboards and sit through walkthroughs.
+          That's because their product requires constant babysitting.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.4 }}
+          className="text-lg md:text-xl text-gray-700 mt-8 max-w-3xl mx-auto leading-relaxed"
+        >
+          SurFox is different: you don't watch it work. You just get results.
+        </motion.p>
+      </div>
+    </section>
+  );
+}
+
+// ============================================
+// Section 2: Timeline
+// ============================================
+function TimelineSection() {
+  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
+
+  const timelineItems = [
+    {
+      day: 'Day 1',
+      text: 'Upload leads. Walk away.',
+      icon: Upload,
+      side: 'left'
+    },
+    {
+      day: 'Day 3',
+      text: 'Get notification: "5 hot leads identified"',
+      icon: Bell,
+      side: 'right'
+    },
+    {
+      day: 'Day 7',
+      text: 'Dashboard shows:',
+      value: 128,
+      suffix: 'K pipeline added',
+      icon: TrendingUp,
+      side: 'left'
+    }
+  ];
+
+  return (
+    <section ref={ref} className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-gray-50">
+      <div className="max-w-5xl mx-auto w-full">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ type: 'spring', damping: 20, stiffness: 100 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy text-center mb-16 md:mb-20"
+        >
+          Here's What Actually Happens
+        </motion.h2>
+
+        {/* Timeline Container */}
+        <div className="relative">
+          {/* Vertical Line - Desktop */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-          >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-8 leading-tight">
-              Welcome to the{' '}
-              <span className="text-orange">End of Text Blasting</span>
-            </h1>
+            initial={{ scaleY: 0 }}
+            animate={inView ? { scaleY: 1 } : {}}
+            transition={{ duration: 1.2, ease: 'easeOut', delay: 0.3 }}
+            style={{ transformOrigin: 'top' }}
+            className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 -translate-x-1/2"
+          />
 
-            <p className="text-2xl sm:text-3xl font-semibold text-navy mb-8">
-              Blasts create noise. SurFox creates buyers.
-            </p>
-
-            <div className="space-y-6 text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              <p>
-                You're about to see how SurFox replaces text blasters with intelligent, psychology-aware conversations that surface real buyers.
-              </p>
-
-              <p>
-                Whether you're solo or leading a team, every minute counts—and every lead needs real qualification.
-                This isn't a walkthrough; it's how you spend less time sorting and more time closing.
-              </p>
-
-              <p>
-                We know the grind: blasting thousands, generic follow-ups, and sifting through "not interested."
-                SurFox reads psychology, adapts tone in real time, and only escalates genuine intent.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* How SurFox Works - Features Showcase */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+          {/* Vertical Line - Mobile */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6">
-              How SurFox Works
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Four steps to turning cold leads into qualified conversations.
-            </p>
-          </motion.div>
+            initial={{ scaleY: 0 }}
+            animate={inView ? { scaleY: 1 } : {}}
+            transition={{ duration: 1.2, ease: 'easeOut', delay: 0.3 }}
+            style={{ transformOrigin: 'top' }}
+            className="md:hidden absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300"
+          />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {[
-              {
-                icon: Upload,
-                title: 'Upload Leads',
-                description: 'Bulk import, Chrome extension capture, or integrate with your CRM. Get your leads into the system in seconds.'
-              },
-              {
-                icon: MessageSquare,
-                title: 'SurFox Engages',
-                description: 'AI conversations with psychological analysis. Adapts tone and approach in real-time based on prospect responses.'
-              },
-              {
-                icon: TrendingUp,
-                title: 'Hot Leads Escalate',
-                description: 'Dashboard alerts you the moment buying signals are detected. No more sifting through noise.'
-              },
-              {
-                icon: Users,
-                title: 'Your Team Closes',
-                description: 'Only talk to qualified, ready-to-buy prospects. Your time goes to deals, not dead ends.'
-              }
-            ].map((feature, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-white rounded-2xl border-2 border-gray-200 p-6 sm:p-8"
-              >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 mb-6 rounded-xl bg-orange/10 flex items-center justify-center">
-                  <feature.icon className="w-6 h-6 sm:w-7 sm:h-7 text-orange" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {feature.description}
-                </p>
-              </motion.div>
+          {/* Timeline Items */}
+          <div className="space-y-12 md:space-y-16">
+            {timelineItems.map((item, index) => (
+              <TimelineItem
+                key={item.day}
+                {...item}
+                index={index}
+                inView={inView}
+              />
             ))}
           </div>
         </div>
-      </section>
 
-      {/* Why This Matters - Problem/Solution */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 sm:mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6">
-              The Problem With Text Blasting
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              See the difference between old-school blasting and intelligent conversations.
+        {/* Closing Statement */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 1.4 }}
+          className="text-xl md:text-2xl text-navy font-semibold text-center mt-16 md:mt-20 leading-relaxed"
+        >
+          That's it. No buttons to click. No campaigns to monitor. No conversations to manage.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 1.6 }}
+          className="text-2xl md:text-3xl text-orange font-bold text-center mt-8"
+        >
+          The demo is the free trial.
+        </motion.p>
+      </div>
+    </section>
+  );
+}
+
+interface TimelineItemProps {
+  day: string;
+  text: string;
+  icon: React.ComponentType<{ className?: string }>;
+  side: string;
+  index: number;
+  inView: boolean;
+  value?: number;
+  suffix?: string;
+}
+
+function TimelineItem({ day, text, icon: Icon, side, index, inView, value, suffix }: TimelineItemProps) {
+  const delay = 0.5 + index * 0.3;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: side === 'left' ? -50 : 50 }}
+      animate={inView ? { opacity: 1, x: 0 } : {}}
+      transition={{ type: 'spring', damping: 20, stiffness: 100, delay }}
+      className={`relative flex items-center ${
+        side === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'
+      }`}
+    >
+      {/* Mobile Layout */}
+      <div className="md:hidden flex items-start gap-6 w-full pl-16">
+        {/* Icon Circle */}
+        <div className="absolute left-4 w-8 h-8 rounded-full bg-orange/10 flex items-center justify-center z-10">
+          <Icon className="w-4 h-4 text-orange" />
+        </div>
+
+        {/* Card */}
+        <div className="bg-white rounded-2xl border-2 border-gray-200 p-6 flex-1">
+          <span className="text-sm font-semibold text-orange mb-2 block">{day}</span>
+          {value ? (
+            <p className="text-lg text-gray-700">
+              {text}{' '}
+              <span className="text-navy font-bold">
+                $<CountUp start={0} end={value} duration={2} enableScrollSpy scrollSpyOnce />
+                {suffix}
+              </span>
             </p>
-          </motion.div>
+          ) : (
+            <p className="text-lg text-gray-700">{text}</p>
+          )}
+        </div>
+      </div>
 
-          <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
-            {/* Traditional Platforms */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-2xl border-2 border-gray-200 p-8"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center">
-                  <AlertCircle className="w-6 h-6 text-gray-500" />
-                </div>
-                <h3 className="text-2xl font-semibold text-navy">Traditional Platforms</h3>
-              </div>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="text-gray-400 mt-1 text-xl">×</span>
-                  <span><strong className="text-navy">Generic templates</strong> - Same message to everyone, regardless of personality or intent</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-gray-400 mt-1 text-xl">×</span>
-                  <span><strong className="text-navy">Manual qualification</strong> - Your team wastes hours reading every response</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-gray-400 mt-1 text-xl">×</span>
-                  <span><strong className="text-navy">High unsubscribe rates</strong> - Prospects feel spammed and opt out immediately</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-gray-400 mt-1 text-xl">×</span>
-                  <span><strong className="text-navy">Wasted time</strong> - Chase ghosts instead of close deals</span>
-                </li>
-              </ul>
-            </motion.div>
-
-            {/* SurFox Approach */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-orange/5 rounded-2xl border-2 border-orange p-8"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-orange flex items-center justify-center">
-                  <Check className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold text-navy">SurFox Approach</h3>
-              </div>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-orange mt-1 flex-shrink-0" />
-                  <span><strong className="text-navy">Psychology-based conversations</strong> - Reads personality and adapts messaging in real-time</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-orange mt-1 flex-shrink-0" />
-                  <span><strong className="text-navy">Automatic qualification</strong> - SurFox identifies buying signals and escalates hot leads</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-orange mt-1 flex-shrink-0" />
-                  <span><strong className="text-navy">Higher engagement</strong> - Personalized conversations feel human, not robotic</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-orange mt-1 flex-shrink-0" />
-                  <span><strong className="text-navy">Your time on deals</strong> - Only talk to prospects who are ready to buy</span>
-                </li>
-              </ul>
-            </motion.div>
+      {/* Desktop Layout */}
+      <div className={`hidden md:flex items-center w-full ${
+        side === 'left' ? 'justify-end pr-12' : 'justify-start pl-12'
+      }`}>
+        {/* Card */}
+        <div className={`w-[45%] ${side === 'left' ? 'text-right' : 'text-left'}`}>
+          <div className="bg-white rounded-2xl border-2 border-gray-200 p-6 md:p-8 inline-block">
+            <span className="text-sm font-semibold text-orange mb-2 block">{day}</span>
+            {value ? (
+              <p className="text-lg md:text-xl text-gray-700">
+                {text}{' '}
+                <span className="text-navy font-bold">
+                  $<CountUp start={0} end={value} duration={2} enableScrollSpy scrollSpyOnce />
+                  {suffix}
+                </span>
+              </p>
+            ) : (
+              <p className="text-lg md:text-xl text-gray-700">{text}</p>
+            )}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Final CTA / Closer */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-8 leading-tight">
-              The Choice Is Clear.<br />
-              The Future of Sales Is Now.
-            </h2>
-
-            <div className="space-y-6 text-lg sm:text-xl text-gray-600 leading-relaxed mb-12">
-              <p>
-                SurFox isn't a "better blaster." It's the blaster's replacement. It reads personality, adapts tone in real time, learns from outcomes, and escalates only qualified prospects - 24/7.
-              </p>
-
-              <p>
-                In a competitive market, sticking with a blaster is choosing noise. Your competitors are wasting hours; you could be closing deals. They're chasing ghosts; you could be building relationships with validated prospects.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-              <motion.a
-                href="/pricing"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto px-10 py-4 rounded-lg bg-orange text-white text-lg font-semibold hover:bg-orange-600 transition shadow-lg"
-              >
-                Start 14-Day Free Trial
-              </motion.a>
-
-              <motion.a
-                href="/contact"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto px-10 py-4 rounded-lg border-2 border-gray-300 text-navy text-lg font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
-              >
-                Schedule Live Demo
-              </motion.a>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <Check className="w-5 h-5 text-orange flex-shrink-0" />
-                <span>14-day free trial</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="w-5 h-5 text-orange flex-shrink-0" />
-                <span>30-day results guarantee</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="w-5 h-5 text-orange flex-shrink-0" />
-                <span>Setup in 15 minutes</span>
-              </div>
-            </div>
-          </motion.div>
+      {/* Center Icon - Desktop */}
+      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-white border-2 border-gray-200 items-center justify-center z-10">
+        <div className="w-10 h-10 rounded-full bg-orange/10 flex items-center justify-center">
+          <Icon className="w-5 h-5 text-orange" />
         </div>
-      </section>
-    </div>
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
+// Section 3: Screenshots Showcase
+// ============================================
+function ScreenshotsSection() {
+  const screenshots = [
+    {
+      src: '/screenshots/control-room.png',
+      alt: 'SurFox Control Room Dashboard',
+      caption: 'What you see when you check in'
+    },
+    {
+      src: '/screenshots/learning-dashboard-1.png',
+      alt: 'AI Learning Dashboard - Overview',
+      caption: 'What SurFox learned from your leads'
+    },
+    {
+      src: '/screenshots/learning-dashboard-2.png',
+      alt: 'AI Learning Dashboard - Details',
+      caption: 'How SurFox adapts to your market'
+    },
+    {
+      src: '/screenshots/hot-lead-detail.png',
+      alt: 'Hot Lead Detail View',
+      caption: "What you get when someone's ready to buy"
+    }
+  ];
+
+  return (
+    <section className="py-20 md:py-28 lg:py-32 px-4 sm:px-6 md:px-8 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: 'spring', damping: 20, stiffness: 100 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy text-center mb-16 md:mb-20"
+        >
+          What SurFox Does While You're Not Watching
+        </motion.h2>
+
+        <div className="space-y-12 md:space-y-16 lg:space-y-20">
+          {screenshots.map((screenshot, index) => (
+            <ScreenshotCard
+              key={index}
+              {...screenshot}
+              index={index}
+              reverse={index % 2 === 1}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+interface ScreenshotCardProps {
+  src: string;
+  alt: string;
+  caption: string;
+  index: number;
+  reverse: boolean;
+}
+
+function ScreenshotCard({ src, alt, caption, index, reverse }: ScreenshotCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-100px' }}
+      transition={{ type: 'spring', damping: 20, stiffness: 100, delay: index * 0.1 }}
+      className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-8 lg:gap-12`}
+    >
+      {/* Screenshot Card */}
+      <motion.div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        animate={{
+          y: isHovered ? -8 : 0,
+          scale: isHovered ? 1.01 : 1,
+          boxShadow: isHovered
+            ? '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)'
+            : '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)'
+        }}
+        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+        className={`flex-1 w-full bg-white rounded-2xl border-2 overflow-hidden transition-colors duration-300 ${
+          isHovered ? 'border-orange' : 'border-gray-200'
+        }`}
+      >
+        {/* Placeholder for screenshot - replace with actual images */}
+        <div className="aspect-video bg-gray-100 relative flex items-center justify-center">
+          <div className="text-center p-8">
+            <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-orange/10 flex items-center justify-center">
+              <TrendingUp className="w-8 h-8 text-orange" />
+            </div>
+            <p className="text-gray-500 text-sm">Screenshot: {alt}</p>
+            <p className="text-gray-400 text-xs mt-2">Place image at: {src}</p>
+          </div>
+          {/* Uncomment when actual screenshots are available:
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className="object-cover"
+            loading="lazy"
+          />
+          */}
+        </div>
+      </motion.div>
+
+      {/* Caption */}
+      <div className={`lg:w-1/3 text-center lg:text-left ${reverse ? 'lg:text-right' : ''}`}>
+        <p className="text-xl md:text-2xl font-semibold text-navy leading-relaxed">
+          {caption}
+        </p>
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
+// Section 4: Final CTA
+// ============================================
+function CTASection() {
+  const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
+
+  return (
+    <section ref={ref} className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-gray-50">
+      <div className="max-w-4xl mx-auto text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ type: 'spring', damping: 20, stiffness: 100 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-8 leading-tight"
+        >
+          Ready to Stop Babysitting Your Outreach?
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.2 }}
+          className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed"
+        >
+          Upload your leads. Let SurFox work autonomously. Get notified when prospects are ready to buy.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.4 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+        >
+          <motion.a
+            href="/pricing"
+            whileHover={{ scale: 1.03, boxShadow: '0 20px 25px -5px rgb(234 88 12 / 0.3)' }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+            className="w-full sm:w-auto px-10 py-4 rounded-xl bg-orange text-white text-lg font-semibold shadow-lg"
+          >
+            Start 14-Day Free Trial
+          </motion.a>
+
+          <motion.a
+            href="/contact"
+            whileHover={{ scale: 1.03, backgroundColor: '#f9fafb' }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+            className="w-full sm:w-auto px-10 py-4 rounded-xl border-2 border-gray-300 text-navy text-lg font-semibold"
+          >
+            Schedule Live Demo
+          </motion.a>
+        </motion.div>
+
+        {/* Trust Badges */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.6 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-sm text-gray-600"
+        >
+          <div className="flex items-center gap-2">
+            <Check className="w-5 h-5 text-orange flex-shrink-0" />
+            <span>14-day free trial</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Check className="w-5 h-5 text-orange flex-shrink-0" />
+            <span>30-day results guarantee</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Check className="w-5 h-5 text-orange flex-shrink-0" />
+            <span>Setup in 15 minutes</span>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 }
