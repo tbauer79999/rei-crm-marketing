@@ -755,7 +755,7 @@ export default function MeeraAIClient() {
               </motion.a>
 
               <motion.a
-                href="/contact"
+                href="/demo"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
