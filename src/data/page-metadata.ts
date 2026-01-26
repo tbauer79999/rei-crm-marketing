@@ -104,6 +104,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['SurFox vs Meera', 'Meera AI alternative', 'AI lead qualification', 'call center AI', 'lead intelligence', 'outbound reactivation'],
     path: '/compare/surfox-vs-meera-ai',
   },
+  'compare-gohighlevel': {
+    title: 'SurFox AI vs GoHighLevel: Which is Right for You?',
+    description: 'Compare SurFox AI vs GoHighLevel. Built for conversations, not configured for chaos. Setup in minutes vs weeks, 50-point psychological scoring, and AI that actually learns.',
+    keywords: ['SurFox vs GoHighLevel', 'GoHighLevel alternative', 'GHL alternative', 'AI lead qualification', 'conversation intelligence', 'sales automation'],
+    path: '/compare/surfox-vs-gohighlevel',
+  },
 };
 
 /**

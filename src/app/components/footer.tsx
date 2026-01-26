@@ -117,6 +117,11 @@ export default function Footer() {
                   SurFox AI vs Meera AI
                 </Link>
               </li>
+              <li>
+                <Link href="/compare/surfox-vs-gohighlevel" className="text-sm hover:text-white transition-colors">
+                  SurFox AI vs GoHighLevel
+                </Link>
+              </li>
             </ul>
           </div>
 
