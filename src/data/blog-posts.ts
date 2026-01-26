@@ -431,7 +431,7 @@ export const blogPosts: BlogPost[] = [
     title: 'What ROI Can You Expect From Conversation Intelligence?',
     excerpt: 'Real numbers on conversation intelligence ROI: 60-80% lower cost per qualified lead, 4x better response rates, and the hidden goldmine sitting in your dormant lead database.',
     category: 'Business Impact',
-    date: '2024-12-15',
+    date: '2026-01-25',
     readTime: '10 min read',
     author: 'Tom Bauer',
     authorUrl: '/leadership',
