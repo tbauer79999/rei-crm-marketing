@@ -41,7 +41,7 @@ export default function DemoClient() {
         }
 
         .text-orange {
-          color: #ea580c;
+          color: #c2410c;
         }
 
         .bg-orange {
@@ -49,7 +49,7 @@ export default function DemoClient() {
         }
 
         .border-orange {
-          border-color: #ea580c;
+          border-color: #c2410c;
         }
       `}</style>
 

@@ -19,7 +19,7 @@ export default function AIPrinciples() {
         }
 
         .text-orange {
-          color: #ea580c;
+          color: #c2410c;
         }
 
         .bg-orange {

@@ -66,7 +66,7 @@ export default function MeeraAIClient() {
         }
 
         .text-orange {
-          color: #ea580c;
+          color: #c2410c;
         }
 
         .bg-orange {

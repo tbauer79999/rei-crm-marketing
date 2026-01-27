@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
         }
 
         .text-orange {
-          color: #ea580c;
+          color: #c2410c;
         }
 
         .bg-orange {

@@ -17,7 +17,7 @@ export default function PlatformPage() {
         }
 
         .text-orange {
-          color: #ea580c;
+          color: #c2410c;
         }
 
         .bg-orange {

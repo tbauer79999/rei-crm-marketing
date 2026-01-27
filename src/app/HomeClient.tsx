@@ -16,7 +16,7 @@ export default function SurFoxHome() {
         }
 
         .text-orange {
-          color: #ea580c;
+          color: #c2410c;
         }
 
         .bg-orange {
@@ -135,7 +135,7 @@ export default function SurFoxHome() {
               <p className="text-gray-600 leading-relaxed mb-4">
                 Every customer interaction - calls, texts, transactions, reviews, support tickets, bookings - flowing into one intelligence layer.
               </p>
-              <span className="text-sm font-medium text-gray-400">Coming soon</span>
+              <span className="text-sm font-medium text-gray-500">Coming soon</span>
             </div>
 
             {/* Actions Out */}

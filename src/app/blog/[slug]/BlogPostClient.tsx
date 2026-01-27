@@ -290,7 +290,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
         }
 
         .text-orange {
-          color: #ea580c;
+          color: #c2410c;
         }
 
         .bg-orange {
