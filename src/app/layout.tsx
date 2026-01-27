@@ -69,11 +69,14 @@ export default function RootLayout({
         <head>
     {/* Favicons */}
     <link rel="icon" href="/favicon.ico" sizes="any" />
+    {/* Preconnect to Google Fonts for faster font loading */}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
   </head>
-      {/* Google Tag Manager */}
-      <Script 
-        id="gtm-script" 
-        strategy="beforeInteractive"
+      {/* Google Tag Manager - afterInteractive to not block LCP */}
+      <Script
+        id="gtm-script"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

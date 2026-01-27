@@ -57,14 +57,6 @@ export default function SurFoxVsSmarterContact() {
   return (
     <div className="bg-white text-gray-900">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-        * {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-        }
-
         .text-navy {
           color: #1e293b;
         }

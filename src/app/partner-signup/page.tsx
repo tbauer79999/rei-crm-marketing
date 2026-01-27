@@ -118,15 +118,6 @@ function PartnerSignupContent() {
   if (loading) {
     return (
       <>
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-          
-          * {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-          }
-        `}</style>
         <div className="min-h-screen bg-white flex items-center justify-center">
           <div className="text-center">
             <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-orange-600 border-r-transparent"></div>
@@ -141,18 +132,10 @@ function PartnerSignupContent() {
     return (
       <>
         <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-          
-          * {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-          }
-          
           .text-navy {
             color: #1e293b;
           }
-          
+
           .bg-navy {
             background-color: #1e293b;
           }
@@ -176,26 +159,18 @@ function PartnerSignupContent() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
-        * {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-        }
-        
         .text-navy {
           color: #1e293b;
         }
-        
+
         .bg-navy {
           background-color: #1e293b;
         }
-        
+
         .text-orange {
           color: #ea580c;
         }
-        
+
         .bg-orange {
           background-color: #ea580c;
         }
@@ -450,23 +425,12 @@ function PartnerSignupContent() {
 export default function PartnerSignup() {
   return (
     <Suspense fallback={
-      <>
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-          
-          * {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-          }
-        `}</style>
-        <div className="min-h-screen bg-white flex items-center justify-center">
-          <div className="text-center">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-orange-600 border-r-transparent"></div>
-            <p className="mt-4 text-gray-600">Loading...</p>
-          </div>
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-orange-600 border-r-transparent"></div>
+          <p className="mt-4 text-gray-600">Loading...</p>
         </div>
-      </>
+      </div>
     }>
       <PartnerSignupContent />
     </Suspense>

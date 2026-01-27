@@ -8,14 +8,6 @@ export default function SurFoxHome() {
   return (
     <div className="bg-white text-gray-900">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-        * {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-        }
-
         .text-navy {
           color: #1e293b;
         }
@@ -33,14 +25,10 @@ export default function SurFoxHome() {
         }
       `}</style>
 
-      {/* Hero Section */}
+      {/* Hero Section - No animation on LCP elements for faster paint */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
         <div className="max-w-5xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-          >
+          <div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
               SurFox AI listens to every<br className="hidden sm:block" />
               customer signal - and knows<br className="hidden sm:block" />
@@ -52,26 +40,22 @@ export default function SurFoxHome() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
-              <motion.a
+              <a
                 href="/pricing"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
                 className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
               >
                 Get Started
                 <ArrowRight className="w-5 h-5" />
-              </motion.a>
+              </a>
 
-              <motion.a
+              <a
                 href="/platform"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
                 className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
               >
                 See the Vision
-              </motion.a>
+              </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
