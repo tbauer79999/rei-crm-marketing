@@ -10,11 +10,13 @@ import GtmPageViewPusher from "./GtmPageViewPusher";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -67,16 +69,16 @@ export default function RootLayout({
   return (
     <html lang="en">
         <head>
-    {/* Favicons */}
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    {/* Preconnect to Google Fonts for faster font loading */}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-  </head>
-      {/* Google Tag Manager - afterInteractive to not block LCP */}
+          {/* Favicons */}
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+          {/* Preconnect to GTM to speed up analytics loading */}
+          <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+          <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        </head>
+      {/* Google Tag Manager - lazyOnload to defer until idle */}
       <Script
         id="gtm-script"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
