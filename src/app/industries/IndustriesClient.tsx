@@ -187,7 +187,7 @@ export default function IndustriesClient() {
         }
 
         .bg-orange {
-          background-color: #ea580c;
+          background-color: #c2410c;
         }
       `}</style>
 

@@ -45,7 +45,7 @@ export default function DemoClient() {
         }
 
         .bg-orange {
-          background-color: #ea580c;
+          background-color: #c2410c;
         }
 
         .border-orange {

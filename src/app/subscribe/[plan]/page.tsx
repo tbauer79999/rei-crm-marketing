@@ -107,7 +107,7 @@ export default function Subscribe() {
         }
 
         .bg-orange {
-          background-color: #ea580c;
+          background-color: #c2410c;
         }
       `}</style>
 

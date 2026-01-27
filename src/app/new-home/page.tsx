@@ -31,7 +31,7 @@ export default function SurFoxCorporate() {
         }
 
         .bg-orange {
-          background-color: #ea580c;
+          background-color: #c2410c;
         }
 
         .hover-lift {

@@ -54,7 +54,7 @@ export default function Contact() {
         }
         
         .bg-orange {
-          background-color: #ea580c;
+          background-color: #c2410c;
         }
         
         .hover-lift {

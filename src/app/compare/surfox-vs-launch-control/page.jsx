@@ -71,7 +71,7 @@ export default function SurFoxVsLaunchControl() {
         }
 
         .bg-orange {
-          background-color: #ea580c;
+          background-color: #c2410c;
         }
       `}</style>
 

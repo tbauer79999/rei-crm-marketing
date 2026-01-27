@@ -66,7 +66,7 @@ export default function GoHighLevelClient() {
         }
 
         .bg-orange {
-          background-color: #ea580c;
+          background-color: #c2410c;
         }
       `}</style>
 

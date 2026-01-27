@@ -177,7 +177,7 @@ export default function Blog() {
         }
 
         .bg-orange {
-          background-color: #ea580c;
+          background-color: #c2410c;
         }
 
         .line-clamp-3 {
