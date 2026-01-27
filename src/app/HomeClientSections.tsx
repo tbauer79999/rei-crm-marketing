@@ -3,61 +3,9 @@
 import React from 'react';
 import { ArrowRight, MessageSquare, Upload, Phone, Shield, CheckCircle, Activity, ArrowDownLeft, ArrowUpRight } from 'lucide-react';
 
-export default function SurFoxHome() {
+export default function HomeClientSections() {
   return (
-    <div className="bg-white text-gray-900">
-      <style>{`
-        .text-navy {
-          color: #1e293b;
-        }
-
-        .bg-navy {
-          background-color: #1e293b;
-        }
-
-        .text-orange {
-          color: #c2410c;
-        }
-
-        .bg-orange {
-          background-color: #c2410c;
-        }
-      `}</style>
-
-      {/* Hero Section - No animation for fastest LCP */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
-        <div className="max-w-5xl mx-auto text-center">
-          <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
-              SurFox AI listens to every<br className="hidden sm:block" />
-              customer signal - and knows<br className="hidden sm:block" />
-              when to reach out.
-            </h1>
-
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              We're building the AI layer that understands all your customer interactions and takes intelligent action. Today, that starts with outbound - upload cold leads, let SurFox AI qualify them via SMS, your team only talks to hot prospects.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
-              <a
-                href="/pricing"
-                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5" />
-              </a>
-
-              <a
-                href="/platform"
-                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
-              >
-                See the Vision
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
+    <>
       {/* What SurFox Does Today */}
       <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
@@ -231,6 +179,6 @@ export default function SurFoxHome() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

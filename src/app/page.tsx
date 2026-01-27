@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import HomeClient from './HomeClient';
+import HomeClientSections from './HomeClientSections';
 
 export const metadata: Metadata = {
   title: 'AI-Powered Sales Conversation Intelligence',
@@ -24,9 +24,30 @@ export const metadata: Metadata = {
   },
 };
 
+// Inline SVG arrow for zero JS dependency in hero
+function ArrowRightIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  );
+}
+
 export default function Page() {
   return (
-    <>
+    <div className="bg-white text-gray-900">
       {/* Schema.org Organization + LocalBusiness structured data */}
       <script
         type="application/ld+json"
@@ -103,7 +124,42 @@ export default function Page() {
         }}
       />
 
-      <HomeClient />
-    </>
+      {/* Hero Section - Server-rendered for fastest LCP */}
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
+        <div className="max-w-5xl mx-auto text-center">
+          <div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
+              SurFox AI listens to every<br className="hidden sm:block" />
+              customer signal - and knows<br className="hidden sm:block" />
+              when to reach out.
+            </h1>
+
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+              We're building the AI layer that understands all your customer interactions and takes intelligent action. Today, that starts with outbound - upload cold leads, let SurFox AI qualify them via SMS, your team only talks to hot prospects.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
+              <a
+                href="/pricing"
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
+              >
+                Get Started
+                <ArrowRightIcon className="w-5 h-5" />
+              </a>
+
+              <a
+                href="/platform"
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
+              >
+                See the Vision
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Below-fold sections with client interactivity */}
+      <HomeClientSections />
+    </div>
   );
 }
