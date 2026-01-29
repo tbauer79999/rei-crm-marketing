@@ -116,6 +116,60 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['SurFox vs Spara', 'Spara alternative', 'AI SDR', 'lead qualification', 'replace SDRs', 'SMS lead qualification', 'AI lead qualification', 'inbound vs outbound'],
     path: '/compare/surfox-vs-spara',
   },
+  'compare-all-competitors': {
+    title: 'SurFox AI vs All Competitors: The Complete Comparison',
+    description: 'See how SurFox AI compares to mass messaging platforms, manual SMS tools, CRM extensions, and email-first platforms. Psychology AI vs traditional approaches.',
+    keywords: ['SurFox competitors', 'AI SMS comparison', 'lead qualification platforms', 'sales automation comparison', 'SMS marketing tools'],
+    path: '/compare/surfox-vs-all-competitors',
+  },
+  'compare-textus': {
+    title: 'SurFox AI vs TextUs: AI Automation vs Manual Messaging',
+    description: 'Compare SurFox AI vs TextUs. SurFox AI automates conversations with psychology-based messaging. TextUs requires manual effort for every message.',
+    keywords: ['SurFox vs TextUs', 'TextUs alternative', 'AI SMS platform', 'automated lead qualification', 'business texting'],
+    path: '/compare/surfox-vs-textus',
+  },
+  'compare-launch-control': {
+    title: 'SurFox AI vs Launch Control: Smart AI vs Mass Messaging',
+    description: 'Compare SurFox AI vs Launch Control. SurFox uses psychology AI for intelligent conversations. Launch Control focuses on volume-based mass messaging.',
+    keywords: ['SurFox vs Launch Control', 'Launch Control alternative', 'AI lead qualification', 'real estate SMS', 'REI marketing'],
+    path: '/compare/surfox-vs-launch-control',
+  },
+  'compare-skipio': {
+    title: 'SurFox AI vs Skipio: AI Intelligence vs Basic Automation',
+    description: 'Compare SurFox AI vs Skipio. SurFox learns from conversations and adapts messaging. Skipio offers basic drip campaigns without AI intelligence.',
+    keywords: ['SurFox vs Skipio', 'Skipio alternative', 'AI messaging platform', 'sales automation', 'lead nurturing'],
+    path: '/compare/surfox-vs-skipio',
+  },
+  'compare-smarter-contact': {
+    title: 'SurFox AI vs Smarter Contact: AI Conversations vs Batch SMS',
+    description: 'Compare SurFox AI vs Smarter Contact. SurFox qualifies leads with psychology AI. Smarter Contact sends batch messages without conversation intelligence.',
+    keywords: ['SurFox vs Smarter Contact', 'Smarter Contact alternative', 'AI SMS', 'real estate marketing', 'lead qualification'],
+    path: '/compare/surfox-vs-smarter-contact',
+  },
+  'compare-lead-sherpa': {
+    title: 'SurFox AI vs Lead Sherpa: AI Qualification vs Skip Tracing',
+    description: 'Compare SurFox AI vs Lead Sherpa. SurFox qualifies leads with AI conversations. Lead Sherpa focuses on skip tracing and data - different tools for different needs.',
+    keywords: ['SurFox vs Lead Sherpa', 'Lead Sherpa alternative', 'AI lead qualification', 'skip tracing', 'real estate leads'],
+    path: '/compare/surfox-vs-lead-sherpa',
+  },
+  careers: {
+    title: 'Careers at SurFox AI - Join Our Team',
+    description: 'Explore career opportunities at SurFox AI. Join us in building the future of AI-powered sales intelligence and conversation automation.',
+    keywords: ['SurFox careers', 'AI jobs', 'sales tech jobs', 'startup careers', 'SurFox jobs'],
+    path: '/careers',
+  },
+  support: {
+    title: 'Contact Support - SurFox AI Help Center',
+    description: 'Get help with SurFox AI. Contact our support team for technical assistance, account questions, or product guidance.',
+    keywords: ['SurFox support', 'help center', 'customer support', 'technical help', 'contact support'],
+    path: '/support',
+  },
+  'how-it-works': {
+    title: 'How SurFox Works - Psychology AI for Lead Qualification',
+    description: 'Learn how SurFox Psychology AI analyzes 50+ behavioral dimensions to adapt messages in real-time and turn cold leads into qualified conversations.',
+    keywords: ['how SurFox works', 'psychology AI', 'lead qualification process', 'AI messaging', 'behavioral analysis'],
+    path: '/how-it-works',
+  },
 };
 
 /**
