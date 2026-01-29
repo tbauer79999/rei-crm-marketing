@@ -122,6 +122,11 @@ export default function Footer() {
                   SurFox AI vs GoHighLevel
                 </Link>
               </li>
+              <li>
+                <Link href="/compare/surfox-vs-spara" className="text-sm hover:text-white transition-colors">
+                  SurFox AI vs Spara
+                </Link>
+              </li>
             </ul>
           </div>
 
