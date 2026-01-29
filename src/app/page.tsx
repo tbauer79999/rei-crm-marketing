@@ -69,7 +69,6 @@ export default function Page() {
             },
             contactPoint: {
               '@type': 'ContactPoint',
-              telephone: '+1-XXX-XXX-XXXX',
               contactType: 'sales',
               email: 'tom@getsurfox.com',
               availableLanguage: ['English'],
@@ -114,12 +113,6 @@ export default function Page() {
             },
             operatingSystem: 'Web-based',
             description: 'AI-powered lead qualification platform that engages and qualifies leads via SMS automatically',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '5.0',
-              ratingCount: '1',
-              reviewCount: '1',
-            },
           }),
         }}
       />

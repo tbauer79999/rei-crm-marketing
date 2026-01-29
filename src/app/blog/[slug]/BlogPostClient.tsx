@@ -182,6 +182,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 '@type': 'Article',
                 headline: blogPost.title,
                 description: blogPost.excerpt,
+                image: blogPost.featuredImage || 'https://www.getsurfox.com/og-image.png',
                 author: {
                   '@type': 'Person',
                   name: blogPost.author,

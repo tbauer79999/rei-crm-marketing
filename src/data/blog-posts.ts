@@ -12,6 +12,7 @@ export interface BlogPost {
   relatedPosts?: string[]; // Array of slugs
   metaTitle?: string; // SEO title (50-60 chars)
   metaDescription?: string; // SEO description (150-160 chars)
+  featuredImage?: string; // URL for rich snippets (recommended: 1200x630)
 }
 
 export interface ContentBlock {

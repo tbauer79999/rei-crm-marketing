@@ -292,22 +292,22 @@ function ScreenshotsSection() {
   const screenshots = [
     {
       src: '/control-room.png',
-      alt: 'SurFox AI Control Room Dashboard',
+      alt: 'SurFox AI Control Room showing system health, active conversations, and real-time performance metrics',
       caption: 'What you see when you check in'
     },
     {
       src: '/learning-dashboard-1.png',
-      alt: 'AI Learning Dashboard - Overview',
+      alt: 'SurFox AI Learning Dashboard displaying behavioral insights and patterns discovered from lead conversations',
       caption: 'What SurFox AI learned from your leads'
     },
     {
       src: '/learning-dashboard-2.png',
-      alt: 'AI Learning Dashboard - Details',
+      alt: 'SurFox AI Learning Dashboard showing market-specific adaptations and messaging optimizations',
       caption: 'How SurFox AI adapts to your market'
     },
     {
       src: '/hot-lead-detail.png',
-      alt: 'Hot Lead Detail View',
+      alt: 'SurFox hot lead detail view with conversation history, qualification score, and recommended next steps',
       caption: "What you get when someone's ready to buy"
     }
   ];

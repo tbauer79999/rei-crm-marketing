@@ -1,8 +1,18 @@
-import { generatePageMetadata } from '@/data/page-metadata';
+import { generatePageMetadata, generateCompareBreadcrumb } from '@/data/page-metadata';
 import GoHighLevelClient from './GoHighLevelClient';
 
 export const metadata = generatePageMetadata('compare-gohighlevel');
 
+const breadcrumbSchema = generateCompareBreadcrumb('GoHighLevel', '/compare/surfox-vs-gohighlevel');
+
 export default function Page() {
-  return <GoHighLevelClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <GoHighLevelClient />
+    </>
+  );
 }

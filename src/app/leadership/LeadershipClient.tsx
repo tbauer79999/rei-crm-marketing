@@ -70,7 +70,7 @@ export default function Leadership() {
                     <div className="w-72 h-72 rounded-2xl bg-gradient-to-br from-orange/20 to-gray-200 flex items-center justify-center overflow-hidden">
                       <Image
                         src="/tom-bauer.jpg"
-                        alt="Tom Bauer"
+                        alt="Tom Bauer, Founder and CEO of SurFox AI"
                         width={288}
                         height={288}
                         className="rounded-2xl object-contain bg-white p-10"

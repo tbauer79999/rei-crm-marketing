@@ -210,9 +210,11 @@ export default function SurFoxRevamped() {
               </div>
               <div className="order-1 lg:order-2">
                 <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 hover-lift">
-                  <img 
-                    src="/dashboard.png" 
-                    alt="Lead Management Dashboard"
+                  <Image
+                    src="/dashboard.png"
+                    alt="SurFox Engage lead management dashboard showing lead status, engagement scores, and conversation progress for each prospect"
+                    width={800}
+                    height={500}
                     className="w-full h-auto"
                   />
                 </div>
@@ -229,9 +231,11 @@ export default function SurFoxRevamped() {
             >
               <div>
                 <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 hover-lift">
-                  <img 
-                    src="/AI-controlroom.png" 
-                    alt="AI Control Room"
+                  <Image
+                    src="/AI-controlroom.png"
+                    alt="SurFox AI Control Room displaying real-time system health metrics, AI performance statistics, and conversation quality indicators"
+                    width={800}
+                    height={500}
                     className="w-full h-auto"
                   />
                 </div>
@@ -298,9 +302,11 @@ export default function SurFoxRevamped() {
               </div>
               <div className="order-1 lg:order-2">
                 <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 hover-lift">
-                  <img 
-                    src="/business-analytics.png" 
-                    alt="Business Analytics Dashboard"
+                  <Image
+                    src="/business-analytics.png"
+                    alt="SurFox analytics dashboard showing revenue tracking, conversion rates, sales rep performance metrics, and pipeline analysis"
+                    width={800}
+                    height={500}
                     className="w-full h-auto"
                   />
                 </div>
@@ -317,9 +323,11 @@ export default function SurFoxRevamped() {
             >
               <div>
                 <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 hover-lift">
-                  <img 
-                    src="/ab-testing.png" 
-                    alt="A/B Testing Interface"
+                  <Image
+                    src="/ab-testing.png"
+                    alt="SurFox A/B testing interface for comparing message variants, conversation approaches, and statistical performance results"
+                    width={800}
+                    height={500}
                     className="w-full h-auto"
                   />
                 </div>

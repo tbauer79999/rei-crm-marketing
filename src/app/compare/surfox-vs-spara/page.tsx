@@ -1,11 +1,18 @@
-import { generatePageMetadata } from '@/data/page-metadata';
+import { generatePageMetadata, generateCompareBreadcrumb } from '@/data/page-metadata';
 import SparaClient from './SparaClient';
 
 export const metadata = generatePageMetadata('compare-spara');
 
+const breadcrumbSchema = generateCompareBreadcrumb('Spara', '/compare/surfox-vs-spara');
+
 export default function Page() {
   return (
     <>
+      {/* Breadcrumb structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Schema.org Product Comparison structured data */}
       <script
         type="application/ld+json"

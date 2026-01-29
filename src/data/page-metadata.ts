@@ -173,6 +173,36 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
 };
 
 /**
+ * Generate breadcrumb schema for compare pages
+ */
+export function generateCompareBreadcrumb(competitorName: string, path: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.getsurfox.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Compare',
+        item: 'https://www.getsurfox.com/compare',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `SurFox vs ${competitorName}`,
+        item: `https://www.getsurfox.com${path}`,
+      },
+    ],
+  };
+}
+
+/**
  * Generate Next.js metadata object for a given page
  */
 export function generatePageMetadata(pageKey: string): Metadata {

@@ -71,5 +71,39 @@ export default async function BlogPost({ params }: BlogPostPageProps) {
   // Get related posts if they exist
   const relatedPosts = blogPost.relatedPosts ? getRelatedPosts(blogPost.relatedPosts) : [];
 
-  return <BlogPostClient blogPost={blogPost} relatedPosts={relatedPosts} />;
+  // Breadcrumb structured data
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.getsurfox.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://www.getsurfox.com/blog',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: blogPost.title,
+        item: `https://www.getsurfox.com/blog/${slug}`,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <BlogPostClient blogPost={blogPost} relatedPosts={relatedPosts} />
+    </>
+  );
 }
