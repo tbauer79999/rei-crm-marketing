@@ -110,6 +110,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['SurFox vs GoHighLevel', 'GoHighLevel alternative', 'GHL alternative', 'AI lead qualification', 'conversation intelligence', 'sales automation'],
     path: '/compare/surfox-vs-gohighlevel',
   },
+  'compare-spara': {
+    title: 'SurFox vs Spara: Which AI SDR Solution Fits Your Business?',
+    description: 'Comparing SurFox and Spara for AI lead qualification. Spara handles inbound website chat. SurFox qualifies outbound leads via SMS. See which fits your sales process.',
+    keywords: ['SurFox vs Spara', 'Spara alternative', 'AI SDR', 'lead qualification', 'replace SDRs', 'SMS lead qualification', 'AI lead qualification', 'inbound vs outbound'],
+    path: '/compare/surfox-vs-spara',
+  },
 };
 
 /**
