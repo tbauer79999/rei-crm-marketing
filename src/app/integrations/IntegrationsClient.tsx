@@ -4,8 +4,34 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageSquare, Mail, Phone, Database, CreditCard, ShoppingCart, Calendar, CheckCircle, Clock, Circle } from 'lucide-react';
 
+const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
+
 export default function Integrations() {
   const [requestedIntegration, setRequestedIntegration] = useState('');
+  const [integrationEmail, setIntegrationEmail] = useState('');
+  const [integrationSubmitting, setIntegrationSubmitting] = useState(false);
+
+  const handleIntegrationRequest = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!requestedIntegration || !integrationEmail) return;
+    setIntegrationSubmitting(true);
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'integration', email: integrationEmail, integration: requestedIntegration }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');
+      alert('Thanks! We\'ll factor this into our roadmap.');
+      setRequestedIntegration('');
+      setIntegrationEmail('');
+    } catch {
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setIntegrationSubmitting(false);
+    }
+  };
 
   return (
     <div className="bg-white text-gray-900">
@@ -299,20 +325,32 @@ export default function Integrations() {
               We're prioritizing integrations based on customer demand. Tell us what you need and we'll factor it into our roadmap.
             </p>
             
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <form onSubmit={handleIntegrationRequest} className="flex flex-col gap-3 max-w-md mx-auto">
               <input
-                type="text"
-                placeholder="e.g., Salesforce, Zendesk, Shopify..."
-                value={requestedIntegration}
-                onChange={(e) => setRequestedIntegration(e.target.value)}
-                className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-orange focus:outline-none transition"
+                type="email"
+                placeholder="Your email"
+                value={integrationEmail}
+                onChange={(e) => setIntegrationEmail(e.target.value)}
+                required
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-orange focus:outline-none transition"
               />
-              <button
-                type="submit"
-                className="px-6 py-3 rounded-lg bg-orange text-white font-semibold hover:bg-orange-600 transition"
-              >
-                Request
-              </button>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="text"
+                  placeholder="e.g., Salesforce, Zendesk, Shopify..."
+                  value={requestedIntegration}
+                  onChange={(e) => setRequestedIntegration(e.target.value)}
+                  required
+                  className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-orange focus:outline-none transition"
+                />
+                <button
+                  type="submit"
+                  disabled={integrationSubmitting}
+                  className="px-6 py-3 rounded-lg bg-orange text-white font-semibold hover:bg-orange-600 transition disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {integrationSubmitting ? 'Sending...' : 'Request'}
+                </button>
+              </div>
             </form>
           </motion.div>
         </div>

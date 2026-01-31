@@ -24,6 +24,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
+        type: 'contact-sales',
         name: formData.name,
         email: formData.email,
         company: formData.company,

@@ -1,10 +1,36 @@
 "use client"
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowDownLeft, ArrowUpRight, MessageSquare, Phone, Mail, CreditCard, Star, Calendar, HeadphonesIcon, CheckCircle } from 'lucide-react';
 
+const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
+
 export default function PlatformPage() {
+  const [platformEmail, setPlatformEmail] = useState('');
+  const [platformSubmitting, setPlatformSubmitting] = useState(false);
+
+  const handlePlatformSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!platformEmail) return;
+    setPlatformSubmitting(true);
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'newsletter', email: platformEmail }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');
+      alert('Thanks! You\'re on the list.');
+      setPlatformEmail('');
+    } catch {
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setPlatformSubmitting(false);
+    }
+  };
+
   return (
     <div className="bg-white text-gray-900">
       <style>{`
@@ -350,17 +376,21 @@ export default function PlatformPage() {
               We're building this one layer at a time. Drop your email and we'll share updates as new capabilities go live.
             </p>
 
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <form onSubmit={handlePlatformSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
+                value={platformEmail}
+                onChange={(e) => setPlatformEmail(e.target.value)}
                 placeholder="you@company.com"
+                required
                 className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-orange focus:outline-none transition"
               />
               <button
                 type="submit"
-                className="px-6 py-3 rounded-lg bg-navy text-white font-semibold hover:bg-gray-800 transition"
+                disabled={platformSubmitting}
+                className="px-6 py-3 rounded-lg bg-navy text-white font-semibold hover:bg-gray-800 transition disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Stay in the know
+                {platformSubmitting ? 'Sending...' : 'Stay in the know'}
               </button>
             </form>
           </motion.div>

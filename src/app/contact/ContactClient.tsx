@@ -4,8 +4,11 @@ import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Linkedin, Twitter } from 'lucide-react';
 
+const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
+
 export default function Contact() {
   const containerRef = useRef(null);
+  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -32,10 +35,32 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic here
-    console.log('Form submitted:', formData);
+    setSubmitting(true);
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'contact',
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          interest: formData.interest,
+          message: `Role: ${formData.role}\n\n${formData.message}`,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');
+      alert('Thanks! We\'ll get back to you shortly.');
+      setFormData({ firstName: '', lastName: '', email: '', company: '', role: '', phone: '', interest: '', message: '', smsConsent: false });
+    } catch {
+      alert('Something went wrong. Please email hello@getsurfox.com directly.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -399,10 +424,11 @@ export default function Contact() {
                   <div>
                     <button
                       type="submit"
-                      className="w-full sm:w-auto px-8 py-4 rounded-lg bg-orange text-white font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
+                      disabled={submitting}
+                      className="w-full sm:w-auto px-8 py-4 rounded-lg bg-orange text-white font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
                       <Send className="w-5 h-5" />
-                      Send Message
+                      {submitting ? 'Sending...' : 'Send Message'}
                     </button>
                     <p className="text-sm text-gray-500 mt-4">
                       * Required fields

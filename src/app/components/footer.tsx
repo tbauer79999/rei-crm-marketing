@@ -4,21 +4,32 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
+
 export default function Footer() {
   const [email, setEmail] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (email) {
-      // TODO: Add actual newsletter signup logic here
+    if (!email) return;
+    setSubmitting(true)
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'newsletter', email }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');
       setIsSubmitted(true)
       setEmail('')
-
-      // Reset after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false)
-      }, 5000)
+      setTimeout(() => setIsSubmitted(false), 5000)
+    } catch {
+      alert('Something went wrong. Please try again.')
+    } finally {
+      setSubmitting(false)
     }
   }
 
@@ -66,9 +77,10 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="w-full px-4 py-2.5 bg-white text-gray-900 rounded-lg text-sm font-semibold hover:bg-gray-100 transition"
+                  disabled={submitting}
+                  className="w-full px-4 py-2.5 bg-white text-gray-900 rounded-lg text-sm font-semibold hover:bg-gray-100 transition disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Submit
+                  {submitting ? 'Subscribing...' : 'Submit'}
                 </button>
               </form>
             )}
