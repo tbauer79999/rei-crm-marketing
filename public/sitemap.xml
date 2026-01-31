@@ -3,7 +3,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.getsurfox.com/</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,19 +11,19 @@
   <!-- Core Product Pages -->
   <url>
     <loc>https://www.getsurfox.com/engage</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/platform</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/pricing</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -31,19 +31,19 @@
   <!-- Technology & Features -->
   <url>
     <loc>https://www.getsurfox.com/integrations</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/security</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/how-it-works</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -51,67 +51,91 @@
   <!-- Company Pages -->
   <url>
     <loc>https://www.getsurfox.com/about</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/leadership</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.getsurfox.com/careers</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.getsurfox.com/support</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- Blog/Insights Section -->
   <url>
     <loc>https://www.getsurfox.com/blog</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog Articles -->
   <url>
+    <loc>https://www.getsurfox.com/blog/reduce-sdr-headcount-ai</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.getsurfox.com/blog/future-of-ai-in-sales</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/conversation-intelligence-deep-dive</loc>
-    <lastmod>2025-01-10</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/data-privacy-ai-businesses</loc>
-    <lastmod>2025-01-05</lastmod>
+    <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/qualify-leads-faster-ai</loc>
-    <lastmod>2024-12-28</lastmod>
+    <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/customer-first-ai-strategy</loc>
-    <lastmod>2024-12-20</lastmod>
+    <lastmod>2025-12-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/roi-conversation-intelligence</loc>
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2025-12-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Learn Section -->
   <url>
+    <loc>https://www.getsurfox.com/roi</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.getsurfox.com/ai-principles</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -119,13 +143,13 @@
   <!-- Conversion Pages -->
   <url>
     <loc>https://www.getsurfox.com/contact</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/request-access</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -133,13 +157,13 @@
   <!-- Legal Pages -->
   <url>
     <loc>https://www.getsurfox.com/privacy</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/terms</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -147,7 +171,7 @@
   <!-- Demo & Interactive -->
   <url>
     <loc>https://www.getsurfox.com/demo</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -155,55 +179,73 @@
   <!-- Industry & Comparison Pages -->
   <url>
     <loc>https://www.getsurfox.com/industries</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/enterprise</loc>
-    <lastmod>2025-01-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.getsurfox.com/compare/surfox-vs-lead-sherpa</loc>
-    <lastmod>2025-01-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.getsurfox.com/compare/surfox-vs-smarter-contact</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/compare/surfox-vs-all-competitors</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.getsurfox.com/compare/surfox-vs-lead-sherpa</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.getsurfox.com/compare/surfox-vs-smarter-contact</loc>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/compare/surfox-vs-launch-control</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/compare/surfox-vs-textus</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/compare/surfox-vs-skipio</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.getsurfox.com/compare/surfox-vs-meera-ai</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.getsurfox.com/compare/surfox-vs-gohighlevel</loc>
+    <lastmod>2026-01-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.getsurfox.com/compare/surfox-vs-spara</loc>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/toms-story</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
