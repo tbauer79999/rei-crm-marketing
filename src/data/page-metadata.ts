@@ -170,6 +170,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['how SurFox works', 'psychology AI', 'lead qualification process', 'AI messaging', 'behavioral analysis'],
     path: '/how-it-works',
   },
+  roi: {
+    title: 'ROI Calculator: AI Lead Qualification vs. Hiring SDRs | SurFox',
+    description: 'Calculate the true cost of SDRs vs AI-powered lead qualification. See how SurFox delivers 85% lower cost-per-lead and 21x better conversion rates.',
+    keywords: ['ai sdr vs hiring sdr cost', 'conversation intelligence ROI', 'reduce sdr headcount with ai', 'ai lead qualification ROI', 'cost of sdr vs automation'],
+    path: '/roi',
+  },
 };
 
 /**

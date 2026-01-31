@@ -131,6 +131,9 @@ export default function Nav() {
                 <Link href="/blog" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors border-b border-gray-100">
                   Insights
                 </Link>
+                <Link href="/roi" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors border-b border-gray-100">
+                  ROI Calculator
+                </Link>
                 <Link href="/ai-principles" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-purple-50 hover:to-cyan-50 hover:text-gray-900 transition-colors">
                   AI Principles
                 </Link>
@@ -205,6 +208,7 @@ export default function Nav() {
             <div className="border-t border-gray-200 pt-4">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Learn</div>
               <Link href="/blog" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Insights</Link>
+              <Link href="/roi" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">ROI Calculator</Link>
               <Link href="/ai-principles" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">AI Principles</Link>
             </div>
 
