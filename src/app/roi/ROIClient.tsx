@@ -2,25 +2,34 @@
 
 import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Calculator, DollarSign, Clock, TrendingUp, Users, Zap, MessageSquare, AlertTriangle, Check, X, Mail, Phone } from 'lucide-react'
+import { ArrowRight, Calculator, DollarSign, TrendingUp, MessageSquare, AlertTriangle, Check, X, Mail, Phone, Database, RefreshCw } from 'lucide-react'
+
+type ImprovementLevel = 'conservative' | 'moderate' | 'aggressive'
+
+const improvementMultipliers: Record<ImprovementLevel, number> = {
+  conservative: 2,
+  moderate: 4,
+  aggressive: 6
+}
 
 export default function ROIClient() {
   // Calculator state
   const [monthlyLeads, setMonthlyLeads] = useState(500)
-  const [responseTime, setResponseTime] = useState(24)
   const [avgDealValue, setAvgDealValue] = useState(3000)
   const [conversionRate, setConversionRate] = useState(3)
   const [numSDRs, setNumSDRs] = useState(2)
   const [costPerSDR, setCostPerSDR] = useState(120000)
+  const [improvementLevel, setImprovementLevel] = useState<ImprovementLevel>('moderate')
 
   // Calculate ROI
   const calculations = useMemo(() => {
+    const multiplier = improvementMultipliers[improvementLevel]
     const currentAnnualSDRCost = numSDRs * costPerSDR
     const currentMonthlyMeetings = monthlyLeads * (conversionRate / 100)
     const currentAnnualRevenue = currentMonthlyMeetings * 12 * avgDealValue * 0.25
 
     const surfoxAnnualCost = 5964 // Growth plan at $497/mo
-    const surfoxConversionRate = Math.min(conversionRate * 4, 50) // Cap at 50%
+    const surfoxConversionRate = Math.min(conversionRate * multiplier, 50) // Cap at 50%
     const surfoxMonthlyMeetings = monthlyLeads * (surfoxConversionRate / 100)
     const surfoxAnnualRevenue = surfoxMonthlyMeetings * 12 * avgDealValue * 0.25
 
@@ -44,7 +53,7 @@ export default function ROIClient() {
       roiPercentage,
       paybackDays: paybackDays > 0 ? paybackDays : 1
     }
-  }, [monthlyLeads, responseTime, avgDealValue, conversionRate, numSDRs, costPerSDR])
+  }, [monthlyLeads, avgDealValue, conversionRate, numSDRs, costPerSDR, improvementLevel])
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -119,7 +128,7 @@ export default function ROIClient() {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Most companies spend $105,000+ per SDR annually — and still miss 71% of their leads. There's a better way.
+              Your SDRs gave up on thousands of leads. SurFox AI brings them back to life.
             </p>
 
             <motion.a
@@ -131,6 +140,27 @@ export default function ROIClient() {
               <Calculator className="w-5 h-5" />
               Calculate Your ROI
             </motion.a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Built for Dead Leads Section */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 bg-navy">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <RefreshCw className="w-8 h-8 text-orange" />
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
+                Built for the Leads Your Team Already Gave Up On
+              </h2>
+            </div>
+            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+              SurFox AI isn't an inbound tool — it's a <span className="text-orange font-semibold">resurrection engine</span>. Upload your existing database, and our AI re-engages cold leads with psychology-based SMS conversations. No new lead costs. No wasted ad spend. Just revenue hiding in your CRM.
+            </p>
           </motion.div>
         </div>
       </section>
@@ -243,18 +273,21 @@ export default function ROIClient() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6">
-              The Speed Problem You Can't Solve With Humans
+              When Cold Leads Reply, Speed Still Wins
             </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              When a cold lead finally responds, speed still matters. SurFox replies in under 60 seconds — not 24 hours.
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
-              { stat: '21x', desc: 'more likely to convert when contacted within 5 minutes' },
-              { stat: '80%', desc: 'drop in qualification odds after just 5 minutes' },
-              { stat: '42-47 hrs', desc: 'average B2B response time' },
-              { stat: '63%', desc: 'of companies never respond to inbound leads at all' },
+              { stat: '21x', desc: 'more likely to convert when responded to within 5 minutes' },
+              { stat: '80%', desc: 'drop in qualification odds after just 5 minutes of delay' },
+              { stat: '<60 sec', desc: 'SurFox AI response time when leads reply' },
+              { stat: '42-47 hrs', desc: 'average human SDR response time to re-engaged leads' },
               { stat: '78%', desc: 'of customers buy from whoever responds first' },
-              { stat: '24/7', desc: 'leads come in — but SDRs only work 8 hours a day' },
+              { stat: '24/7', desc: 'AI monitors for replies — even nights and weekends' },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -277,7 +310,7 @@ export default function ROIClient() {
             className="bg-navy rounded-2xl p-8 text-center"
           >
             <p className="text-lg sm:text-xl text-white leading-relaxed">
-              Your SDRs work 8 hours a day. Leads come in 24/7. A lead that arrives at 9 PM Friday won't get a response until Monday morning — if ever. <span className="text-orange font-semibold">By then, your competitor already closed them.</span>
+              Your SDRs moved on to new leads. When an old prospect finally texts back at 9 PM, no one's there to respond. <span className="text-orange font-semibold">SurFox AI never sleeps — and never misses a reply.</span>
             </p>
           </motion.div>
         </div>
@@ -293,7 +326,7 @@ export default function ROIClient() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6">
-              The SurFox Difference
+              Reviving Leads: SDRs vs SurFox AI
             </h2>
           </motion.div>
 
@@ -318,7 +351,7 @@ export default function ROIClient() {
                   <td className="px-6 py-4 text-orange font-semibold">$5,964 – $23,964</td>
                 </tr>
                 <tr className="bg-gray-50/50">
-                  <td className="px-6 py-4 text-gray-600">Response Time</td>
+                  <td className="px-6 py-4 text-gray-600">Response Time to Replies</td>
                   <td className="px-6 py-4 text-navy font-medium">42-47 hours average</td>
                   <td className="px-6 py-4 text-orange font-semibold">Under 60 seconds</td>
                 </tr>
@@ -343,9 +376,9 @@ export default function ROIClient() {
                   <td className="px-6 py-4 text-orange font-semibold">$26</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 text-gray-600">Lead Coverage</td>
+                  <td className="px-6 py-4 text-gray-600">Database Coverage</td>
                   <td className="px-6 py-4 text-navy font-medium">Limited by headcount</td>
-                  <td className="px-6 py-4 text-orange font-semibold">Unlimited</td>
+                  <td className="px-6 py-4 text-orange font-semibold">Entire database</td>
                 </tr>
               </tbody>
             </table>
@@ -369,7 +402,7 @@ export default function ROIClient() {
               Calculate Your ROI
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Adjust the sliders below to match your business and see your potential savings.
+              See how much revenue is hiding in your existing lead database.
             </p>
           </motion.div>
 
@@ -382,14 +415,14 @@ export default function ROIClient() {
               className="bg-white rounded-2xl border-2 border-gray-200 p-8"
             >
               <h3 className="text-xl font-semibold text-navy mb-6 flex items-center gap-2">
-                <Calculator className="w-5 h-5 text-orange" />
-                Your Inputs
+                <Database className="w-5 h-5 text-orange" />
+                Your Database
               </h3>
 
               <div className="space-y-6">
                 <div>
                   <div className="flex justify-between mb-2">
-                    <label className="text-sm font-medium text-gray-700">Monthly Inbound Leads</label>
+                    <label className="text-sm font-medium text-gray-700">Leads to Re-engage (monthly)</label>
                     <span className="text-sm font-semibold text-orange">{formatNumber(monthlyLeads)}</span>
                   </div>
                   <input
@@ -401,21 +434,7 @@ export default function ROIClient() {
                     onChange={(e) => setMonthlyLeads(Number(e.target.value))}
                     className="w-full"
                   />
-                </div>
-
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <label className="text-sm font-medium text-gray-700">Current Response Time (hours)</label>
-                    <span className="text-sm font-semibold text-orange">{responseTime} hrs</span>
-                  </div>
-                  <input
-                    type="range"
-                    min="1"
-                    max="72"
-                    value={responseTime}
-                    onChange={(e) => setResponseTime(Number(e.target.value))}
-                    className="w-full"
-                  />
+                  <p className="text-xs text-gray-500 mt-1">Cold leads in your CRM that haven't been contacted recently</p>
                 </div>
 
                 <div>
@@ -436,7 +455,7 @@ export default function ROIClient() {
 
                 <div>
                   <div className="flex justify-between mb-2">
-                    <label className="text-sm font-medium text-gray-700">Current Conversion Rate</label>
+                    <label className="text-sm font-medium text-gray-700">Historical Conversion Rate</label>
                     <span className="text-sm font-semibold text-orange">{conversionRate}%</span>
                   </div>
                   <input
@@ -448,9 +467,41 @@ export default function ROIClient() {
                     onChange={(e) => setConversionRate(Number(e.target.value))}
                     className="w-full"
                   />
+                  <p className="text-xs text-gray-500 mt-1">Your team's typical conversion rate on these leads</p>
                 </div>
 
-                <div>
+                {/* Projected Improvement Toggle */}
+                <div className="pt-4 border-t border-gray-200">
+                  <div className="flex justify-between items-center mb-3">
+                    <label className="text-sm font-medium text-gray-700">Projected Improvement</label>
+                    <span className="text-xs text-gray-500">Based on speed-to-response data</span>
+                  </div>
+                  <div className="grid grid-cols-3 gap-2">
+                    {[
+                      { key: 'conservative', label: 'Conservative', mult: '2x' },
+                      { key: 'moderate', label: 'Moderate', mult: '4x' },
+                      { key: 'aggressive', label: 'Aggressive', mult: '6x' },
+                    ].map((option) => (
+                      <button
+                        key={option.key}
+                        onClick={() => setImprovementLevel(option.key as ImprovementLevel)}
+                        className={`px-3 py-2 rounded-lg text-sm font-medium transition ${
+                          improvementLevel === option.key
+                            ? 'bg-orange text-white'
+                            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        }`}
+                      >
+                        <div>{option.label}</div>
+                        <div className="text-xs opacity-80">{option.mult}</div>
+                      </button>
+                    ))}
+                  </div>
+                  <p className="text-xs text-gray-500 mt-2">
+                    Based on AI engagement and instant response data. Start conservative if skeptical.
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-gray-200">
                   <div className="flex justify-between mb-2">
                     <label className="text-sm font-medium text-gray-700">Number of SDRs</label>
                     <span className="text-sm font-semibold text-orange">{numSDRs}</span>
@@ -543,6 +594,10 @@ export default function ROIClient() {
                     <span className="text-gray-600">Projected Monthly Meetings</span>
                     <span className="font-medium text-green-600">{formatNumber(calculations.surfoxMonthlyMeetings)}</span>
                   </div>
+                  <div className="flex justify-between text-xs text-gray-500 pt-2">
+                    <span>Improvement multiplier</span>
+                    <span>{improvementMultipliers[improvementLevel]}x ({improvementLevel})</span>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -579,7 +634,7 @@ export default function ROIClient() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-gray-600">
                   <X className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-                  Only focus on new leads
+                  Only focus on new inbound leads
                 </li>
                 <li className="flex items-start gap-3 text-gray-600">
                   <X className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
@@ -587,7 +642,7 @@ export default function ROIClient() {
                 </li>
                 <li className="flex items-start gap-3 text-gray-600">
                   <X className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-                  No way to re-engage cold prospects
+                  No way to re-engage cold prospects at scale
                 </li>
               </ul>
             </motion.div>
@@ -632,7 +687,7 @@ export default function ROIClient() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
               <div className="text-center">
                 <p className="text-3xl font-bold text-green-700">10,000</p>
-                <p className="text-sm text-green-600">old leads</p>
+                <p className="text-sm text-green-600">old leads in your CRM</p>
               </div>
               <div className="text-center">
                 <p className="text-3xl font-bold text-green-700">300</p>
@@ -738,7 +793,7 @@ export default function ROIClient() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6">
-              Ready to Cut Costs and Convert More Leads?
+              Ready to Resurrect Your Dead Leads?
             </h2>
 
             <p className="text-lg sm:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
