@@ -42,7 +42,7 @@ export default function Nav() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <Image
-              src="/newSurFoxLogo.png"
+              src="/newSurFoxLogo1.png"
               alt="SurFox Logo"
               width={32}
               height={32}
