@@ -40,17 +40,14 @@ export default function Footer() {
 
           {/* Newsletter Section */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
+            <div className="mb-6">
               <Image
                 src="/newSurFoxLogo1.png"
-                alt="SurFox Logo"
-                width={32}
-                height={32}
-                className="w-8 h-8"
+                alt="SurFox AI"
+                width={160}
+                height={44}
+                className="h-10 w-auto object-contain brightness-0 invert"
               />
-              <span className="text-xl font-bold text-white">
-                SurFox AI
-              </span>
             </div>
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
               Join our newsletter to stay up to date on features and releases.
