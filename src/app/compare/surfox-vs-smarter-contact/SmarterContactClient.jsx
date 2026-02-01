@@ -54,6 +54,21 @@ export default function SurFoxVsSmarterContact() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "Is Smarter Contact good for SMS marketing?",
+      answer: "Smarter Contact is solid for bulk SMS campaigns and ringless voicemail. It is popular with real estate investors and sales teams doing high-volume outreach. However, it is a broadcasting tool, not a conversation tool. SurFox AI handles two-way conversations automatically."
+    },
+    {
+      question: "Can Smarter Contact qualify leads?",
+      answer: "Smarter Contact can send messages and capture responses, but a human still needs to read and reply to every response. SurFox AI reads responses, continues the conversation, and only alerts your team when a lead is qualified."
+    },
+    {
+      question: "What is the difference between Smarter Contact and SurFox?",
+      answer: "Smarter Contact is a bulk messaging platform. SurFox is an AI qualification platform. Smarter Contact sends thousands of texts. SurFox has thousands of conversations."
+    }
+  ];
+
   return (
     <div className="bg-white text-gray-900">
       <style>{`
@@ -715,8 +730,43 @@ export default function SurFoxVsSmarterContact() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* FAQ Section */}
       <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600">
+              Common questions about Smarter Contact vs SurFox AI
+            </p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="p-6 rounded-2xl border-2 border-gray-200 bg-gray-50"
+              >
+                <h3 className="text-lg font-semibold text-navy mb-3">{faq.question}</h3>
+                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

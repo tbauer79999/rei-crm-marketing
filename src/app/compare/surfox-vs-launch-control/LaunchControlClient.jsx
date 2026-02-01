@@ -55,6 +55,21 @@ export default function SurFoxVsLaunchControl() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "Is Launch Control good for real estate investors?",
+      answer: "Yes, Launch Control is built specifically for real estate investors doing SMS outreach to distressed property leads. It handles compliance well and integrates with popular investor CRMs. However, it requires manual conversation management. SurFox AI handles the conversations automatically."
+    },
+    {
+      question: "How does Launch Control compare to SurFox for lead qualification?",
+      answer: "Launch Control sends your initial outreach and captures responses. Your team then manages every conversation manually. SurFox AI handles the entire qualification conversation and only escalates leads that are ready to talk."
+    },
+    {
+      question: "Can I use Launch Control and SurFox together?",
+      answer: "You could use Launch Control for compliance-focused initial blasts in real estate, then import responding leads to SurFox for AI-powered qualification conversations. However, most teams find SurFox handles both outreach and qualification in one platform."
+    }
+  ];
+
   return (
     <div className="bg-white text-gray-900">
       <style>{`
@@ -664,6 +679,41 @@ export default function SurFoxVsLaunchControl() {
               <strong className="text-navy">Smart choice:</strong> Pay less, work less, get better results with AI automation.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600">
+              Common questions about Launch Control vs SurFox AI
+            </p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="p-6 rounded-2xl border-2 border-gray-200 bg-gray-50"
+              >
+                <h3 className="text-lg font-semibold text-navy mb-3">{faq.question}</h3>
+                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

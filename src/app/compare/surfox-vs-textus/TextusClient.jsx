@@ -51,6 +51,21 @@ export default function SurFoxVsTextUs() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "Is TextUs good for lead qualification?",
+      answer: "TextUs is built for business texting and team collaboration. It is great for sales teams who want to text from their CRM. However, TextUs requires humans to manage every conversation. SurFox AI handles the back-and-forth automatically and only escalates qualified leads."
+    },
+    {
+      question: "How does TextUs pricing compare to SurFox?",
+      answer: "TextUs starts around $300 per month per user for basic plans and scales up for teams. SurFox starts at $197 per month and handles unlimited AI conversations. For teams doing high-volume outreach, SurFox is significantly more cost-effective."
+    },
+    {
+      question: "Can TextUs automate lead qualification?",
+      answer: "TextUs has templates and scheduling, but no AI that carries on conversations. Every response still requires human attention. SurFox AI reads responses, asks follow-up questions, and qualifies leads without human involvement."
+    }
+  ];
+
   return (
     <div className="bg-white text-gray-900">
       <style>{`
@@ -730,8 +745,43 @@ export default function SurFoxVsTextUs() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* FAQ Section */}
       <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600">
+              Common questions about TextUs vs SurFox AI
+            </p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="p-6 rounded-2xl border-2 border-gray-200 bg-gray-50"
+              >
+                <h3 className="text-lg font-semibold text-navy mb-3">{faq.question}</h3>
+                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

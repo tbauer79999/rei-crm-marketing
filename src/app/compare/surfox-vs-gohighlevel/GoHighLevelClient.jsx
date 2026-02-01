@@ -50,6 +50,21 @@ export default function GoHighLevelClient() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "Does GoHighLevel have AI lead qualification?",
+      answer: "GoHighLevel has basic automation and workflows, but its AI capabilities require significant setup and configuration. SurFox is purpose-built for AI-powered SMS qualification with minimal setup. GoHighLevel is a swiss army knife. SurFox is a scalpel for lead qualification."
+    },
+    {
+      question: "Is GoHighLevel good for SMS marketing?",
+      answer: "Yes, GoHighLevel includes SMS as part of its all-in-one platform. However, the SMS features are one of many tools, not the core focus. SurFox is built specifically for AI-powered SMS conversations and lead qualification."
+    },
+    {
+      question: "Why choose SurFox over GoHighLevel?",
+      answer: "Choose GoHighLevel if you need an all-in-one CRM, website builder, and marketing platform. Choose SurFox if you specifically need AI to qualify leads via SMS. Many teams use GoHighLevel as their CRM and SurFox for AI-powered lead qualification."
+    }
+  ];
+
   return (
     <div className="bg-white text-gray-900">
       <style>{`
@@ -415,6 +430,41 @@ export default function GoHighLevelClient() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600">
+              Common questions about GoHighLevel vs SurFox AI
+            </p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="p-6 rounded-2xl border-2 border-gray-200 bg-gray-50"
+              >
+                <h3 className="text-lg font-semibold text-navy mb-3">{faq.question}</h3>
+                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

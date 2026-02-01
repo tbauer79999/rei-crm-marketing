@@ -54,6 +54,21 @@ export default function SurFoxVsLeadSherpa() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "Is Lead Sherpa good for real estate investors?",
+      answer: "Yes, Lead Sherpa is built specifically for real estate investors doing skip tracing and cold outreach. It is a solid tool for pulling data and sending initial texts. However, Lead Sherpa requires manual follow-up. SurFox AI handles the entire conversation until the lead is qualified."
+    },
+    {
+      question: "Can Lead Sherpa replace cold calling?",
+      answer: "Lead Sherpa helps you text instead of call, but someone still needs to manage responses. SurFox AI can replace both cold calling and manual texting by handling two-way SMS conversations automatically."
+    },
+    {
+      question: "What is the difference between Lead Sherpa and SurFox?",
+      answer: "Lead Sherpa is a skip tracing and SMS blasting tool for real estate. SurFox is an AI-powered conversation platform that works across industries. Lead Sherpa sends messages. SurFox has conversations."
+    }
+  ];
+
   return (
     <div className="bg-white text-gray-900">
       <style>{`
@@ -747,8 +762,43 @@ export default function SurFoxVsLeadSherpa() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* FAQ Section */}
       <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600">
+              Common questions about Lead Sherpa vs SurFox AI
+            </p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="p-6 rounded-2xl border-2 border-gray-200 bg-gray-50"
+              >
+                <h3 className="text-lg font-semibold text-navy mb-3">{faq.question}</h3>
+                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

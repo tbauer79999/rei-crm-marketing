@@ -123,6 +123,25 @@ export default function SurFoxGeneralComparison() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "What makes SurFox different from other SMS platforms?",
+      answer: "SurFox isn't an SMS platform - it's a Sales Psychology AI. While other tools focus on message volume or basic automation, SurFox reads 50+ psychological dimensions to understand and adapt to each prospect in real-time. It's the difference between sending messages and having intelligent conversations."
+    },
+    {
+      question: "How does SurFox AI learn?",
+      answer: "SurFox AI learns from every conversation - what objections come up, what responses work, which leads are worth pursuing. This tenant-only learning means your AI gets smarter based on your data, and your competitors can never benefit from your conversations."
+    },
+    {
+      question: "Can I use SurFox with my existing CRM?",
+      answer: "Yes. SurFox integrates with 5,000+ apps via Zapier and has native integrations with platforms like RecruiterFlow. Most teams use SurFox as the AI qualification layer between their lead sources and their existing CRM."
+    },
+    {
+      question: "What's the best use case for SurFox AI?",
+      answer: "SurFox excels at dead lead resurrection and outbound reactivation. If you have a CRM full of old leads that never converted, SurFox AI can find the 3-5% who are actually ready to buy. It pays for itself from leads you already own."
+    }
+  ];
+
   return (
     <div className="bg-white text-gray-900">
       <style>{`
@@ -582,6 +601,41 @@ export default function SurFoxGeneralComparison() {
                   View Analysis
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600">
+              Common questions about SurFox AI
+            </p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="p-6 rounded-2xl border-2 border-gray-200 bg-gray-50"
+              >
+                <h3 className="text-lg font-semibold text-navy mb-3">{faq.question}</h3>
+                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
               </motion.div>
             ))}
           </div>

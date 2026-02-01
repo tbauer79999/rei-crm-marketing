@@ -54,6 +54,21 @@ export default function MeeraAIClient() {
     }
   ];
 
+  const faqData = [
+    {
+      question: "What's the difference between SurFox and Meera AI?",
+      answer: "Meera AI is built for call centers - it focuses on getting leads on the phone via warm transfers. SurFox AI is built for lead intelligence - it qualifies leads via SMS before your team ever gets involved. Meera requires agents standing by; SurFox works while you sleep."
+    },
+    {
+      question: "Can SurFox AI replace my call center?",
+      answer: "Not exactly - SurFox AI replaces the need for a call center in the first place. Instead of transferring every lead to waiting agents, SurFox AI qualifies leads via SMS and only surfaces the ones worth calling. Your team calls pre-vetted leads, not random transfers."
+    },
+    {
+      question: "Is SurFox good for inbound leads?",
+      answer: "SurFox AI works for both inbound and outbound, but it really shines with outbound reactivation - reviving old leads you already paid for. If you need pure inbound call handling, Meera might be a better fit. If you want AI-powered lead qualification, choose SurFox."
+    }
+  ];
+
   return (
     <div className="bg-white text-gray-900">
       <style>{`
@@ -710,6 +725,41 @@ export default function MeeraAIClient() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600">
+              Common questions about Meera AI vs SurFox AI
+            </p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="p-6 rounded-2xl border-2 border-gray-200 bg-gray-50"
+              >
+                <h3 className="text-lg font-semibold text-navy mb-3">{faq.question}</h3>
+                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

@@ -15,6 +15,21 @@ export default function SparaClient() {
     { factor: 'Best for', surfox: 'Teams with lead lists but no time to text them all', spara: 'Companies with heavy inbound web traffic' },
   ];
 
+  const faqData = [
+    {
+      question: "Can Spara replace SDRs for initial lead qualification?",
+      answer: "For inbound website visitors, yes. Spara handles initial chat conversations and qualifies leads who come to your site. But Spara cannot proactively reach out to lead lists you already own. If you have purchased leads, aged leads, or event signups sitting in your CRM, you need an outbound tool like SurFox."
+    },
+    {
+      question: "Does Spara work for inbound lead qualification?",
+      answer: "Yes, that is exactly what Spara is built for. It engages website visitors through chat, email, and voice. If your leads come to you through SEO, ads, or content marketing, Spara qualifies them. If you need to reach out to leads first, that is where SurFox comes in."
+    },
+    {
+      question: "Can I use both Spara and SurFox?",
+      answer: "Yes. Spara handles inbound website visitors. SurFox handles outbound to your existing lead lists via SMS. Different channels, complementary tools. Many sales teams use an inbound solution alongside an outbound solution."
+    }
+  ];
+
   return (
     <div className="bg-white text-gray-900">
       <style>{`
@@ -516,6 +531,41 @@ export default function SparaClient() {
               >
                 <industry.icon className="w-8 h-8 text-orange mx-auto mb-2" />
                 <p className="text-sm font-medium text-navy">{industry.name}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600">
+              Common questions about Spara vs SurFox AI
+            </p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="p-6 rounded-2xl border-2 border-gray-200 bg-gray-50"
+              >
+                <h3 className="text-lg font-semibold text-navy mb-3">{faq.question}</h3>
+                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
