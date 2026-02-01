@@ -41,10 +41,10 @@ export default function Nav() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <Image 
-              src="/logo.png" 
-              alt="SurFox Logo" 
-              width={32} 
+            <Image
+              src="/newSurFoxLogo.png"
+              alt="SurFox Logo"
+              width={32}
               height={32}
               className="w-8 h-8"
             />

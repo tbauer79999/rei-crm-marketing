@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
               <Image
-                src="/logo.png"
+                src="/newSurFoxLogo.png"
                 alt="SurFox Logo"
                 width={32}
                 height={32}
