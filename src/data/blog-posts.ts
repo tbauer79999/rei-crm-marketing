@@ -1612,7 +1612,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'callout',
-        content: 'Calculate your specific ROI at surfox.io/roi. Plug in your numbers and see what AI lead qualification could mean for your pipeline and your budget.'
+        content: 'Calculate your specific ROI at getsurfox.com/roi. Plug in your numbers and see what AI lead qualification could mean for your pipeline and your budget.'
       },
       {
         type: 'heading',
