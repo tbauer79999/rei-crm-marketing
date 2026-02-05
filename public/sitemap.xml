@@ -77,12 +77,18 @@
   <!-- Blog/Insights Section -->
   <url>
     <loc>https://www.getsurfox.com/blog</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog Articles -->
+  <url>
+    <loc>https://www.getsurfox.com/blog/ai-sdr-vs-hiring-sdr-roi-2026</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.getsurfox.com/blog/reduce-sdr-headcount-ai</loc>
     <lastmod>2026-01-29</lastmod>
