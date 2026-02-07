@@ -565,7 +565,7 @@ export default function Orchestrate() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <Link
-                href="/request-access"
+                href="/demo"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition"
               >
                 Request Access

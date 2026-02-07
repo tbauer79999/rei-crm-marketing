@@ -154,7 +154,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   ctaInserted = true;
                   elements.push(
                     <p key="inline-cta" className="text-orange font-semibold text-base sm:text-lg my-8 py-4 border-t border-b border-orange/20">
-                      Want to see how this applies to your team? <Link href="/roi" className="underline hover:no-underline">Calculate your ROI</Link> or <Link href="/request-access" className="underline hover:no-underline">request a demo</Link> to see SurFox AI in action.
+                      Want to see how this applies to your team? <Link href="/roi" className="underline hover:no-underline">Calculate your ROI</Link> or <Link href="/demo" className="underline hover:no-underline">request a demo</Link> to see SurFox AI in action.
                     </p>
                   );
                 }
@@ -249,7 +249,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/request-access"
+                href="/demo"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-white text-purple-600 font-semibold hover:shadow-lg transition-all"
               >
                 Request a Demo

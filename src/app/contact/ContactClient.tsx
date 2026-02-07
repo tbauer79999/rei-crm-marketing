@@ -464,7 +464,7 @@ export default function Contact() {
                 icon: MessageSquare,
                 title: 'Request a Demo',
                 desc: 'See SurFox AI in action with a personalized walkthrough.',
-                link: '/request-access',
+                link: '/demo',
                 linkText: 'Schedule Demo'
               },
               {
