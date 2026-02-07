@@ -139,38 +139,62 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
             transition={{ duration: 0.6, delay: 0.2 }}
             className="prose prose-lg max-w-none"
           >
-            {blogPost.content.map((block, index) => {
-              switch (block.type) {
-                case 'heading':
-                  return (
-                    <h2 key={index} className="text-2xl sm:text-3xl font-semibold text-navy mt-12 mb-4 first:mt-0">
-                      {block.content}
-                    </h2>
-                  );
-                case 'subheading':
-                  return (
-                    <h3 key={index} className="text-xl sm:text-2xl font-semibold text-navy mt-8 mb-3">
-                      {block.content}
-                    </h3>
-                  );
-                case 'paragraph':
-                  return (
-                    <p key={index} className="text-gray-700 leading-relaxed mb-6 text-base sm:text-lg">
-                      {block.content}
+            {(() => {
+              let headingCount = 0;
+              let ctaInserted = false;
+
+              return blogPost.content.flatMap((block, index) => {
+                const elements: React.ReactNode[] = [];
+
+                if (block.type === 'heading') {
+                  headingCount++;
+                }
+
+                if (headingCount === 3 && block.type === 'heading' && !ctaInserted) {
+                  ctaInserted = true;
+                  elements.push(
+                    <p key="inline-cta" className="text-orange font-semibold text-base sm:text-lg my-8 py-4 border-t border-b border-orange/20">
+                      Want to see how this applies to your team? <Link href="/roi" className="underline hover:no-underline">Calculate your ROI</Link> or <Link href="/request-access" className="underline hover:no-underline">request a demo</Link> to see SurFox AI in action.
                     </p>
                   );
-                case 'callout':
-                  return (
-                    <div key={index} className="my-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-orange/5 to-purple-500/5 border-l-4 border-orange">
-                      <p className="text-gray-800 leading-relaxed font-medium text-base sm:text-lg m-0">
+                }
+
+                switch (block.type) {
+                  case 'heading':
+                    elements.push(
+                      <h2 key={index} className="text-2xl sm:text-3xl font-semibold text-navy mt-12 mb-4 first:mt-0">
+                        {block.content}
+                      </h2>
+                    );
+                    break;
+                  case 'subheading':
+                    elements.push(
+                      <h3 key={index} className="text-xl sm:text-2xl font-semibold text-navy mt-8 mb-3">
+                        {block.content}
+                      </h3>
+                    );
+                    break;
+                  case 'paragraph':
+                    elements.push(
+                      <p key={index} className="text-gray-700 leading-relaxed mb-6 text-base sm:text-lg">
                         {block.content}
                       </p>
-                    </div>
-                  );
-                default:
-                  return null;
-              }
-            })}
+                    );
+                    break;
+                  case 'callout':
+                    elements.push(
+                      <div key={index} className="my-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-orange/5 to-purple-500/5 border-l-4 border-orange">
+                        <p className="text-gray-800 leading-relaxed font-medium text-base sm:text-lg m-0">
+                          {block.content}
+                        </p>
+                      </div>
+                    );
+                    break;
+                }
+
+                return elements;
+              });
+            })()}
           </motion.article>
 
           {/* Schema.org Article Markup */}

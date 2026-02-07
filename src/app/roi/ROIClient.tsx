@@ -159,7 +159,7 @@ export default function ROIClient() {
               </h2>
             </div>
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-              SurFox AI isn't an inbound tool — it's a <span className="text-orange font-semibold">resurrection engine</span>. Upload your existing database, and our AI re-engages cold leads with psychology-based SMS conversations. No new lead costs. No wasted ad spend. Just revenue hiding in your CRM.
+              SurFox AI isn't an inbound tool - it's a <span className="text-orange font-semibold">resurrection engine</span>. Upload your existing database, and our AI re-engages cold leads with psychology-based SMS conversations. No new lead costs. No wasted ad spend. Just revenue hiding in your CRM.
             </p>
           </motion.div>
         </div>
@@ -276,7 +276,7 @@ export default function ROIClient() {
               When Cold Leads Reply, Speed Still Wins
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              When a cold lead finally responds, speed still matters. SurFox replies in under 60 seconds — not 24 hours.
+              When a cold lead finally responds, speed still matters. SurFox replies in under 60 seconds - not 24 hours.
             </p>
           </motion.div>
 
@@ -287,7 +287,7 @@ export default function ROIClient() {
               { stat: '<60 sec', desc: 'SurFox AI response time when leads reply' },
               { stat: '42-47 hrs', desc: 'average human SDR response time to re-engaged leads' },
               { stat: '78%', desc: 'of customers buy from whoever responds first' },
-              { stat: '24/7', desc: 'AI monitors for replies — even nights and weekends' },
+              { stat: '24/7', desc: 'AI monitors for replies - even nights and weekends' },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -310,7 +310,7 @@ export default function ROIClient() {
             className="bg-navy rounded-2xl p-8 text-center"
           >
             <p className="text-lg sm:text-xl text-white leading-relaxed">
-              Your SDRs moved on to new leads. When an old prospect finally texts back at 9 PM, no one's there to respond. <span className="text-orange font-semibold">SurFox AI never sleeps — and never misses a reply.</span>
+              Your SDRs moved on to new leads. When an old prospect finally texts back at 9 PM, no one's there to respond. <span className="text-orange font-semibold">SurFox AI never sleeps - and never misses a reply.</span>
             </p>
           </motion.div>
         </div>
@@ -778,7 +778,7 @@ export default function ROIClient() {
             className="bg-navy rounded-2xl p-8 text-center"
           >
             <p className="text-xl sm:text-2xl text-white leading-relaxed">
-              "SMS marketing delivers <span className="text-orange font-bold">$71 ROI for every $1 spent</span> — nearly double email's $36 return."
+              "SMS marketing delivers <span className="text-orange font-bold">$71 ROI for every $1 spent</span> - nearly double email's $36 return."
             </p>
           </motion.div>
         </div>
