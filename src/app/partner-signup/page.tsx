@@ -43,33 +43,33 @@ function PartnerSignupContent() {
       return;
     }
 
+    const fetchInvite = async () => {
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/get-partner-invite`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`
+          },
+          body: JSON.stringify({ invite_code: code })
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || 'Invalid or expired invite code');
+        }
+
+        const data = await response.json();
+        setInvite(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to load invite');
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchInvite();
   }, [code]);
-
-  const fetchInvite = async () => {
-    try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/get-partner-invite`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`
-        },
-        body: JSON.stringify({ invite_code: code })
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Invalid or expired invite code');
-      }
-
-      const data = await response.json();
-      setInvite(data);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to load invite');
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const handleSubscribe = async () => {
     if (!invite) return;
