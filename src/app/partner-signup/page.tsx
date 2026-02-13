@@ -79,8 +79,9 @@ function PartnerSignupContent() {
       const response = await fetch('https://api.surfox.ai/api/stripe/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
           email: invite.partner_email,
+          trial_days: invite.trial_days,
           metadata: {
             partner_invite_id: invite.id,
             partner_invite_code: invite.invite_code,
@@ -214,7 +215,7 @@ function PartnerSignupContent() {
               {isPartnerAdmin ? '⭐ PARTNER INVITATION' : '🚀 CUSTOM PLAN INVITATION'}
             </div>
             <h1 className="text-4xl font-semibold text-navy mb-2">
-              Welcome, {invite.partner_name}!
+              Welcome, {invite.partner_company}!
             </h1>
             <h2 className={`text-3xl font-bold mb-2 ${isPartnerAdmin ? 'text-purple-600' : 'text-orange-600'}`}>
               {isPartnerAdmin ? 'SurFox Enterprise Partner' : 'SurFox Custom Plan'}
