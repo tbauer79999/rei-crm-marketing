@@ -18,6 +18,8 @@ interface PartnerInvite {
   status: string;
   expires_at: string;
   target_role: string;
+  logo_url: string | null;
+  trial_days: number;
   custom_plan_limits: {
     sms_limit?: number;
     campaigns_limit?: number;
@@ -189,8 +191,22 @@ function PartnerSignupContent() {
           
           {/* Header */}
           <div className="text-center mb-8">
+            {/* Partner Logo */}
+            {invite.logo_url && (
+              <div className="mb-6">
+                <img
+                  src={invite.logo_url}
+                  alt={`${invite.partner_company} logo`}
+                  className="h-20 w-auto mx-auto object-contain"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+            )}
+
             <div className={`inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 border-2 ${
-              isPartnerAdmin 
+              isPartnerAdmin
                 ? 'bg-purple-100 text-purple-700 border-purple-300'
                 : 'bg-orange-100 text-orange-700 border-orange-300'
             }`}>
@@ -203,7 +219,7 @@ function PartnerSignupContent() {
               {isPartnerAdmin ? 'SurFox Enterprise Partner' : 'SurFox Custom Plan'}
             </h2>
             <p className="text-gray-600">
-              {isPartnerAdmin 
+              {isPartnerAdmin
                 ? "You've been invited to join SurFox as an enterprise partner"
                 : "You've been invited to join SurFox with a custom plan"}
             </p>
@@ -280,10 +296,12 @@ function PartnerSignupContent() {
               
               {/* Trust indicators */}
               <div className={`space-y-2 text-sm text-gray-700 ${invite.custom_plan_limits ? 'mt-4 pt-4 border-t border-gray-200' : ''}`}>
-                <div className="flex items-center justify-center gap-2">
-                  <span className={`w-2 h-2 rounded-full ${isPartnerAdmin ? 'bg-purple-600' : 'bg-orange-600'}`}></span>
-                  14-day free trial
-                </div>
+                {invite.trial_days > 0 && (
+                  <div className="flex items-center justify-center gap-2">
+                    <span className={`w-2 h-2 rounded-full ${isPartnerAdmin ? 'bg-purple-600' : 'bg-orange-600'}`}></span>
+                    {invite.trial_days}-day free trial
+                  </div>
+                )}
                 <div className="flex items-center justify-center gap-2">
                   <span className={`w-2 h-2 rounded-full ${isPartnerAdmin ? 'bg-purple-600' : 'bg-orange-600'}`}></span>
                   Cancel anytime
