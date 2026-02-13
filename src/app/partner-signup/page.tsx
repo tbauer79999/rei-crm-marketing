@@ -81,7 +81,6 @@ function PartnerSignupContent() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email: invite.partner_email,
-          trial_days: invite.trial_days,
           metadata: {
             partner_invite_id: invite.id,
             partner_invite_code: invite.invite_code,
@@ -95,6 +94,7 @@ function PartnerSignupContent() {
             recurring_interval: invite.recurring_interval,
             business_admin_discount: invite.business_admin_discount,
             max_business_admins: invite.max_business_admins,
+            trial_days: invite.trial_days,
             custom_plan_limits: invite.custom_plan_limits
           }
         })
