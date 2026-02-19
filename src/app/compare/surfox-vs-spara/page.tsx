@@ -20,8 +20,8 @@ export default function Page() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            name: 'SurFox vs Spara: Which AI SDR Solution Fits Your Business?',
-            description: 'Comparing SurFox and Spara for AI lead qualification. Spara handles inbound website chat. SurFox qualifies outbound leads via SMS.',
+            name: 'SurFox vs Spara: Outbound SMS vs Inbound Chat AI (2026)',
+            description: 'Spara handles inbound website chat. SurFox qualifies outbound lead lists via SMS (98% open rate). Different tools for different needs.',
             mainEntity: {
               '@type': 'ItemList',
               itemListElement: [
@@ -30,12 +30,15 @@ export default function Page() {
                   position: 1,
                   name: 'SurFox AI',
                   description: 'AI-powered outbound lead qualification via SMS. Proactively reach and qualify your lead lists.',
+                  image: 'https://www.getsurfox.com/logo.png',
                   brand: { '@type': 'Brand', name: 'SurFox' },
                   offers: {
                     '@type': 'Offer',
                     priceCurrency: 'USD',
                     price: '197',
-                    priceValidUntil: '2025-12-31',
+                    priceValidUntil: '2026-12-31',
+                    availability: 'https://schema.org/InStock',
+                    url: 'https://www.getsurfox.com/pricing',
                   },
                 },
                 {
@@ -44,6 +47,11 @@ export default function Page() {
                   name: 'Spara',
                   description: 'AI SDR for inbound website visitors via chat, email, and voice.',
                   brand: { '@type': 'Brand', name: 'Spara' },
+                  offers: {
+                    '@type': 'Offer',
+                    availability: 'https://schema.org/InStock',
+                    url: 'https://www.spara.ai',
+                  },
                 },
               ],
             },
