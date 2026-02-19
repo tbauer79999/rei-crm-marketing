@@ -31,8 +31,8 @@ export const blogPosts: BlogPost[] = [
     readTime: '11 min read',
     author: 'Tom Bauer',
     authorUrl: '/leadership',
-    metaTitle: 'How to Reduce SDR Headcount with AI | SurFox',
-    metaDescription: 'Learn how SMBs are cutting SDR costs by 60-80% using AI for initial lead qualification. Real math, real examples, no enterprise budget required.',
+    metaTitle: 'Reduce SDR Headcount with AI: Cut Costs 60-80% Without Losing Quality',
+    metaDescription: 'SDRs cost $80-120K fully loaded. AI cuts that by 60-80% while improving response times 4x. Real math on reducing sales headcount without sacrificing pipeline quality.',
     content: [
       {
         type: 'paragraph',
@@ -431,8 +431,8 @@ export const blogPosts: BlogPost[] = [
     readTime: '12 min read',
     author: 'Tom Bauer',
     authorUrl: '/leadership',
-    metaTitle: 'What Is Conversation Intelligence? 2026 Guide | SurFox',
-    metaDescription: 'Conversation intelligence analyzes sales conversations to surface insights humans miss. Learn how it works, ROI benchmarks, and how to evaluate platforms.',
+    metaTitle: 'What Is Conversation Intelligence? Complete 2026 Guide (ROI + How It Works)',
+    metaDescription: 'Conversation intelligence analyzes sales conversations to surface insights humans miss. How it works, real ROI benchmarks (10-20% win rate lift), and platform comparison.',
     content: [
       {
         type: 'paragraph',
@@ -1455,8 +1455,8 @@ export const blogPosts: BlogPost[] = [
     readTime: '9 min read',
     author: 'Tom Bauer',
     authorUrl: '/leadership',
-    metaTitle: 'AI SDR vs Hiring an SDR: 2026 ROI Comparison | SurFox',
-    metaDescription: 'Compare the real cost of hiring an SDR ($105-165K) vs AI SDR platforms ($6-24K). Honest breakdown of when to hire humans vs deploy AI for lead qualification.',
+    metaTitle: 'AI SDR vs Hiring an SDR: Real ROI Comparison 2026 (85% Cost Savings)',
+    metaDescription: 'SDR: $105-165K/year. AI SDR: $6-24K/year. 85% cost savings, 21x better speed-to-lead. When to hire humans vs deploy AI - honest math with real numbers.',
     content: [
       {
         type: 'paragraph',
@@ -1687,8 +1687,8 @@ export const blogPosts: BlogPost[] = [
     readTime: '10 min read',
     author: 'Tom Bauer',
     authorUrl: '/leadership',
-    metaTitle: 'Reactivate Dormant Leads with AI: Turn Dead Databases Into Revenue | SurFox',
-    metaDescription: '3-5% of your dead leads are ready to buy right now. Learn how AI re-engages dormant databases at scale, qualifying old leads without adding headcount.',
+    metaTitle: 'Reactivate Dormant Leads: Turn Dead CRM Databases Into Revenue with AI',
+    metaDescription: '3-5% of dead leads are ready to buy right now. AI re-engages thousands simultaneously, finds the hot ones. Real strategy for reactivating old leads + found revenue.',
     content: [
       {
         type: 'paragraph',

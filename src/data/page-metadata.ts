@@ -185,9 +185,18 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/how-it-works',
   },
   roi: {
-    title: 'ROI Calculator: AI Lead Qualification vs. Hiring SDRs | SurFox',
-    description: 'Calculate the true cost of SDRs vs AI-powered lead qualification. See how SurFox delivers 85% lower cost-per-lead and 21x better conversion rates.',
-    keywords: ['ai sdr vs hiring sdr cost', 'conversation intelligence ROI', 'reduce sdr headcount with ai', 'ai lead qualification ROI', 'cost of sdr vs automation'],
+    title: 'ROI Calculator: What ROI From Conversation Intelligence? Real Numbers (2026)',
+    description: '60-80% lower cost per lead. 4x better response rates. Found revenue from dormant databases. Calculate your actual ROI from AI lead qualification - free calculator with real benchmarks.',
+    keywords: [
+      'roi of conversation intelligence',
+      'conversation intelligence roi calculator',
+      'expected roi conversation intelligence software',
+      'ai sdr roi calculator',
+      'reduce sdr headcount roi',
+      'what is the roi of implementing conversation intelligence',
+      'conversation intelligence technology roi',
+      'ai lead qualification roi',
+    ],
     path: '/roi',
   },
 };
