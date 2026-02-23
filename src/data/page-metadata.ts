@@ -8,6 +8,26 @@ export interface PageMetadataConfig {
 }
 
 export const pageMetadata: Record<string, PageMetadataConfig> = {
+  homepage: {
+    title: 'AI SDR: Qualify Leads via SMS | Cut Headcount Costs',
+    description:
+      'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically — 60–80% lower cost per lead. Your team only talks to hot prospects.',
+    keywords: [
+      'AI SDR',
+      'AI SDR platform',
+      'AI SDR software',
+      'replace SDR team with AI',
+      'reduce SDR headcount',
+      'AI SDR ROI',
+      'SMS lead qualification',
+      'automated lead qualification',
+      'conversation intelligence software',
+      'AI sales automation',
+      'outbound AI SDR',
+      'lead scoring software',
+    ],
+    path: '/',
+  },
   platform: {
     title: 'Platform Overview - AI Customer Intelligence',
     description: 'Discover how SurFox AI transforms customer signals into intelligent actions. One AI layer for all your customer interactions - calls, texts, transactions, and more.',

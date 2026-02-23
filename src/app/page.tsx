@@ -2,20 +2,36 @@ import { Metadata } from 'next';
 import HomeClientSections from './HomeClientSections';
 
 export const metadata: Metadata = {
-  title: 'AI-Powered Sales Conversation Intelligence',
-  description: 'SurFox uses AI to qualify leads automatically via SMS. Upload cold leads, let AI engage and qualify them, your sales team only talks to hot prospects ready to buy.',
-  keywords: ['AI lead qualification', 'SMS lead qualification', 'sales automation', 'AI sales assistant', 'automated lead scoring', 'conversation AI', 'sales intelligence'],
+  title: 'AI SDR: Qualify Leads via SMS | Cut Headcount Costs',
+  description:
+    'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically — 60–80% lower cost per lead. Your team only talks to hot prospects.',
+  keywords: [
+    'AI SDR',
+    'AI SDR platform',
+    'AI SDR software',
+    'replace SDR team with AI',
+    'reduce SDR headcount',
+    'AI SDR ROI',
+    'SMS lead qualification',
+    'automated lead qualification',
+    'conversation intelligence software',
+    'AI sales automation',
+    'outbound AI SDR',
+    'lead scoring software',
+  ],
   openGraph: {
-    title: 'SurFox | AI-Powered Sales Conversation Intelligence',
-    description: 'Upload cold leads, let AI qualify them via SMS, your team only talks to hot prospects. Transform your sales process with intelligent automation.',
+    title: 'SurFox AI | AI SDR: Qualify Leads via SMS & Cut Headcount Costs',
+    description:
+      'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically — 60–80% lower cost per lead. Your team only talks to hot prospects.',
     url: 'https://www.getsurfox.com',
     type: 'website',
-    siteName: 'SurFox',
+    siteName: 'SurFox AI',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SurFox | AI-Powered Sales Conversation Intelligence',
-    description: 'Upload cold leads, let AI qualify them via SMS, your team only talks to hot prospects. Transform your sales process with intelligent automation.',
+    title: 'SurFox AI | AI SDR: Qualify Leads via SMS & Cut Headcount Costs',
+    description:
+      'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically — 60–80% lower cost per lead. Your team only talks to hot prospects.',
     site: '@getSurFox',
     creator: '@getSurFox',
   },
@@ -24,7 +40,7 @@ export const metadata: Metadata = {
   },
 };
 
-// Inline SVG arrow for zero JS dependency in hero
+// Inline SVG — zero JS dependency in server-rendered hero
 function ArrowRightIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -48,7 +64,7 @@ function ArrowRightIcon({ className }: { className?: string }) {
 export default function Page() {
   return (
     <div className="bg-white text-gray-900">
-      {/* Schema.org Organization + LocalBusiness structured data */}
+      {/* Organization + LocalBusiness schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -60,7 +76,8 @@ export default function Page() {
             url: 'https://www.getsurfox.com',
             logo: 'https://www.getsurfox.com/logo.png',
             foundingDate: '2024',
-            description: 'AI-powered sales conversation intelligence platform that qualifies leads automatically via SMS',
+            description:
+              'AI-powered SMS lead qualification platform that automatically engages, scores, and qualifies cold leads at scale',
             address: {
               '@type': 'PostalAddress',
               addressLocality: 'Orlando',
@@ -87,71 +104,140 @@ export default function Page() {
               name: 'United States',
             },
             serviceType: [
-              'AI Sales Intelligence',
-              'Lead Qualification',
-              'Conversation Intelligence',
-              'Sales Automation',
+              'AI SDR Platform',
+              'AI Lead Qualification',
+              'SMS Lead Qualification',
+              'Conversation Intelligence Software',
+              'SDR Headcount Reduction',
+              'Outbound Sales Automation',
             ],
           }),
         }}
       />
 
-      {/* Schema.org SoftwareApplication */}
+      {/* SoftwareApplication schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'SoftwareApplication',
-            name: 'SurFox Engage',
+            name: 'SurFox AI',
             applicationCategory: 'BusinessApplication',
             offers: {
               '@type': 'Offer',
-              price: '0',
               priceCurrency: 'USD',
-              description: 'Pricing varies by usage and features',
+              description: 'Plans start from $197/month',
+              url: 'https://www.getsurfox.com/pricing',
             },
             operatingSystem: 'Web-based',
-            description: 'AI-powered lead qualification platform that engages and qualifies leads via SMS automatically',
+            description:
+              'AI-powered SMS lead qualification platform — upload cold leads, let AI engage and qualify them, your team only talks to hot prospects',
           }),
         }}
       />
 
-      {/* Hero Section - Server-rendered for fastest LCP */}
+      {/* FAQPage schema — enables FAQ rich results in Google Search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How does SurFox AI compare to hiring an SDR?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'A full-time SDR costs $60–80K/year in salary plus benefits, takes 3–6 months to ramp, and can only handle a fraction of your leads. SurFox AI runs 24/7, engages thousands of leads simultaneously, and typically delivers 60–80% lower cost per qualified lead.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How does the 50-point lead scoring system work?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "The AI analyzes each conversation across multiple dimensions — response quality, engagement level, buying signals, timing, and your qualification criteria. As conversations progress, the lead's score rises until they hit 'hot' status (typically 40+ points), triggering a handoff to your sales team.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: "What happens when a lead becomes 'hot'?",
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Your sales team gets notified immediately via your preferred channel (email, Slack, CRM). The AI steps back and provides a full conversation transcript, qualification summary, and key insights — so your team walks into a warm, informed call.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: "Can I customize the AI's tone and scoring threshold?",
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "Yes. You can adjust the AI's persona (professional, casual, consultative) to match your brand, and set the score threshold for what counts as a hot lead. The AI's logic continuously improves based on conversation outcomes.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How does the knowledge base work?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Upload PDFs, pricing sheets, case studies, or FAQs. The AI automatically indexes them and references the content during conversations to answer prospect questions accurately. Update your docs and the AI picks it up immediately — no retraining.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is SurFox AI TCPA compliant?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'SurFox is built with TCPA compliance in mind — opt-in verification, clear sender identification, automated opt-out handling, and full conversation logging. We recommend consulting your legal team to confirm your specific use case.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How fast can I get started?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Most customers are live within 24–48 hours: upload your lead list, configure your knowledge base, define qualification criteria, and test. We provide onboarding support to get you to full performance fast.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* Hero — server-rendered for fastest LCP */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
         <div className="max-w-5xl mx-auto text-center">
-          <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
-              SurFox AI listens to every<br className="hidden sm:block" />
-              customer signal - and knows<br className="hidden sm:block" />
-              when to reach out.
-            </h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
+            Your sales team should<br className="hidden sm:block" />
+            only talk to hot leads.
+          </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              We're building the AI layer that understands all your customer interactions and takes intelligent action. Today, that starts with outbound - upload cold leads, let SurFox AI qualify them via SMS, your team only talks to hot prospects.
-            </p>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+            Upload your cold leads. SurFox AI engages, scores, and qualifies each one via SMS — automatically. When they&apos;re ready to buy, your team takes over.
+          </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
-              <a
-                href="/pricing"
-                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
-              >
-                Get Started
-                <ArrowRightIcon className="w-5 h-5" />
-              </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
+            <a
+              href="/pricing"
+              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
+            >
+              Get Started
+              <ArrowRightIcon className="w-5 h-5" />
+            </a>
 
-              <a
-                href="/platform"
-                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
-              >
-                See the Vision
-              </a>
-            </div>
+            <a
+              href="/demo"
+              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
+            >
+              Watch Demo
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Below-fold sections with client interactivity */}
+      {/* Below-fold sections */}
       <HomeClientSections />
     </div>
   );
