@@ -21,7 +21,7 @@ export default function Page() {
         "@type": "Offer",
         "name": "Starter Plan",
         "description": "Perfect for individual sales professionals ready to eliminate manual outreach. Basic AI that handles conversations but does not learn.",
-        "price": "197",
+        "price": "97",
         "priceCurrency": "USD",
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",

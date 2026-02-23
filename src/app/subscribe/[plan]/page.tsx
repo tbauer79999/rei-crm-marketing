@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 const PLANS = {
   starter: {
     name: 'Starter',
-    price: 197,
+    price: 97,
     priceId: 'price_1SsxgB2Mug1fO97stcHUADPr',
     leads: '1,000 monthly messages',
     keyFeatures: [

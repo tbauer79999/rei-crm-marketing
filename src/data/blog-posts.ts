@@ -232,7 +232,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'callout',
-        content: 'Ready to see what AI qualification looks like for your lead lists? SurFox AI qualifies leads via SMS 24/7, only escalating the hot ones to your team. Plans start at $197/month - less than a day of SDR salary. Try it risk-free with our 30-day money-back guarantee.'
+        content: 'Ready to see what AI qualification looks like for your lead lists? SurFox AI qualifies leads via SMS 24/7, only escalating the hot ones to your team. Plans start at $97/month - less than a day of SDR salary. Try it risk-free with our 30-day money-back guarantee.'
       }
     ],
     relatedPosts: ['future-of-ai-in-sales', 'qualify-leads-faster-ai', 'roi-conversation-intelligence']

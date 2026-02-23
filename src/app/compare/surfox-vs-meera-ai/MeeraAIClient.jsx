@@ -47,7 +47,7 @@ export default function MeeraAIClient() {
       features: [
         { name: 'Integration Options', surfox: 'Zapier (5,000+ apps), RecruiterFlow native, API access', meera: 'Limited integrations - primarily built for call centers' },
         { name: 'Data Privacy', surfox: 'Tenant-only learning - your data never trains competitors', meera: 'Standard data handling - no isolation guarantees' },
-        { name: 'Pricing Model', surfox: 'Starts at $197/month - scales with results', meera: 'Enterprise pricing - built for large call centers' },
+        { name: 'Pricing Model', surfox: 'Starts at $97/month - scales with results', meera: 'Enterprise pricing - built for large call centers' },
         { name: 'Setup Complexity', surfox: 'Self-serve setup in 15 minutes', meera: 'Complex implementation requiring IT resources' },
         { name: 'Target Customer', surfox: 'Sales teams who want qualified leads, not call volume', meera: 'Call centers focused on connection rates' }
       ]
@@ -158,7 +158,7 @@ export default function MeeraAIClient() {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4">
               <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
-                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">$197</div>
+                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">$97</div>
                 <div className="text-sm text-gray-600">Starting Price</div>
                 <div className="text-xs text-gray-400 mt-1">vs enterprise pricing</div>
               </div>
@@ -424,7 +424,7 @@ export default function MeeraAIClient() {
                     <DollarSign className="w-4 h-4 mr-2 text-green-600" />
                     <span className="text-xs font-medium text-gray-700">Cost Structure</span>
                   </div>
-                  <p className="text-sm text-gray-700">Starts at $197/month - no call center needed, works with existing leads</p>
+                  <p className="text-sm text-gray-700">Starts at $97/month - no call center needed, works with existing leads</p>
                 </div>
               </div>
 
@@ -721,7 +721,7 @@ export default function MeeraAIClient() {
                 </div>
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                  <span>You want to start at $197/month without call center overhead</span>
+                  <span>You want to start at $97/month without call center overhead</span>
                 </div>
               </div>
             </motion.div>
@@ -782,7 +782,7 @@ export default function MeeraAIClient() {
             </p>
 
             <p className="text-base text-gray-500 mb-8 max-w-2xl mx-auto">
-              Plans start at $197/month. Most teams choose Growth at $497 for learning AI.
+              Plans start at $97/month. Most teams choose Growth at $497 for learning AI.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">

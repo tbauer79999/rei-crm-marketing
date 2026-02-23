@@ -43,7 +43,7 @@ export default function SurFoxVsTextUs() {
       category: 'Business Value',
       icon: DollarSign,
       features: [
-        { name: 'Pricing Model', surfox: 'Growth plan $497/month with learning AI, starts at $197', textus: '$500+ base with hidden fees and limits' },
+        { name: 'Pricing Model', surfox: 'Growth plan $497/month with learning AI, starts at $97', textus: '$500+ base with hidden fees and limits' },
         { name: 'Staff Requirements', surfox: 'No dedicated messaging staff needed', textus: 'Requires full-time manual management' },
         { name: 'ROI Tracking', surfox: 'Full conversion tracking from lead to close', textus: 'Basic message delivery metrics only' },
         { name: 'Scalability', surfox: 'SurFox AI scales conversations without adding staff', textus: 'More leads = more manual work required' }
@@ -58,7 +58,7 @@ export default function SurFoxVsTextUs() {
     },
     {
       question: "How does TextUs pricing compare to SurFox?",
-      answer: "TextUs starts around $300 per month per user for basic plans and scales up for teams. SurFox starts at $197 per month and handles unlimited AI conversations. For teams doing high-volume outreach, SurFox is significantly more cost-effective."
+      answer: "TextUs starts around $300 per month per user for basic plans and scales up for teams. SurFox starts at $97 per month and handles unlimited AI conversations. For teams doing high-volume outreach, SurFox is significantly more cost-effective."
     },
     {
       question: "Can TextUs automate lead qualification?",
@@ -128,7 +128,7 @@ export default function SurFoxVsTextUs() {
               <strong className="text-navy">TextUs charges $500+ for basic messaging that requires manual work.</strong>
             </p>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              <strong className="text-orange">SurFox delivers AI-powered conversations starting at $197, with Growth at $497 for learning AI.</strong>
+              <strong className="text-orange">SurFox delivers AI-powered conversations starting at $97, with Growth at $497 for learning AI.</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
@@ -641,7 +641,7 @@ export default function SurFoxVsTextUs() {
               <div className="text-xs text-gray-600 mb-4">Learning AI does all the work</div>
               <div className="text-xs text-gray-700 space-y-1">
                 <div>• $497 with learning AI included</div>
-                <div>• Starts at $197 for basic features</div>
+                <div>• Starts at $97 for basic features</div>
                 <div>• 10,000 messages included</div>
               </div>
             </motion.div>
@@ -798,7 +798,7 @@ export default function SurFoxVsTextUs() {
             </p>
 
             <p className="text-base text-gray-300 mb-8 max-w-2xl mx-auto">
-              Plans start at $197/month. Most teams choose Growth at $497 for learning AI.
+              Plans start at $97/month. Most teams choose Growth at $497 for learning AI.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">

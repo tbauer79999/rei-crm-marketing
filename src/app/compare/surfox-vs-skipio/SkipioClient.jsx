@@ -47,7 +47,7 @@ export default function SurFoxVsSkipio() {
       features: [
         { name: 'Primary Focus', surfox: 'Designed for businesses that need to close sales', skipio: 'Built for appointment booking and basic follow-ups' },
         { name: 'Success Metrics', surfox: 'Measures success by qualified leads and revenue generated', skipio: 'Measures success by appointments booked and messages sent' },
-        { name: 'Pricing Model', surfox: 'Growth plan $497/month with learning AI, starts at $197', skipio: 'Base fee plus per-message costs' },
+        { name: 'Pricing Model', surfox: 'Growth plan $497/month with learning AI, starts at $97', skipio: 'Base fee plus per-message costs' },
         { name: 'Time Investment', surfox: '30 minutes daily to review escalated leads', skipio: '4+ hours daily managing conversations' },
         { name: 'Team Requirements', surfox: 'AI handles conversations - minimal staff needed', skipio: 'Requires dedicated team for message management' }
       ]
@@ -810,7 +810,7 @@ export default function SurFoxVsSkipio() {
             </p>
 
             <p className="text-base text-gray-300 mb-8 max-w-2xl mx-auto">
-              Plans start at $197/month. Most teams choose Growth at $497 for learning AI.
+              Plans start at $97/month. Most teams choose Growth at $497 for learning AI.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">

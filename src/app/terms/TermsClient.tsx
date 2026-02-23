@@ -325,7 +325,7 @@ export default function TermsOfService() {
                 <div className="mb-6 bg-gray-50 rounded-xl p-6">
                   <div className="flex items-baseline gap-3 mb-3">
                     <h4 className="text-lg font-semibold text-navy">Starter</h4>
-                    <span className="text-2xl font-bold text-navy">$197<span className="text-sm text-gray-500">/month</span></span>
+                    <span className="text-2xl font-bold text-navy">$97<span className="text-sm text-gray-500">/month</span></span>
                   </div>
                   <ul className="space-y-1 text-gray-600 text-sm">
                     <li className="flex items-start gap-2">

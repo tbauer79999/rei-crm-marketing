@@ -35,7 +35,7 @@ export default function Page() {
                   offers: {
                     '@type': 'Offer',
                     priceCurrency: 'USD',
-                    price: '197',
+                    price: '97',
                     priceValidUntil: '2026-12-31',
                     availability: 'https://schema.org/InStock',
                     url: 'https://www.getsurfox.com/pricing',

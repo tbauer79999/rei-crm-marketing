@@ -32,7 +32,7 @@ function BusinessSignupContent() {
 
   // Standard pricing (before discount)
   const standardPricing = {
-    starter: { monthly: 197, yearly: 1970 },
+    starter: { monthly: 97, yearly: 970 },
     growth: { monthly: 497, yearly: 4970 },
     scale: { monthly: 1997, yearly: 19970 }
   };

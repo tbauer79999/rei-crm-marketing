@@ -825,7 +825,7 @@ export default function ROIClient() {
               30-day money-back guarantee. No setup fees. Cancel anytime.
             </p>
             <p className="text-sm text-gray-600">
-              Plans start at $197/month. Most teams choose Growth at $497 for learning AI.
+              Plans start at $97/month. Most teams choose Growth at $497 for learning AI.
             </p>
           </motion.div>
         </div>
