@@ -11,7 +11,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   homepage: {
     title: 'AI SDR: Qualify Leads via SMS | Cut Headcount Costs',
     description:
-      'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically — 60–80% lower cost per lead. Your team only talks to hot prospects.',
+      'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
     keywords: [
       'AI SDR',
       'AI SDR platform',

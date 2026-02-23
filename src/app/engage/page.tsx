@@ -4,7 +4,7 @@ import EngageClient from './EngageClient';
 
 const base = generatePageMetadata('engage');
 
-// Canonical points to homepage — the authoritative version of this product content
+// Canonical points to homepage - the authoritative version of this product content
 export const metadata: Metadata = {
   ...base,
   alternates: {

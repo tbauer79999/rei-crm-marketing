@@ -38,7 +38,7 @@ export default function HomeClientSections() {
               How It Works
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Four steps from cold lead to hot prospect — no SDR required
+              Four steps from cold lead to hot prospect - no SDR required
             </p>
           </motion.div>
 
@@ -102,7 +102,7 @@ export default function HomeClientSections() {
               Everything You Need to Qualify at Scale
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              A complete AI SDR platform — not just a chatbot
+              A complete AI SDR platform - not just a chatbot
             </p>
           </motion.div>
 
@@ -302,7 +302,7 @@ export default function HomeClientSections() {
               AI That Knows Your Business
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Upload your docs, pricing, FAQs, and product info. SurFox AI references them in real conversations — no extra training required.
+              Upload your docs, pricing, FAQs, and product info. SurFox AI references them in real conversations - no extra training required.
             </p>
           </motion.div>
 
@@ -356,7 +356,7 @@ export default function HomeClientSections() {
               Built to Replace Your SDR Headcount
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
-              One AI that works every lead, around the clock — at a fraction of the cost.{' '}
+              One AI that works every lead, around the clock - at a fraction of the cost.{' '}
               <a href="/roi" className="text-orange font-semibold hover:underline">
                 Calculate your ROI →
               </a>
@@ -373,7 +373,7 @@ export default function HomeClientSections() {
               {
                 value: '100%',
                 label: 'Lead Coverage',
-                desc: 'Every lead gets engaged and qualified — no one falls through the cracks',
+                desc: 'Every lead gets engaged and qualified - no one falls through the cracks',
               },
               {
                 value: '50pt',
@@ -484,12 +484,12 @@ export default function HomeClientSections() {
               {
                 question: 'How does the 50-point lead scoring system work?',
                 answer:
-                  "The AI analyzes each conversation across multiple dimensions — response quality, engagement level, buying signals, timing, and your qualification criteria. As conversations progress, the lead's score rises until they hit 'hot' status (typically 40+ points), triggering a handoff to your sales team.",
+                  "The AI analyzes each conversation across multiple dimensions - response quality, engagement level, buying signals, timing, and your qualification criteria. As conversations progress, the lead's score rises until they hit 'hot' status (typically 40+ points), triggering a handoff to your sales team.",
               },
               {
                 question: "What happens when a lead becomes 'hot'?",
                 answer:
-                  'Your sales team gets notified immediately via your preferred channel (email, Slack, CRM). The AI steps back and provides a full conversation transcript, qualification summary, and key insights — so your team walks into a warm, informed call.',
+                  'Your sales team gets notified immediately via your preferred channel (email, Slack, CRM). The AI steps back and provides a full conversation transcript, qualification summary, and key insights - so your team walks into a warm, informed call.',
               },
               {
                 question: "Can I customize the AI's tone and scoring threshold?",
@@ -499,12 +499,12 @@ export default function HomeClientSections() {
               {
                 question: 'How does the knowledge base work?',
                 answer:
-                  'Upload PDFs, pricing sheets, case studies, or FAQs. The AI automatically indexes them and references the content during conversations to answer prospect questions accurately. Update your docs and the AI picks it up immediately — no retraining.',
+                  'Upload PDFs, pricing sheets, case studies, or FAQs. The AI automatically indexes them and references the content during conversations to answer prospect questions accurately. Update your docs and the AI picks it up immediately - no retraining.',
               },
               {
                 question: 'Is SurFox AI TCPA compliant?',
                 answer:
-                  'SurFox is built with TCPA compliance in mind — opt-in verification, clear sender identification, automated opt-out handling, and full conversation logging. We recommend consulting your legal team to confirm your specific use case.',
+                  'SurFox is built with TCPA compliance in mind - opt-in verification, clear sender identification, automated opt-out handling, and full conversation logging. We recommend consulting your legal team to confirm your specific use case.',
               },
               {
                 question: 'How fast can I get started?',

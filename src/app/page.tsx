@@ -4,7 +4,7 @@ import HomeClientSections from './HomeClientSections';
 export const metadata: Metadata = {
   title: 'AI SDR: Qualify Leads via SMS | Cut Headcount Costs',
   description:
-    'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically — 60–80% lower cost per lead. Your team only talks to hot prospects.',
+    'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
   keywords: [
     'AI SDR',
     'AI SDR platform',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SurFox AI | AI SDR: Qualify Leads via SMS & Cut Headcount Costs',
     description:
-      'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically — 60–80% lower cost per lead. Your team only talks to hot prospects.',
+      'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
     url: 'https://www.getsurfox.com',
     type: 'website',
     siteName: 'SurFox AI',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SurFox AI | AI SDR: Qualify Leads via SMS & Cut Headcount Costs',
     description:
-      'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically — 60–80% lower cost per lead. Your team only talks to hot prospects.',
+      'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
     site: '@getSurFox',
     creator: '@getSurFox',
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
 };
 
-// Inline SVG — zero JS dependency in server-rendered hero
+// Inline SVG - zero JS dependency in server-rendered hero
 function ArrowRightIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -132,12 +132,12 @@ export default function Page() {
             },
             operatingSystem: 'Web-based',
             description:
-              'AI-powered SMS lead qualification platform — upload cold leads, let AI engage and qualify them, your team only talks to hot prospects',
+              'AI-powered SMS lead qualification platform - upload cold leads, let AI engage and qualify them, your team only talks to hot prospects',
           }),
         }}
       />
 
-      {/* FAQPage schema — enables FAQ rich results in Google Search */}
+      {/* FAQPage schema - enables FAQ rich results in Google Search */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -158,7 +158,7 @@ export default function Page() {
                 name: 'How does the 50-point lead scoring system work?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: "The AI analyzes each conversation across multiple dimensions — response quality, engagement level, buying signals, timing, and your qualification criteria. As conversations progress, the lead's score rises until they hit 'hot' status (typically 40+ points), triggering a handoff to your sales team.",
+                  text: "The AI analyzes each conversation across multiple dimensions - response quality, engagement level, buying signals, timing, and your qualification criteria. As conversations progress, the lead's score rises until they hit 'hot' status (typically 40+ points), triggering a handoff to your sales team.",
                 },
               },
               {
@@ -166,7 +166,7 @@ export default function Page() {
                 name: "What happens when a lead becomes 'hot'?",
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Your sales team gets notified immediately via your preferred channel (email, Slack, CRM). The AI steps back and provides a full conversation transcript, qualification summary, and key insights — so your team walks into a warm, informed call.',
+                  text: 'Your sales team gets notified immediately via your preferred channel (email, Slack, CRM). The AI steps back and provides a full conversation transcript, qualification summary, and key insights - so your team walks into a warm, informed call.',
                 },
               },
               {
@@ -182,7 +182,7 @@ export default function Page() {
                 name: 'How does the knowledge base work?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Upload PDFs, pricing sheets, case studies, or FAQs. The AI automatically indexes them and references the content during conversations to answer prospect questions accurately. Update your docs and the AI picks it up immediately — no retraining.',
+                  text: 'Upload PDFs, pricing sheets, case studies, or FAQs. The AI automatically indexes them and references the content during conversations to answer prospect questions accurately. Update your docs and the AI picks it up immediately - no retraining.',
                 },
               },
               {
@@ -190,7 +190,7 @@ export default function Page() {
                 name: 'Is SurFox AI TCPA compliant?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'SurFox is built with TCPA compliance in mind — opt-in verification, clear sender identification, automated opt-out handling, and full conversation logging. We recommend consulting your legal team to confirm your specific use case.',
+                  text: 'SurFox is built with TCPA compliance in mind - opt-in verification, clear sender identification, automated opt-out handling, and full conversation logging. We recommend consulting your legal team to confirm your specific use case.',
                 },
               },
               {
@@ -206,7 +206,7 @@ export default function Page() {
         }}
       />
 
-      {/* Hero — server-rendered for fastest LCP */}
+      {/* Hero - server-rendered for fastest LCP */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
@@ -215,7 +215,7 @@ export default function Page() {
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-            Upload your cold leads. SurFox AI engages, scores, and qualifies each one via SMS — automatically. When they&apos;re ready to buy, your team takes over.
+            Upload your cold leads. SurFox AI engages, scores, and qualifies each one via SMS - automatically. When they&apos;re ready to buy, your team takes over.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
