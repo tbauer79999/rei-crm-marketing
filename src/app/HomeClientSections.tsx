@@ -12,7 +12,6 @@ import {
   CheckCircle,
   Activity,
   Users,
-  BarChart3,
   FlaskConical,
   FileText,
   Phone,
@@ -139,13 +138,13 @@ export default function HomeClientSections() {
                 </ul>
               </div>
               <div className="order-1 lg:order-2">
-                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-[4/3]">
                   <Image
                     src="/dashboard.png"
                     alt="SurFox lead management dashboard showing real-time lead status, engagement scores, and conversation progress"
-                    width={800}
-                    height={500}
-                    className="w-full h-auto"
+                    width={1620}
+                    height={837}
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
               </div>
@@ -160,13 +159,13 @@ export default function HomeClientSections() {
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center"
             >
               <div>
-                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-[4/3]">
                   <Image
                     src="/AI-controlroom.png"
                     alt="SurFox AI Control Room showing real-time system health, AI performance statistics, and conversation quality indicators"
-                    width={800}
-                    height={500}
-                    className="w-full h-auto"
+                    width={1920}
+                    height={912}
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
               </div>
@@ -195,47 +194,56 @@ export default function HomeClientSections() {
               </div>
             </motion.div>
 
-            {/* Analytics */}
+            {/* AI Learning */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center"
             >
-              <div className="order-2 lg:order-1">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-orange" />
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-navy">Analytics & Performance</h3>
+              <div className="flex items-center gap-3 mb-6 justify-center">
+                <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center">
+                  <Brain className="w-6 h-6 text-orange" />
                 </div>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Track conversion rates, sales outcomes, and team performance. Understand which campaigns drive results and optimize accordingly.
-                </p>
-                <ul className="space-y-3">
-                  {[
-                    'Revenue and conversion tracking',
-                    'Sales rep performance metrics',
-                    'Win rate and pipeline analysis',
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-2xl sm:text-3xl font-semibold text-navy">AI Learning</h3>
               </div>
-              <div className="order-1 lg:order-2">
-                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+              <p className="text-lg text-gray-600 leading-relaxed mb-10 text-center max-w-3xl mx-auto">
+                Gets smarter with every conversation. SurFox AI analyzes thousands of interactions to discover what actually converts - then uses those insights automatically.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-[4/3]">
                   <Image
-                    src="/business-analytics.png"
-                    alt="SurFox analytics dashboard showing revenue tracking, conversion rates, and sales performance metrics"
-                    width={800}
-                    height={500}
-                    className="w-full h-auto"
+                    src="/AiLearning1.png"
+                    alt="SurFox AI learning system analyzing conversation patterns and discovering high-converting messaging strategies"
+                    width={1898}
+                    height={898}
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
+                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-[4/3]">
+                  <Image
+                    src="/AiLearning2.png"
+                    alt="SurFox AI adapting to different personality types and automatically optimizing conversation approaches over time"
+                    width={1898}
+                    height={909}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                {[
+                  'Learns from every conversation',
+                  'Discovers what messaging converts',
+                  'Adapts to different personality types',
+                  'Automatically optimizes over time',
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3 text-gray-600">
+                    <CheckCircle className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </motion.div>
 
@@ -248,13 +256,13 @@ export default function HomeClientSections() {
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center"
             >
               <div>
-                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-[4/3]">
                   <Image
                     src="/ab-testing.png"
                     alt="SurFox A/B testing interface comparing message variants, conversation approaches, and statistical results"
-                    width={800}
-                    height={500}
-                    className="w-full h-auto"
+                    width={776}
+                    height={740}
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
               </div>
@@ -509,7 +517,7 @@ export default function HomeClientSections() {
               {
                 question: 'How fast can I get started?',
                 answer:
-                  'Most customers are live within 24–48 hours: upload your lead list, configure your knowledge base, define qualification criteria, and test. We provide onboarding support to get you to full performance fast.',
+                  'Faster than you think. When you sign up, you start a 14-day free trial and are immediately placed on our pre-approved Twilio A2P campaign - so you can start texting leads within minutes. During your trial, you register your own A2P campaign. By the time your trial ends, you own your sending infrastructure.',
               },
             ].map((faq, i) => (
               <motion.div

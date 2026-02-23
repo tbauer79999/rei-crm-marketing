@@ -198,7 +198,7 @@ export default function Page() {
                 name: 'How fast can I get started?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Most customers are live within 24–48 hours: upload your lead list, configure your knowledge base, define qualification criteria, and test. We provide onboarding support to get you to full performance fast.',
+                  text: 'Faster than you think. When you sign up, you start a 14-day free trial and are immediately placed on our pre-approved Twilio A2P campaign - so you can start texting leads within minutes. During your trial, you register your own A2P campaign. By the time your trial ends, you own your sending infrastructure.',
                 },
               },
             ],
