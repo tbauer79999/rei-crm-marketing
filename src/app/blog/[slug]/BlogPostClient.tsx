@@ -4,11 +4,69 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Calendar, Clock, User, ArrowLeft, Share2, Linkedin, Twitter, Mail } from 'lucide-react';
-import { BlogPost } from '@/data/blog-posts';
+import { BlogPost, ContentBlock } from '@/data/blog-posts';
+
+function extractFAQs(content: ContentBlock[]): Array<{ question: string; answer: string }> {
+  const faqIndex = content.findIndex(
+    b => b.type === 'heading' && b.content.toLowerCase().includes('frequently asked')
+  );
+  if (faqIndex === -1) return [];
+
+  const faqs: Array<{ question: string; answer: string }> = [];
+  let currentQuestion = '';
+  let answerParts: string[] = [];
+
+  for (let i = faqIndex + 1; i < content.length; i++) {
+    const block = content[i];
+    if (block.type === 'subheading') {
+      if (currentQuestion && answerParts.length > 0) {
+        faqs.push({ question: currentQuestion, answer: answerParts.join(' ') });
+      }
+      currentQuestion = block.content;
+      answerParts = [];
+    } else if (block.type === 'paragraph' && currentQuestion) {
+      answerParts.push(block.content);
+    }
+  }
+  if (currentQuestion && answerParts.length > 0) {
+    faqs.push({ question: currentQuestion, answer: answerParts.join(' ') });
+  }
+  return faqs;
+}
 
 interface BlogPostClientProps {
   blogPost: BlogPost;
   relatedPosts: BlogPost[];
+}
+
+function renderContent(text: string): React.ReactNode {
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  if (!linkRegex.test(text)) return text;
+  linkRegex.lastIndex = 0;
+
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match;
+  let key = 0;
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+    parts.push(
+      <a
+        key={key++}
+        href={match[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline underline-offset-2 opacity-60 hover:opacity-100 transition-opacity text-sm font-medium"
+      >
+        {match[1]}
+      </a>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  return <>{parts}</>;
 }
 
 export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClientProps) {
@@ -160,6 +218,21 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 }
 
                 switch (block.type) {
+                  case 'tldr':
+                    elements.push(
+                      <div key={index} className="not-prose my-8 p-6 sm:p-8 rounded-2xl bg-[#1e293b]">
+                        <p className="text-xs font-bold uppercase tracking-widest text-orange mb-4 m-0">Key Takeaways</p>
+                        <ul className="space-y-3 m-0 p-0 list-none">
+                          {block.content.split('\n').map((bullet, i) => (
+                            <li key={i} className="flex items-start gap-3 text-white text-base leading-relaxed">
+                              <span className="text-orange font-bold mt-0.5 shrink-0">→</span>
+                              <span>{renderContent(bullet)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    );
+                    break;
                   case 'heading':
                     elements.push(
                       <h2 key={index} className="text-2xl sm:text-3xl font-semibold text-navy mt-12 mb-4 first:mt-0">
@@ -177,15 +250,25 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   case 'paragraph':
                     elements.push(
                       <p key={index} className="text-gray-700 leading-relaxed mb-6 text-base sm:text-lg">
-                        {block.content}
+                        {renderContent(block.content)}
                       </p>
                     );
                     break;
+                  case 'quote': {
+                    const [quoteText, attribution] = block.content.split('\n');
+                    elements.push(
+                      <blockquote key={index} className="not-prose my-8 border-l-4 border-orange pl-6 py-2">
+                        <p className="text-gray-800 text-lg sm:text-xl italic leading-relaxed mb-3">&ldquo;{quoteText}&rdquo;</p>
+                        <cite className="text-sm font-semibold text-gray-500 not-italic">&mdash; {attribution}</cite>
+                      </blockquote>
+                    );
+                    break;
+                  }
                   case 'callout':
                     elements.push(
                       <div key={index} className="my-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-orange/5 to-purple-500/5 border-l-4 border-orange">
                         <p className="text-gray-800 leading-relaxed font-medium text-base sm:text-lg m-0">
-                          {block.content}
+                          {renderContent(block.content)}
                         </p>
                       </div>
                     );
@@ -229,6 +312,31 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
               }),
             }}
           />
+
+          {/* Schema.org FAQPage Markup */}
+          {(() => {
+            const faqs = extractFAQs(blogPost.content);
+            if (faqs.length === 0) return null;
+            return (
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'FAQPage',
+                    mainEntity: faqs.map(faq => ({
+                      '@type': 'Question',
+                      name: faq.question,
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: faq.answer,
+                      },
+                    })),
+                  }),
+                }}
+              />
+            );
+          })()}
         </div>
       </section>
 
