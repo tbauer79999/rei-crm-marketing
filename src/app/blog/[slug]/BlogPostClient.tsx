@@ -3,12 +3,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Calendar, Clock, User, ArrowLeft, Share2, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Share2, Linkedin, Twitter, Mail, RefreshCw } from 'lucide-react';
 import { BlogPost, ContentBlock } from '@/data/blog-posts';
 
 function extractFAQs(content: ContentBlock[]): Array<{ question: string; answer: string }> {
   const faqIndex = content.findIndex(
-    b => b.type === 'heading' && b.content.toLowerCase().includes('frequently asked')
+    b => b.type === 'heading' && 'content' in b && b.content.toLowerCase().includes('frequently asked')
   );
   if (faqIndex === -1) return [];
 
@@ -18,13 +18,13 @@ function extractFAQs(content: ContentBlock[]): Array<{ question: string; answer:
 
   for (let i = faqIndex + 1; i < content.length; i++) {
     const block = content[i];
-    if (block.type === 'subheading') {
+    if (block.type === 'subheading' && 'content' in block) {
       if (currentQuestion && answerParts.length > 0) {
         faqs.push({ question: currentQuestion, answer: answerParts.join(' ') });
       }
       currentQuestion = block.content;
       answerParts = [];
-    } else if (block.type === 'paragraph' && currentQuestion) {
+    } else if (block.type === 'paragraph' && 'content' in block && currentQuestion) {
       answerParts.push(block.content);
     }
   }
@@ -90,6 +90,11 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
     setShowShareMenu(false);
   };
 
+  const displayDate = new Date(blogPost.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  const displayUpdated = blogPost.lastUpdated
+    ? new Date(blogPost.lastUpdated).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+    : null;
+
   return (
     <div className="bg-white text-gray-900">
       {/* Back to Blog Link */}
@@ -136,11 +141,20 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 ) : (
                   <span className="font-medium">{blogPost.author}</span>
                 )}
+                {blogPost.authorTitle && (
+                  <span className="text-gray-400 text-sm">· {blogPost.authorTitle}</span>
+                )}
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-5 h-5" />
-                <span>{new Date(blogPost.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                <span>Published {displayDate}</span>
               </div>
+              {displayUpdated && (
+                <div className="flex items-center gap-2 text-sm">
+                  <RefreshCw className="w-4 h-4" />
+                  <span>Updated {displayUpdated}</span>
+                </div>
+              )}
               <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5" />
                 <span>{blogPost.readTime}</span>
@@ -157,7 +171,6 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 Share
               </button>
 
-              {/* Share Menu */}
               {showShareMenu && (
                 <div className="absolute top-full left-0 mt-2 bg-white rounded-lg border-2 border-gray-200 shadow-xl p-2 z-10 min-w-[160px]">
                   <button
@@ -197,88 +210,132 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
             transition={{ duration: 0.6, delay: 0.2 }}
             className="prose prose-lg max-w-none"
           >
-            {(() => {
-              let headingCount = 0;
-              let ctaInserted = false;
-
-              return blogPost.content.flatMap((block, index) => {
-                const elements: React.ReactNode[] = [];
-
-                if (block.type === 'heading') {
-                  headingCount++;
-                }
-
-                if (headingCount === 3 && block.type === 'heading' && !ctaInserted) {
-                  ctaInserted = true;
-                  elements.push(
-                    <p key="inline-cta" className="text-orange font-semibold text-base sm:text-lg my-8 py-4 border-t border-b border-orange/20">
-                      Want to see how this applies to your team? <Link href="/roi" className="underline hover:no-underline">Calculate your ROI</Link> or <Link href="/demo" className="underline hover:no-underline">request a demo</Link> to see SurFox AI in action.
+            {blogPost.content.map((block, index) => {
+              switch (block.type) {
+                case 'tldr':
+                  return (
+                    <div key={index} className="not-prose my-8 p-6 sm:p-8 rounded-2xl bg-[#1e293b]">
+                      <p className="text-xs font-bold uppercase tracking-widest text-orange mb-4 m-0">Key Takeaways</p>
+                      <ul className="space-y-3 m-0 p-0 list-none">
+                        {block.content.split('\n').map((bullet, i) => (
+                          <li key={i} className="flex items-start gap-3 text-white text-base leading-relaxed">
+                            <span className="text-orange font-bold mt-0.5 shrink-0">→</span>
+                            <span>{renderContent(bullet)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                case 'heading':
+                  return (
+                    <h2 key={index} className="text-2xl sm:text-3xl font-semibold text-navy mt-12 mb-4 first:mt-0">
+                      {block.content}
+                    </h2>
+                  );
+                case 'subheading':
+                  return (
+                    <h3 key={index} className="text-xl sm:text-2xl font-semibold text-navy mt-8 mb-3">
+                      {block.content}
+                    </h3>
+                  );
+                case 'paragraph':
+                  return (
+                    <p key={index} className="text-gray-700 leading-relaxed mb-6 text-base sm:text-lg">
+                      {renderContent(block.content)}
                     </p>
                   );
+                case 'quote': {
+                  const [quoteText, attribution] = block.content.split('\n');
+                  return (
+                    <blockquote key={index} className="not-prose my-8 border-l-4 border-orange pl-6 py-2">
+                      <p className="text-gray-800 text-lg sm:text-xl italic leading-relaxed mb-3">&ldquo;{quoteText}&rdquo;</p>
+                      <cite className="text-sm font-semibold text-gray-500 not-italic">&mdash; {attribution}</cite>
+                    </blockquote>
+                  );
                 }
-
-                switch (block.type) {
-                  case 'tldr':
-                    elements.push(
-                      <div key={index} className="not-prose my-8 p-6 sm:p-8 rounded-2xl bg-[#1e293b]">
-                        <p className="text-xs font-bold uppercase tracking-widest text-orange mb-4 m-0">Key Takeaways</p>
-                        <ul className="space-y-3 m-0 p-0 list-none">
-                          {block.content.split('\n').map((bullet, i) => (
-                            <li key={i} className="flex items-start gap-3 text-white text-base leading-relaxed">
-                              <span className="text-orange font-bold mt-0.5 shrink-0">→</span>
-                              <span>{renderContent(bullet)}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    );
-                    break;
-                  case 'heading':
-                    elements.push(
-                      <h2 key={index} className="text-2xl sm:text-3xl font-semibold text-navy mt-12 mb-4 first:mt-0">
-                        {block.content}
-                      </h2>
-                    );
-                    break;
-                  case 'subheading':
-                    elements.push(
-                      <h3 key={index} className="text-xl sm:text-2xl font-semibold text-navy mt-8 mb-3">
-                        {block.content}
-                      </h3>
-                    );
-                    break;
-                  case 'paragraph':
-                    elements.push(
-                      <p key={index} className="text-gray-700 leading-relaxed mb-6 text-base sm:text-lg">
+                case 'callout':
+                  return (
+                    <div key={index} className="my-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-orange/5 to-purple-500/5 border-l-4 border-orange">
+                      <p className="text-gray-800 leading-relaxed font-medium text-base sm:text-lg m-0">
                         {renderContent(block.content)}
                       </p>
-                    );
-                    break;
-                  case 'quote': {
-                    const [quoteText, attribution] = block.content.split('\n');
-                    elements.push(
-                      <blockquote key={index} className="not-prose my-8 border-l-4 border-orange pl-6 py-2">
-                        <p className="text-gray-800 text-lg sm:text-xl italic leading-relaxed mb-3">&ldquo;{quoteText}&rdquo;</p>
-                        <cite className="text-sm font-semibold text-gray-500 not-italic">&mdash; {attribution}</cite>
-                      </blockquote>
-                    );
-                    break;
-                  }
-                  case 'callout':
-                    elements.push(
-                      <div key={index} className="my-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-orange/5 to-purple-500/5 border-l-4 border-orange">
-                        <p className="text-gray-800 leading-relaxed font-medium text-base sm:text-lg m-0">
-                          {renderContent(block.content)}
-                        </p>
-                      </div>
-                    );
-                    break;
-                }
-
-                return elements;
-              });
-            })()}
+                    </div>
+                  );
+                case 'table':
+                  return (
+                    <div key={index} className="not-prose my-8 overflow-x-auto rounded-xl border border-gray-200">
+                      <table className="w-full text-sm">
+                        <thead>
+                          <tr className="bg-[#1e293b]">
+                            {block.headers.map((header, hi) => (
+                              <th key={hi} className="px-4 py-3 text-left text-white font-semibold text-sm">
+                                {header}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {block.rows.map((row, ri) => (
+                            <tr key={ri} className={ri % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                              {row.map((cell, ci) => (
+                                <td key={ci} className="px-4 py-3 text-gray-700 border-t border-gray-100">
+                                  {renderContent(cell)}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  );
+                case 'list':
+                  return block.ordered ? (
+                    <ol key={index} className="my-6 pl-6 space-y-2 list-decimal">
+                      {block.items.map((item, ii) => (
+                        <li key={ii} className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                          {renderContent(item)}
+                        </li>
+                      ))}
+                    </ol>
+                  ) : (
+                    <ul key={index} className="my-6 pl-6 space-y-2 list-disc">
+                      {block.items.map((item, ii) => (
+                        <li key={ii} className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                          {renderContent(item)}
+                        </li>
+                      ))}
+                    </ul>
+                  );
+                default:
+                  return null;
+              }
+            })}
           </motion.article>
+
+          {/* Author Bio */}
+          {(blogPost.authorTitle || blogPost.authorBio) && (
+            <div className="mt-16 pt-8 border-t border-gray-200">
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold text-navy text-base">
+                    {blogPost.authorUrl ? (
+                      <Link href={blogPost.authorUrl} className="hover:text-orange transition-colors">
+                        {blogPost.author}
+                      </Link>
+                    ) : (
+                      blogPost.author
+                    )}
+                  </span>
+                  {blogPost.authorTitle && (
+                    <span className="text-sm text-gray-500">&mdash; {blogPost.authorTitle}</span>
+                  )}
+                </div>
+                {blogPost.authorBio && (
+                  <p className="text-gray-600 text-sm leading-relaxed max-w-2xl">{blogPost.authorBio}</p>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* Schema.org Article Markup */}
           <script
@@ -293,6 +350,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 author: {
                   '@type': 'Person',
                   name: blogPost.author,
+                  ...(blogPost.authorTitle && { jobTitle: blogPost.authorTitle }),
                   ...(blogPost.authorUrl && { url: `https://www.getsurfox.com${blogPost.authorUrl}` }),
                 },
                 publisher: {
@@ -304,7 +362,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   },
                 },
                 datePublished: blogPost.date,
-                dateModified: blogPost.date,
+                dateModified: blogPost.lastUpdated || blogPost.date,
                 mainEntityOfPage: {
                   '@type': 'WebPage',
                   '@id': `https://www.getsurfox.com/blog/${blogPost.slug}`,
@@ -337,39 +395,36 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
               />
             );
           })()}
+
+          {/* Schema.org HowTo Markup */}
+          {blogPost.howToSteps && blogPost.howToSteps.length > 0 && (
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'HowTo',
+                  name: blogPost.title,
+                  description: blogPost.excerpt,
+                  step: blogPost.howToSteps.map(step => ({
+                    '@type': 'HowToStep',
+                    name: step.name,
+                    text: step.text,
+                  })),
+                }),
+              }}
+            />
+          )}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-gray-50 to-white">
+      {/* About SurFox */}
+      <section className="py-10 px-4 sm:px-6 md:px-8 border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl p-8 sm:p-12 text-center text-white"
-          >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
-              Ready to Transform Your Sales Intelligence?
-            </h2>
-            <p className="text-lg sm:text-xl mb-8 opacity-90">
-              See how SurFox can help your team close more deals with AI-powered conversation insights.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/demo"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-white text-purple-600 font-semibold hover:shadow-lg transition-all"
-              >
-                Request a Demo
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-white text-white font-semibold hover:bg-white/10 transition-all"
-              >
-                Contact Sales
-              </Link>
-            </div>
-          </motion.div>
+          <p className="text-sm text-gray-500 leading-relaxed">
+            <strong className="text-gray-700">About SurFox AI</strong> — SurFox is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams with full conversation context.{' '}
+            <Link href="/demo" className="text-orange hover:underline">See how it works →</Link>
+          </p>
         </div>
       </section>
 

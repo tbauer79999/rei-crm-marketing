@@ -97,11 +97,30 @@ export default async function BlogPost({ params }: BlogPostPageProps) {
     ],
   };
 
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'SurFox',
+    url: 'https://www.getsurfox.com',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.getsurfox.com/logo.png',
+    },
+    description: 'SurFox is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams.',
+    sameAs: [
+      'https://www.linkedin.com/company/getsurfox',
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <BlogPostClient blogPost={blogPost} relatedPosts={relatedPosts} />
     </>
