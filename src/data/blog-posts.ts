@@ -53,7 +53,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'SDRs cost $80-120K fully loaded. AI cuts that by 60-80% while improving response times 4x. Real math on reducing sales headcount without sacrificing pipeline quality.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. He has spent over a decade in B2B sales technology and writes about AI-powered lead qualification, sales operations, and the future of revenue teams.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
     howToSteps: [
       { name: 'Start with Low-Value Lead Sources', text: 'Begin with aged leads, purchased lists, and old event signups — leads your team has already written off. Let AI qualify them with no risk to your active pipeline.' },
       { name: 'Let AI Qualify, Humans Close', text: 'Configure AI to handle initial outreach and qualification conversations. When a lead shows genuine buying signals, AI escalates to your human closer with full conversation context.' },
@@ -162,12 +162,15 @@ export const blogPosts: BlogPost[] = [
         content: 'Real Math: SDR Team vs AI + Closer Model'
       },
       {
-        type: 'paragraph',
-        content: 'Let\'s run the numbers on a typical scenario. The traditional model with 3 SDRs costs roughly $25,000 per month fully loaded. They might qualify around 300 leads per month if they\'re productive. That\'s approximately $83 per qualified lead.'
-      },
-      {
-        type: 'paragraph',
-        content: 'The AI + Closer model costs around $5,000 per month (AI platform plus one senior closer). But it can qualify 500+ leads per month because AI works 24/7 and handles volume infinitely better than humans. That\'s approximately $10 per qualified lead - an 88% reduction in cost per qualified lead.'
+        type: 'table',
+        headers: ['', 'Traditional (3 SDRs)', 'AI + Closer Model'],
+        rows: [
+          ['Monthly cost', '~$25,000', '~$5,000'],
+          ['Leads qualified/month', '~300', '500+'],
+          ['Cost per qualified lead', '~$83', '~$10'],
+          ['Coverage hours', '8 hrs/day, weekdays', '24/7/365'],
+          ['Cost reduction', '—', '88% lower per qualified lead'],
+        ],
       },
       {
         type: 'callout',
@@ -294,7 +297,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'AI is automating SDR tasks like outbound prospecting and lead qualification. Learn what this means for sales teams, career paths, and hiring decisions.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. He has spent over a decade in B2B sales technology and writes about AI-powered lead qualification, sales operations, and the future of revenue teams.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
     content: [
       {
         type: 'paragraph',
@@ -501,7 +504,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'Conversation intelligence analyzes sales conversations to surface insights humans miss. How it works, real ROI benchmarks (10-20% win rate lift), and platform comparison.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. He has spent over a decade in B2B sales technology and writes about AI-powered lead qualification, sales operations, and the future of revenue teams.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
     content: [
       {
         type: 'paragraph',
@@ -632,24 +635,17 @@ export const blogPosts: BlogPost[] = [
         content: 'Conversation Intelligence vs. Call Recording'
       },
       {
-        type: 'paragraph',
-        content: 'Basic call recording captures audio. You still need humans to listen, analyze, and extract insights. This does not scale - no manager can listen to every call, so most conversations go unreviewed.'
-      },
-      {
-        type: 'paragraph',
-        content: 'Conversation intelligence analyzes every conversation automatically. It surfaces the moments that matter, tracks trends over time, and provides insights without requiring human review of raw recordings. The difference is leverage - one manager can now have visibility into hundreds of conversations.'
-      },
-      {
-        type: 'heading',
-        content: 'Conversation Intelligence vs. CRM'
-      },
-      {
-        type: 'paragraph',
-        content: 'CRM captures what reps choose to log. This is incomplete, inconsistent, and biased toward what reps think matters (or what they remember). Critical signals get lost. Deal stages reflect rep optimism more than reality.'
-      },
-      {
-        type: 'paragraph',
-        content: 'Conversation intelligence captures what actually happened. It provides an objective record of every interaction, independent of rep logging discipline. When CRM says a deal is healthy but conversation signals say otherwise, you know which to trust.'
+        type: 'table',
+        headers: ['', 'Call Recording', 'CRM', 'Conversation Intelligence'],
+        rows: [
+          ['Data captured', 'Audio only', 'What reps choose to log', 'Every conversation, all channels'],
+          ['Analysis', 'Manual — humans must listen', 'None — raw rep input', 'Automated, 300+ signals per deal'],
+          ['Scales with team?', 'No — limited by review time', 'No — limited by logging discipline', 'Yes — analyzes everything automatically'],
+          ['Signal detection', 'None', 'None', 'Sentiment, buying signals, deal risks'],
+          ['Forecast input', 'None', 'Rep-reported deal stages (biased)', 'Objective deal health scores'],
+          ['Coaching', 'Ad-hoc if someone listens', 'None', 'Automated, moment-level highlights'],
+          ['Source of truth', 'Raw audio', 'Rep memory', 'What actually happened'],
+        ],
       },
       {
         type: 'heading',
@@ -772,7 +768,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'Most AI platforms share your data across customers. Learn about tenant isolation, data privacy risks, and how to protect your sales intelligence from competitors.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. He has spent over a decade in B2B sales technology and writes about AI-powered lead qualification, sales operations, and the future of revenue teams.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
     content: [
       {
         type: 'paragraph',
@@ -1003,7 +999,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'AI lead qualification costs 60-80% less than human outreach. Learn how to qualify leads in seconds, not hours, and stop wasting time on prospects who will never buy.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. He has spent over a decade in B2B sales technology and writes about AI-powered lead qualification, sales operations, and the future of revenue teams.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
     howToSteps: [
       { name: 'Define What Qualified Means', text: 'Identify the characteristics your best customers share — budget mentions, timeline urgency, decision-maker involvement — so AI knows exactly what signals to look for.' },
       { name: 'Let AI Handle Initial Engagement', text: 'Configure AI to handle all top-of-funnel outreach, qualifying questions, and common objection handling automatically.' },
@@ -1236,7 +1232,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'Build an AI sales strategy that creates trust, not friction. Learn how to deploy AI that makes customers feel understood instead of processed.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. He has spent over a decade in B2B sales technology and writes about AI-powered lead qualification, sales operations, and the future of revenue teams.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
     content: [
       {
         type: 'paragraph',
@@ -1443,7 +1439,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'Real ROI numbers from conversation intelligence: 60-80% lower cost per lead, 4x better qualification rates, and the hidden goldmine in your dormant lead database.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. He has spent over a decade in B2B sales technology and writes about AI-powered lead qualification, sales operations, and the future of revenue teams.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
     content: [
       {
         type: 'paragraph',
@@ -1462,8 +1458,16 @@ export const blogPosts: BlogPost[] = [
         content: 'Before we dive into categories, here are the benchmarks that matter. These numbers come from industry research across companies implementing conversation intelligence and AI-powered lead qualification.'
       },
       {
-        type: 'callout',
-        content: 'AI-powered qualification costs 60-80% less per qualified lead than human-led outreach ([MarketsandMarkets, 2025](https://www.marketsandmarkets.com/)). [MIT research (Oldroyd/InsideSales.com, 2007)](https://www.leadresponsemanagement.org/lrm_study/) found that responding within 5 minutes makes you 21x more likely to qualify a lead than responding at 30 minutes. Organizations see 25-40% improvements in forecast accuracy after implementing conversation intelligence.'
+        type: 'table',
+        headers: ['Metric', 'Improvement', 'Source'],
+        rows: [
+          ['Win rate', '+10–20%', '[MarketsandMarkets, 2025](https://www.marketsandmarkets.com/)'],
+          ['Forecast accuracy', '+25–40%', 'Gong platform data; Forrester TEI studies'],
+          ['Rep onboarding speed', '+20–30% faster', '[Deloitte, AI-driven onboarding research](https://www2.deloitte.com/us/en/insights/focus/human-capital-trends.html)'],
+          ['Cost per qualified lead', '60–80% lower', '[MarketsandMarkets, 2025](https://www.marketsandmarkets.com/)'],
+          ['Speed-to-lead advantage', '21x better qualification odds within 5 min', '[MIT / InsideSales.com, 2007](https://www.leadresponsemanagement.org/lrm_study/)'],
+          ['Typical payback period', '3–6 months', 'Forrester Total Economic Impact studies'],
+        ],
       },
       {
         type: 'heading',
@@ -1638,7 +1642,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'SDR: $105-165K/year. AI SDR: $6-24K/year. 85% cost savings, 21x better speed-to-lead. When to hire humans vs deploy AI - honest math with real numbers.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. He has spent over a decade in B2B sales technology and writes about AI-powered lead qualification, sales operations, and the future of revenue teams.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
     content: [
       {
         type: 'paragraph',
@@ -1890,7 +1894,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: '3-5% of dead leads are ready to buy right now. AI re-engages thousands simultaneously, finds the hot ones. Real strategy for reactivating old leads + found revenue.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. He has spent over a decade in B2B sales technology and writes about AI-powered lead qualification, sales operations, and the future of revenue teams.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
     content: [
       {
         type: 'paragraph',
@@ -2145,7 +2149,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'Pipeline forecasts fail when unqualified leads pollute your CRM. AI lead qualification creates consistent scoring and faster response - improving pipeline predictability by 40%.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. He has spent over a decade in B2B sales technology and writes about AI-powered lead qualification, sales operations, and the future of revenue teams.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
     content: [
       {
         type: 'paragraph',
