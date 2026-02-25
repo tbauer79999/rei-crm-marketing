@@ -1701,16 +1701,17 @@ export const blogPosts: BlogPost[] = [
         content: 'Head-to-Head: Human SDR vs AI SDR'
       },
       {
-        type: 'paragraph',
-        content: 'Here\'s the comparison that matters:'
-      },
-      {
-        type: 'paragraph',
-        content: 'Annual cost: Human SDR runs $98,000 to $173,000 fully loaded ([Martal Group, 2025](https://martal.ca/2025-sdr-salary-guide/)). AI SDR platform runs $6,000 to $24,000. Response time to leads: humans average 42-47 hours ([Lead Connect / ServiceBell, 2024-25](https://prospeo.io/s/average-lead-response-time)). AI responds in under 60 seconds. Availability: humans work 8 hours a day, 5 days a week. AI works 24/7/365. Ramp time: humans need approximately 3.2 months ([Bridge Group, 2025](https://www.bridgegroupinc.com/blog/)). AI is operational in minutes.'
-      },
-      {
-        type: 'paragraph',
-        content: 'Turnover risk: 34-40% annual turnover for human SDRs. Zero for AI. Cost per qualified lead: humans average around $262. AI platforms average around $26. Database coverage: humans are limited by headcount. AI can work your entire database simultaneously.'
+        type: 'table',
+        headers: ['', 'Human SDR', 'AI SDR'],
+        rows: [
+          ['Annual cost', '$98,000–$173,000 fully loaded ([Martal Group, 2025](https://martal.ca/2025-sdr-salary-guide/))', '$6,000–$24,000'],
+          ['Response time', '42–47 hours average ([Lead Connect / ServiceBell, 2024-25](https://prospeo.io/s/average-lead-response-time))', 'Under 60 seconds'],
+          ['Availability', '8 hrs/day, 5 days/week', '24/7/365'],
+          ['Ramp time', '~3.2 months ([Bridge Group, 2025](https://www.bridgegroupinc.com/blog/))', 'Minutes'],
+          ['Annual turnover', '34–40% ([Xactly](https://www.xactlycorp.com/blog/sales-turnover-statistics))', 'Zero'],
+          ['Cost per qualified lead', '~$262', '~$26'],
+          ['Database coverage', 'Limited by headcount', 'Entire database simultaneously'],
+        ],
       },
       {
         type: 'callout',
