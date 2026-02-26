@@ -185,36 +185,14 @@ export const blogPosts: BlogPost[] = [
         content: 'You don\'t have to rip and replace your entire SDR team overnight. The smart approach is to start small and prove the model before expanding.'
       },
       {
-        type: 'subheading',
-        content: 'Start with Your Lowest-Value Lead Sources'
-      },
-      {
-        type: 'paragraph',
-        content: 'Your aged leads sitting in the CRM, purchased lists, old event signups - these are leads your team has already written off. Let AI qualify them. There\'s no risk because you weren\'t working them anyway. If AI finds qualified opportunities in your "dead" database, that\'s pure found revenue.'
-      },
-      {
-        type: 'subheading',
-        content: 'Let AI Qualify, Humans Close'
-      },
-      {
-        type: 'paragraph',
-        content: 'Configure AI to handle initial outreach and qualification conversations. When a lead shows genuine buying signals, AI escalates to your human closer with full context. Your closer walks into every conversation prepared and talking to someone who actually wants to talk.'
-      },
-      {
-        type: 'subheading',
-        content: 'Measure What Matters'
-      },
-      {
-        type: 'paragraph',
-        content: 'Track response rates, qualification accuracy, and time-to-qualified-lead. Compare AI performance against your historical human benchmarks. Most companies see improvements within the first week.'
-      },
-      {
-        type: 'subheading',
-        content: 'Expand to More Lead Sources'
-      },
-      {
-        type: 'paragraph',
-        content: 'Once you\'ve proven the model on low-value sources, expand to inbound leads, higher-value lists, and eventually all first-touch qualification. Each expansion is de-risked by the data you\'ve already collected.'
+        type: 'list',
+        ordered: true,
+        items: [
+          'Start with your lowest-value lead sources — aged leads, purchased lists, old event signups your team has already written off. Let AI qualify them. No risk because you weren\'t working them anyway. If AI finds opportunities in your dead database, that\'s pure found revenue.',
+          'Let AI qualify, humans close — configure AI to handle initial outreach and qualification conversations. When a lead shows genuine buying signals, AI escalates to your human closer with full context. Your closer walks into every conversation prepared, talking to someone who actually wants to talk.',
+          'Measure what matters — track response rates, qualification accuracy, and time-to-qualified-lead. Compare AI performance against your historical human benchmarks. Most companies see improvements within the first week.',
+          'Expand to more lead sources — once you\'ve proven the model on low-value sources, expand to inbound leads, higher-value lists, and eventually all first-touch qualification. Each expansion is de-risked by the data you\'ve already collected.',
+        ],
       },
       {
         type: 'heading',
@@ -298,6 +276,11 @@ export const blogPosts: BlogPost[] = [
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    howToSteps: [
+      { name: 'Deploy AI for Inbound Response', text: 'Start by letting AI handle all initial inbound inquiries. AI responds within seconds, at any hour, catching leads at peak intent. Measure qualification rates against your historical human baseline.' },
+      { name: 'Let AI Handle Lead Qualification', text: 'Configure AI to conduct qualifying conversations — asking the right questions, handling objections, and scoring intent — before routing leads to human reps. This ensures AEs only talk to prospects who have demonstrated genuine interest.' },
+      { name: 'Expand AI to Outbound Prospecting', text: 'Once AI performance is validated on inbound, expand to outbound sequences and dormant database re-engagement. AI personalizes at scale and handles follow-up consistently, freeing your team for strategic relationship work.' },
+    ],
     content: [
       {
         type: 'paragraph',
@@ -404,28 +387,13 @@ export const blogPosts: BlogPost[] = [
         content: 'Most companies should not immediately eliminate their SDR teams. The transition works best when phased: start with AI handling inbound lead qualification and response, measure results against human benchmarks, then gradually expand to outbound prospecting and more complex qualification scenarios.'
       },
       {
-        type: 'subheading',
-        content: 'Phase 1: Inbound Response'
-      },
-      {
-        type: 'paragraph',
-        content: 'Deploy AI to handle initial inbound inquiries. This is lowest risk and highest impact because speed-to-lead matters enormously and AI can respond instantly.'
-      },
-      {
-        type: 'subheading',
-        content: 'Phase 2: Lead Qualification'
-      },
-      {
-        type: 'paragraph',
-        content: 'Let AI qualify leads through conversation before routing to human reps. This filters out unqualified leads and ensures AEs spend time on real opportunities.'
-      },
-      {
-        type: 'subheading',
-        content: 'Phase 3: Outbound Prospecting'
-      },
-      {
-        type: 'paragraph',
-        content: 'Once AI performance is validated on inbound, expand to outbound sequences. AI can personalize at scale and handle objections, freeing your team for strategic outreach.'
+        type: 'list',
+        ordered: true,
+        items: [
+          'Phase 1 — Inbound response: deploy AI to handle initial inbound inquiries. This is lowest risk and highest impact because speed-to-lead matters enormously and AI can respond instantly.',
+          'Phase 2 — Lead qualification: let AI qualify leads through conversation before routing to human reps. This filters out unqualified leads and ensures AEs spend time on real opportunities.',
+          'Phase 3 — Outbound prospecting: once AI performance is validated on inbound, expand to outbound sequences. AI can personalize at scale and handle objections, freeing your team for strategic outreach.',
+        ],
       },
       {
         type: 'heading',
@@ -539,36 +507,14 @@ export const blogPosts: BlogPost[] = [
         content: 'How Conversation Intelligence Works'
       },
       {
-        type: 'subheading',
-        content: 'Layer 1: Capture and Transcription'
-      },
-      {
-        type: 'paragraph',
-        content: 'The platform captures conversations across channels and converts audio to text with speaker identification. Modern systems achieve 95%+ transcription accuracy and can distinguish between multiple speakers on a call.'
-      },
-      {
-        type: 'subheading',
-        content: 'Layer 2: Analysis and Signal Detection'
-      },
-      {
-        type: 'paragraph',
-        content: 'This is where intelligence happens. The AI analyzes conversations for sentiment shifts, topic extraction, competitive mentions, commitment tracking, objection patterns, and buying signals. It identifies the moments that matter without requiring anyone to listen to entire calls.'
-      },
-      {
-        type: 'subheading',
-        content: 'Layer 3: Pattern Recognition'
-      },
-      {
-        type: 'paragraph',
-        content: 'By analyzing thousands of conversations and their outcomes, the platform learns what winning looks like for your specific business. It recognizes patterns that correlate with closed deals versus lost opportunities - patterns too subtle for humans to detect consistently.'
-      },
-      {
-        type: 'subheading',
-        content: 'Layer 4: Prediction and Action'
-      },
-      {
-        type: 'paragraph',
-        content: 'Advanced platforms move beyond analysis to prediction. They forecast which deals are likely to close, which are at risk, and which require immediate intervention. Some can even take automated actions - escalating hot leads or triggering follow-up sequences.'
+        type: 'list',
+        ordered: true,
+        items: [
+          'Capture and transcription — the platform records conversations across all channels and converts audio to text with speaker identification. Modern systems achieve 95%+ accuracy and distinguish multiple speakers on a call.',
+          'Analysis and signal detection — AI analyzes conversations for sentiment shifts, topic extraction, competitive mentions, commitment tracking, objection patterns, and buying signals. It identifies moments that matter without requiring anyone to listen to entire calls.',
+          'Pattern recognition — by analyzing thousands of conversations and their outcomes, the platform learns what winning looks like for your specific business. It recognizes patterns that correlate with closed deals versus lost opportunities — patterns too subtle for humans to detect consistently.',
+          'Prediction and action — advanced platforms forecast which deals are likely to close, which are at risk, and which require immediate intervention. Some take automated actions — escalating hot leads or triggering follow-up sequences.',
+        ],
       },
       {
         type: 'heading',
@@ -1116,36 +1062,14 @@ export const blogPosts: BlogPost[] = [
         content: 'Implementing AI-Powered Qualification'
       },
       {
-        type: 'subheading',
-        content: 'Step 1: Define What Qualified Means'
-      },
-      {
-        type: 'paragraph',
-        content: 'Start by identifying what good looks like. What characteristics do your best customers share? What signals appeared early in their buying journey? Budget mentions? Timeline urgency? Decision-maker involvement? The AI needs to know what to look for.'
-      },
-      {
-        type: 'subheading',
-        content: 'Step 2: Let AI Handle Initial Engagement'
-      },
-      {
-        type: 'paragraph',
-        content: 'Configure the AI to handle all top-of-funnel outreach. It asks your qualifying questions, handles common objections, and has natural back-and-forth conversations. Prospects often cannot tell they are talking to AI.'
-      },
-      {
-        type: 'subheading',
-        content: 'Step 3: Set Escalation Triggers'
-      },
-      {
-        type: 'paragraph',
-        content: 'Define what makes a lead "hot" - the combination of signals that indicate readiness to talk to a human. When AI detects these patterns, it instantly notifies your team and provides full conversation context.'
-      },
-      {
-        type: 'subheading',
-        content: 'Step 4: Prioritize Ruthlessly'
-      },
-      {
-        type: 'paragraph',
-        content: 'Use AI-generated qualification scores to prioritize which leads get your best reps attention. Focus human energy exclusively where it has the highest probability of converting.'
+        type: 'list',
+        ordered: true,
+        items: [
+          'Define what qualified means — identify what your best customers share. Budget mentions? Timeline urgency? Decision-maker involvement? The AI needs explicit criteria to know what signals to look for.',
+          'Let AI handle initial engagement — configure AI to handle all top-of-funnel outreach. It asks your qualifying questions, handles common objections, and has natural back-and-forth conversations. Prospects often cannot tell they are talking to AI.',
+          'Set escalation triggers — define what makes a lead hot: the combination of signals that indicate readiness to talk to a human. When AI detects these patterns, it instantly notifies your team and provides full conversation context.',
+          'Prioritize ruthlessly — use AI-generated qualification scores to direct which leads get your best reps\' attention. Focus human energy exclusively where conversion probability is highest.',
+        ],
       },
       {
         type: 'heading',
@@ -1223,7 +1147,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'customer-first-ai-strategy',
     title: 'How to Build an AI Sales Strategy That Customers Actually Trust',
     excerpt: 'AI can make customers feel understood or processed. The difference is your strategy. Learn how to deploy sales AI that builds trust instead of destroying it.',
-    category: 'Strategy',
+    category: 'Sales Strategy',
     date: '2025-12-30',
     readTime: '8 min read',
     author: 'Tom Bauer',
@@ -1233,6 +1157,12 @@ export const blogPosts: BlogPost[] = [
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    howToSteps: [
+      { name: 'Respond When Customers Want to Talk', text: 'Deploy AI to respond to every inquiry within seconds, around the clock. Customers research at 11pm and on weekends — AI meets them there instead of forcing them to wait. Responding within 5 minutes makes you 21x more likely to qualify a lead than responding at 30 minutes.' },
+      { name: 'Build Conversation Memory', text: 'Configure AI to track conversation history, remember objections, and reference previous discussions in follow-up. Nothing destroys trust faster than asking customers to repeat themselves. Memory makes customers feel heard instead of processed.' },
+      { name: 'Define Clear Escalation Rules', text: 'Set explicit triggers for when AI hands off to a human: complex objections, high-value signals, or any moment requiring judgment and empathy. Customer-first AI recognizes its limits and escalates gracefully — never trapping customers in automated loops.' },
+      { name: 'Measure Customer-First Metrics', text: 'Track response time, resolution rate, escalation quality, and customer effort alongside traditional pipeline metrics. When you optimize for customer experience, sales metrics improve as a byproduct: faster responses mean more qualified leads, less friction means more referrals.' },
+    ],
     content: [
       {
         type: 'paragraph',
@@ -1895,6 +1825,12 @@ export const blogPosts: BlogPost[] = [
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    howToSteps: [
+      { name: 'Segment Your Dormant Database', text: 'Not all dormant leads are equal. Prioritize leads who reached a demo or late stage before going cold, and leads dormant less than 6 months. These have higher reactivation rates than leads who never engaged or went cold years ago.' },
+      { name: 'Craft a Natural Re-engagement Message', text: 'Never send a generic "just checking in." The best messages reference the lead\'s original interest, acknowledge the time gap honestly, and ask a low-pressure question that\'s easy to respond to — something like referencing what they were originally looking at and asking if things have changed.' },
+      { name: 'Let AI Handle the Qualifying Conversation', text: 'When leads respond, AI continues naturally — asking qualifying questions, handling "not interested" gracefully, recognizing buying signals like budget mentions and timeline urgency, and escalating hot leads to your team instantly with full conversation context.' },
+      { name: 'Make Reactivation Ongoing, Not a One-Time Campaign', text: 'Your dormant database is not static — leads cycle in and out of buying windows constantly. Set up ongoing re-engagement at intelligent intervals based on industry, buying cycle, and previous engagement. This turns your CRM into a perpetual pipeline engine instead of a graveyard.' },
+    ],
     content: [
       {
         type: 'paragraph',
@@ -2013,40 +1949,18 @@ export const blogPosts: BlogPost[] = [
         content: 'How to Run Your First Reactivation Campaign'
       },
       {
-        type: 'subheading',
-        content: 'Step 1: Segment Your Database'
-      },
-      {
-        type: 'paragraph',
-        content: 'Not all dormant leads are equal. Start by segmenting based on how they originally entered your system, how far they got in your sales process, and how long ago they went dormant. Leads who made it to a demo but didn\'t close are higher value than leads who never responded to initial outreach. Leads from 3 months ago are more likely to re-engage than leads from 3 years ago.'
-      },
-      {
-        type: 'subheading',
-        content: 'Step 2: Craft the Re-engagement Message'
-      },
-      {
-        type: 'paragraph',
-        content: 'The worst thing you can do is send a generic "just checking in" message. The best reactivation messages reference the original context - what the prospect was looking for, what problem they were trying to solve. They acknowledge the time gap honestly. And they ask a specific, low-pressure question that\'s easy to respond to. Something like: "Hey [name], you were looking at [solution] back in [month]. Curious if that\'s still on your radar or if things have changed?" Natural. Human. Easy to reply to.'
+        type: 'list',
+        ordered: true,
+        items: [
+          'Segment your database — not all dormant leads are equal. Segment by how far they got in your sales process and how long ago they went dormant. Leads who reached a demo but didn\'t close are higher value than leads who never responded. Leads from 3 months ago are more likely to re-engage than leads from 3 years ago.',
+          'Craft the re-engagement message — never send a generic "just checking in." The best messages reference the original context, acknowledge the time gap honestly, and ask a low-pressure question that\'s easy to respond to. "Hey [name], you were looking at [solution] back in [month]. Curious if that\'s still on your radar or if things have changed?" Natural. Human. Easy to reply to.',
+          'Let AI handle the conversation — when leads respond, AI continues naturally. It asks qualifying questions, handles "not interested" gracefully, recognizes buying signals like budget mentions and timeline urgency, and escalates hot leads to your team instantly with full context.',
+          'Make it ongoing, not one-time — the biggest mistake is treating reactivation as a campaign. Your dormant database is not static — leads cycle in and out of buying windows constantly. Set up ongoing reactivation at intelligent intervals based on industry, buying cycle, and previous engagement. This turns your database into a perpetual pipeline engine.',
+        ],
       },
       {
         type: 'quote',
         content: 'You earn the right to tell your story when you start with theirs.\nMatt Heinz, President, Heinz Marketing'
-      },
-      {
-        type: 'subheading',
-        content: 'Step 3: Let AI Handle the Conversation'
-      },
-      {
-        type: 'paragraph',
-        content: 'When leads respond - and with SMS, a surprising number will - AI continues the conversation naturally. It asks qualifying questions based on their responses. It handles "not interested" gracefully and adjusts follow-up timing. It recognizes buying signals like budget mentions, timeline urgency, or competitor dissatisfaction. And it escalates hot leads to your team instantly with full context.'
-      },
-      {
-        type: 'subheading',
-        content: 'Step 4: Make It Ongoing, Not One-Time'
-      },
-      {
-        type: 'paragraph',
-        content: 'The biggest mistake companies make with reactivation is treating it as a one-time campaign. Your dormant database isn\'t static - leads are constantly cycling in and out of buying windows. Set up ongoing reactivation where AI checks back with dormant leads at intelligent intervals based on their industry, buying cycle, and previous engagement patterns. This turns your database into a perpetual pipeline engine.'
       },
       {
         type: 'heading',
@@ -2150,6 +2064,12 @@ export const blogPosts: BlogPost[] = [
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    howToSteps: [
+      { name: 'Deploy AI on New Inbound Leads', text: 'Start by routing all new inbound inquiries — form fills, demo requests, trial signups — through AI qualification. AI responds within 60 seconds and applies consistent scoring criteria. Measure qualification rates against your historical human baseline. Most companies see 2–4x improvement in speed-to-lead within the first week.' },
+      { name: 'Define Objective Qualification Thresholds', text: 'Establish explicit, agreed-upon criteria with your team: what AI score qualifies a lead for AE handoff, what signals trigger immediate escalation, and what responses mean "not qualified." Making thresholds explicit removes subjectivity and quota bias from your pipeline.' },
+      { name: 'Track Forecast Variance Over Time', text: 'Measure pipeline forecast versus actual closed deals monthly. Before AI qualification, expect 30–40% variance. After implementation, track it dropping to 15–20% as unqualified leads stop entering your funnel and scoring becomes consistent.' },
+      { name: 'Expand to Dormant Lead Re-engagement', text: 'Once AI is proven on inbound, point it at your dormant CRM database. AI re-engages all old leads simultaneously via SMS and qualifies the 3–5% in an active buying window. This adds found pipeline — revenue from leads you already own — without a dollar of new lead gen spend.' },
+    ],
     content: [
       {
         type: 'paragraph',
@@ -2376,36 +2296,14 @@ export const blogPosts: BlogPost[] = [
         content: 'Implementation: What Actually Works'
       },
       {
-        type: 'subheading',
-        content: 'Start with New Inbound Leads'
-      },
-      {
-        type: 'paragraph',
-        content: 'Deploy AI to handle all new inbound inquiries first. Let it qualify every lead that comes in - form fills, demo requests, trial signups. Measure qualification rates and compare to your historical human baseline. Most companies see 2-4x improvement in speed-to-lead and more consistent scoring within the first week.'
-      },
-      {
-        type: 'subheading',
-        content: 'Define Clear Qualification Thresholds'
-      },
-      {
-        type: 'paragraph',
-        content: 'Work with your team to establish objective criteria: what score qualifies a lead for handoff to an AE? What signals trigger immediate escalation? What responses indicate "not qualified" and should be nurtured instead of passed along? Make these thresholds explicit so everyone understands what belongs in the forecast.'
-      },
-      {
-        type: 'subheading',
-        content: 'Track Forecast Variance Over Time'
-      },
-      {
-        type: 'paragraph',
-        content: 'Measure pipeline forecast versus actual closed deals every month. Before AI qualification, you will probably see 30-40% variance. After implementation, watch that number drop to 15-20% as garbage leads stop polluting your pipeline. This improvement validates the ROI and builds organizational confidence in AI-qualified pipeline.'
-      },
-      {
-        type: 'subheading',
-        content: 'Expand to Dormant Lead Resurrection'
-      },
-      {
-        type: 'paragraph',
-        content: 'Once AI is working well on inbound leads, point it at your dormant database. Export old leads and let AI re-engage them. The 3-5% who respond and qualify become found pipeline - revenue you can add to forecasts without any new lead gen spend.'
+        type: 'list',
+        ordered: true,
+        items: [
+          'Start with new inbound leads — deploy AI to handle all new inbound inquiries first: form fills, demo requests, trial signups. Measure qualification rates against your historical human baseline. Most companies see 2-4x improvement in speed-to-lead and more consistent scoring within the first week.',
+          'Define clear qualification thresholds — establish objective criteria with your team: what score qualifies a lead for AE handoff? What signals trigger immediate escalation? What responses mean "not qualified"? Make thresholds explicit so everyone understands what belongs in the forecast.',
+          'Track forecast variance over time — measure pipeline forecast versus actual closed deals monthly. Before AI qualification expect 30-40% variance. After implementation, watch it drop to 15-20% as unqualified leads stop entering your pipeline.',
+          'Expand to dormant lead resurrection — once AI is proven on inbound, point it at your dormant database. Export old leads and let AI re-engage them simultaneously. The 3-5% who respond and qualify become found pipeline — revenue added to forecasts without a dollar of new lead gen spend.',
+        ],
       },
       {
         type: 'heading',

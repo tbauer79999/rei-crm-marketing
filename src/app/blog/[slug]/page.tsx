@@ -35,8 +35,17 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       url: url,
       type: 'article',
       publishedTime: blogPost.date,
+      modifiedTime: blogPost.lastUpdated || blogPost.date,
       authors: [blogPost.author],
       siteName: 'SurFox',
+      images: [
+        {
+          url: blogPost.featuredImage || 'https://www.getsurfox.com/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: metaTitle,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',

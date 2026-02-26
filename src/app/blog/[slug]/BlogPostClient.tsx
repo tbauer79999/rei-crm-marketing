@@ -343,7 +343,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 '@context': 'https://schema.org',
-                '@type': 'Article',
+                '@type': 'BlogPosting',
                 headline: blogPost.title,
                 description: blogPost.excerpt,
                 image: blogPost.featuredImage || 'https://www.getsurfox.com/og-image.png',
