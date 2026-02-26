@@ -77,63 +77,69 @@
   <!-- Blog/Insights Section -->
   <url>
     <loc>https://www.getsurfox.com/blog</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog Articles -->
   <url>
+    <loc>https://www.getsurfox.com/blog/ai-lead-qualification-pipeline-forecast-accuracy</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.getsurfox.com/blog/reactivate-dormant-leads-ai</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/ai-sdr-vs-hiring-sdr-roi-2026</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/reduce-sdr-headcount-ai</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/future-of-ai-in-sales</loc>
-    <lastmod>2026-01-27</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/conversation-intelligence-deep-dive</loc>
-    <lastmod>2026-01-20</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/data-privacy-ai-businesses</loc>
-    <lastmod>2026-01-13</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/qualify-leads-faster-ai</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/customer-first-ai-strategy</loc>
-    <lastmod>2025-12-30</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/roi-conversation-intelligence</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
