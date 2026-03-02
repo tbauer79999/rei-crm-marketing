@@ -2590,6 +2590,75 @@ export const blogPosts: BlogPost[] = [
       }
     ],
     relatedPosts: ['qualify-leads-faster-ai', 'reactivate-dormant-leads-ai', 'reduce-sdr-headcount-ai']
+  },
+  {
+    id: 12,
+    slug: 'surfox-now-on-zapier',
+    title: 'SurFox AI Is Now on Zapier: Connect Your AI Lead Qualifier to the Tools You Already Use',
+    excerpt: 'SurFox AI is officially live on the Zapier marketplace. Connect your AI-powered SMS lead qualification directly to your CRM, Slack, Google Calendar, and the rest of your sales stack — no code required.',
+    category: 'Product News',
+    date: '2026-03-01',
+    lastUpdated: '2026-03-01',
+    readTime: '3 min read',
+    author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    authorTitle: 'Founder & CEO, SurFox',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    metaTitle: 'SurFox AI Is Now on Zapier | Connect AI Lead Qualification to Your Stack',
+    metaDescription: 'SurFox AI is live on Zapier. Connect AI-powered SMS lead qualification to HubSpot, Salesforce, Slack, Google Calendar, and more — no code required.',
+    content: [
+      {
+        type: 'paragraph',
+        content: 'If you\'ve been qualifying leads with SurFox AI, you now have one less reason to touch your workflow.'
+      },
+      {
+        type: 'paragraph',
+        content: 'SurFox AI is officially live on the Zapier marketplace — which means you can connect your AI-powered SMS lead qualification directly to the CRMs, spreadsheets, Slack channels, and sales tools your team already lives in. No custom code. No API documentation. Just a Zap.'
+      },
+      {
+        type: 'heading',
+        content: 'Why This Matters'
+      },
+      {
+        type: 'paragraph',
+        content: 'The biggest friction in adding a new tool to your sales stack isn\'t the tool — it\'s everything around it. Does it fit into how we already work? Will my team actually use it? Do I have to log into another platform to see what\'s happening?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Zapier eliminates that friction. SurFox AI does the qualifying. Your existing tools get the results.'
+      },
+      {
+        type: 'heading',
+        content: 'What You Can Build'
+      },
+      {
+        type: 'list',
+        ordered: false,
+        items: [
+          'New lead added to your CRM → SurFox AI starts an AI-powered SMS qualification conversation automatically',
+          'Lead qualifies → Slack notification fires to your sales rep with full conversation summary',
+          'Appointment booked → Google Calendar event created without anyone lifting a finger',
+          'Lead responds "not interested" → CRM record updated, tagged, and moved to the right pipeline stage',
+        ]
+      },
+      {
+        type: 'heading',
+        content: 'Who This Is For'
+      },
+      {
+        type: 'paragraph',
+        content: 'Any team that\'s already running their sales process through tools like HubSpot, Salesforce, Pipedrive, or Google Sheets — and wants to add intelligent SMS lead qualification without rebuilding how they operate.'
+      },
+      {
+        type: 'heading',
+        content: 'Get Started'
+      },
+      {
+        type: 'paragraph',
+        content: 'Search "SurFox AI" in the Zapier app directory or visit [zapier.com/apps/surfox](https://zapier.com/apps/surfox). Free to connect. Qualification starts the moment a lead hits your trigger.'
+      }
+    ],
+    relatedPosts: ['qualify-leads-faster-ai', 'reduce-sdr-headcount-ai', 'reactivate-dormant-leads-ai']
   }
 ];
 
