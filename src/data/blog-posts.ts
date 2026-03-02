@@ -2655,7 +2655,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Search "SurFox AI" in the Zapier app directory or visit [zapier.com/apps/surfox](https://zapier.com/apps/surfox). Free to connect. Qualification starts the moment a lead hits your trigger.'
+        content: 'Search "SurFox AI" in the Zapier app directory or visit [zapier.com/apps/surfox-ai](https://zapier.com/apps/surfox-ai). Free to connect. Qualification starts the moment a lead hits your trigger.'
       }
     ],
     relatedPosts: ['qualify-leads-faster-ai', 'reduce-sdr-headcount-ai', 'reactivate-dormant-leads-ai']
