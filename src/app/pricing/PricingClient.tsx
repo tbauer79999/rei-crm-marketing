@@ -51,7 +51,7 @@ export default function PricingClient() {
               Choose Your AI Sales<br />Automation Plan
             </h1>
             <p className="text-xl text-gray-600 mb-4 max-w-3xl mx-auto leading-relaxed">
-              All plans include AI conversation intelligence, psychology-based qualification, and our 30-day money-back guarantee.
+              All plans include AI-powered lead qualification, psychology-based scoring, and our 30-day money-back guarantee.
             </p>
             <p className="text-lg text-orange font-semibold">
               Higher tiers = Smarter AI = Better conversations = More qualified prospects

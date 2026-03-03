@@ -83,7 +83,7 @@ export default function TermsOfService() {
             </h2>
             <div className="text-gray-600 leading-relaxed space-y-4">
               <p>
-                SurFox AI provides AI-powered conversation intelligence software that automates lead qualification and engagement through SMS messaging. The Platform analyzes prospect responses, identifies buying signals, and escalates qualified leads to your sales team.
+                SurFox AI provides AI-powered lead qualification software that automates lead engagement and qualification through SMS messaging. The Platform analyzes prospect responses, identifies buying signals, and escalates qualified leads to your sales team.
               </p>
               <p className="font-semibold text-navy">
                 We provide the tools. You're responsible for how you use them.

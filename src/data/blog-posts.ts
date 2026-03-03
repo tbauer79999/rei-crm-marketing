@@ -259,7 +259,7 @@ export const blogPosts: BlogPost[] = [
         content: 'The hybrid AI + human model — where AI handles qualification at scale and humans focus on qualified conversations — is becoming the dominant structure for efficient sales teams. Companies that implement it now will have years of learned patterns and optimized workflows before competitors make the transition.'
       }
     ],
-    relatedPosts: ['future-of-ai-in-sales', 'qualify-leads-faster-ai', 'roi-conversation-intelligence']
+    relatedPosts: ['future-of-ai-in-sales', 'qualify-leads-faster-ai', 'data-privacy-ai-businesses']
   },
   {
     id: 1,
@@ -456,249 +456,7 @@ export const blogPosts: BlogPost[] = [
         content: 'Not necessarily, but hiring strategy should change. Hire fewer SDRs with different expectations: they should be capable of managing AI systems, handling complex situations AI cannot, and eventually transitioning to closing roles. The traditional SDR-as-pipeline approach is becoming obsolete.'
       }
     ],
-    relatedPosts: ['conversation-intelligence-deep-dive', 'qualify-leads-faster-ai', 'customer-first-ai-strategy']
-  },
-  {
-    id: 2,
-    slug: 'conversation-intelligence-deep-dive',
-    title: 'What Is Conversation Intelligence? The Complete Guide for 2026',
-    excerpt: 'Conversation intelligence goes beyond call recording to understand why deals win or lose. Learn how it works, what it costs, and whether your business needs it.',
-    category: 'Product Insights',
-    date: '2026-01-20',
-    readTime: '12 min read',
-    author: 'Tom Bauer',
-    authorUrl: '/leadership',
-    metaTitle: 'What Is Conversation Intelligence? Complete 2026 Guide (ROI + How It Works)',
-    metaDescription: 'Conversation intelligence analyzes sales conversations to surface insights humans miss. How it works, real ROI benchmarks (10-20% win rate lift), and platform comparison.',
-    lastUpdated: '2026-02-25',
-    authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
-    content: [
-      {
-        type: 'paragraph',
-        content: 'Every sales conversation contains signals - moments where prospects reveal their true priorities, concerns, and readiness to buy. The problem is these signals are buried in hours of dialogue, spread across channels, and easy to miss in real-time. Conversation intelligence exists to surface what matters.'
-      },
-      {
-        type: 'tldr',
-        content: 'Conversation intelligence analyzes sentiment, buying signals, and deal risks across every conversation — not just transcription.\nOrganizations see 10–20% higher win rates and 25–40% better forecast accuracy after implementation.\nPlatforms like Gong analyze 300+ signals per deal, cutting forecast variance from ±15% to ±5%.\nThe market grows from $3.85B (2024) to $32.23B by 2033 — documented ROI is driving rapid adoption.\nMost platforms use pooled data — your competitive intelligence may be training models your competitors also use.'
-      },
-      {
-        type: 'heading',
-        content: 'What Is Conversation Intelligence?'
-      },
-      {
-        type: 'paragraph',
-        content: 'Conversation intelligence is the application of AI and natural language processing to understand the context, sentiment, and meaning behind sales conversations. It goes far beyond simple call recording or transcription - it analyzes what was said, how it was said, and what it means for your deals.'
-      },
-      {
-        type: 'paragraph',
-        content: 'Modern conversation intelligence platforms process communication across all channels - calls, emails, video meetings, and text messages. They identify patterns humans miss: shifts in sentiment, buying signals, competitive mentions, objection patterns, and commitment language.'
-      },
-      {
-        type: 'quote',
-        content: 'Conversations are the most valuable dataset in sales. Conversation intelligence helps leaders move from gut feel to reality.\nAmit Bendov, CEO, Gong'
-      },
-      {
-        type: 'callout',
-        content: 'The goal is not just capturing what was said. It is understanding what it means for your deals, your coaching, and your revenue.'
-      },
-      {
-        type: 'heading',
-        content: 'How Conversation Intelligence Works'
-      },
-      {
-        type: 'list',
-        ordered: true,
-        items: [
-          'Capture and transcription — the platform records conversations across all channels and converts audio to text with speaker identification. Modern systems achieve 95%+ accuracy and distinguish multiple speakers on a call.',
-          'Analysis and signal detection — AI analyzes conversations for sentiment shifts, topic extraction, competitive mentions, commitment tracking, objection patterns, and buying signals. It identifies moments that matter without requiring anyone to listen to entire calls.',
-          'Pattern recognition — by analyzing thousands of conversations and their outcomes, the platform learns what winning looks like for your specific business. It recognizes patterns that correlate with closed deals versus lost opportunities — patterns too subtle for humans to detect consistently.',
-          'Prediction and action — advanced platforms forecast which deals are likely to close, which are at risk, and which require immediate intervention. Some take automated actions — escalating hot leads or triggering follow-up sequences.',
-        ],
-      },
-      {
-        type: 'heading',
-        content: 'Key Capabilities'
-      },
-      {
-        type: 'subheading',
-        content: 'Deal Risk Detection'
-      },
-      {
-        type: 'paragraph',
-        content: 'The platform identifies warning signs early - language patterns that historically correlate with deals slipping or being lost. Companies using conversation intelligence detect deal risks an average of 3+ weeks earlier than those relying on manual reviews. That is time to intervene before it is too late.'
-      },
-      {
-        type: 'subheading',
-        content: 'Sales Coaching at Scale'
-      },
-      {
-        type: 'paragraph',
-        content: 'Instead of managers listening to entire calls, the platform highlights coaching moments - where reps excelled or where they could improve. Top performer patterns become visible and teachable. New reps ramp 20-30% faster by learning from recorded wins.'
-      },
-      {
-        type: 'quote',
-        content: 'You won\'t lose your sales manager job to AI. You\'ll lose it to a manager who is using AI better.\nRyan Vaillancourt, VP of Sales, Revenue.io'
-      },
-      {
-        type: 'subheading',
-        content: 'Competitive Intelligence'
-      },
-      {
-        type: 'paragraph',
-        content: 'Every time a competitor is mentioned, the platform captures it. Over time, this builds a database of how prospects talk about alternatives, what objections come up, and what messaging wins. Product and marketing teams get real-world data instead of guesses.'
-      },
-      {
-        type: 'subheading',
-        content: 'Forecast Accuracy'
-      },
-      {
-        type: 'paragraph',
-        content: 'Better data on deal health leads to better forecasts. Companies report 25-40% improvements in forecast accuracy after implementing conversation intelligence — with platforms like Gong analyzing 300+ interaction signals per deal to reduce forecast variance from ±15% to as low as ±5%. For revenue leaders, this means fewer surprises and better resource planning.'
-      },
-      {
-        type: 'quote',
-        content: '82% of sales activities are digital and available for capture and analysis. Conversation intelligence has the biggest upside for sales — automating forecasting insights and returning that time to active selling.\nSeth Marrs, Research Director, Forrester'
-      },
-      {
-        type: 'heading',
-        content: 'The ROI of Conversation Intelligence'
-      },
-      {
-        type: 'paragraph',
-        content: 'Conversation intelligence is not cheap, but the returns are documented:'
-      },
-      {
-        type: 'callout',
-        content: '10-20% improvement in win rates ([MarketsandMarkets, 2025](https://www.marketsandmarkets.com/)). 25-40% better forecast accuracy. 20-30% faster rep onboarding, according to [Deloitte research](https://www2.deloitte.com/us/en/insights/focus/human-capital-trends.html) on AI-driven onboarding programs. 60-80% lower cost per qualified lead when combined with AI qualification. Most organizations see payback within 3-6 months, per [Forrester Total Economic Impact](https://www.forrester.com/research/tei/) studies of leading platforms.'
-      },
-      {
-        type: 'paragraph',
-        content: 'The hidden ROI comes from dormant lead re-engagement. [SiriusDecisions (now Forrester)](https://www.forrester.com/) found that 80% of leads disqualified by sales as "not ready" go on to purchase a solution within 24 months — they just need to be re-engaged at the right time. Conversation intelligence combined with AI outreach can identify and qualify these automatically — revenue from leads you already paid to acquire.'
-      },
-      {
-        type: 'heading',
-        content: 'Conversation Intelligence vs. Call Recording'
-      },
-      {
-        type: 'table',
-        headers: ['', 'Call Recording', 'CRM', 'Conversation Intelligence'],
-        rows: [
-          ['Data captured', 'Audio only', 'What reps choose to log', 'Every conversation, all channels'],
-          ['Analysis', 'Manual — humans must listen', 'None — raw rep input', 'Automated, 300+ signals per deal'],
-          ['Scales with team?', 'No — limited by review time', 'No — limited by logging discipline', 'Yes — analyzes everything automatically'],
-          ['Signal detection', 'None', 'None', 'Sentiment, buying signals, deal risks'],
-          ['Forecast input', 'None', 'Rep-reported deal stages (biased)', 'Objective deal health scores'],
-          ['Coaching', 'Ad-hoc if someone listens', 'None', 'Automated, moment-level highlights'],
-          ['Source of truth', 'Raw audio', 'Rep memory', 'What actually happened'],
-        ],
-      },
-      {
-        type: 'heading',
-        content: 'The Privacy Consideration'
-      },
-      {
-        type: 'paragraph',
-        content: 'Conversation intelligence platforms handle sensitive data - customer information, competitive discussions, internal sales strategies. Not all platforms treat this data responsibly.'
-      },
-      {
-        type: 'paragraph',
-        content: 'Most platforms use pooled learning - your conversation data trains models that all customers share. This means your insights could indirectly benefit competitors. Look for platforms with complete tenant isolation, where your data trains models exclusively for your organization.'
-      },
-      {
-        type: 'paragraph',
-        content: 'At SurFox AI, tenant isolation is foundational. Your conversation patterns, your competitive intelligence, your winning playbooks - they stay yours. When you leave, your data and trained models leave with you.'
-      },
-      {
-        type: 'heading',
-        content: 'Implementation Success Factors'
-      },
-      {
-        type: 'subheading',
-        content: 'Executive Buy-In'
-      },
-      {
-        type: 'paragraph',
-        content: 'Conversation intelligence fails when it is positioned as surveillance. It succeeds when leadership frames it as a coaching and enablement tool that helps everyone perform better.'
-      },
-      {
-        type: 'subheading',
-        content: 'Clear Use Cases'
-      },
-      {
-        type: 'paragraph',
-        content: 'Start with specific problems: improving forecast accuracy, reducing ramp time, detecting competitive threats. Broad "let us try AI" initiatives often fizzle. Focused implementations show ROI fast.'
-      },
-      {
-        type: 'subheading',
-        content: 'Workflow Integration'
-      },
-      {
-        type: 'paragraph',
-        content: 'Insights that live in a separate dashboard get ignored. The best implementations push conversation intelligence into existing workflows - CRM updates, Slack notifications, email summaries. Meet reps where they already work.'
-      },
-      {
-        type: 'quote',
-        content: 'AI shouldn\'t replace sellers — it should be woven across revenue workflows to help them get to their goals faster. The best sellers know AI is a means to an end.\nManny Medina, CEO, Outreach'
-      },
-      {
-        type: 'heading',
-        content: 'The Market Landscape'
-      },
-      {
-        type: 'paragraph',
-        content: 'According to [Grand View Research (November 2025)](https://www.grandviewresearch.com/industry-analysis/ai-sales-development-representative-market-report), the AI sales development and conversation intelligence market is growing from $3.85 billion in 2024 to $32.23 billion by 2033 — a 26.7% CAGR. This growth reflects both technological maturity and proven ROI across industries.'
-      },
-      {
-        type: 'paragraph',
-        content: 'The market is segmenting into enterprise platforms (high cost, deep integrations, complex implementations) and focused solutions (specific use cases, faster deployment, lower cost). The right choice depends on your needs, existing tech stack, and implementation capacity.'
-      },
-      {
-        type: 'heading',
-        content: 'Frequently Asked Questions'
-      },
-      {
-        type: 'subheading',
-        content: 'What is conversation intelligence?'
-      },
-      {
-        type: 'paragraph',
-        content: 'Conversation intelligence is AI that analyzes sales conversations to surface insights humans miss. It goes beyond recording to understand sentiment, detect buying signals, identify risks, and predict outcomes based on patterns across thousands of interactions.'
-      },
-      {
-        type: 'subheading',
-        content: 'How does conversation intelligence work?'
-      },
-      {
-        type: 'paragraph',
-        content: 'It captures conversations across channels, transcribes with speaker identification, analyzes for signals like sentiment and competitive mentions, recognizes patterns that predict outcomes, and surfaces actionable insights without requiring human review of every interaction.'
-      },
-      {
-        type: 'subheading',
-        content: 'What is the ROI of conversation intelligence?'
-      },
-      {
-        type: 'paragraph',
-        content: 'Organizations typically see 10-20% higher win rates, 25-40% better forecast accuracy, 20-30% faster rep onboarding, and when combined with AI qualification, 60-80% lower cost per qualified lead. Payback usually occurs within 3-6 months.'
-      },
-      {
-        type: 'subheading',
-        content: 'Is conversation intelligence the same as call recording?'
-      },
-      {
-        type: 'paragraph',
-        content: 'No. Call recording captures audio for later review. Conversation intelligence analyzes every conversation automatically, surfaces key moments, tracks trends, and provides insights at scale without requiring humans to listen to recordings.'
-      },
-      {
-        type: 'subheading',
-        content: 'How big is the conversation intelligence market?'
-      },
-      {
-        type: 'paragraph',
-        content: 'According to [Grand View Research (November 2025)](https://www.grandviewresearch.com/industry-analysis/ai-sales-development-representative-market-report), the AI sales development and conversation intelligence market is valued at $3.85 billion in 2024 and projected to reach $32.23 billion by 2033 — a 26.7% CAGR driven by AI advancement and documented enterprise ROI.'
-      }
-    ],
-    relatedPosts: ['roi-conversation-intelligence', 'qualify-leads-faster-ai', 'future-of-ai-in-sales']
+    relatedPosts: ['qualify-leads-faster-ai', 'customer-first-ai-strategy', 'future-of-ai-in-sales']
   },
   {
     id: 3,
@@ -886,7 +644,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI is transforming sales, and the AI sales development and conversation intelligence market is projected to grow from $3.85 billion in 2024 to $32.23 billion by 2033 ([Grand View Research, November 2025](https://www.grandviewresearch.com/industry-analysis/ai-sales-development-representative-market-report)). But the rush to adopt AI should not come at the cost of giving away your competitive intelligence.'
+        content: 'AI is transforming sales, and the AI sales development market is projected to grow from $3.85 billion in 2024 to $32.23 billion by 2033 ([Grand View Research, November 2025](https://www.grandviewresearch.com/industry-analysis/ai-sales-development-representative-market-report)). But the rush to adopt AI should not come at the cost of giving away your competitive intelligence.'
       },
       {
         type: 'paragraph',
@@ -929,7 +687,7 @@ export const blogPosts: BlogPost[] = [
         content: 'No. Encryption protects data from external attackers but does not prevent the platform from using your data to train shared models. You need both encryption and tenant isolation for complete protection.'
       }
     ],
-    relatedPosts: ['customer-first-ai-strategy', 'conversation-intelligence-deep-dive', 'roi-conversation-intelligence']
+    relatedPosts: ['customer-first-ai-strategy', 'future-of-ai-in-sales', 'data-privacy-ai-businesses']
   },
   {
     id: 4,
@@ -1101,7 +859,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'callout',
-        content: 'The AI sales development and conversation intelligence market is growing from $3.85 billion in 2024 to $32.23 billion by 2033 at a 26.7% CAGR ([Grand View Research, November 2025](https://www.grandviewresearch.com/industry-analysis/ai-sales-development-representative-market-report)). Companies that implement AI qualification now will have years of learned patterns and optimized workflows before competitors catch up.'
+        content: 'The AI sales development market is growing from $3.85 billion in 2024 to $32.23 billion by 2033 at a 26.7% CAGR ([Grand View Research, November 2025](https://www.grandviewresearch.com/industry-analysis/ai-sales-development-representative-market-report)). Companies that implement AI qualification now will have years of learned patterns and optimized workflows before competitors catch up.'
       },
       {
         type: 'heading',
@@ -1140,7 +898,7 @@ export const blogPosts: BlogPost[] = [
         content: 'AI can re-engage your entire dormant database simultaneously via SMS or email. At any given time, 3-5% of old leads are back in a buying window. AI identifies and qualifies these without requiring any manual effort from your team.'
       }
     ],
-    relatedPosts: ['roi-conversation-intelligence', 'conversation-intelligence-deep-dive', 'future-of-ai-in-sales']
+    relatedPosts: ['future-of-ai-in-sales', 'qualify-leads-faster-ai', 'data-privacy-ai-businesses']
   },
   {
     id: 5,
@@ -1306,7 +1064,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The AI sales development and conversation intelligence market is growing from $3.85 billion in 2024 to $32.23 billion by 2033 ([Grand View Research, November 2025](https://www.grandviewresearch.com/industry-analysis/ai-sales-development-representative-market-report)). That growth will not come from AI that annoys customers — it will come from AI that genuinely serves them better than human-only alternatives.'
+        content: 'The AI sales development market is growing from $3.85 billion in 2024 to $32.23 billion by 2033 ([Grand View Research, November 2025](https://www.grandviewresearch.com/industry-analysis/ai-sales-development-representative-market-report)). That growth will not come from AI that annoys customers — it will come from AI that genuinely serves them better than human-only alternatives.'
       },
       {
         type: 'quote',
@@ -1353,226 +1111,7 @@ export const blogPosts: BlogPost[] = [
         content: 'AI improves customer experience by responding instantly at any hour, remembering conversation history, providing relevant information based on stated needs, and ensuring qualified buyers quickly reach the right human when ready to purchase.'
       }
     ],
-    relatedPosts: ['qualify-leads-faster-ai', 'roi-conversation-intelligence', 'data-privacy-ai-businesses']
-  },
-  {
-    id: 6,
-    slug: 'roi-conversation-intelligence',
-    title: 'What ROI Can You Expect From Conversation Intelligence?',
-    excerpt: 'Real numbers on conversation intelligence ROI: 60-80% lower cost per qualified lead, 4x better response rates, and the hidden goldmine sitting in your dormant lead database.',
-    category: 'Business Impact',
-    date: '2025-12-23',
-    readTime: '10 min read',
-    author: 'Tom Bauer',
-    authorUrl: '/leadership',
-    metaTitle: 'What ROI to Expect From Conversation Intelligence | SurFox',
-    metaDescription: 'Real ROI numbers from conversation intelligence: 60-80% lower cost per lead, 4x better qualification rates, and the hidden goldmine in your dormant lead database.',
-    lastUpdated: '2026-02-25',
-    authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
-    content: [
-      {
-        type: 'paragraph',
-        content: 'Conversation intelligence platforms represent a significant investment. Like any enterprise software decision, you need to understand the return. But unlike traditional CRM or sales automation, the ROI of conversation intelligence can be harder to quantify - until you know what to measure.'
-      },
-      {
-        type: 'tldr',
-        content: 'Organizations see 10–20% win rate improvements and 60–80% lower cost per qualified lead.\nMIT research: responding within 5 minutes makes you 21x more likely to qualify — AI delivers this by default.\n80% of disqualified leads buy a solution within 24 months — your dormant database is found money.\n10,000 dormant leads → 30–50 qualified appointments from leads you already paid to acquire.\nMost implementations pay back within 3–6 months.'
-      },
-      {
-        type: 'heading',
-        content: 'The Hard Numbers: What the Data Shows'
-      },
-      {
-        type: 'paragraph',
-        content: 'Before we dive into categories, here are the benchmarks that matter. These numbers come from industry research across companies implementing conversation intelligence and AI-powered lead qualification.'
-      },
-      {
-        type: 'table',
-        headers: ['Metric', 'Improvement', 'Source'],
-        rows: [
-          ['Win rate', '+10–20%', '[MarketsandMarkets, 2025](https://www.marketsandmarkets.com/)'],
-          ['Forecast accuracy', '+25–40%', 'Gong platform data; Forrester TEI studies'],
-          ['Rep onboarding speed', '+20–30% faster', '[Deloitte, AI-driven onboarding research](https://www2.deloitte.com/us/en/insights/focus/human-capital-trends.html)'],
-          ['Cost per qualified lead', '60–80% lower', '[MarketsandMarkets, 2025](https://www.marketsandmarkets.com/)'],
-          ['Speed-to-lead advantage', '21x better qualification odds within 5 min', '[MIT / InsideSales.com, 2007](https://www.leadresponsemanagement.org/lrm_study/)'],
-          ['Typical payback period', '3–6 months', 'Forrester Total Economic Impact studies'],
-        ],
-      },
-      {
-        type: 'heading',
-        content: 'Direct Revenue Impact'
-      },
-      {
-        type: 'paragraph',
-        content: 'The most obvious ROI comes from closed deals. Organizations implementing conversation intelligence typically see 10-20% increases in win rates within the first year. This comes from better qualification, earlier risk detection, and more effective sales coaching.'
-      },
-      {
-        type: 'paragraph',
-        content: 'A 15% improvement in win rate for a team closing $10M annually represents $1.5M in additional revenue - typically 10-20x the cost of the platform.'
-      },
-      {
-        type: 'quote',
-        content: 'Our research reveals a fundamental shift in how AI shows up in forward-thinking revenue teams. It\'s no longer a helpful sidekick, but now a strategic partner.\nAmit Bendov, CEO, Gong'
-      },
-      {
-        type: 'heading',
-        content: 'The Hidden ROI: Your Dormant Lead Database'
-      },
-      {
-        type: 'paragraph',
-        content: 'Here is where most businesses leave money on the table. Every organization has a graveyard of old leads - prospects who were contacted months or years ago but never converted. These leads sit in your CRM, untouched, because manual follow-up seems like a waste of expensive human time.'
-      },
-      {
-        type: 'paragraph',
-        content: 'The reality? [SiriusDecisions (now Forrester)](https://www.forrester.com/) found that 80% of leads disqualified by sales go on to purchase a solution within 24 months. And Chet Holmes\' Buyer\'s Pyramid research shows roughly 3% of any market is actively "buying now" at any given time — they just needed to be re-engaged.'
-      },
-      {
-        type: 'callout',
-        content: 'The math: 10,000 dormant leads → AI re-engagement → 300-500 active conversations → 30-50 qualified appointments. That is revenue from leads you already paid to acquire. The resurrection cost is nearly zero compared to new lead generation.'
-      },
-      {
-        type: 'paragraph',
-        content: 'This is found money. Most sales teams ignore their old databases because the manual effort does not justify the return. AI flips that equation entirely - it can re-engage thousands of leads simultaneously, identify the ones showing interest, and only escalate the hot ones to your team.'
-      },
-      {
-        type: 'heading',
-        content: 'Speed-to-Lead Economics'
-      },
-      {
-        type: 'paragraph',
-        content: '[MIT research (Oldroyd/InsideSales.com, 2007)](https://www.leadresponsemanagement.org/lrm_study/) found that responding to leads within 5 minutes makes you 21x more likely to qualify them compared to responding at 30 minutes. [Velocify](https://blog.hubspot.com/sales/speed-to-lead-statistic) found that responding within 1 minute produces a 391% boost in conversions. After an hour, your chances drop dramatically. After 24 hours, that lead is effectively dead.'
-      },
-      {
-        type: 'paragraph',
-        content: 'The problem? Human teams cannot respond in 5 minutes consistently. Reps are on calls, in meetings, at lunch, or asleep. Leads come in at all hours. The math simply does not work without massive headcount.'
-      },
-      {
-        type: 'paragraph',
-        content: 'AI responds in seconds. Not minutes - seconds. It works at 2am on a Saturday. It never takes a lunch break. For speed-sensitive lead qualification, this alone can 4x your conversion rates without adding a single headcount.'
-      },
-      {
-        type: 'heading',
-        content: 'Cost Per Qualified Lead'
-      },
-      {
-        type: 'paragraph',
-        content: 'The traditional model: hire SDRs to manually qualify leads through cold outreach. Each SDR costs $50-80K fully loaded, handles maybe 50-100 meaningful conversations per week, and spends significant time on leads that go nowhere.'
-      },
-      {
-        type: 'paragraph',
-        content: 'The AI model: one system handles thousands of initial conversations simultaneously, qualifies based on actual engagement and intent signals, and only escalates the leads worth human attention. Your team talks exclusively to prospects who have already expressed interest.'
-      },
-      {
-        type: 'callout',
-        content: 'The result: 60-80% lower cost per qualified lead. Not per lead touched - per lead actually qualified and ready for a sales conversation. Your humans spend 100% of their time on high-value activities.'
-      },
-      {
-        type: 'heading',
-        content: 'Time Savings and Efficiency'
-      },
-      {
-        type: 'paragraph',
-        content: 'Reps spend less time on administrative tasks - logging call notes, updating CRM fields, searching for information discussed in previous conversations. This typically recovers 5-10 hours per rep per month, time that can be redirected to selling.'
-      },
-      {
-        type: 'paragraph',
-        content: 'Managers spend less time in one-on-ones reviewing what happened on calls, because the platform surfaces the key moments automatically. Coaching becomes more targeted and more scalable.'
-      },
-      {
-        type: 'quote',
-        content: 'You won\'t lose your sales manager job to AI. You\'ll lose it to a manager who is using AI better.\nRyan Vaillancourt, VP of Sales, Revenue.io'
-      },
-      {
-        type: 'heading',
-        content: 'Forecast Accuracy'
-      },
-      {
-        type: 'paragraph',
-        content: 'Better data on deal health leads to better forecasts. Companies report 25-40% improvements in forecast accuracy after implementing conversation intelligence — with platforms like Gong analyzing 300+ interaction signals per deal to reduce forecast variance from ±15% to ±5%. For revenue leaders, this means fewer surprises and better resource planning.'
-      },
-      {
-        type: 'quote',
-        content: 'Sellers spend a ridiculous amount of time on forecasting. Because 82% of sales activities are now digital, AI has the biggest upside for automating these insights and returning active selling time back to the team.\nSeth Marrs, Research Director, Forrester'
-      },
-      {
-        type: 'heading',
-        content: 'Onboarding and Ramp Time'
-      },
-      {
-        type: 'paragraph',
-        content: 'New reps can review successful calls from top performers, getting coaching at scale. This typically reduces time-to-productivity by 20-30%, a significant advantage in competitive hiring markets.'
-      },
-      {
-        type: 'heading',
-        content: 'Calculating Your ROI'
-      },
-      {
-        type: 'paragraph',
-        content: 'Start with these baseline metrics: How many dormant leads do you have? What is your current response time to new leads? What does each qualified appointment cost you today in terms of rep time and effort? How many leads does your team ignore because follow-up is not worth it?'
-      },
-      {
-        type: 'paragraph',
-        content: 'Then model conservative improvements. Even if AI only resurfaces 2% of your dormant database as qualified opportunities, what is that worth? Even if faster response times only improve qualification by 2x instead of 4x, what does that add to your pipeline?'
-      },
-      {
-        type: 'paragraph',
-        content: 'Most organizations see payback within 3-6 months when they account for the dormant lead opportunity.'
-      },
-      {
-        type: 'heading',
-        content: 'The Intangible Benefits'
-      },
-      {
-        type: 'paragraph',
-        content: 'Some benefits are harder to quantify but equally important: better customer experiences, more confident reps, data-driven coaching cultures, and reduced regrettable attrition. These compound over time.'
-      },
-      {
-        type: 'heading',
-        content: 'Frequently Asked Questions'
-      },
-      {
-        type: 'subheading',
-        content: 'What ROI can I expect from conversation intelligence?'
-      },
-      {
-        type: 'paragraph',
-        content: 'Most organizations see 10-20% improvements in win rates, 60-80% reduction in cost per qualified lead, and significant found revenue from re-engaging dormant lead databases. Payback typically occurs within 3-6 months.'
-      },
-      {
-        type: 'subheading',
-        content: 'How quickly does conversation intelligence pay for itself?'
-      },
-      {
-        type: 'paragraph',
-        content: 'For most implementations, payback occurs within 3-6 months. The fastest ROI comes from dormant lead re-engagement, where you are monetizing leads you have already paid to acquire.'
-      },
-      {
-        type: 'subheading',
-        content: 'What is the ROI of re-engaging old leads?'
-      },
-      {
-        type: 'paragraph',
-        content: 'At any given time, 3-5% of your dormant leads are in an active buying window. For a database of 10,000 old leads, that represents 300-500 potential conversations and 30-50 qualified appointments - from leads that cost you nothing to re-acquire.'
-      },
-      {
-        type: 'subheading',
-        content: 'How does conversation intelligence improve win rates?'
-      },
-      {
-        type: 'paragraph',
-        content: 'Conversation intelligence improves win rates by surfacing deal risks earlier, identifying the language patterns and behaviors that correlate with closed deals, and enabling coaches to replicate what top performers do. Organizations implementing conversation intelligence typically see 10-20% higher win rates within the first year because reps get better faster and bad deals get flagged before they waste AE time.'
-      },
-      {
-        type: 'subheading',
-        content: 'What metrics should I track to measure conversation intelligence ROI?'
-      },
-      {
-        type: 'paragraph',
-        content: 'Track win rate, cost per qualified lead, forecast accuracy (variance between pipeline and actual closed revenue), rep ramp time, and dormant lead reactivation rate. Before implementation, establish baselines for each so you can measure the delta. Most organizations see the biggest early wins in forecast accuracy and lead cost — both are measurable within the first quarter.'
-      }
-    ],
-    relatedPosts: ['conversation-intelligence-deep-dive', 'future-of-ai-in-sales', 'qualify-leads-faster-ai']
+    relatedPosts: ['qualify-leads-faster-ai', 'data-privacy-ai-businesses', 'future-of-ai-in-sales']
   },
   {
     id: 8,
@@ -1824,7 +1363,7 @@ export const blogPosts: BlogPost[] = [
         content: 'Not necessarily replace-restructure. The winning model is AI handling top-of-funnel qualification and humans handling qualified conversations. This typically means fewer SDRs (or SDRs evolved into closers) supported by AI that handles the volume work. Same pipeline, 60-80% lower cost.'
       }
     ],
-    relatedPosts: ['reduce-sdr-headcount-ai', 'future-of-ai-in-sales', 'roi-conversation-intelligence']
+    relatedPosts: ['reduce-sdr-headcount-ai', 'future-of-ai-in-sales', 'ai-sdr-vs-hiring-sdr-roi-2026']
   },
   {
     id: 9,
@@ -2063,7 +1602,7 @@ export const blogPosts: BlogPost[] = [
         content: 'SMS outperforms every other channel for reactivation. With a 98% open rate versus email\'s 20%, your message actually gets seen. Response rates of 45% mean leads actually engage in conversation. SMS feels personal and conversational, making it ideal for re-engaging prospects who went cold.'
       }
     ],
-    relatedPosts: ['roi-conversation-intelligence', 'qualify-leads-faster-ai', 'ai-sdr-vs-hiring-sdr-roi-2026']
+    relatedPosts: ['qualify-leads-faster-ai', 'ai-sdr-vs-hiring-sdr-roi-2026', 'future-of-ai-in-sales']
   },
   {
     id: 10,

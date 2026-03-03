@@ -207,7 +207,7 @@ export default function Integrations() {
               { 
                 icon: Phone, 
                 name: 'Voice Transcription', 
-                desc: 'Ingest call recordings and transcribe them for unified conversation intelligence.'
+                desc: 'Ingest call recordings and transcribe them for unified lead intelligence.'
               }
             ].map((integration, i) => (
               <motion.div

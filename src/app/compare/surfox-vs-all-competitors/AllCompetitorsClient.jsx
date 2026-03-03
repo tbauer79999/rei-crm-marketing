@@ -14,7 +14,7 @@ export default function SurFoxGeneralComparison() {
       description: 'Built for message volume, not conversation quality. High spam risk, low conversion rates.',
       icon: MessageSquare,
       limitations: [
-        'No AI conversation intelligence',
+        'No AI lead intelligence',
         'Static messaging templates',
         'Manual lead qualification',
         'High unsubscribe rates'
@@ -95,7 +95,7 @@ export default function SurFoxGeneralComparison() {
     {
       area: 'Business Intelligence',
       traditional: 'Basic metrics, limited insights',
-      surfox: 'Deep psychological analytics, conversation intelligence',
+      surfox: 'Deep psychological analytics, behavioral intelligence',
       impact: 'Strategic insights into customer psychology and behavior patterns'
     }
   ];
@@ -118,7 +118,7 @@ export default function SurFoxGeneralComparison() {
     },
     {
       factor: 'Technical Architecture',
-      description: 'Purpose-built for conversation intelligence, not adapted from other use cases',
+      description: 'Purpose-built for AI lead qualification, not adapted from other use cases',
       icon: Zap,
     }
   ];
@@ -322,7 +322,7 @@ export default function SurFoxGeneralComparison() {
                   'Adaptive learning that improves with every conversation',
                   'Automated qualification based on behavioral indicators',
                   'Intelligent escalation when prospects show buying intent',
-                  'Conversation intelligence that maintains context',
+                  'AI that maintains full conversation context',
                   'Psychology-based personalization at scale'
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-start text-sm text-gray-700">

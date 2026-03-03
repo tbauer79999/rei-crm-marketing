@@ -446,7 +446,7 @@ export default function HowItWorksClient() {
                 icon: TrendingUp,
                 title: "Adaptive Learning Engine", 
                 description: "Every conversation teaches our AI more about human psychology. The more it learns, the better it gets at reading people.",
-                features: ["Pattern recognition", "Behavioral clustering", "Outcome correlation", "Psychology mapping", "Conversation intelligence"]
+                features: ["Pattern recognition", "Behavioral clustering", "Outcome correlation", "Psychology mapping", "Behavioral intelligence"]
               },
               {
                 icon: Target,

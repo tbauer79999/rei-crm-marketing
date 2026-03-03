@@ -9,7 +9,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "SurFox AI Messaging Intelligence",
-    "description": "AI-powered sales automation and conversation intelligence platform that turns cold outreach into qualified conversations.",
+    "description": "AI-powered sales automation and lead qualification platform that turns cold outreach into qualified conversations.",
 "brand": {
   "@type": "Brand",
   "name": "SurFox AI"

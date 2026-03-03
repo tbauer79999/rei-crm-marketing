@@ -13,7 +13,7 @@ export default function SurFoxVsSmarterContact() {
       icon: Brain,
       features: [
         { name: 'Response Generation', surfox: 'SurFox AI creates unique conversations for each lead', smarter: 'Template-based automation only' },
-        { name: 'Conversation Intelligence', surfox: 'SurFox AI remembers and learns from every conversation', smarter: 'Basic contact management, no memory' },
+        { name: 'Lead Memory & Learning', surfox: 'SurFox AI remembers and learns from every conversation', smarter: 'Basic contact management, no memory' },
         { name: 'Lead Qualification', surfox: 'SurFox AI automatically scores and prioritizes hot leads', smarter: 'Manual qualification required' },
         { name: 'Message Personalization', surfox: 'SurFox AI adapts tone and approach per prospect', smarter: 'Fixed template variations' },
         { name: 'Learning Capability', surfox: 'Gets smarter with every conversation', smarter: 'No learning or adaptation' }

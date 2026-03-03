@@ -21,7 +21,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
       'AI SDR ROI',
       'SMS lead qualification',
       'automated lead qualification',
-      'conversation intelligence software',
+      'AI lead qualification software',
       'AI sales automation',
       'outbound AI SDR',
       'lead scoring software',
@@ -36,8 +36,8 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   about: {
     title: 'About SurFox AI - Building the Future of Sales AI',
-    description: 'Learn about SurFox AI\'s mission to transform sales through AI-powered conversation intelligence. Meet our team and discover our vision for the future of customer engagement.',
-    keywords: ['about SurFox AI', 'AI sales company', 'conversation intelligence company', 'sales technology'],
+    description: 'Learn about SurFox AI\'s mission to transform sales through AI-powered lead qualification. Meet our team and discover our vision for the future of AI sales development.',
+    keywords: ['about SurFox AI', 'AI sales company', 'AI SDR company', 'sales technology'],
     path: '/about',
   },
   contact: {
@@ -55,7 +55,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   pricing: {
     title: 'Pricing - Flexible Plans for Every Business',
     description: 'Transparent pricing for SurFox AI lead qualification. Choose from Starter, Professional, or Enterprise plans. Start free, scale as you grow.',
-    keywords: ['SurFox AI pricing', 'AI sales pricing', 'lead qualification pricing', 'conversation intelligence pricing'],
+    keywords: ['SurFox AI pricing', 'AI sales pricing', 'lead qualification pricing', 'AI SDR pricing'],
     path: '/pricing',
   },
   security: {
@@ -73,7 +73,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   blog: {
     title: 'Insights - AI, Sales Strategy & Product Updates',
     description: 'Expert insights on AI, sales intelligence, and the future of customer engagement. Stay updated with the latest from SurFox AI.',
-    keywords: ['AI sales blog', 'conversation intelligence insights', 'sales strategy', 'AI technology'],
+    keywords: ['AI sales blog', 'AI SDR insights', 'sales strategy', 'AI technology'],
     path: '/blog',
   },
   demo: {
@@ -127,7 +127,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   'compare-gohighlevel': {
     title: 'SurFox AI vs GoHighLevel: Which is Right for You?',
     description: 'Compare SurFox AI vs GoHighLevel. Built for conversations, not configured for chaos. Setup in minutes vs weeks, 50-point psychological scoring, and AI that actually learns.',
-    keywords: ['SurFox vs GoHighLevel', 'GoHighLevel alternative', 'GHL alternative', 'AI lead qualification', 'conversation intelligence', 'sales automation'],
+    keywords: ['SurFox vs GoHighLevel', 'GoHighLevel alternative', 'GHL alternative', 'AI lead qualification', 'AI SDR platform', 'sales automation'],
     path: '/compare/surfox-vs-gohighlevel',
   },
   'compare-spara': {
@@ -146,7 +146,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
       'spara vs salesmonk',
       'spara comparison',
       'spara ai comparison',
-      'conversation intelligence software',
+      'AI lead qualification software',
     ],
     path: '/compare/surfox-vs-spara',
   },
@@ -176,7 +176,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   'compare-smarter-contact': {
     title: 'SurFox AI vs Smarter Contact: AI Conversations vs Batch SMS',
-    description: 'Compare SurFox AI vs Smarter Contact. SurFox qualifies leads with psychology AI. Smarter Contact sends batch messages without conversation intelligence.',
+    description: 'Compare SurFox AI vs Smarter Contact. SurFox qualifies leads with psychology AI that learns and adapts. Smarter Contact sends batch messages without AI qualification.',
     keywords: ['SurFox vs Smarter Contact', 'Smarter Contact alternative', 'AI SMS', 'real estate marketing', 'lead qualification'],
     path: '/compare/surfox-vs-smarter-contact',
   },
@@ -205,16 +205,16 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/how-it-works',
   },
   roi: {
-    title: 'ROI Calculator: What ROI From Conversation Intelligence? Real Numbers (2026)',
+    title: 'ROI Calculator: What ROI From AI Lead Qualification? Real Numbers (2026)',
     description: '60-80% lower cost per lead. 4x better response rates. Found revenue from dormant databases. Calculate your actual ROI from AI lead qualification - free calculator with real benchmarks.',
     keywords: [
-      'roi of conversation intelligence',
-      'conversation intelligence roi calculator',
-      'expected roi conversation intelligence software',
+      'ai sdr roi',
+      'ai sdr roi calculator',
+      'expected roi ai lead qualification',
       'ai sdr roi calculator',
       'reduce sdr headcount roi',
-      'what is the roi of implementing conversation intelligence',
-      'conversation intelligence technology roi',
+      'roi of ai lead qualification software',
+      'ai sales development roi',
       'ai lead qualification roi',
     ],
     path: '/roi',

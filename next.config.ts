@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/blog/conversation-intelligence-deep-dive',
+        destination: '/blog/ai-sdr-vs-hiring-sdr-roi-2026',
+        permanent: true,
+      },
+      {
+        source: '/blog/roi-conversation-intelligence',
+        destination: '/roi',
+        permanent: true,
+      },
+      {
         source: '/compare/spara-vs-qualified',
         destination: '/compare/surfox-vs-spara?ref=spara-qualified',
         permanent: false,

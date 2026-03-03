@@ -101,7 +101,7 @@ export default function GoHighLevelClient() {
                 </div>
                 <div className="text-left">
                   <div className="text-2xl font-semibold text-navy">SurFox AI</div>
-                  <div className="text-sm text-gray-600">Conversation Intelligence</div>
+                  <div className="text-sm text-gray-600">AI Lead Qualification</div>
                 </div>
               </div>
 

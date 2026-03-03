@@ -14,7 +14,7 @@ export default function MeeraAIClient() {
       features: [
         { name: 'Lead Scoring', surfox: 'AI scores every lead based on engagement, intent signals, and psychological patterns', meera: 'No lead scoring - just transfers leads to agents regardless of quality' },
         { name: 'Psychological Analysis', surfox: 'Reads conversation tone, objection patterns, and buying signals', meera: 'No psychological layer - purely transactional call transfers' },
-        { name: 'Conversation Insights', surfox: 'Deep analysis of what makes each lead tick and when they are ready', meera: 'No conversation intelligence - just gets them on a call' },
+        { name: 'Conversation Insights', surfox: 'Deep analysis of what makes each lead tick and when they are ready', meera: 'No behavioral analysis - just gets them on a call' },
         { name: 'Priority Ranking', surfox: 'Ranks leads by likelihood to close so you call the hottest ones first', meera: 'All leads treated equally - you figure out who matters' },
         { name: 'Learning AI', surfox: 'Gets smarter with every conversation - learns what works for your business', meera: 'Static scripts - no learning or improvement over time' }
       ]
