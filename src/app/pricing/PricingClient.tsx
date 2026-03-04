@@ -82,10 +82,7 @@ export default function PricingClient() {
                     <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
                     1,000 new messages per month
                   </div>
-                  <div className="text-sm text-gray-700 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
-                    Unlimited follow-up conversations
-                  </div>
+
                   <div className="text-sm text-gray-700 flex items-center mt-1">
                     <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
                     1 team member account
@@ -166,10 +163,7 @@ export default function PricingClient() {
                     <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
                     10,000 new messages per month
                   </div>
-                  <div className="text-sm text-gray-700 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
-                    Unlimited follow-up conversations
-                  </div>
+
                   <div className="text-sm text-gray-700 flex items-center mt-1">
                     <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
                     5 team member accounts
@@ -248,10 +242,7 @@ export default function PricingClient() {
                     <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
                     50,000+ new messages per month
                   </div>
-                  <div className="text-sm text-gray-700 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
-                    Unlimited follow-up conversations
-                  </div>
+
                   <div className="text-sm text-gray-700 flex items-center mt-1">
                     <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
                     15+ team member accounts
