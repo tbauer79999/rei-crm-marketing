@@ -206,7 +206,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   roi: {
     title: 'AI SDR ROI Calculator: Real Numbers & Benchmarks (2026)',
-    description: '60-80% lower cost per lead. 4x better response rates. Found revenue from dormant databases. Calculate your ROI from AI lead qualification — free, with real benchmarks.',
+    description: '60-80% lower cost per lead. 4x better response rates. Found revenue from dormant databases. Calculate your ROI from AI lead qualification - free, with real benchmarks.',
     keywords: [
       'ai sdr roi',
       'ai sdr roi calculator',

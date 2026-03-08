@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s | SurFox',
     default: 'SurFox AI | AI SDR Platform for SMS Lead Qualification',
   },
-  description: 'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically — 60–80% lower cost per lead. Your team only talks to hot prospects.',
+  description: 'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
   keywords: ['AI SDR', 'AI SDR platform', 'SMS lead qualification', 'lead qualification', 'automated lead qualification', 'AI sales development', 'lead scoring', 'outbound sales AI'],
   authors: [{ name: 'SurFox Team' }],
   creator: 'SurFox',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.getsurfox.com",
     title: 'SurFox | AI SDR Platform for SMS Lead Qualification',
-    description: 'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically — 60–80% lower cost per lead. Your team only talks to hot prospects.',
+    description: 'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
     locale: 'en_US',
   },
   twitter: {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     site: "@getSurFox",
     creator: "@getSurFox",
     title: 'SurFox AI | AI SDR Platform for SMS Lead Qualification',
-    description: 'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically — 60–80% lower cost per lead. Your team only talks to hot prospects.',
+    description: 'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
   },
   robots: {
     index: true,

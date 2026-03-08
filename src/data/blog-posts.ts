@@ -53,9 +53,9 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'SDRs cost $80-120K fully loaded. AI cuts that by 60-80% while improving response times 4x. Real math on reducing sales headcount without sacrificing pipeline quality.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     howToSteps: [
-      { name: 'Start with Low-Value Lead Sources', text: 'Begin with aged leads, purchased lists, and old event signups — leads your team has already written off. Let AI qualify them with no risk to your active pipeline.' },
+      { name: 'Start with Low-Value Lead Sources', text: 'Begin with aged leads, purchased lists, and old event signups - leads your team has already written off. Let AI qualify them with no risk to your active pipeline.' },
       { name: 'Let AI Qualify, Humans Close', text: 'Configure AI to handle initial outreach and qualification conversations. When a lead shows genuine buying signals, AI escalates to your human closer with full conversation context.' },
       { name: 'Measure What Matters', text: 'Track response rates, qualification accuracy, and time-to-qualified-lead. Compare AI performance against your historical human benchmarks.' },
       { name: 'Expand to More Lead Sources', text: 'Once the model is proven on low-value sources, expand to inbound leads, higher-value lists, and eventually all first-touch qualification.' },
@@ -63,11 +63,11 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: 'paragraph',
-        content: 'The math on SDRs is brutal. Base salary of $50-60K, plus benefits, tools, and management overhead, adds up to $98,000-$173,000 fully loaded per year — according to 2025 benchmarks from [Martal Group](https://martal.ca/2025-sdr-salary-guide/) and industry analysts. Average SDR tenure: 22 months ([Bridge Group, 2025](https://www.bridgegroupinc.com/blog/)). Ramp time: 3-4 months. That\'s a lot of cost for someone who spends 60% of their time on tasks that aren\'t actually selling ([Salesforce State of Sales, 7th Edition, 2025](https://www.salesforce.com/resources/research-reports/state-of-sales/)). Here\'s how companies are using AI to handle initial lead qualification - keeping quality high while cutting headcount.'
+        content: 'The math on SDRs is brutal. Base salary of $50-60K, plus benefits, tools, and management overhead, adds up to $98,000-$173,000 fully loaded per year - according to 2025 benchmarks from [Martal Group](https://martal.ca/2025-sdr-salary-guide/) and industry analysts. Average SDR tenure: 22 months ([Bridge Group, 2025](https://www.bridgegroupinc.com/blog/)). Ramp time: 3-4 months. That\'s a lot of cost for someone who spends 60% of their time on tasks that aren\'t actually selling ([Salesforce State of Sales, 7th Edition, 2025](https://www.salesforce.com/resources/research-reports/state-of-sales/)). Here\'s how companies are using AI to handle initial lead qualification - keeping quality high while cutting headcount.'
       },
       {
         type: 'tldr',
-        content: 'SDRs cost $98K–$173K fully loaded per year — not just the $50–60K on the offer letter.\n60% of SDR time goes to non-selling tasks; AI handles all of it at a fraction of the cost.\nSMS qualification drives 98% open rates vs ~20% for email — leads actually respond within 90 seconds.\nThe hybrid model cuts cost per qualified lead from ~$83 to ~$10 (88% reduction).\nStart with your dormant CRM leads — zero risk, pure found revenue.'
+        content: 'SDRs cost $98K–$173K fully loaded per year - not just the $50–60K on the offer letter.\n60% of SDR time goes to non-selling tasks; AI handles all of it at a fraction of the cost.\nSMS qualification drives 98% open rates vs ~20% for email - leads actually respond within 90 seconds.\nThe hybrid model cuts cost per qualified lead from ~$83 to ~$10 (88% reduction).\nStart with your dormant CRM leads - zero risk, pure found revenue.'
       },
       {
         type: 'heading',
@@ -75,7 +75,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'When you hire an SDR, you\'re not just paying their salary. The fully loaded cost includes base salary ($50-60K, with a median of $56K according to [Bridge Group\'s 2025 SDR benchmarks](https://www.bridgegroupinc.com/blog/)), benefits and taxes (25-30%), tools including CRM, dialer, email platforms, and data subscriptions ($3,000-$8,400/year), plus management overhead — typically 10-15 hours per week of a manager\'s time valued at $10,000-$25,000 annually. Add it all up and you\'re looking at $98,000-$173,000 per year per SDR ([Martal Group, 2025](https://martal.ca/2025-sdr-salary-guide/)).'
+        content: 'When you hire an SDR, you\'re not just paying their salary. The fully loaded cost includes base salary ($50-60K, with a median of $56K according to [Bridge Group\'s 2025 SDR benchmarks](https://www.bridgegroupinc.com/blog/)), benefits and taxes (25-30%), tools including CRM, dialer, email platforms, and data subscriptions ($3,000-$8,400/year), plus management overhead - typically 10-15 hours per week of a manager\'s time valued at $10,000-$25,000 annually. Add it all up and you\'re looking at $98,000-$173,000 per year per SDR ([Martal Group, 2025](https://martal.ca/2025-sdr-salary-guide/)).'
       },
       {
         type: 'paragraph',
@@ -83,7 +83,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'callout',
-        content: 'The hidden killer: [Bridge Group\'s 2025 research](https://www.bridgegroupinc.com/blog/) puts average SDR tenure at 1.9 years — approximately 22 months. That means you\'re constantly in hiring and training cycles — paying to ramp new people who won\'t hit full productivity for 3-4 months. And when they leave, replacing one SDR costs an estimated $115,000 in recruiting, training, and lost productivity ([Rain Group](https://www.rainsalestraining.com/)).'
+        content: 'The hidden killer: [Bridge Group\'s 2025 research](https://www.bridgegroupinc.com/blog/) puts average SDR tenure at 1.9 years - approximately 22 months. That means you\'re constantly in hiring and training cycles - paying to ramp new people who won\'t hit full productivity for 3-4 months. And when they leave, replacing one SDR costs an estimated $115,000 in recruiting, training, and lost productivity ([Rain Group](https://www.rainsalestraining.com/)).'
       },
       {
         type: 'heading',
@@ -127,7 +127,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'quote',
-        content: 'AI SDR agents are not \'set it and forget it.\' They require consistent oversight, feedback, and performance reviews — just like their human counterparts.\nMaura Rivera, CMO, Qualified'
+        content: 'AI SDR agents are not \'set it and forget it.\' They require consistent oversight, feedback, and performance reviews - just like their human counterparts.\nMaura Rivera, CMO, Qualified'
       },
       {
         type: 'heading',
@@ -151,7 +151,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'When it comes to AI-powered lead qualification, the channel matters. SMS has a 98% open rate compared to roughly 20% true engagement for email ([Gartner](https://www.gartner.com/en/digital-markets/insights/the-future-of-sales-follow-ups-text-messages)). That means your message actually gets seen. Response rates hit 45% for SMS compared to 1-2% for cold outreach email — and the average text gets a response within 90 seconds versus 90 minutes for email ([CTIA, 2025](https://www.ctia.org/)). People actually text back. They don\'t respond to chatbots or email sequences the same way.'
+        content: 'When it comes to AI-powered lead qualification, the channel matters. SMS has a 98% open rate compared to roughly 20% true engagement for email ([Gartner](https://www.gartner.com/en/digital-markets/insights/the-future-of-sales-follow-ups-text-messages)). That means your message actually gets seen. Response rates hit 45% for SMS compared to 1-2% for cold outreach email - and the average text gets a response within 90 seconds versus 90 minutes for email ([CTIA, 2025](https://www.ctia.org/)). People actually text back. They don\'t respond to chatbots or email sequences the same way.'
       },
       {
         type: 'paragraph',
@@ -169,7 +169,7 @@ export const blogPosts: BlogPost[] = [
           ['Leads qualified/month', '~300', '500+'],
           ['Cost per qualified lead', '~$83', '~$10'],
           ['Coverage hours', '8 hrs/day, weekdays', '24/7/365'],
-          ['Cost reduction', '—', '88% lower per qualified lead'],
+          ['Cost reduction', '-', '88% lower per qualified lead'],
         ],
       },
       {
@@ -188,10 +188,10 @@ export const blogPosts: BlogPost[] = [
         type: 'list',
         ordered: true,
         items: [
-          'Start with your lowest-value lead sources — aged leads, purchased lists, old event signups your team has already written off. Let AI qualify them. No risk because you weren\'t working them anyway. If AI finds opportunities in your dead database, that\'s pure found revenue.',
-          'Let AI qualify, humans close — configure AI to handle initial outreach and qualification conversations. When a lead shows genuine buying signals, AI escalates to your human closer with full context. Your closer walks into every conversation prepared, talking to someone who actually wants to talk.',
-          'Measure what matters — track response rates, qualification accuracy, and time-to-qualified-lead. Compare AI performance against your historical human benchmarks. Most companies see improvements within the first week.',
-          'Expand to more lead sources — once you\'ve proven the model on low-value sources, expand to inbound leads, higher-value lists, and eventually all first-touch qualification. Each expansion is de-risked by the data you\'ve already collected.',
+          'Start with your lowest-value lead sources - aged leads, purchased lists, old event signups your team has already written off. Let AI qualify them. No risk because you weren\'t working them anyway. If AI finds opportunities in your dead database, that\'s pure found revenue.',
+          'Let AI qualify, humans close - configure AI to handle initial outreach and qualification conversations. When a lead shows genuine buying signals, AI escalates to your human closer with full context. Your closer walks into every conversation prepared, talking to someone who actually wants to talk.',
+          'Measure what matters - track response rates, qualification accuracy, and time-to-qualified-lead. Compare AI performance against your historical human benchmarks. Most companies see improvements within the first week.',
+          'Expand to more lead sources - once you\'ve proven the model on low-value sources, expand to inbound leads, higher-value lists, and eventually all first-touch qualification. Each expansion is de-risked by the data you\'ve already collected.',
         ],
       },
       {
@@ -240,7 +240,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'quote',
-        content: 'AI augments more than it replaces — it transforms job descriptions rather than eliminating positions entirely. Workflows and tasks aren\'t jobs.\nJ.P. Gownder, Principal Analyst, Forrester'
+        content: 'AI augments more than it replaces - it transforms job descriptions rather than eliminating positions entirely. Workflows and tasks aren\'t jobs.\nJ.P. Gownder, Principal Analyst, Forrester'
       },
       {
         type: 'heading',
@@ -256,7 +256,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'callout',
-        content: 'The hybrid AI + human model — where AI handles qualification at scale and humans focus on qualified conversations — is becoming the dominant structure for efficient sales teams. Companies that implement it now will have years of learned patterns and optimized workflows before competitors make the transition.'
+        content: 'The hybrid AI + human model - where AI handles qualification at scale and humans focus on qualified conversations - is becoming the dominant structure for efficient sales teams. Companies that implement it now will have years of learned patterns and optimized workflows before competitors make the transition.'
       }
     ],
     relatedPosts: ['future-of-ai-in-sales', 'qualify-leads-faster-ai', 'data-privacy-ai-businesses']
@@ -275,10 +275,10 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'AI is automating SDR tasks like outbound prospecting and lead qualification. Learn what this means for sales teams, career paths, and hiring decisions.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     howToSteps: [
       { name: 'Deploy AI for Inbound Response', text: 'Start by letting AI handle all initial inbound inquiries. AI responds within seconds, at any hour, catching leads at peak intent. Measure qualification rates against your historical human baseline.' },
-      { name: 'Let AI Handle Lead Qualification', text: 'Configure AI to conduct qualifying conversations — asking the right questions, handling objections, and scoring intent — before routing leads to human reps. This ensures AEs only talk to prospects who have demonstrated genuine interest.' },
+      { name: 'Let AI Handle Lead Qualification', text: 'Configure AI to conduct qualifying conversations - asking the right questions, handling objections, and scoring intent - before routing leads to human reps. This ensures AEs only talk to prospects who have demonstrated genuine interest.' },
       { name: 'Expand AI to Outbound Prospecting', text: 'Once AI performance is validated on inbound, expand to outbound sequences and dormant database re-engagement. AI personalizes at scale and handles follow-up consistently, freeing your team for strategic relationship work.' },
     ],
     content: [
@@ -288,7 +288,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'tldr',
-        content: 'AI now handles the core SDR tasks: research, personalization, qualification, and scheduling — 24/7.\nResponding within 5 minutes makes you 21x more likely to qualify a lead than responding at 30 minutes.\nFully loaded SDR cost is $98K–$173K/year with 22-month average tenure before departure or promotion.\nCompanies using AI for qualification report 60–80% lower cost per qualified lead.\nThe transition works best phased: inbound response first, then qualification, then outbound.'
+        content: 'AI now handles the core SDR tasks: research, personalization, qualification, and scheduling - 24/7.\nResponding within 5 minutes makes you 21x more likely to qualify a lead than responding at 30 minutes.\nFully loaded SDR cost is $98K–$173K/year with 22-month average tenure before departure or promotion.\nCompanies using AI for qualification report 60–80% lower cost per qualified lead.\nThe transition works best phased: inbound response first, then qualification, then outbound.'
       },
       {
         type: 'heading',
@@ -348,7 +348,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'A fully loaded SDR costs $98,000 to $173,000 annually when you factor in base salary ($50-60K median per [Bridge Group, 2025](https://www.bridgegroupinc.com/blog/)), benefits, tools, management overhead, and training. They typically generate 10-15 qualified meetings per month in SMB and mid-market. Average tenure is 1.9 years (22 months) before promotion or departure — and replacing one costs approximately $115,000 ([Rain Group](https://www.rainsalestraining.com/)).'
+        content: 'A fully loaded SDR costs $98,000 to $173,000 annually when you factor in base salary ($50-60K median per [Bridge Group, 2025](https://www.bridgegroupinc.com/blog/)), benefits, tools, management overhead, and training. They typically generate 10-15 qualified meetings per month in SMB and mid-market. Average tenure is 1.9 years (22 months) before promotion or departure - and replacing one costs approximately $115,000 ([Rain Group](https://www.rainsalestraining.com/)).'
       },
       {
         type: 'paragraph',
@@ -356,7 +356,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'quote',
-        content: 'Productivity is no longer measured by output per person, but by how effectively teams leverage AI agents. The leaders moving fastest are not adding headcount — they are designing systems where each specialist can deliver more with intelligent tools.\nKos Chekanov, CEO, Artkai'
+        content: 'Productivity is no longer measured by output per person, but by how effectively teams leverage AI agents. The leaders moving fastest are not adding headcount - they are designing systems where each specialist can deliver more with intelligent tools.\nKos Chekanov, CEO, Artkai'
       },
       {
         type: 'callout',
@@ -376,7 +376,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'quote',
-        content: 'The SDR role needs real work, real empathy, and real insight — not just canned demos. Technology should support humans, not try to replace the entire sales process.\nTrish Bertuzzi, Author, The Sales Development Playbook'
+        content: 'The SDR role needs real work, real empathy, and real insight - not just canned demos. Technology should support humans, not try to replace the entire sales process.\nTrish Bertuzzi, Author, The Sales Development Playbook'
       },
       {
         type: 'heading',
@@ -390,9 +390,9 @@ export const blogPosts: BlogPost[] = [
         type: 'list',
         ordered: true,
         items: [
-          'Phase 1 — Inbound response: deploy AI to handle initial inbound inquiries. This is lowest risk and highest impact because speed-to-lead matters enormously and AI can respond instantly.',
-          'Phase 2 — Lead qualification: let AI qualify leads through conversation before routing to human reps. This filters out unqualified leads and ensures AEs spend time on real opportunities.',
-          'Phase 3 — Outbound prospecting: once AI performance is validated on inbound, expand to outbound sequences. AI can personalize at scale and handle objections, freeing your team for strategic outreach.',
+          'Phase 1 - Inbound response: deploy AI to handle initial inbound inquiries. This is lowest risk and highest impact because speed-to-lead matters enormously and AI can respond instantly.',
+          'Phase 2 - Lead qualification: let AI qualify leads through conversation before routing to human reps. This filters out unqualified leads and ensures AEs spend time on real opportunities.',
+          'Phase 3 - Outbound prospecting: once AI performance is validated on inbound, expand to outbound sequences. AI can personalize at scale and handle objections, freeing your team for strategic outreach.',
         ],
       },
       {
@@ -472,7 +472,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'Most AI platforms share your data across customers. Learn about tenant isolation, data privacy risks, and how to protect your sales intelligence from competitors.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     content: [
       {
         type: 'paragraph',
@@ -480,7 +480,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'tldr',
-        content: 'Most AI platforms aggregate all customer data to train shared models — including data from your direct competitors.\nPooled learning means your objection handling, sales playbooks, and competitive wins train a model everyone shares.\nEncryption protects from external attackers — only tenant isolation prevents the platform from misusing your data.\nAsk vendors directly: "Is our data used to train models for other customers?" Vague answers are a red flag.\nTrue data deletion is only possible with tenant-isolated architectures — pooled model patterns persist even after deletion.'
+        content: 'Most AI platforms aggregate all customer data to train shared models - including data from your direct competitors.\nPooled learning means your objection handling, sales playbooks, and competitive wins train a model everyone shares.\nEncryption protects from external attackers - only tenant isolation prevents the platform from misusing your data.\nAsk vendors directly: "Is our data used to train models for other customers?" Vague answers are a red flag.\nTrue data deletion is only possible with tenant-isolated architectures - pooled model patterns persist even after deletion.'
       },
       {
         type: 'paragraph',
@@ -504,7 +504,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'quote',
-        content: 'A company\'s AI strategy is only as good as its data strategy. The AI revolution wouldn\'t exist without the power of all that data — but who controls that data determines who captures the value.\nParker Harris, Co-Founder & CTO, Salesforce'
+        content: 'A company\'s AI strategy is only as good as its data strategy. The AI revolution wouldn\'t exist without the power of all that data - but who controls that data determines who captures the value.\nParker Harris, Co-Founder & CTO, Salesforce'
       },
       {
         type: 'heading',
@@ -520,7 +520,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'quote',
-        content: 'If you rely on generic models through an API, you are effectively renting intelligence. You gain capability, but you don\'t capture the value of the firm\'s tacit knowledge. If you fail to encode proprietary cognition into systems you control, you leak enterprise value to vendors — and fund the development of your future competitors.\nWorld Economic Forum, Davos 2026 Strategic Intelligence'
+        content: 'If you rely on generic models through an API, you are effectively renting intelligence. You gain capability, but you don\'t capture the value of the firm\'s tacit knowledge. If you fail to encode proprietary cognition into systems you control, you leak enterprise value to vendors - and fund the development of your future competitors.\nWorld Economic Forum, Davos 2026 Strategic Intelligence'
       },
       {
         type: 'heading',
@@ -703,11 +703,11 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'AI lead qualification costs 60-80% less than human outreach. Learn how to qualify leads in seconds, not hours, and stop wasting time on prospects who will never buy.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     howToSteps: [
-      { name: 'Define What Qualified Means', text: 'Identify the characteristics your best customers share — budget mentions, timeline urgency, decision-maker involvement — so AI knows exactly what signals to look for.' },
+      { name: 'Define What Qualified Means', text: 'Identify the characteristics your best customers share - budget mentions, timeline urgency, decision-maker involvement - so AI knows exactly what signals to look for.' },
       { name: 'Let AI Handle Initial Engagement', text: 'Configure AI to handle all top-of-funnel outreach, qualifying questions, and common objection handling automatically.' },
-      { name: 'Set Escalation Triggers', text: 'Define what makes a lead ready for human attention — the combination of signals that indicates genuine buying intent.' },
+      { name: 'Set Escalation Triggers', text: 'Define what makes a lead ready for human attention - the combination of signals that indicates genuine buying intent.' },
       { name: 'Prioritize Ruthlessly', text: 'Use AI-generated qualification scores to focus human reps exclusively on leads with the highest conversion probability.' },
     ],
     content: [
@@ -717,7 +717,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'tldr',
-        content: 'The average company responds to leads in 42–47 hours; AI responds in seconds — at the moment of peak buyer intent.\nMIT research: responding within 5 minutes makes you 21x more likely to qualify than waiting 30 minutes.\nAI qualification costs 60–80% less per qualified lead than human-led outreach.\n80% of "not ready" leads buy within 24 months — your dormant CRM is an untapped revenue source.\n10,000 dormant leads → AI re-engagement → 30–50 qualified appointments at near-zero cost.'
+        content: 'The average company responds to leads in 42–47 hours; AI responds in seconds - at the moment of peak buyer intent.\nMIT research: responding within 5 minutes makes you 21x more likely to qualify than waiting 30 minutes.\nAI qualification costs 60–80% less per qualified lead than human-led outreach.\n80% of "not ready" leads buy within 24 months - your dormant CRM is an untapped revenue source.\n10,000 dormant leads → AI re-engagement → 30–50 qualified appointments at near-zero cost.'
       },
       {
         type: 'heading',
@@ -733,7 +733,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'callout',
-        content: 'The average company responds to leads in 42-47 hours ([Lead Connect / ServiceBell, 2024-25](https://prospeo.io/s/average-lead-response-time)). By then, the prospect has already talked to three competitors. [Velocify](https://blog.hubspot.com/sales/speed-to-lead-statistic) research found that responding within 1 minute produces a 391% increase in conversions. Speed is not a nice-to-have — it is the qualification game.'
+        content: 'The average company responds to leads in 42-47 hours ([Lead Connect / ServiceBell, 2024-25](https://prospeo.io/s/average-lead-response-time)). By then, the prospect has already talked to three competitors. [Velocify](https://blog.hubspot.com/sales/speed-to-lead-statistic) research found that responding within 1 minute produces a 391% increase in conversions. Speed is not a nice-to-have - it is the qualification game.'
       },
       {
         type: 'quote',
@@ -801,7 +801,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Here is what most sales teams do not realize: [SiriusDecisions (now Forrester)](https://www.forrester.com/) found that 80% of leads disqualified as "not ready" go on to purchase a solution within 24 months. And Chet Holmes\' Buyer\'s Pyramid research shows that roughly 3% of any market is actively "buying now" at any given moment — they just need to be re-engaged at the right time.'
+        content: 'Here is what most sales teams do not realize: [SiriusDecisions (now Forrester)](https://www.forrester.com/) found that 80% of leads disqualified as "not ready" go on to purchase a solution within 24 months. And Chet Holmes\' Buyer\'s Pyramid research shows that roughly 3% of any market is actively "buying now" at any given moment - they just need to be re-engaged at the right time.'
       },
       {
         type: 'callout',
@@ -823,10 +823,10 @@ export const blogPosts: BlogPost[] = [
         type: 'list',
         ordered: true,
         items: [
-          'Define what qualified means — identify what your best customers share. Budget mentions? Timeline urgency? Decision-maker involvement? The AI needs explicit criteria to know what signals to look for.',
-          'Let AI handle initial engagement — configure AI to handle all top-of-funnel outreach. It asks your qualifying questions, handles common objections, and has natural back-and-forth conversations. Prospects often cannot tell they are talking to AI.',
-          'Set escalation triggers — define what makes a lead hot: the combination of signals that indicate readiness to talk to a human. When AI detects these patterns, it instantly notifies your team and provides full conversation context.',
-          'Prioritize ruthlessly — use AI-generated qualification scores to direct which leads get your best reps\' attention. Focus human energy exclusively where conversion probability is highest.',
+          'Define what qualified means - identify what your best customers share. Budget mentions? Timeline urgency? Decision-maker involvement? The AI needs explicit criteria to know what signals to look for.',
+          'Let AI handle initial engagement - configure AI to handle all top-of-funnel outreach. It asks your qualifying questions, handles common objections, and has natural back-and-forth conversations. Prospects often cannot tell they are talking to AI.',
+          'Set escalation triggers - define what makes a lead hot: the combination of signals that indicate readiness to talk to a human. When AI detects these patterns, it instantly notifies your team and provides full conversation context.',
+          'Prioritize ruthlessly - use AI-generated qualification scores to direct which leads get your best reps\' attention. Focus human energy exclusively where conversion probability is highest.',
         ],
       },
       {
@@ -914,11 +914,11 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'Build an AI sales strategy that creates trust, not friction. Learn how to deploy AI that makes customers feel understood instead of processed.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     howToSteps: [
-      { name: 'Respond When Customers Want to Talk', text: 'Deploy AI to respond to every inquiry within seconds, around the clock. Customers research at 11pm and on weekends — AI meets them there instead of forcing them to wait. Responding within 5 minutes makes you 21x more likely to qualify a lead than responding at 30 minutes.' },
+      { name: 'Respond When Customers Want to Talk', text: 'Deploy AI to respond to every inquiry within seconds, around the clock. Customers research at 11pm and on weekends - AI meets them there instead of forcing them to wait. Responding within 5 minutes makes you 21x more likely to qualify a lead than responding at 30 minutes.' },
       { name: 'Build Conversation Memory', text: 'Configure AI to track conversation history, remember objections, and reference previous discussions in follow-up. Nothing destroys trust faster than asking customers to repeat themselves. Memory makes customers feel heard instead of processed.' },
-      { name: 'Define Clear Escalation Rules', text: 'Set explicit triggers for when AI hands off to a human: complex objections, high-value signals, or any moment requiring judgment and empathy. Customer-first AI recognizes its limits and escalates gracefully — never trapping customers in automated loops.' },
+      { name: 'Define Clear Escalation Rules', text: 'Set explicit triggers for when AI hands off to a human: complex objections, high-value signals, or any moment requiring judgment and empathy. Customer-first AI recognizes its limits and escalates gracefully - never trapping customers in automated loops.' },
       { name: 'Measure Customer-First Metrics', text: 'Track response time, resolution rate, escalation quality, and customer effort alongside traditional pipeline metrics. When you optimize for customer experience, sales metrics improve as a byproduct: faster responses mean more qualified leads, less friction means more referrals.' },
     ],
     content: [
@@ -928,7 +928,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'tldr',
-        content: 'Customers don\'t mind AI — they mind AI that wastes their time, ignores their input, or pretends to be human.\nResponding within 5 minutes is 21x more effective at qualification — and genuinely serves customers better.\nCustomer-first AI remembers conversation history, responds 24/7, and escalates to humans at the right moment.\nMeasure customer effort and resolution rate alongside pipeline metrics — optimize for value, not just volume.\nThe AI sales market grows to $32.23B by 2033 — the winners will be those who genuinely serve customers better.'
+        content: 'Customers don\'t mind AI - they mind AI that wastes their time, ignores their input, or pretends to be human.\nResponding within 5 minutes is 21x more effective at qualification - and genuinely serves customers better.\nCustomer-first AI remembers conversation history, responds 24/7, and escalates to humans at the right moment.\nMeasure customer effort and resolution rate alongside pipeline metrics - optimize for value, not just volume.\nThe AI sales market grows to $32.23B by 2033 - the winners will be those who genuinely serve customers better.'
       },
       {
         type: 'heading',
@@ -964,7 +964,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: '[MIT research (Oldroyd/InsideSales.com, 2007)](https://www.leadresponsemanagement.org/lrm_study/) found that responding within 5 minutes makes you 21x more likely to qualify a lead than responding at 30 minutes. That is not just good for your pipeline — it is good for customers who actually get their questions answered when they care most.'
+        content: '[MIT research (Oldroyd/InsideSales.com, 2007)](https://www.leadresponsemanagement.org/lrm_study/) found that responding within 5 minutes makes you 21x more likely to qualify a lead than responding at 30 minutes. That is not just good for your pipeline - it is good for customers who actually get their questions answered when they care most.'
       },
       {
         type: 'subheading',
@@ -1000,7 +1000,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'quote',
-        content: 'Leaders are not just deploying AI — they are redesigning service models to ensure that technology enhances the customer experience while humans provide context, empathy, and judgment.\nBrad Fager, Research Director, Gartner'
+        content: 'Leaders are not just deploying AI - they are redesigning service models to ensure that technology enhances the customer experience while humans provide context, empathy, and judgment.\nBrad Fager, Research Director, Gartner'
       },
       {
         type: 'heading',
@@ -1064,7 +1064,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The AI sales development market is growing from $3.85 billion in 2024 to $32.23 billion by 2033 ([Grand View Research, November 2025](https://www.grandviewresearch.com/industry-analysis/ai-sales-development-representative-market-report)). That growth will not come from AI that annoys customers — it will come from AI that genuinely serves them better than human-only alternatives.'
+        content: 'The AI sales development market is growing from $3.85 billion in 2024 to $32.23 billion by 2033 ([Grand View Research, November 2025](https://www.grandviewresearch.com/industry-analysis/ai-sales-development-representative-market-report)). That growth will not come from AI that annoys customers - it will come from AI that genuinely serves them better than human-only alternatives.'
       },
       {
         type: 'quote',
@@ -1127,7 +1127,7 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'SDR: $105-165K/year. AI SDR: $6-24K/year. 85% cost savings, 21x better speed-to-lead. When to hire humans vs deploy AI - honest math with real numbers.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     content: [
       {
         type: 'paragraph',
@@ -1135,7 +1135,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'tldr',
-        content: 'One SDR costs $98K–$173K/year fully loaded; one AI SDR platform costs $6K–$24K — 85–95% savings.\nAI responds in under 60 seconds vs 42–47 hours for human SDRs — a 2,500x speed advantage.\nMIT research: 5-minute response = 21x better qualification odds; AI holds this advantage by default.\nHuman SDRs still win for complex enterprise deals; AI wins for volume, speed, and dormant lead re-engagement.\nBest model: AI qualifies top-of-funnel, humans close — same pipeline at 60–80% lower cost.'
+        content: 'One SDR costs $98K–$173K/year fully loaded; one AI SDR platform costs $6K–$24K - 85–95% savings.\nAI responds in under 60 seconds vs 42–47 hours for human SDRs - a 2,500x speed advantage.\nMIT research: 5-minute response = 21x better qualification odds; AI holds this advantage by default.\nHuman SDRs still win for complex enterprise deals; AI wins for volume, speed, and dormant lead re-engagement.\nBest model: AI qualifies top-of-funnel, humans close - same pipeline at 60–80% lower cost.'
       },
       {
         type: 'heading',
@@ -1151,7 +1151,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Base salary runs $50,000 to $60,000 depending on market, with a median of $56,000 according to [Bridge Group\'s 2025 SDR benchmarks](https://www.bridgegroupinc.com/blog/). Variable commission at OTE adds another $20,000 to $30,000. Benefits and taxes tack on 25-30%, so figure $15,000 to $21,000. Then there\'s the tech stack — CRM seats, dialer, sales engagement platform, data subscriptions — running $3,000 to $8,400 annually ([Martal Group, 2025](https://martal.ca/2025-sdr-salary-guide/)). Subtotal before hidden costs: $88,000 to $119,400 per year.'
+        content: 'Base salary runs $50,000 to $60,000 depending on market, with a median of $56,000 according to [Bridge Group\'s 2025 SDR benchmarks](https://www.bridgegroupinc.com/blog/). Variable commission at OTE adds another $20,000 to $30,000. Benefits and taxes tack on 25-30%, so figure $15,000 to $21,000. Then there\'s the tech stack - CRM seats, dialer, sales engagement platform, data subscriptions - running $3,000 to $8,400 annually ([Martal Group, 2025](https://martal.ca/2025-sdr-salary-guide/)). Subtotal before hidden costs: $88,000 to $119,400 per year.'
       },
       {
         type: 'subheading',
@@ -1159,11 +1159,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Here\'s where the real damage happens. Management overhead: your sales manager spends 10-15 hours per week per SDR on coaching, pipeline reviews, and one-on-ones — valued at $10,000 to $25,000 in manager time annually. Ramp time penalty: SDRs take approximately 3.2 months to hit full productivity ([Bridge Group](https://www.bridgegroupinc.com/blog/) + [Xactly](https://www.xactlycorp.com/blog/sales-turnover-statistics), 2025). You\'re paying 100% salary for partial output during that period — another $8,000 to $10,000 in lost productivity.'
+        content: 'Here\'s where the real damage happens. Management overhead: your sales manager spends 10-15 hours per week per SDR on coaching, pipeline reviews, and one-on-ones - valued at $10,000 to $25,000 in manager time annually. Ramp time penalty: SDRs take approximately 3.2 months to hit full productivity ([Bridge Group](https://www.bridgegroupinc.com/blog/) + [Xactly](https://www.xactlycorp.com/blog/sales-turnover-statistics), 2025). You\'re paying 100% salary for partial output during that period - another $8,000 to $10,000 in lost productivity.'
       },
       {
         type: 'paragraph',
-        content: 'And the killer: turnover. [Bridge Group\'s 2025 research](https://www.bridgegroupinc.com/blog/) puts average SDR tenure at 1.9 years (approximately 22 months), with annual attrition of 34-40% ([Xactly](https://www.xactlycorp.com/blog/sales-turnover-statistics)). When they leave — and they will — replacement costs approximately $115,000 when you factor in recruiting, training, and the productivity gap ([Rain Group](https://www.rainsalestraining.com/)). Amortize that across average tenure and it adds $60,000+ per year to your true cost.'
+        content: 'And the killer: turnover. [Bridge Group\'s 2025 research](https://www.bridgegroupinc.com/blog/) puts average SDR tenure at 1.9 years (approximately 22 months), with annual attrition of 34-40% ([Xactly](https://www.xactlycorp.com/blog/sales-turnover-statistics)). When they leave - and they will - replacement costs approximately $115,000 when you factor in recruiting, training, and the productivity gap ([Rain Group](https://www.rainsalestraining.com/)). Amortize that across average tenure and it adds $60,000+ per year to your true cost.'
       },
       {
         type: 'callout',
@@ -1328,7 +1328,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI SDR platforms cost $6,000-$24,000 annually versus $98,000-$173,000 for a fully-loaded human SDR ([Martal Group, 2025](https://martal.ca/2025-sdr-salary-guide/)). That\'s 85-95% cost savings before accounting for AI\'s faster response times and 24/7 availability. [MIT research (2007)](https://www.leadresponsemanagement.org/lrm_study/) shows responding within 5 minutes makes you 21x more likely to qualify — an advantage AI holds by default.'
+        content: 'AI SDR platforms cost $6,000-$24,000 annually versus $98,000-$173,000 for a fully-loaded human SDR ([Martal Group, 2025](https://martal.ca/2025-sdr-salary-guide/)). That\'s 85-95% cost savings before accounting for AI\'s faster response times and 24/7 availability. [MIT research (2007)](https://www.leadresponsemanagement.org/lrm_study/) shows responding within 5 minutes makes you 21x more likely to qualify - an advantage AI holds by default.'
       },
       {
         type: 'subheading',
@@ -1379,12 +1379,12 @@ export const blogPosts: BlogPost[] = [
     metaDescription: '3-5% of dead leads are ready to buy right now. AI re-engages thousands simultaneously, finds the hot ones. Real strategy for reactivating old leads + found revenue.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     howToSteps: [
       { name: 'Segment Your Dormant Database', text: 'Not all dormant leads are equal. Prioritize leads who reached a demo or late stage before going cold, and leads dormant less than 6 months. These have higher reactivation rates than leads who never engaged or went cold years ago.' },
-      { name: 'Craft a Natural Re-engagement Message', text: 'Never send a generic "just checking in." The best messages reference the lead\'s original interest, acknowledge the time gap honestly, and ask a low-pressure question that\'s easy to respond to — something like referencing what they were originally looking at and asking if things have changed.' },
-      { name: 'Let AI Handle the Qualifying Conversation', text: 'When leads respond, AI continues naturally — asking qualifying questions, handling "not interested" gracefully, recognizing buying signals like budget mentions and timeline urgency, and escalating hot leads to your team instantly with full conversation context.' },
-      { name: 'Make Reactivation Ongoing, Not a One-Time Campaign', text: 'Your dormant database is not static — leads cycle in and out of buying windows constantly. Set up ongoing re-engagement at intelligent intervals based on industry, buying cycle, and previous engagement. This turns your CRM into a perpetual pipeline engine instead of a graveyard.' },
+      { name: 'Craft a Natural Re-engagement Message', text: 'Never send a generic "just checking in." The best messages reference the lead\'s original interest, acknowledge the time gap honestly, and ask a low-pressure question that\'s easy to respond to - something like referencing what they were originally looking at and asking if things have changed.' },
+      { name: 'Let AI Handle the Qualifying Conversation', text: 'When leads respond, AI continues naturally - asking qualifying questions, handling "not interested" gracefully, recognizing buying signals like budget mentions and timeline urgency, and escalating hot leads to your team instantly with full conversation context.' },
+      { name: 'Make Reactivation Ongoing, Not a One-Time Campaign', text: 'Your dormant database is not static - leads cycle in and out of buying windows constantly. Set up ongoing re-engagement at intelligent intervals based on industry, buying cycle, and previous engagement. This turns your CRM into a perpetual pipeline engine instead of a graveyard.' },
     ],
     content: [
       {
@@ -1393,11 +1393,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'tldr',
-        content: 'At any given time, 3–5% of your "dead" leads are in an active buying window right now.\n80% of leads disqualified as "not ready" go on to buy within 24 months — per [SiriusDecisions (now Forrester)](https://www.forrester.com/).\nManually working 10,000 old leads takes one rep ~200 working days; AI re-engages all of them simultaneously.\nSMS drives 98% open rates and 45% response rates — the only channel where dormant leads actually reply.\nThis is found money: leads you already paid for, generating revenue at near-zero incremental cost.'
+        content: 'At any given time, 3–5% of your "dead" leads are in an active buying window right now.\n80% of leads disqualified as "not ready" go on to buy within 24 months - per [SiriusDecisions (now Forrester)](https://www.forrester.com/).\nManually working 10,000 old leads takes one rep ~200 working days; AI re-engages all of them simultaneously.\nSMS drives 98% open rates and 45% response rates - the only channel where dormant leads actually reply.\nThis is found money: leads you already paid for, generating revenue at near-zero incremental cost.'
       },
       {
         type: 'paragraph',
-        content: 'Here\'s what most sales teams miss: [SiriusDecisions (now Forrester)](https://www.forrester.com/) found that 80% of leads disqualified by sales as "not ready" go on to purchase a solution within 24 months. And Chet Holmes\' Buyer\'s Pyramid research shows roughly 3% of any market is actively "buying now" at any given moment. Their budget came through. Their old vendor fell apart. Their situation changed. They\'re in a buying window right now — and they\'re going to buy from whoever reaches them first.'
+        content: 'Here\'s what most sales teams miss: [SiriusDecisions (now Forrester)](https://www.forrester.com/) found that 80% of leads disqualified by sales as "not ready" go on to purchase a solution within 24 months. And Chet Holmes\' Buyer\'s Pyramid research shows roughly 3% of any market is actively "buying now" at any given moment. Their budget came through. Their old vendor fell apart. Their situation changed. They\'re in a buying window right now - and they\'re going to buy from whoever reaches them first.'
       },
       {
         type: 'heading',
@@ -1433,7 +1433,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'quote',
-        content: 'AI should be taking the lift of what would have otherwise been a very time-intensive manual task. An SDR should be forming a strategic point of view — not working through a list of 10,000 old leads one by one.\nMaura Rivera, CMO, Qualified'
+        content: 'AI should be taking the lift of what would have otherwise been a very time-intensive manual task. An SDR should be forming a strategic point of view - not working through a list of 10,000 old leads one by one.\nMaura Rivera, CMO, Qualified'
       },
       {
         type: 'heading',
@@ -1461,7 +1461,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'SMS has a 98% open rate ([Gartner](https://www.gartner.com/en/digital-markets/insights/the-future-of-sales-follow-ups-text-messages)). Not 20%. Ninety-eight percent. Response rates hit 45% compared to email\'s 1-2% for cold outreach — and the average text gets a response in 90 seconds versus 90 minutes for email ([CTIA, 2025](https://www.ctia.org/)). When you\'re trying to surface dormant leads who are ready to buy, you need a channel where your message actually gets read. SMS is that channel.'
+        content: 'SMS has a 98% open rate ([Gartner](https://www.gartner.com/en/digital-markets/insights/the-future-of-sales-follow-ups-text-messages)). Not 20%. Ninety-eight percent. Response rates hit 45% compared to email\'s 1-2% for cold outreach - and the average text gets a response in 90 seconds versus 90 minutes for email ([CTIA, 2025](https://www.ctia.org/)). When you\'re trying to surface dormant leads who are ready to buy, you need a channel where your message actually gets read. SMS is that channel.'
       },
       {
         type: 'paragraph',
@@ -1497,7 +1497,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'quote',
-        content: 'What\'s working today is warm introductions. No matter what happens in the future, relationships will always cut through the noise — and dormant leads already know your brand. That makes re-engagement a warm introduction, not cold outreach.\nAaron Ross, Author, Predictable Revenue'
+        content: 'What\'s working today is warm introductions. No matter what happens in the future, relationships will always cut through the noise - and dormant leads already know your brand. That makes re-engagement a warm introduction, not cold outreach.\nAaron Ross, Author, Predictable Revenue'
       },
       {
         type: 'heading',
@@ -1507,10 +1507,10 @@ export const blogPosts: BlogPost[] = [
         type: 'list',
         ordered: true,
         items: [
-          'Segment your database — not all dormant leads are equal. Segment by how far they got in your sales process and how long ago they went dormant. Leads who reached a demo but didn\'t close are higher value than leads who never responded. Leads from 3 months ago are more likely to re-engage than leads from 3 years ago.',
-          'Craft the re-engagement message — never send a generic "just checking in." The best messages reference the original context, acknowledge the time gap honestly, and ask a low-pressure question that\'s easy to respond to. "Hey [name], you were looking at [solution] back in [month]. Curious if that\'s still on your radar or if things have changed?" Natural. Human. Easy to reply to.',
-          'Let AI handle the conversation — when leads respond, AI continues naturally. It asks qualifying questions, handles "not interested" gracefully, recognizes buying signals like budget mentions and timeline urgency, and escalates hot leads to your team instantly with full context.',
-          'Make it ongoing, not one-time — the biggest mistake is treating reactivation as a campaign. Your dormant database is not static — leads cycle in and out of buying windows constantly. Set up ongoing reactivation at intelligent intervals based on industry, buying cycle, and previous engagement. This turns your database into a perpetual pipeline engine.',
+          'Segment your database - not all dormant leads are equal. Segment by how far they got in your sales process and how long ago they went dormant. Leads who reached a demo but didn\'t close are higher value than leads who never responded. Leads from 3 months ago are more likely to re-engage than leads from 3 years ago.',
+          'Craft the re-engagement message - never send a generic "just checking in." The best messages reference the original context, acknowledge the time gap honestly, and ask a low-pressure question that\'s easy to respond to. "Hey [name], you were looking at [solution] back in [month]. Curious if that\'s still on your radar or if things have changed?" Natural. Human. Easy to reply to.',
+          'Let AI handle the conversation - when leads respond, AI continues naturally. It asks qualifying questions, handles "not interested" gracefully, recognizes buying signals like budget mentions and timeline urgency, and escalates hot leads to your team instantly with full context.',
+          'Make it ongoing, not one-time - the biggest mistake is treating reactivation as a campaign. Your dormant database is not static - leads cycle in and out of buying windows constantly. Set up ongoing reactivation at intelligent intervals based on industry, buying cycle, and previous engagement. This turns your database into a perpetual pipeline engine.',
         ],
       },
       {
@@ -1618,12 +1618,12 @@ export const blogPosts: BlogPost[] = [
     metaDescription: 'Pipeline forecasts fail when unqualified leads pollute your CRM. AI lead qualification creates consistent scoring and faster response - improving pipeline predictability by 40%.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     howToSteps: [
-      { name: 'Deploy AI on New Inbound Leads', text: 'Start by routing all new inbound inquiries — form fills, demo requests, trial signups — through AI qualification. AI responds within 60 seconds and applies consistent scoring criteria. Measure qualification rates against your historical human baseline. Most companies see 2–4x improvement in speed-to-lead within the first week.' },
+      { name: 'Deploy AI on New Inbound Leads', text: 'Start by routing all new inbound inquiries - form fills, demo requests, trial signups - through AI qualification. AI responds within 60 seconds and applies consistent scoring criteria. Measure qualification rates against your historical human baseline. Most companies see 2–4x improvement in speed-to-lead within the first week.' },
       { name: 'Define Objective Qualification Thresholds', text: 'Establish explicit, agreed-upon criteria with your team: what AI score qualifies a lead for AE handoff, what signals trigger immediate escalation, and what responses mean "not qualified." Making thresholds explicit removes subjectivity and quota bias from your pipeline.' },
       { name: 'Track Forecast Variance Over Time', text: 'Measure pipeline forecast versus actual closed deals monthly. Before AI qualification, expect 30–40% variance. After implementation, track it dropping to 15–20% as unqualified leads stop entering your funnel and scoring becomes consistent.' },
-      { name: 'Expand to Dormant Lead Re-engagement', text: 'Once AI is proven on inbound, point it at your dormant CRM database. AI re-engages all old leads simultaneously via SMS and qualifies the 3–5% in an active buying window. This adds found pipeline — revenue from leads you already own — without a dollar of new lead gen spend.' },
+      { name: 'Expand to Dormant Lead Re-engagement', text: 'Once AI is proven on inbound, point it at your dormant CRM database. AI re-engages all old leads simultaneously via SMS and qualifies the 3–5% in an active buying window. This adds found pipeline - revenue from leads you already own - without a dollar of new lead gen spend.' },
     ],
     content: [
       {
@@ -1632,7 +1632,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'tldr',
-        content: 'Pipeline forecasts are off by 30–40% because human SDRs qualify inconsistently under quota pressure.\nConversion rates drop 67% after just 5 minutes of delay — human teams averaging 42–47 hours can\'t compete.\nAI applies the same qualification criteria to every lead, every time — no quota bias, no bad Fridays.\nCompanies implementing AI qualification see forecast variance drop from 30–40% to 10–20% within one quarter.\nDormant re-engagement adds found pipeline — 10,000 old leads → 30–50 qualified appointments at near-zero cost.'
+        content: 'Pipeline forecasts are off by 30–40% because human SDRs qualify inconsistently under quota pressure.\nConversion rates drop 67% after just 5 minutes of delay - human teams averaging 42–47 hours can\'t compete.\nAI applies the same qualification criteria to every lead, every time - no quota bias, no bad Fridays.\nCompanies implementing AI qualification see forecast variance drop from 30–40% to 10–20% within one quarter.\nDormant re-engagement adds found pipeline - 10,000 old leads → 30–50 qualified appointments at near-zero cost.'
       },
       {
         type: 'paragraph',
@@ -1672,7 +1672,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Most SDRs are not responding to leads anywhere near fast enough. [MIT research (Oldroyd/InsideSales.com, 2007)](https://www.leadresponsemanagement.org/lrm_study/) found that responding within 5 minutes makes you 21x more likely to qualify a lead than responding at 30 minutes — yet the average sales team is responding in hours, not minutes. By then, the lead has moved on or talked to competitors. When your team finally responds, they are rushing to qualify because the lead is already cold. Rushed qualification means weak qualification. Leads get marked "interested" based on a single reply and passed along without real vetting.'
+        content: 'Most SDRs are not responding to leads anywhere near fast enough. [MIT research (Oldroyd/InsideSales.com, 2007)](https://www.leadresponsemanagement.org/lrm_study/) found that responding within 5 minutes makes you 21x more likely to qualify a lead than responding at 30 minutes - yet the average sales team is responding in hours, not minutes. By then, the lead has moved on or talked to competitors. When your team finally responds, they are rushing to qualify because the lead is already cold. Rushed qualification means weak qualification. Leads get marked "interested" based on a single reply and passed along without real vetting.'
       },
       {
         type: 'subheading',
@@ -1788,7 +1788,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: '[Velocify](https://blog.hubspot.com/sales/speed-to-lead-statistic) research found that responding within one minute produces 391% more conversions than waiting longer — and [MIT research (Oldroyd/InsideSales.com, 2007)](https://www.leadresponsemanagement.org/lrm_study/) found a 21x drop in qualification odds between 5 minutes and 30 minutes. After that window closes, you are chasing a lead that has already mentally moved on.'
+        content: '[Velocify](https://blog.hubspot.com/sales/speed-to-lead-statistic) research found that responding within one minute produces 391% more conversions than waiting longer - and [MIT research (Oldroyd/InsideSales.com, 2007)](https://www.leadresponsemanagement.org/lrm_study/) found a 21x drop in qualification odds between 5 minutes and 30 minutes. After that window closes, you are chasing a lead that has already mentally moved on.'
       },
       {
         type: 'paragraph',
@@ -1804,7 +1804,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Here is what most sales teams do not realize: [SiriusDecisions (now Forrester)](https://www.forrester.com/) found that 80% of leads disqualified by sales as "not ready" go on to purchase a solution within 24 months. And Chet Holmes\' Buyer\'s Pyramid research shows roughly 3% of any market is actively "buying now" at any given moment — they just need to be re-engaged.'
+        content: 'Here is what most sales teams do not realize: [SiriusDecisions (now Forrester)](https://www.forrester.com/) found that 80% of leads disqualified by sales as "not ready" go on to purchase a solution within 24 months. And Chet Holmes\' Buyer\'s Pyramid research shows roughly 3% of any market is actively "buying now" at any given moment - they just need to be re-engaged.'
       },
       {
         type: 'paragraph',
@@ -1854,10 +1854,10 @@ export const blogPosts: BlogPost[] = [
         type: 'list',
         ordered: true,
         items: [
-          'Start with new inbound leads — deploy AI to handle all new inbound inquiries first: form fills, demo requests, trial signups. Measure qualification rates against your historical human baseline. Most companies see 2-4x improvement in speed-to-lead and more consistent scoring within the first week.',
-          'Define clear qualification thresholds — establish objective criteria with your team: what score qualifies a lead for AE handoff? What signals trigger immediate escalation? What responses mean "not qualified"? Make thresholds explicit so everyone understands what belongs in the forecast.',
-          'Track forecast variance over time — measure pipeline forecast versus actual closed deals monthly. Before AI qualification expect 30-40% variance. After implementation, watch it drop to 15-20% as unqualified leads stop entering your pipeline.',
-          'Expand to dormant lead resurrection — once AI is proven on inbound, point it at your dormant database. Export old leads and let AI re-engage them simultaneously. The 3-5% who respond and qualify become found pipeline — revenue added to forecasts without a dollar of new lead gen spend.',
+          'Start with new inbound leads - deploy AI to handle all new inbound inquiries first: form fills, demo requests, trial signups. Measure qualification rates against your historical human baseline. Most companies see 2-4x improvement in speed-to-lead and more consistent scoring within the first week.',
+          'Define clear qualification thresholds - establish objective criteria with your team: what score qualifies a lead for AE handoff? What signals trigger immediate escalation? What responses mean "not qualified"? Make thresholds explicit so everyone understands what belongs in the forecast.',
+          'Track forecast variance over time - measure pipeline forecast versus actual closed deals monthly. Before AI qualification expect 30-40% variance. After implementation, watch it drop to 15-20% as unqualified leads stop entering your pipeline.',
+          'Expand to dormant lead resurrection - once AI is proven on inbound, point it at your dormant database. Export old leads and let AI re-engage them simultaneously. The 3-5% who respond and qualify become found pipeline - revenue added to forecasts without a dollar of new lead gen spend.',
         ],
       },
       {
@@ -1906,7 +1906,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'callout',
-        content: 'The shift from human-led to AI-assisted qualification is not a technology decision — it is an operational one. Teams that apply consistent, data-driven qualification standards see pipeline forecast variance drop from 30–40% to 10–20% within a single quarter ([Forrester, 2025](https://www.forrester.com/)).'
+        content: 'The shift from human-led to AI-assisted qualification is not a technology decision - it is an operational one. Teams that apply consistent, data-driven qualification standards see pipeline forecast variance drop from 30–40% to 10–20% within a single quarter ([Forrester, 2025](https://www.forrester.com/)).'
       },
       {
         type: 'heading',
@@ -1942,7 +1942,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: '[MIT research (Oldroyd/InsideSales.com, 2007)](https://www.leadresponsemanagement.org/lrm_study/) found that responding within 5 minutes makes you 21x more likely to qualify a lead than responding at 30 minutes, and [Velocify](https://blog.hubspot.com/sales/speed-to-lead-statistic) research shows responding within one minute produces 391% more conversions than waiting longer. AI responds in under 60 seconds, qualifying leads at peak intent before they go cold or talk to competitors — creating more reliable pipeline.'
+        content: '[MIT research (Oldroyd/InsideSales.com, 2007)](https://www.leadresponsemanagement.org/lrm_study/) found that responding within 5 minutes makes you 21x more likely to qualify a lead than responding at 30 minutes, and [Velocify](https://blog.hubspot.com/sales/speed-to-lead-statistic) research shows responding within one minute produces 391% more conversions than waiting longer. AI responds in under 60 seconds, qualifying leads at peak intent before they go cold or talk to competitors - creating more reliable pipeline.'
       },
       {
         type: 'subheading',
@@ -1959,7 +1959,7 @@ export const blogPosts: BlogPost[] = [
     id: 11,
     slug: 'trade-show-lead-follow-up-failure',
     title: '80% of Trade Show Leads Never Get Followed Up. Here\'s Why.',
-    excerpt: 'Companies spend billions at trade shows, scan hundreds of badges, shake thousands of hands — then let 80% of those leads die without a single follow-up. Here\'s the structural problem behind the $5.4B annual waste, and what high-performing teams do differently.',
+    excerpt: 'Companies spend billions at trade shows, scan hundreds of badges, shake thousands of hands - then let 80% of those leads die without a single follow-up. Here\'s the structural problem behind the $5.4B annual waste, and what high-performing teams do differently.',
     category: 'Sales Strategy',
     date: '2026-02-27',
     lastUpdated: '2026-02-27',
@@ -1967,13 +1967,13 @@ export const blogPosts: BlogPost[] = [
     author: 'Tom Bauer',
     authorUrl: '/leadership',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'Why 80% of Trade Show Leads Die (And How to Fix It)',
-    metaDescription: 'CEIR research shows 80% of trade show leads get zero follow-up, wasting $5.4B annually in U.S. B2B. Here\'s the structural problem — and how high-performing teams fix it with speed and automation.',
+    metaDescription: 'CEIR research shows 80% of trade show leads get zero follow-up, wasting $5.4B annually in U.S. B2B. Here\'s the structural problem - and how high-performing teams fix it with speed and automation.',
     howToSteps: [
       { name: 'Build Target Lists Before the Show', text: 'Identify who you want to meet before you arrive. Book meetings in advance so post-show follow-up starts with context instead of cold outreach.' },
       { name: 'Capture Context On the Show Floor', text: 'Record not just badge scans but conversation notes, pain points, and a qualification tier (hot/warm/cold) for each lead in real time.' },
-      { name: 'Launch Follow-Up Within 24 Hours', text: 'Have your follow-up sequence ready before the show ends. The 48-hour window is when deals are won or lost — don\'t wait for things to calm down.' },
+      { name: 'Launch Follow-Up Within 24 Hours', text: 'Have your follow-up sequence ready before the show ends. The 48-hour window is when deals are won or lost - don\'t wait for things to calm down.' },
       { name: 'Use Three or More Channels', text: 'Combine email, phone, and SMS. Single-channel follow-up misses 4 in 5 leads. Multi-channel approaches achieve 30% higher conversion rates.' },
     ],
     content: [
@@ -1983,7 +1983,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'tldr',
-        content: '80% of trade show leads receive no follow-up at all — not slow follow-up, zero follow-up (CEIR research via Lensmor).\n$5.4 billion is wasted annually from failed trade show follow-up in U.S. B2B alone.\nLeads contacted within 5 minutes are 21x more likely to qualify than those reached at 30 minutes (MIT/InsideSales.com).\nAfter 48 hours, connection likelihood drops 10x — and the average follow-up starts days after the event.\nCompanies using 3+ channels achieve 30% higher conversion rates than single-channel approaches.\nThe fix isn\'t a better checklist — it\'s automation that responds before the team even gets home.'
+        content: '80% of trade show leads receive no follow-up at all - not slow follow-up, zero follow-up (CEIR research via Lensmor).\n$5.4 billion is wasted annually from failed trade show follow-up in U.S. B2B alone.\nLeads contacted within 5 minutes are 21x more likely to qualify than those reached at 30 minutes (MIT/InsideSales.com).\nAfter 48 hours, connection likelihood drops 10x - and the average follow-up starts days after the event.\nCompanies using 3+ channels achieve 30% higher conversion rates than single-channel approaches.\nThe fix isn\'t a better checklist - it\'s automation that responds before the team even gets home.'
       },
       {
         type: 'heading',
@@ -1995,7 +1995,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'What makes trade shows different from other lead sources is the combination of volume and time sensitivity. A lead from your website can sit in a queue for a few hours without catastrophic consequence. A trade show lead has a hard expiration window. Research from [MIT and InsideSales.com, cited by Harvard Business Review](https://cdn2.hubspot.net/hub/25649/file-13535879-pdf/docs/mit_study.pdf), found that leads contacted within five minutes are 21 times more likely to qualify than those contacted after 30 minutes. After 48 hours, the likelihood of making any meaningful contact drops by 10 times. The average trade show follow-up starts days after the event ends — when the team finally digs out of their post-show inbox.'
+        content: 'What makes trade shows different from other lead sources is the combination of volume and time sensitivity. A lead from your website can sit in a queue for a few hours without catastrophic consequence. A trade show lead has a hard expiration window. Research from [MIT and InsideSales.com, cited by Harvard Business Review](https://cdn2.hubspot.net/hub/25649/file-13535879-pdf/docs/mit_study.pdf), found that leads contacted within five minutes are 21 times more likely to qualify than those contacted after 30 minutes. After 48 hours, the likelihood of making any meaningful contact drops by 10 times. The average trade show follow-up starts days after the event ends - when the team finally digs out of their post-show inbox.'
       },
       {
         type: 'heading',
@@ -2011,7 +2011,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'In approximately 42% of organizations, marketing assumes sales will handle follow-up while sales assumes marketing will nurture leads first. The result: leads sit dormant in a CRM until they\'re no longer viable. No one drops the ball — there\'s just no one holding it.'
+        content: 'In approximately 42% of organizations, marketing assumes sales will handle follow-up while sales assumes marketing will nurture leads first. The result: leads sit dormant in a CRM until they\'re no longer viable. No one drops the ball - there\'s just no one holding it.'
       },
       {
         type: 'subheading',
@@ -2019,7 +2019,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Approximately 80% of lead response delays are caused by administrative friction — data enrichment, manual routing, cleaning bad data, and sorting badge scan exports. A personalized follow-up email takes an average of nearly 12 hours to prepare and send after an event, simply due to the time required to process the data.'
+        content: 'Approximately 80% of lead response delays are caused by administrative friction - data enrichment, manual routing, cleaning bad data, and sorting badge scan exports. A personalized follow-up email takes an average of nearly 12 hours to prepare and send after an event, simply due to the time required to process the data.'
       },
       {
         type: 'subheading',
@@ -2027,7 +2027,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: '73% of trade show leads are not genuinely interested in a purchase at the time of contact. Many exchanged information for a giveaway or entered a drawing. This reality causes sales teams to treat the entire list as low-priority — when in fact the 27% who do have purchase intent are exactly the leads worth pursuing aggressively. The noise causes teams to deprioritize the signal.'
+        content: '73% of trade show leads are not genuinely interested in a purchase at the time of contact. Many exchanged information for a giveaway or entered a drawing. This reality causes sales teams to treat the entire list as low-priority - when in fact the 27% who do have purchase intent are exactly the leads worth pursuing aggressively. The noise causes teams to deprioritize the signal.'
       },
       {
         type: 'heading',
@@ -2057,7 +2057,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The companies that consistently convert trade show leads into pipeline don\'t have better products or bigger booths. They have better systems — and they start before the event even opens.'
+        content: 'The companies that consistently convert trade show leads into pipeline don\'t have better products or bigger booths. They have better systems - and they start before the event even opens.'
       },
       {
         type: 'subheading',
@@ -2065,7 +2065,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'High-performing teams build target lists and book meetings in advance. They know who they want to talk to before they arrive. This means post-show follow-up starts with context, not cold outreach — and the best conversations are already on the calendar.'
+        content: 'High-performing teams build target lists and book meetings in advance. They know who they want to talk to before they arrive. This means post-show follow-up starts with context, not cold outreach - and the best conversations are already on the calendar.'
       },
       {
         type: 'subheading',
@@ -2073,7 +2073,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The best teams capture leads and context simultaneously — not just a badge scan, but a note about the conversation, the prospect\'s specific pain point, and a rough qualification tier. According to [Momencio](https://www.momencio.com/the-trade-show-leads-aftermath/), leads segmented into hot, warm, and cold categories on the show floor convert significantly better than lists treated uniformly.'
+        content: 'The best teams capture leads and context simultaneously - not just a badge scan, but a note about the conversation, the prospect\'s specific pain point, and a rough qualification tier. According to [Momencio](https://www.momencio.com/the-trade-show-leads-aftermath/), leads segmented into hot, warm, and cold categories on the show floor convert significantly better than lists treated uniformly.'
       },
       {
         type: 'subheading',
@@ -2081,11 +2081,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Research from [Moots](https://www.moots.ai/blog/trade-show-statistics-2025-lead-generation-trends-and-data) consistently shows that leads contacted within 24 hours are seven times more likely to convert than those contacted a week later. Top teams don\'t wait for things to "calm down" — they have a follow-up sequence ready to launch before they leave the show floor.'
+        content: 'Research from [Moots](https://www.moots.ai/blog/trade-show-statistics-2025-lead-generation-trends-and-data) consistently shows that leads contacted within 24 hours are seven times more likely to convert than those contacted a week later. Top teams don\'t wait for things to "calm down" - they have a follow-up sequence ready to launch before they leave the show floor.'
       },
       {
         type: 'paragraph',
-        content: 'Channel strategy matters too. According to [Momencio](https://www.momencio.com/the-trade-show-leads-aftermath/), companies using three or more channels — email, phone, and SMS — achieve 30% higher conversion rates than those relying on a single channel. With average email open rates hovering around 20%, relying on email alone means four out of five leads may never even see your message.'
+        content: 'Channel strategy matters too. According to [Momencio](https://www.momencio.com/the-trade-show-leads-aftermath/), companies using three or more channels - email, phone, and SMS - achieve 30% higher conversion rates than those relying on a single channel. With average email open rates hovering around 20%, relying on email alone means four out of five leads may never even see your message.'
       },
       {
         type: 'heading',
@@ -2093,11 +2093,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Consider a mid-market company that collects 247 leads at a major trade show. At an average cost of $600 per lead, that\'s a $148,200 investment in a single event. If 80% of those leads go uncontacted — the industry standard — 198 leads are wasted outright. When you factor in lost pipeline opportunity, the total loss can exceed $270,000 from a single event.'
+        content: 'Consider a mid-market company that collects 247 leads at a major trade show. At an average cost of $600 per lead, that\'s a $148,200 investment in a single event. If 80% of those leads go uncontacted - the industry standard - 198 leads are wasted outright. When you factor in lost pipeline opportunity, the total loss can exceed $270,000 from a single event.'
       },
       {
         type: 'paragraph',
-        content: 'The [U.S. B2B trade show market reached $15.8 billion in 2024](https://www.tradeshowlabs.com/blog/trade-show-stats). With the 80% follow-up failure rate applied across the industry, the annual waste figure climbs into the billions — an estimated $5.4 billion in wasted investment annually for the U.S. B2B sector alone.'
+        content: 'The [U.S. B2B trade show market reached $15.8 billion in 2024](https://www.tradeshowlabs.com/blog/trade-show-stats). With the 80% follow-up failure rate applied across the industry, the annual waste figure climbs into the billions - an estimated $5.4 billion in wasted investment annually for the U.S. B2B sector alone.'
       },
       {
         type: 'heading',
@@ -2105,7 +2105,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The instinct after reading this data is to create a better checklist — assign a follow-up owner, build a cadence template, set a reminder. Those things help at the margins. But the core problem — speed — can\'t be solved by willpower and process improvements when you\'re dealing with hundreds of leads and a team that just spent three days at a convention center.'
+        content: 'The instinct after reading this data is to create a better checklist - assign a follow-up owner, build a cadence template, set a reminder. Those things help at the margins. But the core problem - speed - can\'t be solved by willpower and process improvements when you\'re dealing with hundreds of leads and a team that just spent three days at a convention center.'
       },
       {
         type: 'paragraph',
@@ -2113,7 +2113,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'callout',
-        content: 'The competitive advantage in the trade show landscape belongs to the first responder — the organization that combines the trust built through face-to-face conversation with the speed of digital automation. AI-powered SMS follow-up can reach leads within minutes of badge scan, while the conversation is still fresh and your competitor is still packing up their booth.'
+        content: 'The competitive advantage in the trade show landscape belongs to the first responder - the organization that combines the trust built through face-to-face conversation with the speed of digital automation. AI-powered SMS follow-up can reach leads within minutes of badge scan, while the conversation is still fresh and your competitor is still packing up their booth.'
       },
       {
         type: 'heading',
@@ -2125,7 +2125,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The leads are there. The intent is real. The window is just shorter than most teams think — and it\'s closing faster than they\'re moving.'
+        content: 'The leads are there. The intent is real. The window is just shorter than most teams think - and it\'s closing faster than they\'re moving.'
       }
     ],
     relatedPosts: ['qualify-leads-faster-ai', 'reactivate-dormant-leads-ai', 'reduce-sdr-headcount-ai']
@@ -2134,7 +2134,7 @@ export const blogPosts: BlogPost[] = [
     id: 12,
     slug: 'surfox-now-on-zapier',
     title: 'SurFox AI Is Now on Zapier: Connect Your AI Lead Qualifier to the Tools You Already Use',
-    excerpt: 'SurFox AI is officially live on the Zapier marketplace. Connect your AI-powered SMS lead qualification directly to your CRM, Slack, Google Calendar, and the rest of your sales stack — no code required.',
+    excerpt: 'SurFox AI is officially live on the Zapier marketplace. Connect your AI-powered SMS lead qualification directly to your CRM, Slack, Google Calendar, and the rest of your sales stack - no code required.',
     category: 'Product News',
     date: '2026-03-01',
     lastUpdated: '2026-03-01',
@@ -2142,9 +2142,9 @@ export const blogPosts: BlogPost[] = [
     author: 'Tom Bauer',
     authorUrl: '/leadership',
     authorTitle: 'Founder & CEO, SurFox',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'SurFox AI Is Now on Zapier | Connect AI Lead Qualification to Your Stack',
-    metaDescription: 'SurFox AI is live on Zapier. Connect AI-powered SMS lead qualification to HubSpot, Salesforce, Slack, Google Calendar, and more — no code required.',
+    metaDescription: 'SurFox AI is live on Zapier. Connect AI-powered SMS lead qualification to HubSpot, Salesforce, Slack, Google Calendar, and more - no code required.',
     content: [
       {
         type: 'paragraph',
@@ -2152,7 +2152,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'SurFox AI is officially live on the Zapier marketplace — which means you can connect your AI-powered SMS lead qualification directly to the CRMs, spreadsheets, Slack channels, and sales tools your team already lives in. No custom code. No API documentation. Just a Zap.'
+        content: 'SurFox AI is officially live on the Zapier marketplace - which means you can connect your AI-powered SMS lead qualification directly to the CRMs, spreadsheets, Slack channels, and sales tools your team already lives in. No custom code. No API documentation. Just a Zap.'
       },
       {
         type: 'heading',
@@ -2160,7 +2160,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The biggest friction in adding a new tool to your sales stack isn\'t the tool — it\'s everything around it. Does it fit into how we already work? Will my team actually use it? Do I have to log into another platform to see what\'s happening?'
+        content: 'The biggest friction in adding a new tool to your sales stack isn\'t the tool - it\'s everything around it. Does it fit into how we already work? Will my team actually use it? Do I have to log into another platform to see what\'s happening?'
       },
       {
         type: 'paragraph',
@@ -2186,7 +2186,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Any team that\'s already running their sales process through tools like HubSpot, Salesforce, Pipedrive, or Google Sheets — and wants to add intelligent SMS lead qualification without rebuilding how they operate.'
+        content: 'Any team that\'s already running their sales process through tools like HubSpot, Salesforce, Pipedrive, or Google Sheets - and wants to add intelligent SMS lead qualification without rebuilding how they operate.'
       },
       {
         type: 'heading',
@@ -2203,25 +2203,25 @@ export const blogPosts: BlogPost[] = [
     id: 13,
     slug: 'why-ai-sdr-tools-fail',
     title: 'Why Most AI SDR Tools Fail Within a Year (And What Actually Works)',
-    excerpt: 'The AI SDR space is growing fast — and churn is growing just as fast. Industry data puts annual churn for AI SDR platforms at 50–70%. Here\'s what the market is getting wrong, and how to avoid the same mistakes.',
+    excerpt: 'The AI SDR space is growing fast - and churn is growing just as fast. Industry data puts annual churn for AI SDR platforms at 50–70%. Here\'s what the market is getting wrong, and how to avoid the same mistakes.',
     category: 'Sales Strategy',
-    date: '2026-03-07',
+    date: '2026-03-03',
     readTime: '9 min read',
     author: 'Tom Bauer',
     authorUrl: '/leadership',
     authorTitle: 'Founder & CEO, SurFox AI',
-    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience — not theory.',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'Why Most AI SDR Tools Fail Within a Year (And What Actually Works)',
-    metaDescription: 'AI SDR churn is hitting 50–70% annually. Learn the five failure patterns behind abandoned tools — and what the teams actually getting ROI are doing differently.',
+    metaDescription: 'AI SDR churn is hitting 50–70% annually. Learn the five failure patterns behind abandoned tools - and what the teams actually getting ROI are doing differently.',
     relatedPosts: ['ai-sdr-vs-hiring-sdr-roi-2026', 'reduce-sdr-headcount-ai', 'qualify-leads-faster-ai'],
     content: [
       {
         type: 'paragraph',
-        content: 'Something strange is happening in sales tech right now. Companies are adopting AI SDR tools faster than ever — and abandoning them almost as fast. Industry data puts annual churn for AI SDR platforms at 50–70%. In some cases, individual vendors are losing the majority of their customer base within months of signing. That\'s not a product maturity problem. That\'s a fundamental mismatch between what these tools promise and what they actually deliver.'
+        content: 'Something strange is happening in sales tech right now. Companies are adopting AI SDR tools faster than ever - and abandoning them almost as fast. Industry data puts annual churn for AI SDR platforms at 50–70%. In some cases, individual vendors are losing the majority of their customer base within months of signing. That\'s not a product maturity problem. That\'s a fundamental mismatch between what these tools promise and what they actually deliver.'
       },
       {
         type: 'tldr',
-        content: 'AI SDR churn is running 50–70% annually — not a maturity problem, a promise-delivery mismatch.\nGeneric messaging, domain burnout, and broken multi-turn conversations are the top failure patterns.\nEmail is saturated; SMS drives higher open rates and near-instant response windows.\nSpeed-to-lead is one of the most documented conversion variables — most teams respond in hours, not seconds.\nThe teams winning with AI use it for qualification and warm handoffs, not just blast volume.'
+        content: 'AI SDR churn is running 50–70% annually - not a maturity problem, a promise-delivery mismatch.\nGeneric messaging, domain burnout, and broken multi-turn conversations are the top failure patterns.\nEmail is saturated; SMS drives higher open rates and near-instant response windows.\nSpeed-to-lead is one of the most documented conversion variables - most teams respond in hours, not seconds.\nThe teams winning with AI use it for qualification and warm handoffs, not just blast volume.'
       },
       {
         type: 'heading',
@@ -2237,7 +2237,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'quote',
-        content: '"AI SDRs won\'t replace sales teams. But they will expose which teams actually understand outbound." — RevOps leader, Series B SaaS'
+        content: 'AI SDRs won\'t replace sales teams. But they will expose which teams actually understand outbound.\nRevOps leader, Series B SaaS'
       },
       {
         type: 'paragraph',
@@ -2257,7 +2257,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Generic hooks, templated personalization, and AI-flavored phrasing get filtered out by prospects instantly — sometimes literally by spam filters, always by human attention. A message that sounds like AI is a message that doesn\'t get read.'
+        content: 'Generic hooks, templated personalization, and AI-flavored phrasing get filtered out by prospects instantly - sometimes literally by spam filters, always by human attention. A message that sounds like AI is a message that doesn\'t get read.'
       },
       {
         type: 'subheading',
@@ -2265,7 +2265,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Many AI SDR platforms send at volumes that exceed safe thresholds. Some platforms push 400+ emails per day per mailbox, causing bounce rates to spike and domain reputation to collapse. Recovery takes months and can cut inbox placement in half — permanently.'
+        content: 'Many AI SDR platforms send at volumes that exceed safe thresholds. Some platforms push 400+ emails per day per mailbox, causing bounce rates to spike and domain reputation to collapse. Recovery takes months and can cut inbox placement in half - permanently.'
       },
       {
         type: 'subheading',
@@ -2273,7 +2273,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Most AI SDR tools are built for first-touch outreach, not conversation. When a prospect replies with something nuanced — a question, a pushback, a conditional interest — the AI either sends a generic follow-up or goes silent. That\'s the moment where deals die.'
+        content: 'Most AI SDR tools are built for first-touch outreach, not conversation. When a prospect replies with something nuanced - a question, a pushback, a conditional interest - the AI either sends a generic follow-up or goes silent. That\'s the moment where deals die.'
       },
       {
         type: 'subheading',
@@ -2297,11 +2297,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Here\'s something worth noticing: almost every AI SDR tool on the market is built around email. That made sense five years ago. It makes less sense today. Email inboxes are saturated. Deliverability is fragile. And the window between a prospect showing interest and your message reaching them can be hours or days — which is often too long.'
+        content: 'Here\'s something worth noticing: almost every AI SDR tool on the market is built around email. That made sense five years ago. It makes less sense today. Email inboxes are saturated. Deliverability is fragile. And the window between a prospect showing interest and your message reaching them can be hours or days - which is often too long.'
       },
       {
         type: 'paragraph',
-        content: 'SMS changes that equation entirely. Response rates are higher. Conversations feel human. There\'s no domain reputation to manage or spam filter to avoid. And critically, when a lead comes in hot — a form fill, a trade show scan, a website visit — you can be in their pocket within seconds.'
+        content: 'SMS changes that equation entirely. Response rates are higher. Conversations feel human. There\'s no domain reputation to manage or spam filter to avoid. And critically, when a lead comes in hot - a form fill, a trade show scan, a website visit - you can be in their pocket within seconds.'
       },
       {
         type: 'callout',
@@ -2319,7 +2319,7 @@ export const blogPosts: BlogPost[] = [
         type: 'list',
         items: [
           'They use AI for qualification, not just outreach. The goal is not to send more messages. The goal is to identify which leads are worth a human\'s time. AI that can hold a genuine conversation, understand context, and surface intent signals is far more valuable than AI that can blast at scale.',
-          'They treat the human handoff as the product. The AI\'s job is to get to a warm handoff — a qualified prospect who\'s ready to talk, with context already established. The human closes. That division of labor is where the leverage actually lives.',
+          'They treat the human handoff as the product. The AI\'s job is to get to a warm handoff - a qualified prospect who\'s ready to talk, with context already established. The human closes. That division of labor is where the leverage actually lives.',
           'They meet prospects where they already are. That might be SMS, it might be a specific channel relevant to their industry. The point is the channel should reduce friction for the prospect, not optimize convenience for the sales team.'
         ]
       },
@@ -2333,7 +2333,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'But the tools that are winning aren\'t the ones with the biggest feature lists or the boldest replacement claims. They\'re the ones that actually move qualified conversations into the pipeline — reliably, naturally, and fast.'
+        content: 'But the tools that are winning aren\'t the ones with the biggest feature lists or the boldest replacement claims. They\'re the ones that actually move qualified conversations into the pipeline - reliably, naturally, and fast.'
       },
       {
         type: 'paragraph',
@@ -2361,7 +2361,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Most AI SDR platforms are built for volume. SurFox AI is built for qualification. The goal isn\'t to blast more messages into the world — it\'s to identify which leads are worth a human\'s time and get those leads into a real conversation fast. SurFox AI uses SMS, handles multi-turn conversations naturally, and only hands off to your team when a lead is genuinely warm.'
+        content: 'Most AI SDR platforms are built for volume. SurFox AI is built for qualification. The goal isn\'t to blast more messages into the world - it\'s to identify which leads are worth a human\'s time and get those leads into a real conversation fast. SurFox AI uses SMS, handles multi-turn conversations naturally, and only hands off to your team when a lead is genuinely warm.'
       },
       {
         type: 'subheading',
@@ -2394,6 +2394,216 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'Any business with a sales team that generates leads faster than they can follow up on them. SurFox AI works particularly well for healthcare, staffing, real estate, and high-volume B2B sales where speed and qualification both matter.'
+      }
+    ]
+  },
+  {
+    id: 14,
+    slug: 'ai-sdr-fraud-buyer-due-diligence',
+    title: 'What Recent AI SDR Fraud Allegations Mean for Buyers (And the Questions You Should Be Asking)',
+    excerpt: 'A high-profile AI SDR startup faced serious fraud allegations in 2025 - ARR inflated from $3M to $14M, logos used without authorization, pilots counted as contracts. Here\'s what every buyer should ask before signing with any AI SDR vendor.',
+    category: 'Sales Strategy',
+    date: '2026-03-08',
+    readTime: '10 min read',
+    author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    authorTitle: 'Founder & CEO, SurFox AI',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
+    metaTitle: 'AI SDR Fraud Allegations: 7 Questions Every Buyer Should Ask Before Signing',
+    metaDescription: 'A well-funded AI SDR startup faced fraud allegations for inflating ARR and faking customer logos. Here are the 7 due diligence questions that protect buyers in a category with a trust problem.',
+    relatedPosts: ['why-ai-sdr-tools-fail', 'ai-sdr-vs-hiring-sdr-roi-2026', 'reduce-sdr-headcount-ai'],
+    content: [
+      {
+        type: 'paragraph',
+        content: 'In early 2025, one of the most well-funded AI SDR startups in the market became the subject of serious fraud allegations. The accusations were specific: ARR inflated from roughly $3M to $14M, customer logos displayed without authorization, and short-term pilots counted as full contracts to impress investors.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The company had raised hundreds of millions in valuation from top-tier venture firms. Its product promised fully autonomous sales development. And by most accounts, the actual results fell well short of the pitch.'
+      },
+      {
+        type: 'paragraph',
+        content: 'If you are evaluating AI SDR tools right now, this is not ancient history. The buyers who got burned were real sales leaders with real budgets. And the warning signs were there before they signed.'
+      },
+      {
+        type: 'callout',
+        content: 'This post is not about that company specifically. It is about what the situation revealed about how buyers should evaluate any AI SDR vendor - including us.'
+      },
+      {
+        type: 'tldr',
+        content: 'A major AI SDR vendor faced fraud allegations for inflating ARR 5x and faking customer logos.\nThe product did not work - generic messages, high churn, and hallucinated results hid behind a polished demo.\nThe gap between what AI SDR tools demo and what they deliver in production is often enormous.\nSeven due diligence questions every buyer should ask before signing - on references, churn, cancellation terms, and live product behavior.\nSurFox AI answers all seven directly, with real numbers and one real paying customer.'
+      },
+      {
+        type: 'heading',
+        content: 'What Actually Went Wrong'
+      },
+      {
+        type: 'paragraph',
+        content: 'The fraud allegations were serious. But underneath the legal and financial drama, there was a more fundamental problem that any sales operator should recognize.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The product did not work as advertised. Customers churned at high rates. The AI hallucinated, dropped leads, and sent generic messages that prospects ignored. Meetings that were supposed to be booked never materialized. And when customers pushed for results, what they got was more onboarding, more configuration, and more promises.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The inflated metrics were symptoms of a deeper issue: the gap between what AI SDR tools demo and what they deliver in production is often enormous. A controlled demo with seeded data looks nothing like a live deployment against a real prospect list with real variability.'
+      },
+      {
+        type: 'quote',
+        content: 'Fully autonomous AI SDRs are glorified spam engines that blast generic messages without strategy, leading to no real demos or closes.\nX user, sales community discussion'
+      },
+      {
+        type: 'paragraph',
+        content: 'That is a harsh take. But it reflects a real pattern across the category - not just one vendor.'
+      },
+      {
+        type: 'heading',
+        content: 'The Questions Buyers Should Ask Any AI SDR Vendor'
+      },
+      {
+        type: 'paragraph',
+        content: 'The fallout from this situation has made buyers rightfully more cautious. These are the due diligence questions that should be standard before signing with any AI SDR platform.'
+      },
+      {
+        type: 'subheading',
+        content: 'Can you show me real customer results beyond the pilot stage?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Pilots are easy to make look good. What you want is sustained performance data over six months or more from customers who are still active. Ask for anonymized case studies with real booking rates, reply rates, and qualification metrics.'
+      },
+      {
+        type: 'subheading',
+        content: 'Who are your reference customers, and can I speak to them directly?'
+      },
+      {
+        type: 'paragraph',
+        content: 'A logo on a website means nothing without verification. Ask to speak directly with a paying customer - not a success story hand-picked by the vendor. If they hesitate, that tells you something.'
+      },
+      {
+        type: 'subheading',
+        content: 'What is your churn rate, and how do you define an active customer?'
+      },
+      {
+        type: 'paragraph',
+        content: 'High churn is the most honest signal of product-market fit. A vendor who defines "active" loosely, counts trials as customers, or deflects on retention numbers is hiding something.'
+      },
+      {
+        type: 'subheading',
+        content: 'What are the cancellation terms?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Vendors with genuine confidence in their product do not need to lock you into long contracts with punishing exit clauses. If the cancellation terms feel aggressive, the vendor already knows retention is a problem.'
+      },
+      {
+        type: 'subheading',
+        content: 'How does your AI handle a nuanced reply?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Ask them to show you, live, what happens when a prospect responds with something unexpected - a question, a pushback, a conditional interest. Most AI SDR tools fall apart here. Multi-turn conversation quality is where the real product lives, not the first outreach message.'
+      },
+      {
+        type: 'subheading',
+        content: 'What happens when the AI makes a mistake?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Hallucinations, misclassified intent, dropped leads. These happen. What matters is whether the platform has guardrails, a QC layer, and human oversight built in. If the answer is "our AI does not make mistakes," walk away.'
+      },
+      {
+        type: 'subheading',
+        content: 'What is your actual ARR and how many paying customers do you have?'
+      },
+      {
+        type: 'paragraph',
+        content: 'This one feels blunt. Ask it anyway. A legitimate early-stage vendor will answer honestly. The number might be small. Small is fine. Small and real is infinitely better than large and fabricated.'
+      },
+      {
+        type: 'heading',
+        content: 'What Transparency Actually Looks Like'
+      },
+      {
+        type: 'paragraph',
+        content: 'We will answer those questions for SurFox AI directly, because we think that is what this moment calls for.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Our paying customer count is small. Leo at HealthPlus is our anchor customer at $550 per month. We are early. We are not hiding that.'
+      },
+      {
+        type: 'paragraph',
+        content: 'What we can show you is a real end-to-end result: Leo\'s campaign generated a qualified lead named Dr. Smith, who booked a real appointment via SMS conversation. The AI handled multiple message turns naturally, identified buying intent, and handed off to a human at the right moment. That is the product working exactly as designed.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Our unit economics are clean. Cost per lead is approximately $0.004. Gross margin at scale is healthy. We are not burning money to fake results.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Our cancellation terms are not punishing. At $97 per month for our entry tier, the risk of trying SurFox AI is lower than a single hour of a human SDR\'s time.'
+      },
+      {
+        type: 'paragraph',
+        content: 'And our AI has guardrails. We built intent classification, a QC monitoring layer, and human handoff logic from day one - because we knew autonomous AI without oversight is how you end up with exactly the kind of failures that made headlines in 2025.'
+      },
+      {
+        type: 'heading',
+        content: 'The Bottom Line'
+      },
+      {
+        type: 'paragraph',
+        content: 'The AI SDR category is real. The use case is legitimate. Reducing the grunt work of lead qualification, responding to prospects instantly, and routing warm conversations to human closers is genuinely valuable.'
+      },
+      {
+        type: 'paragraph',
+        content: 'But the category also has a trust problem right now - earned through a combination of overpromising, underdelivering, and in at least one high-profile case, outright misrepresentation.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The buyers who navigate this well will be the ones who ask hard questions before signing, demand real references, and choose vendors whose incentives are aligned with actual results rather than inflated metrics.'
+      },
+      {
+        type: 'callout',
+        content: 'SurFox AI is an SMS-based AI lead qualification platform that engages prospects in real time, qualifies buying intent through natural conversation, and routes warm leads to your sales team with full context. Learn more at [getsurfox.com](https://www.getsurfox.com).'
+      },
+      {
+        type: 'heading',
+        content: 'Frequently Asked Questions'
+      },
+      {
+        type: 'subheading',
+        content: 'Is this post about a specific AI SDR company?'
+      },
+      {
+        type: 'paragraph',
+        content: 'No. We are not naming any specific vendor. This post is about the due diligence questions every buyer should ask, informed by patterns that have become visible across the AI SDR category - not one isolated incident.'
+      },
+      {
+        type: 'subheading',
+        content: 'How is SurFox AI different from other AI SDR tools?'
+      },
+      {
+        type: 'paragraph',
+        content: 'SurFox AI uses SMS instead of email, which sidesteps deliverability issues entirely. It is built for qualification and warm handoff - not blast volume. And it is priced to make the cost of trying it lower than the cost of a single bad hire.'
+      },
+      {
+        type: 'subheading',
+        content: 'What if SurFox AI is also overhyping its product?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Fair question. We have one paying customer. We have one validated end-to-end result. We have clean unit economics. Everything else is a roadmap and a thesis. We will show you what is real and let you decide.'
+      },
+      {
+        type: 'subheading',
+        content: 'What should I do if I am currently locked into an AI SDR contract that is not delivering?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Document your results - specifically reply rates, qualified meetings booked, and pipeline generated. Compare those against what was promised in writing. Most contracts have performance clauses or good faith exit provisions. And if not, the cost of walking away from a bad tool is almost always lower than the cost of staying.'
       }
     ]
   }
