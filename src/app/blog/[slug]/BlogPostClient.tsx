@@ -327,7 +327,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                     )}
                   </span>
                   {blogPost.authorTitle && (
-                    <span className="text-sm text-gray-500">&mdash; {blogPost.authorTitle}</span>
+                    <span className="text-sm text-gray-500">, {blogPost.authorTitle}</span>
                   )}
                 </div>
                 {blogPost.authorBio && (
@@ -422,7 +422,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
       <section className="py-10 px-4 sm:px-6 md:px-8 border-t border-gray-100">
         <div className="max-w-4xl mx-auto">
           <p className="text-sm text-gray-500 leading-relaxed">
-            <strong className="text-gray-700">About SurFox AI</strong> - SurFox is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams with full conversation context.{' '}
+            <strong className="text-gray-700">About SurFox AI</strong> - SurFox AI is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams with full conversation context.{' '}
             <Link href="/demo" className="text-orange hover:underline">See how it works →</Link>
           </p>
         </div>
