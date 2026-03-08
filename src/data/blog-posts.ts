@@ -2523,34 +2523,6 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'heading',
-        content: 'What Transparency Actually Looks Like'
-      },
-      {
-        type: 'paragraph',
-        content: 'We will answer those questions for SurFox AI directly, because we think that is what this moment calls for.'
-      },
-      {
-        type: 'paragraph',
-        content: 'Our paying customer count is small. Leo at HealthPlus is our anchor customer at $550 per month. We are early. We are not hiding that.'
-      },
-      {
-        type: 'paragraph',
-        content: 'What we can show you is a real end-to-end result: Leo\'s campaign generated a qualified lead named Dr. Smith, who booked a real appointment via SMS conversation. The AI handled multiple message turns naturally, identified buying intent, and handed off to a human at the right moment. That is the product working exactly as designed.'
-      },
-      {
-        type: 'paragraph',
-        content: 'Our unit economics are clean. Cost per lead is approximately $0.004. Gross margin at scale is healthy. We are not burning money to fake results.'
-      },
-      {
-        type: 'paragraph',
-        content: 'Our cancellation terms are not punishing. At $97 per month for our entry tier, the risk of trying SurFox AI is lower than a single hour of a human SDR\'s time.'
-      },
-      {
-        type: 'paragraph',
-        content: 'And our AI has guardrails. We built intent classification, a QC monitoring layer, and human handoff logic from day one - because we knew autonomous AI without oversight is how you end up with exactly the kind of failures that made headlines in 2025.'
-      },
-      {
-        type: 'heading',
         content: 'The Bottom Line'
       },
       {
@@ -2595,7 +2567,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Fair question. We have one paying customer. We have one validated end-to-end result. We have clean unit economics. Everything else is a roadmap and a thesis. We will show you what is real and let you decide.'
+        content: 'Fair question. Ask us directly and we will tell you exactly where we are. We will show you what is real and let you decide. What we will not do is inflate numbers or show you logos we have not earned.'
       },
       {
         type: 'subheading',
