@@ -36,7 +36,7 @@ export default function Page() {
         "itemOffered": {
           "@type": "Service",
           "name": "SurFox Starter",
-          "description": "1,000 new messages per month, psychology-based conversations, automated qualification questions, basic objection handling, basic analytics dashboard, email support"
+          "description": "1,000 messages per month (in & out), psychology-based conversations, automated qualification questions, basic objection handling, basic analytics dashboard, email support"
         }
       },
       {
@@ -58,7 +58,7 @@ export default function Page() {
         "itemOffered": {
           "@type": "Service",
           "name": "SurFox Growth",
-          "description": "10,000 new messages per month, 5 team member accounts, AI learns from 100 conversations, advanced objection handling, Chrome extension for lead capture, advanced analytics & insights, priority email & chat support, funnel module"
+          "description": "10,000 messages per month (in & out), 5 team member accounts, AI learns from 100 conversations, advanced objection handling, Chrome extension for lead capture, advanced analytics & insights, priority email & chat support, funnel module"
         }
       },
       {
@@ -80,7 +80,7 @@ export default function Page() {
         "itemOffered": {
           "@type": "Service",
           "name": "SurFox Scale",
-          "description": "40,000+ new messages per month, 15+ team member accounts, AI learns from 1000 conversations, unlimited knowledge base uploads, message A/B testing, white-glove onboarding, dedicated success manager"
+          "description": "40,000+ messages per month (in & out), 15+ team member accounts, AI learns from 1000 conversations, unlimited knowledge base uploads, message A/B testing, white-glove onboarding, dedicated success manager"
         }
       }
     ],
