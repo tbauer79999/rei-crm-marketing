@@ -3,7 +3,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.getsurfox.com/</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -23,7 +23,7 @@
   </url>
   <url>
     <loc>https://www.getsurfox.com/pricing</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -31,7 +31,7 @@
   <!-- Technology & Features -->
   <url>
     <loc>https://www.getsurfox.com/integrations</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -43,7 +43,7 @@
   </url>
   <url>
     <loc>https://www.getsurfox.com/how-it-works</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -51,7 +51,7 @@
   <!-- Company Pages -->
   <url>
     <loc>https://www.getsurfox.com/about</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -77,7 +77,7 @@
   <!-- Blog/Insights Section -->
   <url>
     <loc>https://www.getsurfox.com/blog</loc>
-    <lastmod>2026-02-24</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -85,61 +85,73 @@
   <!-- Blog Articles -->
   <url>
     <loc>https://www.getsurfox.com/blog/ai-lead-qualification-pipeline-forecast-accuracy</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/reactivate-dormant-leads-ai</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/ai-sdr-vs-hiring-sdr-roi-2026</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/reduce-sdr-headcount-ai</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/future-of-ai-in-sales</loc>
-    <lastmod>2026-02-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.getsurfox.com/blog/conversation-intelligence-deep-dive</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/data-privacy-ai-businesses</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/qualify-leads-faster-ai</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/blog/customer-first-ai-strategy</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.getsurfox.com/blog/roi-conversation-intelligence</loc>
-    <lastmod>2026-02-25</lastmod>
+    <loc>https://www.getsurfox.com/blog/trade-show-lead-follow-up-failure</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.getsurfox.com/blog/surfox-now-on-zapier</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.getsurfox.com/blog/why-ai-sdr-tools-fail</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.getsurfox.com/blog/ai-sdr-fraud-buyer-due-diligence</loc>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -147,7 +159,7 @@
   <!-- Learn Section -->
   <url>
     <loc>https://www.getsurfox.com/roi</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -175,7 +187,7 @@
   </url>
   <url>
     <loc>https://www.getsurfox.com/terms</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -203,7 +215,7 @@
   </url>
   <url>
     <loc>https://www.getsurfox.com/compare/surfox-vs-all-competitors</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -215,7 +227,7 @@
   </url>
   <url>
     <loc>https://www.getsurfox.com/compare/surfox-vs-smarter-contact</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -239,13 +251,13 @@
   </url>
   <url>
     <loc>https://www.getsurfox.com/compare/surfox-vs-meera-ai</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.getsurfox.com/compare/surfox-vs-gohighlevel</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
