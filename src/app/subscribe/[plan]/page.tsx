@@ -36,7 +36,7 @@ const PLANS = {
     name: 'Scale',
     price: 1997, 
     priceId: 'price_1Ssxep2Mug1fO97sKunJKlTB',
-    leads: '50,000+ monthly messages',
+    leads: '40,000+ monthly messages',
     keyFeatures: [
       'Everything in Growth, plus:',
       'Unlimited AI knowledge base uploads',

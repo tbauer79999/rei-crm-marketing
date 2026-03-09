@@ -2567,7 +2567,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Fair question. Ask us directly and we will tell you exactly where we are. We will show you what is real and let you decide. What we will not do is inflate numbers or show you logos we have not earned.'
+        content: 'Fair question. Ask us directly and we will tell you exactly where we are. We will show you what is real and let you decide.'
       },
       {
         type: 'subheading',

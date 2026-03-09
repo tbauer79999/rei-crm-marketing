@@ -80,7 +80,7 @@ export default function Page() {
         "itemOffered": {
           "@type": "Service",
           "name": "SurFox Scale",
-          "description": "50,000+ new messages per month, 15+ team member accounts, AI learns from 1000 conversations, unlimited knowledge base uploads, message A/B testing, white-glove onboarding, dedicated success manager"
+          "description": "40,000+ new messages per month, 15+ team member accounts, AI learns from 1000 conversations, unlimited knowledge base uploads, message A/B testing, white-glove onboarding, dedicated success manager"
         }
       }
     ],

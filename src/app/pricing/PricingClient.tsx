@@ -240,7 +240,7 @@ export default function PricingClient() {
                   <div className="text-sm font-semibold text-navy mb-2">Monthly Limits:</div>
                   <div className="text-sm text-gray-700 flex items-center">
                     <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
-                    50,000+ new messages per month
+                    40,000+ new messages per month
                   </div>
 
                   <div className="text-sm text-gray-700 flex items-center mt-1">
