@@ -494,7 +494,7 @@ export default function IndustriesClient() {
             </div>
 
             <p className="text-sm text-gray-500 mt-8">
-              30-day money-back guarantee. No setup fees. Works with any lead source.
+              14-day free trial. 2,000 free messages. No setup fees.
             </p>
           </motion.div>
         </div>

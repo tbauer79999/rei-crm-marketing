@@ -475,90 +475,6 @@ export default function TermsOfService() {
             </div>
           </motion.div>
 
-          {/* 30-Day Results Guarantee */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16 bg-orange/5 border-2 border-orange/20 rounded-2xl p-8"
-          >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-6">
-              30-Day Results Guarantee
-            </h2>
-
-            <div className="space-y-6 text-gray-700">
-              <p className="font-semibold">
-                For Growth and Scale plans only:
-              </p>
-              <p>
-                Upload at least 500 quality leads with valid contact info within your first 30 days. If SurFox AI doesn't deliver 10 qualified prospects within 30 days of your first payment, we'll refund your first month in full.
-              </p>
-
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="bg-white rounded-lg p-4">
-                  <h4 className="font-semibold text-navy mb-2">What's a quality lead?</h4>
-                  <p className="text-sm">
-                    Someone you'd actually want to call if they showed interest. Valid phone number, correct contact information, fits your business model.
-                  </p>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <h4 className="font-semibold text-navy mb-2">What's a qualified prospect?</h4>
-                  <p className="text-sm">
-                    A lead that SurFox AI identifies as showing strong buying signals based on their conversation responses - either they've expressed clear interest, asked about next steps, or agreed to discuss further.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-navy mb-3">The Process:</h3>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange mt-1">•</span>
-                    <span>Upload at least 500 leads</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange mt-1">•</span>
-                    <span>Allow 7-14 days for SurFox AI to start conversations</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange mt-1">•</span>
-                    <span>Email tom@getsurfox.com if not satisfied within 30 days</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange mt-1">•</span>
-                    <span>Full refund processed within 3 business days</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-semibold text-navy mb-3">Guarantee does not apply if:</h3>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange mt-1">•</span>
-                    <span>You uploaded fewer than 500 leads</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange mt-1">•</span>
-                    <span>Leads were invalid, disconnected, or wrong numbers</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange mt-1">•</span>
-                    <span>You violated our Acceptable Use policy</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange mt-1">•</span>
-                    <span>You're requesting a refund after 30 days</span>
-                  </li>
-                </ul>
-              </div>
-
-              <p className="text-sm italic">
-                This guarantee applies only to your first month of service.
-              </p>
-            </div>
-          </motion.div>
-
           {/* Cancellation & Refunds */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -593,7 +509,7 @@ export default function TermsOfService() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-orange mt-1">•</span>
-                    <span>No refunds for partial months (except 30-day guarantee)</span>
+                    <span>No refunds for partial months</span>
                   </li>
                 </ul>
               </div>

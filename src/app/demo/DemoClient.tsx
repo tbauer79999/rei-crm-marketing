@@ -448,7 +448,7 @@ function CTASection() {
           </div>
           <div className="flex items-center gap-2">
             <Check className="w-5 h-5 text-orange flex-shrink-0" />
-            <span>30-day results guarantee</span>
+            <span>2,000 free messages included</span>
           </div>
           <div className="flex items-center gap-2">
             <Check className="w-5 h-5 text-orange flex-shrink-0" />

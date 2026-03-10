@@ -822,7 +822,7 @@ export default function ROIClient() {
             </div>
 
             <p className="text-sm text-gray-500 mb-4">
-              30-day money-back guarantee. No setup fees. Cancel anytime.
+              14-day free trial. 2,000 free messages. No setup fees. Cancel anytime.
             </p>
             <p className="text-sm text-gray-600">
               Plans start at $97/month. Most teams choose Growth at $497 for learning AI.

@@ -281,7 +281,10 @@ function PartnerSignupContent() {
                   <div className="text-sm font-medium text-gray-700 mb-2">Your Plan Includes:</div>
                   <div className="space-y-1 text-sm text-gray-600">
                     {invite.custom_plan_limits.sms_limit && (
-                      <div>• {invite.custom_plan_limits.sms_limit.toLocaleString()} SMS/month</div>
+                      <div>
+                        <div>• {invite.custom_plan_limits.sms_limit.toLocaleString()} messages/month (in & out)</div>
+                        <div className="text-xs text-gray-400 ml-3">Each conversation uses ~4–8 messages (your outbound + lead replies combined)</div>
+                      </div>
                     )}
                     {invite.custom_plan_limits.campaigns_limit && (
                       <div>• {invite.custom_plan_limits.campaigns_limit} campaigns</div>
