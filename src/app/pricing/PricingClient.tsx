@@ -359,7 +359,7 @@ export default function PricingClient() {
 
               <div className="bg-white rounded-xl border border-gray-200 p-6 hover-lift">
                 <h3 className="text-lg font-semibold text-navy mb-3">Do you offer annual discounts?</h3>
-                <p className="text-gray-700">We are focused on monthly pricing while we are early stage. Annual options may be available later in 2025 after we have proven consistent value delivery.</p>
+                <p className="text-gray-700">We are focused on monthly pricing while we are early stage. Annual options may be available in the future after we have proven consistent value delivery.</p>
               </div>
             </div>
           </div>

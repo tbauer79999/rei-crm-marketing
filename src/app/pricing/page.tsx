@@ -133,7 +133,7 @@ export default function Page() {
         "name": "Do you offer annual discounts?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We are focused on monthly pricing while we are early stage. Annual options may be available later in 2025 after we have proven consistent value delivery."
+          "text": "We are focused on monthly pricing while we are early stage. Annual options may be available in the future after we have proven consistent value delivery."
         }
       }
     ]

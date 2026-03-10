@@ -376,7 +376,7 @@ export default function SurFoxCorporate() {
           </div>
           
           <div className="text-center text-gray-500 text-sm mt-8 sm:mt-12">
-            © 2025 SurFox AI, Inc. All rights reserved.
+            © 2026 SurFox AI, Inc. All rights reserved.
           </div>
         </div>
       </footer>
