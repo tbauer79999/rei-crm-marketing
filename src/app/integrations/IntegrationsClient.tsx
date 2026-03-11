@@ -62,7 +62,7 @@ export default function Integrations() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight">
-              Connect Every<br className="hidden sm:block" />
+              Connect Every{' '}<br className="hidden sm:block" />
               Human Signal
             </h1>
             

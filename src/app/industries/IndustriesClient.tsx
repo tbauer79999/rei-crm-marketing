@@ -204,8 +204,8 @@ export default function IndustriesClient() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-8 leading-[1.1] tracking-tight">
-              Every Industry Has<br className="hidden sm:block" />
-              Dead Leads.<br className="hidden sm:block" />
+              Every Industry Has{' '}<br className="hidden sm:block" />
+              Dead Leads.{' '}<br className="hidden sm:block" />
               <span className="text-gray-400">We Bring Them Back.</span>
             </h1>
 

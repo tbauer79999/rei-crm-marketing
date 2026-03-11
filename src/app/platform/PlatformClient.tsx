@@ -60,8 +60,8 @@ export default function PlatformPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-8 leading-[1.1] tracking-tight">
-              Your customers are<br className="hidden sm:block" />
-              telling you everything.<br className="hidden sm:block" />
+              Your customers are{' '}<br className="hidden sm:block" />
+              telling you everything.{' '}<br className="hidden sm:block" />
               <span className="text-gray-400">Most of it is lost.</span>
             </h1>
 

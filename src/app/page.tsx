@@ -210,7 +210,7 @@ export default function Page() {
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
-            Stop Paying SDRs to<br className="hidden sm:block" />
+            Stop Paying SDRs to{' '}<br className="hidden sm:block" />
             Qualify Cold Leads
           </h1>
 

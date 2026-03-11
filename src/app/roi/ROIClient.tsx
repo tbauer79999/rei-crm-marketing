@@ -123,7 +123,7 @@ export default function ROIClient() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-8 leading-[1.1] tracking-tight">
-              What's the Real Cost<br className="hidden sm:block" />
+              What's the Real Cost{' '}<br className="hidden sm:block" />
               of Qualifying Leads?
             </h1>
 
