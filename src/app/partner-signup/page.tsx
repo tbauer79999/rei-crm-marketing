@@ -218,7 +218,7 @@ function PartnerSignupContent() {
               Welcome, {invite.partner_company}!
             </h1>
             <h2 className={`text-3xl font-bold mb-2 ${isPartnerAdmin ? 'text-purple-600' : 'text-orange-600'}`}>
-              {isPartnerAdmin ? 'SurFox Enterprise Partner' : 'SurFox Custom Plan'}
+              {isPartnerAdmin ? 'SurFox Enterprise Partner' : 'SurFox Ai Custom Plan'}
             </h2>
             <p className="text-gray-600">
               {isPartnerAdmin
