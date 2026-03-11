@@ -29,7 +29,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/',
   },
   platform: {
-    title: 'AI SDR Platform: SMS Lead Qualification & Automation',
+    title: 'SurFox AI Platform: Customer Intelligence & Automation',
     description: 'AI-powered SMS lead qualification platform. Automatically engage, qualify, and schedule appointments with leads 24/7. Replace expensive SDRs with intelligent automation.',
     keywords: ['AI platform', 'customer intelligence platform', 'sales automation platform', 'conversation AI platform'],
     path: '/platform',
@@ -206,7 +206,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   roi: {
     title: 'AI SDR ROI Calculator: Real Numbers & Benchmarks (2026)',
-    description: '60-80% lower cost per lead. 4x better response rates. Found revenue from dormant databases. Calculate your ROI from AI lead qualification - free, with real benchmarks.',
+    description: 'The real ROI of AI SDR platforms: 60-80% lower cost per lead. 4x better response rates. Found revenue from dormant databases. Calculate your ROI from AI lead qualification - free, with real benchmarks.',
     keywords: [
       'ai sdr roi',
       'ai sdr roi calculator',

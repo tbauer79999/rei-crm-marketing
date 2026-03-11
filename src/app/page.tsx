@@ -210,8 +210,8 @@ export default function Page() {
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
-            AI SDR Platform: Qualify Leads<br className="hidden sm:block" />
-            via SMS Automatically
+            Stop Paying SDRs to<br className="hidden sm:block" />
+            Qualify Cold Leads
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
