@@ -47,11 +47,7 @@ export default function Page() {
                   name: 'Spara',
                   description: 'AI SDR for inbound website visitors via chat, email, and voice.',
                   brand: { '@type': 'Brand', name: 'Spara' },
-                  offers: {
-                    '@type': 'Offer',
-                    availability: 'https://schema.org/InStock',
-                    url: 'https://www.spara.ai',
-                  },
+                  url: 'https://www.spara.ai',
                 },
               ],
             },
