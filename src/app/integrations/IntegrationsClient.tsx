@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageSquare, Mail, Phone, Database, CreditCard, ShoppingCart, Calendar, CheckCircle, Clock, Circle } from 'lucide-react';
+import { ArrowRight, MessageSquare, Mail, Phone, Database, CreditCard, ShoppingCart, Calendar, CheckCircle, Clock, Circle, LayoutDashboard } from 'lucide-react';
 
 const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
 
@@ -90,6 +90,37 @@ export default function Integrations() {
           </motion.div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {/* GoHighLevel — Featured Integration */}
+            <motion.a
+              href="/integrations/gohighlevel"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm hover:shadow-md transition-shadow group col-span-1 sm:col-span-2 md:col-span-3 flex flex-col sm:flex-row sm:items-center gap-6"
+            >
+              <div className="flex items-start gap-4 flex-1">
+                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <LayoutDashboard className="w-6 h-6 text-green-600" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <h3 className="text-lg font-semibold text-navy">GoHighLevel</h3>
+                    <span className="px-2 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">LIVE</span>
+                    <span className="px-2 py-1 rounded-full bg-orange/10 text-orange text-xs font-semibold">FEATURED</span>
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed max-w-2xl">
+                    Connect SurFox AI to your GHL pipelines via Zapier. When a contact hits a stage, AI starts qualifying them via SMS. Hot leads are tagged and pushed straight back into your pipeline — automatically.
+                  </p>
+                </div>
+              </div>
+              <div className="flex-shrink-0">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-orange group-hover:gap-3 transition-all">
+                  View Integration
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </motion.a>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

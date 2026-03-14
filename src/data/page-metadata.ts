@@ -88,6 +88,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['CRM integration', 'API', 'webhooks', 'integrations', 'sales stack'],
     path: '/integrations',
   },
+  'integrations-gohighlevel': {
+    title: 'GoHighLevel + SurFox AI Integration — AI Lead Qualification for GHL',
+    description: 'Connect SurFox AI to GoHighLevel in minutes via Zapier. Automatically qualify leads via SMS when pipeline stages change, and push hot leads back into GHL instantly.',
+    keywords: ['GoHighLevel integration', 'GHL SurFox', 'GoHighLevel AI', 'GHL lead qualification', 'GoHighLevel Zapier', 'GHL SMS automation', 'wholesale CRM AI'],
+    path: '/integrations/gohighlevel',
+  },
   'ai-principles': {
     title: 'AI Principles - Our Approach to Responsible AI',
     description: 'Learn about SurFox AI\'s commitment to ethical, transparent, and responsible AI. Our principles guide every product decision we make.',
