@@ -32,7 +32,7 @@ export default function GoHighLevelClient() {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-              You run your wholesale business in GoHighLevel. Now SurFox AI plugs in to handle every lead conversation automatically — qualifying prospects, detecting intent, and sending hot leads straight back into your pipeline.
+              You run your wholesale business in GoHighLevel. Now SurFox AI plugs in to handle every lead conversation automatically: qualifying prospects, detecting intent, and sending hot leads straight back into your pipeline.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -78,7 +78,7 @@ export default function GoHighLevelClient() {
 
             <div className="space-y-5 text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl">
               <p>
-                GoHighLevel runs your pipelines, your follow-up sequences, your entire operation. But when a lead replies — really replies — GHL can't think. It just fires the next message in the sequence.
+                GoHighLevel runs your pipelines, your follow-up sequences, your entire operation. But when a lead replies (really replies) GHL can't think. It just fires the next message in the sequence.
               </p>
               <p>
                 You're texting hundreds of leads a month. Most of them go cold because nobody followed up fast enough, or the response got buried.
@@ -149,7 +149,7 @@ export default function GoHighLevelClient() {
               </p>
 
               <a
-                href="https://zapier.com/apps/surfox-ai/integrations"
+                href="https://zapier.com/webintent/create-zap?template=255711461"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-orange text-white text-sm font-semibold hover:bg-orange-600 transition"
@@ -230,7 +230,7 @@ export default function GoHighLevelClient() {
               {
                 icon: Clock,
                 title: 'Never miss a hot lead.',
-                body: 'SurFox AI runs 24/7. When a motivated seller replies at 11pm, the conversation keeps going — and you wake up to a hot lead ready to call.',
+                body: 'SurFox AI runs 24/7. When a motivated seller replies at 11pm, the conversation keeps going. You wake up to a hot lead ready to call.',
               },
               {
                 icon: Zap,
@@ -312,7 +312,7 @@ export default function GoHighLevelClient() {
               whileTap={{ scale: 0.98 }}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-orange text-white font-semibold hover:bg-orange-600 transition"
             >
-              Start Free Trial — 14 days, 2,000 messages
+              Start Free Trial: 14 days, 2,000 messages
               <ArrowRight className="w-5 h-5" />
             </motion.a>
           </motion.div>

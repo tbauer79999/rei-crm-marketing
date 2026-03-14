@@ -90,7 +90,7 @@ export default function Integrations() {
           </motion.div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {/* GoHighLevel — Featured Integration */}
+            {/* GoHighLevel - Featured Integration */}
             <motion.a
               href="/integrations/gohighlevel"
               initial={{ opacity: 0, y: 20 }}
@@ -109,7 +109,7 @@ export default function Integrations() {
                     <span className="px-2 py-1 rounded-full bg-orange/10 text-orange text-xs font-semibold">FEATURED</span>
                   </div>
                   <p className="text-gray-600 text-sm leading-relaxed max-w-2xl">
-                    Connect SurFox AI to your GHL pipelines via Zapier. When a contact hits a stage, AI starts qualifying them via SMS. Hot leads are tagged and pushed straight back into your pipeline — automatically.
+                    Connect SurFox AI to your GHL pipelines via Zapier. When a contact hits a stage, AI starts qualifying them via SMS. Hot leads are tagged and pushed straight back into your pipeline automatically.
                   </p>
                 </div>
               </div>
