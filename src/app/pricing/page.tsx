@@ -83,12 +83,7 @@ export default function Page() {
           "description": "40,000+ messages per month (in & out), 15+ team member accounts, AI learns from 1000 conversations, unlimited knowledge base uploads, message A/B testing, white-glove onboarding, dedicated success manager"
         }
       }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "124"
-    }
+    ]
   };
 
   // FAQPage Schema for the pricing FAQ section

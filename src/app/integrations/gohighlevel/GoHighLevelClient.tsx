@@ -198,7 +198,7 @@ export default function GoHighLevelClient() {
               </p>
 
               <a
-                href="https://zapier.com/apps/surfox-ai/integrations"
+                href="https://zapier.com/webintent/create-zap?template=255711462"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border-2 border-navy text-navy text-sm font-semibold hover:bg-navy hover:text-white transition"
@@ -230,7 +230,7 @@ export default function GoHighLevelClient() {
               {
                 icon: Clock,
                 title: 'Never miss a hot lead.',
-                body: 'SurFox AI runs 24/7. When a motivated seller replies at 11pm, the conversation keeps going. You wake up to a hot lead ready to call.',
+                body: 'Every reply gets handled instantly within your texting hours. No lead goes cold because your team was busy. Hot leads are waiting in your pipeline when you are ready to call.',
               },
               {
                 icon: Zap,
