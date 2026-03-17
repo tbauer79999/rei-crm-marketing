@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/engage',
+        destination: '/',
+        permanent: true,
+      },
+      {
         source: '/blog/conversation-intelligence-deep-dive',
         destination: '/blog/ai-sdr-vs-hiring-sdr-roi-2026',
         permanent: true,
@@ -25,17 +30,17 @@ const nextConfig: NextConfig = {
       {
         source: '/compare/spara-vs-qualified',
         destination: '/compare/surfox-vs-spara?ref=spara-qualified',
-        permanent: false,
+        permanent: true,
       },
       {
         source: '/compare/spara-vs-salesmonk',
         destination: '/compare/surfox-vs-spara?ref=spara-salesmonk',
-        permanent: false,
+        permanent: true,
       },
       {
         source: '/compare/spara-vs-drift',
         destination: '/compare/surfox-vs-spara?ref=spara-drift',
-        permanent: false,
+        permanent: true,
       },
     ];
   },

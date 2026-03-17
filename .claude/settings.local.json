@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(powershell -Command:*)",
+      "Bash(python3:*)",
+      "Bash(sed \"s/.*slug: ''//\")",
+      "Bash(sed \"s/'',$//\")",
+      "Bash(sed \"s/.*title: ''//\")",
+      "Bash(npx tsc --noEmit --project tsconfig.json)",
+      "Bash(grep -r \"classifyintent\" \"d:/REI-CRM/lead-app/my-tailwind-app\" --include=\"*.ts\" --include=\"*.js\" ! -path \"*/node_modules/*\" ! -path \"*/.git/*\")",
+      "Bash(grep -rn \"aretelling\\\\|toQualify\\\\|youareTelling\\\\|theywant\\\\|areQualifying\" /d/REI-CRM/Surfox-website/rei-crm-marketing/src --include=*.tsx --include=*.ts --include=*.jsx --include=*.js)",
+      "Bash(grep -rn [a-z][a-z]*[A-Z][a-z] /d/REI-CRM/Surfox-website/rei-crm-marketing/src --include=*.tsx --include=*.ts)",
+      "Bash(grep -n \"name: ''Let AI Handle\" \"/d/REI-CRM/Surfox-website/rei-crm-marketing/src/data/blog-posts.ts\" -A 1)",
+      "Bash(grep -rn \"\\\\`.*[a-z][a-z]*[A-Z][a-z][a-z]*.*\\\\`\\\\|.*[a-z][a-z]*[A-Z][a-z][a-z]*.*|''''.*[a-z][a-z]*[A-Z][a-z][a-z]*.*''''\" /d/REI-CRM/Surfox-website/rei-crm-marketing/src/app --include=*.tsx --include=*.ts --include=*.jsx --include=*.js)",
+      "Bash(perl -ne 'while \\(/\\\\b\\([a-z]{2,}[A-Z][a-z]{2,}\\)\\\\b/g\\) { print STDERR \"\"$_\"\" if index\\($_, $_\\) == 0; }; print if /\\\\b\\(areQualifying|areTelling|youareQualifying|toQualify|theyAre|theywant|areacting|aretelling\\)\\\\b/i' \"/d/REI-CRM/Surfox-website/rei-crm-marketing/src/data/blog-posts.ts\")",
+      "Bash(grep -E \"\\\\.\\(ts|tsx|css|json\\)$|config\")"
+    ]
+  }
+}

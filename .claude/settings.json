@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /d/REI-CRM/Surfox-website/rei-crm-marketing -type f -name *.env*)",
+      "Bash(find /d/REI-CRM/Surfox-website/rei-crm-marketing/src/app -type f -name *[Ss]ignup* -o -name *[Ss]ubscribe*)"
+    ]
+  }
+}
