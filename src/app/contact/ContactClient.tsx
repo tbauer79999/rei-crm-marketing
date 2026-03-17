@@ -152,8 +152,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy mb-1">Email</h3>
-                    <a href="mailto:hello@getsurfox.com" className="text-gray-600 hover:text-orange transition">
-                      hello@getsurfox.com
+                    <a href="mailto:tom@getsurfox.com" className="text-gray-600 hover:text-orange transition">
+                      tom@getsurfox.com
                     </a>
                   </div>
                 </motion.div>
@@ -471,14 +471,14 @@ export default function Contact() {
                 icon: Mail,
                 title: 'Sales Inquiries',
                 desc: 'Get pricing, discuss enterprise plans, or talk to our sales team.',
-                link: 'mailto:sales@getsurfox.com',
+                link: 'mailto:tom@getsurfox.com',
                 linkText: 'Contact Sales'
               },
               {
                 icon: MessageSquare,
                 title: 'Support',
                 desc: 'Already a customer? Get help from our support team.',
-                link: 'mailto:support@getsurfox.com',
+                link: 'mailto:tom@getsurfox.com',
                 linkText: 'Get Support'
               }
             ].map((item, i) => (
