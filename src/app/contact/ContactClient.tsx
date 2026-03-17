@@ -170,7 +170,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy mb-1">Phone</h3>
-                    <a href="tel:+18885877369" className="text-gray-600 hover:text-orange transition">
+                    <a href="tel:+18888186402" className="text-gray-600 hover:text-orange transition">
                       +1 (888) 818-6402
                     </a>
                   </div>
