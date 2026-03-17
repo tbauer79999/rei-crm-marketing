@@ -220,17 +220,21 @@ export default function SurFoxVsSmarterContact() {
               <div className="space-y-4 mb-6">
                 <div className="p-4 rounded-xl border border-gray-200 bg-gray-50">
                   <h4 className="font-semibold text-navy mb-2 text-sm">The Problem They Solve:</h4>
-                  <p className="text-sm text-gray-700">"I need to send thousands of messages and hope some people respond"</p>
+                  <p className="text-sm text-gray-700">"I need to reach thousands of contacts fast and want ringless voicemail in the mix"</p>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                    <span>Bulk messaging capabilities</span>
+                    <span>High-volume SMS delivery — genuinely strong</span>
                   </div>
                   <div className="flex items-start text-sm text-gray-700">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                    <span>Template library for messages</span>
+                    <span>Ringless voicemail drops built in</span>
+                  </div>
+                  <div className="flex items-start text-sm text-gray-700">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
+                    <span>Popular with RE investors doing volume outreach</span>
                   </div>
                   <div className="flex items-start text-sm text-gray-600">
                     <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
@@ -242,14 +246,14 @@ export default function SurFoxVsSmarterContact() {
                   </div>
                   <div className="flex items-start text-sm text-gray-600">
                     <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
-                    <span>Usage fees add up quickly</span>
+                    <span>Per-message fees compound fast at volume</span>
                   </div>
                 </div>
               </div>
 
               <div className="p-4 rounded-xl border border-gray-200 bg-gray-50">
                 <p className="text-sm text-gray-700">
-                  <strong className="text-navy">Best For:</strong> Teams that want to send high volumes and manually handle all responses
+                  <strong className="text-navy">Best For:</strong> High-volume broadcasters with a dedicated team to manually work every reply
                 </p>
               </div>
             </motion.div>
@@ -597,20 +601,94 @@ export default function SurFoxVsSmarterContact() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 mb-12">
+          {/* SmarterContact Tier Breakdown */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="px-4 mb-8"
+          >
+            <h3 className="text-xl font-semibold text-navy mb-4 text-center">SmarterContact Pricing (billed quarterly)</h3>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border-2 border-gray-200 rounded-2xl overflow-hidden">
+                <thead>
+                  <tr className="bg-gray-100 text-navy">
+                    <th className="text-left px-4 py-3 font-semibold">Plan</th>
+                    <th className="text-right px-4 py-3 font-semibold">Base/mo</th>
+                    <th className="text-right px-4 py-3 font-semibold">Outbound SMS</th>
+                    <th className="text-right px-4 py-3 font-semibold">Calling</th>
+                    <th className="text-right px-4 py-3 font-semibold">Voicemail Drop</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-100">
+                  <tr>
+                    <td className="px-4 py-3 font-medium text-gray-700">Starter</td>
+                    <td className="px-4 py-3 text-right text-gray-700">$199</td>
+                    <td className="px-4 py-3 text-right text-gray-600">$0.03/text</td>
+                    <td className="px-4 py-3 text-right text-gray-600">$0.02/min</td>
+                    <td className="px-4 py-3 text-right text-gray-400">—</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="px-4 py-3 font-medium text-gray-700">Pro</td>
+                    <td className="px-4 py-3 text-right text-gray-700">$399</td>
+                    <td className="px-4 py-3 text-right text-gray-600">$0.025/text</td>
+                    <td className="px-4 py-3 text-right text-gray-600">$0.015/min</td>
+                    <td className="px-4 py-3 text-right text-gray-600">$0.03/drop</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-3 font-medium text-gray-700">Elite</td>
+                    <td className="px-4 py-3 text-right text-gray-700">$499</td>
+                    <td className="px-4 py-3 text-right text-gray-600">$0.02/text</td>
+                    <td className="px-4 py-3 text-right text-gray-600">$0.01/min</td>
+                    <td className="px-4 py-3 text-right text-gray-600">$0.025/drop</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </motion.div>
+
+          {/* Real Math Example */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="px-4 mb-8"
+          >
+            <div className="p-6 sm:p-8 rounded-2xl border-2 border-red-200 bg-red-50">
+              <h3 className="text-lg font-semibold text-navy mb-4">Real Math: SmarterContact Pro at 20K texts/month</h3>
+              <div className="grid sm:grid-cols-3 gap-4 mb-4 text-sm">
+                <div className="p-4 rounded-xl bg-white border border-red-200 text-center">
+                  <div className="text-gray-500 mb-1">Base plan</div>
+                  <div className="text-2xl font-semibold text-navy">$399</div>
+                </div>
+                <div className="p-4 rounded-xl bg-white border border-red-200 text-center">
+                  <div className="text-gray-500 mb-1">20K texts × $0.025</div>
+                  <div className="text-2xl font-semibold text-red-600">+$500</div>
+                </div>
+                <div className="p-4 rounded-xl bg-white border border-red-300 text-center">
+                  <div className="text-gray-500 mb-1">Monthly total</div>
+                  <div className="text-2xl font-semibold text-red-600">~$900</div>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 italic">That's before any calling minutes or voicemail drops. Usage fees compound fast at volume.</p>
+            </div>
+          </motion.div>
+
+          {/* Side-by-side comparison */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 mb-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center p-6 rounded-2xl border-2 border-red-200 bg-red-50"
             >
-              <div className="text-sm text-gray-600 mb-2">Smarter Contact Reality</div>
-              <div className="text-4xl font-semibold text-red-600 mb-2">$600+</div>
+              <div className="text-sm text-gray-600 mb-2">SmarterContact Pro — 20K texts/mo</div>
+              <div className="text-4xl font-semibold text-red-600 mb-2">~$900</div>
               <div className="text-xs text-gray-600 mb-4">per month</div>
               <div className="text-xs text-gray-700 space-y-1">
-                <div>• $199+ base subscription</div>
-                <div>• $0.03/SMS + usage fees</div>
-                <div>• $300+ staff time</div>
+                <div>• $399 base + $500 SMS fees</div>
+                <div>• Calling & voicemail billed separately</div>
+                <div>• Every reply still handled manually</div>
               </div>
             </motion.div>
 
@@ -623,28 +701,11 @@ export default function SurFoxVsSmarterContact() {
             >
               <div className="text-sm text-gray-600 mb-2">SurFox Growth</div>
               <div className="text-4xl font-semibold text-green-600 mb-2">$497</div>
-              <div className="text-xs text-gray-600 mb-4">per month</div>
+              <div className="text-xs text-gray-600 mb-4">flat per month</div>
               <div className="text-xs text-gray-700 space-y-1">
-                <div>• $497 with learning AI included</div>
-                <div>• Starts at $97 for basic features</div>
                 <div>• 10,000 messages included</div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-center p-6 rounded-2xl border-2 border-orange bg-orange/5"
-            >
-              <div className="text-sm text-gray-600 mb-2">You Save</div>
-              <div className="text-4xl font-semibold text-orange mb-2">67%</div>
-              <div className="text-xs text-gray-600 mb-4">cost savings</div>
-              <div className="text-xs text-gray-700 space-y-1">
-                <div>• Lower total cost</div>
-                <div>• Better results</div>
-                <div>• More appointments</div>
+                <div>• AI qualifies every reply automatically</div>
+                <div>• No usage fees, no surprises</div>
               </div>
             </motion.div>
           </div>
@@ -657,7 +718,7 @@ export default function SurFoxVsSmarterContact() {
           >
             <h3 className="text-2xl font-semibold text-navy mb-4">The Bottom Line</h3>
             <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              <strong className="text-navy">Smart choice:</strong> Pay less, get AI automation, and close more deals.
+              SmarterContact's base price looks comparable — but the meter is always running. At any real sending volume, SurFox Growth at <strong className="text-navy">$497 flat</strong> comes out ahead, and the AI handles the follow-up work your team would otherwise do manually.
             </p>
           </motion.div>
         </div>
@@ -691,15 +752,15 @@ export default function SurFoxVsSmarterContact() {
               <div className="space-y-3">
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                  <span>You want to send high volumes and manually handle responses</span>
+                  <span>You need ringless voicemail drops at scale</span>
                 </div>
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                  <span>You have a team dedicated to managing conversations</span>
+                  <span>You have a dedicated team to manually work every reply</span>
                 </div>
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                  <span>Template-based messaging fits your needs</span>
+                  <span>High-volume broadcast is the core of your outreach strategy</span>
                 </div>
               </div>
             </motion.div>
@@ -779,7 +840,7 @@ export default function SurFoxVsSmarterContact() {
             </h2>
 
             <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-              Join thousands who've upgraded from mass messaging to AI-powered appointments. <strong className="text-navy">30-day money back guarantee.</strong>
+              Built for operators who are done doing it manually. AI-powered qualification, not manual inbox triage. <strong className="text-navy">30-day money back guarantee.</strong>
             </p>
 
             <p className="text-base text-gray-300 mb-8 max-w-2xl mx-auto">
