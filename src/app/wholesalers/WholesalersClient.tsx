@@ -87,12 +87,12 @@ export default function WholesalersClient() {
               },
               {
                 icon: BarChart2,
-                title: 'At 10K, 20K texts a month, manual follow-up is not a workflow problem. It is a math problem.',
+                title: 'At 10K, 20K texts a month, manual follow-up is not a workflow problem. It\'s a math problem.',
                 body: 'You cannot read, qualify, and respond to hundreds of replies in real time. Not without a team. Not without dropping deals.',
               },
               {
                 icon: MessageSquare,
-                title: 'The deal you are missing is not in your list quality. It is in your response window.',
+                title: 'The deal you are missing is not in your list quality. It\'s in your response window.',
                 body: 'Your list is fine. Your targeting is fine. The gap is what happens between the blast and the callback. That is where deals go cold.',
               },
             ].map((item, i) => (
