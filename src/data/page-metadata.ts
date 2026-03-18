@@ -94,6 +94,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['GoHighLevel integration', 'GHL SurFox', 'GoHighLevel AI', 'GHL lead qualification', 'GoHighLevel Zapier', 'GHL SMS automation', 'wholesale CRM AI'],
     path: '/integrations/gohighlevel',
   },
+  staffing: {
+    title: 'AI SMS Lead Qualification for Staffing Agencies | SurFox AI',
+    description: 'SurFox AI qualifies your applicants and client leads via SMS automatically. No VA. No SDR. Every lead followed up instantly. Built for high-volume staffing operations.',
+    keywords: ['staffing agency SMS automation', 'AI lead qualification staffing', 'applicant follow-up automation', 'SMS AI staffing', 'SurFox AI staffing'],
+    path: '/staffing',
+  },
   'ai-principles': {
     title: 'AI Principles - Our Approach to Responsible AI',
     description: 'Learn about SurFox AI\'s commitment to ethical, transparent, and responsible AI. Our principles guide every product decision we make.',
