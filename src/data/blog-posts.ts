@@ -1368,7 +1368,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 9,
     slug: 'reactivate-dormant-leads-ai',
-    title: 'Your Dead Leads Aren\'t Dead: How AI Turns Dormant Databases Into Revenue',
+    title: 'AI Database Reactivation: How to Turn Dormant Leads Into Revenue',
     excerpt: 'At any given time, 3-5% of your "dead" leads are ready to buy. They\'re sitting in your CRM right now, ignored. Here\'s how AI re-engages thousands of old leads simultaneously and pulls out the ones worth calling.',
     category: 'Sales Strategy',
     date: '2026-02-06',
@@ -1389,7 +1389,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: 'paragraph',
-        content: 'You have a goldmine sitting in your CRM and you\'re ignoring it. Every business has one - thousands of leads collected over months or years that never closed. Old inquiries. Expired trials. Prospects who ghosted after the second call. They\'re sitting in your database right now, untouched, because your team decided they weren\'t worth the effort.'
+        content: 'AI database reactivation is the highest-ROI move in sales right now — and most companies have never tried it. You have a goldmine sitting in your CRM and you\'re ignoring it. Every business has one - thousands of leads collected over months or years that never closed. Old inquiries. Expired trials. Prospects who ghosted after the second call. They\'re sitting in your database right now, untouched, because your team decided they weren\'t worth the effort.'
       },
       {
         type: 'tldr',
@@ -1401,7 +1401,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'heading',
-        content: 'The Math on Your Dormant Database'
+        content: 'The Database Reactivation Math Nobody\'s Running'
       },
       {
         type: 'paragraph',
@@ -1501,7 +1501,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'heading',
-        content: 'How to Run Your First Reactivation Campaign'
+        content: 'How to Run Your First AI Database Reactivation Campaign'
       },
       {
         type: 'list',
@@ -1584,6 +1584,14 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'Absolutely. Dormant lead reactivation has the highest ROI of any sales AI use case because you\'re monetizing leads you already paid to acquire. The acquisition cost is zero - you\'re only paying for the AI platform to re-engage them. Most companies see payback within weeks, not months.'
+      },
+      {
+        type: 'subheading',
+        content: 'What is AI database reactivation?'
+      },
+      {
+        type: 'paragraph',
+        content: 'AI database reactivation is the process of using artificial intelligence to automatically re-engage dormant leads in your CRM at scale via SMS. Instead of manually working through thousands of old contacts, AI sends personalized outreach, handles qualifying conversations, and surfaces leads that are back in a buying window — all without human effort.'
       },
       {
         type: 'subheading',
@@ -2098,6 +2106,33 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'The [U.S. B2B trade show market reached $15.8 billion in 2024](https://www.tradeshowlabs.com/blog/trade-show-stats). With the 80% follow-up failure rate applied across the industry, the annual waste figure climbs into the billions - an estimated $5.4 billion in wasted investment annually for the U.S. B2B sector alone.'
+      },
+      {
+        type: 'heading',
+        content: 'Trade Show Lead Conversion Rates by Industry (2026)'
+      },
+      {
+        type: 'paragraph',
+        content: 'Not all trade shows perform equally. Conversion rates vary significantly by industry, audience quality, and follow-up speed. Here are the benchmarks sales teams should be measuring against:'
+      },
+      {
+        type: 'table',
+        headers: ['Industry', 'Average Lead-to-Opportunity Rate', 'Average Lead-to-Close Rate'],
+        rows: [
+          ['Manufacturing', '3–7%', '1–3%'],
+          ['Technology (B2B SaaS)', '5–10%', '2–5%'],
+          ['Healthcare / MedTech', '4–8%', '2–4%'],
+          ['Financial Services', '3–6%', '1–3%'],
+          ['Professional Services', '6–12%', '3–6%'],
+        ],
+      },
+      {
+        type: 'paragraph',
+        content: 'Manufacturing trade shows tend to land at the lower end of conversion benchmarks for one primary reason: longer buying cycles. Capital equipment and industrial solutions often involve committee decisions, procurement processes, and budget cycles that extend 6–18 months past initial contact. A manufacturing lead that looks cold at 30 days may still convert at 12 months — which makes persistent, automated re-engagement especially valuable in this vertical.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The companies hitting the top of these ranges share one trait: they follow up within 24 hours and they don\'t stop after one touch. Most manufacturing sales teams do neither.'
       },
       {
         type: 'heading',

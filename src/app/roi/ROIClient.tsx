@@ -123,12 +123,12 @@ export default function ROIClient() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-8 leading-[1.1] tracking-tight">
-              What's the Real Cost{' '}<br className="hidden sm:block" />
-              of Qualifying Leads?
+              AI SDR vs Hiring a Human SDR:{' '}<br className="hidden sm:block" />
+              Real Cost Comparison
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Your SDRs gave up on thousands of leads. SurFox AI brings them back to life.
+              See the true cost of hiring an SDR versus deploying AI — including the hidden costs most companies never calculate.
             </p>
 
             <motion.a
@@ -326,7 +326,7 @@ export default function ROIClient() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6">
-              Reviving Leads: SDRs vs SurFox AI
+              AI SDR vs Human SDR: Full Cost and Performance Breakdown
             </h2>
           </motion.div>
 
