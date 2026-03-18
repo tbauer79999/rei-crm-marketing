@@ -80,7 +80,7 @@ export default function PricingClient() {
                   <div className="text-sm font-semibold text-navy mb-2">Monthly Limits:</div>
                   <div className="text-sm text-gray-700 flex items-center">
                     <Check className="w-4 h-4 text-orange mr-2 flex-shrink-0" />
-                    1,000 messages per month (in & out)
+                    2,000 messages per month (in & out)
                   </div>
                   <div className="text-xs text-gray-500 mt-1 ml-6">Each conversation uses ~4–8 messages (your outbound + lead replies combined)</div>
 

@@ -36,7 +36,7 @@ export default function Page() {
         "itemOffered": {
           "@type": "Service",
           "name": "SurFox Starter",
-          "description": "1,000 messages per month (in & out), psychology-based conversations, automated qualification questions, basic objection handling, basic analytics dashboard, email support"
+          "description": "2,000 messages per month (in & out), psychology-based conversations, automated qualification questions, basic objection handling, basic analytics dashboard, email support"
         }
       },
       {

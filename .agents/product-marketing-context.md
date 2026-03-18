@@ -7,7 +7,7 @@
 **What it does:** SurFox AI is an AI-native SMS platform that engages, qualifies, and books leads via text message -- autonomously. The AI handles the entire conversation with the goal of getting a lead on the phone, learning from every exchange to get sharper over time.
 **Product category:** AI SDR platform / SMS lead qualification
 **Product type:** SaaS
-**Business model:** Subscription, tiered by message volume. Starter $97/1K messages, Growth $497/10K messages, Scale $1,997/40K messages. 14-day free trial.
+**Business model:** Subscription, tiered by message volume. Starter $97/2K messages, Growth $497/10K messages, Scale $1,997/40K messages. 14-day free trial.
 
 ## Target Audience
 **Target companies:** Real estate wholesalers (beachhead ICP); staffing agencies (established vertical); healthcare adjacent

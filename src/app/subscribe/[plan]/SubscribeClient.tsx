@@ -8,7 +8,7 @@ const PLANS = {
     name: 'Starter',
     price: 97,
     priceId: 'price_1SsxgB2Mug1fO97stcHUADPr',
-    leads: '1,000 monthly messages (in & out)',
+    leads: '2,000 monthly messages (in & out)',
     keyFeatures: [
       'AI-generated initial SMS',
       'AI auto-replies',

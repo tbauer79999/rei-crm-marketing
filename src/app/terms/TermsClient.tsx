@@ -330,7 +330,7 @@ export default function TermsOfService() {
                   <ul className="space-y-1 text-gray-600 text-sm">
                     <li className="flex items-start gap-2">
                       <span className="text-orange mt-1">•</span>
-                      <span>1,000 messages per month (in & out)</span>
+                      <span>2,000 messages per month (in & out)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-orange mt-1">•</span>
