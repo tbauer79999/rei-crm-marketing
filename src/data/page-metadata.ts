@@ -100,6 +100,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['staffing agency SMS automation', 'AI lead qualification staffing', 'applicant follow-up automation', 'SMS AI staffing', 'SurFox AI staffing'],
     path: '/staffing',
   },
+  wholesalers: {
+    title: 'AI SMS Lead Qualification for Real Estate Wholesalers | SurFox AI',
+    description: 'SurFox AI handles every motivated seller reply the moment it comes in. Qualifies leads, asks follow-up questions, and flags the deals worth your time. Stop sorting 40 replies. Start calling 4 hot leads.',
+    keywords: ['real estate wholesaler SMS', 'motivated seller lead qualification', 'wholesale SMS automation', 'AI SMS wholesaler', 'SurFox AI wholesalers', 'SmarterContact alternative'],
+    path: '/wholesalers',
+  },
   'ai-principles': {
     title: 'AI Principles - Our Approach to Responsible AI',
     description: 'Learn about SurFox AI\'s commitment to ethical, transparent, and responsible AI. Our principles guide every product decision we make.',
