@@ -181,7 +181,7 @@ export default function Nav() {
             {/* Solutions */}
             <div>
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Solutions</div>
-              <Link href="/engage" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">
+              <Link href="/engage" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">
                 <div className="font-medium">SurFox Engage</div>
                 <div className="text-xs text-gray-500">AI for Sales Conversations</div>
               </Link>
@@ -190,30 +190,30 @@ export default function Nav() {
             {/* Technology */}
             <div className="border-t border-gray-200 pt-4">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Technology</div>
-              <Link href="/platform" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Platform Overview</Link>
-              <Link href="/integrations" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Integrations</Link>
-              <Link href="/security" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Security & Compliance</Link>
+              <Link href="/platform" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Platform Overview</Link>
+              <Link href="/integrations" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Integrations</Link>
+              <Link href="/security" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Security & Compliance</Link>
             </div>
 
             {/* Company */}
             <div className="border-t border-gray-200 pt-4">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Company</div>
-              <Link href="/about" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">About SurFox AI</Link>
-              <Link href="/leadership" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Leadership</Link>
+              <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">About SurFox AI</Link>
+              <Link href="/leadership" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Leadership</Link>
             </div>
 
             {/* Learn */}
             <div className="border-t border-gray-200 pt-4">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Learn</div>
-              <Link href="/blog" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Insights</Link>
-              <Link href="/roi" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">ROI Calculator</Link>
-              <Link href="/ai-principles" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">AI Principles</Link>
+              <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Insights</Link>
+              <Link href="/roi" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">ROI Calculator</Link>
+              <Link href="/ai-principles" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">AI Principles</Link>
             </div>
 
             {/* Contact */}
             <div className="border-t border-gray-200 pt-4">
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Contact</div>
-              <Link href="/contact" className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Get in Touch</Link>
+              <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 hover:text-gray-900 transition-colors">Get in Touch</Link>
             </div>
             
             {/* Actions */}
