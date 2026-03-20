@@ -149,11 +149,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/compare/surfox-vs-gohighlevel',
   },
   'compare-spara': {
-    title: 'SurFox vs Spara: Outbound SMS vs Inbound Chat AI (2026)',
-    description: 'Spara handles inbound website chat. SurFox qualifies outbound lead lists via SMS (98% open rate). Different tools for different needs. Compare pricing, features & use cases.',
+    title: 'SurFox vs Spara: Best Spara Alternative for Outbound Lead Qualification (2026)',
+    description: 'Looking for a Spara replacement for outbound lead lists? SurFox qualifies leads via SMS (98% open rate) — where Spara\'s inbound chat can\'t reach. Compare features, pricing & use cases.',
     keywords: [
       'SurFox vs Spara',
       'Spara alternative',
+      'Spara replacement',
       'AI SDR',
       'lead qualification',
       'replace SDRs',

@@ -20,8 +20,8 @@ export default function Page() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebPage',
-            name: 'SurFox vs Spara: Outbound SMS vs Inbound Chat AI (2026)',
-            description: 'Spara handles inbound website chat. SurFox qualifies outbound lead lists via SMS (98% open rate). Different tools for different needs.',
+            name: 'SurFox vs Spara: Best Spara Alternative for Outbound Lead Qualification (2026)',
+            description: 'Looking for a Spara replacement for outbound lead lists? SurFox qualifies leads via SMS (98% open rate) — where Spara\'s inbound chat can\'t reach. Compare features, pricing & use cases.',
             mainEntity: {
               '@type': 'Product',
               name: 'SurFox AI',

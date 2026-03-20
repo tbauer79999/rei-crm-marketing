@@ -2396,7 +2396,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Most AI SDR platforms are built for volume. SurFox AI is built for qualification. The goal isn\'t to blast more messages into the world - it\'s to identify which leads are worth a human\'s time and get those leads into a real conversation fast. SurFox AI uses SMS, handles multi-turn conversations naturally, and only hands off to your team when a lead is genuinely warm.'
+        content: 'Most AI SDR platforms are built for volume. SurFox AI is built for qualification. The goal isn\'t to blast more messages into the world - it\'s to identify which leads are worth a human\'s time and get those leads into a real conversation fast. SurFox AI uses SMS, handles multi-turn conversations naturally, and only hands off to your team when a lead is genuinely warm. If you\'re evaluating specific platforms, see the [SurFox vs Spara comparison](/compare/surfox-vs-spara) for a side-by-side look at where each tool fits.'
       },
       {
         type: 'subheading',

@@ -84,8 +84,8 @@ export default function SparaClient() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
-              SurFox vs Spara: Which AI SDR<br className="hidden sm:block" />
-              Solution Fits Your Business?
+              SurFox vs Spara: The Outbound<br className="hidden sm:block" />
+              Alternative for Lead List Qualification
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto leading-relaxed font-normal px-4">
@@ -388,6 +388,54 @@ export default function SparaClient() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Looking to Replace or Supplement Spara */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6 px-4">
+              Looking to Replace or Supplement Spara for Outbound?
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 mb-6 leading-relaxed px-4">
+              Spara excels at inbound website chat qualification. But if you have cold lead lists, owned databases, or trade show contacts sitting in your CRM — Spara can't reach them. That's the gap SurFox fills as the outbound alternative.
+            </p>
+            <p className="text-lg sm:text-xl text-gray-600 mb-6 leading-relaxed px-4">
+              If you're evaluating a Spara replacement specifically for outbound lead qualification, the comparison comes down to one question: <strong className="text-navy">do your leads come to you, or do you need to reach out to them?</strong>
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 mb-8">
+              <div className="p-6 rounded-2xl border-2 border-gray-200 bg-gray-50">
+                <p className="font-semibold text-navy mb-2">Spara is the right tool when:</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li className="flex items-start"><span className="text-green-600 mr-2 flex-shrink-0">✓</span>Leads arrive via your website, SEO, or paid ads</li>
+                  <li className="flex items-start"><span className="text-green-600 mr-2 flex-shrink-0">✓</span>You need a chat widget to convert inbound visitors</li>
+                  <li className="flex items-start"><span className="text-green-600 mr-2 flex-shrink-0">✓</span>You have high inbound web traffic to qualify</li>
+                </ul>
+              </div>
+              <div className="p-6 rounded-2xl border-2 border-orange bg-orange/5">
+                <p className="font-semibold text-navy mb-2">SurFox is the right Spara alternative when:</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li className="flex items-start"><span className="text-orange mr-2 flex-shrink-0">✓</span>You have lead lists that need proactive outreach</li>
+                  <li className="flex items-start"><span className="text-orange mr-2 flex-shrink-0">✓</span>Leads won't find you — you need to reach them first</li>
+                  <li className="flex items-start"><span className="text-orange mr-2 flex-shrink-0">✓</span>You need SMS open rates (98%) vs chat widget engagement</li>
+                </ul>
+              </div>
+            </div>
+            <div className="px-4">
+              <a
+                href="/pricing"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition"
+              >
+                Try SurFox — the Spara Alternative for Outbound
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
