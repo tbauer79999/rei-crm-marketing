@@ -210,12 +210,11 @@ export default function Page() {
       <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 flex justify-center">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
-            Stop Paying SDRs to{' '}<br className="hidden sm:block" />
-            Qualify Cold Leads
+            Turn Cold Leads Into Ready Buyers - Automatically
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-            Upload your cold leads. SurFox AI engages, scores, and qualifies each one via SMS - automatically. When they&apos;re ready to buy, your team takes over.
+            Upload your list. SurFox AI handles every SMS conversation, qualifies each lead, and tells you who to call. No manual follow-up. Just conversations that close.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
