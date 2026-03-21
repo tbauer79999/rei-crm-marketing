@@ -24,7 +24,7 @@ export default function HomeClientSections() {
   return (
     <>
       {/* How It Works */}
-      <section id="how-it-works" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section id="how-it-works" className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

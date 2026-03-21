@@ -2,7 +2,19 @@
   "permissions": {
     "allow": [
       "Bash(find /d/REI-CRM/Surfox-website/rei-crm-marketing -type f -name *.env*)",
-      "Bash(find /d/REI-CRM/Surfox-website/rei-crm-marketing/src/app -type f -name *[Ss]ignup* -o -name *[Ss]ubscribe*)"
+      "Bash(find /d/REI-CRM/Surfox-website/rei-crm-marketing/src/app -type f -name *[Ss]ignup* -o -name *[Ss]ubscribe*)",
+      "Bash(grep -r why-ai-sdr-tools-fail /d/REI-CRM/Surfox-website/rei-crm-marketing/src --include=*.tsx --include=*.ts --include=*.jsx --include=*.js)",
+      "Read(//c/Users/thoma/.claude/projects/d--REI-CRM-Surfox-website-rei-crm-marketing/26583920-b7c5-4dee-8ec0-3766711fa691/tool-results/**)",
+      "Bash(grep -l \"py-\\\\|pt-\\\\|pb-\\\\|my-\\\\|mt-\\\\|mb-\" /d/REI-CRM/Surfox-website/rei-crm-marketing/src/app/**/*.tsx)",
+      "Bash(for file:*)",
+      "Bash(do if:*)",
+      "Bash(then echo:*)",
+      "Bash(find d:/REI-CRM/Surfox-website/rei-crm-marketing/src -type f \\\\\\(-name *.tsx -o -name *.ts -o -name *.jsx -o -name *.js \\\\\\))",
+      "Read(//d/REI-CRM/Surfox-website/**)",
+      "Read(//d/REI-CRM/**)"
+    ],
+    "additionalDirectories": [
+      "D:\\REI-CRM\\lead-app\\my-tailwind-app\\supabase\\functions\\generate-web-chat-reply"
     ]
   }
 }
