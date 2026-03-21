@@ -36,7 +36,7 @@ export default function HowItWorksClient() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-sans text-white">
       
         {/* Hero Section */}
-        <section className="relative py-20 pt-32 min-h-[60vh] flex items-center">
+        <section className="relative py-12 pt-32 min-h-[60vh] flex items-center">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
   How Psychology AI Turns Cold Leads into Conversations
@@ -50,7 +50,7 @@ export default function HowItWorksClient() {
         </section>
 
       {/* The Psychology Problem */}
-      <section className="py-20 bg-black/20 backdrop-blur-xl">
+      <section className="py-12 bg-black/20 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent">
@@ -169,7 +169,7 @@ export default function HowItWorksClient() {
       </section>
 
       {/* The 4-Step Process */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
@@ -426,7 +426,7 @@ export default function HowItWorksClient() {
       </section>
 
       {/* The Psychology Engine Deep Dive */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-xl">
+      <section className="py-12 bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
@@ -476,7 +476,7 @@ export default function HowItWorksClient() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
+      <section className="py-12 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
             Ready to see Psychology AI in action?

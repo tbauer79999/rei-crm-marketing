@@ -15,7 +15,7 @@ export default function WholesalersClient() {
       `}</style>
 
       {/* Section 1: Hero */}
-      <section className="min-h-[80vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
+      <section className="min-h-[80vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-14 md:py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ export default function WholesalersClient() {
       </section>
 
       {/* Section 2: The Problem */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -116,7 +116,7 @@ export default function WholesalersClient() {
       </section>
 
       {/* Section 3: How It Works */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -172,7 +172,7 @@ export default function WholesalersClient() {
       </section>
 
       {/* Section 4: Comparison Table */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -243,7 +243,7 @@ export default function WholesalersClient() {
       </section>
 
       {/* Section 5: Use Case Callout */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -264,7 +264,7 @@ export default function WholesalersClient() {
       </section>
 
       {/* Section 6: Objection Block */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -309,7 +309,7 @@ export default function WholesalersClient() {
       </section>
 
       {/* Section 7: Bottom CTA */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-navy text-white">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-navy text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -42,7 +42,7 @@ export default function PricingClient() {
       `}</style>
 
       <div className="min-h-screen bg-white text-gray-900">
-        <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="max-w-7xl mx-auto px-6 py-12">
 
           {/* Header */}
           <div className="text-center mb-20">

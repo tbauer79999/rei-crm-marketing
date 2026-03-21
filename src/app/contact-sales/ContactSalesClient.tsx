@@ -43,7 +43,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 flex items-center justify-center px-6 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 flex items-center justify-center px-6 py-12">
       <div className="max-w-2xl w-full bg-black/40 rounded-2xl border border-purple-500/30 p-8 backdrop-blur-xl shadow-2xl">
         <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent mb-6">
           Franchise & White Label Opportunities

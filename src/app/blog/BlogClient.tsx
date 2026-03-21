@@ -21,7 +21,7 @@ export default function Blog() {
   return (
     <div className="bg-white text-gray-900">
       {/* Hero Section */}
-      <section className="min-h-[60vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-gray-50 to-white">
+      <section className="min-h-[60vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 relative overflow-hidden bg-gradient-to-b from-gray-50 to-white">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-64 h-64 bg-orange/5 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl" />
@@ -66,7 +66,7 @@ export default function Blog() {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
             {filteredPosts.map((post, index) => (
@@ -134,7 +134,7 @@ export default function Blog() {
       </section>
 
       {/* Newsletter Signup CTA */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

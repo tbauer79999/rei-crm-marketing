@@ -25,7 +25,7 @@ export default function Success() {
         }
       `}</style>
 
-      <div className="min-h-screen bg-white flex items-center justify-center px-4 py-24">
+      <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
         <div className="max-w-2xl w-full bg-white rounded-2xl border-2 border-gray-200 p-10 shadow-xl text-center">
           
           {/* Success Icon */}

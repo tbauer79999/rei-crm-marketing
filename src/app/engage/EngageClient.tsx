@@ -46,7 +46,7 @@ export default function SurFoxRevamped() {
       `}</style>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -87,7 +87,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section id="how-it-works" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -158,7 +158,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* Features Section with Screenshots */}
-      <section id="features" className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-white">
+      <section id="features" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-[1400px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -363,7 +363,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* Knowledge Base Section */}
-      <section id="knowledge-base" className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section id="knowledge-base" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -420,7 +420,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* Benefits Section */}
-      <section id="benefits" className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-white">
+      <section id="benefits" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -461,7 +461,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* Security & Trust Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -515,7 +515,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-white">
+      <section id="faq" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -598,7 +598,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
