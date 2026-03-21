@@ -94,6 +94,14 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
+        {/* SurFox Chat Widget */}
+        <Script
+          id="surfox-chat-widget"
+          src="https://app.surfox.ai/chat-widget.js"
+          data-widget-key="wk_5c3a82cabe46479da8d56b797483ac3c"
+          strategy="lazyOnload"
+        />
+
         {/* Wrap client router hooks in Suspense per Next.js 15 requirement */}
         <Suspense fallback={null}>
           <GtmPageViewPusher />
