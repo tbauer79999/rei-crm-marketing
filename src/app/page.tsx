@@ -207,7 +207,7 @@ export default function Page() {
       />
 
       {/* Hero - server-rendered for fastest LCP */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12">
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 pt-8 sm:pt-10 md:pt-12 pb-4 sm:pb-6 md:pb-8">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
             Stop Paying SDRs to{' '}<br className="hidden sm:block" />
