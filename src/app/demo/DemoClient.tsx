@@ -69,7 +69,7 @@ function HeroSection() {
   return (
     <>
       {/* Hero */}
-      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 bg-white">
+      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 pt-24 pb-8 sm:pt-28 sm:pb-10 md:pt-32 md:pb-12 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -97,7 +97,7 @@ function HeroSection() {
           <div
             className="calendly-inline-widget"
             data-url="https://calendly.com/tom-getsurfox/30min?hide_event_type_details=1&primary_color=ff9d00"
-            style={{ minWidth: '320px', height: '700px' }}
+            style={{ minWidth: '320px', height: '1000px' }}
           />
           <Script
             src="https://assets.calendly.com/assets/external/widget.js"
