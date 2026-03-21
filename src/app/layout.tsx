@@ -99,8 +99,6 @@ export default function RootLayout({
           id="surfox-chat-widget"
           src="https://surfox.ai/chat-widget.js"
           data-widget-key="wk_5c3a82cabe46479da8d56b797483ac3c"
-          data-supabase-url="https://wuuqrdlfgkasnwydyvgk.supabase.co"
-          data-supabase-anon-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind1dXFyZGxmZ2thc253eWR5dmdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA2OTk4NjMsImV4cCI6MjA4NjA1OTg2M30.OmWp-AMlD2ZAADDr9oY9pEgMTI2mKXPYSCrFLZRqc9U"
           strategy="lazyOnload"
         />
 
