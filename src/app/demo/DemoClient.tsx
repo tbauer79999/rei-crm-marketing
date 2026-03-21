@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
 import Lenis from '@studio-freight/lenis';
 import Image from 'next/image';
+import Script from 'next/script';
 import { Upload, Bell, TrendingUp, Check } from 'lucide-react';
 
 export default function DemoClient() {
@@ -62,49 +63,49 @@ export default function DemoClient() {
 }
 
 // ============================================
-// Section 1: Hero
+// Section 1: Hero + Calendly Embed
 // ============================================
 function HeroSection() {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-white">
-      <div className="max-w-4xl mx-auto text-center">
-        <motion.h1
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          animate={{ scale: isHovered ? 1.02 : 1 }}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: 'spring', damping: 20, stiffness: 100 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy leading-tight cursor-default"
-        >
-          We're Not Going to Show You a Flashy Demo
-        </motion.h1>
+    <>
+      {/* Hero */}
+      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: 'spring', damping: 20, stiffness: 100 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy leading-tight mb-6 sm:mb-8"
+          >
+            See SurFox AI In Action
+          </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.2 }}
-          className="text-xl md:text-2xl text-gray-600 mt-6 leading-relaxed"
-        >
-          Most tools want you to watch animated dashboards and sit through walkthroughs.
-          That's because their product requires constant babysitting.
-        </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.2 }}
+            className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+          >
+            30 minutes. No pitch. Pick a time and we&apos;ll walk through the platform together.
+          </motion.p>
+        </div>
+      </section>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.4 }}
-          className="text-lg md:text-xl text-gray-700 mt-8 max-w-3xl mx-auto leading-relaxed"
-        >
-          SurFox AI is different: you don't watch it work. You just get results.
-        </motion.p>
-      </div>
-    </section>
+      {/* Calendly Inline Embed */}
+      <section className="px-4 sm:px-6 md:px-8 pb-12 bg-white">
+        <div className="max-w-[900px] mx-auto">
+          <div
+            className="calendly-inline-widget"
+            data-url="https://calendly.com/tom-getsurfox/30min?hide_event_type_details=1&primary_color=ff9d00"
+            style={{ minWidth: '320px', height: '700px' }}
+          />
+          <Script
+            src="https://assets.calendly.com/assets/external/widget.js"
+            strategy="afterInteractive"
+          />
+        </div>
+      </section>
+    </>
   );
 }
 
@@ -192,14 +193,6 @@ function TimelineSection() {
           That's it. No buttons to click. No campaigns to monitor. No conversations to manage.
         </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 1.6 }}
-          className="text-2xl md:text-3xl text-orange font-bold text-center mt-8"
-        >
-          The demo is the free trial.
-        </motion.p>
       </div>
     </section>
   );
