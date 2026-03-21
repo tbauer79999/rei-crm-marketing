@@ -291,7 +291,7 @@ function TimelineItem({ day, text, icon: Icon, side, index, inView, value, suffi
 function ScreenshotsSection() {
   const screenshots = [
     {
-      src: '/control-room.png',
+      src: '/AI-controlroom.png',
       alt: 'SurFox AI Control Room showing system health, active conversations, and real-time performance metrics',
       caption: 'What you see when you check in'
     },
