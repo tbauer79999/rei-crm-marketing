@@ -27,32 +27,32 @@ export default function StaffingClient() {
               <span className="text-sm font-semibold text-orange">For Staffing Agencies</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight">
               Your Staffing Agency Is<br className="hidden sm:block" /> Texting Leads. Your AI<br className="hidden sm:block" /> Should Be Qualifying Them.
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-              SurFox AI runs the entire SMS qualification conversation autonomously. Every applicant followed up. Every hot lead routed to your team. No VA. No SDR. No manual work.
+              SurFox AI qualifies every applicant the moment they reply. Hot leads routed to your team instantly. No VA. No SDR. No manual work.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <motion.a
-                href="/pricing"
+                href="/demo"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition inline-flex items-center gap-2"
               >
-                Start Free Trial
+                Schedule a Demo
                 <ArrowRight className="w-5 h-5" />
               </motion.a>
 
               <motion.a
-                href="/demo"
+                href="/pricing"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
               >
-                See a Demo
+                Start Free Trial
               </motion.a>
             </div>
 
@@ -340,7 +340,7 @@ export default function StaffingClient() {
                 whileTap={{ scale: 0.98 }}
                 className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/30 text-white font-semibold hover:border-white/60 hover:bg-white/10 transition"
               >
-                Book a Demo
+                Schedule a Demo
               </motion.a>
             </div>
 
