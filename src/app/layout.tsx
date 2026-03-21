@@ -97,7 +97,7 @@ export default function RootLayout({
         {/* SurFox Chat Widget */}
         <Script
           id="surfox-chat-widget"
-          src="https://app.surfox.ai/chat-widget.js"
+          src="https://surfox.ai/chat-widget.js"
           data-widget-key="wk_5c3a82cabe46479da8d56b797483ac3c"
           strategy="lazyOnload"
         />
