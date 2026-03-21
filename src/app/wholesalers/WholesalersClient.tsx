@@ -32,27 +32,27 @@ export default function WholesalersClient() {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-              SurFox AI handles every inbound reply the moment it comes in. Qualifies the lead, asks the right follow-up questions, and flags the deals worth your time. You're not responding to 40 texts. You're calling 4 hot leads.
+              The moment a motivated seller writes back, SurFox AI qualifies them, asks the right questions, and flags the deals worth your time. You call 4 hot leads. Not 40 texts.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <motion.a
-                href="/pricing"
+                href="/demo"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition inline-flex items-center gap-2"
               >
-                Start Free Trial
+                Get a Walkthrough
                 <ArrowRight className="w-5 h-5" />
               </motion.a>
 
               <motion.a
-                href="/demo"
+                href="/pricing"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
               >
-                See a Demo
+                Start Free Trial
               </motion.a>
             </div>
 
