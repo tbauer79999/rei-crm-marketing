@@ -46,11 +46,11 @@ export default function SurFoxVsLaunchControl() {
       category: 'Business Value',
       icon: DollarSign,
       features: [
-        { name: 'Pricing Model', surfox: 'Growth plan $497/month with learning AI, starts at $97', launch: '$497+ base plus staff time costs' },
+        { name: 'Pricing Model', surfox: 'Growth plan $597/month with learning AI, starts at $147', launch: '$497+ base plus staff time costs' },
         { name: 'Staff Requirements', surfox: 'No dedicated campaign manager needed', launch: 'Requires full-time campaign management' },
         { name: 'ROI Tracking', surfox: 'Full conversion tracking from lead to close', launch: 'Basic campaign metrics only' },
         { name: 'Scalability', surfox: 'SurFox AI scales conversations without adding staff', launch: 'More campaigns = more manual work' },
-        { name: 'Total Cost of Ownership', surfox: 'Growth $497/month, Starter $97/month', launch: '$1,500+/month including labor costs' }
+        { name: 'Total Cost of Ownership', surfox: 'Growth $597/month, Starter $147/month', launch: '$1,500+/month including labor costs' }
       ]
     }
   ];
@@ -159,7 +159,7 @@ export default function SurFoxVsLaunchControl() {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4">
               <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
-                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">$497</div>
+                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">$597</div>
                 <div className="text-sm text-gray-600">SurFox Growth Plan</div>
                 <div className="text-xs text-gray-400 mt-1">vs $1,500+ total</div>
               </div>
@@ -641,11 +641,11 @@ export default function SurFoxVsLaunchControl() {
               className="text-center p-6 rounded-2xl border-2 border-green-200 bg-green-50"
             >
               <div className="text-sm text-gray-600 mb-2">SurFox Growth</div>
-              <div className="text-4xl font-semibold text-green-600 mb-2">$497</div>
+              <div className="text-4xl font-semibold text-green-600 mb-2">$597</div>
               <div className="text-xs text-gray-600 mb-4">Learning AI does all the work</div>
               <div className="text-xs text-gray-700 space-y-1">
-                <div>• $497 with learning AI included</div>
-                <div>• Starts at $97 for basic features</div>
+                <div>• $597 with learning AI included</div>
+                <div>• Starts at $147 for basic features</div>
                 <div>• 10,000 messages included</div>
               </div>
             </motion.div>
@@ -735,7 +735,7 @@ export default function SurFoxVsLaunchControl() {
             </p>
 
             <p className="text-base text-gray-300 mb-8 max-w-2xl mx-auto">
-              Plans start at $97/month. Most teams choose Growth at $497 for learning AI.
+              Plans start at $147/month. Most teams choose Growth at $597 for learning AI.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">

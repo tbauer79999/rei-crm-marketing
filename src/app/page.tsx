@@ -127,7 +127,7 @@ export default function Page() {
             offers: {
               '@type': 'Offer',
               priceCurrency: 'USD',
-              description: 'Plans start from $97/month',
+              description: 'Plans start from $147/month',
               url: 'https://www.getsurfox.com/pricing',
             },
             operatingSystem: 'Web-based',

@@ -10,7 +10,7 @@ export default function SparaClient() {
     { factor: 'Use case', surfox: 'Outbound - work YOUR lead lists', spara: 'Inbound - convert website visitors' },
     { factor: 'Lead sources', surfox: 'Any list - aged leads, purchased, events, scraped', spara: 'Only website traffic' },
     { factor: 'Target customer', surfox: 'SMBs, staffing agencies, real estate, service businesses', spara: 'Enterprise SaaS with high web traffic' },
-    { factor: 'Pricing', surfox: '$97-$1,997/mo', spara: 'Enterprise contracts (unlisted)' },
+    { factor: 'Pricing', surfox: '$147-$2,497/mo', spara: 'Enterprise contracts (unlisted)' },
     { factor: 'Setup', surfox: 'Self-serve, live in minutes', spara: 'Sales-led implementation' },
     { factor: 'Best for', surfox: 'Teams with lead lists but no time to text them all', spara: 'Companies with heavy inbound web traffic' },
   ];
@@ -129,7 +129,7 @@ export default function SparaClient() {
                 <div className="text-xs text-gray-400 mt-1">people text back</div>
               </div>
               <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
-                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">$97</div>
+                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">$147</div>
                 <div className="text-sm text-gray-600">Starting Price</div>
                 <div className="text-xs text-gray-400 mt-1">self-serve setup</div>
               </div>
@@ -244,7 +244,7 @@ export default function SparaClient() {
                 </div>
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                  <span>SMB-friendly pricing starting at $97/mo</span>
+                  <span>SMB-friendly pricing starting at $147/mo</span>
                 </div>
                 <div className="flex items-start text-sm text-gray-700">
                   <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
@@ -638,7 +638,7 @@ export default function SparaClient() {
             </p>
 
             <p className="text-base text-gray-500 mb-8 max-w-2xl mx-auto">
-              Plans start at $97/month. Self-serve setup - live in minutes.
+              Plans start at $147/month. Self-serve setup - live in minutes.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">

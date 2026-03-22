@@ -28,7 +28,7 @@ export default function ROIClient() {
     const currentMonthlyMeetings = monthlyLeads * (conversionRate / 100)
     const currentAnnualRevenue = currentMonthlyMeetings * 12 * avgDealValue * 0.25
 
-    const surfoxAnnualCost = 5964 // Growth plan at $497/mo
+    const surfoxAnnualCost = 7164 // Growth plan at $597/mo
     const surfoxConversionRate = Math.min(conversionRate * multiplier, 50) // Cap at 50%
     const surfoxMonthlyMeetings = monthlyLeads * (surfoxConversionRate / 100)
     const surfoxAnnualRevenue = surfoxMonthlyMeetings * 12 * avgDealValue * 0.25
@@ -825,7 +825,7 @@ export default function ROIClient() {
               14-day free trial. 2,000 free messages. No setup fees. Cancel anytime.
             </p>
             <p className="text-sm text-gray-600">
-              Plans start at $97/month. Most teams choose Growth at $497 for learning AI.
+              Plans start at $147/month. Most teams choose Growth at $597 for learning AI.
             </p>
           </motion.div>
         </div>

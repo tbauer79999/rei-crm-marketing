@@ -11,7 +11,8 @@
       "Bash(then echo:*)",
       "Bash(find d:/REI-CRM/Surfox-website/rei-crm-marketing/src -type f \\\\\\(-name *.tsx -o -name *.ts -o -name *.jsx -o -name *.js \\\\\\))",
       "Read(//d/REI-CRM/Surfox-website/**)",
-      "Read(//d/REI-CRM/**)"
+      "Read(//d/REI-CRM/**)",
+      "Bash(find d:/REI-CRM/Surfox-website/rei-crm-marketing -maxdepth 2 -name *pricing* -type f)"
     ],
     "additionalDirectories": [
       "D:\\REI-CRM\\lead-app\\my-tailwind-app\\supabase\\functions\\generate-web-chat-reply"

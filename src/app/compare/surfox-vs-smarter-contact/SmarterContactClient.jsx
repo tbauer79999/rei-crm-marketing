@@ -45,11 +45,11 @@ export default function SurFoxVsSmarterContact() {
       category: 'Business Value',
       icon: DollarSign,
       features: [
-        { name: 'Pricing Model', surfox: 'Growth plan $497/month with learning AI, starts at $97', smarter: 'Base fee plus per-message costs' },
+        { name: 'Pricing Model', surfox: 'Growth plan $597/month with learning AI, starts at $147', smarter: 'Base fee plus per-message costs' },
         { name: 'Time Investment', surfox: 'Minimal ongoing management required', smarter: 'Constant manual conversation monitoring' },
         { name: 'ROI Tracking', surfox: 'Full conversion tracking from lead to close', smarter: 'Basic volume and open rate metrics' },
         { name: 'Scalability', surfox: 'SurFox AI scales conversations without adding staff', smarter: 'More leads = more manual work' },
-        { name: 'Total Cost', surfox: 'Growth $497/month, Starter $97/month', smarter: '$199+ base + usage fees + labor costs' }
+        { name: 'Total Cost', surfox: 'Growth $597/month, Starter $147/month', smarter: '$199+ base + usage fees + labor costs' }
       ]
     }
   ];
@@ -158,7 +158,7 @@ export default function SurFoxVsSmarterContact() {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4">
               <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
-                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">$497</div>
+                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">$597</div>
                 <div className="text-sm text-gray-600">SurFox Growth Plan</div>
                 <div className="text-xs text-gray-400 mt-1">vs $199+ Smarter</div>
               </div>
@@ -700,7 +700,7 @@ export default function SurFoxVsSmarterContact() {
               className="text-center p-6 rounded-2xl border-2 border-green-200 bg-green-50"
             >
               <div className="text-sm text-gray-600 mb-2">SurFox Growth</div>
-              <div className="text-4xl font-semibold text-green-600 mb-2">$497</div>
+              <div className="text-4xl font-semibold text-green-600 mb-2">$597</div>
               <div className="text-xs text-gray-600 mb-4">flat per month</div>
               <div className="text-xs text-gray-700 space-y-1">
                 <div>• 10,000 messages included</div>
@@ -718,7 +718,7 @@ export default function SurFoxVsSmarterContact() {
           >
             <h3 className="text-2xl font-semibold text-navy mb-4">The Bottom Line</h3>
             <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-              SmarterContact's base price looks comparable — but the meter is always running. At any real sending volume, SurFox Growth at <strong className="text-navy">$497 flat</strong> comes out ahead, and the AI handles the follow-up work your team would otherwise do manually.
+              SmarterContact's base price looks comparable — but the meter is always running. At any real sending volume, SurFox Growth at <strong className="text-navy">$597 flat</strong> comes out ahead, and the AI handles the follow-up work your team would otherwise do manually.
             </p>
           </motion.div>
         </div>
@@ -844,7 +844,7 @@ export default function SurFoxVsSmarterContact() {
             </p>
 
             <p className="text-base text-gray-300 mb-8 max-w-2xl mx-auto">
-              Plans start at $97/month. Most teams choose Growth at $497 for learning AI.
+              Plans start at $147/month. Most teams choose Growth at $597 for learning AI.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">

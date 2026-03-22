@@ -325,7 +325,7 @@ export default function TermsOfService() {
                 <div className="mb-6 bg-gray-50 rounded-xl p-6">
                   <div className="flex items-baseline gap-3 mb-3">
                     <h4 className="text-lg font-semibold text-navy">Starter</h4>
-                    <span className="text-2xl font-bold text-navy">$97<span className="text-sm text-gray-500">/month</span></span>
+                    <span className="text-2xl font-bold text-navy">$147<span className="text-sm text-gray-500">/month</span></span>
                   </div>
                   <ul className="space-y-1 text-gray-600 text-sm">
                     <li className="flex items-start gap-2">
@@ -356,7 +356,7 @@ export default function TermsOfService() {
                   <div className="flex items-baseline gap-3 mb-3">
                     <h4 className="text-lg font-semibold text-navy">Growth</h4>
                     <span className="text-sm bg-orange text-white px-3 py-1 rounded-full font-semibold">Most Popular</span>
-                    <span className="text-2xl font-bold text-navy">$497<span className="text-sm text-gray-500">/month</span></span>
+                    <span className="text-2xl font-bold text-navy">$597<span className="text-sm text-gray-500">/month</span></span>
                   </div>
                   <ul className="space-y-1 text-gray-700 text-sm">
                     <li className="flex items-start gap-2">
@@ -390,7 +390,7 @@ export default function TermsOfService() {
                 <div className="mb-6 bg-gray-50 rounded-xl p-6">
                   <div className="flex items-baseline gap-3 mb-3">
                     <h4 className="text-lg font-semibold text-navy">Scale</h4>
-                    <span className="text-2xl font-bold text-navy">$1,997<span className="text-sm text-gray-500">/month</span></span>
+                    <span className="text-2xl font-bold text-navy">$2,497<span className="text-sm text-gray-500">/month</span></span>
                   </div>
                   <ul className="space-y-1 text-gray-600 text-sm">
                     <li className="flex items-start gap-2">

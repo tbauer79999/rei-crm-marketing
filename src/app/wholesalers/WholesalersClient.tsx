@@ -207,7 +207,7 @@ export default function WholesalersClient() {
                   { label: 'Available the moment replies come in', manual: false, smarter: false, surfox: true },
                   { label: 'Learns from conversations', manual: false, smarter: false, surfox: true },
                   { label: 'Zapier integration', manual: false, smarter: 'Limited', surfox: true },
-                  { label: 'Cost', manual: 'Your time + labor', smarter: '$800+/mo + labor', surfox: 'From $97/mo' },
+                  { label: 'Cost', manual: 'Your time + labor', smarter: '$800+/mo + labor', surfox: 'From $147/mo' },
                 ].map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="px-5 py-4 text-sm font-medium text-navy">{row.label}</td>
@@ -346,7 +346,7 @@ export default function WholesalersClient() {
             </div>
 
             <p className="text-sm text-gray-400">
-              Plans start at $97/month. 14-day free trial included.
+              Plans start at $147/month. 14-day free trial included.
             </p>
           </motion.div>
         </div>

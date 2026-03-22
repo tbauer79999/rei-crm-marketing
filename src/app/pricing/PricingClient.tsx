@@ -65,7 +65,7 @@ export default function PricingClient() {
             <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 text-center hover-lift">
               <h3 className="text-xl font-bold text-navy mb-2">Starter</h3>
               <div className="text-4xl font-bold text-navy mb-4">
-                $97<span className="text-lg text-gray-500">/month</span>
+                $147<span className="text-lg text-gray-500">/month</span>
               </div>
               <p className="text-gray-600 mb-6">Perfect for individual sales professionals ready to eliminate manual outreach</p>
 
@@ -147,7 +147,7 @@ export default function PricingClient() {
 
               <h3 className="text-xl font-bold text-navy mb-2">Growth</h3>
               <div className="text-4xl font-bold text-navy mb-4">
-                $497<span className="text-lg text-gray-500">/month</span>
+                $597<span className="text-lg text-gray-500">/month</span>
               </div>
               <p className="text-gray-600 mb-6">For growing sales teams ready to scale AI-powered conversations</p>
 
@@ -227,7 +227,7 @@ export default function PricingClient() {
             <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 text-center hover-lift">
               <h3 className="text-xl font-bold text-navy mb-2">Scale</h3>
               <div className="text-4xl font-bold text-navy mb-4">
-                $1,997<span className="text-lg text-gray-500">/month</span>
+                $2,497<span className="text-lg text-gray-500">/month</span>
               </div>
               <p className="text-gray-600 mb-6">Full-featured plan for enterprises scaling AI-powered sales operations</p>
 

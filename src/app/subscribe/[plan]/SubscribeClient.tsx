@@ -6,8 +6,8 @@ import { useEffect } from 'react';
 const PLANS = {
   starter: {
     name: 'Starter',
-    price: 97,
-    priceId: 'price_1SsxgB2Mug1fO97stcHUADPr',
+    price: 147,
+    priceId: 'price_1TDcQU2Mug1fO97sWchG4ILV',
     leads: '2,000 monthly messages (in & out)',
     keyFeatures: [
       'AI-generated initial SMS',
@@ -20,8 +20,8 @@ const PLANS = {
   },
   growth: {
     name: 'Growth', 
-    price: 497,
-    priceId: 'price_1Ssxfn2Mug1fO97sN23TW9KB',
+    price: 597,
+    priceId: 'price_1TDcSA2Mug1fO97sywh4ejnB',
     leads: '10,000 monthly messages (in & out)',
     keyFeatures: [
       'Everything in Starter, plus:',
@@ -34,8 +34,8 @@ const PLANS = {
   },
   scale: {
     name: 'Scale',
-    price: 1997, 
-    priceId: 'price_1Ssxep2Mug1fO97sKunJKlTB',
+    price: 2497,
+    priceId: 'price_1TDcSs2Mug1fO97sEHhXl38Y',
     leads: '40,000+ monthly messages (in & out)',
     keyFeatures: [
       'Everything in Growth, plus:',
