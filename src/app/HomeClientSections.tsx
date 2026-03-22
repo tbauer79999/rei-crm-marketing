@@ -31,7 +31,7 @@ export default function HomeClientSections() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16 sm:mb-20 md:mb-24"
+            className="text-center mb-12 sm:mb-14 md:mb-16"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
               How It Works
@@ -95,7 +95,7 @@ export default function HomeClientSections() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16 sm:mb-20 md:mb-24"
+            className="text-center mb-12 sm:mb-14 md:mb-16"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
               Everything You Need to Qualify at Scale

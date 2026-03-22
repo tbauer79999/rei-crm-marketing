@@ -13,7 +13,7 @@ export default function Leadership() {
     <div ref={containerRef} className="bg-white text-gray-900">
     
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 relative overflow-hidden">
+      <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 flex justify-center relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-64 h-64 bg-orange/5 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange/5 rounded-full blur-3xl" />
@@ -38,14 +38,14 @@ export default function Leadership() {
       </section>
 
       {/* Founder Profile - Featured */}
-      <section className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16 sm:mb-20 md:mb-24"
+            className="text-center mb-12 sm:mb-14 md:mb-16"
           >
             <div className="inline-block px-4 py-2 rounded-full bg-orange/10 border border-orange/20 mb-6">
               <span className="text-sm font-semibold text-orange">FOUNDER & CEO</span>
@@ -115,13 +115,13 @@ export default function Leadership() {
       </section>
 
       {/* Founding Principles */}
-      <section className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16 sm:mb-20 md:mb-24"
+            className="text-center mb-12 sm:mb-14 md:mb-16"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
               Founding Principles
@@ -172,7 +172,7 @@ export default function Leadership() {
       </section>
 
       {/* Vision Section */}
-      <section className="py-20 sm:py-32 md:py-40 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
