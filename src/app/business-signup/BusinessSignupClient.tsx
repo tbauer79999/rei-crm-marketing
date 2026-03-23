@@ -163,10 +163,10 @@ function BusinessSignupContent() {
   if (error) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">
+        <div className="bg-card-bg rounded-2xl shadow-xl p-8 max-w-md w-full">
           <AlertCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-          <h1 className="text-2xl font-bold text-gray-900 text-center mb-2">Invitation Error</h1>
-          <p className="text-gray-600 text-center">{error}</p>
+          <h1 className="text-2xl font-bold text-white text-center mb-2">Invitation Error</h1>
+          <p className="text-white/60 text-center">{error}</p>
         </div>
       </div>
     );
@@ -187,12 +187,12 @@ function BusinessSignupContent() {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Sparkles className="w-8 h-8 text-blue-600" />
-            <h1 className="text-4xl font-bold text-gray-900">Welcome to SurFox!</h1>
+            <h1 className="text-4xl font-bold text-white">Welcome to SurFox!</h1>
           </div>
           
           {invitation.partner_name && (
             <div className="flex items-center justify-center gap-2 mb-4">
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-white/60">
                 You've been invited by <span className="font-semibold text-blue-600">{invitation.partner_name}</span>
               </p>
               {getPartnerBadge()}
@@ -205,31 +205,31 @@ function BusinessSignupContent() {
             </div>
           )}
 
-          <p className="text-gray-600 mt-4">
+          <p className="text-white/60 mt-4">
             Setting up location for: <span className="font-medium">{invitation.first_name} {invitation.last_name}</span>
           </p>
-          <p className="text-sm text-gray-500">{invitation.email}</p>
+          <p className="text-sm text-white/50">{invitation.email}</p>
         </div>
 
         {/* Pricing Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Starter Plan */}
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-200">
+          <div className="bg-card-bg rounded-2xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 overflow-hidden border-2 border-white/[0.08]">
             <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Starter</h3>
-              <p className="text-gray-600 text-sm mb-4">Perfect for getting started</p>
+              <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
+              <p className="text-white/60 text-sm mb-4">Perfect for getting started</p>
               
               <div className="mb-4">
                 <div className="flex items-baseline gap-2">
                   {invitation.business_admin_discount > 0 && (
-                    <span className="text-2xl text-gray-400 line-through">
+                    <span className="text-2xl text-white/40 line-through">
                       ${standardPricing.starter.monthly}
                     </span>
                   )}
-                  <span className="text-4xl font-bold text-gray-900">
+                  <span className="text-4xl font-bold text-white">
                     ${calculateDiscountedPrice(standardPricing.starter.monthly)}
                   </span>
-                  <span className="text-gray-600">/month</span>
+                  <span className="text-white/60">/month</span>
                 </div>
                 {invitation.business_admin_discount > 0 && (
                   <p className="text-sm text-green-600 font-medium mt-1">
@@ -241,15 +241,15 @@ function BusinessSignupContent() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Up to 500 leads/month</span>
+                  <span className="text-white/70">Up to 500 leads/month</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">AI-powered responses</span>
+                  <span className="text-white/70">AI-powered responses</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Basic analytics</span>
+                  <span className="text-white/70">Basic analytics</span>
                 </li>
               </ul>
 
@@ -264,25 +264,25 @@ function BusinessSignupContent() {
           </div>
 
           {/* Growth Plan */}
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-blue-300 relative">
+          <div className="bg-card-bg rounded-2xl shadow-xl overflow-hidden border-2 border-blue-300 relative">
             <div className="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 text-sm font-semibold rounded-bl-lg">
               RECOMMENDED
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Growth</h3>
-              <p className="text-gray-600 text-sm mb-4">For scaling businesses</p>
+              <h3 className="text-xl font-bold text-white mb-2">Growth</h3>
+              <p className="text-white/60 text-sm mb-4">For scaling businesses</p>
               
               <div className="mb-4">
                 <div className="flex items-baseline gap-2">
                   {invitation.business_admin_discount > 0 && (
-                    <span className="text-2xl text-gray-400 line-through">
+                    <span className="text-2xl text-white/40 line-through">
                       ${standardPricing.growth.monthly}
                     </span>
                   )}
-                  <span className="text-4xl font-bold text-gray-900">
+                  <span className="text-4xl font-bold text-white">
                     ${calculateDiscountedPrice(standardPricing.growth.monthly)}
                   </span>
-                  <span className="text-gray-600">/month</span>
+                  <span className="text-white/60">/month</span>
                 </div>
                 {invitation.business_admin_discount > 0 && (
                   <p className="text-sm text-green-600 font-medium mt-1">
@@ -294,19 +294,19 @@ function BusinessSignupContent() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Up to 2,000 leads/month</span>
+                  <span className="text-white/70">Up to 2,000 leads/month</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Advanced AI features</span>
+                  <span className="text-white/70">Advanced AI features</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Priority support</span>
+                  <span className="text-white/70">Priority support</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Custom integrations</span>
+                  <span className="text-white/70">Custom integrations</span>
                 </li>
               </ul>
 
@@ -321,22 +321,22 @@ function BusinessSignupContent() {
           </div>
 
           {/* Scale Plan */}
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-200">
+          <div className="bg-card-bg rounded-2xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 overflow-hidden border-2 border-white/[0.08]">
             <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Scale</h3>
-              <p className="text-gray-600 text-sm mb-4">For enterprise teams</p>
+              <h3 className="text-xl font-bold text-white mb-2">Scale</h3>
+              <p className="text-white/60 text-sm mb-4">For enterprise teams</p>
               
               <div className="mb-4">
                 <div className="flex items-baseline gap-2">
                   {invitation.business_admin_discount > 0 && (
-                    <span className="text-2xl text-gray-400 line-through">
+                    <span className="text-2xl text-white/40 line-through">
                       ${standardPricing.scale.monthly}
                     </span>
                   )}
-                  <span className="text-4xl font-bold text-gray-900">
+                  <span className="text-4xl font-bold text-white">
                     ${calculateDiscountedPrice(standardPricing.scale.monthly)}
                   </span>
-                  <span className="text-gray-600">/month</span>
+                  <span className="text-white/60">/month</span>
                 </div>
                 {invitation.business_admin_discount > 0 && (
                   <p className="text-sm text-green-600 font-medium mt-1">
@@ -348,19 +348,19 @@ function BusinessSignupContent() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Unlimited leads</span>
+                  <span className="text-white/70">Unlimited leads</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">White-label options</span>
+                  <span className="text-white/70">White-label options</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Dedicated support</span>
+                  <span className="text-white/70">Dedicated support</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Custom SLA</span>
+                  <span className="text-white/70">Custom SLA</span>
                 </li>
               </ul>
 
@@ -383,7 +383,7 @@ function BusinessSignupContent() {
         </div>
 
         {/* Footer Info */}
-        <div className="mt-8 text-center text-sm text-gray-500">
+        <div className="mt-8 text-center text-sm text-white/50">
           <p>This invitation expires on {new Date(invitation.expires_at).toLocaleDateString()}</p>
           <p className="mt-2">Questions? Contact {invitation.partner_name || 'your partner administrator'}</p>
         </div>

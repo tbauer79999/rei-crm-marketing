@@ -94,77 +94,77 @@ export default function Subscribe() {
   return (
     <>
       <style>{`
-        .text-navy {
+        .text-white {
           color: #1e293b;
         }
 
-        .bg-navy {
+        .bg-card-bg {
           background-color: #1e293b;
         }
 
-        .text-orange {
+        .text-blue-400 {
           color: #c2410c;
         }
 
-        .bg-orange {
+        .gradient-bg {
           background-color: #c2410c;
         }
       `}</style>
 
-      <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
-        <div className="max-w-2xl w-full bg-white rounded-2xl border-2 border-gray-200 p-8 shadow-xl">
+      <div className="min-h-screen bg-card-bg flex items-center justify-center px-4 py-12">
+        <div className="max-w-2xl w-full bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 shadow-xl">
           
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="text-sm font-medium text-gray-500 mb-2 tracking-wide">CONFIRMATION</div>
-            <h1 className="text-4xl font-semibold text-navy mb-2">
+            <div className="text-sm font-medium text-white/50 mb-2 tracking-wide">CONFIRMATION</div>
+            <h1 className="text-4xl font-semibold text-white mb-2">
               You've Selected
             </h1>
-            <h2 className="text-3xl font-bold text-navy mb-2">SurFox {selectedPlan.name}</h2>
-            <p className="text-gray-600">{selectedPlan.description}</p>
+            <h2 className="text-3xl font-bold text-white mb-2">SurFox {selectedPlan.name}</h2>
+            <p className="text-white/60">{selectedPlan.description}</p>
           </div>
 
           {/* Plan Details */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* Left Column - Pricing & Leads */}
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div className="bg-background rounded-xl p-6 border border-white/[0.08]">
               <div className="text-center mb-4">
-                <div className="text-4xl font-bold text-navy mb-1">
+                <div className="text-4xl font-bold text-white mb-1">
                   ${selectedPlan.price}
                 </div>
-                <div className="text-gray-600">per month</div>
-                <div className="text-orange font-semibold mt-2">
+                <div className="text-white/60">per month</div>
+                <div className="text-blue-400 font-semibold mt-2">
                   {selectedPlan.leads}
                 </div>
               </div>
               
               {/* Trust indicators */}
-              <div className="space-y-2 text-sm text-gray-700">
+              <div className="space-y-2 text-sm text-white/70">
                 <div className="flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 bg-orange rounded-full"></span>
+                  <span className="w-2 h-2 gradient-bg rounded-full"></span>
                   Cancel anytime
                 </div>
                 <div className="flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 bg-orange rounded-full"></span>
+                  <span className="w-2 h-2 gradient-bg rounded-full"></span>
                   Setup in 5 minutes
                 </div>
                 <div className="flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 bg-orange rounded-full"></span>
+                  <span className="w-2 h-2 gradient-bg rounded-full"></span>
                   24/7 support included
                 </div>
               </div>
             </div>
 
             {/* Right Column - Features */}
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h3 className="text-xl font-semibold text-navy mb-4">What's included:</h3>
+            <div className="bg-background rounded-xl p-6 border border-white/[0.08]">
+              <h3 className="text-xl font-semibold text-white mb-4">What's included:</h3>
               <ul className="space-y-3">
                 {selectedPlan.keyFeatures.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <span className="w-5 h-5 bg-orange rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
+                    <span className="w-5 h-5 gradient-bg rounded-full flex-shrink-0 flex items-center justify-center mt-0.5">
                       <span className="text-white text-xs">✓</span>
                     </span>
-                    <span className="text-gray-700 text-sm">{feature}</span>
+                    <span className="text-white/70 text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -172,19 +172,19 @@ export default function Subscribe() {
           </div>
 
           {/* Next Steps */}
-          <div className="bg-orange/10 rounded-xl p-6 mb-8 border border-orange/20">
-            <h3 className="text-lg font-semibold text-navy mb-4">What happens next?</h3>
-            <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-700">
+          <div className="glass-card border border-blue-500/20 rounded-xl p-6 mb-8 border border-orange/20">
+            <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>
+            <div className="grid md:grid-cols-3 gap-4 text-sm text-white/70">
               <div className="text-center">
-                <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">1</div>
+                <div className="w-8 h-8 gradient-bg rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">1</div>
                 <div>Secure checkout with Stripe</div>
               </div>
               <div className="text-center">
-                <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">2</div>
+                <div className="w-8 h-8 gradient-bg rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">2</div>
                 <div>Instant account creation</div>
               </div>
               <div className="text-center">
-                <div className="w-8 h-8 bg-orange rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">3</div>
+                <div className="w-8 h-8 gradient-bg rounded-full flex items-center justify-center mx-auto mb-2 text-white font-bold">3</div>
                 <div>Start qualifying leads today</div>
               </div>
             </div>
@@ -193,13 +193,13 @@ export default function Subscribe() {
           {/* CTA Button */}
           <button 
             onClick={handleSubscribe}
-            className="w-full bg-orange text-white px-8 py-4 rounded-xl hover:bg-orange-600 transition-all font-semibold text-lg shadow-lg"
+            className="w-full gradient-bg text-white px-8 py-4 rounded-xl hover:gradient-bg-600 transition-all font-semibold text-lg shadow-sm shadow-blue-500/5 shadow-blue-500/5"
           >
             Continue to Secure Checkout
           </button>
 
           {/* Security notice */}
-          <div className="text-center mt-4 text-sm text-gray-500">
+          <div className="text-center mt-4 text-sm text-white/50">
             🔒 Secured by Stripe • SSL Encrypted
           </div>
         </div>

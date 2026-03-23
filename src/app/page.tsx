@@ -63,7 +63,7 @@ function ArrowRightIcon({ className }: { className?: string }) {
 
 export default function Page() {
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-background text-foreground">
       {/* Organization + LocalBusiness schema */}
       <script
         type="application/ld+json"
@@ -207,31 +207,60 @@ export default function Page() {
       />
 
       {/* Hero - server-rendered for fastest LCP */}
-      <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 flex justify-center">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
-            Turn Cold Leads Into Ready Buyers - Automatically
+      <section className="relative py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 flex justify-center overflow-hidden">
+        {/* Gradient orbs */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full blur-3xl opacity-20 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse, #2563EB 0%, #7C3AED 50%, transparent 70%)" }}
+        />
+
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-white/10 mb-8">
+            <span className="w-2 h-2 rounded-full bg-green-400" />
+            <span className="text-sm text-white/70 font-medium">
+              AI SDR Platform — Now Live
+            </span>
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4" style={{ fontFamily: 'var(--font-sora)' }}>
+            Turn Cold Leads
+            <br />
+            <span className="gradient-text">Into Ready Buyers</span>
+            <br />
+            Automatically.
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-            Upload your list. SurFox AI handles every SMS conversation, qualifies each lead, and tells you who to call. No manual follow-up. Just conversations that close.
+          <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+            Upload your list. SurFox AI handles every SMS conversation, qualifies each lead on a 50-point scale, and tells your team exactly who to call. No manual follow-up. Just conversations that close.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
             <a
               href="/pricing"
-              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold hover:opacity-90 transition flex items-center justify-center gap-2 shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/25"
             >
-              Get Started
+              Get Started Free
               <ArrowRightIcon className="w-5 h-5" />
             </a>
 
             <a
               href="/demo"
-              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
+              className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg glass-card border border-white/10 text-white/80 hover:text-white hover:border-white/20 text-base font-semibold transition"
             >
               Watch Demo
             </a>
+          </div>
+
+          {/* Trust badges */}
+          <div className="mt-12 pt-8 border-t border-white/[0.06]">
+            <p className="text-xs text-white/40 uppercase tracking-widest mb-4">Built on trusted infrastructure</p>
+            <div className="flex flex-wrap items-center justify-center gap-6">
+              {['AWS', 'Twilio', 'OpenAI', 'Supabase'].map((partner) => (
+                <div key={partner} className="text-sm text-white/40 font-medium">
+                  {partner}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

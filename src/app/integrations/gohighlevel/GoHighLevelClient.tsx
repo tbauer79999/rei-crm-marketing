@@ -6,12 +6,12 @@ import { ArrowRight, CheckCircle, MessageSquare, Phone, Zap, Target, Clock, Layo
 
 export default function GoHighLevelClient() {
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-card-bg text-white">
       <style>{`
-        .text-navy { color: #1e293b; }
-        .bg-navy { background-color: #1e293b; }
-        .text-orange { color: #c2410c; }
-        .bg-orange { background-color: #c2410c; }
+        .text-white { color: #1e293b; }
+        .bg-card-bg { background-color: #1e293b; }
+        .text-blue-400 { color: #c2410c; }
+        .gradient-bg { background-color: #c2410c; }
       `}</style>
 
       {/* Section 1: Hero */}
@@ -22,16 +22,16 @@ export default function GoHighLevelClient() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange/10 mb-8">
-              <LayoutDashboard className="w-4 h-4 text-orange" />
-              <span className="text-sm font-semibold text-orange">GoHighLevel + SurFox AI</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-blue-500/20 mb-8">
+              <LayoutDashboard className="w-4 h-4 text-blue-400" />
+              <span className="text-sm font-semibold text-blue-400">GoHighLevel + SurFox AI</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
               Your GHL just<br className="hidden sm:block" /> got a brain.
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-10 max-w-3xl mx-auto leading-relaxed">
               You run your wholesale business in GoHighLevel. Now SurFox AI plugs in to handle every lead conversation automatically: qualifying prospects, detecting intent, and sending hot leads straight back into your pipeline.
             </p>
 
@@ -40,7 +40,7 @@ export default function GoHighLevelClient() {
                 href="/pricing"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition inline-flex items-center gap-2"
+                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold hover:gradient-bg-600 transition inline-flex items-center gap-2"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />
@@ -50,13 +50,13 @@ export default function GoHighLevelClient() {
                 href="#how-it-works"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
+                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/[0.1] text-white font-semibold hover:border-white/[0.12] hover:bg-background transition"
               >
                 See How It Works
               </motion.a>
             </div>
 
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-white/50">
               No demo required. Trial includes 2,000 real messages and 14 days free.
             </p>
           </motion.div>
@@ -64,7 +64,7 @@ export default function GoHighLevelClient() {
       </section>
 
       {/* Section 2: The Problem */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -72,18 +72,18 @@ export default function GoHighLevelClient() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-8 leading-tight">
               GHL is your command center.<br className="hidden sm:block" /> But it can't have a conversation.
             </h2>
 
-            <div className="space-y-5 text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl">
+            <div className="space-y-5 text-lg sm:text-xl text-white/60 leading-relaxed max-w-3xl">
               <p>
                 GoHighLevel runs your pipelines, your follow-up sequences, your entire operation. But when a lead replies (really replies) GHL can't think. It just fires the next message in the sequence.
               </p>
               <p>
                 You're texting hundreds of leads a month. Most of them go cold because nobody followed up fast enough, or the response got buried.
               </p>
-              <p className="font-medium text-navy">
+              <p className="font-medium text-white">
                 That's not a GHL problem. That's a bandwidth problem. SurFox AI fixes it.
               </p>
             </div>
@@ -92,7 +92,7 @@ export default function GoHighLevelClient() {
       </section>
 
       {/* Section 3: How It Works */}
-      <section id="how-it-works" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-white">
+      <section id="how-it-works" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -100,11 +100,11 @@ export default function GoHighLevelClient() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange/10 mb-6">
-              <Zap className="w-4 h-4 text-orange" />
-              <span className="text-sm font-semibold text-orange">Powered by Zapier</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-blue-500/20 mb-6">
+              <Zap className="w-4 h-4 text-blue-400" />
+              <span className="text-sm font-semibold text-blue-400">Powered by Zapier</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
               Two Zaps. Fully automated.<br className="hidden sm:block" /> Set it up in under 10 minutes.
             </h2>
           </motion.div>
@@ -116,10 +116,10 @@ export default function GoHighLevelClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.05 }}
-              className="p-8 rounded-2xl border-2 border-orange/30 bg-orange/5"
+              className="p-8 rounded-2xl border-2 border-orange/30 gradient-bg/5"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange/10 mb-6">
-                <span className="text-xs font-bold text-orange uppercase tracking-wide">Leads in</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card border border-blue-500/20 mb-6">
+                <span className="text-xs font-bold text-blue-400 uppercase tracking-wide">Leads in</span>
               </div>
 
               <div className="space-y-3 mb-6">
@@ -131,20 +131,20 @@ export default function GoHighLevelClient() {
                   <div key={i}>
                     {i > 0 && (
                       <div className="flex justify-center py-1">
-                        <ArrowRight className="w-4 h-4 text-orange rotate-90" />
+                        <ArrowRight className="w-4 h-4 text-blue-400 rotate-90" />
                       </div>
                     )}
-                    <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-orange/20">
-                      <div className="w-8 h-8 rounded-lg bg-orange/10 flex items-center justify-center flex-shrink-0">
-                        <step.icon className="w-4 h-4 text-orange" />
+                    <div className="flex items-center gap-3 p-3 rounded-xl bg-card-bg border border-orange/20">
+                      <div className="w-8 h-8 rounded-lg glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                        <step.icon className="w-4 h-4 text-blue-400" />
                       </div>
-                      <span className="text-sm font-medium text-navy">{step.label}</span>
+                      <span className="text-sm font-medium text-white">{step.label}</span>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <p className="text-gray-600 text-sm leading-relaxed mb-6">
+              <p className="text-white/60 text-sm leading-relaxed mb-6">
                 When a contact hits a specific pipeline stage in GHL, SurFox AI automatically enrolls them in a campaign and starts qualifying them via SMS. Works with bulk uploads too.
               </p>
 
@@ -152,7 +152,7 @@ export default function GoHighLevelClient() {
                 href="https://zapier.com/webintent/create-zap?template=255711461"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-orange text-white text-sm font-semibold hover:bg-orange-600 transition"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg gradient-bg text-white text-sm font-semibold hover:gradient-bg-600 transition"
               >
                 Use Template 1: GHL to SurFox AI
                 <ArrowRight className="w-4 h-4" />
@@ -165,10 +165,10 @@ export default function GoHighLevelClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="p-8 rounded-2xl border-2 border-navy/20 bg-navy/5"
+              className="p-8 rounded-2xl border-2 border-white/[0.08]/20 bg-card-bg/5"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy/10 mb-6">
-                <span className="text-xs font-bold text-navy uppercase tracking-wide">Hot leads back</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card-bg/10 mb-6">
+                <span className="text-xs font-bold text-white uppercase tracking-wide">Hot leads back</span>
               </div>
 
               <div className="space-y-3 mb-6">
@@ -180,20 +180,20 @@ export default function GoHighLevelClient() {
                   <div key={i}>
                     {i > 0 && (
                       <div className="flex justify-center py-1">
-                        <ArrowRight className="w-4 h-4 text-navy rotate-90" />
+                        <ArrowRight className="w-4 h-4 text-white rotate-90" />
                       </div>
                     )}
-                    <div className="flex items-center gap-3 p-3 rounded-xl bg-white border border-navy/10">
-                      <div className="w-8 h-8 rounded-lg bg-navy/10 flex items-center justify-center flex-shrink-0">
-                        <step.icon className="w-4 h-4 text-navy" />
+                    <div className="flex items-center gap-3 p-3 rounded-xl bg-card-bg border border-white/[0.08]/10">
+                      <div className="w-8 h-8 rounded-lg bg-card-bg/10 flex items-center justify-center flex-shrink-0">
+                        <step.icon className="w-4 h-4 text-white" />
                       </div>
-                      <span className="text-sm font-medium text-navy">{step.label}</span>
+                      <span className="text-sm font-medium text-white">{step.label}</span>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <p className="text-gray-600 text-sm leading-relaxed mb-6">
+              <p className="text-white/60 text-sm leading-relaxed mb-6">
                 When SurFox AI detects buying intent, it instantly tags the contact in GHL as "SurFox Hot Lead" so your team knows exactly who to call. You never leave GHL.
               </p>
 
@@ -201,7 +201,7 @@ export default function GoHighLevelClient() {
                 href="https://zapier.com/webintent/create-zap?template=255711462"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border-2 border-navy text-navy text-sm font-semibold hover:bg-navy hover:text-white transition"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border-2 border-white/[0.08] text-white text-sm font-semibold hover:bg-card-bg hover:text-white transition"
               >
                 Use Template 2: SurFox AI to GHL
                 <ArrowRight className="w-4 h-4" />
@@ -212,7 +212,7 @@ export default function GoHighLevelClient() {
       </section>
 
       {/* Section 4: Why It Matters */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -220,7 +220,7 @@ export default function GoHighLevelClient() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-white">
               Why it matters
             </h2>
           </motion.div>
@@ -249,13 +249,13 @@ export default function GoHighLevelClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="p-8 rounded-2xl bg-white border border-gray-200 shadow-sm"
+                className="p-8 rounded-2xl bg-card-bg border border-white/[0.08] shadow-sm"
               >
-                <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mb-5">
-                  <item.icon className="w-6 h-6 text-orange" />
+                <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
+                  <item.icon className="w-6 h-6 text-blue-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-navy mb-3">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.body}</p>
+                <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
+                <p className="text-white/60 leading-relaxed">{item.body}</p>
               </motion.div>
             ))}
           </div>
@@ -263,7 +263,7 @@ export default function GoHighLevelClient() {
       </section>
 
       {/* Section 5: Setup Steps */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -271,7 +271,7 @@ export default function GoHighLevelClient() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-navy">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-white">
               Get live in five steps
             </h2>
           </motion.div>
@@ -290,12 +290,12 @@ export default function GoHighLevelClient() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07 }}
-                className="flex items-start gap-4 p-5 rounded-xl border border-gray-100 bg-gray-50"
+                className="flex items-start gap-4 p-5 rounded-xl border border-white/[0.06] bg-background"
               >
-                <div className="w-9 h-9 rounded-full bg-orange text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
+                <div className="w-9 h-9 rounded-full gradient-bg text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
                   {i + 1}
                 </div>
-                <span className="text-base sm:text-lg text-gray-700 pt-1">{step}</span>
+                <span className="text-base sm:text-lg text-white/70 pt-1">{step}</span>
               </motion.div>
             ))}
           </div>
@@ -310,7 +310,7 @@ export default function GoHighLevelClient() {
               href="/pricing"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-orange text-white font-semibold hover:bg-orange-600 transition"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg gradient-bg text-white font-semibold hover:gradient-bg-600 transition"
             >
               Start Free Trial: 14 days, 2,000 messages
               <ArrowRight className="w-5 h-5" />
@@ -320,7 +320,7 @@ export default function GoHighLevelClient() {
       </section>
 
       {/* Section 6: Bottom CTA */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-navy text-white">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -331,7 +331,7 @@ export default function GoHighLevelClient() {
               You've already built the pipeline.<br className="hidden sm:block" /> Now let AI work it.
             </h2>
 
-            <p className="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-white/30 mb-10 max-w-2xl mx-auto leading-relaxed">
               SurFox AI connects to GoHighLevel in minutes. Your leads get followed up instantly. Your team focuses on calls, not texts.
             </p>
 
@@ -340,7 +340,7 @@ export default function GoHighLevelClient() {
                 href="/pricing"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white font-semibold hover:bg-orange-600 transition inline-flex items-center gap-2"
+                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white font-semibold hover:gradient-bg-600 transition inline-flex items-center gap-2"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />
@@ -350,7 +350,7 @@ export default function GoHighLevelClient() {
                 href="/contact"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/30 text-white font-semibold hover:border-white/60 hover:bg-white/10 transition"
+                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/30 text-white font-semibold hover:border-white/60 hover:bg-card-bg/10 transition"
               >
                 Questions? Talk to us
               </motion.a>

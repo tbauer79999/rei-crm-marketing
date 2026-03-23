@@ -31,21 +31,21 @@ export default function DemoClient() {
   }, []);
 
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-card-bg text-white">
       <style>{`
-        .text-navy {
+        .text-white {
           color: #1e293b;
         }
 
-        .bg-navy {
+        .bg-card-bg {
           background-color: #1e293b;
         }
 
-        .text-orange {
+        .text-blue-400 {
           color: #c2410c;
         }
 
-        .bg-orange {
+        .gradient-bg {
           background-color: #c2410c;
         }
 
@@ -69,13 +69,13 @@ function HeroSection() {
   return (
     <>
       {/* Hero */}
-      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 pt-24 pb-8 sm:pt-28 sm:pb-10 md:pt-32 md:pb-12 bg-white">
+      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 pt-24 pb-8 sm:pt-28 sm:pb-10 md:pt-32 md:pb-12 bg-card-bg">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: 'spring', damping: 20, stiffness: 100 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy leading-tight mb-6 sm:mb-8"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight mb-6 sm:mb-8"
           >
             See SurFox AI In Action
           </motion.h1>
@@ -84,7 +84,7 @@ function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.2 }}
-            className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-white/60 max-w-3xl mx-auto leading-relaxed"
           >
             30 minutes. No pitch. Pick a time and we&apos;ll walk through the platform together.
           </motion.p>
@@ -92,7 +92,7 @@ function HeroSection() {
       </section>
 
       {/* Calendly Inline Embed */}
-      <section className="px-4 sm:px-6 md:px-8 pb-12 bg-white">
+      <section className="px-4 sm:px-6 md:px-8 pb-12 bg-card-bg">
         <div className="max-w-[900px] mx-auto">
           <div
             className="calendly-inline-widget"
@@ -139,13 +139,13 @@ function TimelineSection() {
   ];
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-gray-50">
+    <section ref={ref} className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-background">
       <div className="max-w-5xl mx-auto w-full">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ type: 'spring', damping: 20, stiffness: 100 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy text-center mb-16 md:mb-20"
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white text-center mb-16 md:mb-20"
         >
           Here's What Actually Happens
         </motion.h2>
@@ -188,7 +188,7 @@ function TimelineSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 1.4 }}
-          className="text-xl md:text-2xl text-navy font-semibold text-center mt-16 md:mt-20 leading-relaxed"
+          className="text-xl md:text-2xl text-white font-semibold text-center mt-16 md:mt-20 leading-relaxed"
         >
           That's it. No buttons to click. No campaigns to monitor. No conversations to manage.
         </motion.p>
@@ -224,23 +224,23 @@ function TimelineItem({ day, text, icon: Icon, side, index, inView, value, suffi
       {/* Mobile Layout */}
       <div className="md:hidden flex items-start gap-6 w-full pl-16">
         {/* Icon Circle */}
-        <div className="absolute left-4 w-8 h-8 rounded-full bg-orange/10 flex items-center justify-center z-10">
-          <Icon className="w-4 h-4 text-orange" />
+        <div className="absolute left-4 w-8 h-8 rounded-full glass-card border border-blue-500/20 flex items-center justify-center z-10">
+          <Icon className="w-4 h-4 text-blue-400" />
         </div>
 
         {/* Card */}
-        <div className="bg-white rounded-2xl border-2 border-gray-200 p-6 flex-1">
-          <span className="text-sm font-semibold text-orange mb-2 block">{day}</span>
+        <div className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-6 flex-1">
+          <span className="text-sm font-semibold text-blue-400 mb-2 block">{day}</span>
           {value ? (
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-white/70">
               {text}{' '}
-              <span className="text-navy font-bold">
+              <span className="text-white font-bold">
                 $<CountUp start={0} end={value} duration={2} enableScrollSpy scrollSpyOnce />
                 {suffix}
               </span>
             </p>
           ) : (
-            <p className="text-lg text-gray-700">{text}</p>
+            <p className="text-lg text-white/70">{text}</p>
           )}
         </div>
       </div>
@@ -251,27 +251,27 @@ function TimelineItem({ day, text, icon: Icon, side, index, inView, value, suffi
       }`}>
         {/* Card */}
         <div className={`w-[45%] ${side === 'left' ? 'text-right' : 'text-left'}`}>
-          <div className="bg-white rounded-2xl border-2 border-gray-200 p-6 md:p-8 inline-block">
-            <span className="text-sm font-semibold text-orange mb-2 block">{day}</span>
+          <div className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-6 md:p-8 inline-block">
+            <span className="text-sm font-semibold text-blue-400 mb-2 block">{day}</span>
             {value ? (
-              <p className="text-lg md:text-xl text-gray-700">
+              <p className="text-lg md:text-xl text-white/70">
                 {text}{' '}
-                <span className="text-navy font-bold">
+                <span className="text-white font-bold">
                   $<CountUp start={0} end={value} duration={2} enableScrollSpy scrollSpyOnce />
                   {suffix}
                 </span>
               </p>
             ) : (
-              <p className="text-lg md:text-xl text-gray-700">{text}</p>
+              <p className="text-lg md:text-xl text-white/70">{text}</p>
             )}
           </div>
         </div>
       </div>
 
       {/* Center Icon - Desktop */}
-      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-white border-2 border-gray-200 items-center justify-center z-10">
-        <div className="w-10 h-10 rounded-full bg-orange/10 flex items-center justify-center">
-          <Icon className="w-5 h-5 text-orange" />
+      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-card-bg border-2 border-white/[0.08] items-center justify-center z-10">
+        <div className="w-10 h-10 rounded-full glass-card border border-blue-500/20 flex items-center justify-center">
+          <Icon className="w-5 h-5 text-blue-400" />
         </div>
       </div>
     </motion.div>
@@ -306,14 +306,14 @@ function ScreenshotsSection() {
   ];
 
   return (
-    <section className="py-20 md:py-28 lg:py-32 px-4 sm:px-6 md:px-8 bg-white">
+    <section className="py-20 md:py-28 lg:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ type: 'spring', damping: 20, stiffness: 100 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy text-center mb-16 md:mb-20"
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white text-center mb-16 md:mb-20"
         >
           What SurFox AI Does While You're Not Watching
         </motion.h2>
@@ -351,13 +351,13 @@ function ScreenshotCard({ src, alt, caption, index }: ScreenshotCardProps) {
       className="flex flex-col items-center"
     >
       {/* Caption - Above Screenshot */}
-      <p className="text-lg md:text-xl text-gray-500 text-center mb-6 md:mb-8">
+      <p className="text-lg md:text-xl text-white/50 text-center mb-6 md:mb-8">
         {caption}
       </p>
 
       {/* Screenshot - Large and Dominant */}
       <div className="w-full max-w-[1400px] mx-auto">
-        <div className="rounded-2xl border-2 border-gray-200 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="rounded-2xl border-2 border-white/[0.08] overflow-hidden shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-xl transition-shadow duration-300">
           <Image
             src={src}
             alt={alt}
@@ -380,13 +380,13 @@ function CTASection() {
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
 
   return (
-    <section ref={ref} className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-gray-50">
+    <section ref={ref} className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-background">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ type: 'spring', damping: 20, stiffness: 100 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-8 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-8 leading-tight"
         >
           Ready to Stop Babysitting Your Outreach?
         </motion.h2>
@@ -395,7 +395,7 @@ function CTASection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.2 }}
-          className="text-xl md:text-2xl text-gray-700 mb-12 leading-relaxed"
+          className="text-xl md:text-2xl text-white/70 mb-12 leading-relaxed"
         >
           Upload your leads. Let SurFox AI work autonomously. Get notified when prospects are ready to buy.
         </motion.p>
@@ -412,7 +412,7 @@ function CTASection() {
             whileHover={{ scale: 1.03, boxShadow: '0 20px 25px -5px rgb(234 88 12 / 0.3)' }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-            className="inline-block px-12 py-5 rounded-xl bg-orange text-white text-lg font-semibold shadow-lg"
+            className="inline-block px-12 py-5 rounded-xl gradient-bg text-white text-lg font-semibold shadow-sm shadow-blue-500/5 shadow-blue-500/5"
           >
             Start 14-Day Free Trial
           </motion.a>
@@ -423,7 +423,7 @@ function CTASection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.5 }}
-          className="text-gray-600 mb-10"
+          className="text-white/60 mb-10"
         >
           Start your trial - cancel anytime before day 14 if it's not for you.
         </motion.p>
@@ -433,18 +433,18 @@ function CTASection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-sm text-gray-600 mb-8"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-sm text-white/60 mb-8"
         >
           <div className="flex items-center gap-2">
-            <Check className="w-5 h-5 text-orange flex-shrink-0" />
+            <Check className="w-5 h-5 text-blue-400 flex-shrink-0" />
             <span>14-day free trial</span>
           </div>
           <div className="flex items-center gap-2">
-            <Check className="w-5 h-5 text-orange flex-shrink-0" />
+            <Check className="w-5 h-5 text-blue-400 flex-shrink-0" />
             <span>2,000 free messages included</span>
           </div>
           <div className="flex items-center gap-2">
-            <Check className="w-5 h-5 text-orange flex-shrink-0" />
+            <Check className="w-5 h-5 text-blue-400 flex-shrink-0" />
             <span>Setup in 15 minutes</span>
           </div>
         </motion.div>
@@ -454,10 +454,10 @@ function CTASection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ type: 'spring', damping: 20, stiffness: 100, delay: 0.7 }}
-          className="text-sm text-gray-500"
+          className="text-sm text-white/50"
         >
           Prefer to talk first?{' '}
-          <a href="mailto:tom@getsurfox.com" className="text-orange hover:underline">
+          <a href="mailto:tom@getsurfox.com" className="text-blue-400 hover:underline">
             Email tom@getsurfox.com
           </a>
         </motion.p>

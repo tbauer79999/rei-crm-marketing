@@ -1,3 +1,5 @@
+'use client'
+
 "use client"
 
 import React from 'react';
@@ -24,7 +26,7 @@ export default function HomeClientSections() {
   return (
     <>
       {/* How It Works */}
-      <section id="how-it-works" className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section id="how-it-works" className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -33,10 +35,10 @@ export default function HomeClientSections() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
               How It Works
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               Four steps from cold lead to hot prospect - no SDR required
             </p>
           </motion.div>
@@ -76,12 +78,12 @@ export default function HomeClientSections() {
                 transition={{ duration: 0.6, delay: i * 0.15 }}
                 className="text-center"
               >
-                <div className="text-orange font-bold text-sm mb-4 tracking-wide">{step.step}</div>
-                <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 sm:mb-6 rounded-2xl bg-orange/10 flex items-center justify-center">
-                  <step.icon className="w-7 h-7 sm:w-8 sm:h-8 text-orange" />
+                <div className="text-blue-400 font-bold text-sm mb-4 tracking-wide">{step.step}</div>
+                <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 sm:mb-6 rounded-2xl gradient-bg/10 flex items-center justify-center">
+                  <step.icon className="w-7 h-7 sm:w-8 sm:h-8 text-blue-400" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{step.desc}</p>
+                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3 sm:mb-4">{step.title}</h3>
+                <p className="text-white/60 leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -89,7 +91,7 @@ export default function HomeClientSections() {
       </section>
 
       {/* Platform Features with Screenshots */}
-      <section id="features" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
+      <section id="features" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-[1400px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -97,10 +99,10 @@ export default function HomeClientSections() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
               Everything You Need to Qualify at Scale
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               A complete AI SDR platform - not just a chatbot
             </p>
           </motion.div>
@@ -116,12 +118,12 @@ export default function HomeClientSections() {
             >
               <div className="order-2 lg:order-1">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center">
-                    <Users className="w-6 h-6 text-orange" />
+                  <div className="w-12 h-12 rounded-xl gradient-bg/10 flex items-center justify-center">
+                    <Users className="w-6 h-6 text-blue-400" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-navy">Lead Management</h3>
+                  <h3 className="text-2xl sm:text-3xl font-semibold text-white">Lead Management</h3>
                 </div>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                <p className="text-lg text-white/60 leading-relaxed mb-6">
                   Monitor your entire lead pipeline in real-time. Track status, engagement levels, and conversation progress across all prospects.
                 </p>
                 <ul className="space-y-3">
@@ -130,15 +132,15 @@ export default function HomeClientSections() {
                     'Automated categorization and filtering',
                     'Campaign-specific lead organization',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-3 text-white/60">
+                      <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="order-1 lg:order-2">
-                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-[4/3]">
+                <div className="rounded-2xl overflow-hidden shadow-lg shadow-blue-500/10 border border-white/[0.08] aspect-[4/3]">
                   <Image
                     src="/dashboard.png"
                     alt="SurFox lead management dashboard showing real-time lead status, engagement scores, and conversation progress"
@@ -159,7 +161,7 @@ export default function HomeClientSections() {
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center"
             >
               <div>
-                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-[4/3]">
+                <div className="rounded-2xl overflow-hidden shadow-lg shadow-blue-500/10 border border-white/[0.08] aspect-[4/3]">
                   <Image
                     src="/AI-controlroom.png"
                     alt="SurFox AI Control Room showing real-time system health, AI performance statistics, and conversation quality indicators"
@@ -171,12 +173,12 @@ export default function HomeClientSections() {
               </div>
               <div>
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center">
-                    <Activity className="w-6 h-6 text-orange" />
+                  <div className="w-12 h-12 rounded-xl gradient-bg/10 flex items-center justify-center">
+                    <Activity className="w-6 h-6 text-blue-400" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-navy">AI Control Room</h3>
+                  <h3 className="text-2xl sm:text-3xl font-semibold text-white">AI Control Room</h3>
                 </div>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                <p className="text-lg text-white/60 leading-relaxed mb-6">
                   Monitor system health, AI performance, and conversation quality. Real-time visibility into how your AI SDR is performing.
                 </p>
                 <ul className="space-y-3">
@@ -185,8 +187,8 @@ export default function HomeClientSections() {
                     'AI accuracy and optimization tracking',
                     'Infrastructure health monitoring',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-3 text-white/60">
+                      <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -202,17 +204,17 @@ export default function HomeClientSections() {
               transition={{ duration: 0.7 }}
             >
               <div className="flex items-center gap-3 mb-6 justify-center">
-                <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center">
-                  <Brain className="w-6 h-6 text-orange" />
+                <div className="w-12 h-12 rounded-xl gradient-bg/10 flex items-center justify-center">
+                  <Brain className="w-6 h-6 text-blue-400" />
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-semibold text-navy">AI Learning</h3>
+                <h3 className="text-2xl sm:text-3xl font-semibold text-white">AI Learning</h3>
               </div>
-              <p className="text-lg text-gray-600 leading-relaxed mb-10 text-center max-w-3xl mx-auto">
+              <p className="text-lg text-white/60 leading-relaxed mb-10 text-center max-w-3xl mx-auto">
                 Gets smarter with every conversation. SurFox AI analyzes thousands of interactions to discover what actually converts - then uses those insights automatically.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-[4/3]">
+                <div className="rounded-2xl overflow-hidden shadow-lg shadow-blue-500/10 border border-white/[0.08] aspect-[4/3]">
                   <Image
                     src="/AiLearning1.png"
                     alt="SurFox AI learning system analyzing conversation patterns and discovering high-converting messaging strategies"
@@ -221,7 +223,7 @@ export default function HomeClientSections() {
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-[4/3]">
+                <div className="rounded-2xl overflow-hidden shadow-lg shadow-blue-500/10 border border-white/[0.08] aspect-[4/3]">
                   <Image
                     src="/AiLearning2.png"
                     alt="SurFox AI adapting to different personality types and automatically optimizing conversation approaches over time"
@@ -239,8 +241,8 @@ export default function HomeClientSections() {
                   'Adapts to different personality types',
                   'Automatically optimizes over time',
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 text-gray-600">
-                    <CheckCircle className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
+                  <div key={i} className="flex items-start gap-3 text-white/60">
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -256,7 +258,7 @@ export default function HomeClientSections() {
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center"
             >
               <div>
-                <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 aspect-[4/3]">
+                <div className="rounded-2xl overflow-hidden shadow-lg shadow-blue-500/10 border border-white/[0.08] aspect-[4/3]">
                   <Image
                     src="/ab-testing.png"
                     alt="SurFox A/B testing interface comparing message variants, conversation approaches, and statistical results"
@@ -268,12 +270,12 @@ export default function HomeClientSections() {
               </div>
               <div>
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center">
-                    <FlaskConical className="w-6 h-6 text-orange" />
+                  <div className="w-12 h-12 rounded-xl gradient-bg/10 flex items-center justify-center">
+                    <FlaskConical className="w-6 h-6 text-blue-400" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-navy">A/B Testing & Optimization</h3>
+                  <h3 className="text-2xl sm:text-3xl font-semibold text-white">A/B Testing & Optimization</h3>
                 </div>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                <p className="text-lg text-white/60 leading-relaxed mb-6">
                   Continuously improve your AI&apos;s performance. Test different conversation approaches, messaging tones, and qualification criteria.
                 </p>
                 <ul className="space-y-3">
@@ -282,8 +284,8 @@ export default function HomeClientSections() {
                     'Statistical significance tracking',
                     'Automated winner selection',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-orange mt-0.5 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-3 text-white/60">
+                      <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -295,7 +297,7 @@ export default function HomeClientSections() {
       </section>
 
       {/* Knowledge Base */}
-      <section id="knowledge-base" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section id="knowledge-base" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -303,13 +305,13 @@ export default function HomeClientSections() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange/10 flex items-center justify-center">
-              <FileText className="w-8 h-8 text-orange" />
+            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl gradient-bg/10 flex items-center justify-center">
+              <FileText className="w-8 h-8 text-blue-400" />
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
               AI That Knows Your Business
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               Upload your docs, pricing, FAQs, and product info. SurFox AI references them in real conversations - no extra training required.
             </p>
           </motion.div>
@@ -338,13 +340,13 @@ export default function HomeClientSections() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
-                className="bg-white p-8 sm:p-10 rounded-2xl border border-gray-200"
+                className="bg-card-bg p-8 sm:p-10 rounded-2xl border border-white/[0.08]"
               >
-                <div className="w-12 h-12 mb-6 rounded-xl bg-orange/10 flex items-center justify-center">
-                  <feature.icon className="w-6 h-6 text-orange" />
+                <div className="w-12 h-12 mb-6 rounded-xl gradient-bg/10 flex items-center justify-center">
+                  <feature.icon className="w-6 h-6 text-blue-400" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
+                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-white/60 leading-relaxed">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -352,7 +354,7 @@ export default function HomeClientSections() {
       </section>
 
       {/* Stats / ROI */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -360,12 +362,12 @@ export default function HomeClientSections() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
               Built to Replace Your SDR Headcount
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               One AI that works every lead, around the clock - at a fraction of the cost.{' '}
-              <a href="/roi" className="text-orange font-semibold hover:underline">
+              <a href="/roi" className="text-blue-400 font-semibold hover:underline">
                 Calculate your ROI →
               </a>
             </p>
@@ -402,9 +404,9 @@ export default function HomeClientSections() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl sm:text-5xl font-bold text-orange mb-3">{stat.value}</div>
-                <div className="text-lg sm:text-xl font-semibold text-navy mb-2">{stat.label}</div>
-                <p className="text-gray-600 leading-relaxed">{stat.desc}</p>
+                <div className="text-4xl sm:text-5xl font-bold text-blue-400 mb-3">{stat.value}</div>
+                <div className="text-lg sm:text-xl font-semibold text-white mb-2">{stat.label}</div>
+                <p className="text-white/60 leading-relaxed">{stat.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -412,7 +414,7 @@ export default function HomeClientSections() {
       </section>
 
       {/* Security & Trust */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -420,13 +422,13 @@ export default function HomeClientSections() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-16 md:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
               Enterprise-Grade Security
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-4xl mx-auto leading-relaxed px-4">
               Built on trusted infrastructure with security and compliance at the core
             </p>
-            <p className="mt-4 text-orange font-medium text-sm sm:text-base">
+            <p className="mt-4 text-blue-400 font-medium text-sm sm:text-base">
               AWS · Twilio · OpenAI · Supabase
             </p>
           </motion.div>
@@ -457,11 +459,11 @@ export default function HomeClientSections() {
                 transition={{ delay: i * 0.15 }}
                 className="text-center"
               >
-                <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 sm:mb-6 rounded-2xl bg-orange/10 flex items-center justify-center">
-                  <item.icon className="w-7 h-7 sm:w-8 sm:h-8 text-orange" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 sm:mb-6 rounded-2xl gradient-bg/10 flex items-center justify-center">
+                  <item.icon className="w-7 h-7 sm:w-8 sm:h-8 text-blue-400" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-navy mb-3">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">{item.title}</h3>
+                <p className="text-white/60 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -469,7 +471,7 @@ export default function HomeClientSections() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
+      <section id="faq" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -477,7 +479,7 @@ export default function HomeClientSections() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
               Frequently Asked Questions
             </h2>
           </motion.div>
@@ -526,24 +528,24 @@ export default function HomeClientSections() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="border border-gray-200 rounded-2xl overflow-hidden"
+                className="border border-white/[0.08] rounded-2xl overflow-hidden"
               >
                 <button
                   onClick={() => {
                     const el = document.getElementById(`faq-home-${i}`);
                     if (el) el.style.display = el.style.display === 'none' ? 'block' : 'none';
                   }}
-                  className="w-full px-6 sm:px-8 py-5 sm:py-6 text-left flex items-start justify-between gap-4 hover:bg-gray-50 transition-colors"
+                  className="w-full px-6 sm:px-8 py-5 sm:py-6 text-left flex items-start justify-between gap-4 hover:bg-background transition-colors"
                 >
-                  <h3 className="text-lg sm:text-xl font-semibold text-navy pr-4 leading-relaxed">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white pr-4 leading-relaxed">
                     {faq.question}
                   </h3>
-                  <div className="w-6 h-6 rounded-full bg-orange/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <Plus className="w-4 h-4 text-orange" />
+                  <div className="w-6 h-6 rounded-full gradient-bg/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <Plus className="w-4 h-4 text-blue-400" />
                   </div>
                 </button>
                 <div id={`faq-home-${i}`} style={{ display: 'none' }} className="px-6 sm:px-8 pb-5 sm:pb-6">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <p className="text-white/60 leading-relaxed">{faq.answer}</p>
                 </div>
               </motion.div>
             ))}
@@ -552,25 +554,25 @@ export default function HomeClientSections() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 sm:mb-8 px-4 leading-tight">
               Stop hiring SDRs.{' '}<br className="hidden sm:block" />
               Let AI qualify your leads instead.
             </h2>
 
-            <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 mb-10 sm:mb-12 leading-relaxed px-4">
               Your team should be closing, not cold-qualifying. Start today.
             </p>
 
             <a
               href="/pricing"
-              className="inline-flex items-center gap-2 px-10 py-4 rounded-lg bg-orange text-white text-lg font-semibold hover:bg-orange-600 transition"
+              className="inline-flex items-center gap-2 px-10 py-4 rounded-lg gradient-bg text-white text-lg font-semibold hover:gradient-bg-600 transition"
             >
               Get Started
               <ArrowRight className="w-5 h-5" />
