@@ -32,27 +32,6 @@ export default function DemoClient() {
 
   return (
     <div className="bg-card-bg text-white">
-      <style>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-
-        .border-orange {
-          border-color: #c2410c;
-        }
-      `}</style>
 
       <HeroSection />
       <TimelineSection />
@@ -75,7 +54,7 @@ function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: 'spring', damping: 20, stiffness: 100 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight mb-6 sm:mb-8"
+            className="text-4xl font-bold text-white leading-tight mb-6 sm:mb-8"
           >
             See SurFox AI In Action
           </motion.h1>
@@ -145,7 +124,7 @@ function TimelineSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ type: 'spring', damping: 20, stiffness: 100 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white text-center mb-16 md:mb-20"
+          className="text-3xl sm:text-4xl font-bold text-white text-center mb-16 md:mb-20"
         >
           Here's What Actually Happens
         </motion.h2>
@@ -313,7 +292,7 @@ function ScreenshotsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ type: 'spring', damping: 20, stiffness: 100 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white text-center mb-16 md:mb-20"
+          className="text-3xl sm:text-4xl font-bold text-white text-center mb-16 md:mb-20"
         >
           What SurFox AI Does While You're Not Watching
         </motion.h2>
@@ -386,7 +365,7 @@ function CTASection() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ type: 'spring', damping: 20, stiffness: 100 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-8 leading-tight"
+          className="text-3xl sm:text-4xl font-bold text-white mb-8 leading-tight"
         >
           Ready to Stop Babysitting Your Outreach?
         </motion.h2>

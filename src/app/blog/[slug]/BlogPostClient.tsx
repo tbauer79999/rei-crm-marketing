@@ -126,7 +126,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
               {blogPost.title}
             </h1>
 
@@ -228,7 +228,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   );
                 case 'heading':
                   return (
-                    <h2 key={index} className="text-2xl sm:text-3xl font-semibold text-white mt-12 mb-4 first:mt-0">
+                    <h2 key={index} className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4 first:mt-0">
                       {block.content}
                     </h2>
                   );
@@ -432,7 +432,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
       {relatedPosts.length > 0 && (
         <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-10 sm:mb-12 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-10 sm:mb-12 text-center">
               Related Insights
             </h2>
 

@@ -93,23 +93,6 @@ export default function Subscribe() {
 
   return (
     <>
-      <style>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-      `}</style>
 
       <div className="min-h-screen bg-card-bg flex items-center justify-center px-4 py-12">
         <div className="max-w-2xl w-full bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 shadow-xl">
@@ -117,7 +100,7 @@ export default function Subscribe() {
           {/* Header */}
           <div className="text-center mb-8">
             <div className="text-sm font-medium text-white/50 mb-2 tracking-wide">CONFIRMATION</div>
-            <h1 className="text-4xl font-semibold text-white mb-2">
+            <h1 className="text-4xl font-bold text-white mb-2">
               You've Selected
             </h1>
             <h2 className="text-3xl font-bold text-white mb-2">SurFox {selectedPlan.name}</h2>

@@ -7,12 +7,6 @@ import { ArrowRight, CheckCircle, XCircle, MessageSquare, Phone, Upload, Zap, Cl
 export default function StaffingClient() {
   return (
     <div className="bg-card-bg text-white">
-      <style>{`
-        .text-white { color: #1e293b; }
-        .bg-card-bg { background-color: #1e293b; }
-        .text-blue-400 { color: #c2410c; }
-        .gradient-bg { background-color: #c2410c; }
-      `}</style>
 
       {/* Section 1: Hero */}
       <section className="min-h-[80vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
@@ -27,7 +21,7 @@ export default function StaffingClient() {
               <span className="text-sm font-semibold text-blue-400">For Staffing Agencies</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
               Your Staffing Agency Is<br className="hidden sm:block" /> Texting Leads. Your AI<br className="hidden sm:block" /> Should Be Qualifying Them.
             </h1>
 
@@ -73,7 +67,7 @@ export default function StaffingClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
               The Problem With Your Current Stack
             </h2>
           </motion.div>
@@ -124,7 +118,7 @@ export default function StaffingClient() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">
               How it works
             </h2>
           </motion.div>
@@ -180,7 +174,7 @@ export default function StaffingClient() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">
               SurFox AI vs Your Current Stack
             </h2>
           </motion.div>
@@ -271,7 +265,7 @@ export default function StaffingClient() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">
               Common questions
             </h2>
           </motion.div>
@@ -315,7 +309,7 @@ export default function StaffingClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
               Stop Texting.<br className="hidden sm:block" /> Start Qualifying.
             </h2>
 

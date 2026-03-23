@@ -35,23 +35,6 @@ export default function Integrations() {
 
   return (
     <div className="bg-card-bg text-white">
-      <style>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-      `}</style>
 
       {/* Hero Section */}
       <section className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
@@ -61,7 +44,7 @@ export default function Integrations() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
               Connect Every{' '}<br className="hidden sm:block" />
               Human Signal
             </h1>
@@ -84,7 +67,7 @@ export default function Integrations() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white">Live Now</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">Live Now</h2>
             </div>
             <p className="text-white/60">Available today and production-ready.</p>
           </motion.div>
@@ -218,7 +201,7 @@ export default function Integrations() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-3 h-3 rounded-full gradient-bg"></div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white">Coming Soon</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">Coming Soon</h2>
             </div>
             <p className="text-white/60">In development. Expected in the next few months.</p>
           </motion.div>
@@ -276,7 +259,7 @@ export default function Integrations() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-3 h-3 rounded-full bg-gray-400"></div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white">On the Roadmap</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">On the Roadmap</h2>
             </div>
             <p className="text-white/60">Planned integrations as SurFox AI expands to multi-signal intelligence.</p>
           </motion.div>
@@ -304,7 +287,7 @@ export default function Integrations() {
                 transition={{ delay: i * 0.03 }}
                 className="p-4 rounded-xl border border-white/[0.08] bg-card-bg flex items-center gap-3"
               >
-                <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
                   <integration.icon className="w-5 h-5 text-white/40" />
                 </div>
                 <div>
@@ -325,7 +308,7 @@ export default function Integrations() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
               The bigger picture
             </h2>
             
@@ -348,7 +331,7 @@ export default function Integrations() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Don't see what you need?
             </h2>
             
@@ -395,7 +378,7 @@ export default function Integrations() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
               Ready to start with what's live today?
             </h2>
             

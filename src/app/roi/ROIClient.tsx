@@ -69,46 +69,6 @@ export default function ROIClient() {
 
   return (
     <div className="bg-card-bg text-white">
-      <style>{`
-        .text-white {
-          color: #1e293b;
-        }
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-        .text-blue-400 {
-          color: #c2410c;
-        }
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-        input[type="range"] {
-          -webkit-appearance: none;
-          appearance: none;
-          width: 100%;
-          height: 8px;
-          border-radius: 4px;
-          background: #e5e7eb;
-          outline: none;
-        }
-        input[type="range"]::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          appearance: none;
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          background: #c2410c;
-          cursor: pointer;
-        }
-        input[type="range"]::-moz-range-thumb {
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          background: #c2410c;
-          cursor: pointer;
-          border: none;
-        }
-      `}</style>
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
@@ -122,7 +82,7 @@ export default function ROIClient() {
               <span className="text-sm font-semibold text-blue-400">ROI CALCULATOR</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
               AI SDR vs Hiring a Human SDR:{' '}<br className="hidden sm:block" />
               Real Cost Comparison
             </h1>
@@ -154,7 +114,7 @@ export default function ROIClient() {
           >
             <div className="flex items-center justify-center gap-3 mb-6">
               <RefreshCw className="w-8 h-8 text-blue-400" />
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
                 Built for the Leads Your Team Already Gave Up On
               </h2>
             </div>
@@ -174,7 +134,7 @@ export default function ROIClient() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               The SDR Math Nobody Talks About
             </h2>
           </motion.div>
@@ -188,7 +148,7 @@ export default function ROIClient() {
               className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
                   <DollarSign className="w-5 h-5 text-white/60" />
                 </div>
                 <h3 className="text-xl font-semibold text-white">The Visible Costs</h3>
@@ -272,7 +232,7 @@ export default function ROIClient() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               When Cold Leads Reply, Speed Still Wins
             </h2>
             <p className="text-lg text-white/60 max-w-3xl mx-auto">
@@ -325,7 +285,7 @@ export default function ROIClient() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               AI SDR vs Human SDR: Full Cost and Performance Breakdown
             </h2>
           </motion.div>
@@ -398,7 +358,7 @@ export default function ROIClient() {
             <div className="inline-block px-4 py-2 rounded-full glass-card border border-blue-500/20 border border-orange/20 mb-6">
               <span className="text-sm font-semibold text-blue-400">INTERACTIVE CALCULATOR</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Calculate Your ROI
             </h2>
             <p className="text-lg text-white/60 max-w-2xl mx-auto">
@@ -488,7 +448,7 @@ export default function ROIClient() {
                         className={`px-3 py-2 rounded-lg text-sm font-medium transition ${
                           improvementLevel === option.key
                             ? 'gradient-bg text-white'
-                            : 'bg-gray-100 text-white/60 hover:bg-gray-200'
+                            : 'bg-blue-500/10 text-white/60 hover:bg-blue-500/20'
                         }`}
                       >
                         <div>{option.label}</div>
@@ -614,7 +574,7 @@ export default function ROIClient() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               The Lead Resurrection Opportunity
             </h2>
           </motion.div>
@@ -719,7 +679,7 @@ export default function ROIClient() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Why SMS Beats Every Other Channel
             </h2>
           </motion.div>
@@ -792,7 +752,7 @@ export default function ROIClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Resurrect Your Dead Leads?
             </h2>
 

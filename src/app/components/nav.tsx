@@ -45,16 +45,15 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
+          <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
             <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center flex-shrink-0">
               <Zap className="w-4 h-4 text-white" fill="white" />
             </div>
-            <div>
-              <div className="text-sm font-bold tracking-tight">
-                <span className="text-white">Sur</span>
-                <span className="gradient-text">Fox</span>
-                <span className="text-white/60 text-xs font-medium ml-1">AI</span>
+            <div className="flex items-center gap-1 flex-shrink-0">
+              <div className="text-sm font-bold tracking-tight whitespace-nowrap">
+                <span className="text-white">Sur</span><span className="gradient-text">Fox</span>
               </div>
+              <span className="text-white/60 text-xs font-medium">AI</span>
             </div>
             {productName && (
               <span className="ml-3 text-xs font-medium px-2 py-1 rounded-full glass-card border border-blue-500/20 text-blue-300">

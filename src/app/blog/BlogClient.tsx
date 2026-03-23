@@ -33,7 +33,7 @@ export default function Blog() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               Insights & Updates from SurFox AI
             </h1>
 
@@ -55,7 +55,7 @@ export default function Blog() {
                 className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-sm shadow-blue-500/5'
-                    : 'bg-gray-100 text-white/70 hover:bg-gray-200'
+                    : 'bg-blue-500/10 text-white/70 hover:bg-blue-500/20'
                 }`}
               >
                 {category}
@@ -141,7 +141,7 @@ export default function Blog() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 px-4 leading-tight">
               Stay Updated with SurFox AI
             </h2>
 

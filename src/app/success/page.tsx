@@ -7,23 +7,6 @@ export const metadata: Metadata = {
 export default function Success() {
   return (
     <>
-      <style>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-      `}</style>
 
       <div className="min-h-screen bg-card-bg flex items-center justify-center px-4 py-12">
         <div className="max-w-2xl w-full bg-card-bg rounded-2xl border-2 border-white/[0.08] p-10 shadow-xl text-center">
@@ -32,7 +15,7 @@ export default function Success() {
           <div className="text-6xl mb-6">🚀</div>
           
           {/* Main Headline */}
-          <h1 className="text-4xl font-semibold mb-4 text-white">
+          <h1 className="text-4xl font-bold mb-4 text-white">
             You're In! Welcome to the Future of Lead Qualification
           </h1>
           

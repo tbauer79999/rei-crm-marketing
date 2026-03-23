@@ -9,37 +9,6 @@ export default function PricingClient() {
 
   return (
     <>
-      <style>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .border-white/[0.08] {
-          border-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-
-        .hover-lift {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          cursor: pointer;
-        }
-
-        .hover-lift:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        }
-      `}</style>
 
       <div className="min-h-screen bg-card-bg text-white">
         <div className="max-w-7xl mx-auto px-6 py-12">
@@ -47,7 +16,7 @@ export default function PricingClient() {
           {/* Header */}
           <div className="text-center mb-20">
             <div className="text-sm font-medium text-white/50 mb-4 tracking-wide">PRICING</div>
-            <h1 className="text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight">
+            <h1 className="text-5xl font-bold text-white mb-6 leading-tight">
               Choose Your AI Sales<br />Automation Plan
             </h1>
             <p className="text-xl text-white/60 mb-4 max-w-3xl mx-auto leading-relaxed">
@@ -137,7 +106,7 @@ export default function PricingClient() {
                   : '/subscribe/starter';
                 window.location.href = url;
               }}
-              className="w-full bg-gray-200 text-white px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold cursor-pointer"
+              className="w-full bg-blue-500/20 text-white px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold cursor-pointer"
             >
               Start Today
             </button>
@@ -307,7 +276,7 @@ export default function PricingClient() {
                     : '/subscribe/scale';
                   window.location.href = url;
                 }}
-                className="w-full bg-gray-200 text-white px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold cursor-pointer"
+                className="w-full bg-blue-500/20 text-white px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold cursor-pointer"
               >
                 Try Risk-Free
               </button>
@@ -317,7 +286,7 @@ export default function PricingClient() {
           {/* Cost Transparency Section */}
           <div className="max-w-4xl mx-auto mb-20">
             <div className="bg-background rounded-2xl border border-white/[0.08] p-8">
-              <h2 className="text-3xl font-semibold text-white mb-6">What Your Investment Covers</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">What Your Investment Covers</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-3">Infrastructure & AI Processing</h3>
@@ -349,7 +318,7 @@ export default function PricingClient() {
 
           {/* FAQ Section */}
           <div className="max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl font-semibold text-white mb-8 text-center">Pricing Questions & Answers</h2>
+            <h2 className="text-4xl font-bold text-white mb-8 text-center">Pricing Questions & Answers</h2>
             <div className="space-y-4">
               <div className="bg-card-bg rounded-xl border border-white/[0.08] p-6 hover-lift">
                 <h3 className="text-lg font-semibold text-white mb-3">What happens if I exceed my prospect limit?</h3>
@@ -380,7 +349,7 @@ export default function PricingClient() {
 
           {/* Contact Section */}
           <div className="text-center bg-background rounded-2xl p-10 border border-white/[0.08]">
-            <h3 className="text-3xl font-semibold text-white mb-4">Questions About Pricing?</h3>
+            <h3 className="text-3xl font-bold text-white mb-4">Questions About Pricing?</h3>
             <p className="text-white/70 mb-6 text-lg">Talk directly with our founder about which plan fits your needs.</p>
             <a
               href="mailto:tom@getsurfox.com"

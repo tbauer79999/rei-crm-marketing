@@ -214,7 +214,8 @@ export default function Page() {
           style={{ background: "radial-gradient(ellipse, #2563EB 0%, #7C3AED 50%, transparent 70%)" }}
         />
 
-        <div className="max-w-5xl mx-auto text-center relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto relative z-10">
+          <div className="text-center lg:text-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-white/10 mb-8">
             <span className="w-2 h-2 rounded-full bg-green-400" />
             <span className="text-sm text-white/70 font-medium">
@@ -222,7 +223,7 @@ export default function Page() {
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4" style={{ fontFamily: 'var(--font-sora)' }}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight" style={{ fontFamily: 'var(--font-sora)' }}>
             Turn Cold Leads
             <br />
             <span className="gradient-text">Into Ready Buyers</span>
@@ -230,11 +231,11 @@ export default function Page() {
             Automatically.
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 leading-relaxed font-normal">
             Upload your list. SurFox AI handles every SMS conversation, qualifies each lead on a 50-point scale, and tells your team exactly who to call. No manual follow-up. Just conversations that close.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4">
+          <div className="flex flex-col sm:flex-row items-center justify-start gap-3 sm:gap-4">
             <a
               href="/pricing"
               className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold hover:opacity-90 transition flex items-center justify-center gap-2 shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/25"
@@ -251,15 +252,27 @@ export default function Page() {
             </a>
           </div>
 
-          {/* Trust badges */}
-          <div className="mt-12 pt-8 border-t border-white/[0.06]">
-            <p className="text-xs text-white/40 uppercase tracking-widest mb-4">Built on trusted infrastructure</p>
-            <div className="flex flex-wrap items-center justify-center gap-6">
-              {['AWS', 'Twilio', 'OpenAI', 'Supabase'].map((partner) => (
-                <div key={partner} className="text-sm text-white/40 font-medium">
-                  {partner}
-                </div>
-              ))}
+            {/* Trust badges */}
+            <div className="mt-12 pt-8 border-t border-white/[0.06]">
+              <p className="text-xs text-white/40 uppercase tracking-widest mb-4">Built on trusted infrastructure</p>
+              <div className="flex flex-wrap items-center justify-start gap-6">
+                {['AWS', 'Twilio', 'OpenAI', 'Supabase'].map((partner) => (
+                  <div key={partner} className="text-sm text-white/40 font-medium">
+                    {partner}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Dashboard mockup - right side */}
+          <div className="hidden lg:block relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-white/[0.1]">
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663466327465/3tfFjbWvnRDzh5xKZoKSzd/surfox-dashboard-hero-Ebdjwm2HRTJEqVJePCbqRa.webp"
+                alt="SurFox AI Dashboard - Lead Pipeline with 247 qualified leads and 89% response rate"
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>

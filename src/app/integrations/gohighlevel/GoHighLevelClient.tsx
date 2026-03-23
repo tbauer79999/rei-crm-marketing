@@ -7,12 +7,6 @@ import { ArrowRight, CheckCircle, MessageSquare, Phone, Zap, Target, Clock, Layo
 export default function GoHighLevelClient() {
   return (
     <div className="bg-card-bg text-white">
-      <style>{`
-        .text-white { color: #1e293b; }
-        .bg-card-bg { background-color: #1e293b; }
-        .text-blue-400 { color: #c2410c; }
-        .gradient-bg { background-color: #c2410c; }
-      `}</style>
 
       {/* Section 1: Hero */}
       <section className="min-h-[80vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
@@ -27,7 +21,7 @@ export default function GoHighLevelClient() {
               <span className="text-sm font-semibold text-blue-400">GoHighLevel + SurFox AI</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
               Your GHL just<br className="hidden sm:block" /> got a brain.
             </h1>
 
@@ -72,7 +66,7 @@ export default function GoHighLevelClient() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 leading-tight">
               GHL is your command center.<br className="hidden sm:block" /> But it can't have a conversation.
             </h2>
 
@@ -104,7 +98,7 @@ export default function GoHighLevelClient() {
               <Zap className="w-4 h-4 text-blue-400" />
               <span className="text-sm font-semibold text-blue-400">Powered by Zapier</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
               Two Zaps. Fully automated.<br className="hidden sm:block" /> Set it up in under 10 minutes.
             </h2>
           </motion.div>
@@ -220,7 +214,7 @@ export default function GoHighLevelClient() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">
               Why it matters
             </h2>
           </motion.div>
@@ -271,7 +265,7 @@ export default function GoHighLevelClient() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">
               Get live in five steps
             </h2>
           </motion.div>
@@ -327,7 +321,7 @@ export default function GoHighLevelClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
               You've already built the pipeline.<br className="hidden sm:block" /> Now let AI work it.
             </h2>
 

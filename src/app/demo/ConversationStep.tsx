@@ -262,7 +262,7 @@ const getIndustryProblemText = () => {
               <div className="space-y-8">
                 {/* Lead Message */}
                 <div className="flex justify-start animate-slide-in">
-                  <div className="bg-gray-100 p-6 rounded-2xl max-w-md shadow-sm">
+                  <div className="bg-blue-500/10 p-6 rounded-2xl max-w-md shadow-sm">
                     <div className="flex items-center mb-2">
                       <User className="w-4 h-4 text-white/60 mr-2" />
                       <p className="text-sm text-white/60">Incoming Lead Response</p>
@@ -383,7 +383,7 @@ const getIndustryProblemText = () => {
                 <div className="space-y-6">
                   {/* Original exchange */}
                   <div className="flex justify-start">
-                    <div className="bg-gray-100 p-4 rounded-2xl max-w-md">
+                    <div className="bg-blue-500/10 p-4 rounded-2xl max-w-md">
                       <div className="flex items-center mb-1">
                         <User className="w-3 h-3 text-white/60 mr-2" />
                         <p className="text-xs text-white/60">Lead</p>
@@ -404,7 +404,7 @@ const getIndustryProblemText = () => {
 
                   {/* Follow-up exchange */}
                   <div className="flex justify-start animate-slide-in">
-                    <div className="bg-gray-100 p-4 rounded-2xl max-w-md">
+                    <div className="bg-blue-500/10 p-4 rounded-2xl max-w-md">
                       <div className="flex items-center mb-1">
                         <User className="w-3 h-3 text-white/60 mr-2" />
                         <p className="text-xs text-white/60">Lead Response</p>

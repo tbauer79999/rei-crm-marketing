@@ -25,7 +25,7 @@ export default function Leadership() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               Building the Future of<br className="hidden sm:block" />
               <span className="sm:inline"> </span>Human Interaction Intelligence
             </h1>
@@ -50,7 +50,7 @@ export default function Leadership() {
             <div className="inline-block px-4 py-2 rounded-full glass-card border border-blue-500/20 border border-orange/20 mb-6">
               <span className="text-sm font-semibold text-blue-400">FOUNDER & CEO</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Meet the Founder
             </h2>
           </motion.div>
@@ -81,7 +81,7 @@ export default function Leadership() {
 
                 {/* Bio Section */}
                 <div className="md:col-span-3 p-8 sm:p-10 md:p-12">
-                  <h3 className="text-3xl font-semibold text-white mb-2">Tom Bauer</h3>
+                  <h3 className="text-3xl font-bold text-white mb-2">Tom Bauer</h3>
                   <p className="text-lg text-blue-400 font-medium mb-6">Founder & CEO</p>
                   
                   <div className="space-y-4 mb-8">
@@ -123,7 +123,7 @@ export default function Leadership() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Founding Principles
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
@@ -180,7 +180,7 @@ export default function Leadership() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Where We Are Headed
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
@@ -230,7 +230,7 @@ export default function Leadership() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 px-4 leading-tight">
               Want to Connect?
             </h2>
             

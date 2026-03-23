@@ -50,7 +50,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               Building the Intelligence Layer<br className="hidden sm:block" />
               <span className="sm:inline"> </span>for Business
             </h1>
@@ -77,7 +77,7 @@ export default function About() {
               <div className="w-14 h-14 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-6">
                 <Target className="w-7 h-7 text-blue-400" />
               </div>
-              <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
                 Our Mission
               </h2>
               <p className="text-lg text-white/70 leading-relaxed mb-4">
@@ -98,7 +98,7 @@ export default function About() {
               <div className="w-14 h-14 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-6">
                 <Eye className="w-7 h-7 text-blue-400" />
               </div>
-              <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
                 Our Vision
               </h2>
               <p className="text-lg text-white/70 leading-relaxed mb-4">
@@ -121,7 +121,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Why SurFox AI Exists
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
@@ -170,7 +170,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Our Core Values
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
@@ -240,7 +240,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Where We Are Going
             </h2>
           </motion.div>
@@ -303,7 +303,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Get Involved
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
@@ -364,7 +364,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 px-4 leading-tight">
               This Is Just the Beginning
             </h2>
 

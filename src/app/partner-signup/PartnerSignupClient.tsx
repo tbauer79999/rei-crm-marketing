@@ -135,15 +135,6 @@ function PartnerSignupContent() {
   if (error || !invite) {
     return (
       <>
-        <style>{`
-          .text-white {
-            color: #1e293b;
-          }
-
-          .bg-card-bg {
-            background-color: #1e293b;
-          }
-        `}</style>
         <div className="min-h-screen bg-card-bg flex items-center justify-center px-4">
           <div className="max-w-md w-full bg-card-bg rounded-2xl border-2 border-red-200 p-8 shadow-xl text-center">
             <div className="text-6xl mb-4">⚠️</div>
@@ -162,31 +153,6 @@ function PartnerSignupContent() {
 
   return (
     <>
-      <style>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-
-        .text-purple {
-          color: #7c3aed;
-        }
-
-        .bg-purple {
-          background-color: #7c3aed;
-        }
-      `}</style>
 
       <div className="min-h-screen bg-card-bg flex items-center justify-center px-4 py-12">
         <div className="max-w-2xl w-full bg-card-bg rounded-2xl border-2 border-purple-200 p-8 shadow-xl">
@@ -214,7 +180,7 @@ function PartnerSignupContent() {
             }`}>
               {isPartnerAdmin ? '⭐ PARTNER INVITATION' : '🚀 CUSTOM PLAN INVITATION'}
             </div>
-            <h1 className="text-4xl font-semibold text-white mb-2">
+            <h1 className="text-4xl font-bold text-white mb-2">
               Welcome, {invite.partner_company}!
             </h1>
             <h2 className={`text-3xl font-bold mb-2 ${isPartnerAdmin ? 'text-purple-600' : 'text-blue-400-600'}`}>

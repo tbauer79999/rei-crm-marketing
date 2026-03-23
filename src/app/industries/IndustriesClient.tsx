@@ -173,23 +173,6 @@ export default function IndustriesClient() {
 
   return (
     <div className="bg-card-bg text-white">
-      <style>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-      `}</style>
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
@@ -203,7 +186,7 @@ export default function IndustriesClient() {
               <span className="text-sm font-semibold text-blue-400">INDUSTRIES</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
               Every Industry Has{' '}<br className="hidden sm:block" />
               Dead Leads.{' '}<br className="hidden sm:block" />
               <span className="text-white/40">We Bring Them Back.</span>
@@ -235,7 +218,7 @@ export default function IndustriesClient() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               The Universal Problem
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
@@ -278,7 +261,7 @@ export default function IndustriesClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Solutions by Industry
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
@@ -295,7 +278,7 @@ export default function IndustriesClient() {
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
                   activeIndustry === index
                     ? 'gradient-bg text-white'
-                    : 'bg-gray-100 text-white/60 hover:bg-gray-200'
+                    : 'bg-blue-500/10 text-white/60 hover:bg-blue-500/20'
                 }`}
               >
                 <industry.icon className="w-4 h-4" />
@@ -320,7 +303,7 @@ export default function IndustriesClient() {
                   {React.createElement(industries[activeIndustry].icon, { className: "w-8 h-8 text-blue-400" })}
                 </div>
                 <div className="text-center sm:text-left">
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-white">{industries[activeIndustry].title}</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white">{industries[activeIndustry].title}</h3>
                   <p className="text-lg text-white/60">{industries[activeIndustry].subtitle}</p>
                 </div>
               </div>
@@ -397,7 +380,7 @@ export default function IndustriesClient() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Why Psychology Works Everywhere
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
@@ -464,7 +447,7 @@ export default function IndustriesClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Revive Your Dead Leads?
             </h2>
 

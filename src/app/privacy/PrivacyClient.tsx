@@ -8,23 +8,6 @@ import { Shield, Bell, Lock, Eye, FileText, AlertCircle } from 'lucide-react';
 export default function PrivacyPolicy() {
   return (
     <div className="bg-card-bg text-white">
-      <style>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-      `}</style>
 
       {/* Hero Section */}
       <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
@@ -37,7 +20,7 @@ export default function PrivacyPolicy() {
             <div className="w-16 h-16 mx-auto mb-6 rounded-2xl glass-card border border-blue-500/20 flex items-center justify-center">
               <Shield className="w-8 h-8 text-blue-400" />
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-white mb-6 leading-tight">
+            <h1 className="text-4xl font-bold text-white mb-6 leading-tight">
               Privacy Policy
             </h1>
             <p className="text-lg sm:text-xl text-white/60 leading-relaxed">
@@ -77,7 +60,7 @@ export default function PrivacyPolicy() {
               <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                 <Bell className="w-6 h-6 text-blue-400" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">
                 SMS Notifications & Consent
               </h2>
             </div>
@@ -97,7 +80,7 @@ export default function PrivacyPolicy() {
               <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                 <FileText className="w-6 h-6 text-blue-400" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">
                 Information We Collect
               </h2>
             </div>
@@ -166,7 +149,7 @@ export default function PrivacyPolicy() {
               <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                 <Eye className="w-6 h-6 text-blue-400" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">
                 How We Use Your Information
               </h2>
             </div>
@@ -213,7 +196,7 @@ export default function PrivacyPolicy() {
               <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                 <Lock className="w-6 h-6 text-blue-400" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">
                 Data Security
               </h2>
             </div>
@@ -257,7 +240,7 @@ export default function PrivacyPolicy() {
               <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                 <Shield className="w-6 h-6 text-blue-400" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">
                 Data Isolation & Tenant Privacy
               </h2>
             </div>
@@ -298,7 +281,7 @@ export default function PrivacyPolicy() {
               <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                 <AlertCircle className="w-6 h-6 text-blue-400" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">
                 How We Share Your Information
               </h2>
             </div>
@@ -336,7 +319,7 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
               Your Rights
             </h2>
 
@@ -377,7 +360,7 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
               Data Retention
             </h2>
 
@@ -395,7 +378,7 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
               International Data Transfers
             </h2>
 
@@ -413,7 +396,7 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
               Children's Privacy
             </h2>
 
@@ -431,7 +414,7 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
               Changes to This Privacy Policy
             </h2>
 
@@ -449,7 +432,7 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
               Contact Us
             </h2>
 

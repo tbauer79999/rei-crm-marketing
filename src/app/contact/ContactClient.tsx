@@ -105,7 +105,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               Let's Talk About<br className="hidden sm:block" />
               <span className="sm:inline"> </span>Your Intelligence Needs
             </h1>
@@ -130,7 +130,7 @@ export default function Contact() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
                   Get in Touch
                 </h2>
                 <p className="text-white/60 leading-relaxed mb-8">
@@ -254,7 +254,7 @@ export default function Contact() {
               className="lg:col-span-2"
             >
               <div className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 sm:p-10 md:p-12">
-                <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-2">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                   Send Us a Message
                 </h2>
                 <p className="text-white/60 mb-8">
@@ -450,7 +450,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Looking for Something Specific?
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
@@ -519,7 +519,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Common Questions
             </h2>
           </motion.div>

@@ -6,13 +6,7 @@ import { ArrowRight, CheckCircle, XCircle, MessageSquare, Phone, Zap, Clock, Bar
 
 export default function WholesalersClient() {
   return (
-    <div className="bg-card-bg text-white">
-      <style>{`
-        .text-white { color: #1e293b; }
-        .bg-card-bg { background-color: #1e293b; }
-        .text-blue-400 { color: #c2410c; }
-        .gradient-bg { background-color: #c2410c; }
-      `}</style>
+    <div className="bg-background text-white">
 
       {/* Section 1: Hero */}
       <section className="min-h-[80vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-14 md:py-20">
@@ -27,7 +21,7 @@ export default function WholesalersClient() {
               <span className="text-sm font-semibold text-blue-400">For Real Estate Wholesalers</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight" style={{ fontFamily: 'var(--font-sora)' }}>
               You Sent the Blast.<br className="hidden sm:block" /> Now 40 People Replied.<br className="hidden sm:block" /> Now What?
             </h1>
 
@@ -73,7 +67,7 @@ export default function WholesalersClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
               The Problem After the Blast
             </h2>
           </motion.div>
@@ -124,7 +118,7 @@ export default function WholesalersClient() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">
               How it works
             </h2>
           </motion.div>
@@ -180,7 +174,7 @@ export default function WholesalersClient() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">
               SurFox AI vs Your Current Workflow
             </h2>
           </motion.div>
@@ -272,7 +266,7 @@ export default function WholesalersClient() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">
               Common questions
             </h2>
           </motion.div>
@@ -316,7 +310,7 @@ export default function WholesalersClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
               Stop Sorting Replies.<br className="hidden sm:block" /> Start Calling Deals.
             </h2>
 

@@ -32,24 +32,7 @@ export default function PlatformPage() {
   };
 
   return (
-    <div className="bg-card-bg text-white">
-      <style>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-      `}</style>
+    <div className="bg-background text-white">
 
       {/* Hero - The Problem */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
@@ -59,10 +42,10 @@ export default function PlatformPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight" style={{ fontFamily: 'var(--font-sora)' }}>
               Your customers are{' '}<br className="hidden sm:block" />
               telling you everything.{' '}<br className="hidden sm:block" />
-              <span className="text-white/40">Most of it is lost.</span>
+              <span className="text-white/50">Most of it is lost.</span>
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-10 max-w-3xl mx-auto leading-relaxed">
@@ -85,7 +68,7 @@ export default function PlatformPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6" style={{ fontFamily: 'var(--font-sora)' }}>
               Two sides. One platform.
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
@@ -101,11 +84,11 @@ export default function PlatformPage() {
               viewport={{ once: true }}
               className="p-8 sm:p-10 rounded-2xl border-2 border-white/[0.08] bg-card-bg"
             >
-              <div className="w-14 h-14 rounded-xl bg-gray-100 flex items-center justify-center mb-6">
-                <ArrowDownLeft className="w-7 h-7 text-white/50" />
+              <div className="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6">
+                <ArrowDownLeft className="w-7 h-7 text-blue-400" />
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-4">Signals In</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'var(--font-sora)' }}>Signals In</h3>
 
               <p className="text-white/60 leading-relaxed mb-6">
                 Every customer interaction flowing into one intelligence layer. SurFox AI ingests, understands, and learns from all of it.
@@ -139,13 +122,13 @@ export default function PlatformPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="p-8 sm:p-10 rounded-2xl border-2 border-orange gradient-bg/5"
+              className="p-8 sm:p-10 rounded-2xl border-2 border-white/[0.08] bg-card-bg"
             >
-              <div className="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center mb-6">
-                <ArrowUpRight className="w-7 h-7 text-white" />
+              <div className="w-14 h-14 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center mb-6">
+                <ArrowUpRight className="w-7 h-7 text-violet-400" />
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-4">Actions Out</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'var(--font-sora)' }}>Actions Out</h3>
 
               <p className="text-white/60 leading-relaxed mb-6">
                 AI-initiated outreach, follow-ups, and automations - triggered by what SurFox AI learns. The system doesn't just listen. It acts.
@@ -165,7 +148,7 @@ export default function PlatformPage() {
                 ))}
               </div>
 
-              <div className="pt-4 border-t border-orange/20">
+              <div className="pt-4 border-t border-white/[0.06]">
                 <span className="text-sm font-semibold text-blue-400">This is where we start - live now</span>
               </div>
             </motion.div>
@@ -185,7 +168,7 @@ export default function PlatformPage() {
               <span className="text-sm font-semibold text-blue-400">THE ENGINE</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Powered by SurFox Infinity
             </h2>
 
@@ -205,7 +188,7 @@ export default function PlatformPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Where we are today
             </h2>
           </motion.div>
@@ -222,7 +205,7 @@ export default function PlatformPage() {
               </div>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               AI-powered SMS lead qualification
             </h3>
 
@@ -250,7 +233,7 @@ export default function PlatformPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               What comes next
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
@@ -341,7 +324,7 @@ export default function PlatformPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-8">
               The long-term vision
             </h2>
 
@@ -368,7 +351,7 @@ export default function PlatformPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Want to follow along?
             </h2>
 
@@ -405,7 +388,7 @@ export default function PlatformPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Start with what's live today.
             </h2>
 

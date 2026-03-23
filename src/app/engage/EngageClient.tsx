@@ -14,36 +14,6 @@ export default function SurFoxRevamped() {
 
   return (
     <div ref={containerRef} className="bg-card-bg text-white">
-      <style>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .border-white/[0.08] {
-          border-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-
-        .hover-lift {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .hover-lift:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        }
-      `}</style>
 
       {/* Hero Section */}
       <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 flex justify-center">
@@ -54,7 +24,7 @@ export default function SurFoxRevamped() {
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <div className="text-sm font-medium text-white/50 mb-4 tracking-wide">SURFOX ENGAGE</div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               AI-Powered SMS<br className="hidden sm:block" />
               <span className="sm:inline"> </span>Lead Qualification
             </h1>
@@ -96,7 +66,7 @@ export default function SurFoxRevamped() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               How It Works
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
@@ -166,7 +136,7 @@ export default function SurFoxRevamped() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Enterprise-Grade Platform
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
@@ -188,7 +158,7 @@ export default function SurFoxRevamped() {
                   <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center">
                     <Users className="w-6 h-6 text-blue-400" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-white">Lead Management</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white">Lead Management</h3>
                 </div>
                 <p className="text-lg text-white/60 leading-relaxed mb-6">
                   Monitor your entire lead pipeline in real-time. Track status, engagement levels, and conversation progress across all prospects.
@@ -245,7 +215,7 @@ export default function SurFoxRevamped() {
                   <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center">
                     <Activity className="w-6 h-6 text-blue-400" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-white">AI Control Room</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white">AI Control Room</h3>
                 </div>
                 <p className="text-lg text-white/60 leading-relaxed mb-6">
                   Monitor system health, AI performance, and conversation quality. Get real-time insights into how your AI agents are performing.
@@ -280,7 +250,7 @@ export default function SurFoxRevamped() {
                   <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center">
                     <BarChart3 className="w-6 h-6 text-blue-400" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-white">Analytics & Performance</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white">Analytics & Performance</h3>
                 </div>
                 <p className="text-lg text-white/60 leading-relaxed mb-6">
                   Track sales outcomes, conversion rates, and team performance. Understand which campaigns drive results and optimize accordingly.
@@ -337,7 +307,7 @@ export default function SurFoxRevamped() {
                   <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center">
                     <FlaskConical className="w-6 h-6 text-blue-400" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-white">A/B Testing & Optimization</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white">A/B Testing & Optimization</h3>
                 </div>
                 <p className="text-lg text-white/60 leading-relaxed mb-6">
                   Continuously optimize your AI's performance. Test different conversation approaches, messaging tones, and qualification criteria.
@@ -374,7 +344,7 @@ export default function SurFoxRevamped() {
             <div className="w-16 h-16 mx-auto mb-6 rounded-2xl glass-card border border-blue-500/20 flex items-center justify-center">
               <FileText className="w-8 h-8 text-blue-400" />
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Knowledge Base
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
@@ -428,7 +398,7 @@ export default function SurFoxRevamped() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Built to Scale
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
@@ -469,7 +439,7 @@ export default function SurFoxRevamped() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-16 md:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Enterprise-Grade Security
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-4xl mx-auto leading-relaxed px-4">
@@ -523,7 +493,7 @@ export default function SurFoxRevamped() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Frequently Asked Questions
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
@@ -605,7 +575,7 @@ export default function SurFoxRevamped() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 px-4 leading-tight">
               Ready to automate your<br className="hidden sm:block" />
               <span className="sm:inline"> </span>lead qualification?
             </h2>
