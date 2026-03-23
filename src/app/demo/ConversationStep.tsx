@@ -199,27 +199,27 @@ const getIndustryProblemText = () => {
               {currentScenario.title}
             </h1>
             <div className="max-w-4xl mx-auto">
-              <div className="bg-red-50 p-8 rounded-2xl border border-red-200 mb-8">
+              <div className="bg-red-500/10 p-8 rounded-2xl border border-red-500/20 mb-8">
                 <div className="flex items-center justify-center mb-4">
                   <AlertCircle className="w-8 h-8 text-red-600" />
                 </div>
-              <h3 className="text-xl font-bold text-red-800 mb-4">The Problem {getIndustryProblemText()}</h3>                   <p className="text-red-700 text-lg">{currentScenario.problem}</p>
+              <h3 className="text-xl font-bold text-red-300 mb-4">The Problem {getIndustryProblemText()}</h3>                   <p className="text-red-200 text-lg">{currentScenario.problem}</p>
               </div>
 
-              <div className="bg-amber-50 p-8 rounded-2xl border border-amber-200 mb-8">
+              <div className="bg-amber-500/10 p-8 rounded-2xl border border-amber-500/20 mb-8">
                 <div className="flex items-center justify-center mb-4">
-                  <Brain className="w-8 h-8 text-amber-600" />
+                  <Brain className="w-8 h-8 text-amber-400" />
                 </div>
-                <h3 className="text-xl font-bold text-amber-800 mb-4">But Here's What They're Missing</h3>
-                <p className="text-amber-700 text-lg">{currentScenario.insight}</p>
+                <h3 className="text-xl font-bold text-amber-200 mb-4">But Here's What They're Missing</h3>
+                <p className="text-amber-300 text-lg">{currentScenario.insight}</p>
               </div>
 
-              <div className="bg-blue-50 p-8 rounded-2xl border border-blue-200 mb-8">
+              <div className="bg-blue-500/10 p-8 rounded-2xl border border-blue-500/20 mb-8">
                 <div className="flex items-center justify-center mb-4">
                   <Target className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-blue-800 mb-4">Our AI's Strategic Approach</h3>
-                <p className="text-blue-700 text-lg">{currentScenario.strategy}</p>
+                <h3 className="text-xl font-bold text-blue-200 mb-4">Our AI's Strategic Approach</h3>
+                <p className="text-blue-300 text-lg">{currentScenario.strategy}</p>
               </div>
 
               <button
@@ -246,9 +246,9 @@ const getIndustryProblemText = () => {
             </div>
 
             {/* Business Context */}
-            <div className="bg-card-bg rounded-xl p-6 mb-8 border border-blue-200 bg-blue-50">
-              <h3 className="font-semibold text-blue-900 mb-2">Business Context:</h3>
-              <p className="text-blue-800">
+            <div className="bg-blue-500/10 rounded-xl p-6 mb-8 border border-blue-500/20">
+              <h3 className="font-semibold text-white mb-2">Business Context:</h3>
+              <p className="text-white/70">
                 <strong>{company}</strong> • {industry} • {offering}
               </p>
             </div>
@@ -262,7 +262,7 @@ const getIndustryProblemText = () => {
               <div className="space-y-8">
                 {/* Lead Message */}
                 <div className="flex justify-start animate-slide-in">
-                  <div className="bg-blue-500/10 p-6 rounded-2xl max-w-md shadow-sm">
+                  <div className="bg-blue-500/100/10 p-6 rounded-2xl max-w-md shadow-sm">
                     <div className="flex items-center mb-2">
                       <User className="w-4 h-4 text-white/60 mr-2" />
                       <p className="text-sm text-white/60">Incoming Lead Response</p>
@@ -274,10 +274,10 @@ const getIndustryProblemText = () => {
                 {/* AI Processing States */}
                 {phase === 'analyzing' && (
                   <div className="flex justify-center">
-                    <div className="bg-purple-100 p-6 rounded-2xl border border-purple-300 animate-pulse">
+                    <div className="bg-violet-500/10 p-6 rounded-2xl border border-violet-500/30 animate-pulse">
                       <div className="flex items-center space-x-3">
-                        <Brain className="w-6 h-6 text-purple-600 animate-spin" />
-                        <span className="text-purple-800 font-medium">AI is analyzing intent and motivation...</span>
+                        <Brain className="w-6 h-6 text-violet-400 animate-spin" />
+                        <span className="text-violet-200 font-medium">AI is analyzing intent and motivation...</span>
                       </div>
                     </div>
                   </div>
@@ -285,10 +285,10 @@ const getIndustryProblemText = () => {
 
                 {phase === 'responding' && (
                   <div className="flex justify-center">
-                    <div className="bg-blue-100 p-6 rounded-2xl border border-blue-300 animate-pulse">
+                    <div className="bg-blue-500/10 p-6 rounded-2xl border border-blue-500/30 animate-pulse">
                       <div className="flex items-center space-x-3">
                         <Zap className="w-6 h-6 text-blue-600" />
-                        <span className="text-blue-800 font-medium">Crafting personalized response strategy...</span>
+                        <span className="text-blue-200 font-medium">Crafting personalized response strategy...</span>
                       </div>
                     </div>
                   </div>
@@ -317,28 +317,28 @@ const getIndustryProblemText = () => {
                 </h3>
                 
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
-                  <div className="bg-green-50 p-6 rounded-xl border border-green-200 text-center">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-green-500/10 p-6 rounded-xl border border-green-500/20 text-center">
+                    <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <CheckCircle className="w-8 h-8 text-green-600" />
                     </div>
-                    <h4 className="font-bold text-green-800 mb-2">Context Restored</h4>
-                    <p className="text-green-700 text-sm">Reminds them why you're calling without being defensive</p>
+                    <h4 className="font-bold text-green-300 mb-2">Context Restored</h4>
+                    <p className="text-green-200 text-sm">Reminds them why you're calling without being defensive</p>
                   </div>
                   
-                  <div className="bg-blue-50 p-6 rounded-xl border border-blue-200 text-center">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-blue-500/10 p-6 rounded-xl border border-blue-500/20 text-center">
+                    <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Target className="w-8 h-8 text-blue-600" />
                     </div>
-                    <h4 className="font-bold text-blue-800 mb-2">Value Demonstrated</h4>
-                    <p className="text-blue-700 text-sm">Shows specific benefit without overwhelming with details</p>
+                    <h4 className="font-bold text-blue-200 mb-2">Value Demonstrated</h4>
+                    <p className="text-blue-300 text-sm">Shows specific benefit without overwhelming with details</p>
                   </div>
                   
-                  <div className="bg-purple-50 p-6 rounded-xl border border-purple-200 text-center">
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Clock className="w-8 h-8 text-purple-600" />
+                  <div className="bg-violet-500/5 p-6 rounded-xl border border-violet-500/20 text-center">
+                    <div className="w-16 h-16 bg-violet-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Clock className="w-8 h-8 text-violet-400" />
                     </div>
-                    <h4 className="font-bold text-purple-800 mb-2">Respectful Approach</h4>
-                    <p className="text-purple-700 text-sm">Acknowledges their response appropriately</p>
+                    <h4 className="font-bold text-violet-200 mb-2">Respectful Approach</h4>
+                    <p className="text-violet-300 text-sm">Acknowledges their response appropriately</p>
                   </div>
                 </div>
               </div>
@@ -357,7 +357,7 @@ const getIndustryProblemText = () => {
                     <div
                       key={choice.id}
                       onClick={() => handleChoiceSelect(choice)}
-                      className="bg-background p-6 rounded-xl cursor-pointer hover:bg-card-bg/[0.08] border-2 border-white/[0.08] hover:border-blue-300 transition-all duration-300 transform hover:scale-105"
+                      className="bg-background p-6 rounded-xl cursor-pointer hover:bg-card-bg/[0.08] border-2 border-white/[0.08] hover:border-blue-500/30 transition-all duration-300 transform hover:scale-105"
                     >
                       <h4 className="font-bold text-white mb-3">{choice.title}</h4>
                       <div className="bg-card-bg p-4 rounded-lg mb-4 border border-white/[0.08]">
@@ -383,7 +383,7 @@ const getIndustryProblemText = () => {
                 <div className="space-y-6">
                   {/* Original exchange */}
                   <div className="flex justify-start">
-                    <div className="bg-blue-500/10 p-4 rounded-2xl max-w-md">
+                    <div className="bg-blue-500/100/10 p-4 rounded-2xl max-w-md">
                       <div className="flex items-center mb-1">
                         <User className="w-3 h-3 text-white/60 mr-2" />
                         <p className="text-xs text-white/60">Lead</p>
@@ -393,7 +393,7 @@ const getIndustryProblemText = () => {
                   </div>
 
                   <div className="flex justify-end">
-                    <div className="bg-blue-500 text-white p-4 rounded-2xl max-w-lg">
+                    <div className="bg-blue-500/100 text-white p-4 rounded-2xl max-w-lg">
                       <div className="flex items-center mb-1">
                         <Brain className="w-3 h-3 text-blue-100 mr-2" />
                         <p className="text-xs text-blue-100">{company} AI</p>
@@ -404,7 +404,7 @@ const getIndustryProblemText = () => {
 
                   {/* Follow-up exchange */}
                   <div className="flex justify-start animate-slide-in">
-                    <div className="bg-blue-500/10 p-4 rounded-2xl max-w-md">
+                    <div className="bg-blue-500/100/10 p-4 rounded-2xl max-w-md">
                       <div className="flex items-center mb-1">
                         <User className="w-3 h-3 text-white/60 mr-2" />
                         <p className="text-xs text-white/60">Lead Response</p>
@@ -430,9 +430,9 @@ const getIndustryProblemText = () => {
                   <>
                     {/* Secret Sauce Explanation */}
                     <div className="mt-12 space-y-8">
-                      <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-2xl border border-purple-200">
+                      <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-2xl border border-violet-500/20">
                         <div className="text-center mb-8">
-                          <div className="inline-flex items-center px-6 py-3 bg-purple-100 text-purple-800 rounded-full text-lg font-bold mb-4">
+                          <div className="inline-flex items-center px-6 py-3 bg-violet-500/10 text-violet-200 rounded-full text-lg font-bold mb-4">
                             <Brain className="w-6 h-6 mr-3" />
                             🔥 THIS IS OUR SECRET SAUCE
                           </div>
@@ -442,8 +442,8 @@ const getIndustryProblemText = () => {
                           <p className="text-lg text-white/60 mb-4">
                             Most investors would have killed this lead. Here's what our AI did differently:
                           </p>
-                          <div className="bg-blue-100 p-4 rounded-lg border border-blue-300 mb-6">
-                            <p className="text-blue-800 font-semibold text-center">
+                          <div className="bg-blue-500/10 p-4 rounded-lg border border-blue-500/30 mb-6">
+                            <p className="text-blue-200 font-semibold text-center">
                               🎯 This conversation successfully advanced the lead from <strong>Cold Contact</strong> to <strong>Qualified Interest</strong> (Stage 2 of your sales pipeline)
                             </p>
                           </div>
@@ -451,27 +451,27 @@ const getIndustryProblemText = () => {
 
                         <div className="grid md:grid-cols-2 gap-8">
                           <div className="space-y-6">
-                            <div className="bg-red-50 p-6 rounded-xl border border-red-200">
-                              <h4 className="font-bold text-red-800 mb-3 flex items-center">
+                            <div className="bg-red-500/10 p-6 rounded-xl border border-red-500/20">
+                              <h4 className="font-bold text-red-300 mb-3 flex items-center">
                                 <AlertCircle className="w-5 h-5 mr-2" />
                                 What 95% of Investors Do WRONG
                               </h4>
                               {selectedChoice.id === 3 ? (
-                                <ul className="text-red-700 space-y-2 text-sm">
+                                <ul className="text-red-200 space-y-2 text-sm">
                                   <li>• Send generic "we buy houses" pitch</li>
                                   <li>• Don't address their specific urgency</li>
                                   <li>• Miss the emotional motivation signals</li>
                                   <li>• Fail to build trust before pushing for info</li>
                                 </ul>
                               ) : selectedChoice.id === 2 ? (
-                                <ul className="text-red-700 space-y-2 text-sm">
+                                <ul className="text-red-200 space-y-2 text-sm">
                                   <li>• Get defensive about their objection</li>
                                   <li>• Push harder instead of pulling back</li>
                                   <li>• Miss the curiosity signal completely</li>
                                   <li>• Don't educate - just sell harder</li>
                                 </ul>
                               ) : (
-                                <ul className="text-red-700 space-y-2 text-sm">
+                                <ul className="text-red-200 space-y-2 text-sm">
                                   <li>• Give up immediately</li>
                                   <li>• Don't plant seeds for future contact</li>
                                   <li>• Miss the politeness as a positive signal</li>
@@ -482,27 +482,27 @@ const getIndustryProblemText = () => {
                           </div>
 
                           <div className="space-y-6">
-                            <div className="bg-green-50 p-6 rounded-xl border border-green-200">
-                              <h4 className="font-bold text-green-800 mb-3 flex items-center">
+                            <div className="bg-green-500/10 p-6 rounded-xl border border-green-500/20">
+                              <h4 className="font-bold text-green-300 mb-3 flex items-center">
                                 <CheckCircle className="w-5 h-5 mr-2" />
                                 What Our AI Did RIGHT
                               </h4>
                               {selectedChoice.id === 3 ? (
-                                <ul className="text-green-700 space-y-2 text-sm">
+                                <ul className="text-green-200 space-y-2 text-sm">
                                   <li>• Recognized urgency signals immediately</li>
                                   <li>• Asked qualifying questions to understand motivation</li>
                                   <li>• Positioned speed as competitive advantage</li>
                                   <li>• Built credibility before asking for details</li>
                                 </ul>
                               ) : selectedChoice.id === 2 ? (
-                                <ul className="text-green-700 space-y-2 text-sm">
+                                <ul className="text-green-200 space-y-2 text-sm">
                                   <li>• Caught the curiosity beneath the objection</li>
                                   <li>• Educated instead of selling</li>
                                   <li>• Used specific examples they could relate to</li>
                                   <li>• Made them feel understood, not pressured</li>
                                 </ul>
                               ) : (
-                                <ul className="text-green-700 space-y-2 text-sm">
+                                <ul className="text-green-200 space-y-2 text-sm">
                                   <li>• Gracefully planted seeds for future contact</li>
                                   <li>• Offered ongoing value (market updates)</li>
                                   <li>• Respected their timeline while staying connected</li>
@@ -517,21 +517,21 @@ const getIndustryProblemText = () => {
                       {/* Advanced Psychology Analysis */}
                       <div className="bg-card-bg p-8 rounded-2xl border border-white/[0.08] shadow-sm shadow-blue-500/5 shadow-blue-500/5">
                         <h3 className="text-2xl font-bold text-white mb-6 text-center flex items-center justify-center">
-                          <Brain className="w-8 h-8 mr-3 text-purple-600" />
+                          <Brain className="w-8 h-8 mr-3 text-violet-400" />
                           Advanced Psychology Analysis
                         </h3>
                         
                         <div className="grid md:grid-cols-3 gap-6">
                           <div className="text-center">
-                            <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                               <TrendingUp className="w-10 h-10 text-blue-600" />
                             </div>
                             <h4 className="font-bold text-white mb-2">Intent Detection</h4>
-                            <div className="bg-blue-50 p-4 rounded-lg">
+                            <div className="bg-blue-500/10 p-4 rounded-lg">
                               <div className="text-3xl font-bold text-blue-600 mb-1">
                                 {selectedChoice.id === 3 ? '95%' : selectedChoice.id === 2 ? '75%' : '45%'}
                               </div>
-                              <p className="text-sm text-blue-700">
+                              <p className="text-sm text-blue-300">
                                 {selectedChoice.id === 3 ? 'High Intent at This Stage' : selectedChoice.id === 2 ? 'Growing Interest Detected' : 'Future Potential Identified'}
                               </p>
                             </div>
@@ -553,15 +553,15 @@ const getIndustryProblemText = () => {
                           </div>
 
                           <div className="text-center">
-                            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                               <Target className="w-10 h-10 text-green-600" />
                             </div>
                             <h4 className="font-bold text-white mb-2">Next Stage Readiness</h4>
-                            <div className="bg-green-50 p-4 rounded-lg">
+                            <div className="bg-green-500/10 p-4 rounded-lg">
                               <div className="text-3xl font-bold text-green-600 mb-1">
                                 {selectedChoice.id === 3 ? '92%' : selectedChoice.id === 2 ? '78%' : '55%'}
                               </div>
-                              <p className="text-sm text-green-700">
+                              <p className="text-sm text-green-200">
                                 {selectedChoice.id === 3 ? 'Ready for Human Contact' : selectedChoice.id === 2 ? 'High Potential for Stage 3' : 'Continue AI Nurturing'}
                               </p>
                             </div>
@@ -689,7 +689,7 @@ const getIndustryProblemText = () => {
                             // Navigate to pricing instead of completing demo
                             window.location.href = '/#pricing'
                           }}
-                          className="bg-card-bg text-purple-600 px-16 py-6 rounded-xl font-bold text-2xl transition-all duration-300 shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-xl transform hover:scale-105"
+                          className="bg-card-bg text-violet-400 px-16 py-6 rounded-xl font-bold text-2xl transition-all duration-300 shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-xl transform hover:scale-105"
                         >
                           🚀 Get This AI Working For Me
                           <ArrowRight className="w-8 h-8 ml-4 inline" />

@@ -1389,7 +1389,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: 'paragraph',
-        content: 'AI database reactivation is the highest-ROI move in sales right now — and most companies have never tried it. You have a goldmine sitting in your CRM and you\'re ignoring it. Every business has one - thousands of leads collected over months or years that never closed. Old inquiries. Expired trials. Prospects who ghosted after the second call. They\'re sitting in your database right now, untouched, because your team decided they weren\'t worth the effort.'
+        content: 'AI database reactivation is the highest-ROI move in sales right now - and most companies have never tried it. You have a goldmine sitting in your CRM and you\'re ignoring it. Every business has one - thousands of leads collected over months or years that never closed. Old inquiries. Expired trials. Prospects who ghosted after the second call. They\'re sitting in your database right now, untouched, because your team decided they weren\'t worth the effort.'
       },
       {
         type: 'tldr',
@@ -1591,7 +1591,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI database reactivation is the process of using artificial intelligence to automatically re-engage dormant leads in your CRM at scale via SMS. Instead of manually working through thousands of old contacts, AI sends personalized outreach, handles qualifying conversations, and surfaces leads that are back in a buying window — all without human effort.'
+        content: 'AI database reactivation is the process of using artificial intelligence to automatically re-engage dormant leads in your CRM at scale via SMS. Instead of manually working through thousands of old contacts, AI sends personalized outreach, handles qualifying conversations, and surfaces leads that are back in a buying window - all without human effort.'
       },
       {
         type: 'subheading',
@@ -2128,7 +2128,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Manufacturing trade shows tend to land at the lower end of conversion benchmarks for one primary reason: longer buying cycles. Capital equipment and industrial solutions often involve committee decisions, procurement processes, and budget cycles that extend 6–18 months past initial contact. A manufacturing lead that looks cold at 30 days may still convert at 12 months — which makes persistent, automated re-engagement especially valuable in this vertical.'
+        content: 'Manufacturing trade shows tend to land at the lower end of conversion benchmarks for one primary reason: longer buying cycles. Capital equipment and industrial solutions often involve committee decisions, procurement processes, and budget cycles that extend 6–18 months past initial contact. A manufacturing lead that looks cold at 30 days may still convert at 12 months - which makes persistent, automated re-engagement especially valuable in this vertical.'
       },
       {
         type: 'paragraph',

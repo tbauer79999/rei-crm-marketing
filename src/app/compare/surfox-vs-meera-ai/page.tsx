@@ -22,10 +22,10 @@ export default function Page() {
             mainEntity: [
               {
                 '@type': 'Question',
-                name: "What's the difference between SurFox and Meera AI?",
+                name: "What's the difference between SurFox AI and Meera AI?",
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Meera AI is built for call centers - it focuses on getting leads on the phone via warm transfers. SurFox AI is built for lead intelligence - it qualifies leads via SMS before your team ever gets involved. Meera requires agents standing by; SurFox works while you sleep.',
+                  text: 'Meera AI is built for call centers - it focuses on getting leads on the phone via warm transfers. SurFox AI is built for lead intelligence - it qualifies leads via SMS before your team ever gets involved. Meera requires agents standing by; SurFox AI works while you sleep.',
                 },
               },
               {
@@ -38,10 +38,10 @@ export default function Page() {
               },
               {
                 '@type': 'Question',
-                name: 'Is SurFox good for inbound leads?',
+                name: 'Is SurFox AI good for inbound leads?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'SurFox AI works for both inbound and outbound, but it really shines with outbound reactivation - reviving old leads you already paid for. If you need pure inbound call handling, Meera might be a better fit. If you want AI-powered lead qualification, choose SurFox.',
+                  text: 'SurFox AI works for both inbound and outbound, but it really shines with outbound reactivation - reviving old leads you already paid for. If you need pure inbound call handling, Meera might be a better fit. If you want AI-powered lead qualification, choose SurFox AI.',
                 },
               },
             ],

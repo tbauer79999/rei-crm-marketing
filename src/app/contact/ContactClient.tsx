@@ -64,36 +64,10 @@ export default function Contact() {
   };
 
   return (
-    <div ref={containerRef} className="bg-card-bg text-white">
-      <style jsx>{`
-        .text-white {
-          color: #1e293b;
-        }
-        
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-        
-        .text-blue-400 {
-          color: #c2410c;
-        }
-        
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-        
-        .hover-lift {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        }
-      `}</style>
+    <div ref={containerRef} className="bg-background text-white">
 
       {/* Hero Section */}
-      <section className="min-h-[60vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32 relative overflow-hidden">
+      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-64 h-64 gradient-bg/5 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-80 h-80 gradient-bg/5 rounded-full blur-3xl" />
@@ -107,7 +81,7 @@ export default function Contact() {
           >
             <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               Let's Talk About<br className="hidden sm:block" />
-              <span className="sm:inline"> </span>Your Intelligence Needs
+              <span className="sm:inline"> </span>Your Lead Qualification
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
@@ -145,7 +119,7 @@ export default function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-card-bg border border-white/[0.08] hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 transition-all"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-card-bg border border-white/[0.08] hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 transition-all"
                 >
                   <div className="w-10 h-10 rounded-lg glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-blue-400" />
@@ -163,7 +137,7 @@ export default function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-card-bg border border-white/[0.08] hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 transition-all"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-card-bg border border-white/[0.08] hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 transition-all"
                 >
                   <div className="w-10 h-10 rounded-lg glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                     <Phone className="w-5 h-5 text-blue-400" />
@@ -181,7 +155,7 @@ export default function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-card-bg border border-white/[0.08] hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 transition-all"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-card-bg border border-white/[0.08] hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 transition-all"
                 >
                   <div className="w-10 h-10 rounded-lg glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-blue-400" />
@@ -200,7 +174,7 @@ export default function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-card-bg border border-white/[0.08] hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 transition-all"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-card-bg border border-white/[0.08] hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 transition-all"
                 >
                   <div className="w-10 h-10 rounded-lg glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5 text-blue-400" />
@@ -275,7 +249,7 @@ export default function Contact() {
                         required
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                        className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 bg-background text-white placeholder:text-white/40 outline-none transition"
                         placeholder="John"
                       />
                     </div>
@@ -290,7 +264,7 @@ export default function Contact() {
                         required
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                        className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 bg-background text-white placeholder:text-white/40 outline-none transition"
                         placeholder="Doe"
                       />
                     </div>
@@ -308,7 +282,7 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                      className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 bg-background text-white placeholder:text-white/40 outline-none transition"
                       placeholder="john@company.com"
                     />
                   </div>
@@ -326,7 +300,7 @@ export default function Contact() {
                         required
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                        className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 bg-background text-white placeholder:text-white/40 outline-none transition"
                         placeholder="Acme Inc."
                       />
                     </div>
@@ -341,7 +315,7 @@ export default function Contact() {
                         required
                         value={formData.role}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                        className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 bg-background text-white placeholder:text-white/40 outline-none transition"
                         placeholder="Sales Manager"
                       />
                     </div>
@@ -358,7 +332,7 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                      className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 bg-background text-white placeholder:text-white/40 outline-none transition"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -374,9 +348,9 @@ export default function Contact() {
                       required
                       value={formData.interest}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                      className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 bg-[#0a0f1e] text-white outline-none transition"
                     >
-                      <option value="">Select an option</option>
+                      <option value="" className="bg-[#0a0f1e]">Select an option</option>
                       <option value="demo">Request a Demo</option>
                       <option value="engage">SurFox Engage</option>
                       <option value="pulse">SurFox Pulse</option>
@@ -400,7 +374,7 @@ export default function Contact() {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition resize-none"
+                      className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 bg-background text-white placeholder:text-white/40 outline-none transition resize-none"
                       placeholder="Tell us about your needs..."
                     />
                   </div>
@@ -413,7 +387,7 @@ export default function Contact() {
                       name="smsConsent"
                       checked={formData.smsConsent}
                       onChange={handleCheckboxChange}
-                      className="mt-1 w-4 h-4 rounded border-white/[0.1] text-blue-400 focus:ring-orange focus:ring-2 focus:ring-orange/20"
+                      className="mt-1 w-4 h-4 rounded border-white/[0.1] text-blue-400 focus:ring-2 focus:ring-blue-500/20 accent-blue-500"
                     />
                     <label htmlFor="smsConsent" className="text-sm text-white/60 leading-relaxed">
                       By submitting this form you agree to receive SMS notifications related to your SurFox AI account, product updates, and platform communications. Message and data rates may apply. Reply STOP to unsubscribe.
@@ -488,7 +462,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-6 sm:p-8 rounded-2xl border border-white/[0.08] bg-card-bg hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover-lift"
+                className="p-6 sm:p-8 rounded-2xl border border-white/[0.08] bg-card-bg hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover-lift"
               >
                 <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
                   <item.icon className="w-6 h-6 text-blue-400" />
@@ -549,7 +523,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-card-bg rounded-xl border border-white/[0.08] p-6 sm:p-8 hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 transition-all duration-300"
+                className="bg-card-bg rounded-xl border border-white/[0.08] p-6 sm:p-8 hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 transition-all duration-300"
               >
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.q}</h3>
                 <p className="text-white/60 leading-relaxed">{faq.a}</p>

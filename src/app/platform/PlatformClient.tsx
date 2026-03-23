@@ -59,7 +59,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* Two Sides of SurFox */}
+      {/* Two Sides of SurFox AI */}
       <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -266,7 +266,7 @@ export default function PlatformPage() {
               transition={{ delay: 0.1 }}
               className="flex items-start gap-6 p-6 rounded-xl bg-background border border-white/[0.08]"
             >
-              <div className="w-10 h-10 rounded-full bg-gray-300 text-white flex items-center justify-center font-bold flex-shrink-0">
+              <div className="w-10 h-10 rounded-full gradient-bg text-white flex items-center justify-center font-bold flex-shrink-0">
                 2
               </div>
               <div>
@@ -284,7 +284,7 @@ export default function PlatformPage() {
               transition={{ delay: 0.2 }}
               className="flex items-start gap-6 p-6 rounded-xl bg-background border border-white/[0.08]"
             >
-              <div className="w-10 h-10 rounded-full bg-gray-300 text-white flex items-center justify-center font-bold flex-shrink-0">
+              <div className="w-10 h-10 rounded-full gradient-bg text-white flex items-center justify-center font-bold flex-shrink-0">
                 3
               </div>
               <div>
@@ -302,7 +302,7 @@ export default function PlatformPage() {
               transition={{ delay: 0.3 }}
               className="flex items-start gap-6 p-6 rounded-xl bg-background border border-white/[0.08]"
             >
-              <div className="w-10 h-10 rounded-full bg-gray-300 text-white flex items-center justify-center font-bold flex-shrink-0">
+              <div className="w-10 h-10 rounded-full gradient-bg text-white flex items-center justify-center font-bold flex-shrink-0">
                 4
               </div>
               <div>
@@ -366,7 +366,7 @@ export default function PlatformPage() {
                 onChange={(e) => setPlatformEmail(e.target.value)}
                 placeholder="you@company.com"
                 required
-                className="flex-1 px-4 py-3 rounded-lg border-2 border-white/[0.1] focus:border-orange focus:outline-none transition"
+                className="flex-1 px-4 py-3 rounded-lg border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition bg-background text-white placeholder:text-white/40"
               />
               <button
                 type="submit"

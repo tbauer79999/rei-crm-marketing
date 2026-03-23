@@ -39,7 +39,7 @@ export default function Success() {
                 </span>
                 <div>
                   <div className="font-semibold text-white">Account Created</div>
-                  <div className="text-sm text-white/60">Your SurFox dashboard is being prepared</div>
+                  <div className="text-sm text-white/60">Your SurFox AI dashboard is being prepared</div>
                 </div>
               </div>
               

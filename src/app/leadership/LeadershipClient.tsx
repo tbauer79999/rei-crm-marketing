@@ -65,7 +65,7 @@ export default function Leadership() {
             <div className="bg-card-bg rounded-2xl border-2 border-white/[0.08] overflow-hidden hover:border-orange/30 hover:shadow-xl transition-all duration-300">
               <div className="grid grid-cols-1 md:grid-cols-5 gap-0">
                 {/* Profile Image Section */}
-                <div className="md:col-span-2 bg-gradient-to-br from-orange/5 to-gray-50 p-8 flex items-center justify-center">
+                <div className="md:col-span-2 bg-gradient-to-br from-blue-500/5 to-violet-500/5 p-8 flex items-center justify-center">
                   <div className="relative">
                     <div className="w-72 h-72 rounded-2xl bg-gradient-to-br from-orange/20 to-gray-200 flex items-center justify-center overflow-hidden">
                       <Image
@@ -94,7 +94,7 @@ export default function Leadership() {
                     </p>
                     
                     <p className="text-white/70 leading-relaxed">
-                      Before SurFox, Tom led revenue initiatives across multiple industries, consistently identifying patterns that others missed. That pattern recognition became the foundation for SurFox Infinity's predictive analytics engine.
+                      Before SurFox AI, Tom led revenue initiatives across multiple industries, consistently identifying patterns that others missed. That pattern recognition became the foundation for SurFox Infinity's predictive analytics engine.
                     </p>
                   </div>
 
@@ -223,7 +223,7 @@ export default function Leadership() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

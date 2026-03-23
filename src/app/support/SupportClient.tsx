@@ -33,7 +33,7 @@ export default function SupportClient() {
   return (
     <div className="min-h-screen bg-blue-500/10 flex items-center justify-center px-4">
       <div className="max-w-xl w-full bg-card-bg p-8 rounded-lg shadow-sm shadow-blue-500/5">
-        <h1 className="text-2xl font-semibold mb-4">Contact SurFox Support</h1>
+        <h1 className="text-2xl font-semibold mb-4">Contact SurFox AI Support</h1>
         <form onSubmit={handleSubmit}>
           <label className="block mb-2 font-medium" htmlFor="email">
             Your Email

@@ -30,10 +30,10 @@ export default function Page() {
               },
               {
                 '@type': 'Question',
-                name: 'How does TextUs pricing compare to SurFox?',
+                name: 'How does TextUs pricing compare to SurFox AI?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'TextUs starts around $300 per month per user for basic plans and scales up for teams. SurFox starts at $147 per month and handles unlimited AI conversations. For teams doing high-volume outreach, SurFox is significantly more cost-effective.',
+                  text: 'TextUs starts around $300 per month per user for basic plans and scales up for teams. SurFox AI starts at $147 per month and handles unlimited AI conversations. For teams doing high-volume outreach, SurFox AI is significantly more cost-effective.',
                 },
               },
               {

@@ -346,7 +346,7 @@ export default function Integrations() {
                 value={integrationEmail}
                 onChange={(e) => setIntegrationEmail(e.target.value)}
                 required
-                className="w-full px-4 py-3 rounded-lg border-2 border-white/[0.1] focus:border-orange focus:outline-none transition"
+                className="w-full px-4 py-3 rounded-lg border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition bg-background text-white placeholder:text-white/40"
               />
               <div className="flex flex-col sm:flex-row gap-3">
                 <input
@@ -355,7 +355,7 @@ export default function Integrations() {
                   value={requestedIntegration}
                   onChange={(e) => setRequestedIntegration(e.target.value)}
                   required
-                  className="flex-1 px-4 py-3 rounded-lg border-2 border-white/[0.1] focus:border-orange focus:outline-none transition"
+                  className="flex-1 px-4 py-3 rounded-lg border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition bg-background text-white placeholder:text-white/40"
                 />
                 <button
                   type="submit"

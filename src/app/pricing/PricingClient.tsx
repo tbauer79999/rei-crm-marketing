@@ -106,14 +106,14 @@ export default function PricingClient() {
                   : '/subscribe/starter';
                 window.location.href = url;
               }}
-              className="w-full bg-blue-500/20 text-white px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold cursor-pointer"
+              className="w-full bg-blue-500/20 text-white px-6 py-3 rounded-xl hover:bg-white/[0.08] transition-colors font-semibold cursor-pointer"
             >
               Start Today
             </button>
             </div>
 
             {/* Growth - Most Popular */}
-            <div className="relative bg-card-bg rounded-2xl border-2 border-orange p-8 text-center transform scale-105 shadow-xl hover-lift">
+            <div className="relative bg-card-bg rounded-2xl border-2 border-blue-500/50 p-8 text-center transform scale-105 shadow-xl hover-lift">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <span className="gradient-bg text-white px-4 py-1 rounded-full text-xs font-bold shadow-sm shadow-blue-500/5 shadow-blue-500/5">
                   Most Popular
@@ -126,7 +126,7 @@ export default function PricingClient() {
               </div>
               <p className="text-white/60 mb-6">For growing sales teams ready to scale AI-powered conversations</p>
 
-              <div className="glass-card border border-blue-500/20 rounded-lg p-4 mb-6 border border-orange/30">
+              <div className="glass-card border border-blue-500/20 rounded-lg p-4 mb-6">
                 <div className="text-sm font-semibold text-blue-400">What you get:</div>
                 <div className="text-sm text-white/70 mt-1">Learning AI with 100 conversation memory</div>
                 <div className="text-xs text-blue-400 mt-1">Gets smarter with every conversation</div>
@@ -276,7 +276,7 @@ export default function PricingClient() {
                     : '/subscribe/scale';
                   window.location.href = url;
                 }}
-                className="w-full bg-blue-500/20 text-white px-6 py-3 rounded-xl hover:bg-gray-300 transition-colors font-semibold cursor-pointer"
+                className="w-full bg-blue-500/20 text-white px-6 py-3 rounded-xl hover:bg-white/[0.08] transition-colors font-semibold cursor-pointer"
               >
                 Try Risk-Free
               </button>

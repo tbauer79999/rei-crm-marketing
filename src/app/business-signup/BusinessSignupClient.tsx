@@ -137,9 +137,9 @@ function BusinessSignupContent() {
     if (!invitation?.partner_type) return null;
 
     const badges: Record<string, { text: string; color: string }> = {
-      franchise: { text: 'Franchise Partner', color: 'bg-blue-100 text-blue-800' },
-      white_label: { text: 'White Label Partner', color: 'bg-purple-100 text-purple-800' },
-      enterprise: { text: 'Enterprise Partner', color: 'bg-green-100 text-green-800' }
+      franchise: { text: 'Franchise Partner', color: 'bg-blue-500/10 text-blue-400 border border-blue-500/20' },
+      white_label: { text: 'White Label Partner', color: 'bg-violet-500/10 text-violet-400 border border-violet-500/20' },
+      enterprise: { text: 'Enterprise Partner', color: 'bg-green-500/10 text-green-400 border border-green-500/20' }
     };
 
     const badge = badges[invitation.partner_type] || badges.franchise;
@@ -154,7 +154,7 @@ function BusinessSignupContent() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
@@ -162,7 +162,7 @@ function BusinessSignupContent() {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
         <div className="bg-card-bg rounded-2xl shadow-xl p-8 max-w-md w-full">
           <AlertCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
           <h1 className="text-2xl font-bold text-white text-center mb-2">Invitation Error</h1>
@@ -174,26 +174,26 @@ function BusinessSignupContent() {
 
   if (!invitation) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 pt-24">
+    <div className="min-h-screen bg-background py-12 px-4 pt-24">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Sparkles className="w-8 h-8 text-blue-600" />
-            <h1 className="text-4xl font-bold text-white">Welcome to SurFox!</h1>
+            <Sparkles className="w-8 h-8 text-blue-400" />
+            <h1 className="text-4xl font-bold text-white">Welcome to SurFox AI!</h1>
           </div>
           
           {invitation.partner_name && (
             <div className="flex items-center justify-center gap-2 mb-4">
               <p className="text-lg text-white/60">
-                You've been invited by <span className="font-semibold text-blue-600">{invitation.partner_name}</span>
+                You've been invited by <span className="font-semibold text-blue-400">{invitation.partner_name}</span>
               </p>
               {getPartnerBadge()}
             </div>
@@ -232,7 +232,7 @@ function BusinessSignupContent() {
                   <span className="text-white/60">/month</span>
                 </div>
                 {invitation.business_admin_discount > 0 && (
-                  <p className="text-sm text-green-600 font-medium mt-1">
+                  <p className="text-sm text-green-400 font-medium mt-1">
                     Save ${standardPricing.starter.monthly - calculateDiscountedPrice(standardPricing.starter.monthly)}/month
                   </p>
                 )}
@@ -264,7 +264,7 @@ function BusinessSignupContent() {
           </div>
 
           {/* Growth Plan */}
-          <div className="bg-card-bg rounded-2xl shadow-xl overflow-hidden border-2 border-blue-300 relative">
+          <div className="bg-card-bg rounded-2xl shadow-xl overflow-hidden border-2 border-blue-500/50 relative">
             <div className="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 text-sm font-semibold rounded-bl-lg">
               RECOMMENDED
             </div>
@@ -285,7 +285,7 @@ function BusinessSignupContent() {
                   <span className="text-white/60">/month</span>
                 </div>
                 {invitation.business_admin_discount > 0 && (
-                  <p className="text-sm text-green-600 font-medium mt-1">
+                  <p className="text-sm text-green-400 font-medium mt-1">
                     Save ${standardPricing.growth.monthly - calculateDiscountedPrice(standardPricing.growth.monthly)}/month
                   </p>
                 )}
@@ -339,7 +339,7 @@ function BusinessSignupContent() {
                   <span className="text-white/60">/month</span>
                 </div>
                 {invitation.business_admin_discount > 0 && (
-                  <p className="text-sm text-green-600 font-medium mt-1">
+                  <p className="text-sm text-green-400 font-medium mt-1">
                     Save ${standardPricing.scale.monthly - calculateDiscountedPrice(standardPricing.scale.monthly)}/month
                   </p>
                 )}
@@ -376,8 +376,8 @@ function BusinessSignupContent() {
         </div>
 
         {/* 14-Day Trial Notice */}
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
-          <p className="text-blue-900 font-medium">
+        <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 text-center">
+          <p className="text-white/80 font-medium">
             ✨ 14-day free trial included • Cancel anytime
           </p>
         </div>
@@ -395,7 +395,7 @@ function BusinessSignupContent() {
 export default function BusinessSignupPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     }>

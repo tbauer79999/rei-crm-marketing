@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================================================
-   OBSIDIAN INTELLIGENCE — Global Design System
+   OBSIDIAN INTELLIGENCE - Global Design System
    Deep dark enterprise SaaS aesthetic with electric blue/violet gradients
    ============================================================================ */
 
@@ -141,11 +141,11 @@ input:focus-visible {
   outline-offset: 2px;
 }
 
-/* Utility classes for legacy compatibility */
-.text-navy { color: #1e293b; }
-.bg-navy { background-color: #1e293b; }
-.text-orange { color: #c2410c; }
-.bg-orange { background-color: #c2410c; }
+/* Utility classes */
+.text-navy { color: #e8e8f0; }
+.bg-navy { background-color: #0a0f1e; }
+.text-orange { color: #60a5fa; }
+.bg-orange { background: var(--gradient-primary); }
 
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;

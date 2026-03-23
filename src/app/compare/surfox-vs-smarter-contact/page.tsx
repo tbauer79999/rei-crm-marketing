@@ -38,10 +38,10 @@ export default function Page() {
               },
               {
                 '@type': 'Question',
-                name: 'What is the difference between Smarter Contact and SurFox?',
+                name: 'What is the difference between Smarter Contact and SurFox AI?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Smarter Contact is a bulk messaging platform. SurFox is an AI qualification platform. Smarter Contact sends thousands of texts. SurFox has thousands of conversations.',
+                  text: 'Smarter Contact is a bulk messaging platform. SurFox AI is an AI qualification platform. Smarter Contact sends thousands of texts. SurFox AI has thousands of conversations.',
                 },
               },
             ],

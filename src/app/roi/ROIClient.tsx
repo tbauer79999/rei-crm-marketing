@@ -88,7 +88,7 @@ export default function ROIClient() {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-10 max-w-3xl mx-auto leading-relaxed">
-              See the true cost of hiring an SDR versus deploying AI — including the hidden costs most companies never calculate.
+              See the true cost of hiring an SDR versus deploying AI - including the hidden costs most companies never calculate.
             </p>
 
             <motion.a
@@ -236,7 +236,7 @@ export default function ROIClient() {
               When Cold Leads Reply, Speed Still Wins
             </h2>
             <p className="text-lg text-white/60 max-w-3xl mx-auto">
-              When a cold lead finally responds, speed still matters. SurFox replies in under 60 seconds - not 24 hours.
+              When a cold lead finally responds, speed still matters. SurFox AI replies in under 60 seconds - not 24 hours.
             </p>
           </motion.div>
 
@@ -347,7 +347,7 @@ export default function ROIClient() {
       </section>
 
       {/* Interactive Calculator Section */}
-      <section id="calculator" className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gradient-to-br from-orange/5 via-white to-orange/10">
+      <section id="calculator" className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -355,7 +355,7 @@ export default function ROIClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <div className="inline-block px-4 py-2 rounded-full glass-card border border-blue-500/20 border border-orange/20 mb-6">
+            <div className="inline-block px-4 py-2 rounded-full glass-card border border-blue-500/20 mb-6">
               <span className="text-sm font-semibold text-blue-400">INTERACTIVE CALCULATOR</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -543,7 +543,7 @@ export default function ROIClient() {
                     <span className="font-medium text-white/70">{formatCurrency(calculations.currentAnnualSDRCost)}/yr</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-white/60">SurFox Cost (Growth Plan)</span>
+                    <span className="text-white/60">SurFox AI Cost (Growth Plan)</span>
                     <span className="font-medium text-blue-400">{formatCurrency(calculations.surfoxAnnualCost)}/yr</span>
                   </div>
                   <div className="flex justify-between">
@@ -607,7 +607,7 @@ export default function ROIClient() {
               </ul>
             </motion.div>
 
-            {/* SurFox Advantage */}
+            {/* SurFox AI Advantage */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -617,7 +617,7 @@ export default function ROIClient() {
             >
               <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
                 <Check className="w-5 h-5 text-blue-400" />
-                The SurFox Advantage
+                The SurFox AI Advantage
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3 text-white/70">
@@ -664,7 +664,7 @@ export default function ROIClient() {
             </div>
             <div className="bg-card-bg/60 rounded-xl p-4 text-center">
               <p className="text-green-800 font-medium">From leads you already owned and paid for.</p>
-              <p className="text-green-700 text-lg font-semibold mt-2">This is why SurFox pays for itself in month one.</p>
+              <p className="text-green-700 text-lg font-semibold mt-2">This is why SurFox AI pays for itself in month one.</p>
             </div>
           </motion.div>
         </div>
@@ -757,7 +757,7 @@ export default function ROIClient() {
             </h2>
 
             <p className="text-lg sm:text-xl text-white/60 mb-10 leading-relaxed max-w-2xl mx-auto">
-              See SurFox in action. Most teams are fully operational within 24 hours.
+              See SurFox AI in action. Most teams are fully operational within 24 hours.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">

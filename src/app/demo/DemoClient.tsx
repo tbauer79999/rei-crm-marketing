@@ -137,7 +137,7 @@ function TimelineSection() {
             animate={inView ? { scaleY: 1 } : {}}
             transition={{ duration: 1.2, ease: 'easeOut', delay: 0.3 }}
             style={{ transformOrigin: 'top' }}
-            className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 -translate-x-1/2"
+            className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-white/[0.08] -translate-x-1/2"
           />
 
           {/* Vertical Line - Mobile */}
@@ -146,7 +146,7 @@ function TimelineSection() {
             animate={inView ? { scaleY: 1 } : {}}
             transition={{ duration: 1.2, ease: 'easeOut', delay: 0.3 }}
             style={{ transformOrigin: 'top' }}
-            className="md:hidden absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300"
+            className="md:hidden absolute left-8 top-0 bottom-0 w-0.5 bg-white/[0.08]"
           />
 
           {/* Timeline Items */}
@@ -263,23 +263,23 @@ function TimelineItem({ day, text, icon: Icon, side, index, inView, value, suffi
 function ScreenshotsSection() {
   const screenshots = [
     {
-      src: '/AI-controlroom.png',
+      src: '/images/control-room.png',
       alt: 'SurFox AI Control Room showing system health, active conversations, and real-time performance metrics',
       caption: 'What you see when you check in'
     },
     {
-      src: '/learning-dashboard-1.png',
+      src: '/images/learning-dashboard.png',
       alt: 'SurFox AI Learning Dashboard displaying behavioral insights and patterns discovered from lead conversations',
       caption: 'What SurFox AI learned from your leads'
     },
     {
-      src: '/learning-dashboard-2.png',
+      src: '/images/learning-dashboard2.png',
       alt: 'SurFox AI Learning Dashboard showing market-specific adaptations and messaging optimizations',
       caption: 'How SurFox AI adapts to your market'
     },
     {
-      src: '/hot-lead-detail.png',
-      alt: 'SurFox hot lead detail view with conversation history, qualification score, and recommended next steps',
+      src: '/images/hot-lead-detail.png',
+      alt: 'SurFox AI hot lead detail view with conversation history, qualification score, and recommended next steps',
       caption: "What you get when someone's ready to buy"
     }
   ];

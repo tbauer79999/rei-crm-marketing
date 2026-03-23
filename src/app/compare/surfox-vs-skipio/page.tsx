@@ -25,7 +25,7 @@ export default function Page() {
                 name: 'Is Skipio good for lead qualification?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Skipio is a solid SMS platform for manual texting and drip campaigns. However, it requires your team to write and send messages manually or set up static sequences. SurFox uses AI to handle two-way conversations automatically, qualifying leads without human involvement until they are ready to talk.',
+                  text: 'Skipio is a solid SMS platform for manual texting and drip campaigns. However, it requires your team to write and send messages manually or set up static sequences. SurFox AI uses AI to handle two-way conversations automatically, qualifying leads without human involvement until they are ready to talk.',
                 },
               },
               {
@@ -38,10 +38,10 @@ export default function Page() {
               },
               {
                 '@type': 'Question',
-                name: 'What is the difference between Skipio and SurFox?',
+                name: 'What is the difference between Skipio and SurFox AI?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Skipio is an SMS sending platform. SurFox is an AI-powered SMS qualification platform. Skipio helps you send texts faster. SurFox has conversations for you and tells you who is ready to buy.',
+                  text: 'Skipio is an SMS sending platform. SurFox AI is an AI-powered SMS qualification platform. Skipio helps you send texts faster. SurFox AI has conversations for you and tells you who is ready to buy.',
                 },
               },
             ],

@@ -15,7 +15,7 @@ export default function Page() {
   "name": "SurFox AI"
 },
 "url": "https://www.getsurfox.com/pricing",
-"image": "https://www.getsurfox.com/logo.png",
+"image": "https://www.getsurfox.com/newSurFoxLogo1.png",
 "offers": [
       {
         "@type": "Offer",

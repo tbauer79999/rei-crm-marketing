@@ -49,7 +49,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           Franchise & White Label Opportunities
         </h1>
         <p className="text-white/30 text-center mb-8">
-          Interested in partnering with SurFox at the franchise or white label level? 
+          Interested in partnering with SurFox AI at the franchise or white label level? 
           Fill out the form below and our sales team will be in touch.
         </p>
 
