@@ -12,10 +12,24 @@
       "Bash(find d:/REI-CRM/Surfox-website/rei-crm-marketing/src -type f \\\\\\(-name *.tsx -o -name *.ts -o -name *.jsx -o -name *.js \\\\\\))",
       "Read(//d/REI-CRM/Surfox-website/**)",
       "Read(//d/REI-CRM/**)",
-      "Bash(find d:/REI-CRM/Surfox-website/rei-crm-marketing -maxdepth 2 -name *pricing* -type f)"
+      "Bash(find d:/REI-CRM/Surfox-website/rei-crm-marketing -maxdepth 2 -name *pricing* -type f)",
+      "Bash(grep -E \"\\\\.\\(tsx|ts\\)$\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme/src/app/compare/convert.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme/src/app/compare/convert2.ps1\")",
+      "Bash(xargs grep:*)",
+      "Bash(find d:/REI-CRM/Surfox-website/rei-crm-marketing -type f \\\\\\(-name *vs* -o -name *compare* -o -name *comparison* \\\\\\))",
+      "Bash(find \"d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme/src\" -type f \\\\\\( -name \"*.tsx\" -o -name \"*.jsx\" -o -name \"*.ts\" -o -name \"*.css\" \\\\\\) -exec sed -i 's/—/-/g' {} +)",
+      "Bash(find d:/REI-CRM/Surfox-website/rei-crm-marketing/src -name *compare* -o -name *competitor*)",
+      "Bash(find \"d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme/src\" -type f \\\\\\( -name \"*.tsx\" -o -name \"*.jsx\" \\\\\\) -exec sed -i -e 's|/AI-controlroom\\\\.png|/images/control-room.png|g' -e 's|/AiLearning1\\\\.png|/images/learning-dashboard.png|g' -e 's|/AiLearning2\\\\.png|/images/learning-dashboard2.png|g' -e 's|/learning-dashboard-1\\\\.png|/images/learning-dashboard.png|g' -e 's|/learning-dashboard-2\\\\.png|/images/learning-dashboard2.png|g' -e 's|src=\"\"/hot-lead-detail\\\\.png\"\"|src=\"\"/images/hot-lead-detail.png\"\"|g' {} +)",
+      "Read(//tmp/**)",
+      "Bash(grep -r SurFox d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme/src --include=*.tsx --include=*.jsx -n)",
+      "Read(//d/REI-CRM/Surfox-website/rei-crm-marketing/**)",
+      "Bash(grep -r SurFox d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme/src --include=*.tsx --include=*.jsx)",
+      "Bash(xargs perl:*)"
     ],
     "additionalDirectories": [
-      "D:\\REI-CRM\\lead-app\\my-tailwind-app\\supabase\\functions\\generate-web-chat-reply"
+      "D:\\REI-CRM\\lead-app\\my-tailwind-app\\supabase\\functions\\generate-web-chat-reply",
+      "d:\\REI-CRM\\Surfox-website\\rei-crm-marketing\\surfox-dark-theme\\src\\app\\blog\\[slug]"
     ]
   }
 }
