@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Sora, DM_Sans } from "next/font/google";
 import Script from "next/script";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
@@ -7,35 +7,37 @@ import "./globals.css";
 import { Suspense } from "react";
 import GtmPageViewPusher from "./GtmPageViewPusher";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.getsurfox.com"),
   title: {
-    template: '%s | SurFox',
+    template: '%s | SurFox AI',
     default: 'SurFox AI | AI SDR Platform for SMS Lead Qualification',
   },
-  description: 'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
+  description: 'Replace expensive SDRs with AI. SurFox AI qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
   keywords: ['AI SDR', 'AI SDR platform', 'SMS lead qualification', 'lead qualification', 'automated lead qualification', 'AI sales development', 'lead scoring', 'outbound sales AI'],
   authors: [{ name: 'SurFox Team' }],
-  creator: 'SurFox',
-  publisher: 'SurFox',
+  creator: 'SurFox AI',
+  publisher: 'SurFox AI',
   openGraph: {
-    siteName: "SurFox",
+    siteName: "SurFox AI",
     type: "website",
     url: "https://www.getsurfox.com",
-    title: 'SurFox | AI SDR Platform for SMS Lead Qualification',
-    description: 'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
+    title: 'SurFox AI | AI SDR Platform for SMS Lead Qualification',
+    description: 'Replace expensive SDRs with AI. SurFox AI qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
     locale: 'en_US',
   },
   twitter: {
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
     site: "@getSurFox",
     creator: "@getSurFox",
     title: 'SurFox AI | AI SDR Platform for SMS Lead Qualification',
-    description: 'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
+    description: 'Replace expensive SDRs with AI. SurFox AI qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
   },
   robots: {
     index: true,
@@ -68,7 +70,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${sora.variable} ${dmSans.variable} antialiased`} style={{ fontFamily: 'var(--font-dm-sans)' }}>
         {/* Google Tag Manager - lazyOnload to defer until idle */}
         <Script
           id="gtm-script"
@@ -94,7 +96,7 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
-        {/* SurFox Chat Widget */}
+        {/* SurFox AI Chat Widget */}
         <Script
           id="surfox-chat-widget"
           src="https://surfox.ai/chat-widget.js"

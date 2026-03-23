@@ -30,7 +30,7 @@ export default function Page() {
               },
               {
                 '@type': 'Question',
-                name: 'How does Launch Control compare to SurFox for lead qualification?',
+                name: 'How does Launch Control compare to SurFox AI for lead qualification?',
                 acceptedAnswer: {
                   '@type': 'Answer',
                   text: 'Launch Control sends your initial outreach and captures responses. Your team then manages every conversation manually. SurFox AI handles the entire qualification conversation and only escalates leads that are ready to talk.',
@@ -38,10 +38,10 @@ export default function Page() {
               },
               {
                 '@type': 'Question',
-                name: 'Can I use Launch Control and SurFox together?',
+                name: 'Can I use Launch Control and SurFox AI together?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'You could use Launch Control for compliance-focused initial blasts in real estate, then import responding leads to SurFox for AI-powered qualification conversations. However, most teams find SurFox handles both outreach and qualification in one platform.',
+                  text: 'You could use Launch Control for compliance-focused initial blasts in real estate, then import responding leads to SurFox AI for AI-powered qualification conversations. However, most teams find SurFox AI handles both outreach and qualification in one platform.',
                 },
               },
             ],

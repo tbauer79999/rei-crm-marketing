@@ -44,12 +44,12 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 flex items-center justify-center px-6 py-12">
-      <div className="max-w-2xl w-full bg-black/40 rounded-2xl border border-purple-500/30 p-8 backdrop-blur-xl shadow-2xl">
+      <div className="max-w-2xl w-full bg-black/40 rounded-2xl border border-purple-500/30 p-8 backdrop-blur-xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10">
         <h1 className="text-4xl font-bold text-center bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent mb-6">
           Franchise & White Label Opportunities
         </h1>
-        <p className="text-gray-300 text-center mb-8">
-          Interested in partnering with SurFox at the franchise or white label level? 
+        <p className="text-white/30 text-center mb-8">
+          Interested in partnering with SurFox AI at the franchise or white label level? 
           Fill out the form below and our sales team will be in touch.
         </p>
 
@@ -62,7 +62,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              className="w-full px-4 py-3 rounded-lg bg-card-bg border border-white/[0.08]/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               placeholder="Your full name"
             />
           </div>
@@ -75,7 +75,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              className="w-full px-4 py-3 rounded-lg bg-card-bg border border-white/[0.08]/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               placeholder="your@email.com"
             />
           </div>
@@ -87,7 +87,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              className="w-full px-4 py-3 rounded-lg bg-card-bg border border-white/[0.08]/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               placeholder="Company name"
             />
           </div>
@@ -99,7 +99,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               value={formData.message}
               onChange={handleChange}
               rows={4}
-              className="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              className="w-full px-4 py-3 rounded-lg bg-card-bg border border-white/[0.08]/50 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               placeholder="Tell us a little about your interest..."
             />
           </div>
@@ -107,7 +107,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 <button
   type="submit"
   disabled={submitting}
-  className="w-full py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold rounded-lg hover:from-yellow-400 hover:to-orange-400 transition-all shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
+  className="w-full py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold rounded-lg hover:from-yellow-400 hover:to-orange-400 transition-all shadow-sm shadow-blue-500/5 shadow-blue-500/5 disabled:opacity-60 disabled:cursor-not-allowed"
 >
   {submitting ? 'Sending…' : 'Submit Inquiry'}
 </button>

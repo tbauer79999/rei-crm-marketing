@@ -8,48 +8,13 @@ export default function AIPrinciples() {
   const containerRef = useRef(null);
 
   return (
-    <div ref={containerRef} className="bg-white text-gray-900">
-      <style jsx>{`
-        .text-navy {
-          color: #1e293b;
-        }
-
-        .bg-navy {
-          background-color: #1e293b;
-        }
-
-        .text-orange {
-          color: #c2410c;
-        }
-
-        .bg-orange {
-          background-color: #c2410c;
-        }
-
-        .hover-lift {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .hover-lift:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        }
-
-        @keyframes subtle-pulse {
-          0%, 100% { opacity: 0.2; }
-          50% { opacity: 0.4; }
-        }
-
-        .animate-ai {
-          animation: subtle-pulse 4s ease-in-out infinite;
-        }
-      `}</style>
+    <div ref={containerRef} className="bg-background text-white">
 
       {/* Hero Section */}
       <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 flex justify-center relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-orange/5 rounded-full blur-3xl animate-ai" />
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange/5 rounded-full blur-3xl animate-ai" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-20 left-10 w-64 h-64 gradient-bg/5 rounded-full blur-3xl animate-ai" />
+          <div className="absolute bottom-20 right-10 w-80 h-80 gradient-bg/5 rounded-full blur-3xl animate-ai" style={{ animationDelay: '2s' }} />
         </div>
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
@@ -58,16 +23,16 @@ export default function AIPrinciples() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               Responsible AI,<br className="hidden sm:block" />
               <span className="sm:inline"> </span>Built with Purpose
             </h1>
 
-            <p className="text-base sm:text-lg font-semibold text-orange mb-6 sm:mb-8">
+            <p className="text-base sm:text-lg font-semibold text-blue-400 mb-6 sm:mb-8">
               Our Commitment to Ethical Intelligence
             </p>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
               SurFox Infinity is powerful technology. These principles guide how we build it, deploy it, and use it to serve our customers.
             </p>
           </motion.div>
@@ -75,7 +40,7 @@ export default function AIPrinciples() {
       </section>
 
       {/* Core Principles */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -84,10 +49,10 @@ export default function AIPrinciples() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Our Core AI Principles
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               The non-negotiable values that govern every decision we make
             </p>
           </motion.div>
@@ -143,21 +108,21 @@ export default function AIPrinciples() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-white rounded-2xl border-2 border-gray-200 p-8 sm:p-10 hover:border-orange/30 hover:shadow-xl transition-all duration-300"
+                className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 sm:p-10 hover:border-blue-500/30 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
-                    <principle.icon className="w-7 h-7 text-orange" />
+                  <div className="w-14 h-14 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                    <principle.icon className="w-7 h-7 text-blue-400" />
                   </div>
                   <div className="text-5xl font-bold text-gray-100">{principle.number}</div>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-semibold text-navy mb-3">{principle.title}</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">{principle.desc}</p>
+                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3">{principle.title}</h3>
+                <p className="text-white/70 leading-relaxed mb-4">{principle.desc}</p>
 
-                <div className="bg-orange/5 border-l-4 border-orange rounded-lg p-4">
-                  <p className="text-sm font-medium text-gray-600">
-                    <span className="text-orange font-semibold">Our Commitment:</span> {principle.commitment}
+                <div className="bg-blue-500/5 border-l-4 border-blue-500/50 rounded-lg p-4">
+                  <p className="text-sm font-medium text-white/60">
+                    <span className="text-blue-400 font-semibold">Our Commitment:</span> {principle.commitment}
                   </p>
                 </div>
               </motion.div>
@@ -167,7 +132,7 @@ export default function AIPrinciples() {
       </section>
 
       {/* What We Do Not Do */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -175,10 +140,10 @@ export default function AIPrinciples() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               What We Do Not Do
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               Clear boundaries on how SurFox AI should never be used
             </p>
           </motion.div>
@@ -216,15 +181,15 @@ export default function AIPrinciples() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white p-6 rounded-xl border border-red-200 hover:border-red-300 hover:shadow-md transition-all duration-300"
+                className="bg-card-bg p-6 rounded-xl border border-red-500/20 hover:border-red-500/40 hover:shadow-sm shadow-blue-500/5 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <AlertCircle className="w-4 h-4 text-red-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-navy mb-2">{item.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                    <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                    <p className="text-white/60 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </motion.div>
@@ -234,7 +199,7 @@ export default function AIPrinciples() {
       </section>
 
       {/* How We Build Responsibly */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -242,10 +207,10 @@ export default function AIPrinciples() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               How We Build Responsibly
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               Principles guide strategy, practices ensure execution
             </p>
           </motion.div>
@@ -277,20 +242,20 @@ export default function AIPrinciples() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 hover:border-orange/30 hover:shadow-lg transition-all duration-300"
+                className="bg-card-bg p-6 sm:p-8 rounded-2xl border border-white/[0.08] hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 transition-all duration-300"
               >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-orange/10 flex items-center justify-center mb-5">
-                  <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-orange" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
+                  <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-blue-400" />
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-semibold text-navy mb-3">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-4">{item.desc}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">{item.title}</h3>
+                <p className="text-white/60 leading-relaxed mb-4">{item.desc}</p>
 
                 <div className="space-y-2">
                   {item.practices.map((practice, idx) => (
                     <div key={idx} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                      <span className="text-sm text-gray-600">{practice}</span>
+                      <span className="text-sm text-white/60">{practice}</span>
                     </div>
                   ))}
                 </div>
@@ -301,7 +266,7 @@ export default function AIPrinciples() {
       </section>
 
       {/* Customer Rights */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -309,71 +274,71 @@ export default function AIPrinciples() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Your Rights as a Customer
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               What you can expect from us
             </p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl border-2 border-gray-200 p-8 sm:p-10 md:p-12">
+          <div className="max-w-4xl mx-auto bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 sm:p-10 md:p-12">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-navy mb-2">Right to Explanation</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-lg font-semibold text-white mb-2">Right to Explanation</h3>
+                  <p className="text-white/60 leading-relaxed">
                     You can request an explanation for any prediction, score, or recommendation made by SurFox AI. We will explain the factors that influenced the output.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-navy mb-2">Right to Data Portability</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-lg font-semibold text-white mb-2">Right to Data Portability</h3>
+                  <p className="text-white/60 leading-relaxed">
                     Your data is yours to take. Export your data at any time in standard formats. No lock-in, no games.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-navy mb-2">Right to Deletion</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-lg font-semibold text-white mb-2">Right to Deletion</h3>
+                  <p className="text-white/60 leading-relaxed">
                     Request permanent deletion of your data from SurFox AI systems. We comply within 30 days and provide confirmation.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-navy mb-2">Right to Human Review</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-lg font-semibold text-white mb-2">Right to Human Review</h3>
+                  <p className="text-white/60 leading-relaxed">
                     Challenge automated decisions that significantly impact your business. Request human review of any AI-generated output.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-navy mb-2">Right to Opt-Out</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-lg font-semibold text-white mb-2">Right to Opt-Out</h3>
+                  <p className="text-white/60 leading-relaxed">
                     Disable specific AI features if they do not align with your values. Use SurFox AI in ways that work for your organization.
                   </p>
                 </div>
@@ -384,7 +349,7 @@ export default function AIPrinciples() {
       </section>
 
       {/* Accountability */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -392,10 +357,10 @@ export default function AIPrinciples() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Accountability & Oversight
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               How we ensure we live up to these principles
             </p>
           </motion.div>
@@ -405,46 +370,46 @@ export default function AIPrinciples() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl border border-gray-200 p-8 sm:p-10 md:p-12"
+              className="bg-card-bg rounded-2xl border border-white/[0.08] p-8 sm:p-10 md:p-12"
             >
               <div className="space-y-6">
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-white/70 leading-relaxed">
                   These principles are not marketing copy - they are operational commitments. We hold ourselves accountable through:
                 </p>
 
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-orange mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-700 leading-relaxed">
-                      <strong className="text-navy">Regular Internal Audits:</strong> Quarterly reviews of AI system outputs to identify bias, errors, or unintended consequences.
+                    <div className="w-2 h-2 rounded-full gradient-bg mt-2 flex-shrink-0"></div>
+                    <p className="text-white/70 leading-relaxed">
+                      <strong className="text-white">Regular Internal Audits:</strong> Quarterly reviews of AI system outputs to identify bias, errors, or unintended consequences.
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-orange mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-700 leading-relaxed">
-                      <strong className="text-navy">Customer Feedback Loops:</strong> Direct channels for reporting concerns about AI behavior, with mandatory investigation and response.
+                    <div className="w-2 h-2 rounded-full gradient-bg mt-2 flex-shrink-0"></div>
+                    <p className="text-white/70 leading-relaxed">
+                      <strong className="text-white">Customer Feedback Loops:</strong> Direct channels for reporting concerns about AI behavior, with mandatory investigation and response.
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-orange mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-700 leading-relaxed">
-                      <strong className="text-navy">Third-Party Security Audits:</strong> Pursuing SOC 2 Type II and ISO 27001 certification for independent verification of data isolation and privacy controls.
+                    <div className="w-2 h-2 rounded-full gradient-bg mt-2 flex-shrink-0"></div>
+                    <p className="text-white/70 leading-relaxed">
+                      <strong className="text-white">Third-Party Security Audits:</strong> Pursuing SOC 2 Type II and ISO 27001 certification for independent verification of data isolation and privacy controls.
                     </p>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-orange mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-700 leading-relaxed">
-                      <strong className="text-navy">Transparent Updates:</strong> When we update these principles or discover new ethical considerations, we communicate changes to customers.
+                    <div className="w-2 h-2 rounded-full gradient-bg mt-2 flex-shrink-0"></div>
+                    <p className="text-white/70 leading-relaxed">
+                      <strong className="text-white">Transparent Updates:</strong> When we update these principles or discover new ethical considerations, we communicate changes to customers.
                     </p>
                   </li>
                 </ul>
 
-                <div className="bg-orange/5 border-l-4 border-orange rounded-lg p-6 mt-8">
-                  <p className="text-lg font-semibold text-navy mb-2">
+                <div className="bg-blue-500/5 border-l-4 border-blue-500/50 rounded-lg p-6 mt-8">
+                  <p className="text-lg font-semibold text-white mb-2">
                     Have concerns about SurFox AI?
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
-                    We want to hear from you. Contact us at <a href="mailto:tom@getsurfox.com" className="text-orange font-semibold hover:underline">tom@getsurfox.com</a>
+                  <p className="text-white/70 leading-relaxed">
+                    We want to hear from you. Contact us at <a href="mailto:tom@getsurfox.com" className="text-blue-400 font-semibold hover:underline">tom@getsurfox.com</a>
                   </p>
                 </div>
               </div>
@@ -454,22 +419,22 @@ export default function AIPrinciples() {
       </section>
 
       {/* Closing Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 px-4 leading-tight">
               Principles in Practice
             </h2>
 
-            <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/60 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
               These are not aspirational statements - they are how we operate every day. Building powerful AI comes with responsibility, and we take that seriously.
             </p>
 
-            <p className="text-base sm:text-lg font-semibold text-orange px-4">
+            <p className="text-base sm:text-lg font-semibold text-blue-400 px-4">
               Intelligence with integrity. That is the SurFox AI way.
             </p>
           </motion.div>

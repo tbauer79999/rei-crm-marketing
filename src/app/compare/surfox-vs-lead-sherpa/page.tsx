@@ -38,10 +38,10 @@ export default function Page() {
               },
               {
                 '@type': 'Question',
-                name: 'What is the difference between Lead Sherpa and SurFox?',
+                name: 'What is the difference between Lead Sherpa and SurFox AI?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Lead Sherpa is a skip tracing and SMS blasting tool for real estate. SurFox is an AI-powered conversation platform that works across industries. Lead Sherpa sends messages. SurFox has conversations.',
+                  text: 'Lead Sherpa is a skip tracing and SMS blasting tool for real estate. SurFox AI is an AI-powered conversation platform that works across industries. Lead Sherpa sends messages. SurFox AI has conversations.',
                 },
               },
             ],

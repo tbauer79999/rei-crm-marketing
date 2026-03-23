@@ -96,13 +96,13 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
     : null;
 
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-background text-white">
       {/* Back to Blog Link */}
-      <section className="py-6 px-4 sm:px-6 md:px-8 bg-gray-50 border-b border-gray-200">
+      <section className="py-6 px-4 sm:px-6 md:px-8 bg-background border-b border-white/[0.08]">
         <div className="max-w-4xl mx-auto">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-orange transition-colors font-medium"
+            className="inline-flex items-center gap-2 text-white/60 hover:text-blue-400 transition-colors font-medium"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Insights
@@ -111,7 +111,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
       </section>
 
       {/* Article Header */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -120,29 +120,29 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
           >
             {/* Category Badge */}
             <div className="mb-6">
-              <span className="inline-block px-4 py-2 rounded-full bg-orange/10 border border-orange/20 text-sm font-semibold text-orange">
+              <span className="inline-block px-4 py-2 rounded-full glass-card border border-blue-500/20 text-sm font-semibold text-blue-400">
                 {blogPost.category}
               </span>
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-navy mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
               {blogPost.title}
             </h1>
 
             {/* Meta Info */}
-            <div className="flex flex-wrap items-center gap-6 text-gray-600 mb-8">
+            <div className="flex flex-wrap items-center gap-6 text-white/60 mb-8">
               <div className="flex items-center gap-2">
                 <User className="w-5 h-5" />
                 {blogPost.authorUrl ? (
-                  <Link href={blogPost.authorUrl} className="font-medium hover:text-orange transition-colors">
+                  <Link href={blogPost.authorUrl} className="font-medium hover:text-blue-400 transition-colors">
                     {blogPost.author}
                   </Link>
                 ) : (
                   <span className="font-medium">{blogPost.author}</span>
                 )}
                 {blogPost.authorTitle && (
-                  <span className="text-gray-400 text-sm">· {blogPost.authorTitle}</span>
+                  <span className="text-white/40 text-sm">· {blogPost.authorTitle}</span>
                 )}
               </div>
               <div className="flex items-center gap-2">
@@ -165,31 +165,31 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
             <div className="relative">
               <button
                 onClick={() => setShowShareMenu(!showShareMenu)}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-gray-300 text-gray-700 font-medium hover:border-orange hover:text-orange transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-white/[0.1] text-white/70 font-medium hover:border-blue-500/50 hover:text-blue-400 transition-all"
               >
                 <Share2 className="w-4 h-4" />
                 Share
               </button>
 
               {showShareMenu && (
-                <div className="absolute top-full left-0 mt-2 bg-white rounded-lg border-2 border-gray-200 shadow-xl p-2 z-10 min-w-[160px]">
+                <div className="absolute top-full left-0 mt-2 bg-card-bg rounded-lg border-2 border-white/[0.08] shadow-xl p-2 z-10 min-w-[160px]">
                   <button
                     onClick={() => handleShare('linkedin')}
-                    className="w-full flex items-center gap-3 px-4 py-2 rounded-md hover:bg-gray-50 text-gray-700 transition-colors"
+                    className="w-full flex items-center gap-3 px-4 py-2 rounded-md hover:bg-background text-white/70 transition-colors"
                   >
                     <Linkedin className="w-4 h-4" />
                     LinkedIn
                   </button>
                   <button
                     onClick={() => handleShare('twitter')}
-                    className="w-full flex items-center gap-3 px-4 py-2 rounded-md hover:bg-gray-50 text-gray-700 transition-colors"
+                    className="w-full flex items-center gap-3 px-4 py-2 rounded-md hover:bg-background text-white/70 transition-colors"
                   >
                     <Twitter className="w-4 h-4" />
                     Twitter
                   </button>
                   <button
                     onClick={() => handleShare('email')}
-                    className="w-full flex items-center gap-3 px-4 py-2 rounded-md hover:bg-gray-50 text-gray-700 transition-colors"
+                    className="w-full flex items-center gap-3 px-4 py-2 rounded-md hover:bg-background text-white/70 transition-colors"
                   >
                     <Mail className="w-4 h-4" />
                     Email
@@ -215,11 +215,11 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 case 'tldr':
                   return (
                     <div key={index} className="not-prose my-8 p-6 sm:p-8 rounded-2xl bg-[#1e293b]">
-                      <p className="text-xs font-bold uppercase tracking-widest text-orange mb-4 m-0">Key Takeaways</p>
+                      <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-4 m-0">Key Takeaways</p>
                       <ul className="space-y-3 m-0 p-0 list-none">
                         {block.content.split('\n').map((bullet, i) => (
                           <li key={i} className="flex items-start gap-3 text-white text-base leading-relaxed">
-                            <span className="text-orange font-bold mt-0.5 shrink-0">→</span>
+                            <span className="text-blue-400 font-bold mt-0.5 shrink-0">→</span>
                             <span>{renderContent(bullet)}</span>
                           </li>
                         ))}
@@ -228,42 +228,42 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   );
                 case 'heading':
                   return (
-                    <h2 key={index} className="text-2xl sm:text-3xl font-semibold text-navy mt-12 mb-4 first:mt-0">
+                    <h2 key={index} className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4 first:mt-0">
                       {block.content}
                     </h2>
                   );
                 case 'subheading':
                   return (
-                    <h3 key={index} className="text-xl sm:text-2xl font-semibold text-navy mt-8 mb-3">
+                    <h3 key={index} className="text-xl sm:text-2xl font-semibold text-white mt-8 mb-3">
                       {block.content}
                     </h3>
                   );
                 case 'paragraph':
                   return (
-                    <p key={index} className="text-gray-700 leading-relaxed mb-6 text-base sm:text-lg">
+                    <p key={index} className="text-white/70 leading-relaxed mb-6 text-base sm:text-lg">
                       {renderContent(block.content)}
                     </p>
                   );
                 case 'quote': {
                   const [quoteText, attribution] = block.content.split('\n');
                   return (
-                    <blockquote key={index} className="not-prose my-8 border-l-4 border-orange pl-6 py-2">
-                      <p className="text-gray-800 text-lg sm:text-xl italic leading-relaxed mb-3">&ldquo;{quoteText}&rdquo;</p>
-                      <cite className="text-sm font-semibold text-gray-500 not-italic">&mdash; {attribution}</cite>
+                    <blockquote key={index} className="not-prose my-8 border-l-4 border-blue-500 pl-6 py-2">
+                      <p className="text-white text-lg sm:text-xl italic leading-relaxed mb-3">&ldquo;{quoteText}&rdquo;</p>
+                      <cite className="text-sm font-semibold text-white/50 not-italic">&mdash; {attribution}</cite>
                     </blockquote>
                   );
                 }
                 case 'callout':
                   return (
-                    <div key={index} className="my-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-orange/5 to-purple-500/5 border-l-4 border-orange">
-                      <p className="text-gray-800 leading-relaxed font-medium text-base sm:text-lg m-0">
+                    <div key={index} className="my-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-blue-500/5 to-violet-500/5 border-l-4 border-blue-500">
+                      <p className="text-white leading-relaxed font-medium text-base sm:text-lg m-0">
                         {renderContent(block.content)}
                       </p>
                     </div>
                   );
                 case 'table':
                   return (
-                    <div key={index} className="not-prose my-8 overflow-x-auto rounded-xl border border-gray-200">
+                    <div key={index} className="not-prose my-8 overflow-x-auto rounded-xl border border-white/[0.08]">
                       <table className="w-full text-sm">
                         <thead>
                           <tr className="bg-[#1e293b]">
@@ -276,9 +276,9 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                         </thead>
                         <tbody>
                           {block.rows.map((row, ri) => (
-                            <tr key={ri} className={ri % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                            <tr key={ri} className={ri % 2 === 0 ? 'bg-card-bg' : 'bg-background'}>
                               {row.map((cell, ci) => (
-                                <td key={ci} className="px-4 py-3 text-gray-700 border-t border-gray-100">
+                                <td key={ci} className="px-4 py-3 text-white/70 border-t border-white/[0.06]">
                                   {renderContent(cell)}
                                 </td>
                               ))}
@@ -292,7 +292,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   return block.ordered ? (
                     <ol key={index} className="my-6 pl-6 space-y-2 list-decimal">
                       {block.items.map((item, ii) => (
-                        <li key={ii} className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                        <li key={ii} className="text-white/70 text-base sm:text-lg leading-relaxed">
                           {renderContent(item)}
                         </li>
                       ))}
@@ -300,7 +300,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   ) : (
                     <ul key={index} className="my-6 pl-6 space-y-2 list-disc">
                       {block.items.map((item, ii) => (
-                        <li key={ii} className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                        <li key={ii} className="text-white/70 text-base sm:text-lg leading-relaxed">
                           {renderContent(item)}
                         </li>
                       ))}
@@ -314,12 +314,12 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
 
           {/* Author Bio */}
           {(blogPost.authorTitle || blogPost.authorBio) && (
-            <div className="mt-16 pt-8 border-t border-gray-200">
+            <div className="mt-16 pt-8 border-t border-white/[0.08]">
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-2">
-                  <span className="font-semibold text-navy text-base">
+                  <span className="font-semibold text-white text-base">
                     {blogPost.authorUrl ? (
-                      <Link href={blogPost.authorUrl} className="hover:text-orange transition-colors">
+                      <Link href={blogPost.authorUrl} className="hover:text-blue-400 transition-colors">
                         {blogPost.author}
                       </Link>
                     ) : (
@@ -327,11 +327,11 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                     )}
                   </span>
                   {blogPost.authorTitle && (
-                    <span className="text-sm text-gray-500">, {blogPost.authorTitle}</span>
+                    <span className="text-sm text-white/50">, {blogPost.authorTitle}</span>
                   )}
                 </div>
                 {blogPost.authorBio && (
-                  <p className="text-gray-600 text-sm leading-relaxed max-w-2xl">{blogPost.authorBio}</p>
+                  <p className="text-white/60 text-sm leading-relaxed max-w-2xl">{blogPost.authorBio}</p>
                 )}
               </div>
             </div>
@@ -355,10 +355,10 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 },
                 publisher: {
                   '@type': 'Organization',
-                  name: 'SurFox',
+                  name: 'SurFox AI',
                   logo: {
                     '@type': 'ImageObject',
-                    url: 'https://www.getsurfox.com/logo.png',
+                    url: 'https://www.getsurfox.com/newSurFoxLogo1.png',
                   },
                 },
                 datePublished: blogPost.date,
@@ -418,21 +418,21 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
         </div>
       </section>
 
-      {/* About SurFox */}
-      <section className="py-10 px-4 sm:px-6 md:px-8 border-t border-gray-100">
+      {/* About SurFox AI */}
+      <section className="py-10 px-4 sm:px-6 md:px-8 border-t border-white/[0.06]">
         <div className="max-w-4xl mx-auto">
-          <p className="text-sm text-gray-500 leading-relaxed">
-            <strong className="text-gray-700">About SurFox AI</strong> - SurFox AI is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams with full conversation context.{' '}
-            <Link href="/demo" className="text-orange hover:underline">See how it works →</Link>
+          <p className="text-sm text-white/50 leading-relaxed">
+            <strong className="text-white/70">About SurFox AI</strong> - SurFox AI is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams with full conversation context.{' '}
+            <Link href="/demo" className="text-blue-400 hover:underline">See how it works →</Link>
           </p>
         </div>
       </section>
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-gray-50">
+        <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-navy mb-10 sm:mb-12 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-10 sm:mb-12 text-center">
               Related Insights
             </h2>
 
@@ -444,19 +444,19 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl border-2 border-gray-200 p-6 hover:border-orange/30 hover:shadow-lg transition-all group"
+                  className="bg-card-bg rounded-xl border-2 border-white/[0.08] p-6 hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 transition-all group"
                 >
                   <div className="mb-4">
-                    <span className="inline-block px-3 py-1 rounded-full bg-orange/10 text-xs font-semibold text-orange">
+                    <span className="inline-block px-3 py-1 rounded-full glass-card border border-blue-500/20 text-xs font-semibold text-blue-400">
                       {post.category}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-navy mb-4 group-hover:text-orange transition-colors">
+                  <h3 className="text-lg font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">
                     {post.title}
                   </h3>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-2 text-orange font-semibold hover:gap-3 transition-all text-sm"
+                    className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all text-sm"
                   >
                     Read More
                     <span>→</span>
@@ -468,23 +468,6 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
         </section>
       )}
 
-      <style jsx>{`
-        .text-navy {
-          color: #1e293b;
-        }
-
-        .bg-navy {
-          background-color: #1e293b;
-        }
-
-        .text-orange {
-          color: #c2410c;
-        }
-
-        .bg-orange {
-          background-color: #c2410c;
-        }
-      `}</style>
     </div>
   );
 }

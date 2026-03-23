@@ -89,7 +89,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/integrations',
   },
   'integrations-gohighlevel': {
-    title: 'GoHighLevel + SurFox AI Integration — AI Lead Qualification for GHL',
+    title: 'GoHighLevel + SurFox AI Integration - AI Lead Qualification for GHL',
     description: 'Connect SurFox AI to GoHighLevel in minutes via Zapier. Automatically qualify leads via SMS when pipeline stages change, and push hot leads back into GHL instantly.',
     keywords: ['GoHighLevel integration', 'GHL SurFox', 'GoHighLevel AI', 'GHL lead qualification', 'GoHighLevel Zapier', 'GHL SMS automation', 'wholesale CRM AI'],
     path: '/integrations/gohighlevel',
@@ -150,7 +150,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   'compare-spara': {
     title: 'SurFox vs Spara: Best Spara Alternative for Outbound Lead Qualification (2026)',
-    description: 'Looking for a Spara replacement for outbound lead lists? SurFox qualifies leads via SMS (98% open rate) — where Spara\'s inbound chat can\'t reach. Compare features, pricing & use cases.',
+    description: 'Looking for a Spara replacement for outbound lead lists? SurFox qualifies leads via SMS (98% open rate) - where Spara\'s inbound chat can\'t reach. Compare features, pricing & use cases.',
     keywords: [
       'SurFox vs Spara',
       'Spara alternative',
@@ -216,12 +216,6 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     description: 'Get help with SurFox AI. Contact our support team for technical assistance, account questions, or product guidance.',
     keywords: ['SurFox support', 'help center', 'customer support', 'technical help', 'contact support'],
     path: '/support',
-  },
-  'how-it-works': {
-    title: 'How SurFox Works - Psychology AI for Lead Qualification',
-    description: 'Learn how SurFox Psychology AI analyzes 50+ behavioral dimensions to adapt messages in real-time and turn cold leads into qualified conversations.',
-    keywords: ['how SurFox works', 'psychology AI', 'lead qualification process', 'AI messaging', 'behavioral analysis'],
-    path: '/how-it-works',
   },
   roi: {
     title: 'AI SDR ROI Calculator: Real Numbers & Benchmarks (2026)',
