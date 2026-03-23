@@ -116,13 +116,143 @@ export default function HomeClientSections() {
                     app.getsurfox.com
                   </div>
                 </div>
-                <div className="relative">
-                  <img
-                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663466327465/3tfFjbWvnRDzh5xKZoKSzd/surfox-sms-flow-diagram-LiTsygaxi7NaMYhzqGRVY4.webp"
-                    alt="SMS Conversation Flow - AI and lead exchange with score meter showing 42/50 and HOT LEAD badge"
-                    className="w-full h-auto"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20 pointer-events-none" />
+
+                {/* App UI */}
+                <div className="bg-[#080d1a] p-5 sm:p-6 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  {/* Left: Chat thread */}
+                  <div className="flex flex-col">
+                    {/* Contact header */}
+                    <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/[0.06]">
+                      <div className="w-9 h-9 rounded-full bg-blue-500/20 flex items-center justify-center text-sm font-semibold text-blue-300 flex-shrink-0">
+                        JM
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-white text-sm font-medium">John Martinez</div>
+                        <div className="text-white/40 text-xs">+1 (555) 012-3456</div>
+                      </div>
+                      <span className="ml-auto px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-medium border border-emerald-500/20 flex-shrink-0">
+                        Active
+                      </span>
+                    </div>
+
+                    {/* Messages */}
+                    <div className="space-y-2.5 flex-1">
+                      <div className="flex justify-end">
+                        <div className="max-w-[80%] bg-blue-600 text-white text-xs px-3 py-2 rounded-2xl rounded-tr-sm leading-relaxed">
+                          Hi John, interested in investment opportunities in your area?
+                        </div>
+                      </div>
+                      <div className="flex justify-start">
+                        <div className="max-w-[75%] bg-white/[0.07] text-white/80 text-xs px-3 py-2 rounded-2xl rounded-tl-sm leading-relaxed border border-white/[0.06]">
+                          Maybe, tell me more
+                        </div>
+                      </div>
+                      <div className="flex justify-end">
+                        <div className="max-w-[80%] bg-blue-600 text-white text-xs px-3 py-2 rounded-2xl rounded-tr-sm leading-relaxed">
+                          What&apos;s your typical deal size?
+                        </div>
+                      </div>
+                      <div className="flex justify-start">
+                        <div className="max-w-[75%] bg-white/[0.07] text-white/80 text-xs px-3 py-2 rounded-2xl rounded-tl-sm leading-relaxed border border-white/[0.06]">
+                          Usually 50k–100k
+                        </div>
+                      </div>
+                      <div className="flex justify-end">
+                        <div className="max-w-[80%] bg-blue-600 text-white text-xs px-3 py-2 rounded-2xl rounded-tr-sm leading-relaxed">
+                          Perfect. I have 3 deals matching that — want details?
+                        </div>
+                      </div>
+                      <div className="flex justify-start">
+                        <div className="max-w-[75%] bg-white/[0.07] text-white/80 text-xs px-3 py-2 rounded-2xl rounded-tl-sm leading-relaxed border border-white/[0.06]">
+                          Yes, send them over
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Typing indicator */}
+                    <div className="mt-3 pt-3 border-t border-white/[0.06] flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-blue-500/15 flex items-center justify-center flex-shrink-0">
+                        <div className="w-2 h-2 rounded-full bg-blue-400" />
+                      </div>
+                      <span className="text-white/30 text-xs">SurFox AI is typing</span>
+                      <div className="flex gap-0.5 ml-0.5">
+                        <div className="w-1 h-1 rounded-full bg-white/25 animate-bounce" style={{ animationDelay: '0ms' }} />
+                        <div className="w-1 h-1 rounded-full bg-white/25 animate-bounce" style={{ animationDelay: '150ms' }} />
+                        <div className="w-1 h-1 rounded-full bg-white/25 animate-bounce" style={{ animationDelay: '300ms' }} />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right: Score + signals */}
+                  <div className="flex flex-col gap-4">
+                    {/* Score card */}
+                    <div className="bg-white/[0.03] border border-white/[0.07] rounded-xl p-4">
+                      <div className="text-white/40 text-[10px] font-semibold uppercase tracking-widest mb-3">Lead Score</div>
+                      <div className="flex items-center gap-4">
+                        <div className="relative w-16 h-16 flex-shrink-0">
+                          <svg viewBox="0 0 64 64" className="w-full h-full -rotate-90">
+                            <circle cx="32" cy="32" r="26" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="6" />
+                            <circle
+                              cx="32" cy="32" r="26" fill="none"
+                              stroke="url(#scoreGrad)" strokeWidth="6"
+                              strokeDasharray="137.3 163.4"
+                              strokeLinecap="round"
+                            />
+                            <defs>
+                              <linearGradient id="scoreGrad" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stopColor="#3b82f6" />
+                                <stop offset="100%" stopColor="#10b981" />
+                              </linearGradient>
+                            </defs>
+                          </svg>
+                          <div className="absolute inset-0 flex flex-col items-center justify-center">
+                            <span className="text-white font-bold text-lg leading-none">42</span>
+                            <span className="text-white/30 text-[9px]">/50</span>
+                          </div>
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-1.5 mb-1">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0" />
+                            <span className="text-emerald-400 text-sm font-semibold">Hot Prospect</span>
+                          </div>
+                          <div className="text-white/35 text-xs">84th percentile</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Qualification signals */}
+                    <div className="bg-white/[0.03] border border-white/[0.07] rounded-xl p-4 flex-1">
+                      <div className="text-white/40 text-[10px] font-semibold uppercase tracking-widest mb-3">Qualification Signals</div>
+                      <div className="space-y-2.5">
+                        {[
+                          { label: 'Budget confirmed', value: '$50k–100k' },
+                          { label: 'Decision maker', value: 'Yes' },
+                          { label: 'Timeline', value: 'Q2 2025' },
+                          { label: 'Avg. response time', value: '< 2 min' },
+                        ].map((sig, i) => (
+                          <div key={i} className="flex items-center justify-between gap-2">
+                            <div className="flex items-center gap-2 min-w-0">
+                              <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0" />
+                              <span className="text-white/45 text-xs truncate">{sig.label}</span>
+                            </div>
+                            <span className="text-white/80 text-xs font-medium flex-shrink-0">{sig.value}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Handoff banner */}
+                    <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-3 flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center flex-shrink-0">
+                        <Phone className="w-4 h-4 text-emerald-400" />
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-emerald-400 text-xs font-semibold">Ready for Handoff</div>
+                        <div className="text-white/30 text-[10px]">Sales team notified</div>
+                      </div>
+                      <div className="ml-auto w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             </div>
