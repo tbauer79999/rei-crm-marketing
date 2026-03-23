@@ -1,7 +1,7 @@
 'use client'
 
 /* =============================================================================
-   NAVBAR — Obsidian Intelligence Design System
+   NAVBAR - Obsidian Intelligence Design System
    Glassmorphism navigation with dark theme and gradient accents
    ============================================================================= */
 
@@ -37,24 +37,26 @@ export default function Nav() {
   }, [])
 
   return (
-    <nav className={`fixed top-0 w-full z-40 transition-all duration-300 ${
-      isScrolled 
-        ? 'glass-card shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 border-b border-white/[0.08]' 
-        : 'bg-background/50 backdrop-blur-md border-b border-white/[0.06]'
-    }`}>
+    <nav
+      className={`fixed top-0 w-full z-40 transition-all duration-300 backdrop-blur-xl border-b ${
+        isScrolled
+          ? 'border-white/[0.08] shadow-sm shadow-blue-500/10'
+          : 'border-white/[0.06]'
+      }`}
+      style={{ backgroundColor: 'rgba(5, 8, 16, 0.95)' }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
-            <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center flex-shrink-0">
-              <Zap className="w-4 h-4 text-white" fill="white" />
-            </div>
-            <div className="flex items-center gap-1 flex-shrink-0">
-              <div className="text-sm font-bold tracking-tight whitespace-nowrap">
-                <span className="text-white">Sur</span><span className="gradient-text">Fox</span>
-              </div>
-              <span className="text-white/60 text-xs font-medium">AI</span>
-            </div>
+            <Image
+              src="/newSurFoxLogo1.png"
+              alt="SurFox AI"
+              width={120}
+              height={32}
+              className="h-8 w-auto object-contain"
+              priority
+            />
             {productName && (
               <span className="ml-3 text-xs font-medium px-2 py-1 rounded-full glass-card border border-blue-500/20 text-blue-300">
                 {productName}
@@ -73,7 +75,7 @@ export default function Nav() {
                 </span>
                 <ChevronDown className="w-4 h-4" />
               </div>
-              <div className="absolute left-0 mt-2 w-64 glass-card border border-white/[0.08] rounded-xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute left-0 mt-2 w-64 rounded-xl border border-white/[0.10] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl shadow-black/40" style={{ backgroundColor: '#0a0f1e' }}>
                 <Link href="/engage" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
                   <div className="font-semibold">SurFox Engage</div>
                   <div className="text-xs text-white/40 mt-1">AI for Sales Conversations</div>
@@ -90,7 +92,7 @@ export default function Nav() {
                 </span>
                 <ChevronDown className="w-4 h-4" />
               </div>
-              <div className="absolute left-0 mt-2 w-64 glass-card border border-white/[0.08] rounded-xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute left-0 mt-2 w-64 rounded-xl border border-white/[0.10] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl shadow-black/40" style={{ backgroundColor: '#0a0f1e' }}>
                 <Link href="/platform" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
                   Platform Overview
                 </Link>
@@ -112,7 +114,7 @@ export default function Nav() {
                 </span>
                 <ChevronDown className="w-4 h-4" />
               </div>
-              <div className="absolute left-0 mt-2 w-56 glass-card border border-white/[0.08] rounded-xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute left-0 mt-2 w-56 rounded-xl border border-white/[0.10] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl shadow-black/40" style={{ backgroundColor: '#0a0f1e' }}>
                 <Link href="/about" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
                   About SurFox AI
                 </Link>
@@ -131,7 +133,7 @@ export default function Nav() {
                 </span>
                 <ChevronDown className="w-4 h-4" />
               </div>
-              <div className="absolute left-0 mt-2 w-64 glass-card border border-white/[0.08] rounded-xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute left-0 mt-2 w-64 rounded-xl border border-white/[0.10] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl shadow-black/40" style={{ backgroundColor: '#0a0f1e' }}>
                 <Link href="/blog" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
                   Insights
                 </Link>
@@ -153,7 +155,7 @@ export default function Nav() {
                 </span>
                 <ChevronDown className="w-4 h-4" />
               </div>
-              <div className="absolute left-0 mt-2 w-56 glass-card border border-white/[0.08] rounded-xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="absolute left-0 mt-2 w-56 rounded-xl border border-white/[0.10] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl shadow-black/40" style={{ backgroundColor: '#0a0f1e' }}>
                 <Link href="/contact" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors">
                   Get in Touch
                 </Link>

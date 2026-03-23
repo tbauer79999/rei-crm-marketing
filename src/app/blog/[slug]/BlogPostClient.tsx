@@ -96,7 +96,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
     : null;
 
   return (
-    <div className="bg-card-bg text-white">
+    <div className="bg-background text-white">
       {/* Back to Blog Link */}
       <section className="py-6 px-4 sm:px-6 md:px-8 bg-background border-b border-white/[0.08]">
         <div className="max-w-4xl mx-auto">
@@ -120,7 +120,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
           >
             {/* Category Badge */}
             <div className="mb-6">
-              <span className="inline-block px-4 py-2 rounded-full glass-card border border-blue-500/20 border border-orange/20 text-sm font-semibold text-blue-400">
+              <span className="inline-block px-4 py-2 rounded-full glass-card border border-blue-500/20 text-sm font-semibold text-blue-400">
                 {blogPost.category}
               </span>
             </div>
@@ -165,7 +165,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
             <div className="relative">
               <button
                 onClick={() => setShowShareMenu(!showShareMenu)}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-white/[0.1] text-white/70 font-medium hover:border-orange hover:text-blue-400 transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-white/[0.1] text-white/70 font-medium hover:border-blue-500/50 hover:text-blue-400 transition-all"
               >
                 <Share2 className="w-4 h-4" />
                 Share
@@ -247,7 +247,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 case 'quote': {
                   const [quoteText, attribution] = block.content.split('\n');
                   return (
-                    <blockquote key={index} className="not-prose my-8 border-l-4 border-orange pl-6 py-2">
+                    <blockquote key={index} className="not-prose my-8 border-l-4 border-blue-500 pl-6 py-2">
                       <p className="text-white text-lg sm:text-xl italic leading-relaxed mb-3">&ldquo;{quoteText}&rdquo;</p>
                       <cite className="text-sm font-semibold text-white/50 not-italic">&mdash; {attribution}</cite>
                     </blockquote>
@@ -255,7 +255,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 }
                 case 'callout':
                   return (
-                    <div key={index} className="my-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-orange/5 to-purple-500/5 border-l-4 border-orange">
+                    <div key={index} className="my-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-blue-500/5 to-violet-500/5 border-l-4 border-blue-500">
                       <p className="text-white leading-relaxed font-medium text-base sm:text-lg m-0">
                         {renderContent(block.content)}
                       </p>
@@ -355,10 +355,10 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 },
                 publisher: {
                   '@type': 'Organization',
-                  name: 'SurFox',
+                  name: 'SurFox AI',
                   logo: {
                     '@type': 'ImageObject',
-                    url: 'https://www.getsurfox.com/logo.png',
+                    url: 'https://www.getsurfox.com/newSurFoxLogo1.png',
                   },
                 },
                 datePublished: blogPost.date,
@@ -418,7 +418,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
         </div>
       </section>
 
-      {/* About SurFox */}
+      {/* About SurFox AI */}
       <section className="py-10 px-4 sm:px-6 md:px-8 border-t border-white/[0.06]">
         <div className="max-w-4xl mx-auto">
           <p className="text-sm text-white/50 leading-relaxed">
@@ -444,7 +444,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-card-bg rounded-xl border-2 border-white/[0.08] p-6 hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 transition-all group"
+                  className="bg-card-bg rounded-xl border-2 border-white/[0.08] p-6 hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 transition-all group"
                 >
                   <div className="mb-4">
                     <span className="inline-block px-3 py-1 rounded-full glass-card border border-blue-500/20 text-xs font-semibold text-blue-400">
@@ -468,23 +468,6 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
         </section>
       )}
 
-      <style jsx>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-      `}</style>
     </div>
   );
 }

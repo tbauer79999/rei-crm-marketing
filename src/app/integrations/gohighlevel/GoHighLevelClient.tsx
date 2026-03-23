@@ -188,7 +188,7 @@ export default function GoHighLevelClient() {
               </div>
 
               <p className="text-white/60 text-sm leading-relaxed mb-6">
-                When SurFox AI detects buying intent, it instantly tags the contact in GHL as "SurFox Hot Lead" so your team knows exactly who to call. You never leave GHL.
+                When SurFox AI detects buying intent, it instantly tags the contact in GHL as "SurFox AI Hot Lead" so your team knows exactly who to call. You never leave GHL.
               </p>
 
               <a

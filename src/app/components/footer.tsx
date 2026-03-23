@@ -1,7 +1,7 @@
 'use client'
 
 /* =============================================================================
-   FOOTER — Obsidian Intelligence Design System
+   FOOTER - Obsidian Intelligence Design System
    Dark footer with glassmorphism, gradient accents, and social links
    ============================================================================= */
 
@@ -46,17 +46,14 @@ export default function Footer() {
 
           {/* Newsletter Section */}
           <div className="lg:col-span-1">
-            <div className="mb-6 flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center flex-shrink-0">
-                <Zap className="w-4 h-4 text-white" fill="white" />
-              </div>
-              <div>
-                <div className="text-sm font-bold tracking-tight">
-                  <span className="text-white">Sur</span>
-                  <span className="gradient-text">Fox</span>
-                  <span className="text-white/60 text-xs font-medium ml-1">AI</span>
-                </div>
-              </div>
+            <div className="mb-6">
+              <Image
+                src="/newSurFoxLogo1.png"
+                alt="SurFox AI"
+                width={120}
+                height={32}
+                className="h-8 w-auto object-contain"
+              />
             </div>
             <p className="text-sm text-white/50 mb-6 leading-relaxed">
               Join our newsletter to stay up to date on features and releases.

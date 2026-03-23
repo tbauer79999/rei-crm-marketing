@@ -42,7 +42,7 @@ export default function PrivacyPolicy() {
             className="mb-16"
           >
             <p className="text-lg text-white/60 leading-relaxed mb-6">
-              SurFox ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform and services.
+              SurFox AI ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform and services.
             </p>
             <p className="text-lg text-white/60 leading-relaxed">
               By using SurFox AI, you agree to the collection and use of information in accordance with this policy.
@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
               </h2>
             </div>
             <p className="text-base sm:text-lg text-white/70 leading-relaxed">
-              End users explicitly consent to receive SurFox platform notifications during account creation. Consent is collected when users create a SurFox account and agree to the Terms of Service and Privacy Policy, which authorize transactional SMS notifications related to account security and platform activity. Users may opt-out at any time by replying STOP. Our Privacy Policy is publicly available here: https://www.getsurfox.com/privacy
+              End users explicitly consent to receive SurFox AI platform notifications during account creation. Consent is collected when users create a SurFox AI account and agree to the Terms of Service and Privacy Policy, which authorize transactional SMS notifications related to account security and platform activity. Users may opt-out at any time by replying STOP. Our Privacy Policy is publicly available here: https://www.getsurfox.com/privacy
             </p>
           </motion.div>
 
@@ -442,7 +442,7 @@ export default function PrivacyPolicy() {
               </p>
               <div className="bg-background rounded-xl p-6 space-y-2">
                 <p><strong className="text-white">Email:</strong> tom@getsurfox.com</p>
-                <p><strong className="text-white">Address:</strong> SurFox, Inc.</p>
+                <p><strong className="text-white">Address:</strong> SurFox AI, Inc.</p>
                 <p><strong className="text-white">Website:</strong> https://www.getsurfox.com</p>
               </div>
             </div>

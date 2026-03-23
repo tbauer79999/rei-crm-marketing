@@ -124,7 +124,7 @@ function PartnerSignupContent() {
       <>
         <div className="min-h-screen bg-card-bg flex items-center justify-center">
           <div className="text-center">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-orange-600 border-r-transparent"></div>
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-500 border-r-transparent"></div>
             <p className="mt-4 text-white/60">Loading your invitation...</p>
           </div>
         </div>
@@ -136,14 +136,14 @@ function PartnerSignupContent() {
     return (
       <>
         <div className="min-h-screen bg-card-bg flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-card-bg rounded-2xl border-2 border-red-200 p-8 shadow-xl text-center">
+          <div className="max-w-md w-full bg-card-bg rounded-2xl border-2 border-red-500/20 p-8 shadow-xl text-center">
             <div className="text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-semibold text-white mb-4">Invalid Invite</h1>
             <p className="text-white/60 mb-6">
               {error || 'This invitation link is invalid or has expired.'}
             </p>
             <p className="text-sm text-white/50">
-              Please contact your SurFox representative for a new invitation link.
+              Please contact your SurFox AI representative for a new invitation link.
             </p>
           </div>
         </div>
@@ -176,7 +176,7 @@ function PartnerSignupContent() {
             <div className={`inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 border-2 ${
               isPartnerAdmin
                 ? 'bg-purple-100 text-purple-700 border-purple-300'
-                : 'gradient-bg-100 text-blue-400-700 border-orange-300'
+                : 'gradient-bg-100 text-blue-400-700 border-blue-500/40'
             }`}>
               {isPartnerAdmin ? '⭐ PARTNER INVITATION' : '🚀 CUSTOM PLAN INVITATION'}
             </div>
@@ -184,18 +184,18 @@ function PartnerSignupContent() {
               Welcome, {invite.partner_company}!
             </h1>
             <h2 className={`text-3xl font-bold mb-2 ${isPartnerAdmin ? 'text-purple-600' : 'text-blue-400-600'}`}>
-              {isPartnerAdmin ? 'SurFox Enterprise Partner' : 'SurFox Ai Custom Plan'}
+              {isPartnerAdmin ? 'SurFox AI Enterprise Partner' : 'SurFox AI Ai Custom Plan'}
             </h2>
             <p className="text-white/60">
               {isPartnerAdmin
-                ? "You've been invited to join SurFox as an enterprise partner"
-                : "You've been invited to join SurFox with a custom plan"}
+                ? "You've been invited to join SurFox AI as an enterprise partner"
+                : "You've been invited to join SurFox AI with a custom plan"}
             </p>
           </div>
 
           {/* Account Info */}
           <div className={`rounded-xl p-6 mb-6 border-2 ${
-            isPartnerAdmin ? 'bg-purple-50 border-purple-200' : 'gradient-bg-50 border-orange-200'
+            isPartnerAdmin ? 'bg-purple-50 border-purple-200' : 'gradient-bg-50 border-blue-500/20'
           }`}>
             <div className="grid md:grid-cols-2 gap-4 text-sm">
               <div>
@@ -367,7 +367,7 @@ function PartnerSignupContent() {
 
           {/* Next Steps */}
           <div className={`rounded-xl p-6 mb-8 border-2 ${
-            isPartnerAdmin ? 'bg-purple-50 border-purple-200' : 'gradient-bg-50 border-orange-200'
+            isPartnerAdmin ? 'bg-purple-50 border-purple-200' : 'gradient-bg-50 border-blue-500/20'
           }`}>
             <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>
             <div className="grid md:grid-cols-3 gap-4 text-sm text-white/70">
@@ -416,7 +416,7 @@ export default function PartnerSignup() {
     <Suspense fallback={
       <div className="min-h-screen bg-card-bg flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-orange-600 border-r-transparent"></div>
+          <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-500 border-r-transparent"></div>
           <p className="mt-4 text-white/60">Loading...</p>
         </div>
       </div>

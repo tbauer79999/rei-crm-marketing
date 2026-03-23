@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Check, X, Brain, Settings, Target, Clock, Zap, Shield, Award, BookOpen, MessageSquare } from 'lucide-react';
+import Image from 'next/image';
 
 export default function GoHighLevelClient() {
   const comparisonRows = [
@@ -53,37 +54,20 @@ export default function GoHighLevelClient() {
   const faqData = [
     {
       question: "Does GoHighLevel have AI lead qualification?",
-      answer: "GoHighLevel has basic automation and workflows, but its AI capabilities require significant setup and configuration. SurFox is purpose-built for AI-powered SMS qualification with minimal setup. GoHighLevel is a swiss army knife. SurFox is a scalpel for lead qualification."
+      answer: "GoHighLevel has basic automation and workflows, but its AI capabilities require significant setup and configuration. SurFox AI is purpose-built for AI-powered SMS qualification with minimal setup. GoHighLevel is a swiss army knife. SurFox AI is a scalpel for lead qualification."
     },
     {
       question: "Is GoHighLevel good for SMS marketing?",
-      answer: "Yes, GoHighLevel includes SMS as part of its all-in-one platform. However, the SMS features are one of many tools, not the core focus. SurFox is built specifically for AI-powered SMS conversations and lead qualification."
+      answer: "Yes, GoHighLevel includes SMS as part of its all-in-one platform. However, the SMS features are one of many tools, not the core focus. SurFox AI is built specifically for AI-powered SMS conversations and lead qualification."
     },
     {
-      question: "Why choose SurFox over GoHighLevel?",
-      answer: "Choose GoHighLevel if you need an all-in-one CRM, website builder, and marketing platform. Choose SurFox if you specifically need AI to qualify leads via SMS. Many teams use GoHighLevel as their CRM and SurFox for AI-powered lead qualification."
+      question: "Why choose SurFox AI over GoHighLevel?",
+      answer: "Choose GoHighLevel if you need an all-in-one CRM, website builder, and marketing platform. Choose SurFox AI if you specifically need AI to qualify leads via SMS. Many teams use GoHighLevel as their CRM and SurFox AI for AI-powered lead qualification."
     }
   ];
 
   return (
-    <div className="bg-white text-gray-900">
-      <style>{`
-        .text-navy {
-          color: #1e293b;
-        }
-
-        .bg-navy {
-          background-color: #1e293b;
-        }
-
-        .text-orange {
-          color: #c2410c;
-        }
-
-        .bg-orange {
-          background-color: #c2410c;
-        }
-      `}</style>
+    <div className="bg-background text-white">
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
@@ -95,36 +79,36 @@ export default function GoHighLevelClient() {
           >
             {/* Platform Comparison */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
-              <div className="flex items-center gap-3 p-4 rounded-2xl border-2 border-orange bg-orange/5">
-                <div className="w-12 h-12 rounded-xl bg-orange flex items-center justify-center">
-                  <Brain className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-3 p-4 rounded-2xl border-2 border-blue-500/40 bg-blue-500/5">
+                <div className="w-12 h-12 rounded-xl gradient-bg overflow-hidden flex items-center justify-center">
+                  <Image src="/logo.png" alt="SurFox AI" width={48} height={48} className="w-full h-full object-contain" />
                 </div>
                 <div className="text-left">
-                  <div className="text-2xl font-semibold text-navy">SurFox AI</div>
-                  <div className="text-sm text-gray-600">AI Lead Qualification</div>
+                  <div className="text-2xl font-semibold text-white">SurFox AI</div>
+                  <div className="text-sm text-white/50">AI Lead Qualification</div>
                 </div>
               </div>
 
-              <div className="text-3xl font-semibold text-gray-400">VS</div>
+              <div className="text-3xl font-semibold text-white/30">VS</div>
 
-              <div className="flex items-center gap-3 p-4 rounded-2xl border-2 border-gray-200 bg-gray-50">
-                <div className="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center">
-                  <Settings className="w-6 h-6 text-gray-500" />
+              <div className="flex items-center gap-3 p-4 rounded-2xl border-2 border-white/[0.08] bg-card-bg">
+                <div className="w-12 h-12 rounded-xl bg-white/[0.06] flex items-center justify-center">
+                  <Settings className="w-6 h-6 text-white/40" />
                 </div>
                 <div className="text-left">
-                  <div className="text-2xl font-semibold text-gray-600">GoHighLevel</div>
-                  <div className="text-sm text-gray-500">All-in-One Platform</div>
+                  <div className="text-2xl font-semibold text-white/60">GoHighLevel</div>
+                  <div className="text-sm text-white/40">All-in-One Platform</div>
                 </div>
               </div>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
               Built for Conversations,<br className="hidden sm:block" />
               Not Configured for Chaos
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              GoHighLevel does everything. SurFox AI does one thing exceptionally well: <strong className="text-orange">turning conversations into qualified leads.</strong>
+            <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+              GoHighLevel does everything. SurFox AI does one thing exceptionally well: <strong className="text-blue-400">turning conversations into qualified leads.</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
@@ -132,9 +116,9 @@ export default function GoHighLevelClient() {
                 href="/demo"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold transition flex items-center justify-center gap-2"
               >
-                See SurFox in Action
+                See SurFox AI in Action
                 <ArrowRight className="w-5 h-5" />
               </motion.a>
 
@@ -142,7 +126,7 @@ export default function GoHighLevelClient() {
                 href="/pricing"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/[0.1] text-white text-base font-semibold hover:border-white/[0.2] transition"
               >
                 View Pricing
               </motion.a>
@@ -150,33 +134,25 @@ export default function GoHighLevelClient() {
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4">
-              <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
-                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">Minutes</div>
-                <div className="text-sm text-gray-600">Setup Time</div>
-                <div className="text-xs text-gray-400 mt-1">vs weeks of config</div>
-              </div>
-              <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
-                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">50-Point</div>
-                <div className="text-sm text-gray-600">Lead Scoring</div>
-                <div className="text-xs text-gray-400 mt-1">psychological analysis</div>
-              </div>
-              <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
-                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">Auto</div>
-                <div className="text-sm text-gray-600">Follow-up Logic</div>
-                <div className="text-xs text-gray-400 mt-1">no workflow building</div>
-              </div>
-              <div className="p-4 sm:p-6 rounded-2xl border-2 border-gray-200 bg-white">
-                <div className="text-2xl sm:text-3xl font-semibold text-orange mb-2">100%</div>
-                <div className="text-sm text-gray-600">Data Isolation</div>
-                <div className="text-xs text-gray-400 mt-1">tenant-only learning</div>
-              </div>
+              {[
+                { stat: 'Minutes', label: 'Setup Time', sub: 'vs weeks of config' },
+                { stat: '50-Point', label: 'Lead Scoring', sub: 'psychological analysis' },
+                { stat: 'Auto', label: 'Follow-up Logic', sub: 'no workflow building' },
+                { stat: '100%', label: 'Data Isolation', sub: 'tenant-only learning' },
+              ].map((item, i) => (
+                <div key={i} className="p-4 sm:p-6 rounded-2xl border-2 border-white/[0.08] bg-card-bg">
+                  <div className="text-2xl sm:text-3xl font-semibold text-blue-400 mb-2">{item.stat}</div>
+                  <div className="text-sm text-white/70">{item.label}</div>
+                  <div className="text-xs text-white/40 mt-1">{item.sub}</div>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Comparison Table */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -184,24 +160,22 @@ export default function GoHighLevelClient() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
               Side-by-Side Comparison
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               See exactly how the platforms differ where it matters most.
             </p>
           </motion.div>
 
-          {/* Comparison Table */}
-          <div className="overflow-hidden rounded-2xl border-2 border-gray-200 bg-white">
+          <div className="overflow-hidden rounded-2xl border-2 border-white/[0.08] bg-background">
             {/* Table Header */}
-            <div className="grid grid-cols-3 bg-gray-100 border-b-2 border-gray-200">
-              <div className="p-4 sm:p-6 font-semibold text-navy text-sm sm:text-base">Feature</div>
-              <div className="p-4 sm:p-6 font-semibold text-gray-600 text-sm sm:text-base text-center border-l border-gray-200">GoHighLevel</div>
-              <div className="p-4 sm:p-6 font-semibold text-orange text-sm sm:text-base text-center border-l border-gray-200">SurFox AI</div>
+            <div className="grid grid-cols-3 bg-white/[0.03] border-b-2 border-white/[0.08]">
+              <div className="p-4 sm:p-6 font-semibold text-white text-sm sm:text-base">Feature</div>
+              <div className="p-4 sm:p-6 font-semibold text-white/50 text-sm sm:text-base text-center border-l border-white/[0.06]">GoHighLevel</div>
+              <div className="p-4 sm:p-6 font-semibold text-blue-400 text-sm sm:text-base text-center border-l border-white/[0.06]">SurFox AI</div>
             </div>
 
-            {/* Table Rows */}
             {comparisonRows.map((row, index) => (
               <motion.div
                 key={index}
@@ -209,21 +183,21 @@ export default function GoHighLevelClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className={`grid grid-cols-3 ${index !== comparisonRows.length - 1 ? 'border-b border-gray-200' : ''}`}
+                className={`grid grid-cols-3 ${index !== comparisonRows.length - 1 ? 'border-b border-white/[0.06]' : ''}`}
               >
-                <div className="p-4 sm:p-6 font-medium text-navy text-sm sm:text-base flex items-center">
+                <div className="p-4 sm:p-6 font-medium text-white text-sm sm:text-base flex items-center">
                   {row.feature}
                 </div>
-                <div className="p-4 sm:p-6 text-gray-600 text-sm sm:text-base text-center border-l border-gray-200 flex items-center justify-center">
+                <div className="p-4 sm:p-6 text-white/50 text-sm sm:text-base text-center border-l border-white/[0.06] flex items-center justify-center">
                   <div className="flex items-center gap-2">
-                    {row.surfoxWins === true && <X className="w-4 h-4 text-red-500 flex-shrink-0 hidden sm:block" />}
+                    {row.surfoxWins === true && <X className="w-4 h-4 text-red-400 flex-shrink-0 hidden sm:block" />}
                     <span>{row.ghl}</span>
                   </div>
                 </div>
-                <div className={`p-4 sm:p-6 text-sm sm:text-base text-center border-l border-gray-200 flex items-center justify-center ${row.surfoxWins ? 'bg-orange/5' : ''}`}>
+                <div className={`p-4 sm:p-6 text-sm sm:text-base text-center border-l border-white/[0.06] flex items-center justify-center ${row.surfoxWins ? 'bg-blue-500/5' : ''}`}>
                   <div className="flex items-center gap-2">
-                    {row.surfoxWins === true && <Check className="w-4 h-4 text-orange flex-shrink-0 hidden sm:block" />}
-                    <span className={row.surfoxWins ? 'text-navy font-medium' : 'text-gray-700'}>{row.surfox}</span>
+                    {row.surfoxWins === true && <Check className="w-4 h-4 text-blue-400 flex-shrink-0 hidden sm:block" />}
+                    <span className={row.surfoxWins ? 'text-white font-medium' : 'text-white/60'}>{row.surfox}</span>
                   </div>
                 </div>
               </motion.div>
@@ -233,7 +207,7 @@ export default function GoHighLevelClient() {
       </section>
 
       {/* Why Users Quit Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -241,7 +215,7 @@ export default function GoHighLevelClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 px-4">
               Why 73% of GoHighLevel Users Quit Within 60 Days
             </h2>
           </motion.div>
@@ -250,23 +224,23 @@ export default function GoHighLevelClient() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-6 sm:p-8 rounded-2xl border-2 border-red-200 bg-red-50"
+            className="p-6 sm:p-8 rounded-2xl border-2 border-red-500/20 bg-red-500/5"
           >
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-lg text-white/70 leading-relaxed mb-6">
               GoHighLevel is powerful. It's also overwhelming. Most users sign up expecting a turnkey solution and discover they've bought a construction kit instead.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            <p className="text-lg text-white/70 leading-relaxed mb-6">
               Building workflows, configuring triggers, training AI bots manually, connecting integrations, managing sub-accounts - it's a full-time job. For agencies with dedicated ops teams, that's fine. For sales teams that just need to qualify leads? It's overkill that kills momentum.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-white/70 leading-relaxed">
               The 73% who quit aren't quitting because the tool is bad. They're quitting because they needed conversations, not a configuration project.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* SurFox Built Different Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+      {/* SurFox AI Built Different Section */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -274,79 +248,57 @@ export default function GoHighLevelClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 px-4">
               SurFox AI Was Built Different
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               Conversation-first architecture means you start qualifying leads in minutes, not months.
             </p>
           </motion.div>
 
           <div className="space-y-6">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="p-6 sm:p-8 rounded-2xl border-2 border-orange bg-orange/5"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-orange flex items-center justify-center flex-shrink-0">
-                  <MessageSquare className="w-6 h-6 text-white" />
+            {[
+              {
+                icon: MessageSquare,
+                title: 'Conversations First, Not Workflows',
+                body: "SurFox AI starts with the conversation. No workflow builders, no trigger configurations, no automation sequences to map out. Upload your leads, define your goal, and the AI handles the rest. It knows how to have conversations - you don't need to teach it."
+              },
+              {
+                icon: Brain,
+                title: 'AI That Actually Learns',
+                body: "GoHighLevel's AI does what you tell it. SurFox AI learns from every conversation - what objections come up, what responses work, which leads are worth pursuing. It gets smarter automatically. Your knowledge base stays dynamic, not static."
+              },
+              {
+                icon: Target,
+                title: '50-Point Psychological Scoring',
+                body: "Basic tags and manual lead scoring don't cut it. SurFox AI analyzes conversation patterns, response timing, objection types, and engagement signals to score leads on a 50-point scale. You know exactly who's worth calling - not just who responded."
+              }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/20 bg-blue-500/5"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                    <p className="text-white/70 leading-relaxed">{item.body}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-navy mb-2">Conversations First, Not Workflows</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    SurFox AI starts with the conversation. No workflow builders, no trigger configurations, no automation sequences to map out. Upload your leads, define your goal, and the AI handles the rest. It knows how to have conversations - you don't need to teach it.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="p-6 sm:p-8 rounded-2xl border-2 border-orange bg-orange/5"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-orange flex items-center justify-center flex-shrink-0">
-                  <Brain className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-navy mb-2">AI That Actually Learns</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    GoHighLevel's AI does what you tell it. SurFox AI learns from every conversation - what objections come up, what responses work, which leads are worth pursuing. It gets smarter automatically. Your knowledge base stays dynamic, not static.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="p-6 sm:p-8 rounded-2xl border-2 border-orange bg-orange/5"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-orange flex items-center justify-center flex-shrink-0">
-                  <Target className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-navy mb-2">50-Point Psychological Scoring</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Basic tags and manual lead scoring don't cut it. SurFox AI analyzes conversation patterns, response timing, objection types, and engagement signals to score leads on a 50-point scale. You know exactly who's worth calling - not just who responded.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* When to Choose Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -354,10 +306,10 @@ export default function GoHighLevelClient() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
               Which is Right for You?
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               Different tools for different jobs. Here's how to decide.
             </p>
           </motion.div>
@@ -367,33 +319,26 @@ export default function GoHighLevelClient() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="p-6 sm:p-8 rounded-2xl border-2 border-gray-200 bg-white"
+              className="p-6 sm:p-8 rounded-2xl border-2 border-white/[0.08] bg-card-bg"
             >
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center mr-4">
-                  <Settings className="w-6 h-6 text-gray-500" />
+                <div className="w-12 h-12 rounded-xl bg-white/[0.06] flex items-center justify-center mr-4">
+                  <Settings className="w-6 h-6 text-white/40" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-navy">Choose GoHighLevel When:</h3>
-                </div>
+                <h3 className="text-xl font-semibold text-white">Choose GoHighLevel When:</h3>
               </div>
               <div className="space-y-3">
-                <div className="flex items-start text-sm text-gray-700">
-                  <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                  <span>You're an agency managing multiple client accounts</span>
-                </div>
-                <div className="flex items-start text-sm text-gray-700">
-                  <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                  <span>You need CRM, website builder, and marketing automation in one</span>
-                </div>
-                <div className="flex items-start text-sm text-gray-700">
-                  <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                  <span>You have dedicated ops staff to build and maintain workflows</span>
-                </div>
-                <div className="flex items-start text-sm text-gray-700">
-                  <Check className="w-5 h-5 mr-2 mt-0.5 text-green-600 flex-shrink-0" />
-                  <span>You want to white-label a platform for resale</span>
-                </div>
+                {[
+                  "You're an agency managing multiple client accounts",
+                  "You need CRM, website builder, and marketing automation in one",
+                  "You have dedicated ops staff to build and maintain workflows",
+                  "You want to white-label a platform for resale",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start text-sm text-white/60">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-white/30 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </motion.div>
 
@@ -401,33 +346,26 @@ export default function GoHighLevelClient() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="p-6 sm:p-8 rounded-2xl border-2 border-orange bg-orange/5"
+              className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5"
             >
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-xl bg-orange flex items-center justify-center mr-4">
-                  <Brain className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-xl gradient-bg overflow-hidden flex items-center justify-center mr-4">
+                  <Image src="/logo.png" alt="SurFox AI" width={48} height={48} className="w-full h-full object-contain" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-navy">Choose SurFox AI When:</h3>
-                </div>
+                <h3 className="text-xl font-semibold text-white">Choose SurFox AI When:</h3>
               </div>
               <div className="space-y-3">
-                <div className="flex items-start text-sm text-gray-700">
-                  <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                  <span>You need to qualify high-volume leads fast</span>
-                </div>
-                <div className="flex items-start text-sm text-gray-700">
-                  <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                  <span>You want AI that learns without manual training</span>
-                </div>
-                <div className="flex items-start text-sm text-gray-700">
-                  <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                  <span>Setup in minutes matters more than endless customization</span>
-                </div>
-                <div className="flex items-start text-sm text-gray-700">
-                  <Check className="w-5 h-5 mr-2 mt-0.5 text-orange flex-shrink-0" />
-                  <span>You have a CRM already and need better lead intelligence</span>
-                </div>
+                {[
+                  "You need to qualify high-volume leads fast",
+                  "You want AI that learns without manual training",
+                  "Setup in minutes matters more than endless customization",
+                  "You have a CRM already and need better lead intelligence",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start text-sm text-white/70">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -435,7 +373,7 @@ export default function GoHighLevelClient() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -443,10 +381,10 @@ export default function GoHighLevelClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-white/50">
               Common questions about GoHighLevel vs SurFox AI
             </p>
           </motion.div>
@@ -459,10 +397,10 @@ export default function GoHighLevelClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="p-6 rounded-2xl border-2 border-gray-200 bg-gray-50"
+                className="p-6 rounded-2xl border-2 border-white/[0.08] bg-background"
               >
-                <h3 className="text-lg font-semibold text-navy mb-3">{faq.question}</h3>
-                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+                <p className="text-white/60 leading-relaxed">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -470,20 +408,20 @@ export default function GoHighLevelClient() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 sm:mb-8 px-4 leading-tight">
               Ready to Start Qualifying<br className="hidden sm:block" />
               in Minutes, Not Months?
             </h2>
 
-            <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-              Skip the configuration chaos. See how SurFox AI turns conversations into qualified leads - automatically. <strong className="text-navy">30-day money back guarantee.</strong>
+            <p className="text-lg sm:text-xl text-white/60 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
+              Skip the configuration chaos. See how SurFox AI turns conversations into qualified leads - automatically. <strong className="text-white">30-day money back guarantee.</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">
@@ -491,9 +429,9 @@ export default function GoHighLevelClient() {
                 href="/demo"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-orange text-white text-base font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold transition flex items-center justify-center gap-2"
               >
-                See SurFox in Action
+                See SurFox AI in Action
                 <ArrowRight className="w-5 h-5" />
               </motion.a>
 
@@ -501,23 +439,23 @@ export default function GoHighLevelClient() {
                 href="/pricing"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-gray-300 text-navy text-base font-semibold hover:border-gray-400 hover:bg-gray-50 transition"
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/[0.1] text-white text-base font-semibold hover:border-white/[0.2] transition"
               >
                 View Pricing
               </motion.a>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600">
-              <div className="flex items-center">
-                <Shield className="w-5 h-5 mr-2 text-orange" />
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/50">
+              <div className="flex items-center gap-2">
+                <Shield className="w-5 h-5 text-blue-400" />
                 30-day guarantee
               </div>
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-2 text-orange" />
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5 text-blue-400" />
                 Setup in minutes
               </div>
-              <div className="flex items-center">
-                <Award className="w-5 h-5 mr-2 text-orange" />
+              <div className="flex items-center gap-2">
+                <Award className="w-5 h-5 text-blue-400" />
                 Cancel anytime
               </div>
             </div>

@@ -17,12 +17,12 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   if (!blogPost) {
     return {
-      title: 'Post Not Found | SurFox',
+      title: 'Post Not Found | SurFox AI',
       description: 'The blog post you are looking for could not be found.',
     };
   }
 
-  const metaTitle = blogPost.metaTitle || `${blogPost.title} | SurFox`;
+  const metaTitle = blogPost.metaTitle || `${blogPost.title} | SurFox AI`;
   const metaDescription = blogPost.metaDescription || blogPost.excerpt;
   const url = `https://www.getsurfox.com/blog/${slug}`;
 
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       publishedTime: blogPost.date,
       modifiedTime: blogPost.lastUpdated || blogPost.date,
       authors: [blogPost.author],
-      siteName: 'SurFox',
+      siteName: 'SurFox AI',
       images: [
         {
           url: blogPost.featuredImage || 'https://www.getsurfox.com/og-image.png',
@@ -109,13 +109,13 @@ export default async function BlogPost({ params }: BlogPostPageProps) {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'SurFox',
+    name: 'SurFox AI',
     url: 'https://www.getsurfox.com',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://www.getsurfox.com/logo.png',
+      url: 'https://www.getsurfox.com/newSurFoxLogo1.png',
     },
-    description: 'SurFox is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams.',
+    description: 'SurFox AI is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams.',
     sameAs: [
       'https://www.linkedin.com/company/getsurfox',
     ],

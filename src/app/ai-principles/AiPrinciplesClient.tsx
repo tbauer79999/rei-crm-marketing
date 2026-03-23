@@ -8,42 +8,7 @@ export default function AIPrinciples() {
   const containerRef = useRef(null);
 
   return (
-    <div ref={containerRef} className="bg-card-bg text-white">
-      <style jsx>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-
-        .hover-lift {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .hover-lift:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        }
-
-        @keyframes subtle-pulse {
-          0%, 100% { opacity: 0.2; }
-          50% { opacity: 0.4; }
-        }
-
-        .animate-ai {
-          animation: subtle-pulse 4s ease-in-out infinite;
-        }
-      `}</style>
+    <div ref={containerRef} className="bg-background text-white">
 
       {/* Hero Section */}
       <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 flex justify-center relative overflow-hidden">
@@ -143,7 +108,7 @@ export default function AIPrinciples() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 sm:p-10 hover:border-orange/30 hover:shadow-xl transition-all duration-300"
+                className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 sm:p-10 hover:border-blue-500/30 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-14 h-14 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
@@ -155,7 +120,7 @@ export default function AIPrinciples() {
                 <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3">{principle.title}</h3>
                 <p className="text-white/70 leading-relaxed mb-4">{principle.desc}</p>
 
-                <div className="gradient-bg/5 border-l-4 border-orange rounded-lg p-4">
+                <div className="bg-blue-500/5 border-l-4 border-blue-500/50 rounded-lg p-4">
                   <p className="text-sm font-medium text-white/60">
                     <span className="text-blue-400 font-semibold">Our Commitment:</span> {principle.commitment}
                   </p>
@@ -216,10 +181,10 @@ export default function AIPrinciples() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-card-bg p-6 rounded-xl border border-red-200 hover:border-red-300 hover:shadow-sm shadow-blue-500/5 transition-all duration-300"
+                className="bg-card-bg p-6 rounded-xl border border-red-500/20 hover:border-red-500/40 hover:shadow-sm shadow-blue-500/5 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <AlertCircle className="w-4 h-4 text-red-600" />
                   </div>
                   <div>
@@ -277,7 +242,7 @@ export default function AIPrinciples() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-card-bg p-6 sm:p-8 rounded-2xl border border-white/[0.08] hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 transition-all duration-300"
+                className="bg-card-bg p-6 sm:p-8 rounded-2xl border border-white/[0.08] hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 transition-all duration-300"
               >
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
                   <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-blue-400" />
@@ -320,7 +285,7 @@ export default function AIPrinciples() {
           <div className="max-w-4xl mx-auto bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 sm:p-10 md:p-12">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
@@ -332,7 +297,7 @@ export default function AIPrinciples() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
@@ -344,7 +309,7 @@ export default function AIPrinciples() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
@@ -356,7 +321,7 @@ export default function AIPrinciples() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
@@ -368,7 +333,7 @@ export default function AIPrinciples() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                <div className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
@@ -439,7 +404,7 @@ export default function AIPrinciples() {
                   </li>
                 </ul>
 
-                <div className="gradient-bg/5 border-l-4 border-orange rounded-lg p-6 mt-8">
+                <div className="bg-blue-500/5 border-l-4 border-blue-500/50 rounded-lg p-6 mt-8">
                   <p className="text-lg font-semibold text-white mb-2">
                     Have concerns about SurFox AI?
                   </p>
@@ -454,7 +419,7 @@ export default function AIPrinciples() {
       </section>
 
       {/* Closing Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -46,15 +46,15 @@ export default function TermsOfService() {
             </h2>
             <div className="text-white/60 leading-relaxed space-y-4">
               <p>
-                By accessing or using SurFox ("the Platform"), you agree to be bound by these Terms of Service. If you don't agree, don't use the Platform.
+                By accessing or using SurFox AI ("the Platform"), you agree to be bound by these Terms of Service. If you don't agree, don't use the Platform.
               </p>
               <p>
-                SurFox is operated by SurFox AI, Inc. ("we," "us," or "our").
+                SurFox AI is operated by SurFox AI, Inc. ("we," "us," or "our").
               </p>
             </div>
           </motion.div>
 
-          {/* What SurFox Does */}
+          {/* What SurFox AI Does */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -243,7 +243,7 @@ export default function TermsOfService() {
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">•</span>
-                    <span>The SurFox Platform, code, and technology</span>
+                    <span>The SurFox AI Platform, code, and technology</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">•</span>
@@ -719,7 +719,7 @@ export default function TermsOfService() {
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">•</span>
-                    <span>SurFox Platform and technology</span>
+                    <span>SurFox AI Platform and technology</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">•</span>

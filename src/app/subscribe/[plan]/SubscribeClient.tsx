@@ -103,7 +103,7 @@ export default function Subscribe() {
             <h1 className="text-4xl font-bold text-white mb-2">
               You've Selected
             </h1>
-            <h2 className="text-3xl font-bold text-white mb-2">SurFox {selectedPlan.name}</h2>
+            <h2 className="text-3xl font-bold text-white mb-2">SurFox AI {selectedPlan.name}</h2>
             <p className="text-white/60">{selectedPlan.description}</p>
           </div>
 

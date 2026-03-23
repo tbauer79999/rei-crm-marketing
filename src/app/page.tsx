@@ -4,7 +4,7 @@ import HomeClientSections from './HomeClientSections';
 export const metadata: Metadata = {
   title: 'AI SDR: Qualify Leads via SMS | Cut Headcount Costs',
   description:
-    'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
+    'Replace expensive SDRs with AI. SurFox AI qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
   keywords: [
     'AI SDR',
     'AI SDR platform',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SurFox AI | AI SDR: Qualify Leads via SMS & Cut Headcount Costs',
     description:
-      'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
+      'Replace expensive SDRs with AI. SurFox AI qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
     url: 'https://www.getsurfox.com',
     type: 'website',
     siteName: 'SurFox AI',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SurFox AI | AI SDR: Qualify Leads via SMS & Cut Headcount Costs',
     description:
-      'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
+      'Replace expensive SDRs with AI. SurFox AI qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
     site: '@getSurFox',
     creator: '@getSurFox',
   },
@@ -71,10 +71,10 @@ export default function Page() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': ['Organization', 'LocalBusiness'],
-            name: 'SurFox',
-            legalName: 'SurFox, Inc.',
+            name: 'SurFox AI',
+            legalName: 'SurFox AI, Inc.',
             url: 'https://www.getsurfox.com',
-            logo: 'https://www.getsurfox.com/logo.png',
+            logo: 'https://www.getsurfox.com/newSurFoxLogo1.png',
             foundingDate: '2024',
             description:
               'AI-powered SMS lead qualification platform that automatically engages, scores, and qualifies cold leads at scale',
@@ -190,7 +190,7 @@ export default function Page() {
                 name: 'Is SurFox AI TCPA compliant?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'SurFox is built with TCPA compliance in mind - opt-in verification, clear sender identification, automated opt-out handling, and full conversation logging. We recommend consulting your legal team to confirm your specific use case.',
+                  text: 'SurFox AI is built with TCPA compliance in mind - opt-in verification, clear sender identification, automated opt-out handling, and full conversation logging. We recommend consulting your legal team to confirm your specific use case.',
                 },
               },
               {
@@ -219,7 +219,7 @@ export default function Page() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-white/10 mb-8">
             <span className="w-2 h-2 rounded-full bg-green-400" />
             <span className="text-sm text-white/70 font-medium">
-              AI SDR Platform — Now Live
+              AI SDR Platform - Now Live
             </span>
           </div>
 

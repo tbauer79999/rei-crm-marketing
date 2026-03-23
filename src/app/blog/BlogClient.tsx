@@ -19,9 +19,9 @@ export default function Blog() {
     : blogPosts.filter(post => post.category === selectedCategory);
 
   return (
-    <div className="bg-card-bg text-white">
+    <div className="bg-background text-white">
       {/* Hero Section */}
-      <section className="min-h-[60vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-gray-50 to-white">
+      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-64 h-64 gradient-bg/5 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl" />
@@ -45,7 +45,7 @@ export default function Blog() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 px-4 sm:px-6 md:px-8 bg-card-bg border-b border-white/[0.08] sticky top-16 z-30">
+      <section className="py-8 px-4 sm:px-6 md:px-8 border-b border-white/[0.08] sticky top-16 z-30" style={{ backgroundColor: '#0a0f1e' }}>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
@@ -66,7 +66,7 @@ export default function Blog() {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background isolate">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
             {filteredPosts.map((post, index) => (
@@ -76,11 +76,11 @@ export default function Blog() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card-bg rounded-2xl border-2 border-white/[0.08] overflow-hidden hover:border-orange/30 hover:shadow-xl transition-all duration-300 group"
+                className="bg-card-bg rounded-2xl border-2 border-white/[0.08] overflow-hidden hover:border-blue-500/30 hover:shadow-xl transition-all duration-300 group"
               >
                 {/* Category Badge */}
                 <div className="p-6 pb-0">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card border border-blue-500/20 border border-orange/20">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card border border-blue-500/20">
                     <Tag className="w-3 h-3 text-blue-400" />
                     <span className="text-xs font-semibold text-blue-400">{post.category}</span>
                   </div>
@@ -134,7 +134,7 @@ export default function Blog() {
       </section>
 
       {/* Newsletter Signup CTA */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -153,7 +153,7 @@ export default function Blog() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-lg border-2 border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition text-base"
+                className="flex-1 px-6 py-4 rounded-lg bg-background border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition text-base text-white placeholder:text-white/40"
               />
               <button className="px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-purple-500/25 transition-all whitespace-nowrap">
                 Subscribe
@@ -164,22 +164,6 @@ export default function Blog() {
       </section>
 
       <style jsx>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-
         .line-clamp-3 {
           display: -webkit-box;
           -webkit-line-clamp: 3;

@@ -9,33 +9,7 @@ export default function About() {
   const containerRef = useRef(null);
 
   return (
-    <div ref={containerRef} className="bg-card-bg text-white">
-      <style jsx>{`
-        .text-white {
-          color: #1e293b;
-        }
-
-        .bg-card-bg {
-          background-color: #1e293b;
-        }
-
-        .text-blue-400 {
-          color: #c2410c;
-        }
-
-        .gradient-bg {
-          background-color: #c2410c;
-        }
-
-        .hover-lift {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .hover-lift:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        }
-      `}</style>
+    <div ref={containerRef} className="bg-background text-white">
 
       {/* Hero Section */}
       <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 flex justify-center relative overflow-hidden">
@@ -144,7 +118,7 @@ export default function About() {
                 Existing tools offered surface-level analytics. They could tell you how many messages were sent, but not what motivated the customer. They could show you conversion rates, but not predict who would convert next. They gave you dashboards full of numbers, but no real intelligence.
               </p>
 
-              <div className="gradient-bg/5 border-l-4 border-orange rounded-lg p-6 my-8">
+              <div className="bg-blue-500/5 border-l-4 border-blue-500 rounded-lg p-6 my-8">
                 <p className="text-xl font-semibold text-white mb-3">
                   The gap was clear:
                 </p>
@@ -217,7 +191,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-6 sm:p-8 rounded-2xl border border-white/[0.08] bg-card-bg hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover-lift"
+                className="p-6 sm:p-8 rounded-2xl border border-white/[0.08] bg-card-bg hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover-lift"
               >
                 <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
                   <value.icon className="w-6 h-6 text-blue-400" />
@@ -334,7 +308,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-6 sm:p-8 rounded-2xl border border-white/[0.08] bg-card-bg hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover-lift"
+                className="p-6 sm:p-8 rounded-2xl border border-white/[0.08] bg-card-bg hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover-lift"
               >
                 <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
                   <cta.icon className="w-6 h-6 text-blue-400" />
@@ -357,7 +331,7 @@ export default function About() {
       </section>
 
       {/* Closing Statement */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
