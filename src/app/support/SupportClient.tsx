@@ -31,8 +31,8 @@ export default function SupportClient() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
-      <div className="max-w-xl w-full bg-white p-8 rounded-lg shadow-md">
+    <div className="min-h-screen bg-blue-500/10 flex items-center justify-center px-4">
+      <div className="max-w-xl w-full bg-card-bg p-8 rounded-lg shadow-sm shadow-blue-500/5">
         <h1 className="text-2xl font-semibold mb-4">Contact SurFox Support</h1>
         <form onSubmit={handleSubmit}>
           <label className="block mb-2 font-medium" htmlFor="email">
@@ -44,7 +44,7 @@ export default function SupportClient() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@example.com"
-            className="w-full p-2 border border-gray-300 rounded mb-4"
+            className="w-full p-2 border border-white/[0.1] rounded mb-4"
             required
           />
 
@@ -57,7 +57,7 @@ export default function SupportClient() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="How can we help you?"
-            className="w-full p-2 border border-gray-300 rounded mb-4"
+            className="w-full p-2 border border-white/[0.1] rounded mb-4"
             required
           />
 

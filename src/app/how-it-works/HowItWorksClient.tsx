@@ -62,7 +62,7 @@ export default function HowItWorksClient() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-white mb-6">Same message, different psychology</h3>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-white/30 mb-8">
                 Here's the exact same sales message sent to three different prospect personalities. 
                 Watch how the AI adapts each one based on psychological analysis.
               </p>
@@ -81,7 +81,7 @@ export default function HowItWorksClient() {
                     className={`px-4 py-2 rounded-lg font-medium transition-all ${
                       psychologyDemo === type.id
                         ? `bg-${type.color}-600 text-white`
-                        : 'bg-gray-800 text-gray-400 hover:text-white'
+                        : 'bg-card-bg border border-white/[0.08] text-white/40 hover:text-white'
                     }`}
                   >
                     {type.label}
@@ -103,7 +103,7 @@ export default function HowItWorksClient() {
                   </div>
                   <div className="bg-black/40 rounded-lg p-4 mb-4">
                     <div className="text-red-300 text-sm mb-2">PSYCHOLOGY PROFILE:</div>
-                    <div className="text-sm text-gray-300 space-y-1">
+                    <div className="text-sm text-white/30 space-y-1">
                       <div>• High skepticism, needs proof</div>
                       <div>• Data-driven decision making</div>
                       <div>• Slow to trust new vendors</div>
@@ -126,7 +126,7 @@ export default function HowItWorksClient() {
                   </div>
                   <div className="bg-black/40 rounded-lg p-4 mb-4">
                     <div className="text-blue-300 text-sm mb-2">PSYCHOLOGY PROFILE:</div>
-                    <div className="text-sm text-gray-300 space-y-1">
+                    <div className="text-sm text-white/30 space-y-1">
                       <div>• Loves detailed information</div>
                       <div>• Methodical decision process</div>
                       <div>• Needs comprehensive understanding</div>
@@ -149,7 +149,7 @@ export default function HowItWorksClient() {
                   </div>
                   <div className="bg-black/40 rounded-lg p-4 mb-4">
                     <div className="text-green-300 text-sm mb-2">PSYCHOLOGY PROFILE:</div>
-                    <div className="text-sm text-gray-300 space-y-1">
+                    <div className="text-sm text-white/30 space-y-1">
                       <div>• Fast decision maker</div>
                       <div>• Values directness</div>
                       <div>• Hates wasting time</div>
@@ -183,7 +183,7 @@ export default function HowItWorksClient() {
           
           {/* Interactive Step Navigator */}
           <div className="flex justify-center mb-12">
-            <div className="bg-gray-800/50 rounded-2xl p-2 backdrop-blur-sm" role="tablist" aria-label="Psychology AI process steps">
+            <div className="bg-card-bg border border-white/[0.08]/50 rounded-2xl p-2 backdrop-blur-sm" role="tablist" aria-label="Psychology AI process steps">
 
               {[
                 { id: 0, label: 'Import', icon: Database },
@@ -200,8 +200,8 @@ export default function HowItWorksClient() {
                   aria-controls={`step-panel-${step.id}`}
                   className={`px-6 py-3 rounded-xl text-sm font-medium transition-all flex items-center ${
                     activeStep === step.id
-                      ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg'
-                      : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
+                      ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-sm shadow-blue-500/5 shadow-blue-500/5'
+                      : 'text-white/40 hover:text-white hover:bg-gray-700/50'
                   }`}
                 >
                   <step.icon className="w-5 h-5 mr-2" />
@@ -227,7 +227,7 @@ export default function HowItWorksClient() {
                     <Database className="w-8 h-8 mr-3 text-blue-400" />
                     Step 1: Import Your Cold Leads
                   </h3>
-                  <div className="space-y-4 text-gray-300">
+                  <div className="space-y-4 text-white/30">
                     <div className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
                       <div>
@@ -251,12 +251,12 @@ export default function HowItWorksClient() {
                 <div className="bg-black/40 rounded-2xl p-6 border border-gray-600/30">
                   <div className="text-blue-300 text-sm mb-4">IMPORT PREVIEW:</div>
                   <div className="space-y-3 font-mono text-sm">
-                    <div className="bg-gray-800/50 rounded p-3">
+                    <div className="bg-card-bg border border-white/[0.08]/50 rounded p-3">
                       <div className="text-green-400">✓ 1,247 leads imported</div>
-                      <div className="text-gray-400">✓ 23 duplicates merged</div>
+                      <div className="text-white/40">✓ 23 duplicates merged</div>
                       <div className="text-yellow-400">⚠ 12 invalid phone numbers</div>
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-white/50">
                       Ready to begin psychological analysis...
                     </div>
                   </div>
@@ -277,7 +277,7 @@ export default function HowItWorksClient() {
                     <Brain className="w-8 h-8 mr-3 text-purple-400" />
                     Step 2: AI Analyzes Psychology
                   </h3>
-                  <div className="space-y-4 text-gray-300">
+                  <div className="space-y-4 text-white/30">
                     <div className="flex items-start">
                       <Eye className="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0" />
                       <div>
@@ -310,7 +310,7 @@ export default function HowItWorksClient() {
                         <div>Motivation: <span className="text-yellow-400">ROI-Driven</span></div>
                       </div>
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-white/50">
                       AI Confidence: 87% • Learning from 47 similar profiles
                     </div>
                   </div>
@@ -331,7 +331,7 @@ export default function HowItWorksClient() {
                     <Zap className="w-8 h-8 mr-3 text-cyan-400" />
                     Step 3: Adapts Messaging
                   </h3>
-                  <div className="space-y-4 text-gray-300">
+                  <div className="space-y-4 text-white/30">
                     <div className="flex items-start">
                       <MessageSquare className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
                       <div>
@@ -357,7 +357,7 @@ export default function HowItWorksClient() {
                   <div className="space-y-4 text-sm">
                     <div className="bg-red-900/20 rounded p-3 border border-red-500/30">
                       <div className="text-red-300 text-xs mb-1">BEFORE (Generic):</div>
-                      <div className="text-gray-300">"Hi! Hope you're doing well. Would love to chat about how we can help your business grow."</div>
+                      <div className="text-white/30">"Hi! Hope you're doing well. Would love to chat about how we can help your business grow."</div>
                     </div>
                     <ArrowRight className="w-5 h-5 text-cyan-400 mx-auto" />
                     <div className="bg-green-900/20 rounded p-3 border border-green-500/30">
@@ -382,7 +382,7 @@ export default function HowItWorksClient() {
                     <TrendingUp className="w-8 h-8 mr-3 text-green-400" />
                     Step 4: Learns & Improves
                   </h3>
-                  <div className="space-y-4 text-gray-300">
+                  <div className="space-y-4 text-white/30">
                     <div className="flex items-start">
                       <Lightbulb className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
                       <div>
@@ -408,13 +408,13 @@ export default function HowItWorksClient() {
                   <div className="space-y-3 text-sm">
                     <div className="bg-green-900/20 rounded p-3">
                       <div className="text-green-300 font-bold mb-2">Breakthrough Discovery:</div>
-                      <div className="text-gray-300">"Decisive leads respond 3x better to urgency language like 'limited time' and 'act now'"</div>
+                      <div className="text-white/30">"Decisive leads respond 3x better to urgency language like 'limited time' and 'act now'"</div>
                     </div>
                     <div className="bg-blue-900/20 rounded p-3">
                       <div className="text-blue-300 font-bold mb-2">Pattern Recognition:</div>
-                      <div className="text-gray-300">"Leads who ask questions in their first response are 4x more likely to convert"</div>
+                      <div className="text-white/30">"Leads who ask questions in their first response are 4x more likely to convert"</div>
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-white/50">
                       Learning from 847 conversations • 23% improvement rate
                     </div>
                   </div>
@@ -460,10 +460,10 @@ export default function HowItWorksClient() {
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
+                <p className="text-white/30 mb-6 leading-relaxed">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.features.map((item, i) => (
-                    <li key={i} className="text-sm text-gray-400 flex items-center">
+                    <li key={i} className="text-sm text-white/40 flex items-center">
                       <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3"></div>
                       {item}
                     </li>
@@ -486,7 +486,7 @@ export default function HowItWorksClient() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="https://www.getsurfox.com/#pricing" className="px-12 py-6 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-2xl">
+            <Link href="https://www.getsurfox.com/#pricing" className="px-12 py-6 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10">
               Get Starter Now
             </Link>
             <Link href="/demo" className="px-12 py-6 border-2 border-purple-400/50 rounded-2xl font-bold text-xl hover:bg-purple-500/20 transition-all">

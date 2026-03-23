@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Sora, DM_Sans } from "next/font/google";
 import Script from "next/script";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
@@ -7,16 +7,18 @@ import "./globals.css";
 import { Suspense } from "react";
 import GtmPageViewPusher from "./GtmPageViewPusher";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -68,7 +70,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${sora.variable} ${dmSans.variable} antialiased`} style={{ fontFamily: 'var(--font-dm-sans)' }}>
         {/* Google Tag Manager - lazyOnload to defer until idle */}
         <Script
           id="gtm-script"

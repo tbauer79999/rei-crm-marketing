@@ -64,21 +64,21 @@ export default function Contact() {
   };
 
   return (
-    <div ref={containerRef} className="bg-white text-gray-900">
+    <div ref={containerRef} className="bg-card-bg text-white">
       <style jsx>{`
-        .text-navy {
+        .text-white {
           color: #1e293b;
         }
         
-        .bg-navy {
+        .bg-card-bg {
           background-color: #1e293b;
         }
         
-        .text-orange {
+        .text-blue-400 {
           color: #c2410c;
         }
         
-        .bg-orange {
+        .gradient-bg {
           background-color: #c2410c;
         }
         
@@ -95,8 +95,8 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="min-h-[60vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-orange/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange/5 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-64 h-64 gradient-bg/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-80 h-80 gradient-bg/5 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
@@ -105,12 +105,12 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-navy mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               Let's Talk About<br className="hidden sm:block" />
               <span className="sm:inline"> </span>Your Intelligence Needs
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
               Whether you have questions, want to see a demo, or are ready to get started - we're here to help.
             </p>
           </motion.div>
@@ -118,7 +118,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Methods + Form Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
             
@@ -130,10 +130,10 @@ export default function Contact() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
                   Get in Touch
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-8">
+                <p className="text-white/60 leading-relaxed mb-8">
                   Our team typically responds within 24 hours. For urgent inquiries, please call us directly.
                 </p>
               </motion.div>
@@ -145,14 +145,14 @@ export default function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-orange/30 hover:shadow-md transition-all"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-card-bg border border-white/[0.08] hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 transition-all"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-orange" />
+                  <div className="w-10 h-10 rounded-lg glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-1">Email</h3>
-                    <a href="mailto:tom@getsurfox.com" className="text-gray-600 hover:text-orange transition">
+                    <h3 className="font-semibold text-white mb-1">Email</h3>
+                    <a href="mailto:tom@getsurfox.com" className="text-white/60 hover:text-blue-400 transition">
                       tom@getsurfox.com
                     </a>
                   </div>
@@ -163,14 +163,14 @@ export default function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-orange/30 hover:shadow-md transition-all"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-card-bg border border-white/[0.08] hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 transition-all"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-orange" />
+                  <div className="w-10 h-10 rounded-lg glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-1">Phone</h3>
-                    <a href="tel:+18888186402" className="text-gray-600 hover:text-orange transition">
+                    <h3 className="font-semibold text-white mb-1">Phone</h3>
+                    <a href="tel:+18888186402" className="text-white/60 hover:text-blue-400 transition">
                       +1 (888) 818-6402
                     </a>
                   </div>
@@ -181,14 +181,14 @@ export default function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-orange/30 hover:shadow-md transition-all"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-card-bg border border-white/[0.08] hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 transition-all"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-orange" />
+                  <div className="w-10 h-10 rounded-lg glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-1">Headquarters</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-white mb-1">Headquarters</h3>
+                    <p className="text-white/60">
                       Orlando, Florida<br />
                       United States
                     </p>
@@ -200,14 +200,14 @@ export default function Contact() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-white border border-gray-200 hover:border-orange/30 hover:shadow-md transition-all"
+                  className="flex items-start gap-4 p-4 rounded-xl bg-card-bg border border-white/[0.08] hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 transition-all"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-orange/10 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-orange" />
+                  <div className="w-10 h-10 rounded-lg glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-navy mb-1">Business Hours</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-white mb-1">Business Hours</h3>
+                    <p className="text-white/60">
                       Monday - Friday<br />
                       9:00 AM - 6:00 PM EST
                     </p>
@@ -221,15 +221,15 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="pt-6 border-t border-gray-200"
+                className="pt-6 border-t border-white/[0.08]"
               >
-                <h3 className="font-semibold text-navy mb-4">Connect With Us</h3>
+                <h3 className="font-semibold text-white mb-4">Connect With Us</h3>
                 <div className="flex gap-3">
                   <a
                     href="https://www.linkedin.com/company/108288465"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-navy text-white flex items-center justify-center hover:bg-gray-800 transition"
+                    className="w-10 h-10 rounded-lg bg-card-bg text-white flex items-center justify-center hover:bg-card-bg border border-white/[0.08] transition"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
@@ -237,7 +237,7 @@ export default function Contact() {
                     href="https://twitter.com/getsurfox"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-navy text-white flex items-center justify-center hover:bg-gray-800 transition"
+                    className="w-10 h-10 rounded-lg bg-card-bg text-white flex items-center justify-center hover:bg-card-bg border border-white/[0.08] transition"
                   >
                     <Twitter className="w-5 h-5" />
                   </a>
@@ -253,11 +253,11 @@ export default function Contact() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-2"
             >
-              <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 sm:p-10 md:p-12">
-                <h2 className="text-2xl sm:text-3xl font-semibold text-navy mb-2">
+              <div className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 sm:p-10 md:p-12">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                   Send Us a Message
                 </h2>
-                <p className="text-gray-600 mb-8">
+                <p className="text-white/60 mb-8">
                   Fill out the form below and we'll get back to you shortly.
                 </p>
 
@@ -265,7 +265,7 @@ export default function Contact() {
                   {/* Name Fields */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="firstName" className="block text-sm font-semibold text-navy mb-2">
+                      <label htmlFor="firstName" className="block text-sm font-semibold text-white mb-2">
                         First Name *
                       </label>
                       <input
@@ -275,12 +275,12 @@ export default function Contact() {
                         required
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                        className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
                         placeholder="John"
                       />
                     </div>
                     <div>
-                      <label htmlFor="lastName" className="block text-sm font-semibold text-navy mb-2">
+                      <label htmlFor="lastName" className="block text-sm font-semibold text-white mb-2">
                         Last Name *
                       </label>
                       <input
@@ -290,7 +290,7 @@ export default function Contact() {
                         required
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                        className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
                         placeholder="Doe"
                       />
                     </div>
@@ -298,7 +298,7 @@ export default function Contact() {
 
                   {/* Email */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-navy mb-2">
+                    <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
                       Work Email *
                     </label>
                     <input
@@ -308,7 +308,7 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                      className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
                       placeholder="john@company.com"
                     />
                   </div>
@@ -316,7 +316,7 @@ export default function Contact() {
                   {/* Company & Role */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-semibold text-navy mb-2">
+                      <label htmlFor="company" className="block text-sm font-semibold text-white mb-2">
                         Company *
                       </label>
                       <input
@@ -326,12 +326,12 @@ export default function Contact() {
                         required
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                        className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
                         placeholder="Acme Inc."
                       />
                     </div>
                     <div>
-                      <label htmlFor="role" className="block text-sm font-semibold text-navy mb-2">
+                      <label htmlFor="role" className="block text-sm font-semibold text-white mb-2">
                         Role *
                       </label>
                       <input
@@ -341,7 +341,7 @@ export default function Contact() {
                         required
                         value={formData.role}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                        className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
                         placeholder="Sales Manager"
                       />
                     </div>
@@ -349,7 +349,7 @@ export default function Contact() {
 
                   {/* Phone */}
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-navy mb-2">
+                    <label htmlFor="phone" className="block text-sm font-semibold text-white mb-2">
                       Phone Number
                     </label>
                     <input
@@ -358,14 +358,14 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                      className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
 
                   {/* Interest */}
                   <div>
-                    <label htmlFor="interest" className="block text-sm font-semibold text-navy mb-2">
+                    <label htmlFor="interest" className="block text-sm font-semibold text-white mb-2">
                       What are you interested in? *
                     </label>
                     <select
@@ -374,7 +374,7 @@ export default function Contact() {
                       required
                       value={formData.interest}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
+                      className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition"
                     >
                       <option value="">Select an option</option>
                       <option value="demo">Request a Demo</option>
@@ -390,7 +390,7 @@ export default function Contact() {
 
                   {/* Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-navy mb-2">
+                    <label htmlFor="message" className="block text-sm font-semibold text-white mb-2">
                       Message *
                     </label>
                     <textarea
@@ -400,7 +400,7 @@ export default function Contact() {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition resize-none"
+                      className="w-full px-4 py-3 rounded-lg border border-white/[0.1] focus:border-orange focus:ring-2 focus:ring-orange/20 outline-none transition resize-none"
                       placeholder="Tell us about your needs..."
                     />
                   </div>
@@ -413,9 +413,9 @@ export default function Contact() {
                       name="smsConsent"
                       checked={formData.smsConsent}
                       onChange={handleCheckboxChange}
-                      className="mt-1 w-4 h-4 rounded border-gray-300 text-orange focus:ring-orange focus:ring-2 focus:ring-orange/20"
+                      className="mt-1 w-4 h-4 rounded border-white/[0.1] text-blue-400 focus:ring-orange focus:ring-2 focus:ring-orange/20"
                     />
-                    <label htmlFor="smsConsent" className="text-sm text-gray-600 leading-relaxed">
+                    <label htmlFor="smsConsent" className="text-sm text-white/60 leading-relaxed">
                       By submitting this form you agree to receive SMS notifications related to your SurFox AI account, product updates, and platform communications. Message and data rates may apply. Reply STOP to unsubscribe.
                     </label>
                   </div>
@@ -425,12 +425,12 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="w-full sm:w-auto px-8 py-4 rounded-lg bg-orange text-white font-semibold hover:bg-orange-600 transition flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                      className="w-full sm:w-auto px-8 py-4 rounded-lg gradient-bg text-white font-semibold hover:gradient-bg-600 transition flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
                       <Send className="w-5 h-5" />
                       {submitting ? 'Sending...' : 'Send Message'}
                     </button>
-                    <p className="text-sm text-gray-500 mt-4">
+                    <p className="text-sm text-white/50 mt-4">
                       * Required fields
                     </p>
                   </div>
@@ -442,7 +442,7 @@ export default function Contact() {
       </section>
 
       {/* Quick Links Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -450,10 +450,10 @@ export default function Contact() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Looking for Something Specific?
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
               Quick links to common resources
             </p>
           </motion.div>
@@ -488,18 +488,18 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-6 sm:p-8 rounded-2xl border border-gray-200 bg-white hover:border-orange/30 hover:shadow-lg hover-lift"
+                className="p-6 sm:p-8 rounded-2xl border border-white/[0.08] bg-card-bg hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover-lift"
               >
-                <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mb-5">
-                  <item.icon className="w-6 h-6 text-orange" />
+                <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
+                  <item.icon className="w-6 h-6 text-blue-400" />
                 </div>
                 
-                <h3 className="text-xl font-semibold text-navy mb-3">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{item.desc}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
+                <p className="text-white/60 leading-relaxed mb-6">{item.desc}</p>
                 
                 <a
                   href={item.link}
-                  className="inline-flex items-center gap-2 text-orange font-semibold hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all"
                 >
                   {item.linkText}
                   <span>→</span>
@@ -511,7 +511,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -519,7 +519,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
               Common Questions
             </h2>
           </motion.div>
@@ -549,10 +549,10 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white rounded-xl border border-gray-200 p-6 sm:p-8 hover:border-orange/30 hover:shadow-md transition-all duration-300"
+                className="bg-card-bg rounded-xl border border-white/[0.08] p-6 sm:p-8 hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 transition-all duration-300"
               >
-                <h3 className="text-lg font-semibold text-navy mb-3">{faq.q}</h3>
-                <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.q}</h3>
+                <p className="text-white/60 leading-relaxed">{faq.a}</p>
               </motion.div>
             ))}
           </div>

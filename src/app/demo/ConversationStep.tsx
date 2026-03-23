@@ -195,7 +195,7 @@ const getIndustryProblemText = () => {
         {/* Story Introduction */}
         {phase === 'story' && (
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {currentScenario.title}
             </h1>
             <div className="max-w-4xl mx-auto">
@@ -224,7 +224,7 @@ const getIndustryProblemText = () => {
 
               <button
                 onClick={handleContinue}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-xl transform hover:scale-105"
               >
                 Watch Our AI Handle This Challenge
                 <ArrowRight className="w-6 h-6 ml-3 inline" />
@@ -237,16 +237,16 @@ const getIndustryProblemText = () => {
         {phase !== 'story' && (
           <>
             <div className="text-center mb-12">
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">
+              <h1 className="text-3xl font-bold text-white mb-4">
                 🧠 AI Intelligence in Action
               </h1>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-white/60">
                 Watch how our AI turns this challenging response into an opportunity
               </p>
             </div>
 
             {/* Business Context */}
-            <div className="bg-white rounded-xl p-6 mb-8 border border-blue-200 bg-blue-50">
+            <div className="bg-card-bg rounded-xl p-6 mb-8 border border-blue-200 bg-blue-50">
               <h3 className="font-semibold text-blue-900 mb-2">Business Context:</h3>
               <p className="text-blue-800">
                 <strong>{company}</strong> • {industry} • {offering}
@@ -254,20 +254,20 @@ const getIndustryProblemText = () => {
             </div>
 
             {/* Conversation Display */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            <div className="bg-card-bg rounded-2xl shadow-xl p-8 mb-8 border border-white/[0.08]">
+              <h3 className="text-2xl font-bold text-white mb-8 text-center">
                 Live Conversation Analysis
               </h3>
               
               <div className="space-y-8">
                 {/* Lead Message */}
                 <div className="flex justify-start animate-slide-in">
-                  <div className="bg-gray-100 p-6 rounded-2xl max-w-md shadow-sm">
+                  <div className="bg-blue-500/10 p-6 rounded-2xl max-w-md shadow-sm">
                     <div className="flex items-center mb-2">
-                      <User className="w-4 h-4 text-gray-600 mr-2" />
-                      <p className="text-sm text-gray-600">Incoming Lead Response</p>
+                      <User className="w-4 h-4 text-white/60 mr-2" />
+                      <p className="text-sm text-white/60">Incoming Lead Response</p>
                     </div>
-                    <p className="text-xl font-semibold text-gray-900">"{selectedScenario?.message}"</p>
+                    <p className="text-xl font-semibold text-white">"{selectedScenario?.message}"</p>
                   </div>
                 </div>
 
@@ -297,7 +297,7 @@ const getIndustryProblemText = () => {
                 {/* AI Response */}
                 {showAIResponse && (
                   <div className="flex justify-end animate-slide-in">
-                    <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-2xl max-w-lg shadow-lg">
+                    <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded-2xl max-w-lg shadow-sm shadow-blue-500/5 shadow-blue-500/5">
                       <div className="flex items-center mb-2">
                         <Brain className="w-4 h-4 text-blue-100 mr-2" />
                         <p className="text-sm text-blue-100">{company} AI Response</p>
@@ -311,8 +311,8 @@ const getIndustryProblemText = () => {
 
             {/* Analysis Reveal */}
             {showAnalysis && (
-              <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200 animate-fade-in">
-                <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              <div className="bg-card-bg rounded-2xl shadow-xl p-8 mb-8 border border-white/[0.08] animate-fade-in">
+                <h3 className="text-2xl font-bold text-white mb-8 text-center">
                   🎯 Why This Response Works
                 </h3>
                 
@@ -346,24 +346,24 @@ const getIndustryProblemText = () => {
 
             {/* Choice Selection */}
             {phase === 'choice' && (
-              <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              <div className="bg-card-bg rounded-2xl shadow-xl p-8 mb-8 border border-white/[0.08]">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">
                   🎭 Choose Your Own Adventure
                 </h3>
-                <p className="text-center text-gray-600 mb-8">How does the lead respond? Pick a scenario to see our AI adapt in real-time:</p>
+                <p className="text-center text-white/60 mb-8">How does the lead respond? Pick a scenario to see our AI adapt in real-time:</p>
                 
                 <div className="grid md:grid-cols-3 gap-6">
                   {getChoices().map((choice, index) => (
                     <div
                       key={choice.id}
                       onClick={() => handleChoiceSelect(choice)}
-                      className="bg-gray-50 p-6 rounded-xl cursor-pointer hover:bg-gray-100 border-2 border-gray-200 hover:border-blue-300 transition-all duration-300 transform hover:scale-105"
+                      className="bg-background p-6 rounded-xl cursor-pointer hover:bg-card-bg/[0.08] border-2 border-white/[0.08] hover:border-blue-300 transition-all duration-300 transform hover:scale-105"
                     >
-                      <h4 className="font-bold text-gray-900 mb-3">{choice.title}</h4>
-                      <div className="bg-white p-4 rounded-lg mb-4 border border-gray-200">
-                        <p className="italic text-gray-800 font-medium">"{choice.message}"</p>
+                      <h4 className="font-bold text-white mb-3">{choice.title}</h4>
+                      <div className="bg-card-bg p-4 rounded-lg mb-4 border border-white/[0.08]">
+                        <p className="italic text-white font-medium">"{choice.message}"</p>
                       </div>
-                      <p className="text-sm text-gray-600 mb-4">{choice.description}</p>
+                      <p className="text-sm text-white/60 mb-4">{choice.description}</p>
                       <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold">
                         Choose This Response
                       </button>
@@ -375,18 +375,18 @@ const getIndustryProblemText = () => {
 
             {/* Final AI Response */}
             {phase === 'final' && selectedChoice && (
-              <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              <div className="bg-card-bg rounded-2xl shadow-xl p-8 mb-8 border border-white/[0.08]">
+                <h3 className="text-2xl font-bold text-white mb-8 text-center">
                   🚀 Complete Conversation
                 </h3>
                 
                 <div className="space-y-6">
                   {/* Original exchange */}
                   <div className="flex justify-start">
-                    <div className="bg-gray-100 p-4 rounded-2xl max-w-md">
+                    <div className="bg-blue-500/10 p-4 rounded-2xl max-w-md">
                       <div className="flex items-center mb-1">
-                        <User className="w-3 h-3 text-gray-600 mr-2" />
-                        <p className="text-xs text-gray-600">Lead</p>
+                        <User className="w-3 h-3 text-white/60 mr-2" />
+                        <p className="text-xs text-white/60">Lead</p>
                       </div>
                       <p className="font-medium">"{selectedScenario?.message}"</p>
                     </div>
@@ -404,10 +404,10 @@ const getIndustryProblemText = () => {
 
                   {/* Follow-up exchange */}
                   <div className="flex justify-start animate-slide-in">
-                    <div className="bg-gray-100 p-4 rounded-2xl max-w-md">
+                    <div className="bg-blue-500/10 p-4 rounded-2xl max-w-md">
                       <div className="flex items-center mb-1">
-                        <User className="w-3 h-3 text-gray-600 mr-2" />
-                        <p className="text-xs text-gray-600">Lead Response</p>
+                        <User className="w-3 h-3 text-white/60 mr-2" />
+                        <p className="text-xs text-white/60">Lead Response</p>
                       </div>
                       <p className="font-medium">"{selectedChoice.message}"</p>
                     </div>
@@ -436,10 +436,10 @@ const getIndustryProblemText = () => {
                             <Brain className="w-6 h-6 mr-3" />
                             🔥 THIS IS OUR SECRET SAUCE
                           </div>
-                          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                          <h3 className="text-2xl font-bold text-white mb-4">
                             Why This AI Response Is Pure Gold
                           </h3>
-                          <p className="text-lg text-gray-600 mb-4">
+                          <p className="text-lg text-white/60 mb-4">
                             Most investors would have killed this lead. Here's what our AI did differently:
                           </p>
                           <div className="bg-blue-100 p-4 rounded-lg border border-blue-300 mb-6">
@@ -515,8 +515,8 @@ const getIndustryProblemText = () => {
                       </div>
 
                       {/* Advanced Psychology Analysis */}
-                      <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center flex items-center justify-center">
+                      <div className="bg-card-bg p-8 rounded-2xl border border-white/[0.08] shadow-sm shadow-blue-500/5 shadow-blue-500/5">
+                        <h3 className="text-2xl font-bold text-white mb-6 text-center flex items-center justify-center">
                           <Brain className="w-8 h-8 mr-3 text-purple-600" />
                           Advanced Psychology Analysis
                         </h3>
@@ -526,7 +526,7 @@ const getIndustryProblemText = () => {
                             <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                               <TrendingUp className="w-10 h-10 text-blue-600" />
                             </div>
-                            <h4 className="font-bold text-gray-900 mb-2">Intent Detection</h4>
+                            <h4 className="font-bold text-white mb-2">Intent Detection</h4>
                             <div className="bg-blue-50 p-4 rounded-lg">
                               <div className="text-3xl font-bold text-blue-600 mb-1">
                                 {selectedChoice.id === 3 ? '95%' : selectedChoice.id === 2 ? '75%' : '45%'}
@@ -538,15 +538,15 @@ const getIndustryProblemText = () => {
                           </div>
 
                           <div className="text-center">
-                            <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                              <Clock className="w-10 h-10 text-orange-600" />
+                            <div className="w-20 h-20 gradient-bg-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                              <Clock className="w-10 h-10 text-blue-400-600" />
                             </div>
-                            <h4 className="font-bold text-gray-900 mb-2">Urgency Analysis</h4>
-                            <div className="bg-orange-50 p-4 rounded-lg">
-                              <div className="text-3xl font-bold text-orange-600 mb-1">
+                            <h4 className="font-bold text-white mb-2">Urgency Analysis</h4>
+                            <div className="gradient-bg-50 p-4 rounded-lg">
+                              <div className="text-3xl font-bold text-blue-400-600 mb-1">
                                 {selectedChoice.id === 3 ? '88%' : selectedChoice.id === 2 ? '65%' : '35%'}
                               </div>
-                              <p className="text-sm text-orange-700">
+                              <p className="text-sm text-blue-400-700">
                                 {selectedChoice.id === 3 ? 'Time Sensitive - Current Stage' : selectedChoice.id === 2 ? 'Moderate Urgency Detected' : 'Low Time Pressure'}
                               </p>
                             </div>
@@ -556,7 +556,7 @@ const getIndustryProblemText = () => {
                             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                               <Target className="w-10 h-10 text-green-600" />
                             </div>
-                            <h4 className="font-bold text-gray-900 mb-2">Next Stage Readiness</h4>
+                            <h4 className="font-bold text-white mb-2">Next Stage Readiness</h4>
                             <div className="bg-green-50 p-4 rounded-lg">
                               <div className="text-3xl font-bold text-green-600 mb-1">
                                 {selectedChoice.id === 3 ? '92%' : selectedChoice.id === 2 ? '78%' : '55%'}
@@ -568,8 +568,8 @@ const getIndustryProblemText = () => {
                           </div>
                         </div>
                         
-                        <div className="mt-6 bg-gray-50 p-4 rounded-lg border border-gray-200">
-                          <p className="text-sm text-gray-600 text-center">
+                        <div className="mt-6 bg-background p-4 rounded-lg border border-white/[0.08]">
+                          <p className="text-sm text-white/60 text-center">
                             <strong>Note:</strong> These scores reflect the lead's current state for determining next actions, not final conversion probability.
                           </p>
                         </div>
@@ -584,7 +584,7 @@ const getIndustryProblemText = () => {
                         <div className="grid md:grid-cols-2 gap-8">
                           <div>
                             <h4 className="font-bold text-white mb-4 text-lg">Current Sales Stage:</h4>
-                            <div className="bg-white bg-opacity-90 p-6 rounded-xl">
+                            <div className="bg-card-bg bg-opacity-90 p-6 rounded-xl">
                               <div className="text-2xl font-bold mb-2 text-black">
                                 {selectedChoice.id === 3 ? '🔥 STAGE 3: DISCOVERY READY' : selectedChoice.id === 2 ? '🌡️ STAGE 2: QUALIFIED INTEREST' : '❄️ STAGE 1: AUTOMATED NURTURING'}
                               </div>
@@ -610,7 +610,7 @@ const getIndustryProblemText = () => {
                                 "AI continues Stage 1 nurturing sequence",
                                 "Review AI progress in 30 days"
                               ]).map((step, index) => (
-                                <div key={index} className="flex items-center bg-white bg-opacity-90 p-3 rounded-lg">
+                                <div key={index} className="flex items-center bg-card-bg bg-opacity-90 p-3 rounded-lg">
                                   <CheckCircle className="w-5 h-5 mr-3 text-green-600" />
                                   <span className="text-black">{step}</span>
                                 </div>
@@ -620,7 +620,7 @@ const getIndustryProblemText = () => {
                         </div>
 
                         {/* AI's Ongoing Strategy */}
-                        <div className="mt-8 bg-white bg-opacity-90 p-6 rounded-xl">
+                        <div className="mt-8 bg-card-bg bg-opacity-90 p-6 rounded-xl">
                           <h4 className="font-bold text-black mb-4 text-lg">AI's Ongoing Nurturing Strategy (If No Human Follow-up):</h4>
                           <div className="grid md:grid-cols-2 gap-6">
                             <div>
@@ -689,7 +689,7 @@ const getIndustryProblemText = () => {
                             // Navigate to pricing instead of completing demo
                             window.location.href = '/#pricing'
                           }}
-                          className="bg-white text-purple-600 px-16 py-6 rounded-xl font-bold text-2xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                          className="bg-card-bg text-purple-600 px-16 py-6 rounded-xl font-bold text-2xl transition-all duration-300 shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-xl transform hover:scale-105"
                         >
                           🚀 Get This AI Working For Me
                           <ArrowRight className="w-8 h-8 ml-4 inline" />
