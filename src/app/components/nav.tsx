@@ -76,7 +76,7 @@ export default function Nav() {
                 <ChevronDown className="w-4 h-4" />
               </div>
               <div className="absolute left-0 mt-2 w-64 rounded-xl border border-white/[0.10] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl shadow-black/40" style={{ backgroundColor: '#0a0f1e' }}>
-                <Link href="/engage" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
+                <Link href="/" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
                   <div className="font-semibold">SurFox Engage</div>
                   <div className="text-xs text-white/40 mt-1">AI for Sales Conversations</div>
                 </Link>
@@ -192,7 +192,7 @@ export default function Nav() {
             {/* Solutions */}
             <div>
               <div className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-2">Solutions</div>
-              <Link href="/engage" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">
+              <Link href="/" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">
                 <div className="font-medium">SurFox Engage</div>
                 <div className="text-xs text-white/40">AI for Sales Conversations</div>
               </Link>

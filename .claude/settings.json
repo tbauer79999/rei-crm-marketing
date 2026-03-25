@@ -25,11 +25,15 @@
       "Bash(grep -r SurFox d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme/src --include=*.tsx --include=*.jsx -n)",
       "Read(//d/REI-CRM/Surfox-website/rei-crm-marketing/**)",
       "Bash(grep -r SurFox d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme/src --include=*.tsx --include=*.jsx)",
-      "Bash(xargs perl:*)"
+      "Bash(xargs perl:*)",
+      "WebFetch(domain:getsurfox.com)",
+      "Bash(grep -r \"ringless\\\\|voicemail\\\\|call.*back\\\\|inbound.*call\" d:/REI-CRM/Surfox-website/rei-crm-marketing/src/ --include=*.tsx --include=*.ts -n)",
+      "Bash(sed \"s/'''',.*//\")"
     ],
     "additionalDirectories": [
       "D:\\REI-CRM\\lead-app\\my-tailwind-app\\supabase\\functions\\generate-web-chat-reply",
-      "d:\\REI-CRM\\Surfox-website\\rei-crm-marketing\\surfox-dark-theme\\src\\app\\blog\\[slug]"
+      "d:\\REI-CRM\\Surfox-website\\rei-crm-marketing\\surfox-dark-theme\\src\\app\\blog\\[slug]",
+      "\\tmp"
     ]
   }
 }

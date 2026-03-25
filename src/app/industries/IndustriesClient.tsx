@@ -209,6 +209,59 @@ export default function IndustriesClient() {
         </div>
       </section>
 
+      {/* Popular Use Cases Section */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Popular Use Cases
+            </h2>
+            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+              SurFox AI works across every industry where leads go cold.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industries.map((industry, index) => {
+              const href =
+                industry.id === 'real-estate' || industry.id === 'wholesale'
+                  ? '/wholesalers'
+                  : industry.id === 'recruiting'
+                  ? '/staffing'
+                  : '/industries#solutions'
+              return (
+                <motion.a
+                  key={industry.id}
+                  href={href}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.07 }}
+                  className="group bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 flex flex-col gap-4 hover:border-white/[0.16] transition-colors"
+                >
+                  <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
+                    {React.createElement(industry.icon, { className: 'w-6 h-6 text-blue-400' })}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-white mb-1">{industry.title}</h3>
+                    <p className="text-white/60 text-sm leading-relaxed">{industry.subtitle}</p>
+                  </div>
+                  <div className="flex items-center gap-1 text-blue-400 text-sm font-medium">
+                    Learn more
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </div>
+                </motion.a>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Common Challenges Section */}
       <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-6xl mx-auto">
@@ -253,7 +306,7 @@ export default function IndustriesClient() {
       </section>
 
       {/* Industry Solutions Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section id="solutions" className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

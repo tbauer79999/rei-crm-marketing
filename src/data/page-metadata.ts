@@ -30,13 +30,13 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   platform: {
     title: 'SurFox AI Platform: Customer Intelligence & Automation',
-    description: 'AI-powered SMS lead qualification platform. Automatically engage, qualify, and schedule appointments with leads 24/7. Replace expensive SDRs with intelligent automation.',
+    description: 'AI-powered SMS lead qualification platform. Automatically engage, qualify, and schedule appointments with leads 24/7. Replace SDRs with automation.',
     keywords: ['AI platform', 'customer intelligence platform', 'sales automation platform', 'conversation AI platform'],
     path: '/platform',
   },
   about: {
     title: 'About SurFox AI - Building the Future of Sales AI',
-    description: 'Learn about SurFox AI\'s mission to transform sales through AI-powered lead qualification. Meet our team and discover our vision for the future of AI sales development.',
+    description: 'Learn about SurFox AI\'s mission to transform sales through AI-powered lead qualification. Meet our team and discover our vision for AI sales.',
     keywords: ['about SurFox AI', 'AI sales company', 'AI SDR company', 'sales technology'],
     path: '/about',
   },
@@ -89,20 +89,20 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/integrations',
   },
   'integrations-gohighlevel': {
-    title: 'GoHighLevel + SurFox AI Integration - AI Lead Qualification for GHL',
-    description: 'Connect SurFox AI to GoHighLevel in minutes via Zapier. Automatically qualify leads via SMS when pipeline stages change, and push hot leads back into GHL instantly.',
+    title: 'GoHighLevel + SurFox AI: AI Lead Qualification',
+    description: 'Connect SurFox AI to GoHighLevel via Zapier. Automatically qualify leads via SMS when pipeline stages change, and push hot leads back into GHL.',
     keywords: ['GoHighLevel integration', 'GHL SurFox', 'GoHighLevel AI', 'GHL lead qualification', 'GoHighLevel Zapier', 'GHL SMS automation', 'wholesale CRM AI'],
     path: '/integrations/gohighlevel',
   },
   staffing: {
     title: 'AI SMS Lead Qualification for Staffing Agencies | SurFox AI',
-    description: 'SurFox AI qualifies your applicants and client leads via SMS automatically. No VA. No SDR. Every lead followed up instantly. Built for high-volume staffing operations.',
+    description: 'SurFox AI qualifies applicants and client leads via SMS automatically. No VA. No SDR. Every lead followed up instantly. Built for high-volume staffing.',
     keywords: ['staffing agency SMS automation', 'AI lead qualification staffing', 'applicant follow-up automation', 'SMS AI staffing', 'SurFox AI staffing'],
     path: '/staffing',
   },
   wholesalers: {
-    title: 'AI SMS Lead Qualification for Real Estate Wholesalers | SurFox AI',
-    description: 'SurFox AI handles every motivated seller reply the moment it comes in. Qualifies leads, asks follow-up questions, and flags the deals worth your time. Stop sorting 40 replies. Start calling 4 hot leads.',
+    title: 'AI SMS Lead Qualification for Real Estate Wholesalers',
+    description: 'SurFox AI qualifies every motivated seller reply instantly — flags deals worth your time. Stop sorting 40 replies and start calling hot leads only.',
     keywords: ['real estate wholesaler SMS', 'motivated seller lead qualification', 'wholesale SMS automation', 'AI SMS wholesaler', 'SurFox AI wholesalers', 'SmarterContact alternative'],
     path: '/wholesalers',
   },
@@ -138,19 +138,19 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   'compare-meera-ai': {
     title: 'SurFox AI vs Meera AI - Lead Intelligence vs Call Center AI',
-    description: 'Compare SurFox AI vs Meera AI. Meera gets leads on the phone. SurFox tells you which leads are worth calling. Dead lead resurrection, AI scoring, and tenant-only learning.',
+    description: 'Compare SurFox AI vs Meera AI. Meera gets leads on the phone. SurFox tells you which leads are worth calling. AI scoring and dead lead resurrection.',
     keywords: ['SurFox vs Meera', 'Meera AI alternative', 'AI lead qualification', 'call center AI', 'lead intelligence', 'outbound reactivation'],
     path: '/compare/surfox-vs-meera-ai',
   },
   'compare-gohighlevel': {
     title: 'SurFox AI vs GoHighLevel: Which is Right for You?',
-    description: 'Compare SurFox AI vs GoHighLevel. Built for conversations, not configured for chaos. Setup in minutes vs weeks, 50-point psychological scoring, and AI that actually learns.',
+    description: 'Compare SurFox AI vs GoHighLevel. Built for conversations, not chaos. Setup in minutes vs weeks, 50-point psychological scoring, and AI that learns.',
     keywords: ['SurFox vs GoHighLevel', 'GoHighLevel alternative', 'GHL alternative', 'AI lead qualification', 'AI SDR platform', 'sales automation'],
     path: '/compare/surfox-vs-gohighlevel',
   },
   'compare-spara': {
-    title: 'SurFox vs Spara: Best Spara Alternative for Outbound Lead Qualification (2026)',
-    description: 'Looking for a Spara replacement for outbound lead lists? SurFox qualifies leads via SMS (98% open rate) - where Spara\'s inbound chat can\'t reach. Compare features, pricing & use cases.',
+    title: 'SurFox vs Spara: Best Spara Alternative for Outbound (2026)',
+    description: 'Looking for a Spara replacement for outbound lead lists? SurFox qualifies leads via SMS (98% open rate) where Spara\'s inbound chat can\'t reach.',
     keywords: [
       'SurFox vs Spara',
       'Spara alternative',
@@ -171,7 +171,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   'compare-all-competitors': {
     title: 'SurFox AI vs All Competitors: The Complete Comparison',
-    description: 'See how SurFox AI compares to mass messaging platforms, manual SMS tools, CRM extensions, and email-first platforms. Psychology AI vs traditional approaches.',
+    description: 'See how SurFox AI compares to mass messaging platforms, manual SMS tools, CRM extensions, and email-first platforms. AI vs traditional approaches.',
     keywords: ['SurFox competitors', 'AI SMS comparison', 'lead qualification platforms', 'sales automation comparison', 'SMS marketing tools'],
     path: '/compare/surfox-vs-all-competitors',
   },
@@ -195,13 +195,13 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   'compare-smarter-contact': {
     title: 'SurFox AI vs Smarter Contact: AI Conversations vs Batch SMS',
-    description: 'Compare SurFox AI vs Smarter Contact. SurFox qualifies leads with psychology AI that learns and adapts. Smarter Contact sends batch messages without AI qualification.',
+    description: 'Compare SurFox AI vs Smarter Contact. SurFox qualifies leads with psychology AI that learns. Smarter Contact sends batch messages without AI.',
     keywords: ['SurFox vs Smarter Contact', 'Smarter Contact alternative', 'AI SMS', 'real estate marketing', 'lead qualification'],
     path: '/compare/surfox-vs-smarter-contact',
   },
   'compare-lead-sherpa': {
     title: 'SurFox AI vs Lead Sherpa: AI Qualification vs Skip Tracing',
-    description: 'Compare SurFox AI vs Lead Sherpa. SurFox qualifies leads with AI conversations. Lead Sherpa focuses on skip tracing and data - different tools for different needs.',
+    description: 'Compare SurFox AI vs Lead Sherpa. SurFox qualifies leads with AI conversations. Lead Sherpa focuses on skip tracing and data.',
     keywords: ['SurFox vs Lead Sherpa', 'Lead Sherpa alternative', 'AI lead qualification', 'skip tracing', 'real estate leads'],
     path: '/compare/surfox-vs-lead-sherpa',
   },
@@ -219,7 +219,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   roi: {
     title: 'AI SDR ROI Calculator: Real Numbers & Benchmarks (2026)',
-    description: 'The real ROI of AI SDR platforms: 60-80% lower cost per lead. 4x better response rates. Found revenue from dormant databases. Calculate your ROI from AI lead qualification - free, with real benchmarks.',
+    description: 'The real ROI of AI SDR platforms: 60-80% lower cost per lead, 4x better response rates, and found revenue from dormant databases. Calculate yours free.',
     keywords: [
       'ai sdr roi',
       'ai sdr roi calculator',
