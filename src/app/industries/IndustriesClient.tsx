@@ -530,7 +530,7 @@ export default function IndustriesClient() {
             </div>
 
             <p className="text-sm text-white/50 mt-8">
-              14-day free trial. 2,000 free messages. No setup fees.
+              14-day free trial. 2,000 messages. Up to 1,000 leads. No setup fees.
             </p>
           </motion.div>
         </div>
