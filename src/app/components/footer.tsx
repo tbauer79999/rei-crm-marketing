@@ -169,6 +169,21 @@ export default function Footer() {
                   Request a Demo
                 </Link>
               </li>
+              <li>
+                <Link href="/integrations/gohighlevel" className="text-sm text-white/50 hover:text-white transition-colors">
+                  GoHighLevel Integration
+                </Link>
+              </li>
+              <li>
+                <Link href="/wholesalers" className="text-sm text-white/50 hover:text-white transition-colors">
+                  Real Estate Wholesalers
+                </Link>
+              </li>
+              <li>
+                <Link href="/staffing" className="text-sm text-white/50 hover:text-white transition-colors">
+                  Staffing Agencies
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -194,6 +209,11 @@ export default function Footer() {
               <li>
                 <Link href="/contact" className="text-sm text-white/50 hover:text-white transition-colors">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/support" className="text-sm text-white/50 hover:text-white transition-colors">
+                  Support
                 </Link>
               </li>
             </ul>

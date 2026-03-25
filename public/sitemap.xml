@@ -213,12 +213,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://www.getsurfox.com/enterprise</loc>
-    <lastmod>2026-01-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
   <url>
     <loc>https://www.getsurfox.com/compare/surfox-vs-all-competitors</loc>
     <lastmod>2026-03-03</lastmod>

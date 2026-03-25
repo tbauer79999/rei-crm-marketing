@@ -42,6 +42,11 @@ const nextConfig: NextConfig = {
         destination: '/compare/surfox-vs-spara?ref=spara-drift',
         permanent: true,
       },
+      {
+        source: '/enterprise',
+        destination: '/pricing',
+        permanent: true,
+      },
     ];
   },
 };

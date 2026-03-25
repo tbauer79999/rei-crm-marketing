@@ -39,11 +39,20 @@ export const metadata: Metadata = {
     title: 'SurFox AI | AI SDR Platform for SMS Lead Qualification',
     description: 'Replace expensive SDRs with AI. SurFox AI qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
     locale: 'en_US',
+    images: [
+      {
+        url: 'https://www.getsurfox.com/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'SurFox AI - AI SDR Platform for SMS Lead Qualification',
+      }
+    ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@getSurFox",
     creator: "@getSurFox",
+    images: ['https://www.getsurfox.com/og-default.png'],
     title: 'SurFox AI | AI SDR Platform for SMS Lead Qualification',
     description: 'Replace expensive SDRs with AI. SurFox AI qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
   },

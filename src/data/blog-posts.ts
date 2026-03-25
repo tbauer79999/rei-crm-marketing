@@ -1481,7 +1481,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'One staffing agency ran 3 months of cold leads through AI reactivation. Five placement-ready candidates surfaced in the first week - from leads the team had already written off completely. That\'s revenue that didn\'t exist on Monday and was in the pipeline by Friday, from leads that cost nothing to re-acquire.'
+        content: 'One [staffing agency](/staffing) ran 3 months of cold leads through AI reactivation. Five placement-ready candidates surfaced in the first week - from leads the team had already written off completely. That\'s revenue that didn\'t exist on Monday and was in the pipeline by Friday, from leads that cost nothing to re-acquire.'
       },
       {
         type: 'heading',
@@ -2221,7 +2221,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Any team that\'s already running their sales process through tools like HubSpot, Salesforce, Pipedrive, or Google Sheets - and wants to add intelligent SMS lead qualification without rebuilding how they operate.'
+        content: 'Any team that\'s already running their sales process through tools like HubSpot, Salesforce, Pipedrive, [GoHighLevel](/integrations/gohighlevel), or Google Sheets - and wants to add intelligent SMS lead qualification without rebuilding how they operate.'
       },
       {
         type: 'heading',
@@ -2428,7 +2428,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Any business with a sales team that generates leads faster than they can follow up on them. SurFox AI works particularly well for healthcare, staffing, real estate, and high-volume B2B sales where speed and qualification both matter.'
+        content: 'Any business with a sales team that generates leads faster than they can follow up on them. SurFox AI works particularly well for healthcare, staffing, [real estate wholesalers](/wholesalers), and high-volume B2B sales where speed and qualification both matter.'
       }
     ]
   },

@@ -103,14 +103,6 @@ export default function Page() {
               '@type': 'Country',
               name: 'United States',
             },
-            serviceType: [
-              'AI SDR Platform',
-              'AI Lead Qualification',
-              'SMS Lead Qualification',
-              'AI Lead Qualification Software',
-              'SDR Headcount Reduction',
-              'Outbound Sales Automation',
-            ],
           }),
         }}
       />
@@ -127,10 +119,11 @@ export default function Page() {
             offers: {
               '@type': 'Offer',
               priceCurrency: 'USD',
+              price: '147',
               description: 'Plans start from $147/month',
               url: 'https://www.getsurfox.com/pricing',
             },
-            operatingSystem: 'Web-based',
+            operatingSystem: 'Web Browser',
             description:
               'AI-powered SMS lead qualification platform - upload cold leads, let AI engage and qualify them, your team only talks to hot prospects',
           }),
