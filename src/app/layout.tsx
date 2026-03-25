@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import "./globals.css";
 import { Suspense } from "react";
 import GtmPageViewPusher from "./GtmPageViewPusher";
+import TimeOnPageTracker from "./TimeOnPageTracker";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -116,6 +117,7 @@ export default function RootLayout({
         {/* Wrap client router hooks in Suspense per Next.js 15 requirement */}
         <Suspense fallback={null}>
           <GtmPageViewPusher />
+          <TimeOnPageTracker />
         </Suspense>
 
         <Nav />
