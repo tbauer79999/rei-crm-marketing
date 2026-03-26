@@ -225,23 +225,23 @@ export default function Page() {
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 leading-relaxed font-normal">
-            Upload your list. SurFox AI handles every SMS conversation, qualifies each lead on a 50-point scale, and tells your team exactly who to call. No manual follow-up. Just conversations that close.
+            Your next deal is already in your CRM. SurFox AI finds it.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-start gap-3 sm:gap-4">
             <a
-              href="/pricing"
+              href="/demo"
               className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold hover:opacity-90 transition flex items-center justify-center gap-2 shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/25"
             >
-              Get Started Free
+              Watch Demo
               <ArrowRightIcon className="w-5 h-5" />
             </a>
 
             <a
-              href="/demo"
+              href="/pricing"
               className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg glass-card border border-white/10 text-white/80 hover:text-white hover:border-white/20 text-base font-semibold transition"
             >
-              Watch Demo
+              Get Started Free
             </a>
           </div>
 
