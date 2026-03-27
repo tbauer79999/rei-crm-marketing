@@ -4,7 +4,7 @@ import HomeClientSections from './HomeClientSections';
 export const metadata: Metadata = {
   title: 'AI SDR: Qualify Leads via SMS | Cut Headcount Costs',
   description:
-    'Replace expensive SDRs with AI. SurFox AI qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
+    'Your SMS leads are ignoring you. SurFox AI follows up automatically until they respond. Upload your lead list, let AI qualify the buyers, and only talk to prospects ready to close.',
   keywords: [
     'AI SDR',
     'AI SDR platform',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'SurFox AI | AI SDR: Qualify Leads via SMS & Cut Headcount Costs',
     description:
-      'Replace expensive SDRs with AI. SurFox AI qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
+      'Your SMS leads are ignoring you. SurFox AI follows up automatically until they respond. Upload your lead list, let AI qualify the buyers, and only talk to prospects ready to close.',
     url: 'https://www.getsurfox.com',
     type: 'website',
     siteName: 'SurFox AI',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SurFox AI | AI SDR: Qualify Leads via SMS & Cut Headcount Costs',
     description:
-      'Replace expensive SDRs with AI. SurFox AI qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
+      'Your SMS leads are ignoring you. SurFox AI follows up automatically until they respond. Upload your lead list, let AI qualify the buyers, and only talk to prospects ready to close.',
     site: '@getSurFox',
     creator: '@getSurFox',
   },
@@ -217,15 +217,17 @@ export default function Page() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight" style={{ fontFamily: 'var(--font-sora)' }}>
-            Turn Cold Leads
+            Your SMS Leads Are
             <br />
-            <span className="gradient-text">Into Ready Buyers</span>
+            <span className="gradient-text">Ignoring You.</span>
             <br />
-            Automatically.
+            SurFox AI Follows Up
+            <br />
+            Until They Don&apos;t.
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 leading-relaxed font-normal">
-            Your next deal is already in your CRM. SurFox AI finds it.
+            Upload your cold lead list. Our AI texts every one of them, qualifies the real buyers, and hands them off to you ready to close.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-start gap-3 sm:gap-4">
