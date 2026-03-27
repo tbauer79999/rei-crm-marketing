@@ -251,7 +251,7 @@ export default function Page() {
             <div className="mt-12 pt-8 border-t border-white/[0.06]">
               <p className="text-xs text-white/40 uppercase tracking-widest mb-4">Built on trusted infrastructure</p>
               <div className="flex flex-wrap items-center justify-start gap-6">
-                {['AWS', 'Twilio', 'OpenAI', 'Supabase'].map((partner) => (
+                {['AWS', 'Twilio', 'Anthropic', 'Supabase'].map((partner) => (
                   <div key={partner} className="text-sm text-white/40 font-medium">
                     {partner}
                   </div>
