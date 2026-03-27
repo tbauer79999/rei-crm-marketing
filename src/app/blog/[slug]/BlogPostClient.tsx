@@ -249,7 +249,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   return (
                     <blockquote key={index} className="not-prose my-8 border-l-4 border-blue-500 pl-6 py-2">
                       <p className="text-white text-lg sm:text-xl italic leading-relaxed mb-3">&ldquo;{quoteText}&rdquo;</p>
-                      <cite className="text-sm font-semibold text-white/50 not-italic">&mdash; {attribution}</cite>
+                      {attribution && <cite className="text-sm font-semibold text-white/50 not-italic">&mdash; {attribution}</cite>}
                     </blockquote>
                   );
                 }
