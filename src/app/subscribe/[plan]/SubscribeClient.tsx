@@ -1,7 +1,7 @@
 'use client'
 
 import { useParams } from 'next/navigation';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const PLANS = {
   starter: {
@@ -53,6 +53,11 @@ export default function Subscribe() {
   const plan = Array.isArray(params.plan) ? params.plan[0] : params.plan;
   const selectedPlan = plan ? PLANS[plan as keyof typeof PLANS] : null;
 
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [agreedToTcpa, setAgreedToTcpa] = useState(false);
+  const [termsError, setTermsError] = useState('');
+  const [tcpaError, setTcpaError] = useState('');
+
     // Capture referral code from URL and store in localStorage
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -64,25 +69,42 @@ export default function Subscribe() {
 
   const handleSubscribe = async () => {
   if (!selectedPlan) return;
-  
+
+  // Clickwrap validation
+  setTermsError('');
+  setTcpaError('');
+  let hasError = false;
+  if (!agreedToTerms) {
+    setTermsError('You must agree to the Terms of Service and Privacy Policy.');
+    hasError = true;
+  }
+  if (!agreedToTcpa) {
+    setTcpaError('You must confirm TCPA compliance responsibility.');
+    hasError = true;
+  }
+  if (hasError) return;
+
   // Get referral code from URL OR localStorage
   const urlParams = new URLSearchParams(window.location.search);
   let referralCode = urlParams.get('ref');
-  
+
   // If not in URL, check localStorage (set from pricing page or initial landing)
   if (!referralCode) {
     referralCode = localStorage.getItem('surfox_ref');
   }
-  
+
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stripe/create-checkout-session`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ 
+    body: JSON.stringify({
       priceId: selectedPlan.priceId,
-      referralCode: referralCode
+      referralCode: referralCode,
+      metadata: {
+        terms_agreed_at: new Date().toISOString()
+      }
     })
   });
-  
+
   const { url } = await response.json();
   window.location.href = url;
 };
@@ -173,8 +195,44 @@ export default function Subscribe() {
             </div>
           </div>
 
+          {/* Terms Agreement Checkboxes */}
+          <div className="space-y-3 mb-6">
+            <div>
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={agreedToTerms}
+                  onChange={(e) => { setAgreedToTerms(e.target.checked); if (e.target.checked) setTermsError(''); }}
+                  className="mt-1 h-4 w-4 rounded border-white/20 accent-blue-400"
+                />
+                <span className="text-sm text-white/70">
+                  I have read and agree to the SurFox AI{' '}
+                  <a href="https://www.getsurfox.com/terms" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Terms of Service</a>
+                  {' '}and{' '}
+                  <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Privacy Policy</a>.
+                </span>
+              </label>
+              {termsError && <p className="text-red-400 text-xs mt-1 ml-7">{termsError}</p>}
+            </div>
+
+            <div>
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={agreedToTcpa}
+                  onChange={(e) => { setAgreedToTcpa(e.target.checked); if (e.target.checked) setTcpaError(''); }}
+                  className="mt-1 h-4 w-4 rounded border-white/20 accent-blue-400"
+                />
+                <span className="text-sm text-white/70">
+                  I confirm that I have obtained all legally required consent to contact every lead I upload, and I accept full responsibility for TCPA compliance and all applicable messaging laws. I understand that SurFox AI is not responsible for my messaging practices.
+                </span>
+              </label>
+              {tcpaError && <p className="text-red-400 text-xs mt-1 ml-7">{tcpaError}</p>}
+            </div>
+          </div>
+
           {/* CTA Button */}
-          <button 
+          <button
             onClick={handleSubscribe}
             className="w-full gradient-bg text-white px-8 py-4 rounded-xl hover:gradient-bg-600 transition-all font-semibold text-lg shadow-sm shadow-blue-500/5 shadow-blue-500/5"
           >

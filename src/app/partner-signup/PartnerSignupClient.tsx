@@ -35,6 +35,10 @@ function PartnerSignupContent() {
   const [invite, setInvite] = useState<PartnerInvite | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [agreedToTcpa, setAgreedToTcpa] = useState(false);
+  const [termsError, setTermsError] = useState('');
+  const [tcpaError, setTcpaError] = useState('');
 
   useEffect(() => {
     if (!code) {
@@ -74,7 +78,21 @@ function PartnerSignupContent() {
 
   const handleSubscribe = async () => {
     if (!invite) return;
-    
+
+    // Clickwrap validation
+    setTermsError('');
+    setTcpaError('');
+    let hasClickwrapError = false;
+    if (!agreedToTerms) {
+      setTermsError('You must agree to the Terms of Service and Privacy Policy.');
+      hasClickwrapError = true;
+    }
+    if (!agreedToTcpa) {
+      setTcpaError('You must confirm TCPA compliance responsibility.');
+      hasClickwrapError = true;
+    }
+    if (hasClickwrapError) return;
+
     try {
       const response = await fetch('https://api.surfox.ai/api/stripe/create-checkout-session', {
         method: 'POST',
@@ -95,7 +113,8 @@ function PartnerSignupContent() {
             business_admin_discount: invite.business_admin_discount,
             max_business_admins: invite.max_business_admins,
             trial_days: invite.trial_days,
-            custom_plan_limits: invite.custom_plan_limits
+            custom_plan_limits: invite.custom_plan_limits,
+            terms_agreed_at: new Date().toISOString()
           }
         })
       });
@@ -386,8 +405,44 @@ function PartnerSignupContent() {
             </div>
           </div>
 
+          {/* Terms Agreement Checkboxes */}
+          <div className="space-y-3 mb-6">
+            <div>
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={agreedToTerms}
+                  onChange={(e) => { setAgreedToTerms(e.target.checked); if (e.target.checked) setTermsError(''); }}
+                  className="mt-1 h-4 w-4 rounded border-white/20 accent-blue-400"
+                />
+                <span className="text-sm text-white/70">
+                  I have read and agree to the SurFox AI{' '}
+                  <a href="https://www.getsurfox.com/terms" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Terms of Service</a>
+                  {' '}and{' '}
+                  <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Privacy Policy</a>.
+                </span>
+              </label>
+              {termsError && <p className="text-red-400 text-xs mt-1 ml-7">{termsError}</p>}
+            </div>
+
+            <div>
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={agreedToTcpa}
+                  onChange={(e) => { setAgreedToTcpa(e.target.checked); if (e.target.checked) setTcpaError(''); }}
+                  className="mt-1 h-4 w-4 rounded border-white/20 accent-blue-400"
+                />
+                <span className="text-sm text-white/70">
+                  I confirm that I have obtained all legally required consent to contact every lead I upload, and I accept full responsibility for TCPA compliance and all applicable messaging laws. I understand that SurFox AI is not responsible for my messaging practices.
+                </span>
+              </label>
+              {tcpaError && <p className="text-red-400 text-xs mt-1 ml-7">{tcpaError}</p>}
+            </div>
+          </div>
+
           {/* CTA Button */}
-          <button 
+          <button
             onClick={handleSubscribe}
             className={`w-full text-white px-8 py-4 rounded-xl hover:opacity-90 transition-all font-semibold text-lg shadow-sm shadow-blue-500/5 shadow-blue-500/5 ${
               isPartnerAdmin ? 'bg-purple-600 hover:bg-purple-700' : 'gradient-bg-600 hover:gradient-bg-700'

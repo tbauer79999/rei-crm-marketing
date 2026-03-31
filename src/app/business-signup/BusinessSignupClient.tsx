@@ -29,6 +29,10 @@ function BusinessSignupContent() {
   const [invitation, setInvitation] = useState<Invitation | null>(null);
   const [error, setError] = useState('');
   const [processingPayment, setProcessingPayment] = useState(false);
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [agreedToTcpa, setAgreedToTcpa] = useState(false);
+  const [termsError, setTermsError] = useState('');
+  const [tcpaError, setTcpaError] = useState('');
 
   // Standard pricing (before discount)
   const standardPricing = {
@@ -94,6 +98,20 @@ function BusinessSignupContent() {
       return;
     }
 
+    // Clickwrap validation
+    setTermsError('');
+    setTcpaError('');
+    let hasClickwrapError = false;
+    if (!agreedToTerms) {
+      setTermsError('You must agree to the Terms of Service and Privacy Policy.');
+      hasClickwrapError = true;
+    }
+    if (!agreedToTcpa) {
+      setTcpaError('You must confirm TCPA compliance responsibility.');
+      hasClickwrapError = true;
+    }
+    if (hasClickwrapError) return;
+
     setProcessingPayment(true);
 
     try {
@@ -115,7 +133,8 @@ function BusinessSignupContent() {
             parent_tenant_id: invitation.parent_tenant_id,
             business_admin_discount: invitation.business_admin_discount,
             partner_name: invitation.partner_name,
-            is_business_admin: 'true'
+            is_business_admin: 'true',
+            terms_agreed_at: new Date().toISOString()
           }
         })
       });
@@ -209,6 +228,42 @@ function BusinessSignupContent() {
             Setting up location for: <span className="font-medium">{invitation.first_name} {invitation.last_name}</span>
           </p>
           <p className="text-sm text-white/50">{invitation.email}</p>
+        </div>
+
+        {/* Terms Agreement Checkboxes */}
+        <div className="max-w-2xl mx-auto mb-8 bg-card-bg rounded-2xl border-2 border-white/[0.08] p-6 space-y-3">
+          <div>
+            <label className="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={agreedToTerms}
+                onChange={(e) => { setAgreedToTerms(e.target.checked); if (e.target.checked) setTermsError(''); }}
+                className="mt-1 h-4 w-4 rounded border-white/20 accent-blue-400"
+              />
+              <span className="text-sm text-white/70">
+                I have read and agree to the SurFox AI{' '}
+                <a href="https://www.getsurfox.com/terms" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Terms of Service</a>
+                {' '}and{' '}
+                <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Privacy Policy</a>.
+              </span>
+            </label>
+            {termsError && <p className="text-red-400 text-xs mt-1 ml-7">{termsError}</p>}
+          </div>
+
+          <div>
+            <label className="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={agreedToTcpa}
+                onChange={(e) => { setAgreedToTcpa(e.target.checked); if (e.target.checked) setTcpaError(''); }}
+                className="mt-1 h-4 w-4 rounded border-white/20 accent-blue-400"
+              />
+              <span className="text-sm text-white/70">
+                I confirm that I have obtained all legally required consent to contact every lead I upload, and I accept full responsibility for TCPA compliance and all applicable messaging laws. I understand that SurFox AI is not responsible for my messaging practices.
+              </span>
+            </label>
+            {tcpaError && <p className="text-red-400 text-xs mt-1 ml-7">{tcpaError}</p>}
+          </div>
         </div>
 
         {/* Pricing Cards */}
