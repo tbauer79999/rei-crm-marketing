@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Calendar, Clock, User, ArrowLeft, Share2, Linkedin, Twitter, Mail, RefreshCw } from 'lucide-react';
-import { BlogPost, ContentBlock } from '@/data/blog-posts';
+import { BlogPost, ContentBlock, ProductCalloutBlock, CtaBoxBlock } from '@/data/blog-posts';
 
 function extractFAQs(content: ContentBlock[]): Array<{ question: string; answer: string }> {
   const faqIndex = content.findIndex(
@@ -111,7 +111,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
       </section>
 
       {/* Article Header */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="pt-12 pb-6 sm:pt-16 sm:pb-8 md:pt-20 md:pb-8 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -202,7 +202,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
       </section>
 
       {/* Article Content */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8">
+      <section className="pt-0 pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 md:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.article
             initial={{ opacity: 0, y: 20 }}
@@ -261,6 +261,46 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                       </p>
                     </div>
                   );
+                case 'product-callout': {
+                  const pcBlock = block as ProductCalloutBlock;
+                  return (
+                    <div key={index} className="not-prose mb-8 flex justify-end">
+                      <p className="text-sm text-white/50 m-0">
+                        {pcBlock.content}{' '}
+                        <Link href={pcBlock.linkHref} className="text-blue-400 font-medium hover:underline">
+                          {pcBlock.linkText}
+                        </Link>
+                      </p>
+                    </div>
+                  );
+                }
+                case 'cta-box': {
+                  const ctaBlock = block as CtaBoxBlock;
+                  return (
+                    <div key={index} className="not-prose my-12 p-8 sm:p-10 rounded-2xl border-2 border-blue-500/20 bg-gradient-to-br from-blue-500/[0.06] to-violet-500/[0.04]">
+                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
+                        {ctaBlock.headline}
+                      </h3>
+                      <p className="text-white/60 text-base leading-relaxed mb-6 max-w-2xl">
+                        {ctaBlock.subhead}
+                      </p>
+                      <div className="flex flex-wrap gap-3">
+                        <Link
+                          href={ctaBlock.primaryButton.href}
+                          className="inline-flex items-center px-6 py-3 rounded-lg bg-blue-500 text-white font-semibold text-sm hover:bg-blue-400 transition-colors"
+                        >
+                          {ctaBlock.primaryButton.text}
+                        </Link>
+                        <Link
+                          href={ctaBlock.secondaryButton.href}
+                          className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-white/[0.12] text-white/70 font-semibold text-sm hover:border-blue-500/40 hover:text-blue-400 transition-colors"
+                        >
+                          {ctaBlock.secondaryButton.text}
+                        </Link>
+                      </div>
+                    </div>
+                  );
+                }
                 case 'table':
                   return (
                     <div key={index} className="not-prose my-8 overflow-x-auto rounded-xl border border-white/[0.08]">
@@ -421,15 +461,20 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
       {/* About SurFox AI */}
       <section className="py-10 px-4 sm:px-6 md:px-8 border-t border-white/[0.06]">
         <div className="max-w-4xl mx-auto">
-          <p className="text-sm text-white/50 leading-relaxed">
-            <strong className="text-white/70">About SurFox AI</strong> - SurFox AI is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams with full conversation context.{' '}
-            <Link href="/demo" className="text-blue-400 hover:underline">See how it works →</Link>
+          <p className="text-sm text-white/50 leading-relaxed mb-4">
+            <strong className="text-white/70">About SurFox AI</strong> - SurFox AI is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams with full conversation context.
           </p>
+          <Link
+            href="/platform"
+            className="inline-flex items-center px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/30 text-blue-400 font-medium text-xs hover:bg-blue-500/20 hover:border-blue-500/50 transition-colors"
+          >
+            Read the platform overview &rarr;
+          </Link>
         </div>
       </section>
 
       {/* Related Posts */}
-      {relatedPosts.length > 0 && (
+      {(relatedPosts.length > 0 || blogPost.productCard) && (
         <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-10 sm:mb-12 text-center">
@@ -463,6 +508,33 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   </Link>
                 </motion.div>
               ))}
+              {blogPost.productCard && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: relatedPosts.length * 0.1 }}
+                  className="bg-card-bg rounded-xl border-2 border-blue-500/20 p-6 hover:border-blue-500/40 hover:shadow-sm shadow-blue-500/5 transition-all group"
+                >
+                  <div className="mb-4">
+                    <span className="inline-block px-3 py-1 rounded-full glass-card border border-blue-500/20 text-xs font-semibold text-blue-400">
+                      {blogPost.productCard.category}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                    {blogPost.productCard.title}
+                  </h3>
+                  <p className="text-white/50 text-sm leading-relaxed mb-4">
+                    {blogPost.productCard.description}
+                  </p>
+                  <Link
+                    href={blogPost.productCard.href}
+                    className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all text-sm"
+                  >
+                    {blogPost.productCard.ctaText}
+                  </Link>
+                </motion.div>
+              )}
             </div>
           </div>
         </section>

@@ -28,7 +28,11 @@
       "Bash(xargs perl:*)",
       "WebFetch(domain:getsurfox.com)",
       "Bash(grep -r \"ringless\\\\|voicemail\\\\|call.*back\\\\|inbound.*call\" d:/REI-CRM/Surfox-website/rei-crm-marketing/src/ --include=*.tsx --include=*.ts -n)",
-      "Bash(sed \"s/'''',.*//\")"
+      "Bash(sed \"s/'''',.*//\")",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/blog/trade-show-lead-follow-up-failure)",
+      "Bash(curl -s http://localhost:3000/blog/trade-show-lead-follow-up-failure)"
     ],
     "additionalDirectories": [
       "D:\\REI-CRM\\lead-app\\my-tailwind-app\\supabase\\functions\\generate-web-chat-reply",
