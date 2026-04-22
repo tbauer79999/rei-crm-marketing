@@ -15,6 +15,7 @@ const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [blogFirstName, setBlogFirstName] = useState('');
   const [blogEmail, setBlogEmail] = useState('');
   const [blogSubmitting, setBlogSubmitting] = useState(false);
   const [blogSubmitted, setBlogSubmitted] = useState(false);
@@ -27,12 +28,13 @@ export default function Blog() {
       const res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'newsletter', email: blogEmail, source: 'blog' }),
+        body: JSON.stringify({ type: 'newsletter', email: blogEmail, firstName: blogFirstName, source: 'blog' }),
       });
       const data = await res.json();
       if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');
       setBlogSubmitted(true);
       setBlogEmail('');
+      setBlogFirstName('');
       setTimeout(() => setBlogSubmitted(false), 5000);
     } catch {
       alert('Something went wrong. Please try again.');
@@ -186,22 +188,32 @@ export default function Blog() {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleBlogSubmit} className="flex flex-col sm:flex-row gap-4 justify-center px-4 max-w-2xl mx-auto">
+              <form onSubmit={handleBlogSubmit} className="flex flex-col gap-4 px-4 max-w-2xl mx-auto">
                 <input
-                  type="email"
-                  value={blogEmail}
-                  onChange={(e) => setBlogEmail(e.target.value)}
-                  placeholder="Enter your email"
+                  type="text"
+                  value={blogFirstName}
+                  onChange={(e) => setBlogFirstName(e.target.value)}
+                  placeholder="First name"
                   required
-                  className="flex-1 px-6 py-4 rounded-lg bg-background border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition text-base text-white placeholder:text-white/40"
+                  className="w-full px-6 py-4 rounded-lg bg-background border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition text-base text-white placeholder:text-white/40"
                 />
-                <button
-                  type="submit"
-                  disabled={blogSubmitting}
-                  className="px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-purple-500/25 transition-all whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  {blogSubmitting ? 'Subscribing...' : 'Subscribe'}
-                </button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <input
+                    type="email"
+                    value={blogEmail}
+                    onChange={(e) => setBlogEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    required
+                    className="flex-1 px-6 py-4 rounded-lg bg-background border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition text-base text-white placeholder:text-white/40"
+                  />
+                  <button
+                    type="submit"
+                    disabled={blogSubmitting}
+                    className="px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-purple-500/25 transition-all whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {blogSubmitting ? 'Subscribing...' : 'Subscribe'}
+                  </button>
+                </div>
               </form>
             )}
           </motion.div>

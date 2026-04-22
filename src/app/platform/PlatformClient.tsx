@@ -7,6 +7,7 @@ import { ArrowRight, ArrowDownLeft, ArrowUpRight, MessageSquare, Phone, Mail, Cr
 const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
 
 export default function PlatformPage() {
+  const [platformFirstName, setPlatformFirstName] = useState('');
   const [platformEmail, setPlatformEmail] = useState('');
   const [platformSubmitting, setPlatformSubmitting] = useState(false);
 
@@ -18,12 +19,13 @@ export default function PlatformPage() {
       const res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'newsletter', email: platformEmail, source: 'platform' }),
+        body: JSON.stringify({ type: 'newsletter', email: platformEmail, firstName: platformFirstName, source: 'platform' }),
       });
       const data = await res.json();
       if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');
       alert('Thanks! You\'re on the list.');
       setPlatformEmail('');
+      setPlatformFirstName('');
     } catch {
       alert('Something went wrong. Please try again.');
     } finally {
@@ -359,22 +361,32 @@ export default function PlatformPage() {
               We're building this one layer at a time. Drop your email and we'll share updates as new capabilities go live.
             </p>
 
-            <form onSubmit={handlePlatformSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <form onSubmit={handlePlatformSubmit} className="flex flex-col gap-3 max-w-md mx-auto">
               <input
-                type="email"
-                value={platformEmail}
-                onChange={(e) => setPlatformEmail(e.target.value)}
-                placeholder="you@company.com"
+                type="text"
+                value={platformFirstName}
+                onChange={(e) => setPlatformFirstName(e.target.value)}
+                placeholder="First name"
                 required
-                className="flex-1 px-4 py-3 rounded-lg border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition bg-background text-white placeholder:text-white/40"
+                className="w-full px-4 py-3 rounded-lg border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition bg-background text-white placeholder:text-white/40"
               />
-              <button
-                type="submit"
-                disabled={platformSubmitting}
-                className="px-6 py-3 rounded-lg bg-card-bg text-white font-semibold hover:bg-card-bg border border-white/[0.08] transition disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                {platformSubmitting ? 'Sending...' : 'Stay in the know'}
-              </button>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  value={platformEmail}
+                  onChange={(e) => setPlatformEmail(e.target.value)}
+                  placeholder="you@company.com"
+                  required
+                  className="flex-1 px-4 py-3 rounded-lg border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition bg-background text-white placeholder:text-white/40"
+                />
+                <button
+                  type="submit"
+                  disabled={platformSubmitting}
+                  className="px-6 py-3 rounded-lg bg-card-bg text-white font-semibold hover:bg-card-bg border border-white/[0.08] transition disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {platformSubmitting ? 'Sending...' : 'Stay in the know'}
+                </button>
+              </div>
             </form>
           </motion.div>
         </div>

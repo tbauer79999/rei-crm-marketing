@@ -13,6 +13,7 @@ import { Zap } from 'lucide-react'
 const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
 
 export default function Footer() {
+  const [firstName, setFirstName] = useState('')
   const [email, setEmail] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
@@ -25,12 +26,13 @@ export default function Footer() {
       const res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'newsletter', email, source: 'footer' }),
+        body: JSON.stringify({ type: 'newsletter', email, firstName, source: 'footer' }),
       });
       const data = await res.json();
       if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');
       setIsSubmitted(true)
       setEmail('')
+      setFirstName('')
       setTimeout(() => setIsSubmitted(false), 5000)
     } catch {
       alert('Something went wrong. Please try again.')
@@ -70,6 +72,14 @@ export default function Footer() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-3">
+                <input
+                  type="text"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  placeholder="First name"
+                  required
+                  className="w-full px-4 py-2.5 glass-card border border-white/[0.08] rounded-lg text-sm text-white placeholder-white/30 focus:outline-none focus:border-blue-500/50 transition"
+                />
                 <input
                   type="email"
                   value={email}
