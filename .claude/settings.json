@@ -37,7 +37,8 @@
     "additionalDirectories": [
       "D:\\REI-CRM\\lead-app\\my-tailwind-app\\supabase\\functions\\generate-web-chat-reply",
       "d:\\REI-CRM\\Surfox-website\\rei-crm-marketing\\surfox-dark-theme\\src\\app\\blog\\[slug]",
-      "\\tmp"
+      "\\tmp",
+      "d:\\REI-CRM\\lead-app\\my-tailwind-app"
     ]
   }
 }

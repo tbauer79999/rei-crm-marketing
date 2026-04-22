@@ -25,7 +25,7 @@ export default function Footer() {
       const res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'newsletter', email }),
+        body: JSON.stringify({ type: 'newsletter', email, source: 'footer' }),
       });
       const data = await res.json();
       if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');

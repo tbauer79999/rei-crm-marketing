@@ -11,8 +11,35 @@ const blogPosts = getAllBlogPosts();
 
 const categories = ['All', 'AI & Technology', 'Product Insights', 'Sales Strategy', 'Security & Privacy', 'Strategy', 'Business Impact'];
 
+const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
+
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [blogEmail, setBlogEmail] = useState('');
+  const [blogSubmitting, setBlogSubmitting] = useState(false);
+  const [blogSubmitted, setBlogSubmitted] = useState(false);
+
+  const handleBlogSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!blogEmail) return;
+    setBlogSubmitting(true);
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'newsletter', email: blogEmail, source: 'blog' }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');
+      setBlogSubmitted(true);
+      setBlogEmail('');
+      setTimeout(() => setBlogSubmitted(false), 5000);
+    } catch {
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setBlogSubmitting(false);
+    }
+  };
 
   const filteredPosts = selectedCategory === 'All'
     ? blogPosts
@@ -149,16 +176,34 @@ export default function Blog() {
               Get the latest insights on AI, sales intelligence, and conversation analysis delivered to your inbox.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 max-w-2xl mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-lg bg-background border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition text-base text-white placeholder:text-white/40"
-              />
-              <button className="px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-purple-500/25 transition-all whitespace-nowrap">
-                Subscribe
-              </button>
-            </div>
+            {blogSubmitted ? (
+              <div className="max-w-2xl mx-auto px-4">
+                <div className="px-6 py-4 rounded-lg bg-background border-2 border-green-500/30 text-green-400 text-base flex items-center justify-center gap-2">
+                  <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                  <span>Thanks for subscribing!</span>
+                </div>
+              </div>
+            ) : (
+              <form onSubmit={handleBlogSubmit} className="flex flex-col sm:flex-row gap-4 justify-center px-4 max-w-2xl mx-auto">
+                <input
+                  type="email"
+                  value={blogEmail}
+                  onChange={(e) => setBlogEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="flex-1 px-6 py-4 rounded-lg bg-background border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition text-base text-white placeholder:text-white/40"
+                />
+                <button
+                  type="submit"
+                  disabled={blogSubmitting}
+                  className="px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-purple-500/25 transition-all whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {blogSubmitting ? 'Subscribing...' : 'Subscribe'}
+                </button>
+              </form>
+            )}
           </motion.div>
         </div>
       </section>
