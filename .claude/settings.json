@@ -40,7 +40,8 @@
       "Bash(git -C \"d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme\" status)",
       "Read(//c/Users/thoma/.claude/projects/d--REI-CRM-Surfox-website-rei-crm-marketing/memory/**)",
       "Bash(git -C \"d:/REI-CRM/Surfox-website/rei-crm-marketing\" diff --cached --stat)",
-      "Bash(git -C \"d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme\" diff --cached --stat)"
+      "Bash(git -C \"d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme\" diff --cached --stat)",
+      "Bash(awk 'NR>=3686 && /—/ {print NR\": \"$0}' \"d:/REI-CRM/Surfox-website/rei-crm-marketing/src/data/blog-posts.ts\")"
     ],
     "additionalDirectories": [
       "D:\\REI-CRM\\lead-app\\my-tailwind-app\\supabase\\functions\\generate-web-chat-reply",

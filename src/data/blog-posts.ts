@@ -3685,7 +3685,7 @@ export const blogPosts: BlogPost[] = [
     id: 18,
     slug: 'trade-show-follow-up-conversion-cliff',
     title: 'The 21-Day Post-Trade-Show Sequence Is Right. The Starting Point Is Wrong.',
-    excerpt: 'The standard 21-day post-trade-show follow-up sequence has the right channels and the right cadence — but it starts 23 hours past the conversion cliff. Here\'s the structural fix, and why SMS belongs at minute one.',
+    excerpt: 'The standard 21-day post-trade-show follow-up sequence has the right channels and the right cadence, but it starts 23 hours past the conversion cliff. Here\'s the structural fix, and why SMS belongs at minute one.',
     category: 'Sales Strategy',
     date: '2026-04-27',
     lastUpdated: '2026-04-27',
@@ -3712,7 +3712,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'tldr',
-        content: 'The standard 21-day post-trade-show sequence (LinkedIn day 2 → message day 7 → content day 15 → email day 21) has the right channels but starts on the wrong side of the conversion cliff.\nMIT/HBR research found leads contacted within 5 minutes are 21x more likely to qualify than those reached at 30 minutes; the first minute drives a 391% lift.\nOnly 8% of B2B companies respond in under 5 minutes; the average B2B response time runs 42 hours.\nSMS achieves 95% open within 3 minutes, 81% read within 5 minutes, and 34.7% one-to-one B2B reply rates vs. 3-5% for cold email.\nThe fix is not to discard the 21-day sequence — it is to add an SMS touch at minute one, before the prospect leaves the show floor.'
+        content: 'The standard 21-day post-trade-show sequence (LinkedIn day 2 → message day 7 → content day 15 → email day 21) has the right channels but starts on the wrong side of the conversion cliff.\nMIT/HBR research found leads contacted within 5 minutes are 21x more likely to qualify than those reached at 30 minutes; the first minute drives a 391% lift.\nOnly 8% of B2B companies respond in under 5 minutes; the average B2B response time runs 42 hours.\nSMS achieves 95% open within 3 minutes, 81% read within 5 minutes, and 34.7% one-to-one B2B reply rates vs. 3-5% for cold email.\nThe fix is not to discard the 21-day sequence. It is to add an SMS touch at minute one, before the prospect leaves the show floor.'
       },
       {
         type: 'heading',
@@ -3740,7 +3740,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'By the time they accept it — which on LinkedIn typically takes another one to three days — you are nearly a week out from the conversation. The sequence has correctly identified the channels and the cadence. It has placed the entire thing on the wrong side of the conversion curve.'
+        content: 'By the time they accept it, which on LinkedIn typically takes another one to three days, you are nearly a week out from the conversation. The sequence has correctly identified the channels and the cadence. It has placed the entire thing on the wrong side of the conversion curve.'
       },
       {
         type: 'heading',

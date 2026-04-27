@@ -90,10 +90,13 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
     setShowShareMenu(false);
   };
 
-  const displayDate = new Date(blogPost.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-  const displayUpdated = blogPost.lastUpdated
-    ? new Date(blogPost.lastUpdated).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
-    : null;
+  // Parse YYYY-MM-DD as a local date so the display day doesn't shift backwards in negative-UTC timezones.
+  const formatPostDate = (iso: string) => {
+    const [y, m, d] = iso.split('-').map(Number);
+    return new Date(y, m - 1, d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  };
+  const displayDate = formatPostDate(blogPost.date);
+  const displayUpdated = blogPost.lastUpdated ? formatPostDate(blogPost.lastUpdated) : null;
 
   return (
     <div className="bg-background text-white">
