@@ -32,7 +32,15 @@
       "Bash(npx tsc *)",
       "Bash(npm run *)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/blog/trade-show-lead-follow-up-failure)",
-      "Bash(curl -s http://localhost:3000/blog/trade-show-lead-follow-up-failure)"
+      "Bash(curl -s http://localhost:3000/blog/trade-show-lead-follow-up-failure)",
+      "Bash(git -C \"d:/REI-CRM/Surfox-website/rei-crm-marketing\" add src/data/blog-posts.ts surfox-dark-theme/src/data/blog-posts.ts)",
+      "Bash(git -C \"d:/REI-CRM/Surfox-website/rei-crm-marketing\" status)",
+      "Bash(git -C \"d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme\" add src/data/blog-posts.ts)",
+      "Bash(git -C \"d:/REI-CRM/Surfox-website/rei-crm-marketing\" add src/data/blog-posts.ts)",
+      "Bash(git -C \"d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme\" status)",
+      "Read(//c/Users/thoma/.claude/projects/d--REI-CRM-Surfox-website-rei-crm-marketing/memory/**)",
+      "Bash(git -C \"d:/REI-CRM/Surfox-website/rei-crm-marketing\" diff --cached --stat)",
+      "Bash(git -C \"d:/REI-CRM/Surfox-website/rei-crm-marketing/surfox-dark-theme\" diff --cached --stat)"
     ],
     "additionalDirectories": [
       "D:\\REI-CRM\\lead-app\\my-tailwind-app\\supabase\\functions\\generate-web-chat-reply",
