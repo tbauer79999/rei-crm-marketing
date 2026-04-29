@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, MessageSquare, Phone, Zap, Target, Clock, LayoutDashboard } from 'lucide-react';
+import { ArrowRight, MessageSquare, Zap, Clock, LayoutDashboard, Tag, Webhook, Sparkles, DollarSign } from 'lucide-react';
 
 export default function GoHighLevelClient() {
   return (
@@ -21,12 +21,12 @@ export default function GoHighLevelClient() {
               <span className="text-sm font-semibold text-blue-400">GoHighLevel + SurFox AI</span>
             </div>
 
-            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
-              Your GHL just<br className="hidden sm:block" /> got a brain.
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
+              Native HighLevel integration.<br className="hidden sm:block" /> No Zapier required.
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-10 max-w-3xl mx-auto leading-relaxed">
-              You run your wholesale business in GoHighLevel. Now SurFox AI plugs in to handle every lead conversation automatically: qualifying prospects, detecting intent, and sending hot leads straight back into your pipeline.
+              Tag a contact in HighLevel. SurFox AI takes over the conversation. Real-time, tag-based routing to any campaign.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -67,27 +67,142 @@ export default function GoHighLevelClient() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 leading-tight">
-              GHL is your command center.<br className="hidden sm:block" /> But it can't have a conversation.
+              HighLevel runs your pipelines.<br className="hidden sm:block" /> But it can't have a conversation.
             </h2>
 
             <div className="space-y-5 text-lg sm:text-xl text-white/60 leading-relaxed max-w-3xl">
               <p>
-                GoHighLevel runs your pipelines, your follow-up sequences, your entire operation. But when a lead replies (really replies) GHL can't think. It just fires the next message in the sequence.
-              </p>
-              <p>
-                You're texting hundreds of leads a month. Most of them go cold because nobody followed up fast enough, or the response got buried.
+                HighLevel handles your sequences, your funnels, your follow-ups. But when a lead actually replies, HighLevel can't think. It just fires the next templated message.
               </p>
               <p className="font-medium text-white">
-                That's not a GHL problem. That's a bandwidth problem. SurFox AI fixes it.
+                SurFox AI handles the conversation. Qualifies the lead. Sends hot ones back to your team.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 3: How It Works */}
-      <section id="how-it-works" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg">
-        <div className="max-w-5xl mx-auto">
+      {/* Section 3: Two Paths */}
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+              Two ways to connect
+            </h2>
+            <p className="text-lg text-white/60 mt-4 max-w-2xl mx-auto">
+              Pick the path that fits your operation. Most operators choose native.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+            {/* Card A: Native (Recommended) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.05 }}
+              className="relative p-8 rounded-2xl border-2 border-blue-500/40 bg-gradient-to-b from-blue-500/[0.06] to-transparent shadow-[0_0_40px_rgba(59,130,246,0.08)]"
+            >
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full gradient-bg text-white">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span className="text-xs font-bold uppercase tracking-wider">Recommended</span>
+              </div>
+
+              <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/30 flex items-center justify-center mb-5 mt-2">
+                <Webhook className="w-6 h-6 text-blue-400" />
+              </div>
+
+              <h3 className="text-2xl font-bold text-white mb-2">Native HighLevel Workflows</h3>
+              <p className="text-blue-400 font-medium mb-6">Real-time. Free. Tag-based routing.</p>
+
+              <ul className="space-y-3 mb-6">
+                {[
+                  'Instant trigger, no polling delay',
+                  'No Zapier subscription or per-task fees',
+                  'Tag any contact in HighLevel, route to any SurFox AI campaign',
+                  'Add unlimited tag mappings, no extra workflows needed',
+                  'Built for high-volume operators',
+                ].map((bullet, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-blue-500/15 border border-blue-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+                    </div>
+                    <span className="text-white/80 leading-relaxed">{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="text-sm text-white/60 leading-relaxed pt-4 border-t border-white/[0.06]">
+                Setup takes about 10 minutes inside SurFox AI Settings → Integrations → HighLevel.
+              </p>
+            </motion.div>
+
+            {/* Card B: Zapier */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="p-8 rounded-2xl border border-white/[0.08] bg-background/40"
+            >
+              <div className="w-12 h-12 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center mb-5 mt-2">
+                <Zap className="w-6 h-6 text-white/70" />
+              </div>
+
+              <h3 className="text-2xl font-bold text-white mb-2">Zapier Templates</h3>
+              <p className="text-white/60 font-medium mb-6">One-click setup with pre-built Zaps.</p>
+
+              <ul className="space-y-3 mb-8">
+                {[
+                  'Two pre-built Zap templates',
+                  'Pipeline stage trigger',
+                  'Good for simple, single-campaign setups',
+                  'Subject to Zapier task limits and pricing',
+                ].map((bullet, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-white/[0.04] border border-white/[0.1] flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-white/40" />
+                    </div>
+                    <span className="text-white/70 leading-relaxed">{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://zapier.com/webintent/create-zap?template=255711461"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-between gap-2 px-5 py-3 rounded-lg border border-white/[0.1] text-white text-sm font-semibold hover:bg-white/[0.04] hover:border-white/[0.2] transition"
+                >
+                  <span>Use Template 1: GHL to SurFox AI</span>
+                  <ArrowRight className="w-4 h-4 flex-shrink-0" />
+                </a>
+                <a
+                  href="https://zapier.com/webintent/create-zap?template=255711462"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-between gap-2 px-5 py-3 rounded-lg border border-white/[0.1] text-white text-sm font-semibold hover:bg-white/[0.04] hover:border-white/[0.2] transition"
+                >
+                  <span>Use Template 2: SurFox AI to GHL</span>
+                  <ArrowRight className="w-4 h-4 flex-shrink-0" />
+                </a>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: How It Works (Native) */}
+      <section id="how-it-works" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
+        <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -95,118 +210,63 @@ export default function GoHighLevelClient() {
             className="text-center mb-16"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-blue-500/20 mb-6">
-              <Zap className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-semibold text-blue-400">Powered by Zapier</span>
+              <Webhook className="w-4 h-4 text-blue-400" />
+              <span className="text-sm font-semibold text-blue-400">Native Integration</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-              Two Zaps. Fully automated.<br className="hidden sm:block" /> Set it up in under 10 minutes.
+              How the native integration works
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Flow 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.05 }}
-              className="p-8 rounded-2xl border-2 border-orange/30 gradient-bg/5"
-            >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card border border-blue-500/20 mb-6">
-                <span className="text-xs font-bold text-blue-400 uppercase tracking-wide">Leads in</span>
-              </div>
-
-              <div className="space-y-3 mb-6">
-                {[
-                  { icon: LayoutDashboard, label: 'GHL pipeline stage changes' },
-                  { icon: ArrowRight, label: 'SurFox AI creates lead', arrow: true },
-                  { icon: MessageSquare, label: 'AI starts texting' },
-                ].map((step, i) => (
-                  <div key={i}>
-                    {i > 0 && (
-                      <div className="flex justify-center py-1">
-                        <ArrowRight className="w-4 h-4 text-blue-400 rotate-90" />
-                      </div>
-                    )}
-                    <div className="flex items-center gap-3 p-3 rounded-xl bg-card-bg border border-orange/20">
-                      <div className="w-8 h-8 rounded-lg glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                        <step.icon className="w-4 h-4 text-blue-400" />
-                      </div>
-                      <span className="text-sm font-medium text-white">{step.label}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <p className="text-white/60 text-sm leading-relaxed mb-6">
-                When a contact hits a specific pipeline stage in GHL, SurFox AI automatically enrolls them in a campaign and starts qualifying them via SMS. Works with bulk uploads too.
-              </p>
-
-              <a
-                href="https://zapier.com/webintent/create-zap?template=255711461"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg gradient-bg text-white text-sm font-semibold hover:gradient-bg-600 transition"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+            {[
+              {
+                num: '01',
+                icon: Tag,
+                title: 'Tag your contact',
+                caption: "Add a tag like 'surfox_florida' in HighLevel.",
+              },
+              {
+                num: '02',
+                icon: Webhook,
+                title: 'Workflow fires instantly',
+                caption: 'Your HighLevel Workflow sends the contact to SurFox AI.',
+              },
+              {
+                num: '03',
+                icon: MessageSquare,
+                title: 'AI takes over',
+                caption: 'SurFox AI routes to the right campaign and starts the conversation.',
+              },
+            ].map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="relative p-8 rounded-2xl bg-card-bg border border-white/[0.08]"
               >
-                Use Template 1: GHL to SurFox AI
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </motion.div>
+                <div className="text-xs font-bold text-blue-400/70 tracking-widest mb-4">STEP {step.num}</div>
+                <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
+                  <step.icon className="w-6 h-6 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                <p className="text-white/60 leading-relaxed">{step.caption}</p>
 
-            {/* Flow 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="p-8 rounded-2xl border-2 border-white/[0.08]/20 bg-card-bg/5"
-            >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card-bg/10 mb-6">
-                <span className="text-xs font-bold text-white uppercase tracking-wide">Hot leads back</span>
-              </div>
-
-              <div className="space-y-3 mb-6">
-                {[
-                  { icon: Target, label: 'SurFox AI detects hot lead' },
-                  { icon: LayoutDashboard, label: 'GHL contact updated' },
-                  { icon: Phone, label: 'You call them' },
-                ].map((step, i) => (
-                  <div key={i}>
-                    {i > 0 && (
-                      <div className="flex justify-center py-1">
-                        <ArrowRight className="w-4 h-4 text-white rotate-90" />
-                      </div>
-                    )}
-                    <div className="flex items-center gap-3 p-3 rounded-xl bg-card-bg border border-white/[0.08]/10">
-                      <div className="w-8 h-8 rounded-lg bg-card-bg/10 flex items-center justify-center flex-shrink-0">
-                        <step.icon className="w-4 h-4 text-white" />
-                      </div>
-                      <span className="text-sm font-medium text-white">{step.label}</span>
-                    </div>
+                {i < 2 && (
+                  <div className="hidden md:flex absolute top-1/2 -right-4 -translate-y-1/2 w-8 h-8 rounded-full bg-card-bg border border-white/[0.08] items-center justify-center z-10">
+                    <ArrowRight className="w-4 h-4 text-blue-400" />
                   </div>
-                ))}
-              </div>
-
-              <p className="text-white/60 text-sm leading-relaxed mb-6">
-                When SurFox AI detects buying intent, it instantly tags the contact in GHL as "SurFox AI Hot Lead" so your team knows exactly who to call. You never leave GHL.
-              </p>
-
-              <a
-                href="https://zapier.com/webintent/create-zap?template=255711462"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border-2 border-white/[0.08] text-white text-sm font-semibold hover:bg-card-bg hover:text-white transition"
-              >
-                Use Template 2: SurFox AI to GHL
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </motion.div>
+                )}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Section 4: Why It Matters */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
+      {/* Section 5: Why It Matters */}
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -227,13 +287,13 @@ export default function GoHighLevelClient() {
                 body: 'Every reply gets handled instantly within your texting hours. No lead goes cold because your team was busy. Hot leads are waiting in your pipeline when you are ready to call.',
               },
               {
-                icon: Zap,
-                title: 'Stop texting manually.',
-                body: "You're already uploading lists into GHL. One pipeline stage change now triggers full AI qualification automatically.",
+                icon: DollarSign,
+                title: 'Scale without per-lead fees.',
+                body: 'No Zapier task counter ticking up with every contact. Native Workflows mean you can push thousands of leads through SurFox AI without watching your automation bill climb.',
               },
               {
                 icon: LayoutDashboard,
-                title: 'Stay in GHL.',
+                title: 'Stay in HighLevel.',
                 body: 'Hot leads surface right inside your existing pipeline. No new dashboard to learn. No workflow to rebuild.',
               },
             ].map((item, i) => (
@@ -243,7 +303,7 @@ export default function GoHighLevelClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="p-8 rounded-2xl bg-card-bg border border-white/[0.08] shadow-sm"
+                className="p-8 rounded-2xl bg-background border border-white/[0.08] shadow-sm"
               >
                 <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
                   <item.icon className="w-6 h-6 text-blue-400" />
@@ -256,8 +316,8 @@ export default function GoHighLevelClient() {
         </div>
       </section>
 
-      {/* Section 5: Setup Steps */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg">
+      {/* Section 6: Five Steps */}
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -274,9 +334,9 @@ export default function GoHighLevelClient() {
             {[
               'Start your SurFox AI free trial',
               'Set up your knowledge base and AI persona',
-              'Create your first campaign',
-              'Connect both Zapier templates (one-click setup)',
-              'Move a lead into your GHL pipeline stage and watch SurFox AI take over',
+              'Create your first campaign in SurFox AI',
+              'Add tag mappings in Settings → Integrations → HighLevel',
+              'Build one HighLevel Workflow with our webhook URL and watch leads flow',
             ].map((step, i) => (
               <motion.div
                 key={i}
@@ -284,7 +344,7 @@ export default function GoHighLevelClient() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07 }}
-                className="flex items-start gap-4 p-5 rounded-xl border border-white/[0.06] bg-background"
+                className="flex items-start gap-4 p-5 rounded-xl border border-white/[0.06] bg-card-bg"
               >
                 <div className="w-9 h-9 rounded-full gradient-bg text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
                   {i + 1}
@@ -313,7 +373,7 @@ export default function GoHighLevelClient() {
         </div>
       </section>
 
-      {/* Section 6: Bottom CTA */}
+      {/* Section 7: Bottom CTA */}
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -325,8 +385,8 @@ export default function GoHighLevelClient() {
               You've already built the pipeline.<br className="hidden sm:block" /> Now let AI work it.
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/30 mb-10 max-w-2xl mx-auto leading-relaxed">
-              SurFox AI connects to GoHighLevel in minutes. Your leads get followed up instantly. Your team focuses on calls, not texts.
+            <p className="text-lg sm:text-xl text-white/60 mb-10 max-w-2xl mx-auto leading-relaxed">
+              SurFox AI connects to HighLevel natively. Tag a contact, and the conversation starts. No Zapier middleman. No per-task fees.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
