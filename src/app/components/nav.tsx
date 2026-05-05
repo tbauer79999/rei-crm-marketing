@@ -167,6 +167,9 @@ export default function Nav() {
               <a href="https://surfox.ai" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
                 Sign In
               </a>
+              <Link href="/demo" className="px-4 py-2 rounded-lg border border-blue-400/40 text-white text-sm font-semibold hover:border-blue-400/80 hover:bg-blue-500/10 transition-colors">
+                Request Demo
+              </Link>
               <a href="/pricing" className="px-4 py-2 rounded-lg gradient-bg text-white text-sm font-semibold hover:opacity-90 transition-opacity">
                 Get Started
               </a>
@@ -232,6 +235,9 @@ export default function Nav() {
               <a href="https://surfox.ai" className="block text-white/70 hover:text-white transition-colors font-medium text-center py-2">
                 Sign In
               </a>
+              <Link href="/demo" onClick={() => setMobileMenuOpen(false)} className="block border border-blue-400/40 text-white font-semibold text-center py-2 rounded-lg hover:border-blue-400/80 hover:bg-blue-500/10 transition-colors">
+                Request Demo
+              </Link>
               <a href="/pricing" className="block gradient-bg text-white font-semibold text-center py-2 rounded-lg hover:opacity-90 transition-opacity">
                 Get Started
               </a>
