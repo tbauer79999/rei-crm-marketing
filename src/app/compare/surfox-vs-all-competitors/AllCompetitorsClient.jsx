@@ -180,12 +180,12 @@ export default function SurFoxGeneralComparison() {
               </motion.a>
 
               <motion.a
-                href="#comparison"
+                href="/demo"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/[0.1] text-white text-base font-semibold hover:border-white/[0.2] hover:bg-card-bg transition"
               >
-                Watch Demo
+                Request Demo
               </motion.a>
             </div>
 

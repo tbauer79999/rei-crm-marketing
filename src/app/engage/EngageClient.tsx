@@ -44,13 +44,14 @@ export default function SurFoxRevamped() {
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
               
-              <motion.button
+              <motion.a
+                href="/demo"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/[0.1] text-white text-base font-semibold hover:border-white/[0.12] hover:bg-background transition"
               >
-                Watch Demo
-              </motion.button>
+                Request Demo
+              </motion.a>
             </div>
           </motion.div>
         </div>

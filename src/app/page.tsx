@@ -235,7 +235,7 @@ export default function Page() {
               href="/demo"
               className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold hover:opacity-90 transition flex items-center justify-center gap-2 shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/25"
             >
-              Watch Demo
+              Request Demo
               <ArrowRightIcon className="w-5 h-5" />
             </a>
 

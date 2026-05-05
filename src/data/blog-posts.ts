@@ -2215,7 +2215,7 @@ export const blogPosts: BlogPost[] = [
       category: 'Product',
       title: 'See SurFox AI in action',
       description: '2-minute walkthrough of how SurFox AI qualifies leads via SMS while your team is still on the floor.',
-      ctaText: 'Watch Demo \u2192',
+      ctaText: 'Request Demo \u2192',
       href: '/demo'
     }
   },
