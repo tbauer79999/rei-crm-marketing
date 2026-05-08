@@ -434,7 +434,7 @@ function PartnerSignupContent() {
                   className="mt-1 h-4 w-4 rounded border-white/20 accent-blue-400"
                 />
                 <span className="text-sm text-white/70">
-                  I confirm that I have obtained all legally required consent to contact every lead I upload, and I accept full responsibility for TCPA compliance and all applicable messaging laws. I understand that SurFox AI is not responsible for my messaging practices.
+                  I accept full responsibility for TCPA compliance and all applicable messaging laws. I understand that SurFox AI is not responsible for my messaging practices.
                 </span>
               </label>
               {tcpaError && <p className="text-red-400 text-xs mt-1 ml-7">{tcpaError}</p>}
