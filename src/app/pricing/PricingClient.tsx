@@ -331,6 +331,10 @@ export default function PricingClient() {
             </div>
           </div>
 
+          <p className="text-center text-xs text-white/40 -mt-16 mb-20 max-w-2xl mx-auto">
+            DNC scrubbing is available on paid plans only and is not included during the 14-day free trial.
+          </p>
+
           {/* Cost Transparency Section */}
           <div className="max-w-4xl mx-auto mb-20">
             <div className="bg-background rounded-2xl border border-white/[0.08] p-8">
