@@ -177,10 +177,6 @@ export default function PricingClient() {
                   <div className="text-sm font-semibold text-white mb-2">Support & Features:</div>
                   <div className="text-sm text-white/70 flex items-center">
                     <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Advanced analytics & insights
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                     Priority email & chat support
                   </div>
                 </div>

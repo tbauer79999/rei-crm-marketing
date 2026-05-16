@@ -58,7 +58,7 @@ export default function Page() {
         "itemOffered": {
           "@type": "Service",
           "name": "SurFox Growth",
-          "description": "10,000 messages per month (in & out), 5 team member accounts, AI learns from 100 conversations, advanced objection handling, Chrome extension for lead capture, advanced analytics & insights, priority email & chat support, funnel module"
+          "description": "10,000 messages per month (in & out), 5 team member accounts, AI learns from 100 conversations, advanced objection handling, Chrome extension for lead capture, priority email & chat support, funnel module"
         }
       },
       {
