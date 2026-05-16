@@ -85,7 +85,7 @@ export default function PricingClient() {
                   </div>
                 </div>
 
-                <div>
+                <div className="border-b border-white/[0.08] pb-3">
                   <div className="text-sm font-semibold text-white mb-2">Support & Analytics:</div>
                   <div className="text-sm text-white/70 flex items-center">
                     <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
@@ -94,6 +94,18 @@ export default function PricingClient() {
                   <div className="text-sm text-white/70 flex items-center mt-1">
                     <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                     Email support
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-sm font-semibold text-white mb-2">Compliance & Protection:</div>
+                  <div className="text-sm text-white/70 flex items-start">
+                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Automatic opt-out detection. STOP and inferred opt-out language honored instantly</span>
+                  </div>
+                  <div className="text-sm text-white/70 flex items-center mt-1">
+                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                    Built on TCPA-compliant infrastructure
                   </div>
                 </div>
               </div>
@@ -113,12 +125,16 @@ export default function PricingClient() {
             </div>
 
             {/* Growth - Most Popular */}
-            <div className="relative bg-card-bg rounded-2xl border-2 border-blue-500/50 p-8 text-center transform scale-105 shadow-xl hover-lift">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+            <div className="relative transform scale-105">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
                 <span className="gradient-bg text-white px-4 py-1 rounded-full text-xs font-bold shadow-sm shadow-blue-500/5 shadow-blue-500/5">
                   Most Popular
                 </span>
               </div>
+              <div className="relative overflow-hidden bg-card-bg rounded-2xl border-2 border-blue-500/50 p-8 text-center shadow-xl hover-lift">
+                <span className="absolute top-[24px] right-[-46px] w-[160px] rotate-45 bg-emerald-600/90 text-white/95 text-[10px] font-medium tracking-wide uppercase text-center py-1 z-10 pointer-events-none">
+                  DNC Protected
+                </span>
 
               <h3 className="text-xl font-bold text-white mb-2">Growth</h3>
               <div className="text-4xl font-bold text-white mb-4">
@@ -173,11 +189,27 @@ export default function PricingClient() {
                   </div>
                 </div>
 
-                <div>
+                <div className="border-b border-white/[0.08] pb-3">
                   <div className="text-sm font-semibold text-white mb-2">Support & Features:</div>
                   <div className="text-sm text-white/70 flex items-center">
                     <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                     Priority email & chat support
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-sm font-semibold text-white mb-2">Compliance & Protection:</div>
+                  <div className="text-sm text-white/70 flex items-center">
+                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                    5,000 DNC scrubs per month included
+                  </div>
+                  <div className="text-sm text-white/70 flex items-start mt-1">
+                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Automatic opt-out detection. STOP and inferred opt-out language honored instantly</span>
+                  </div>
+                  <div className="text-sm text-white/70 flex items-center mt-1">
+                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                    Built on TCPA-compliant infrastructure
                   </div>
                 </div>
               </div>
@@ -194,10 +226,14 @@ export default function PricingClient() {
             >
               Try Risk-Free
             </button>
+              </div>
             </div>
 
             {/* Scale */}
-            <div className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 text-center hover-lift">
+            <div className="relative overflow-hidden bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 text-center hover-lift">
+              <span className="absolute top-[24px] right-[-46px] w-[160px] rotate-45 bg-emerald-600/90 text-white/95 text-[10px] font-medium tracking-wide uppercase text-center py-1 z-10 pointer-events-none">
+                DNC Protected
+              </span>
               <h3 className="text-xl font-bold text-white mb-2">Scale</h3>
               <div className="text-4xl font-bold text-white mb-4">
                 $2,497<span className="text-lg text-white/50">/month</span>
@@ -251,7 +287,7 @@ export default function PricingClient() {
                   </div>
                 </div>
 
-                <div>
+                <div className="border-b border-white/[0.08] pb-3">
                   <div className="text-sm font-semibold text-white mb-2">Support & Onboarding:</div>
                   <div className="text-sm text-white/70 flex items-center">
                     <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
@@ -260,6 +296,22 @@ export default function PricingClient() {
                   <div className="text-sm text-white/70 flex items-center mt-1">
                     <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                     Dedicated success manager
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-sm font-semibold text-white mb-2">Compliance & Protection:</div>
+                  <div className="text-sm text-white/70 flex items-center">
+                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                    25,000 DNC scrubs per month included
+                  </div>
+                  <div className="text-sm text-white/70 flex items-start mt-1">
+                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
+                    <span>Automatic opt-out detection. STOP and inferred opt-out language honored instantly</span>
+                  </div>
+                  <div className="text-sm text-white/70 flex items-center mt-1">
+                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                    Built on TCPA-compliant infrastructure
                   </div>
                 </div>
               </div>
