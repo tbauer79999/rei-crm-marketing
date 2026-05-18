@@ -57,6 +57,8 @@ export default function Subscribe() {
   const [agreedToTcpa, setAgreedToTcpa] = useState(false);
   const [termsError, setTermsError] = useState('');
   const [tcpaError, setTcpaError] = useState('');
+  const [submitError, setSubmitError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Capture referral code from URL and store in localStorage
   useEffect(() => {
@@ -73,6 +75,7 @@ export default function Subscribe() {
   // Clickwrap validation
   setTermsError('');
   setTcpaError('');
+  setSubmitError('');
   let hasError = false;
   if (!agreedToTerms) {
     setTermsError('You must agree to the Terms of Service and Privacy Policy.');
@@ -93,20 +96,41 @@ export default function Subscribe() {
     referralCode = localStorage.getItem('surfox_ref');
   }
 
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/stripe/create-checkout-session`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      priceId: selectedPlan.priceId,
-      referralCode: referralCode,
-      metadata: {
-        terms_agreed_at: new Date().toISOString()
-      }
-    })
-  });
+  setIsSubmitting(true);
+  try {
+    const response = await fetch('https://api.surfox.ai/api/stripe/create-checkout-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        priceId: selectedPlan.priceId,
+        referralCode: referralCode,
+        metadata: {
+          terms_agreed_at: new Date().toISOString()
+        }
+      })
+    });
 
-  const { url } = await response.json();
-  window.location.href = url;
+    if (!response.ok) {
+      const text = await response.text().catch(() => '');
+      console.error('Checkout session request failed', response.status, text);
+      setSubmitError(`Checkout failed (status ${response.status}). Please try again or email tom@getsurfox.com.`);
+      return;
+    }
+
+    const data = await response.json().catch(() => null);
+    if (!data || !data.url) {
+      console.error('Checkout session response missing url field', data);
+      setSubmitError('Checkout response was invalid. Please try again or email tom@getsurfox.com.');
+      return;
+    }
+
+    window.location.href = data.url;
+  } catch (err) {
+    console.error('Checkout request threw', err);
+    setSubmitError('We could not reach the checkout service. Please check your connection and try again, or email tom@getsurfox.com.');
+  } finally {
+    setIsSubmitting(false);
+  }
 };
 
   if (!selectedPlan) {
@@ -234,10 +258,14 @@ export default function Subscribe() {
           {/* CTA Button */}
           <button
             onClick={handleSubscribe}
-            className="w-full gradient-bg text-white px-8 py-4 rounded-xl hover:gradient-bg-600 transition-all font-semibold text-lg shadow-sm shadow-blue-500/5 shadow-blue-500/5"
+            disabled={isSubmitting}
+            className="w-full gradient-bg text-white px-8 py-4 rounded-xl hover:gradient-bg-600 transition-all font-semibold text-lg shadow-sm shadow-blue-500/5 shadow-blue-500/5 disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Continue to Secure Checkout
+            {isSubmitting ? 'Starting Checkout...' : 'Continue to Secure Checkout'}
           </button>
+          {submitError && (
+            <p className="mt-3 text-sm text-red-400 text-center">{submitError}</p>
+          )}
 
           {/* Security notice */}
           <div className="text-center mt-4 text-sm text-white/50">
