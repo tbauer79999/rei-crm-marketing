@@ -112,8 +112,18 @@ export default function Subscribe() {
 
     if (!response.ok) {
       const text = await response.text().catch(() => '');
+      let backendMessage = '';
+      try {
+        backendMessage = JSON.parse(text)?.error || '';
+      } catch {
+        backendMessage = text.slice(0, 200);
+      }
       console.error('Checkout session request failed', response.status, text);
-      setSubmitError(`Checkout failed (status ${response.status}). Please try again or email tom@getsurfox.com.`);
+      setSubmitError(
+        backendMessage
+          ? `Checkout failed (${response.status}): ${backendMessage}`
+          : `Checkout failed (status ${response.status}). Please try again or email tom@getsurfox.com.`
+      );
       return;
     }
 
@@ -227,8 +237,15 @@ export default function Subscribe() {
                   type="checkbox"
                   checked={agreedToTerms}
                   onChange={(e) => { setAgreedToTerms(e.target.checked); if (e.target.checked) setTermsError(''); }}
-                  className="mt-1 h-4 w-4 rounded border-white/20 accent-blue-400"
+                  className="sr-only"
                 />
+                <span className={`mt-1 h-4 w-4 shrink-0 rounded border flex items-center justify-center transition-colors ${agreedToTerms ? 'bg-blue-500 border-blue-500' : 'bg-transparent border-white/30'}`}>
+                  {agreedToTerms && (
+                    <svg className="h-3 w-3 text-white" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                      <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 1 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z" />
+                    </svg>
+                  )}
+                </span>
                 <span className="text-sm text-white/70">
                   I have read and agree to the SurFox AI{' '}
                   <a href="https://www.getsurfox.com/terms" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Terms of Service</a>
@@ -245,8 +262,15 @@ export default function Subscribe() {
                   type="checkbox"
                   checked={agreedToTcpa}
                   onChange={(e) => { setAgreedToTcpa(e.target.checked); if (e.target.checked) setTcpaError(''); }}
-                  className="mt-1 h-4 w-4 rounded border-white/20 accent-blue-400"
+                  className="sr-only"
                 />
+                <span className={`mt-1 h-4 w-4 shrink-0 rounded border flex items-center justify-center transition-colors ${agreedToTcpa ? 'bg-blue-500 border-blue-500' : 'bg-transparent border-white/30'}`}>
+                  {agreedToTcpa && (
+                    <svg className="h-3 w-3 text-white" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                      <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 1 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z" />
+                    </svg>
+                  )}
+                </span>
                 <span className="text-sm text-white/70">
                   I accept full responsibility for TCPA compliance and all applicable messaging laws. I understand that SurFox AI is not responsible for my messaging practices.
                 </span>
