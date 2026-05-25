@@ -1,9 +1,39 @@
 import { generatePageMetadata, generateCompareBreadcrumb } from '@/data/page-metadata';
+import Image from 'next/image';
+import {
+  ArrowRight,
+  Check,
+  X,
+  Brain,
+  MessageSquare,
+  Sparkles,
+  Shield,
+  Award,
+  Clock,
+} from 'lucide-react';
 import SmarterContactClient from './SmarterContactClient';
 
 export const metadata = generatePageMetadata('compare-smarter-contact');
 
 const breadcrumbSchema = generateCompareBreadcrumb('Smarter Contact', '/compare/surfox-vs-smarter-contact');
+
+const faqData = [
+  {
+    question: 'Is Smarter Contact good for SMS marketing?',
+    answer:
+      'Smarter Contact is solid for bulk SMS campaigns and ringless voicemail. It is popular with real estate investors and sales teams doing high-volume outreach. However, it is a broadcasting tool, not a conversation tool. SurFox AI handles two-way conversations automatically.',
+  },
+  {
+    question: 'Can Smarter Contact qualify leads?',
+    answer:
+      'Smarter Contact can send messages and capture responses, but a human still needs to read and reply to every response. SurFox AI reads responses, continues the conversation, and only alerts your team when a lead is qualified.',
+  },
+  {
+    question: 'What is the difference between Smarter Contact and SurFox AI?',
+    answer:
+      'Smarter Contact is a bulk messaging platform. SurFox AI is an AI qualification platform. Smarter Contact sends thousands of texts. SurFox AI has thousands of conversations.',
+  },
+];
 
 export default function Page() {
   return (
@@ -19,36 +49,619 @@ export default function Page() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'Is Smarter Contact good for SMS marketing?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Smarter Contact is solid for bulk SMS campaigns and ringless voicemail. It is popular with real estate investors and sales teams doing high-volume outreach. However, it is a broadcasting tool, not a conversation tool. SurFox AI handles two-way conversations automatically.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Can Smarter Contact qualify leads?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Smarter Contact can send messages and capture responses, but a human still needs to read and reply to every response. SurFox AI reads responses, continues the conversation, and only alerts your team when a lead is qualified.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'What is the difference between Smarter Contact and SurFox AI?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Smarter Contact is a bulk messaging platform. SurFox AI is an AI qualification platform. Smarter Contact sends thousands of texts. SurFox AI has thousands of conversations.',
-                },
-              },
-            ],
+            mainEntity: faqData.map((q) => ({
+              '@type': 'Question',
+              name: q.question,
+              acceptedAnswer: { '@type': 'Answer', text: q.answer },
+            })),
           }),
         }}
       />
-      <SmarterContactClient />
+      <div className="bg-background text-white">
+
+        {/* Hero Section */}
+        <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
+          <div className="max-w-5xl mx-auto text-center">
+            <div>
+              {/* Platform Comparison */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+                <div className="flex items-center gap-3 p-4 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
+                  <div className="w-12 h-12 rounded-xl gradient-bg overflow-hidden flex items-center justify-center">
+                    <Image src="/logo.png" alt="SurFox AI" width={48} height={48} className="w-full h-full object-contain" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-2xl font-semibold text-white">SurFox AI</div>
+                    <div className="text-sm text-white/60">AI Conversion Engine</div>
+                  </div>
+                </div>
+
+                <div className="text-3xl font-semibold text-white/40">VS</div>
+
+                <div className="flex items-center gap-3 p-4 rounded-2xl border-2 border-white/[0.08] bg-card-bg">
+                  <div className="w-12 h-12 rounded-xl bg-white/[0.06] flex items-center justify-center">
+                    <MessageSquare className="w-6 h-6 text-white/50" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-2xl font-semibold text-white/60">Smarter Contact</div>
+                    <div className="text-sm text-white/50">Mass Messaging</div>
+                  </div>
+                </div>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
+                5x More Appointments<br className="hidden sm:block" />
+                vs Mass Blasting
+              </h1>
+
+              <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-4 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+                <strong className="text-white">Most platforms blast thousands and pray for replies.</strong>
+              </p>
+              <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+                <strong className="text-blue-400">SurFox AI has AI conversations that book qualified appointments.</strong>
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
+                <a
+                  href="/pricing"
+                  className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold transition flex items-center justify-center gap-2"
+                >
+                  Stop Blasting, Start Converting
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+
+                <a
+                  href="/contact"
+                  className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/[0.1] text-white text-base font-semibold hover:border-white/[0.2] hover:bg-card-bg transition"
+                >
+                  See the Difference
+                </a>
+              </div>
+
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4">
+                <div className="p-4 sm:p-6 rounded-2xl border-2 border-white/[0.08] bg-background">
+                  <div className="text-2xl sm:text-3xl font-semibold text-blue-400 mb-2">$597</div>
+                  <div className="text-sm text-white/60">SurFox Growth Plan</div>
+                  <div className="text-xs text-white/40 mt-1">vs $199+ Smarter</div>
+                </div>
+                <div className="p-4 sm:p-6 rounded-2xl border-2 border-white/[0.08] bg-background">
+                  <div className="text-2xl sm:text-3xl font-semibold text-blue-400 mb-2">90%</div>
+                  <div className="text-sm text-white/60">AI Automation</div>
+                  <div className="text-xs text-white/40 mt-1">vs manual work</div>
+                </div>
+                <div className="p-4 sm:p-6 rounded-2xl border-2 border-white/[0.08] bg-background">
+                  <div className="text-2xl sm:text-3xl font-semibold text-blue-400 mb-2">5x</div>
+                  <div className="text-sm text-white/60">Better Results</div>
+                  <div className="text-xs text-white/40 mt-1">vs mass blasting</div>
+                </div>
+                <div className="p-4 sm:p-6 rounded-2xl border-2 border-white/[0.08] bg-background">
+                  <div className="text-2xl sm:text-3xl font-semibold text-blue-400 mb-2">15min</div>
+                  <div className="text-sm text-white/60">Setup Time</div>
+                  <div className="text-xs text-white/40 mt-1">vs hours of setup</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Difference */}
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+                Two Completely Different Approaches
+              </h2>
+              <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+                Smarter Contact focuses on volume and templates. SurFox AI focuses on AI conversations that actually close deals.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
+              {/* Smarter Contact */}
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-white/[0.08] bg-background">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-white/[0.06] flex items-center justify-center mr-4">
+                    <MessageSquare className="w-6 h-6 text-white/50" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">Smarter Contact</h3>
+                    <p className="text-sm text-white/60">Mass Messaging Approach</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  <div className="p-4 rounded-xl border border-white/[0.08] bg-card-bg">
+                    <h4 className="font-semibold text-white mb-2 text-sm">The Problem They Solve:</h4>
+                    <p className="text-sm text-white/70">"I need to reach thousands of contacts fast and want ringless voicemail in the mix"</p>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex items-start text-sm text-white/70">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
+                      <span>High-volume SMS delivery - genuinely strong</span>
+                    </div>
+                    <div className="flex items-start text-sm text-white/70">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
+                      <span>Ringless voicemail drops built in</span>
+                    </div>
+                    <div className="flex items-start text-sm text-white/70">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
+                      <span>Popular with RE investors doing volume outreach</span>
+                    </div>
+                    <div className="flex items-start text-sm text-white/60">
+                      <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
+                      <span>All responses require manual handling</span>
+                    </div>
+                    <div className="flex items-start text-sm text-white/60">
+                      <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
+                      <span>No conversation memory or learning</span>
+                    </div>
+                    <div className="flex items-start text-sm text-white/60">
+                      <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
+                      <span>Per-message fees compound fast at volume</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-xl border border-white/[0.08] bg-card-bg">
+                  <p className="text-sm text-white/70">
+                    <strong className="text-white">Best For:</strong> High-volume broadcasters with a dedicated team to manually work every reply
+                  </p>
+                </div>
+              </div>
+
+              {/* SurFox AI */}
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 rounded-xl gradient-bg overflow-hidden flex items-center justify-center mr-4">
+                    <Image src="/logo.png" alt="SurFox AI" width={48} height={48} className="w-full h-full object-contain" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">SurFox AI</h3>
+                    <p className="text-sm text-white/60">AI Conversion Engine</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  <div className="p-4 rounded-xl border border-blue-500/20 bg-background">
+                    <h4 className="font-semibold text-white mb-2 text-sm">The Problem We Solve:</h4>
+                    <p className="text-sm text-white/70">"I need qualified appointments, not just random responses to filter through"</p>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex items-start text-sm text-white/70">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                      <span>SurFox AI creates unique conversations for each lead</span>
+                    </div>
+                    <div className="flex items-start text-sm text-white/70">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                      <span>Automatically qualifies and scores prospects</span>
+                    </div>
+                    <div className="flex items-start text-sm text-white/70">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                      <span>SurFox AI escalates hot leads immediately</span>
+                    </div>
+                    <div className="flex items-start text-sm text-white/70">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                      <span>Learns and improves with every conversation</span>
+                    </div>
+                    <div className="flex items-start text-sm text-white/70">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                      <span>All-inclusive pricing, no usage fees</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-xl border border-blue-500/20 bg-background">
+                  <p className="text-sm text-white/70">
+                    <strong className="text-white">Best For:</strong> Sales teams who want qualified appointments, not manual conversation filtering
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Daily Workflow */}
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+                Same Lead, Different Outcomes
+              </h2>
+              <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+                Watch how the same prospect responds to mass messaging vs AI conversation.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
+              {/* Smarter Contact Example */}
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
+                <div className="flex items-center mb-6">
+                  <MessageSquare className="w-6 h-6 text-red-600 mr-3" />
+                  <h3 className="text-lg font-semibold text-white">Smarter Contact Approach</h3>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  <div className="p-3 rounded-lg border border-red-500/20 bg-background">
+                    <div className="flex items-center mb-2">
+                      <div className="w-2 h-2 bg-white/40 rounded-full mr-2"></div>
+                      <span className="text-xs font-medium text-white/70">Day 1 - Mass Template</span>
+                    </div>
+                    <p className="text-sm text-white/70">"Hi [NAME], are you interested in selling your house?"</p>
+                  </div>
+
+                  <div className="text-center text-white/40 text-xs py-2">
+                    ... no response for 3 days ...
+                  </div>
+
+                  <div className="p-3 rounded-lg border border-red-500/20 bg-background">
+                    <div className="flex items-center mb-2">
+                      <div className="w-2 h-2 bg-white/40 rounded-full mr-2"></div>
+                      <span className="text-xs font-medium text-white/70">Day 4 - Same Template</span>
+                    </div>
+                    <p className="text-sm text-white/70">"Hi [NAME], are you interested in selling your house?"</p>
+                  </div>
+
+                  <div className="text-center text-white/40 text-xs py-2">
+                    ... no response ...
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-xl border-2 border-red-300 bg-red-100 text-center">
+                  <X className="w-6 h-6 text-red-600 mx-auto mb-2" />
+                  <p className="text-red-700 font-semibold">Result: Lead Lost Forever</p>
+                  <p className="text-red-600 text-sm">Blocked as spam</p>
+                </div>
+              </div>
+
+              {/* SurFox AI Example */}
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
+                <div className="flex items-center mb-6">
+                  <Brain className="w-6 h-6 text-green-400 mr-3" />
+                  <h3 className="text-lg font-semibold text-white">SurFox AI Approach</h3>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  <div className="p-3 rounded-lg border border-green-200 bg-background">
+                    <div className="flex items-center mb-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                      <span className="text-xs font-medium text-white/70">Day 1 - AI Smart Opening</span>
+                    </div>
+                    <p className="text-sm text-white/70">"Hey Sarah - wasn't sure if this was still your number. If you're still thinking about selling, I can keep it simple for you."</p>
+                  </div>
+
+                  <div className="text-center text-white/40 text-xs py-2">
+                    ... AI waits 3 days, adjusts approach ...
+                  </div>
+
+                  <div className="p-3 rounded-lg border border-green-200 bg-background">
+                    <div className="flex items-center mb-2">
+                      <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                      <span className="text-xs font-medium text-white/70">Day 4 - Lead Responds!</span>
+                    </div>
+                    <p className="text-sm text-green-400">"Yeah I might be. What kind of offers are you seeing?"</p>
+                  </div>
+                </div>
+
+                <div className="p-4 rounded-xl border-2 border-green-500/30 bg-green-500/10 text-center">
+                  <Sparkles className="w-6 h-6 text-green-400 mx-auto mb-2" />
+                  <p className="text-green-400 font-semibold">Result: Qualified Appointment</p>
+                  <p className="text-green-400 text-sm">SurFox AI books call automatically</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Feature Comparison (interactive tabs) */}
+        <SmarterContactClient />
+
+        {/* Lead Resurrection Section */}
+        <section className="py-20 px-4 sm:px-6 md:px-8 bg-background">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+                The Hidden Gold Mine They Miss
+              </h2>
+              <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto">
+                Every competitor focuses on NEW leads. SurFox AI finds money in the OLD leads you already own.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              {/* Traditional Platforms */}
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-red-500 flex items-center justify-center mr-4">
+                    <X className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">Traditional Platforms</h3>
+                </div>
+                <p className="text-white/70 leading-relaxed">
+                  Only work on new leads flowing in. Your old CRM database sits there gathering dust.
+                  Thousands of leads you already paid for, completely ignored.
+                </p>
+              </div>
+
+              {/* SurFox AI Advantage */}
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mr-4">
+                    <Check className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">SurFox AI Advantage</h3>
+                </div>
+                <p className="text-white/70 leading-relaxed">
+                  Upload your entire old lead database. SurFox AI finds the 3-5% who are actually ready to buy
+                  but nobody ever followed up with properly. Turn yesterday's dead leads into today's deals.
+                </p>
+              </div>
+            </div>
+
+            {/* ROI Callout */}
+            <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10 text-center">
+              <h3 className="text-2xl font-semibold text-white mb-6">Real ROI Example</h3>
+              <div className="space-y-3 text-white/70 max-w-2xl mx-auto">
+                <p className="text-base sm:text-lg">
+                  <strong>10,000 old leads × 3% AI engagement = 300 conversations</strong>
+                </p>
+                <p className="text-base sm:text-lg">
+                  <strong>300 conversations × 10% conversion = 30 qualified appointments</strong>
+                </p>
+                <p className="text-base sm:text-lg">
+                  <strong>30 appointments × $3,000 avg deal = $90,000 revenue</strong>
+                </p>
+                <p className="text-sm text-white/60 italic mt-4">
+                  From leads you already owned and paid for
+                </p>
+              </div>
+              <p className="text-xl font-bold text-green-400 mt-6">
+                This is why SurFox AI pays for itself in month one.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Cost Comparison */}
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+                The Hidden Cost Reality
+              </h2>
+              <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+                SurFox AI delivers superior AI while actually costing less when you factor in usage fees and manual work.
+              </p>
+            </div>
+
+            {/* SmarterContact Tier Breakdown */}
+            <div className="px-4 mb-8">
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">SmarterContact Pricing (billed quarterly)</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-2 border-white/[0.08] rounded-2xl overflow-hidden">
+                  <thead>
+                    <tr className="bg-white/[0.03] text-white">
+                      <th className="text-left px-4 py-3 font-semibold">Plan</th>
+                      <th className="text-right px-4 py-3 font-semibold">Base/mo</th>
+                      <th className="text-right px-4 py-3 font-semibold">Outbound SMS</th>
+                      <th className="text-right px-4 py-3 font-semibold">Calling</th>
+                      <th className="text-right px-4 py-3 font-semibold">Voicemail Drop</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-background divide-y divide-gray-100">
+                    <tr>
+                      <td className="px-4 py-3 font-medium text-white/70">Starter</td>
+                      <td className="px-4 py-3 text-right text-white/70">$199</td>
+                      <td className="px-4 py-3 text-right text-white/60">$0.03/text</td>
+                      <td className="px-4 py-3 text-right text-white/60">$0.02/min</td>
+                      <td className="px-4 py-3 text-right text-white/40">-</td>
+                    </tr>
+                    <tr className="bg-card-bg">
+                      <td className="px-4 py-3 font-medium text-white/70">Pro</td>
+                      <td className="px-4 py-3 text-right text-white/70">$399</td>
+                      <td className="px-4 py-3 text-right text-white/60">$0.025/text</td>
+                      <td className="px-4 py-3 text-right text-white/60">$0.015/min</td>
+                      <td className="px-4 py-3 text-right text-white/60">$0.03/drop</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3 font-medium text-white/70">Elite</td>
+                      <td className="px-4 py-3 text-right text-white/70">$499</td>
+                      <td className="px-4 py-3 text-right text-white/60">$0.02/text</td>
+                      <td className="px-4 py-3 text-right text-white/60">$0.01/min</td>
+                      <td className="px-4 py-3 text-right text-white/60">$0.025/drop</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Real Math Example */}
+            <div className="px-4 mb-8">
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
+                <h3 className="text-lg font-semibold text-white mb-4">Real Math: SmarterContact Pro at 20K texts/month</h3>
+                <div className="grid sm:grid-cols-3 gap-4 mb-4 text-sm">
+                  <div className="p-4 rounded-xl bg-background border border-red-500/20 text-center">
+                    <div className="text-white/50 mb-1">Base plan</div>
+                    <div className="text-2xl font-semibold text-white">$399</div>
+                  </div>
+                  <div className="p-4 rounded-xl bg-background border border-red-500/20 text-center">
+                    <div className="text-white/50 mb-1">20K texts × $0.025</div>
+                    <div className="text-2xl font-semibold text-red-600">+$500</div>
+                  </div>
+                  <div className="p-4 rounded-xl bg-background border border-red-300 text-center">
+                    <div className="text-white/50 mb-1">Monthly total</div>
+                    <div className="text-2xl font-semibold text-red-600">~$900</div>
+                  </div>
+                </div>
+                <p className="text-sm text-white/60 italic">That's before any calling minutes or voicemail drops. Usage fees compound fast at volume.</p>
+              </div>
+            </div>
+
+            {/* Side-by-side comparison */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 mb-8">
+              <div className="text-center p-6 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
+                <div className="text-sm text-white/60 mb-2">SmarterContact Pro - 20K texts/mo</div>
+                <div className="text-4xl font-semibold text-red-600 mb-2">~$900</div>
+                <div className="text-xs text-white/60 mb-4">per month</div>
+                <div className="text-xs text-white/70 space-y-1">
+                  <div>• $399 base + $500 SMS fees</div>
+                  <div>• Calling & voicemail billed separately</div>
+                  <div>• Every reply still handled manually</div>
+                </div>
+              </div>
+
+              <div className="text-center p-6 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
+                <div className="text-sm text-white/60 mb-2">SurFox Growth</div>
+                <div className="text-4xl font-semibold text-green-400 mb-2">$597</div>
+                <div className="text-xs text-white/60 mb-4">flat per month</div>
+                <div className="text-xs text-white/70 space-y-1">
+                  <div>• 10,000 messages included</div>
+                  <div>• AI qualifies every reply automatically</div>
+                  <div>• No usage fees, no surprises</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5 text-center">
+              <h3 className="text-2xl font-semibold text-white mb-4">The Bottom Line</h3>
+              <p className="text-lg text-white/70 leading-relaxed max-w-3xl mx-auto">
+                SmarterContact's base price looks comparable - but the meter is always running. At any real sending volume, SurFox Growth at <strong className="text-white">$597 flat</strong> comes out ahead, and the AI handles the follow-up work your team would otherwise do manually.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* When to Choose */}
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+                Which Platform Is Right for You?
+              </h2>
+              <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+                Both solve real problems, but different ones. Here's how to decide.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-white/[0.08] bg-background">
+                <h3 className="text-xl font-semibold text-white mb-4">Choose Smarter Contact When:</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start text-sm text-white/70">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
+                    <span>You need ringless voicemail drops at scale</span>
+                  </div>
+                  <div className="flex items-start text-sm text-white/70">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
+                    <span>You have a dedicated team to manually work every reply</span>
+                  </div>
+                  <div className="flex items-start text-sm text-white/70">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
+                    <span>High-volume broadcast is the core of your outreach strategy</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
+                <h3 className="text-xl font-semibold text-white mb-4">Choose SurFox AI When:</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start text-sm text-white/70">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                    <span>You want qualified appointments, not random responses</span>
+                  </div>
+                  <div className="flex items-start text-sm text-white/70">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                    <span>You'd rather SurFox AI handle conversations 24/7</span>
+                  </div>
+                  <div className="flex items-start text-sm text-white/70">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                    <span>You want better results at lower total cost</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-white/60">
+                Common questions about Smarter Contact vs SurFox AI
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {faqData.map((faq, index) => (
+                <div
+                  key={index}
+                  className="p-6 rounded-2xl border-2 border-white/[0.08] bg-card-bg"
+                >
+                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+                  <p className="text-white/70 leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+          <div className="max-w-4xl mx-auto text-center">
+            <div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 sm:mb-8 px-4 leading-tight">
+                Stop Blasting.<br className="hidden sm:block" />
+                Start Converting.
+              </h2>
+
+              <p className="text-lg sm:text-xl text-white/60 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
+                Built for operators who are done doing it manually. AI-powered qualification, not manual inbox triage. <strong className="text-white">30-day money back guarantee.</strong>
+              </p>
+
+              <p className="text-base text-gray-300 mb-8 max-w-2xl mx-auto">
+                Plans start at $147/month. Most teams choose Growth at $597 for learning AI.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">
+                <a
+                  href="/pricing"
+                  className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold transition flex items-center justify-center gap-2"
+                >
+                  Get Started Risk-Free
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+
+                <a
+                  href="/contact"
+                  className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/[0.1] text-white text-base font-semibold hover:border-white/[0.2] hover:bg-card-bg transition"
+                >
+                  See SurFox AI Demo
+                </a>
+              </div>
+
+              <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
+                <div className="flex items-center">
+                  <Shield className="w-5 h-5 mr-2 text-blue-400" />
+                  30-day guarantee
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 mr-2 text-blue-400" />
+                  Setup in 15 minutes
+                </div>
+                <div className="flex items-center">
+                  <Award className="w-5 h-5 mr-2 text-blue-400" />
+                  Cancel anytime
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 }
