@@ -194,6 +194,11 @@ export default function Footer() {
                   Staffing Agencies
                 </Link>
               </li>
+              <li>
+                <Link href="/events" className="text-sm text-white/50 hover:text-white transition-colors">
+                  Webinars & Events
+                </Link>
+              </li>
             </ul>
           </div>
 

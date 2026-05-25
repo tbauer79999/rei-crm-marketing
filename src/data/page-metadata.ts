@@ -106,6 +106,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['real estate wholesaler SMS', 'motivated seller lead qualification', 'wholesale SMS automation', 'AI SMS wholesaler', 'SurFox AI wholesalers', 'SmarterContact alternative'],
     path: '/wholesalers',
   },
+  events: {
+    title: 'AI SMS Follow-up for Webinars and Events | SurFox AI',
+    description: 'SurFox AI follows up with every registrant the moment your event ends. Attendees who did not convert, no-shows, replay viewers. Every lead worked automatically while the event is still fresh.',
+    keywords: ['webinar follow-up automation', 'event lead follow-up', 'AI SMS for webinars', 'no-show follow-up', 'event marketing automation', 'SurFox AI events', 'trade show lead follow-up'],
+    path: '/events',
+  },
   'ai-principles': {
     title: 'AI Principles - Our Approach to Responsible AI',
     description: 'Learn about SurFox AI\'s commitment to ethical, transparent, and responsible AI. Our principles guide every product decision we make.',

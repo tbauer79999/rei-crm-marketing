@@ -80,6 +80,18 @@ export default function Nav() {
                   <div className="font-semibold">SurFox Engage</div>
                   <div className="text-xs text-white/40 mt-1">AI for Sales Conversations</div>
                 </Link>
+                <Link href="/wholesalers" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
+                  <div className="font-semibold">Real Estate Wholesalers</div>
+                  <div className="text-xs text-white/40 mt-1">Work motivated seller replies</div>
+                </Link>
+                <Link href="/staffing" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
+                  <div className="font-semibold">Staffing Agencies</div>
+                  <div className="text-xs text-white/40 mt-1">Qualify applicants via SMS</div>
+                </Link>
+                <Link href="/events" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors">
+                  <div className="font-semibold">Webinars & Events</div>
+                  <div className="text-xs text-white/40 mt-1">Follow up with every registrant</div>
+                </Link>
               </div>
             </div>
 
@@ -198,6 +210,18 @@ export default function Nav() {
               <Link href="/" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">
                 <div className="font-medium">SurFox Engage</div>
                 <div className="text-xs text-white/40">AI for Sales Conversations</div>
+              </Link>
+              <Link href="/wholesalers" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">
+                <div className="font-medium">Real Estate Wholesalers</div>
+                <div className="text-xs text-white/40">Work motivated seller replies</div>
+              </Link>
+              <Link href="/staffing" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">
+                <div className="font-medium">Staffing Agencies</div>
+                <div className="text-xs text-white/40">Qualify applicants via SMS</div>
+              </Link>
+              <Link href="/events" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">
+                <div className="font-medium">Webinars & Events</div>
+                <div className="text-xs text-white/40">Follow up with every registrant</div>
               </Link>
             </div>
 
