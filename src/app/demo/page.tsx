@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Script from 'next/script';
 import { Upload, Bell, TrendingUp, Check, type LucideIcon } from 'lucide-react';
 import { generatePageMetadata } from '@/data/page-metadata';
-import DemoClient from './DemoClient';
 
 export const metadata = generatePageMetadata('demo');
 
@@ -63,8 +62,6 @@ const screenshots = [
 export default function Page() {
   return (
     <div className="bg-card-bg text-white">
-      {/* Smooth-scroll side-effect (client-only) */}
-      <DemoClient />
 
       {/* Hero */}
       <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 pt-24 pb-8 sm:pt-28 sm:pb-10 md:pt-32 md:pb-12 bg-card-bg">
