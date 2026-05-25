@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle, XCircle, MessageSquare, Phone, Upload, Zap, Cl
 
 export default function StaffingClient() {
   return (
-    <div className="bg-card-bg text-white">
+    <div className="bg-background text-white">
 
       {/* Section 1: Hero */}
       <section className="min-h-[80vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
@@ -21,7 +21,7 @@ export default function StaffingClient() {
               <span className="text-sm font-semibold text-blue-400">For Staffing Agencies</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight" style={{ fontFamily: 'var(--font-sora)' }}>
               Your Staffing Agency Is<br className="hidden sm:block" /> Texting Leads. Your AI<br className="hidden sm:block" /> Should Be Qualifying Them.
             </h1>
 
@@ -34,7 +34,7 @@ export default function StaffingClient() {
                 href="/demo"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold hover:gradient-bg-600 transition inline-flex items-center gap-2"
+                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold hover:bg-white/10 transition inline-flex items-center gap-2"
               >
                 Schedule a Demo
                 <ArrowRight className="w-5 h-5" />
@@ -58,7 +58,7 @@ export default function StaffingClient() {
       </section>
 
       {/* Section 2: The Problem */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ export default function StaffingClient() {
       </section>
 
       {/* Section 3: How It Works */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -166,7 +166,7 @@ export default function StaffingClient() {
       </section>
 
       {/* Section 4: Comparison Table */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -220,7 +220,7 @@ export default function StaffingClient() {
                         <span className="text-white/50">{row.smarter}</span>
                       )}
                     </td>
-                    <td className="px-5 py-4 text-sm text-center gradient-bg/5">
+                    <td className="px-5 py-4 text-sm text-center bg-white/5">
                       {row.surfox === true ? (
                         <CheckCircle className="w-5 h-5 text-blue-400 mx-auto" />
                       ) : (
@@ -236,13 +236,13 @@ export default function StaffingClient() {
       </section>
 
       {/* Section 5: Use Case Callout */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-card-bg">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-10 rounded-2xl border-2 border-orange/30 gradient-bg/5"
+            className="p-10 rounded-2xl border-2 border-amber-500/30 bg-white/5"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card border border-blue-500/20 mb-6">
               <Zap className="w-4 h-4 text-blue-400" />
@@ -257,7 +257,7 @@ export default function StaffingClient() {
       </section>
 
       {/* Section 6: Objection Block */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-background">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -302,7 +302,7 @@ export default function StaffingClient() {
       </section>
 
       {/* Section 7: Bottom CTA */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg text-white">
+      <section className="py-10 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 bg-card-bg text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -313,7 +313,7 @@ export default function StaffingClient() {
               Stop Texting.<br className="hidden sm:block" /> Start Qualifying.
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/30 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-white/60 mb-10 max-w-2xl mx-auto leading-relaxed">
               Most staffing teams are fully operational within 24 hours.
             </p>
 
@@ -322,7 +322,7 @@ export default function StaffingClient() {
                 href="/pricing"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white font-semibold hover:gradient-bg-600 transition inline-flex items-center gap-2"
+                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white font-semibold hover:bg-white/10 transition inline-flex items-center gap-2"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />

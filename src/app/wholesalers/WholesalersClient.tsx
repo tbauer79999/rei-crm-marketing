@@ -34,7 +34,7 @@ export default function WholesalersClient() {
                 href="/demo"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold hover:gradient-bg-600 transition inline-flex items-center gap-2"
+                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold hover:bg-white/10 transition inline-flex items-center gap-2"
               >
                 Get a Walkthrough
                 <ArrowRight className="w-5 h-5" />
@@ -221,7 +221,7 @@ export default function WholesalersClient() {
                         <span className="text-white/50">{row.smarter}</span>
                       )}
                     </td>
-                    <td className="px-5 py-4 text-sm text-center gradient-bg/5">
+                    <td className="px-5 py-4 text-sm text-center bg-white/5">
                       {row.surfox === true ? (
                         <CheckCircle className="w-5 h-5 text-blue-400 mx-auto" />
                       ) : (
@@ -243,7 +243,7 @@ export default function WholesalersClient() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-10 rounded-2xl border-2 border-orange/30 gradient-bg/5"
+            className="p-10 rounded-2xl border-2 border-amber-500/30 bg-white/5"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card border border-blue-500/20 mb-6">
               <Zap className="w-4 h-4 text-blue-400" />
@@ -314,7 +314,7 @@ export default function WholesalersClient() {
               Stop Sorting Replies.<br className="hidden sm:block" /> Start Calling Deals.
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/30 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-white/60 mb-10 max-w-2xl mx-auto leading-relaxed">
               Most wholesalers are up and running on their first campaign within 24 hours.
             </p>
 
@@ -323,7 +323,7 @@ export default function WholesalersClient() {
                 href="/pricing"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white font-semibold hover:gradient-bg-600 transition inline-flex items-center gap-2"
+                className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white font-semibold hover:bg-white/10 transition inline-flex items-center gap-2"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />

@@ -102,7 +102,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   wholesalers: {
     title: 'AI SMS Lead Qualification for Real Estate Wholesalers',
-    description: 'SurFox AI qualifies every motivated seller reply instantly — flags deals worth your time. Stop sorting 40 replies and start calling hot leads only.',
+    description: 'SurFox AI qualifies every motivated seller reply instantly, flags deals worth your time. Stop sorting 40 replies and start calling hot leads only.',
     keywords: ['real estate wholesaler SMS', 'motivated seller lead qualification', 'wholesale SMS automation', 'AI SMS wholesaler', 'SurFox AI wholesalers', 'SmarterContact alternative'],
     path: '/wholesalers',
   },
