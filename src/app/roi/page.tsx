@@ -26,7 +26,7 @@ const speedStats = [
 
 export default function Page() {
   return (
-    <div className="bg-card-bg text-white">
+    <div className="bg-background text-foreground">
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
