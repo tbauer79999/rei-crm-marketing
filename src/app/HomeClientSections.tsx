@@ -6,9 +6,9 @@ import { ChevronDown } from 'lucide-react';
 
 const faqItems = [
   {
-    question: 'How does SurFox AI compare to hiring an SDR?',
+    question: 'How is SurFox AI different from text blasters like SmarterContact or Launch Control?',
     answer:
-      'A full-time SDR costs $60–80K/year in salary plus benefits, takes 3–6 months to ramp, and can only handle a fraction of your leads. SurFox AI runs 24/7, engages thousands of leads simultaneously, and typically delivers 60–80% lower cost per qualified lead. Use our ROI calculator to see your specific numbers.',
+      'Text blasters send identical messages to thousands of contacts and rely on you to manually handle the replies. SurFox AI has real, qualifying conversations with each contact. It asks follow-up questions, handles objections, and flags only the contacts ready to talk. You get fewer calls, but every one is worth taking.',
   },
   {
     question: 'How does the 50-point lead scoring system work?',

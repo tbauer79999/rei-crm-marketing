@@ -79,7 +79,7 @@ export default function Page() {
                   </div>
                   <div className="text-left">
                     <div className="text-2xl font-semibold text-white">SurFox AI</div>
-                    <div className="text-sm text-white/60">Lead Intelligence</div>
+                    <div className="text-sm text-white/60">SMS Lead Qualification</div>
                   </div>
                 </div>
 
@@ -97,7 +97,7 @@ export default function Page() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
-                Lead Intelligence<br className="hidden sm:block" />
+                SMS Qualification<br className="hidden sm:block" />
                 vs Call Transfers
               </h1>
 
@@ -209,7 +209,7 @@ export default function Page() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white">SurFox AI</h3>
-                    <p className="text-sm text-white/60">Lead Intelligence Platform</p>
+                    <p className="text-sm text-white/60">SMS Lead Qualification Platform</p>
                   </div>
                 </div>
 

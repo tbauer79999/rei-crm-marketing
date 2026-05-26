@@ -9,21 +9,20 @@ export interface PageMetadataConfig {
 
 export const pageMetadata: Record<string, PageMetadataConfig> = {
   homepage: {
-    title: 'AI SDR: Qualify Leads via SMS | Cut Headcount Costs',
+    title: 'SMS Lead Qualification at SMB Pricing | SurFox AI',
     description:
-      'Replace expensive SDRs with AI. SurFox qualifies cold leads via SMS automatically - 60–80% lower cost per lead. Your team only talks to hot prospects.',
+      'SurFox AI qualifies your contact list via SMS. Upload thousands of leads, AI works every conversation, your team only talks to the contacts ready to buy. Real conversational AI at SMB pricing.',
     keywords: [
-      'AI SDR',
-      'AI SDR platform',
-      'AI SDR software',
-      'replace SDR team with AI',
-      'reduce SDR headcount',
-      'AI SDR ROI',
       'SMS lead qualification',
-      'automated lead qualification',
       'AI lead qualification software',
-      'AI sales automation',
-      'outbound AI SDR',
+      'automated lead qualification',
+      'AI SMS for real estate',
+      'AI SMS for staffing',
+      'cold list activation',
+      'speed to lead AI',
+      'real estate wholesaler SMS',
+      'conversational AI SMS',
+      'AI text qualification',
       'lead scoring software',
     ],
     path: '/',
@@ -151,7 +150,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   'compare-gohighlevel': {
     title: 'SurFox AI vs GoHighLevel: Which is Right for You?',
     description: 'Compare SurFox AI vs GoHighLevel. Built for conversations, not chaos. Setup in minutes vs weeks, 50-point psychological scoring, and AI that learns.',
-    keywords: ['SurFox vs GoHighLevel', 'GoHighLevel alternative', 'GHL alternative', 'AI lead qualification', 'AI SDR platform', 'sales automation'],
+    keywords: ['SurFox vs GoHighLevel', 'GoHighLevel alternative', 'GHL alternative', 'AI lead qualification', 'SMS lead qualification', 'sales automation'],
     path: '/compare/surfox-vs-gohighlevel',
   },
   'compare-spara': {
@@ -161,10 +160,9 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
       'SurFox vs Spara',
       'Spara alternative',
       'Spara replacement',
-      'AI SDR',
-      'lead qualification',
-      'replace SDRs',
       'SMS lead qualification',
+      'lead qualification',
+      'outbound SMS qualification',
       'AI lead qualification',
       'inbound vs outbound',
       'spara vs qualified',

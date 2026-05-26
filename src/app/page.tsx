@@ -18,36 +18,35 @@ import {
 import HomeClientSections from './HomeClientSections';
 
 export const metadata: Metadata = {
-  title: 'AI SDR: Qualify Leads via SMS | Cut Headcount Costs',
+  title: 'SMS Lead Qualification at SMB Pricing | SurFox AI',
   description:
-    'Your SMS leads are ignoring you. SurFox AI follows up automatically until they respond. Upload your lead list, let AI qualify the buyers, and only talk to prospects ready to close.',
+    'Your SMS leads are ignoring you. SurFox AI follows up automatically until they respond. Upload your list, let AI qualify the buyers, and only talk to prospects ready to close.',
   keywords: [
-    'AI SDR',
-    'AI SDR platform',
-    'AI SDR software',
-    'replace SDR team with AI',
-    'reduce SDR headcount',
-    'AI SDR ROI',
     'SMS lead qualification',
-    'automated lead qualification',
     'AI lead qualification software',
-    'AI sales automation',
-    'outbound AI SDR',
+    'automated lead qualification',
+    'AI SMS for real estate',
+    'AI SMS for staffing',
+    'cold list activation',
+    'speed to lead AI',
+    'real estate wholesaler SMS',
+    'conversational AI SMS',
+    'AI text qualification',
     'lead scoring software',
   ],
   openGraph: {
-    title: 'SurFox AI | AI SDR: Qualify Leads via SMS & Cut Headcount Costs',
+    title: 'SurFox AI | SMS Lead Qualification at SMB Pricing',
     description:
-      'Your SMS leads are ignoring you. SurFox AI follows up automatically until they respond. Upload your lead list, let AI qualify the buyers, and only talk to prospects ready to close.',
+      'Your SMS leads are ignoring you. SurFox AI follows up automatically until they respond. Upload your list, let AI qualify the buyers, and only talk to prospects ready to close.',
     url: 'https://www.getsurfox.com',
     type: 'website',
     siteName: 'SurFox AI',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SurFox AI | AI SDR: Qualify Leads via SMS & Cut Headcount Costs',
+    title: 'SurFox AI | SMS Lead Qualification at SMB Pricing',
     description:
-      'Your SMS leads are ignoring you. SurFox AI follows up automatically until they respond. Upload your lead list, let AI qualify the buyers, and only talk to prospects ready to close.',
+      'Your SMS leads are ignoring you. SurFox AI follows up automatically until they respond. Upload your list, let AI qualify the buyers, and only talk to prospects ready to close.',
     site: '@getSurFox',
     creator: '@getSurFox',
   },
@@ -131,24 +130,24 @@ const knowledgeBaseItems = [
 
 const statsItems = [
   {
-    value: '60–80%',
-    label: 'Lower Cost Per Lead',
-    desc: 'vs. hiring and managing a human SDR team',
+    value: '$147',
+    label: 'Starting Price',
+    desc: 'Real conversational AI at SMB pricing. Not a $1,000/month enterprise contract.',
   },
   {
     value: '100%',
-    label: 'Lead Coverage',
-    desc: 'Every lead gets engaged and qualified - no one falls through the cracks',
+    label: 'List Coverage',
+    desc: 'Every contact gets a real conversation. Not just the ones a human has time for.',
   },
   {
     value: '50pt',
     label: 'Scoring System',
-    desc: 'Precise qualification tracking for every conversation',
+    desc: 'Precise qualification tracking on every conversation.',
   },
   {
     value: '24/7',
     label: 'Always On',
-    desc: 'AI never sleeps, never takes sick days, never needs a ramp period',
+    desc: 'AI works the list while you sleep. No team to hire, no ramp time.',
   },
 ];
 
@@ -249,10 +248,10 @@ export default function Page() {
             mainEntity: [
               {
                 '@type': 'Question',
-                name: 'How does SurFox AI compare to hiring an SDR?',
+                name: 'How is SurFox AI different from text blasters like SmarterContact or Launch Control?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'A full-time SDR costs $60–80K/year in salary plus benefits, takes 3–6 months to ramp, and can only handle a fraction of your leads. SurFox AI runs 24/7, engages thousands of leads simultaneously, and typically delivers 60–80% lower cost per qualified lead.',
+                  text: 'Text blasters send identical messages to thousands of contacts and rely on you to manually handle the replies. SurFox AI has real, qualifying conversations with each contact. It asks follow-up questions, handles objections, and flags only the contacts ready to talk. You get fewer calls, but every one is worth taking.',
                 },
               },
               {
@@ -321,7 +320,7 @@ export default function Page() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-white/10 mb-8">
             <span className="w-2 h-2 rounded-full bg-green-400" />
             <span className="text-sm text-white/70 font-medium">
-              AI SDR Platform - Now Live
+              SMS Lead Qualification - Now Live
             </span>
           </div>
 
@@ -390,7 +389,7 @@ export default function Page() {
               How It Works
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
-              Four steps from cold lead to hot prospect - no SDR required
+              Four steps from cold lead to hot prospect. The AI works every one.
             </p>
           </div>
 
@@ -476,7 +475,7 @@ export default function Page() {
                       </div>
                       <div className="flex justify-end">
                         <div className="max-w-[80%] bg-blue-600 text-white text-xs px-3 py-2 rounded-2xl rounded-tr-sm leading-relaxed">
-                          Perfect. I have 3 deals matching that — want details?
+                          Perfect. I have 3 deals matching that. Want details?
                         </div>
                       </div>
                       <div className="flex justify-start">
@@ -580,7 +579,7 @@ export default function Page() {
               Everything You Need to Qualify at Scale
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
-              A complete AI SDR platform - not just a chatbot
+              Real conversational AI. Not a chatbot, not a text blaster.
             </p>
           </div>
 
@@ -852,10 +851,10 @@ export default function Page() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 sm:mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 px-4" style={{ fontFamily: 'var(--font-sora)' }}>
-              Built to Replace Your SDR Headcount
+              Every Lead Worked. None Left Cold.
             </h2>
             <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
-              One AI that works every lead, around the clock - at a fraction of the cost.{' '}
+              Real conversational AI at SMB pricing. Not a $1,000/month enterprise contract. Not a text blaster.{' '}
               <a href="/roi" className="text-blue-400 font-semibold hover:text-blue-300 transition-colors">
                 Calculate your ROI →
               </a>
@@ -923,8 +922,8 @@ export default function Page() {
             />
             <div className="relative z-10">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 sm:mb-8 leading-tight" style={{ fontFamily: 'var(--font-sora)' }}>
-                Stop hiring SDRs.{' '}<br className="hidden sm:block" />
-                <span className="gradient-text">Let AI qualify your leads instead.</span>
+                Stop letting your list go cold.{' '}<br className="hidden sm:block" />
+                <span className="gradient-text">Let AI find the buyers before your competition does.</span>
               </h2>
 
               <p className="text-lg sm:text-xl text-white/60 mb-10 sm:mb-12 leading-relaxed">

@@ -316,7 +316,7 @@ export default function Page() {
                 Side-by-Side Comparison
               </h2>
               <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
-                Quick reference to see which AI SDR solution fits your lead qualification needs.
+                Quick reference to see which solution fits your lead qualification needs.
               </p>
             </div>
 

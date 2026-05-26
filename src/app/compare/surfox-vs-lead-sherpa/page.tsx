@@ -58,7 +58,7 @@ export default function Page() {
                   </div>
                   <div className="text-left">
                     <div className="text-2xl font-semibold text-white">SurFox AI</div>
-                    <div className="text-sm text-white/60">AI Conversion Engine</div>
+                    <div className="text-sm text-white/60">SMS Lead Qualification</div>
                   </div>
                 </div>
 
@@ -201,7 +201,7 @@ export default function Page() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white">SurFox AI</h3>
-                    <p className="text-sm text-white/60">AI Conversion Engine</p>
+                    <p className="text-sm text-white/60">SMS Lead Qualification</p>
                   </div>
                 </div>
 

@@ -141,7 +141,7 @@ const moatFactors = [
 const faqData = [
   {
     question: 'What makes SurFox AI different from other SMS platforms?',
-    answer: "SurFox AI isn't an SMS platform - it's a Sales Psychology AI. While other tools focus on message volume or basic automation, SurFox AI reads 50+ psychological dimensions to understand and adapt to each prospect in real-time. It's the difference between sending messages and having intelligent conversations.",
+    answer: "SurFox AI is an SMS Lead Qualification platform built for SMBs. While other tools focus on message volume or basic automation, SurFox AI has real, qualifying conversations with each contact, reads engagement signals, and only flags the ones ready to talk. It's the difference between sending messages and having intelligent conversations.",
   },
   {
     question: 'How does SurFox AI learn?',
@@ -203,7 +203,7 @@ export default function Page() {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              We didn&apos;t build a better SMS platform. We created an entirely new category: <strong className="text-white">Sales Psychology AI</strong> - technology that understands human behavior and adapts conversations in real-time.
+              We didn&apos;t build a better text blaster. We built a new category: <strong className="text-white">SMS Lead Qualification</strong> - real conversational AI at SMB pricing that has qualifying conversations with every contact, not just blasts at them.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
@@ -228,7 +228,7 @@ export default function Page() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4">
               <div className="p-4 sm:p-6 rounded-2xl border-2 border-white/[0.08] bg-background">
                 <div className="text-2xl sm:text-3xl font-semibold text-blue-400 mb-2">FIRST</div>
-                <div className="text-sm text-white/60">Sales Psychology AI</div>
+                <div className="text-sm text-white/60">SMS Lead Qualification</div>
               </div>
               <div className="p-4 sm:p-6 rounded-2xl border-2 border-white/[0.08] bg-background">
                 <div className="text-2xl sm:text-3xl font-semibold text-blue-400 mb-2">50+</div>
@@ -305,13 +305,13 @@ export default function Page() {
                 </div>
                 <div className="text-center md:text-left">
                   <h3 className="text-3xl font-semibold text-white">SurFox AI</h3>
-                  <p className="text-lg text-white/60">Sales Psychology AI Platform</p>
+                  <p className="text-lg text-white/60">SMS Lead Qualification Platform</p>
                   <p className="text-sm font-semibold text-blue-400">THE NEW CATEGORY</p>
                 </div>
               </div>
 
               <h4 className="text-2xl font-semibold text-white mb-6 text-center">
-                The Industry&apos;s First Psychology AI Platform
+                The First SMS Lead Qualification Platform Built for SMBs
               </h4>
 
               <p className="text-lg text-white/70 leading-relaxed mb-8 max-w-4xl mx-auto text-center">
@@ -608,7 +608,7 @@ export default function Page() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
                   <div className="text-2xl font-semibold text-blue-400 mb-2">FIRST</div>
-                  <div className="text-sm text-white/60">Psychology AI Platform</div>
+                  <div className="text-sm text-white/60">SMS Lead Qualification</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-semibold text-blue-400 mb-2">50+</div>
