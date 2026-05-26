@@ -307,7 +307,7 @@ export default function TermsOfService() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">•</span>
-                    <span>An opt-out communicated in any form — including but not limited to "stop", "remove me", "don't contact me", or any similar expression of unwillingness to be contacted — must be treated as a binding opt-out regardless of whether the platform automatically flagged it</span>
+                    <span>An opt-out communicated in any form (including but not limited to "stop", "remove me", "don't contact me", or any similar expression of unwillingness to be contacted) must be treated as a binding opt-out regardless of whether the platform automatically flagged it</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-400 mt-1">•</span>

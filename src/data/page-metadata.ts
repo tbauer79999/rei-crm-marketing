@@ -36,7 +36,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   about: {
     title: 'About SurFox AI - Building the Future of Sales AI',
     description: 'Learn about SurFox AI\'s mission to transform sales through AI-powered lead qualification. Meet our team and discover our vision for AI sales.',
-    keywords: ['about SurFox AI', 'AI sales company', 'AI SDR company', 'sales technology'],
+    keywords: ['about SurFox AI', 'AI sales company', 'SMS lead qualification company', 'sales technology'],
     path: '/about',
   },
   contact: {
@@ -54,7 +54,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   pricing: {
     title: 'Pricing - Flexible Plans for Every Business',
     description: 'Transparent pricing for SurFox AI lead qualification. Choose from Starter, Professional, or Enterprise plans. Start free, scale as you grow.',
-    keywords: ['SurFox AI pricing', 'AI sales pricing', 'lead qualification pricing', 'AI SDR pricing'],
+    keywords: ['SurFox AI pricing', 'AI sales pricing', 'lead qualification pricing', 'SMS lead qualification pricing'],
     path: '/pricing',
   },
   security: {
@@ -72,7 +72,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   blog: {
     title: 'Insights - AI, Sales Strategy & Product Updates',
     description: 'Expert insights on AI, sales intelligence, and the future of customer engagement. Stay updated with the latest from SurFox AI.',
-    keywords: ['AI sales blog', 'AI SDR insights', 'sales strategy', 'AI technology'],
+    keywords: ['AI sales blog', 'SMS lead qualification insights', 'sales strategy', 'AI technology'],
     path: '/blog',
   },
   demo: {
@@ -225,13 +225,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     title: 'AI SDR ROI Calculator: Real Numbers & Benchmarks (2026)',
     description: 'The real ROI of AI SDR platforms: 60-80% lower cost per lead, 4x better response rates, and found revenue from dormant databases. Calculate yours free.',
     keywords: [
-      'ai sdr roi',
-      'ai sdr roi calculator',
+      'ai sms lead qualification roi',
+      'sms lead qualification roi calculator',
       'expected roi ai lead qualification',
-      'ai sdr roi calculator',
-      'reduce sdr headcount roi',
+      'cold list activation roi',
+      'speed to lead roi',
       'roi of ai lead qualification software',
-      'ai sales development roi',
       'ai lead qualification roi',
     ],
     path: '/roi',
