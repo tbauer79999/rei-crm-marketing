@@ -158,6 +158,14 @@ export default function Nav() {
               </div>
             </div>
 
+            {/* PRICING Link */}
+            <Link href="/pricing" className="text-white/70 hover:text-white transition-colors text-sm font-medium group">
+              <span className="relative">
+                Pricing
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 gradient-bg group-hover:w-full transition-all duration-300"></span>
+              </span>
+            </Link>
+
             {/* CONTACT Dropdown */}
             <div className="relative group">
               <div className="flex items-center space-x-1 text-white/70 hover:text-white transition-colors text-sm font-medium cursor-pointer group">
@@ -203,59 +211,21 @@ export default function Nav() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden glass-card border-t border-white/[0.06] animate-fade-in">
-          <div className="px-4 py-6 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
-            {/* Solutions */}
-            <div>
-              <div className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-2">Solutions</div>
-              <Link href="/" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">
-                <div className="font-medium">SurFox Engage</div>
-                <div className="text-xs text-white/40">AI for Sales Conversations</div>
-              </Link>
-              <Link href="/wholesalers" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">
-                <div className="font-medium">Real Estate Wholesalers</div>
-                <div className="text-xs text-white/40">Work motivated seller replies</div>
-              </Link>
-              <Link href="/staffing" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">
-                <div className="font-medium">Staffing Agencies</div>
-                <div className="text-xs text-white/40">Qualify applicants via SMS</div>
-              </Link>
-              <Link href="/events" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">
-                <div className="font-medium">Webinars & Events</div>
-                <div className="text-xs text-white/40">Follow up with every registrant</div>
-              </Link>
+          <div className="px-4 py-6 max-h-[calc(100vh-4rem)] overflow-y-auto">
+            {/* Primary links */}
+            <div className="space-y-1">
+              <Link href="/platform" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Platform</Link>
+              <Link href="/wholesalers" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Wholesalers</Link>
+              <Link href="/staffing" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Staffing</Link>
+              <Link href="/integrations" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Integrations</Link>
+              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Pricing</Link>
+              <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Blog</Link>
+              <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">About</Link>
+              <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Contact</Link>
             </div>
 
-            {/* Technology */}
-            <div className="border-t border-white/[0.06] pt-4">
-              <div className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-2">Technology</div>
-              <Link href="/platform" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">Platform Overview</Link>
-              <Link href="/integrations" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">Integrations</Link>
-              <Link href="/security" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">Security & Compliance</Link>
-            </div>
-
-            {/* Company */}
-            <div className="border-t border-white/[0.06] pt-4">
-              <div className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-2">Company</div>
-              <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">About SurFox AI</Link>
-              <Link href="/leadership" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">Leadership</Link>
-            </div>
-
-            {/* Learn */}
-            <div className="border-t border-white/[0.06] pt-4">
-              <div className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-2">Learn</div>
-              <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">Insights</Link>
-              <Link href="/roi" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">ROI Calculator</Link>
-              <Link href="/ai-principles" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">AI Principles</Link>
-            </div>
-
-            {/* Contact */}
-            <div className="border-t border-white/[0.06] pt-4">
-              <div className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-2">Contact</div>
-              <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-white/70 hover:text-white transition-colors">Get in Touch</Link>
-            </div>
-            
             {/* Actions */}
-            <div className="pt-4 border-t border-white/[0.06] space-y-3">
+            <div className="mt-4 pt-4 border-t border-white/[0.06] space-y-3">
               <a href="https://surfox.ai" className="block text-white/70 hover:text-white transition-colors font-medium text-center py-2">
                 Sign In
               </a>
