@@ -60,12 +60,16 @@ export default function Subscribe() {
   const [submitError, setSubmitError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // Capture referral code from URL and store in localStorage
+    // Capture referral + affiliate codes from URL and store in localStorage
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const refCode = urlParams.get('ref');
     if (refCode) {
       localStorage.setItem('surfox_ref', refCode);
+    }
+    const affCode = urlParams.get('aff');
+    if (affCode) {
+      localStorage.setItem('surfox_aff', affCode);
     }
   }, []);
 
@@ -87,13 +91,17 @@ export default function Subscribe() {
   }
   if (hasError) return;
 
-  // Get referral code from URL OR localStorage
+  // Get referral + affiliate codes from URL OR localStorage
   const urlParams = new URLSearchParams(window.location.search);
   let referralCode = urlParams.get('ref');
+  let affiliateCode = urlParams.get('aff');
 
   // If not in URL, check localStorage (set from pricing page or initial landing)
   if (!referralCode) {
     referralCode = localStorage.getItem('surfox_ref');
+  }
+  if (!affiliateCode) {
+    affiliateCode = localStorage.getItem('surfox_aff');
   }
 
   setIsSubmitting(true);
@@ -104,6 +112,7 @@ export default function Subscribe() {
       body: JSON.stringify({
         priceId: selectedPlan.priceId,
         referralCode: referralCode,
+        affiliateCode: affiliateCode,
         metadata: {
           terms_agreed_at: new Date().toISOString()
         }

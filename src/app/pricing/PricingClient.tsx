@@ -112,11 +112,14 @@ export default function PricingClient() {
 
               <button
               onClick={() => {
-                const ref = new URLSearchParams(window.location.search).get('ref');
-                const url = ref
-                  ? `/subscribe/starter?ref=${ref}`
-                  : '/subscribe/starter';
-                window.location.href = url;
+                const params = new URLSearchParams(window.location.search);
+                const ref = params.get('ref');
+                const aff = params.get('aff');
+                const qs = new URLSearchParams();
+                if (ref) qs.set('ref', ref);
+                if (aff) qs.set('aff', aff);
+                const suffix = qs.toString() ? `?${qs.toString()}` : '';
+                window.location.href = `/subscribe/starter${suffix}`;
               }}
               className="w-full bg-blue-500/20 text-white px-6 py-3 rounded-xl hover:bg-white/[0.08] transition-colors font-semibold cursor-pointer"
             >
@@ -216,11 +219,14 @@ export default function PricingClient() {
 
               <button
               onClick={() => {
-                const ref = new URLSearchParams(window.location.search).get('ref');
-                const url = ref
-                  ? `/subscribe/growth?ref=${ref}`
-                  : '/subscribe/growth';
-                window.location.href = url;
+                const params = new URLSearchParams(window.location.search);
+                const ref = params.get('ref');
+                const aff = params.get('aff');
+                const qs = new URLSearchParams();
+                if (ref) qs.set('ref', ref);
+                if (aff) qs.set('aff', aff);
+                const suffix = qs.toString() ? `?${qs.toString()}` : '';
+                window.location.href = `/subscribe/growth${suffix}`;
               }}
               className="w-full gradient-bg text-white px-6 py-3 rounded-xl hover:gradient-bg-600 transition-colors font-semibold cursor-pointer"
             >
@@ -318,11 +324,14 @@ export default function PricingClient() {
 
               <button
                 onClick={() => {
-                  const ref = new URLSearchParams(window.location.search).get('ref');
-                  const url = ref
-                    ? `/subscribe/scale?ref=${ref}`
-                    : '/subscribe/scale';
-                  window.location.href = url;
+                  const params = new URLSearchParams(window.location.search);
+                  const ref = params.get('ref');
+                  const aff = params.get('aff');
+                  const qs = new URLSearchParams();
+                  if (ref) qs.set('ref', ref);
+                  if (aff) qs.set('aff', aff);
+                  const suffix = qs.toString() ? `?${qs.toString()}` : '';
+                  window.location.href = `/subscribe/scale${suffix}`;
                 }}
                 className="w-full bg-blue-500/20 text-white px-6 py-3 rounded-xl hover:bg-white/[0.08] transition-colors font-semibold cursor-pointer"
               >
