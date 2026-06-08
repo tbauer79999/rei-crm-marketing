@@ -3,6 +3,13 @@
 import { useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
+// Read an attribution cookie (surfox_ref / surfox_aff) set by middleware.ts.
+function readCookie(name: string): string | null {
+  if (typeof document === 'undefined') return null;
+  const match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
 const PLANS = {
   starter: {
     name: 'Starter',
@@ -96,12 +103,13 @@ export default function Subscribe() {
   let referralCode = urlParams.get('ref');
   let affiliateCode = urlParams.get('aff');
 
-  // If not in URL, check localStorage (set from pricing page or initial landing)
+  // If not in URL, check localStorage, then the attribution cookie set by
+  // middleware.ts on first landing (survives browsing away and return visits).
   if (!referralCode) {
-    referralCode = localStorage.getItem('surfox_ref');
+    referralCode = localStorage.getItem('surfox_ref') || readCookie('surfox_ref');
   }
   if (!affiliateCode) {
-    affiliateCode = localStorage.getItem('surfox_aff');
+    affiliateCode = localStorage.getItem('surfox_aff') || readCookie('surfox_aff');
   }
 
   setIsSubmitting(true);
