@@ -15,6 +15,14 @@ export function middleware(request: NextRequest) {
   const response = NextResponse.next();
   const { searchParams } = request.nextUrl;
 
+  // Scope the cookie to the registrable domain so it is shared across the apex
+  // and every subdomain (getsurfox.com AND www.getsurfox.com). A host-only
+  // cookie set on the apex is NOT sent to www, which would drop attribution the
+  // moment a visitor clicks a link pointing at the other host. Stay host-only on
+  // localhost / preview deploys, where a fixed Domain would be invalid.
+  const host = request.nextUrl.hostname;
+  const cookieDomain = host.endsWith('getsurfox.com') ? '.getsurfox.com' : undefined;
+
   for (const [param, cookieName] of [
     ['aff', 'surfox_aff'],
     ['ref', 'surfox_ref'],
@@ -26,6 +34,7 @@ export function middleware(request: NextRequest) {
         path: '/',
         sameSite: 'lax',
         httpOnly: false, // SubscribeClient reads it client-side
+        ...(cookieDomain ? { domain: cookieDomain } : {}),
       });
     }
   }
