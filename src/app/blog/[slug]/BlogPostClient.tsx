@@ -207,7 +207,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
               switch (block.type) {
                 case 'tldr':
                   return (
-                    <div key={index} className="not-prose my-8 p-6 sm:p-8 rounded-2xl bg-[#1e293b]">
+                    <div key={index} className="not-prose my-8 p-6 sm:p-8 rounded-2xl bg-[#F0F8F9] border border-[#dCEEF1]">
                       <p className="text-xs font-bold uppercase tracking-widest text-[#0A7C8C] mb-4 m-0">Key Takeaways</p>
                       <ul className="space-y-3 m-0 p-0 list-none">
                         {block.content.split('\n').map((bullet, i) => (
@@ -299,7 +299,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                     <div key={index} className="not-prose my-8 overflow-x-auto rounded-xl border border-[#E4E6E2]">
                       <table className="w-full text-sm">
                         <thead>
-                          <tr className="bg-[#1e293b]">
+                          <tr className="bg-[#EAF7F9]">
                             {block.headers.map((header, hi) => (
                               <th key={hi} className="px-4 py-3 text-left text-[#13171F] font-semibold text-sm">
                                 {header}
