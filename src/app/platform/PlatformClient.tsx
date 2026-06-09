@@ -32,14 +32,14 @@ export default function PlatformClient() {
   };
 
   return (
-    <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
+    <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
       <div className="max-w-2xl mx-auto text-center">
         <div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-[#13171F] mb-4">
             Want to follow along?
           </h2>
 
-          <p className="text-lg text-white/60 mb-8 leading-relaxed">
+          <p className="text-lg text-[#5A626E] mb-8 leading-relaxed">
             We're building this one layer at a time. Drop your email and we'll share updates as new capabilities go live.
           </p>
 
@@ -50,7 +50,7 @@ export default function PlatformClient() {
               onChange={(e) => setPlatformFirstName(e.target.value)}
               placeholder="First name"
               required
-              className="w-full px-4 py-3 rounded-lg border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition bg-background text-white placeholder:text-white/40"
+              className="w-full px-4 py-3 rounded-[9px] border border-[#E4E6E2] focus:border-[#0FB6C9] outline-none transition bg-white text-[#13171F] placeholder:text-[#8A92A0]"
             />
             <div className="flex flex-col sm:flex-row gap-3">
               <input
@@ -59,12 +59,12 @@ export default function PlatformClient() {
                 onChange={(e) => setPlatformEmail(e.target.value)}
                 placeholder="you@company.com"
                 required
-                className="flex-1 px-4 py-3 rounded-lg border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition bg-background text-white placeholder:text-white/40"
+                className="flex-1 px-4 py-3 rounded-[9px] border border-[#E4E6E2] focus:border-[#0FB6C9] outline-none transition bg-white text-[#13171F] placeholder:text-[#8A92A0]"
               />
               <button
                 type="submit"
                 disabled={platformSubmitting}
-                className="px-6 py-3 rounded-lg bg-card-bg text-white font-semibold hover:bg-card-bg border border-white/[0.08] transition disabled:opacity-60 disabled:cursor-not-allowed"
+                className="px-6 py-3 rounded-[9px] bg-[#13171F] text-white font-semibold hover:bg-black transition disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {platformSubmitting ? 'Sending...' : 'Stay in the know'}
               </button>

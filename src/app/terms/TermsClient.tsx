@@ -7,23 +7,23 @@ import { FileText, Shield, AlertCircle, DollarSign, Users, XCircle, Scale } from
 
 export default function TermsOfService() {
   return (
-    <div className="bg-card-bg text-white">
+    <div className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Hero Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl glass-card border border-blue-500/20 flex items-center justify-center">
-              <FileText className="w-8 h-8 text-blue-400" />
+            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center">
+              <FileText className="w-8 h-8 text-[#0A7C8C]" />
             </div>
-            <h1 className="text-4xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl font-bold text-[#13171F] mb-6 leading-tight">
               Terms of Service
             </h1>
-            <p className="text-lg sm:text-xl text-white/60 leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#5A626E] leading-relaxed">
               Last Updated: May 16, 2026
             </p>
           </motion.div>
@@ -41,10 +41,10 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
               Agreement to Terms
             </h2>
-            <div className="text-white/60 leading-relaxed space-y-4">
+            <div className="text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 By accessing or using SurFox AI ("the Platform"), you agree to be bound by these Terms of Service. If you don't agree, don't use the Platform.
               </p>
@@ -61,14 +61,14 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
               What SurFox AI Does
             </h2>
-            <div className="text-white/60 leading-relaxed space-y-4">
+            <div className="text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 SurFox AI provides AI-powered lead qualification software that automates lead engagement and qualification through SMS messaging. The Platform analyzes prospect responses, identifies buying signals, and escalates qualified leads to your sales team.
               </p>
-              <p className="font-semibold text-white">
+              <p className="font-semibold text-[#13171F]">
                 We provide the tools. You are solely and entirely responsible for how you use them, including full compliance with TCPA and all applicable federal, state, and local messaging laws.
               </p>
             </div>
@@ -82,38 +82,38 @@ export default function TermsOfService() {
             className="mb-16"
           >
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                <Users className="w-6 h-6 text-blue-400" />
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Users className="w-6 h-6 text-[#0A7C8C]" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
                 Account Requirements
               </h2>
             </div>
-            <div className="ml-16 text-white/60 leading-relaxed space-y-4">
+            <div className="ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>To use SurFox AI, you must:</p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Be at least 18 years old</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Provide accurate and complete registration information</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Maintain the security of your account credentials</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Be responsible for all activity under your account</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Notify us immediately of any unauthorized access</span>
                 </li>
               </ul>
-              <p className="font-semibold text-white">
+              <p className="font-semibold text-[#13171F]">
                 One person or company per account. No account sharing.
               </p>
             </div>
@@ -127,110 +127,110 @@ export default function TermsOfService() {
             className="mb-16"
           >
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                <Shield className="w-6 h-6 text-blue-400" />
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Shield className="w-6 h-6 text-[#0A7C8C]" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
                 Acceptable Use
               </h2>
             </div>
 
             <div className="ml-16 space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">You may use SurFox AI to:</h3>
-                <ul className="space-y-2 text-white/60">
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">You may use SurFox AI to:</h3>
+                <ul className="space-y-2 text-[#5A626E]">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Engage with leads you have legal permission to contact</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Automate qualification conversations with prospects</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Analyze conversation data for sales intelligence</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Integrate with your existing CRM and business tools</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">You may NOT use SurFox AI to:</h3>
-                <ul className="space-y-2 text-white/60">
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">You may NOT use SurFox AI to:</h3>
+                <ul className="space-y-2 text-[#5A626E]">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Contact people without proper consent or legal basis</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Send spam, phishing attempts, or fraudulent messages</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Violate TCPA, CAN-SPAM, or other telecommunications regulations</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Harass, threaten, or abuse message recipients</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Impersonate others or misrepresent your identity</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Upload malicious code, viruses, or harmful content</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Reverse engineer, copy, or compete with the Platform</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Resell or redistribute SurFox AI services without authorization</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Use the Platform for any illegal purpose</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Manual Messaging Responsibility:</h3>
-                <p className="text-white/60 mb-3">
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Manual Messaging Responsibility:</h3>
+                <p className="text-[#5A626E] mb-3">
                   SurFox AI provides a manual messaging feature that allows you and your team members to send messages directly through the platform. You acknowledge and agree that:
                 </p>
-                <ul className="space-y-2 text-white/60">
+                <ul className="space-y-2 text-[#5A626E]">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>You are fully responsible for all messages sent through the platform, whether generated by the AI or sent manually by you or any member of your team</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Manual messages are subject to the same legal requirements as AI-generated messages, including TCPA compliance and opt-out honoring</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Sending a manual message to a contact who has opted out is a violation of these Terms and may constitute a TCPA violation for which you are solely liable</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>SurFox AI may implement technical guardrails to help prevent messaging opted-out contacts, but you may not rely on these guardrails as your sole compliance mechanism</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>You are responsible for training your team members on applicable laws and these Terms</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="gradient-bg/5 border-l-4 border-orange rounded-r-lg p-4">
-                <p className="text-white font-semibold">
+              <div className="bg-[#F0F8F9] border-l-4 border-[#E4E6E2] rounded-r-lg p-4">
+                <p className="text-[#13171F] font-semibold">
                   If you violate these terms, we will terminate your account immediately without refund.
                 </p>
               </div>
@@ -245,101 +245,101 @@ export default function TermsOfService() {
             className="mb-16"
           >
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                <Scale className="w-6 h-6 text-blue-400" />
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Scale className="w-6 h-6 text-[#0A7C8C]" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
                 TCPA & Messaging Compliance
               </h2>
             </div>
 
             <div className="ml-16 space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">You are solely responsible for compliance with all applicable telecommunications laws, including but not limited to:</h3>
-                <ul className="space-y-2 text-white/60">
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">You are solely responsible for compliance with all applicable telecommunications laws, including but not limited to:</h3>
+                <ul className="space-y-2 text-[#5A626E]">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>The Telephone Consumer Protection Act (TCPA)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>The CAN-SPAM Act</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>The Telemarketing Sales Rule (TSR)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>All state and local equivalents</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">By uploading contacts to SurFox AI, you represent and warrant that:</h3>
-                <ul className="space-y-2 text-white/60">
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">By uploading contacts to SurFox AI, you represent and warrant that:</h3>
+                <ul className="space-y-2 text-[#5A626E]">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>You have obtained all legally required consent to contact each individual on your list via SMS</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Every phone number you upload has a lawful basis for contact</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Your contact lists were obtained through legal means and comply with all applicable regulations</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>You will not upload numbers belonging to individuals who have previously opted out, requested removal, or are on any do-not-contact list</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Opt-Out Compliance:</h3>
-                <ul className="space-y-2 text-white/60">
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Opt-Out Compliance:</h3>
+                <ul className="space-y-2 text-[#5A626E]">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>You must honor all opt-out requests immediately, whether detected automatically by the SurFox AI system or communicated through any other means</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>An opt-out communicated in any form (including but not limited to "stop", "remove me", "don't contact me", or any similar expression of unwillingness to be contacted) must be treated as a binding opt-out regardless of whether the platform automatically flagged it</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Continued messaging of any contact after an opt-out request, whether via automated AI messages or manual messages sent through the platform, constitutes a material violation of these Terms and grounds for immediate account termination</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>SurFox AI provides opt-out detection as a convenience feature. You may not rely solely on automated detection. You are responsible for monitoring conversations and honoring opt-outs that the system may not have detected</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Regulatory Fines & Penalties:</h3>
-                <ul className="space-y-2 text-white/60">
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Regulatory Fines & Penalties:</h3>
+                <ul className="space-y-2 text-[#5A626E]">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Any TCPA violation carries statutory damages of $500–$1,500 per message</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>SurFox AI bears zero liability for any regulatory fines, penalties, lawsuits, or damages arising from your use of the platform</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>You agree to indemnify and hold harmless SurFox AI, its officers, employees, and affiliates from any claims, damages, fines, or legal fees arising from your messaging practices</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="gradient-bg/5 border-l-4 border-orange rounded-r-lg p-4">
-                <p className="font-semibold text-white mb-2">
+              <div className="bg-[#F0F8F9] border-l-4 border-[#E4E6E2] rounded-r-lg p-4">
+                <p className="font-semibold text-[#13171F] mb-2">
                   TCPA violations carry statutory damages of $500–$1,500 per text message. You are solely responsible for ensuring every contact you upload has given lawful consent to be contacted. SurFox AI is not your compliance officer.
                 </p>
               </div>
@@ -353,71 +353,71 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
               Your Data & Our AI
             </h2>
 
-            <div className="space-y-6 text-white/60">
+            <div className="space-y-6 text-[#5A626E]">
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">What you own:</h3>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">What you own:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>All leads, contacts, and prospect data you upload</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Your business information and configurations</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Conversation history and outcomes</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">What we own:</h3>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">What we own:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>The SurFox AI Platform, code, and technology</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>AI models, algorithms, and intellectual property</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Analytics methods and processing techniques</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">How we use your data:</h3>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">How we use your data:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Your AI model trains exclusively on YOUR tenant's data</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>We never share your data with other customers</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>We don't use your data to train models for others</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Complete tenant isolation - your data stays yours</span>
                   </li>
                 </ul>
               </div>
 
               <p>
-                See our <Link href="/privacy" className="text-blue-400 hover:underline font-semibold">Privacy Policy</Link> for details: <a href="https://www.getsurfox.com/privacy" className="text-blue-400 hover:underline">https://www.getsurfox.com/privacy</a>
+                See our <Link href="/privacy" className="text-[#0A7C8C] hover:underline font-semibold">Privacy Policy</Link> for details: <a href="https://www.getsurfox.com/privacy" className="text-[#0A7C8C] hover:underline">https://www.getsurfox.com/privacy</a>
               </p>
             </div>
           </motion.div>
@@ -430,116 +430,116 @@ export default function TermsOfService() {
             className="mb-16"
           >
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                <DollarSign className="w-6 h-6 text-blue-400" />
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <DollarSign className="w-6 h-6 text-[#0A7C8C]" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
                 Service Plans & Pricing
               </h2>
             </div>
 
             <div className="ml-16 space-y-8">
               <div>
-                <h3 className="text-xl font-semibold text-white mb-4">Available Plans:</h3>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-4">Available Plans:</h3>
 
                 {/* Starter Plan */}
-                <div className="mb-6 bg-background rounded-xl p-6">
+                <div className="mb-6 bg-[#F4F5F3] rounded-xl p-6">
                   <div className="flex items-baseline gap-3 mb-3">
-                    <h4 className="text-lg font-semibold text-white">Starter</h4>
-                    <span className="text-2xl font-bold text-white">$147<span className="text-sm text-white/50">/month</span></span>
+                    <h4 className="text-lg font-semibold text-[#13171F]">Starter</h4>
+                    <span className="text-2xl font-bold text-[#13171F]">$147<span className="text-sm text-[#8A92A0]">/month</span></span>
                   </div>
-                  <ul className="space-y-1 text-white/60 text-sm">
+                  <ul className="space-y-1 text-[#5A626E] text-sm">
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>2,000 messages per month (in & out)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>1 team member account</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>Basic AI (does not learn from conversations)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>Automated qualification questions</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>Psychology-based conversations</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* Growth Plan */}
-                <div className="mb-6 gradient-bg/5 rounded-xl p-6 border-2 border-orange/20">
+                <div className="mb-6 bg-[#F0F8F9] rounded-xl p-6 border-2 border-[#dCEEF1]">
                   <div className="flex items-baseline gap-3 mb-3">
-                    <h4 className="text-lg font-semibold text-white">Growth</h4>
-                    <span className="text-sm gradient-bg text-white px-3 py-1 rounded-full font-semibold">Most Popular</span>
-                    <span className="text-2xl font-bold text-white">$597<span className="text-sm text-white/50">/month</span></span>
+                    <h4 className="text-lg font-semibold text-[#13171F]">Growth</h4>
+                    <span className="text-sm bg-[#13171F] text-white px-3 py-1 rounded-full font-semibold">Most Popular</span>
+                    <span className="text-2xl font-bold text-[#13171F]">$597<span className="text-sm text-[#8A92A0]">/month</span></span>
                   </div>
-                  <ul className="space-y-1 text-white/70 text-sm">
+                  <ul className="space-y-1 text-[#5A626E] text-sm">
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>10,000 messages per month (in & out)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>5 team member accounts</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>Learning AI (improves with every conversation)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>Advanced objection handling</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>Chrome extension for lead capture</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>Priority support</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* Scale Plan */}
-                <div className="mb-6 bg-background rounded-xl p-6">
+                <div className="mb-6 bg-[#F4F5F3] rounded-xl p-6">
                   <div className="flex items-baseline gap-3 mb-3">
-                    <h4 className="text-lg font-semibold text-white">Scale</h4>
-                    <span className="text-2xl font-bold text-white">$2,497<span className="text-sm text-white/50">/month</span></span>
+                    <h4 className="text-lg font-semibold text-[#13171F]">Scale</h4>
+                    <span className="text-2xl font-bold text-[#13171F]">$2,497<span className="text-sm text-[#8A92A0]">/month</span></span>
                   </div>
-                  <ul className="space-y-1 text-white/60 text-sm">
+                  <ul className="space-y-1 text-[#5A626E] text-sm">
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>40,000+ messages per month (in & out)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>15+ team member accounts</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>Advanced learning AI (1000 conversation memory)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>Unlimited knowledge base uploads</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>Message A/B testing</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>White-glove onboarding</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-400 mt-1">•</span>
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>Dedicated success manager</span>
                     </li>
                   </ul>
@@ -547,8 +547,8 @@ export default function TermsOfService() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">DNC Scrubbing:</h3>
-                <div className="space-y-4 text-white/60 leading-relaxed">
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">DNC Scrubbing:</h3>
+                <div className="space-y-4 text-[#5A626E] leading-relaxed">
                   <p>
                     Growth and Scale plan subscribers receive monthly Do Not Call (DNC) scrubbing credits as part of their plan. Growth includes 5,000 scrub credits per month. Scale includes 25,000 scrub credits per month. Starter plan subscribers do not receive DNC scrubbing.
                   </p>
@@ -562,48 +562,48 @@ export default function TermsOfService() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Billing:</h3>
-                <ul className="space-y-2 text-white/60">
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Billing:</h3>
+                <ul className="space-y-2 text-[#5A626E]">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>All plans billed monthly in advance</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Annual billing available for custom enterprise agreements</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Prices in USD</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Automatic renewal unless cancelled</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Payment via credit card or ACH (Scale plan and annual contracts)</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Fair Usage:</h3>
-                <ul className="space-y-2 text-white/60">
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Fair Usage:</h3>
+                <ul className="space-y-2 text-[#5A626E]">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Message limits are monthly maximums</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Unused messages don't roll over</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Exceeding limits may result in throttling or overage fees</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>We'll notify you before charging overages</span>
                   </li>
                 </ul>
@@ -619,72 +619,72 @@ export default function TermsOfService() {
             className="mb-16"
           >
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                <XCircle className="w-6 h-6 text-blue-400" />
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <XCircle className="w-6 h-6 text-[#0A7C8C]" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
                 Cancellation & Refunds
               </h2>
             </div>
 
-            <div className="ml-16 space-y-6 text-white/60">
+            <div className="ml-16 space-y-6 text-[#5A626E]">
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">You can cancel anytime:</h3>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">You can cancel anytime:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Cancel from your account settings</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
-                    <span>Email tom@getsurfox.com to request cancellation</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span>Email sales@getsurfox.com to request cancellation</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Service continues until end of current billing period</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>No refunds for partial months</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">We can cancel your account if:</h3>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">We can cancel your account if:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>You violate these Terms</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Payment fails repeatedly</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>You engage in abusive or fraudulent behavior</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Required by law</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">After cancellation:</h3>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">After cancellation:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>You have 30 days to export your data</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>After 30 days, we'll delete your account data</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Some data may be retained for legal compliance</span>
                   </li>
                 </ul>
@@ -699,11 +699,11 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
               Service Availability
             </h2>
 
-            <div className="space-y-4 text-white/60 leading-relaxed">
+            <div className="space-y-4 text-[#5A626E] leading-relaxed">
               <p>
                 We aim for 99% uptime but make no guarantees.
               </p>
@@ -712,19 +712,19 @@ export default function TermsOfService() {
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Scheduled maintenance (we'll notify you)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Emergency repairs or updates</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Third-party service disruptions (Twilio, Anthropic, AWS)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Events beyond our control</span>
                 </li>
               </ul>
@@ -734,19 +734,19 @@ export default function TermsOfService() {
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Lost revenue due to downtime</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Missed opportunities or failed conversations</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Data loss (you should maintain backups)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Third-party service failures</span>
                 </li>
               </ul>
@@ -761,89 +761,89 @@ export default function TermsOfService() {
             className="mb-16"
           >
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                <AlertCircle className="w-6 h-6 text-blue-400" />
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <AlertCircle className="w-6 h-6 text-[#0A7C8C]" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
                 Limitations of Liability
               </h2>
             </div>
 
-            <div className="ml-16 space-y-6 text-white/60">
-              <p className="font-semibold text-white">
+            <div className="ml-16 space-y-6 text-[#5A626E]">
+              <p className="font-semibold text-[#13171F]">
                 SurFox AI is provided "as is" without warranties.
               </p>
 
               <div>
-                <h3 className="text-lg font-semibold text-white mb-3">We don't guarantee:</h3>
+                <h3 className="text-lg font-semibold text-[#13171F] mb-3">We don't guarantee:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Specific conversation outcomes or results</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Compliance with all regulations in your jurisdiction</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Uninterrupted or error-free operation</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>That SurFox AI will always make correct decisions</span>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-white mb-3">You're responsible for:</h3>
+                <h3 className="text-lg font-semibold text-[#13171F] mb-3">You're responsible for:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Ensuring you have legal right to contact leads</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Compliance with TCPA, CAN-SPAM, and local laws</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Quality and accuracy of uploaded data</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>How you use qualified leads we identify</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Your own business outcomes</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Compliance with TCPA and all telecommunications laws for every message sent through the platform, automated or manual</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Ensuring all contacts you upload have provided lawful consent to be contacted</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Training your team members on TCPA requirements and opt-out obligations</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>All consequences arising from manual messages sent by you or your team through the platform</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Any opt-out requests not caught by automated detection</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="gradient-bg/5 border-l-4 border-orange rounded-r-lg p-4">
-                <p className="font-semibold text-white mb-2">
+              <div className="bg-[#F0F8F9] border-l-4 border-[#E4E6E2] rounded-r-lg p-4">
+                <p className="font-semibold text-[#13171F] mb-2">
                   Our maximum liability is limited to the amount you paid us in the past 12 months.
                 </p>
                 <p className="text-sm">
@@ -851,8 +851,8 @@ export default function TermsOfService() {
                 </p>
               </div>
 
-              <div className="gradient-bg/5 border-l-4 border-orange rounded-r-lg p-4">
-                <p className="font-semibold text-white">
+              <div className="bg-[#F0F8F9] border-l-4 border-[#E4E6E2] rounded-r-lg p-4">
+                <p className="font-semibold text-[#13171F]">
                   SurFox AI is a software platform, not a legal compliance service. We are not responsible for how you use the platform. Consult a lawyer before running high-volume SMS campaigns.
                 </p>
               </div>
@@ -867,53 +867,53 @@ export default function TermsOfService() {
             className="mb-16"
           >
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                <Shield className="w-6 h-6 text-blue-400" />
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Shield className="w-6 h-6 text-[#0A7C8C]" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
                 Indemnification
               </h2>
             </div>
 
-            <div className="ml-16 space-y-6 text-white/60">
+            <div className="ml-16 space-y-6 text-[#5A626E]">
               <p>
                 You agree to defend, indemnify, and hold harmless SurFox AI, Inc., its officers, directors, employees, contractors, and affiliates from and against any and all claims, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or relating to:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Your use of the SurFox AI platform</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Any messages sent through the platform by you or your team, automated or manual</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Your violation of these Terms</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Your violation of any applicable law, including the TCPA</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Any claim by a third party that you contacted them without proper consent</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Any opt-out you failed to honor</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>The content of your campaigns, knowledge base, or any materials you upload</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Any misrepresentation made to a lead or prospect through the platform</span>
                 </li>
               </ul>
-              <p className="font-semibold text-white">
+              <p className="font-semibold text-[#13171F]">
                 This indemnification obligation survives termination of your account.
               </p>
             </div>
@@ -926,30 +926,30 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
               Intellectual Property
             </h2>
 
-            <div className="space-y-6 text-white/60 leading-relaxed">
+            <div className="space-y-6 text-[#5A626E] leading-relaxed">
               <div>
-                <h3 className="text-lg font-semibold text-white mb-3">You grant us a limited license to:</h3>
+                <h3 className="text-lg font-semibold text-[#13171F] mb-3">You grant us a limited license to:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Process your data to provide the service</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Use conversation data to train your isolated AI model</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Display your data back to you in the Platform</span>
                   </li>
                 </ul>
               </div>
 
-              <p className="font-semibold text-white">
+              <p className="font-semibold text-[#13171F]">
                 You retain all ownership of your data.
               </p>
 
@@ -957,25 +957,25 @@ export default function TermsOfService() {
                 <p className="mb-2">We retain all ownership of:</p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>SurFox AI Platform and technology</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Our brand, trademarks, and logos</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>AI models and algorithms</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400 mt-1">•</span>
+                    <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>Documentation and training materials</span>
                   </li>
                 </ul>
               </div>
 
-              <p className="font-semibold text-white">
+              <p className="font-semibold text-[#13171F]">
                 Don't copy, modify, or reverse engineer our Platform.
               </p>
             </div>
@@ -988,37 +988,37 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
               Third-Party Services
             </h2>
 
-            <div className="space-y-4 text-white/60 leading-relaxed">
+            <div className="space-y-4 text-[#5A626E] leading-relaxed">
               <p>
                 SurFox AI integrates with third-party services including:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Twilio (SMS delivery)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Anthropic (AI processing)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Stripe (payments)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>AWS (infrastructure)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Google Workspace & Microsoft Outlook (calendar integration)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Zapier (workflow integrations)</span>
                 </li>
               </ul>
@@ -1028,15 +1028,15 @@ export default function TermsOfService() {
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>We're not responsible for their actions or failures</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Their downtime may affect SurFox AI availability</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>You must comply with their terms when using SurFox AI</span>
                 </li>
               </ul>
@@ -1050,25 +1050,25 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
               Changes to Terms
             </h2>
 
-            <div className="space-y-4 text-white/60 leading-relaxed">
+            <div className="space-y-4 text-[#5A626E] leading-relaxed">
               <p>
                 We may update these Terms at any time. Material changes will be communicated via:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Email notification</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>In-platform notification</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Updated "Last Updated" date on this page</span>
                 </li>
               </ul>
@@ -1088,15 +1088,15 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
               Dispute Resolution
             </h2>
 
-            <div className="space-y-4 text-white/60 leading-relaxed">
-              <div className="gradient-bg/5 border-l-4 border-orange rounded-r-lg p-4">
-                <h3 className="font-semibold text-white mb-2">Let's talk first:</h3>
+            <div className="space-y-4 text-[#5A626E] leading-relaxed">
+              <div className="bg-[#F0F8F9] border-l-4 border-[#E4E6E2] rounded-r-lg p-4">
+                <h3 className="font-semibold text-[#13171F] mb-2">Let's talk first:</h3>
                 <p>
-                  If you have a problem, email tom@getsurfox.com. We'll work it out.
+                  If you have a problem, email sales@getsurfox.com. We'll work it out.
                 </p>
               </div>
 
@@ -1105,23 +1105,23 @@ export default function TermsOfService() {
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Disputes will be governed by Delaware law</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Both parties agree to binding arbitration</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Arbitration will be conducted by JAMS</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>Location: Delaware</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-blue-400 mt-1">•</span>
+                  <span className="text-[#0A7C8C] mt-1">•</span>
                   <span>No class actions - individual disputes only</span>
                 </li>
               </ul>
@@ -1139,16 +1139,16 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
               Miscellaneous
             </h2>
 
-            <div className="space-y-3 text-white/60">
-              <p><strong className="text-white">Entire Agreement:</strong> These Terms, plus our Privacy Policy, constitute the entire agreement.</p>
-              <p><strong className="text-white">Severability:</strong> If any provision is unenforceable, the rest remains in effect.</p>
-              <p><strong className="text-white">No Waiver:</strong> Our failure to enforce a right doesn't waive that right.</p>
-              <p><strong className="text-white">Assignment:</strong> We can assign these Terms. You can't without our consent.</p>
-              <p><strong className="text-white">Force Majeure:</strong> We're not liable for delays due to circumstances beyond our control.</p>
+            <div className="space-y-3 text-[#5A626E]">
+              <p><strong className="text-[#13171F]">Entire Agreement:</strong> These Terms, plus our Privacy Policy, constitute the entire agreement.</p>
+              <p><strong className="text-[#13171F]">Severability:</strong> If any provision is unenforceable, the rest remains in effect.</p>
+              <p><strong className="text-[#13171F]">No Waiver:</strong> Our failure to enforce a right doesn't waive that right.</p>
+              <p><strong className="text-[#13171F]">Assignment:</strong> We can assign these Terms. You can't without our consent.</p>
+              <p><strong className="text-[#13171F]">Force Majeure:</strong> We're not liable for delays due to circumstances beyond our control.</p>
             </div>
           </motion.div>
 
@@ -1159,18 +1159,18 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
               Contact Us
             </h2>
 
-            <div className="text-white/60 leading-relaxed space-y-4">
+            <div className="text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 Questions about these Terms?
               </p>
-              <div className="bg-background rounded-xl p-6 space-y-2">
-                <p><strong className="text-white">Email:</strong> tom@getsurfox.com</p>
-                <p><strong className="text-white">Address:</strong> SurFox AI, Inc.</p>
-                <p><strong className="text-white">Website:</strong> <a href="https://www.getsurfox.com" className="text-blue-400 hover:underline">https://www.getsurfox.com</a></p>
+              <div className="bg-[#F4F5F3] rounded-xl p-6 space-y-2">
+                <p><strong className="text-[#13171F]">Email:</strong> privacy@getsurfox.com</p>
+                <p><strong className="text-[#13171F]">Address:</strong> SurFox AI, Inc.</p>
+                <p><strong className="text-[#13171F]">Website:</strong> <a href="https://www.getsurfox.com" className="text-[#0A7C8C] hover:underline">https://www.getsurfox.com</a></p>
               </div>
             </div>
           </motion.div>

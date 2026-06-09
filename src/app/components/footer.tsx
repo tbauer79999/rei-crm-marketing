@@ -1,27 +1,79 @@
-'use client'
+'use client';
 
 /* =============================================================================
-   FOOTER - Obsidian Intelligence Design System
-   Dark footer with glassmorphism, gradient accents, and social links
+   FOOTER - Homepage redesign ("Thread")
+   Brand block (logo + tagline + newsletter) and a 4-column link grid, a
+   hairline, then a bottom row. Warm-paper, no gradients.
    ============================================================================= */
 
-import React, { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Zap } from 'lucide-react'
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
 
+const columns: { title: string; links: { label: string; href: string }[]; wide?: boolean }[] = [
+  {
+    title: 'Product',
+    links: [
+      { label: 'Platform', href: '/platform' },
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'Integrations', href: '/integrations' },
+      { label: 'Security', href: '/security' },
+    ],
+  },
+  {
+    title: 'Solutions',
+    links: [
+      { label: 'For Staffing Firms', href: '/staffing' },
+      { label: 'For Real Estate', href: '/wholesalers' },
+      { label: 'Home Services', href: '#' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'About', href: '/about' },
+      { label: 'Contact', href: '/contact' },
+      { label: 'Leadership', href: '/leadership' },
+      { label: 'Careers', href: '/careers' },
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      { label: 'Blog', href: '/blog' },
+      { label: 'ROI calculator', href: '/roi' },
+      { label: 'AI principles', href: '/ai-principles' },
+    ],
+  },
+  {
+    title: 'Competitive Intelligence',
+    wide: true,
+    links: [
+      { label: 'SurFox AI vs All Competitors', href: '/compare/surfox-vs-all-competitors' },
+      { label: 'SurFox AI vs Textus', href: '/compare/surfox-vs-textus' },
+      { label: 'SurFox AI vs Launch Control', href: '/compare/surfox-vs-launch-control' },
+      { label: 'SurFox AI vs Lead Sherpa', href: '/compare/surfox-vs-lead-sherpa' },
+      { label: 'SurFox AI vs Skipio', href: '/compare/surfox-vs-skipio' },
+      { label: 'SurFox AI vs Smarter Contact', href: '/compare/surfox-vs-smarter-contact' },
+      { label: 'SurFox AI vs Meera AI', href: '/compare/surfox-vs-meera-ai' },
+      { label: 'SurFox AI vs GoHighLevel', href: '/compare/surfox-vs-gohighlevel' },
+      { label: 'SurFox AI vs Spara', href: '/compare/surfox-vs-spara' },
+    ],
+  },
+];
+
 export default function Footer() {
-  const [firstName, setFirstName] = useState('')
-  const [email, setEmail] = useState('')
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
+  const [firstName, setFirstName] = useState('');
+  const [email, setEmail] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     if (!email) return;
-    setSubmitting(true)
+    setSubmitting(true);
     try {
       const res = await fetch(API_URL, {
         method: 'POST',
@@ -30,55 +82,58 @@ export default function Footer() {
       });
       const data = await res.json();
       if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');
-      setIsSubmitted(true)
-      setEmail('')
-      setFirstName('')
-      setTimeout(() => setIsSubmitted(false), 5000)
+      setIsSubmitted(true);
+      setEmail('');
+      setFirstName('');
+      setTimeout(() => setIsSubmitted(false), 5000);
     } catch {
-      alert('Something went wrong. Please try again.')
+      alert('Something went wrong. Please try again.');
     } finally {
-      setSubmitting(false)
+      setSubmitting(false);
     }
-  }
+  };
 
   return (
-    <footer className="bg-background border-t border-white/[0.06] animate-fade-in">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-
-          {/* Newsletter Section */}
-          <div className="lg:col-span-1">
-            <div className="mb-6">
-              <Image
-                src="/newSurFoxLogo1.png"
-                alt="SurFox AI"
-                width={120}
-                height={32}
-                className="h-8 w-auto object-contain"
-              />
-            </div>
-            <p className="text-sm text-white/50 mb-6 leading-relaxed">
-              Join our newsletter to stay up to date on features and releases.
+    <footer
+      className="bg-[#F4F5F3] border-t border-[#E4E6E2]"
+      style={{ fontFamily: 'var(--font-ibm-plex-sans)' }}
+    >
+      <div className="max-w-[1180px] mx-auto px-8 pt-16 pb-10">
+        {/* Top region: brand + columns */}
+        <div className="grid grid-cols-1 lg:grid-cols-[230px_1fr] gap-12 pb-10 border-b border-[#E4E6E2]">
+          {/* Brand block (with newsletter) */}
+          <div>
+            <Image
+              src="/newSurFoxLogo1.png"
+              alt="SurFox AI"
+              width={140}
+              height={34}
+              className="h-[34px] w-auto object-contain mb-4"
+            />
+            <p className="text-sm text-[#5A626E] max-w-[260px] leading-relaxed mb-6">
+              AI that texts, qualifies, and books your leads, autonomously.
             </p>
 
             {isSubmitted ? (
-              <div className="space-y-3">
-                <div className="w-full px-4 py-3 glass-card border border-green-500/30 rounded-lg text-sm text-green-400 flex items-center gap-2">
-                  <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                  </svg>
-                  <span>Thanks for subscribing!</span>
-                </div>
+              <div className="w-full max-w-[320px] px-4 py-3 bg-[#E9F8EF] border border-[#cdeed9] rounded-lg text-sm text-[#0c7a3c] flex items-center gap-2">
+                <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <span>Thanks for subscribing!</span>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-3">
+              <form onSubmit={handleSubmit} className="space-y-2.5 max-w-[320px]">
                 <input
                   type="text"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                   placeholder="First name"
                   required
-                  className="w-full px-4 py-2.5 glass-card border border-white/[0.08] rounded-lg text-sm text-white placeholder-white/30 focus:outline-none focus:border-blue-500/50 transition"
+                  className="w-full px-4 py-2.5 bg-white border border-[#E4E6E2] rounded-[9px] text-sm text-[#13171F] placeholder-[#8A92A0] focus:outline-none focus:border-[#0FB6C9] transition"
                 />
                 <input
                   type="email"
@@ -86,202 +141,61 @@ export default function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="w-full px-4 py-2.5 glass-card border border-white/[0.08] rounded-lg text-sm text-white placeholder-white/30 focus:outline-none focus:border-blue-500/50 transition"
+                  className="w-full px-4 py-2.5 bg-white border border-[#E4E6E2] rounded-[9px] text-sm text-[#13171F] placeholder-[#8A92A0] focus:outline-none focus:border-[#0FB6C9] transition"
                 />
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full px-4 py-2.5 gradient-bg text-white rounded-lg text-sm font-semibold hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-2.5 rounded-[9px] bg-[#13171F] text-white text-sm font-semibold hover:bg-black transition disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {submitting ? 'Subscribing...' : 'Subscribe'}
                 </button>
               </form>
             )}
-
-            <p className="text-xs text-white/30 mt-4 leading-relaxed">
-              By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.
-            </p>
           </div>
 
-          {/* Competitive Intelligence */}
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-4" style={{ fontFamily: 'var(--font-sora)' }}>Competitive Intelligence</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/compare/surfox-vs-all-competitors" className="text-sm text-white/50 hover:text-white transition-colors">
-                  SurFox AI vs All Competitors
-                </Link>
-              </li>
-              <li>
-                <Link href="/compare/surfox-vs-textus" className="text-sm text-white/50 hover:text-white transition-colors">
-                  SurFox AI vs Textus
-                </Link>
-              </li>
-              <li>
-                <Link href="/compare/surfox-vs-launch-control" className="text-sm text-white/50 hover:text-white transition-colors">
-                  SurFox AI vs Launch Control
-                </Link>
-              </li>
-              <li>
-                <Link href="/compare/surfox-vs-lead-sherpa" className="text-sm text-white/50 hover:text-white transition-colors">
-                  SurFox AI vs Lead Sherpa
-                </Link>
-              </li>
-              <li>
-                <Link href="/compare/surfox-vs-skipio" className="text-sm text-white/50 hover:text-white transition-colors">
-                  SurFox AI vs Skipio
-                </Link>
-              </li>
-              <li>
-                <Link href="/compare/surfox-vs-smarter-contact" className="text-sm text-white/50 hover:text-white transition-colors">
-                  SurFox AI vs Smarter Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/compare/surfox-vs-meera-ai" className="text-sm text-white/50 hover:text-white transition-colors">
-                  SurFox AI vs Meera AI
-                </Link>
-              </li>
-              <li>
-                <Link href="/compare/surfox-vs-gohighlevel" className="text-sm text-white/50 hover:text-white transition-colors">
-                  SurFox AI vs GoHighLevel
-                </Link>
-              </li>
-              <li>
-                <Link href="/compare/surfox-vs-spara" className="text-sm text-white/50 hover:text-white transition-colors">
-                  SurFox AI vs Spara
-                </Link>
-              </li>
-            </ul>
+          {/* 4-column link grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-10">
+            {columns.map((col) => (
+              <div key={col.title} className={col.wide ? 'lg:col-span-2' : undefined}>
+                <h5
+                  className="text-[11px] uppercase tracking-[.12em] text-[#8A92A0] font-medium mb-4"
+                  style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                >
+                  {col.title}
+                </h5>
+                <ul className="space-y-2.5">
+                  {col.links.map((l) => (
+                    <li key={l.label}>
+                      <Link
+                        href={l.href}
+                        className={`text-sm text-[#5A626E] hover:text-[#13171F] transition-colors${
+                          col.wide ? ' lg:whitespace-nowrap' : ''
+                        }`}
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-4" style={{ fontFamily: 'var(--font-sora)' }}>Resources</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/blog" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/pricing" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link href="/platform" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Platform
-                </Link>
-              </li>
-              <li>
-                <Link href="/demo" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Request a Demo
-                </Link>
-              </li>
-              <li>
-                <Link href="/integrations/gohighlevel" className="text-sm text-white/50 hover:text-white transition-colors">
-                  GoHighLevel Integration
-                </Link>
-              </li>
-              <li>
-                <Link href="/wholesalers" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Real Estate Wholesalers
-                </Link>
-              </li>
-              <li>
-                <Link href="/staffing" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Staffing Agencies
-                </Link>
-              </li>
-              <li>
-                <Link href="/events" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Webinars & Events
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company & Social */}
-          <div>
-            <h3 className="text-sm font-semibold text-white mb-4" style={{ fontFamily: 'var(--font-sora)' }}>Company</h3>
-            <ul className="space-y-3 mb-6">
-              <li>
-                <Link href="/about" className="text-sm text-white/50 hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/leadership" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Leadership
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/support" className="text-sm text-white/50 hover:text-white transition-colors">
-                  Support
-                </Link>
-              </li>
-            </ul>
-
-            <h3 className="text-sm font-semibold text-white mb-4" style={{ fontFamily: 'var(--font-sora)' }}>Follow Us</h3>
-            <div className="flex space-x-4">
-              <a href="https://twitter.com/getSurFox" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg glass-card border border-white/[0.08] flex items-center justify-center text-white/50 hover:text-white hover:border-white/20 transition-all" aria-label="Follow SurFox AI on X (Twitter)">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
-              <a href="https://www.linkedin.com/company/surfoxai" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg glass-card border border-white/[0.08] flex items-center justify-center text-white/50 hover:text-white hover:border-white/20 transition-all" aria-label="Follow SurFox AI on LinkedIn">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-
         </div>
 
-        {/* Footer Bottom */}
-        <div className="border-t border-white/[0.06] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-xs text-white/30">
-            © {new Date().getFullYear()} SurFox AI. All rights reserved.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6 text-xs">
-            <Link href="/privacy" className="text-white/30 hover:text-white/60 transition-colors">
-              Privacy Policy
+        {/* Bottom row */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6">
+          <p className="text-[13px] text-[#8A92A0]">© 2026 SurFox AI, Inc.</p>
+          <div className="flex gap-5 text-[13px]">
+            <Link href="/privacy" className="text-[#8A92A0] hover:text-[#13171F] transition-colors">
+              Privacy
             </Link>
-            <Link href="/terms" className="text-white/30 hover:text-white/60 transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="/careers" className="text-white/30 hover:text-white/60 transition-colors">
-              Careers
+            <Link href="/terms" className="text-[#8A92A0] hover:text-[#13171F] transition-colors">
+              Terms
             </Link>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.3s ease-out;
-        }
-      `}</style>
     </footer>
-  )
+  );
 }

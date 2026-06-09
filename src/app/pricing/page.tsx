@@ -20,7 +20,7 @@ export default function Page() {
       {
         "@type": "Offer",
         "name": "Starter Plan",
-        "description": "Perfect for individual sales professionals ready to eliminate manual outreach. Basic AI that handles conversations but does not learn.",
+        "description": "For operators testing the waters on a focused list. Core AI that texts, qualifies, and books, without conversation learning.",
         "price": "147",
         "priceCurrency": "USD",
         "priceValidUntil": "2026-12-31",
@@ -42,7 +42,7 @@ export default function Page() {
       {
         "@type": "Offer",
         "name": "Growth Plan",
-        "description": "For growing sales teams ready to scale AI-powered conversations. Learning AI with 100 conversation memory that gets smarter with every conversation.",
+        "description": "For teams ready to work a full list every month. Learning AI that studies your last 100 conversations and gets sharper over time.",
         "price": "597",
         "priceCurrency": "USD",
         "priceValidUntil": "2026-12-31",
@@ -64,7 +64,7 @@ export default function Page() {
       {
         "@type": "Offer",
         "name": "Scale Plan",
-        "description": "Full-featured plan for enterprises scaling AI-powered sales operations. Advanced learning AI with 1000 conversation memory for maximum intelligence.",
+        "description": "For high-volume operations running constant campaigns. Maximum intelligence, learning from your last 1,000 conversations across every campaign.",
         "price": "2497",
         "priceCurrency": "USD",
         "priceValidUntil": "2026-12-31",
@@ -93,10 +93,10 @@ export default function Page() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What happens if I exceed my prospect limit?",
+        "name": "What happens if I exceed my message limit?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Additional prospects are $0.20 each. We will email you when you are approaching your limit. No surprise charges - you approve any overages first."
+          "text": "We email you as you approach your limit so there are no surprises. You approve any overage before it is added, and you can move up a plan at any time."
         }
       },
       {
@@ -104,15 +104,15 @@ export default function Page() {
         "name": "How is this different from text blasting tools?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Text blasters send identical messages to thousands of people. Our AI has unique conversations with each prospect, reads their psychology, and only escalates genuinely interested buyers. You get fewer calls, but they are all worth taking."
+          "text": "Text blasters send identical messages to thousands of people and leave you to handle every reply. SurFox AI holds a real, qualifying conversation with each contact, reads intent, and only hands off the contacts genuinely ready to talk. You get fewer calls, but every one is worth taking."
         }
       },
       {
         "@type": "Question",
-        "name": "When will I see my first qualified prospect?",
+        "name": "When will I see my first qualified lead?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most customers receive their first qualified prospect within 7-14 days, depending on your industry and the quality of your prospect list. Real estate and B2B services typically see faster results."
+          "text": "Most customers see their first qualified lead within 7 to 14 days, depending on your industry and the quality of your list. Real estate and B2B services typically see faster results."
         }
       },
       {
@@ -120,7 +120,7 @@ export default function Page() {
         "name": "Can I cancel anytime?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, cancel anytime with 24 hours notice. No contracts, no cancellation fees. Your AI will finish any active conversations, then stop processing new prospects."
+          "text": "Yes. Cancel anytime with 24 hours notice. No contracts, no cancellation fees. SurFox AI finishes any active conversations, then stops working new contacts."
         }
       },
       {
@@ -128,7 +128,7 @@ export default function Page() {
         "name": "Do you offer annual discounts?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We are focused on monthly pricing while we are early stage. Annual options may be available in the future after we have proven consistent value delivery."
+          "text": "We are focused on monthly pricing while we are early stage. Annual options may come later once we have proven consistent value."
         }
       }
     ]

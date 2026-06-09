@@ -52,9 +52,9 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/engage',
   },
   pricing: {
-    title: 'Pricing - Flexible Plans for Every Business',
-    description: 'Transparent pricing for SurFox AI lead qualification. Choose from Starter, Professional, or Enterprise plans. Start free, scale as you grow.',
-    keywords: ['SurFox AI pricing', 'AI sales pricing', 'lead qualification pricing', 'SMS lead qualification pricing'],
+    title: 'Pricing - Pay for messages, not headcount',
+    description: 'Real conversational AI at SMB pricing. Starter $147, Growth $597, and Scale $2,497 per month. Every plan includes a 14-day free trial.',
+    keywords: ['SurFox AI pricing', 'AI SMS pricing', 'lead qualification pricing', 'SMS lead qualification pricing'],
     path: '/pricing',
   },
   security: {
@@ -296,8 +296,6 @@ export function generatePageMetadata(pageKey: string): Metadata {
       card: 'summary_large_image',
       title: fullTitle,
       description: config.description,
-      site: '@getSurFox',
-      creator: '@getSurFox',
     },
     alternates: {
       canonical: url,

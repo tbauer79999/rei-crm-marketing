@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, DM_Sans } from "next/font/google";
+import { Sora, DM_Sans, Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
@@ -20,6 +20,28 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700"],
+});
+
+// Homepage redesign ("Thread") typeface trio, exposed as CSS variables.
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const ibmPlexSans = IBM_Plex_Sans({
+  variable: "--font-ibm-plex-sans",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -51,8 +73,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@getSurFox",
-    creator: "@getSurFox",
     images: ['https://www.getsurfox.com/og-default.png'],
     title: 'SurFox AI | SMS Lead Qualification at SMB Pricing',
     description: 'SurFox AI qualifies your contact list via SMS. Upload thousands of leads, AI works every conversation, your team only talks to the contacts ready to buy. Real conversational AI at SMB pricing.',
@@ -80,7 +100,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${sora.variable} ${dmSans.variable} antialiased`} style={{ fontFamily: 'var(--font-dm-sans)' }}>
+      <body className={`${sora.variable} ${dmSans.variable} ${spaceGrotesk.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable} antialiased`} style={{ fontFamily: 'var(--font-ibm-plex-sans)' }}>
         {/* Google Tag Manager - lazyOnload to defer until idle */}
         <Script
           id="gtm-script"
@@ -111,6 +131,7 @@ export default function RootLayout({
           id="surfox-chat-widget"
           src="https://surfox.ai/chat-widget.js"
           data-widget-key="wk_5c3a82cabe46479da8d56b797483ac3c"
+          data-primary-color="#0FB6C9"
           strategy="lazyOnload"
         />
 

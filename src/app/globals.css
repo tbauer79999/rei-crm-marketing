@@ -22,9 +22,40 @@
   --warning: #f59e0b;
   --error: #ef4444;
   
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-  --gradient-glow: radial-gradient(ellipse, #2563eb 0%, #7c3aed 50%, transparent 70%);
+  /* Gradients (retired - kept as solid brand fallbacks so legacy refs stay on-brand) */
+  --gradient-primary: #0a7c8c;
+  --gradient-glow: transparent;
+
+  /* SurFox AI "Thread" brand tokens (light design system) */
+  --ink: #13171f;
+  --ink-2: #0e1320;
+  --paper: #f4f5f3;
+  --card: #ffffff;
+  --muted: #5a626e;
+  --faint: #8a92a0;
+  --line: #e4e6e2;
+  --line-2: #edeeeb;
+  --cyan: #0fb6c9;
+  --cyan-deep: #0a7c8c;
+  --green: #12a150;
+  --tint: #f0f8f9;
+}
+
+/* Remap the old blue/indigo/violet/purple accent scales to the single cyan accent,
+   so existing utility classes (bg-blue-600, text-violet-500, etc.) render on-brand
+   sitewide without touching every file. Emerald/green stays (success color). */
+@theme {
+  --color-blue-50: #f0f8f9;   --color-indigo-50: #f0f8f9;   --color-violet-50: #f0f8f9;   --color-purple-50: #f0f8f9;
+  --color-blue-100: #dceef1;  --color-indigo-100: #dceef1;  --color-violet-100: #dceef1;  --color-purple-100: #dceef1;
+  --color-blue-200: #bfe6ec;  --color-indigo-200: #bfe6ec;  --color-violet-200: #bfe6ec;  --color-purple-200: #bfe6ec;
+  --color-blue-300: #9fd9e1;  --color-indigo-300: #9fd9e1;  --color-violet-300: #9fd9e1;  --color-purple-300: #9fd9e1;
+  --color-blue-400: #4cccdc;  --color-indigo-400: #4cccdc;  --color-violet-400: #4cccdc;  --color-purple-400: #4cccdc;
+  --color-blue-500: #0fb6c9;  --color-indigo-500: #0fb6c9;  --color-violet-500: #0fb6c9;  --color-purple-500: #0fb6c9;
+  --color-blue-600: #0a7c8c;  --color-indigo-600: #0a7c8c;  --color-violet-600: #0a7c8c;  --color-purple-600: #0a7c8c;
+  --color-blue-700: #086676;  --color-indigo-700: #086676;  --color-violet-700: #086676;  --color-purple-700: #086676;
+  --color-blue-800: #06505d;  --color-indigo-800: #06505d;  --color-violet-800: #06505d;  --color-purple-800: #06505d;
+  --color-blue-900: #06222a;  --color-indigo-900: #06222a;  --color-violet-900: #06222a;  --color-purple-900: #06222a;
+  --color-blue-950: #04161b;  --color-indigo-950: #04161b;  --color-violet-950: #04161b;  --color-purple-950: #04161b;
 }
 
 @theme inline {
@@ -42,7 +73,15 @@
 }
 
 html, body {
-  @apply bg-background text-foreground;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Brand display font for all headings sitewide. Pages scoped under .sfx set their
+   own per-element fonts at higher specificity, so the homepage is unaffected. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+  letter-spacing: -0.02em;
 }
 
 /* Obsidian Intelligence Utilities */
@@ -52,15 +91,17 @@ html, body {
   border: 1px solid var(--card-border);
 }
 
+/* Retired gradients - now solid brand. Headings become cyan-deep, buttons become ink. */
 .gradient-text {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: currentColor;
+  color: var(--cyan-deep);
 }
 
 .gradient-bg {
-  background: var(--gradient-primary);
+  background: var(--ink);
 }
 
 .gradient-border {
@@ -89,26 +130,28 @@ html {
 
 /* Selection color */
 ::selection {
-  background: var(--accent-blue);
-  color: white;
+  background: var(--cyan);
+  color: #06222a;
 }
 
-/* Scrollbar styling */
+/* Scrollbar styling - light paper track, cyan thumb (matches homepage redesign) */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: #f4f5f3;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: #bcdfe5;
   border-radius: 5px;
+  border: 2px solid #f4f5f3;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #0fb6c9;
 }
 
 /* Marquee animation */
@@ -145,8 +188,8 @@ input:focus-visible {
 /* Utility classes */
 .text-navy { color: #e8e8f0; }
 .bg-navy { background-color: #0a0f1e; }
-.text-orange { color: #60a5fa; }
-.bg-orange { background: var(--gradient-primary); }
+.text-orange { color: var(--cyan-deep); }
+.bg-orange { background: var(--cyan); }
 
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;

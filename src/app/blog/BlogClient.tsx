@@ -48,11 +48,11 @@ export default function Blog() {
     : blogPosts.filter(post => post.category === selectedCategory);
 
   return (
-    <div className="bg-background text-white">
+    <div className="bg-[#F4F5F3] text-[#13171F]">
       {/* Hero Section */}
       <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 gradient-bg/5 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-64 h-64 bg-[#F0F8F9] rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl" />
         </div>
 
@@ -62,11 +62,11 @@ export default function Blog() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <h1 className="text-4xl font-bold text-[#13171F] mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               Insights & Updates from SurFox AI
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
               Thoughts on AI, sales intelligence, and the future of human interaction analysis
             </p>
           </motion.div>
@@ -74,7 +74,7 @@ export default function Blog() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 px-4 sm:px-6 md:px-8 border-b border-white/[0.08] sticky top-16 z-30" style={{ backgroundColor: '#0a0f1e' }}>
+      <section className="py-8 px-4 sm:px-6 md:px-8 border-b border-[#E4E6E2] sticky top-16 z-30" style={{ backgroundColor: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(14px)' }}>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
@@ -83,8 +83,8 @@ export default function Blog() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
                   selectedCategory === category
-                    ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-sm shadow-blue-500/5'
-                    : 'bg-blue-500/10 text-white/70 hover:bg-blue-500/20'
+                    ? 'bg-[#0FB6C9] text-[#06222a] shadow-sm shadow-blue-500/5'
+                    : 'bg-[#EAF7F9] text-[#5A626E] hover:bg-[#dCEEF1]'
                 }`}
               >
                 {category}
@@ -95,7 +95,7 @@ export default function Blog() {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background isolate">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3] isolate">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
             {filteredPosts.map((post, index) => (
@@ -105,28 +105,28 @@ export default function Blog() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card-bg rounded-2xl border-2 border-white/[0.08] overflow-hidden hover:border-blue-500/30 hover:shadow-xl transition-all duration-300 group"
+                className="bg-white rounded-2xl border-2 border-[#E4E6E2] overflow-hidden hover:border-blue-500/30 hover:shadow-xl transition-all duration-300 group"
               >
                 {/* Category Badge */}
                 <div className="p-6 pb-0">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card border border-blue-500/20">
-                    <Tag className="w-3 h-3 text-blue-400" />
-                    <span className="text-xs font-semibold text-blue-400">{post.category}</span>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EAF7F9] border border-[#dCEEF1]">
+                    <Tag className="w-3 h-3 text-[#0A7C8C]" />
+                    <span className="text-xs font-semibold text-[#0A7C8C]">{post.category}</span>
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3 leading-tight group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-[#13171F] mb-3 leading-tight group-hover:text-[#0A7C8C] transition-colors">
                     {post.title}
                   </h3>
 
-                  <p className="text-white/60 leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-[#5A626E] leading-relaxed mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
 
                   {/* Meta Info */}
-                  <div className="flex flex-wrap items-center gap-4 text-sm text-white/50 mb-4">
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-[#8A92A0] mb-4">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
@@ -138,11 +138,11 @@ export default function Blog() {
                   </div>
 
                   {/* Author */}
-                  <div className="flex items-center justify-between pt-4 border-t border-white/[0.08]">
-                    <span className="text-sm text-white/60">By {post.author}</span>
+                  <div className="flex items-center justify-between pt-4 border-t border-[#E4E6E2]">
+                    <span className="text-sm text-[#5A626E]">By {post.author}</span>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all text-sm"
+                      className="inline-flex items-center gap-2 text-[#0A7C8C] font-semibold hover:gap-3 transition-all text-sm"
                     >
                       Read More
                       <ArrowRight className="w-4 h-4" />
@@ -156,31 +156,31 @@ export default function Blog() {
           {/* No Results Message */}
           {filteredPosts.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-xl text-white/50">No posts found in this category.</p>
+              <p className="text-xl text-[#8A92A0]">No posts found in this category.</p>
             </div>
           )}
         </div>
       </section>
 
       {/* Newsletter Signup CTA */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6 sm:mb-8 px-4 leading-tight">
               Stay Updated with SurFox AI
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/60 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
               Get the latest insights on AI, sales intelligence, and conversation analysis delivered to your inbox.
             </p>
 
             {blogSubmitted ? (
               <div className="max-w-2xl mx-auto px-4">
-                <div className="px-6 py-4 rounded-lg bg-background border-2 border-green-500/30 text-green-400 text-base flex items-center justify-center gap-2">
+                <div className="px-6 py-4 rounded-lg bg-[#F4F5F3] border-2 border-green-500/30 text-green-400 text-base flex items-center justify-center gap-2">
                   <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
                   </svg>
@@ -195,7 +195,7 @@ export default function Blog() {
                   onChange={(e) => setBlogFirstName(e.target.value)}
                   placeholder="First name"
                   required
-                  className="w-full px-6 py-4 rounded-lg bg-background border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition text-base text-white placeholder:text-white/40"
+                  className="w-full px-6 py-4 rounded-lg bg-[#F4F5F3] border-2 border-[#E4E6E2] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition text-base text-[#13171F] placeholder:text-[#8A92A0]"
                 />
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <input
@@ -204,12 +204,12 @@ export default function Blog() {
                     onChange={(e) => setBlogEmail(e.target.value)}
                     placeholder="Enter your email"
                     required
-                    className="flex-1 px-6 py-4 rounded-lg bg-background border-2 border-white/[0.1] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition text-base text-white placeholder:text-white/40"
+                    className="flex-1 px-6 py-4 rounded-lg bg-[#F4F5F3] border-2 border-[#E4E6E2] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition text-base text-[#13171F] placeholder:text-[#8A92A0]"
                   />
                   <button
                     type="submit"
                     disabled={blogSubmitting}
-                    className="px-8 py-4 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-purple-500/25 transition-all whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="px-8 py-4 rounded-lg bg-[#0FB6C9] text-[#06222a] font-semibold hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-purple-500/25 transition-all whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {blogSubmitting ? 'Subscribing...' : 'Subscribe'}
                   </button>

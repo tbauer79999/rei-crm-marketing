@@ -61,23 +61,23 @@ const screenshots = [
 
 export default function Page() {
   return (
-    <div className="bg-card-bg text-white">
+    <div className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Hero */}
-      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 pt-24 pb-8 sm:pt-28 sm:pb-10 md:pt-32 md:pb-12 bg-card-bg">
+      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 pt-24 pb-8 sm:pt-28 sm:pb-10 md:pt-32 md:pb-12 bg-[#F4F5F3]">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-white leading-tight mb-6 sm:mb-8">
+          <h1 className="text-4xl font-bold text-[#13171F] leading-tight mb-6 sm:mb-8">
             See SurFox AI In Action
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed">
             30 minutes. No pitch. Pick a time and we&apos;ll walk through the platform together.
           </p>
         </div>
       </section>
 
       {/* Calendly Inline Embed */}
-      <section className="px-4 sm:px-6 md:px-8 pb-12 bg-card-bg">
+      <section className="px-4 sm:px-6 md:px-8 pb-12 bg-[#F4F5F3]">
         <div className="max-w-[900px] mx-auto">
           <div
             className="calendly-inline-widget"
@@ -92,9 +92,9 @@ export default function Page() {
       </section>
 
       {/* Timeline */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-background">
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-[#F4F5F3]">
         <div className="max-w-5xl mx-auto w-full">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] text-center mb-16 md:mb-20">
             Here&apos;s What Actually Happens
           </h2>
 
@@ -126,20 +126,20 @@ export default function Page() {
                     {/* Mobile Layout */}
                     <div className="md:hidden flex items-start gap-6 w-full pl-16">
                       {/* Icon Circle */}
-                      <div className="absolute left-4 w-8 h-8 rounded-full glass-card border border-blue-500/20 flex items-center justify-center z-10">
-                        <Icon className="w-4 h-4 text-blue-400" />
+                      <div className="absolute left-4 w-8 h-8 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center z-10">
+                        <Icon className="w-4 h-4 text-[#0A7C8C]" />
                       </div>
 
                       {/* Card */}
-                      <div className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-6 flex-1">
-                        <span className="text-sm font-semibold text-blue-400 mb-2 block">{item.day}</span>
+                      <div className="bg-white rounded-2xl border-2 border-[#E4E6E2] p-6 flex-1">
+                        <span className="text-sm font-semibold text-[#0A7C8C] mb-2 block">{item.day}</span>
                         {item.value ? (
-                          <p className="text-lg text-white/70">
+                          <p className="text-lg text-[#5A626E]">
                             {item.text}{' '}
-                            <span className="text-white font-bold">{item.value}</span>
+                            <span className="text-[#13171F] font-bold">{item.value}</span>
                           </p>
                         ) : (
-                          <p className="text-lg text-white/70">{item.text}</p>
+                          <p className="text-lg text-[#5A626E]">{item.text}</p>
                         )}
                       </div>
                     </div>
@@ -152,24 +152,24 @@ export default function Page() {
                     >
                       {/* Card */}
                       <div className={`w-[45%] ${item.side === 'left' ? 'text-right' : 'text-left'}`}>
-                        <div className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-6 md:p-8 inline-block">
-                          <span className="text-sm font-semibold text-blue-400 mb-2 block">{item.day}</span>
+                        <div className="bg-white rounded-2xl border-2 border-[#E4E6E2] p-6 md:p-8 inline-block">
+                          <span className="text-sm font-semibold text-[#0A7C8C] mb-2 block">{item.day}</span>
                           {item.value ? (
-                            <p className="text-lg md:text-xl text-white/70">
+                            <p className="text-lg md:text-xl text-[#5A626E]">
                               {item.text}{' '}
-                              <span className="text-white font-bold">{item.value}</span>
+                              <span className="text-[#13171F] font-bold">{item.value}</span>
                             </p>
                           ) : (
-                            <p className="text-lg md:text-xl text-white/70">{item.text}</p>
+                            <p className="text-lg md:text-xl text-[#5A626E]">{item.text}</p>
                           )}
                         </div>
                       </div>
                     </div>
 
                     {/* Center Icon - Desktop */}
-                    <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-card-bg border-2 border-white/[0.08] items-center justify-center z-10">
-                      <div className="w-10 h-10 rounded-full glass-card border border-blue-500/20 flex items-center justify-center">
-                        <Icon className="w-5 h-5 text-blue-400" />
+                    <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-white border-2 border-[#E4E6E2] items-center justify-center z-10">
+                      <div className="w-10 h-10 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center">
+                        <Icon className="w-5 h-5 text-[#0A7C8C]" />
                       </div>
                     </div>
                   </div>
@@ -179,16 +179,16 @@ export default function Page() {
           </div>
 
           {/* Closing Statement */}
-          <p className="text-xl md:text-2xl text-white font-semibold text-center mt-16 md:mt-20 leading-relaxed">
+          <p className="text-xl md:text-2xl text-[#13171F] font-semibold text-center mt-16 md:mt-20 leading-relaxed">
             That&apos;s it. No buttons to click. No campaigns to monitor. No conversations to manage.
           </p>
         </div>
       </section>
 
       {/* Screenshots Showcase */}
-      <section className="py-20 md:py-28 lg:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-20 md:py-28 lg:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] text-center mb-16 md:mb-20">
             What SurFox AI Does While You&apos;re Not Watching
           </h2>
 
@@ -196,13 +196,13 @@ export default function Page() {
             {screenshots.map((screenshot, index) => (
               <div key={index} className="flex flex-col items-center">
                 {/* Caption - Above Screenshot */}
-                <p className="text-lg md:text-xl text-white/50 text-center mb-6 md:mb-8">
+                <p className="text-lg md:text-xl text-[#8A92A0] text-center mb-6 md:mb-8">
                   {screenshot.caption}
                 </p>
 
                 {/* Screenshot - Large and Dominant */}
                 <div className="w-full max-w-[1400px] mx-auto">
-                  <div className="rounded-2xl border-2 border-white/[0.08] overflow-hidden shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-xl transition-shadow duration-300">
+                  <div className="rounded-2xl border-2 border-[#E4E6E2] overflow-hidden shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover:shadow-xl transition-shadow duration-300">
                     <Image
                       src={screenshot.src}
                       alt={screenshot.alt}
@@ -221,13 +221,13 @@ export default function Page() {
       </section>
 
       {/* Final CTA */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-background">
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 bg-[#F4F5F3]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-8 leading-tight">
             Ready to Stop Babysitting Your Outreach?
           </h2>
 
-          <p className="text-xl md:text-2xl text-white/70 mb-12 leading-relaxed">
+          <p className="text-xl md:text-2xl text-[#5A626E] mb-12 leading-relaxed">
             Upload your leads. Let SurFox AI work autonomously. Get notified when prospects are ready to buy.
           </p>
 
@@ -235,38 +235,38 @@ export default function Page() {
           <div className="mb-6">
             <a
               href="/pricing"
-              className="inline-block px-12 py-5 rounded-xl gradient-bg text-white text-lg font-semibold shadow-sm shadow-blue-500/5 shadow-blue-500/5"
+              className="inline-block px-12 py-5 rounded-xl bg-[#13171F] text-white text-lg font-semibold shadow-sm shadow-blue-500/5 shadow-blue-500/5"
             >
               Start 14-Day Free Trial
             </a>
           </div>
 
           {/* Trial terms */}
-          <p className="text-white/60 mb-10">
+          <p className="text-[#5A626E] mb-10">
             Start your trial - cancel anytime before day 14 if it&apos;s not for you.
           </p>
 
           {/* Trust Badges */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-sm text-white/60 mb-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-sm text-[#5A626E] mb-8">
             <div className="flex items-center gap-2">
-              <Check className="w-5 h-5 text-blue-400 flex-shrink-0" />
+              <Check className="w-5 h-5 text-[#0A7C8C] flex-shrink-0" />
               <span>14-day free trial</span>
             </div>
             <div className="flex items-center gap-2">
-              <Check className="w-5 h-5 text-blue-400 flex-shrink-0" />
+              <Check className="w-5 h-5 text-[#0A7C8C] flex-shrink-0" />
               <span>2,000 free messages included</span>
             </div>
             <div className="flex items-center gap-2">
-              <Check className="w-5 h-5 text-blue-400 flex-shrink-0" />
+              <Check className="w-5 h-5 text-[#0A7C8C] flex-shrink-0" />
               <span>Setup in 15 minutes</span>
             </div>
           </div>
 
           {/* Fallback contact */}
-          <p className="text-sm text-white/50">
+          <p className="text-sm text-[#8A92A0]">
             Prefer to talk first?{' '}
-            <a href="mailto:tom@getsurfox.com" className="text-blue-400 hover:underline">
-              Email tom@getsurfox.com
+            <a href="mailto:sales@getsurfox.com" className="text-[#0A7C8C] hover:underline">
+              Email sales@getsurfox.com
             </a>
           </p>
         </div>

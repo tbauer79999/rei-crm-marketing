@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Calendar, Clock, User, ArrowLeft, Share2, Linkedin, Twitter, Mail, RefreshCw } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Share2, Linkedin, Mail, RefreshCw } from 'lucide-react';
 import { BlogPost, ContentBlock, ProductCalloutBlock, CtaBoxBlock } from '@/data/blog-posts';
 
 function extractFAQs(content: ContentBlock[]): Array<{ question: string; answer: string }> {
@@ -80,9 +80,6 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
       case 'linkedin':
         window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
         break;
-      case 'twitter':
-        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
-        break;
       case 'email':
         window.location.href = `mailto:?subject=${encodeURIComponent(text)}&body=${encodeURIComponent(url)}`;
         break;
@@ -99,13 +96,13 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
   const displayUpdated = blogPost.lastUpdated ? formatPostDate(blogPost.lastUpdated) : null;
 
   return (
-    <div className="bg-background text-white">
+    <div className="bg-[#F4F5F3] text-[#13171F]">
       {/* Back to Blog Link */}
-      <section className="py-6 px-4 sm:px-6 md:px-8 bg-background border-b border-white/[0.08]">
+      <section className="py-6 px-4 sm:px-6 md:px-8 bg-[#F4F5F3] border-b border-[#E4E6E2]">
         <div className="max-w-4xl mx-auto">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-white/60 hover:text-blue-400 transition-colors font-medium"
+            className="inline-flex items-center gap-2 text-[#5A626E] hover:text-[#0A7C8C] transition-colors font-medium"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Insights
@@ -114,7 +111,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
       </section>
 
       {/* Article Header */}
-      <section className="pt-12 pb-6 sm:pt-16 sm:pb-8 md:pt-20 md:pb-8 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="pt-12 pb-6 sm:pt-16 sm:pb-8 md:pt-20 md:pb-8 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -123,29 +120,29 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
           >
             {/* Category Badge */}
             <div className="mb-6">
-              <span className="inline-block px-4 py-2 rounded-full glass-card border border-blue-500/20 text-sm font-semibold text-blue-400">
+              <span className="inline-block px-4 py-2 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] text-sm font-semibold text-[#0A7C8C]">
                 {blogPost.category}
               </span>
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6 leading-tight">
               {blogPost.title}
             </h1>
 
             {/* Meta Info */}
-            <div className="flex flex-wrap items-center gap-6 text-white/60 mb-8">
+            <div className="flex flex-wrap items-center gap-6 text-[#5A626E] mb-8">
               <div className="flex items-center gap-2">
                 <User className="w-5 h-5" />
                 {blogPost.authorUrl ? (
-                  <Link href={blogPost.authorUrl} className="font-medium hover:text-blue-400 transition-colors">
+                  <Link href={blogPost.authorUrl} className="font-medium hover:text-[#0A7C8C] transition-colors">
                     {blogPost.author}
                   </Link>
                 ) : (
                   <span className="font-medium">{blogPost.author}</span>
                 )}
                 {blogPost.authorTitle && (
-                  <span className="text-white/40 text-sm">· {blogPost.authorTitle}</span>
+                  <span className="text-[#8A92A0] text-sm">· {blogPost.authorTitle}</span>
                 )}
               </div>
               <div className="flex items-center gap-2">
@@ -168,31 +165,24 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
             <div className="relative">
               <button
                 onClick={() => setShowShareMenu(!showShareMenu)}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-white/[0.1] text-white/70 font-medium hover:border-blue-500/50 hover:text-blue-400 transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border-2 border-[#E4E6E2] text-[#5A626E] font-medium hover:border-blue-500/50 hover:text-[#0A7C8C] transition-all"
               >
                 <Share2 className="w-4 h-4" />
                 Share
               </button>
 
               {showShareMenu && (
-                <div className="absolute top-full left-0 mt-2 bg-card-bg rounded-lg border-2 border-white/[0.08] shadow-xl p-2 z-10 min-w-[160px]">
+                <div className="absolute top-full left-0 mt-2 bg-white rounded-lg border-2 border-[#E4E6E2] shadow-xl p-2 z-10 min-w-[160px]">
                   <button
                     onClick={() => handleShare('linkedin')}
-                    className="w-full flex items-center gap-3 px-4 py-2 rounded-md hover:bg-background text-white/70 transition-colors"
+                    className="w-full flex items-center gap-3 px-4 py-2 rounded-md hover:bg-[#EDEEEB] text-[#5A626E] transition-colors"
                   >
                     <Linkedin className="w-4 h-4" />
                     LinkedIn
                   </button>
                   <button
-                    onClick={() => handleShare('twitter')}
-                    className="w-full flex items-center gap-3 px-4 py-2 rounded-md hover:bg-background text-white/70 transition-colors"
-                  >
-                    <Twitter className="w-4 h-4" />
-                    Twitter
-                  </button>
-                  <button
                     onClick={() => handleShare('email')}
-                    className="w-full flex items-center gap-3 px-4 py-2 rounded-md hover:bg-background text-white/70 transition-colors"
+                    className="w-full flex items-center gap-3 px-4 py-2 rounded-md hover:bg-[#EDEEEB] text-[#5A626E] transition-colors"
                   >
                     <Mail className="w-4 h-4" />
                     Email
@@ -218,11 +208,11 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 case 'tldr':
                   return (
                     <div key={index} className="not-prose my-8 p-6 sm:p-8 rounded-2xl bg-[#1e293b]">
-                      <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-4 m-0">Key Takeaways</p>
+                      <p className="text-xs font-bold uppercase tracking-widest text-[#0A7C8C] mb-4 m-0">Key Takeaways</p>
                       <ul className="space-y-3 m-0 p-0 list-none">
                         {block.content.split('\n').map((bullet, i) => (
-                          <li key={i} className="flex items-start gap-3 text-white text-base leading-relaxed">
-                            <span className="text-blue-400 font-bold mt-0.5 shrink-0">→</span>
+                          <li key={i} className="flex items-start gap-3 text-[#13171F] text-base leading-relaxed">
+                            <span className="text-[#0A7C8C] font-bold mt-0.5 shrink-0">→</span>
                             <span>{renderContent(bullet)}</span>
                           </li>
                         ))}
@@ -231,19 +221,19 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   );
                 case 'heading':
                   return (
-                    <h2 key={index} className="text-2xl sm:text-3xl font-bold text-white mt-12 mb-4 first:mt-0">
+                    <h2 key={index} className="text-2xl sm:text-3xl font-bold text-[#13171F] mt-12 mb-4 first:mt-0">
                       {block.content}
                     </h2>
                   );
                 case 'subheading':
                   return (
-                    <h3 key={index} className="text-xl sm:text-2xl font-semibold text-white mt-8 mb-3">
+                    <h3 key={index} className="text-xl sm:text-2xl font-semibold text-[#13171F] mt-8 mb-3">
                       {block.content}
                     </h3>
                   );
                 case 'paragraph':
                   return (
-                    <p key={index} className="text-white/70 leading-relaxed mb-6 text-base sm:text-lg">
+                    <p key={index} className="text-[#5A626E] leading-relaxed mb-6 text-base sm:text-lg">
                       {renderContent(block.content)}
                     </p>
                   );
@@ -251,15 +241,15 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   const [quoteText, attribution] = block.content.split('\n');
                   return (
                     <blockquote key={index} className="not-prose my-8 border-l-4 border-blue-500 pl-6 py-2">
-                      <p className="text-white text-lg sm:text-xl italic leading-relaxed mb-3">&ldquo;{quoteText}&rdquo;</p>
-                      {attribution && <cite className="text-sm font-semibold text-white/50 not-italic">&mdash; {attribution}</cite>}
+                      <p className="text-[#13171F] text-lg sm:text-xl italic leading-relaxed mb-3">&ldquo;{quoteText}&rdquo;</p>
+                      {attribution && <cite className="text-sm font-semibold text-[#8A92A0] not-italic">&mdash; {attribution}</cite>}
                     </blockquote>
                   );
                 }
                 case 'callout':
                   return (
-                    <div key={index} className="my-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-blue-500/5 to-violet-500/5 border-l-4 border-blue-500">
-                      <p className="text-white leading-relaxed font-medium text-base sm:text-lg m-0">
+                    <div key={index} className="my-8 p-6 sm:p-8 rounded-2xl bg-[#F0F8F9] border-l-4 border-blue-500">
+                      <p className="text-[#13171F] leading-relaxed font-medium text-base sm:text-lg m-0">
                         {renderContent(block.content)}
                       </p>
                     </div>
@@ -268,9 +258,9 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   const pcBlock = block as ProductCalloutBlock;
                   return (
                     <div key={index} className="not-prose mb-8 flex justify-end">
-                      <p className="text-sm text-white/50 m-0">
+                      <p className="text-sm text-[#8A92A0] m-0">
                         {pcBlock.content}{' '}
-                        <Link href={pcBlock.linkHref} className="text-blue-400 font-medium hover:underline">
+                        <Link href={pcBlock.linkHref} className="text-[#0A7C8C] font-medium hover:underline">
                           {pcBlock.linkText}
                         </Link>
                       </p>
@@ -280,11 +270,11 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 case 'cta-box': {
                   const ctaBlock = block as CtaBoxBlock;
                   return (
-                    <div key={index} className="not-prose my-12 p-8 sm:p-10 rounded-2xl border-2 border-blue-500/20 bg-gradient-to-br from-blue-500/[0.06] to-violet-500/[0.04]">
-                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
+                    <div key={index} className="not-prose my-12 p-8 sm:p-10 rounded-2xl border-2 border-[#dCEEF1] bg-[#F0F8F9]">
+                      <h3 className="text-xl sm:text-2xl font-bold text-[#13171F] mb-3 leading-snug">
                         {ctaBlock.headline}
                       </h3>
-                      <p className="text-white/60 text-base leading-relaxed mb-6 max-w-2xl">
+                      <p className="text-[#5A626E] text-base leading-relaxed mb-6 max-w-2xl">
                         {ctaBlock.subhead}
                       </p>
                       <div className="flex flex-wrap gap-3">
@@ -296,7 +286,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                         </Link>
                         <Link
                           href={ctaBlock.secondaryButton.href}
-                          className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-white/[0.12] text-white/70 font-semibold text-sm hover:border-blue-500/40 hover:text-blue-400 transition-colors"
+                          className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-[#c9cdc7] text-[#5A626E] font-semibold text-sm hover:border-blue-500/40 hover:text-[#0A7C8C] transition-colors"
                         >
                           {ctaBlock.secondaryButton.text}
                         </Link>
@@ -306,12 +296,12 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 }
                 case 'table':
                   return (
-                    <div key={index} className="not-prose my-8 overflow-x-auto rounded-xl border border-white/[0.08]">
+                    <div key={index} className="not-prose my-8 overflow-x-auto rounded-xl border border-[#E4E6E2]">
                       <table className="w-full text-sm">
                         <thead>
                           <tr className="bg-[#1e293b]">
                             {block.headers.map((header, hi) => (
-                              <th key={hi} className="px-4 py-3 text-left text-white font-semibold text-sm">
+                              <th key={hi} className="px-4 py-3 text-left text-[#13171F] font-semibold text-sm">
                                 {header}
                               </th>
                             ))}
@@ -319,9 +309,9 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                         </thead>
                         <tbody>
                           {block.rows.map((row, ri) => (
-                            <tr key={ri} className={ri % 2 === 0 ? 'bg-card-bg' : 'bg-background'}>
+                            <tr key={ri} className={ri % 2 === 0 ? 'bg-white' : 'bg-[#F4F5F3]'}>
                               {row.map((cell, ci) => (
-                                <td key={ci} className="px-4 py-3 text-white/70 border-t border-white/[0.06]">
+                                <td key={ci} className="px-4 py-3 text-[#5A626E] border-t border-[#EDEEEB]">
                                   {renderContent(cell)}
                                 </td>
                               ))}
@@ -335,7 +325,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   return block.ordered ? (
                     <ol key={index} className="my-6 pl-6 space-y-2 list-decimal">
                       {block.items.map((item, ii) => (
-                        <li key={ii} className="text-white/70 text-base sm:text-lg leading-relaxed">
+                        <li key={ii} className="text-[#5A626E] text-base sm:text-lg leading-relaxed">
                           {renderContent(item)}
                         </li>
                       ))}
@@ -343,7 +333,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   ) : (
                     <ul key={index} className="my-6 pl-6 space-y-2 list-disc">
                       {block.items.map((item, ii) => (
-                        <li key={ii} className="text-white/70 text-base sm:text-lg leading-relaxed">
+                        <li key={ii} className="text-[#5A626E] text-base sm:text-lg leading-relaxed">
                           {renderContent(item)}
                         </li>
                       ))}
@@ -357,12 +347,12 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
 
           {/* Author Bio */}
           {(blogPost.authorTitle || blogPost.authorBio) && (
-            <div className="mt-16 pt-8 border-t border-white/[0.08]">
+            <div className="mt-16 pt-8 border-t border-[#E4E6E2]">
               <div className="flex flex-col gap-1">
                 <div className="flex items-center gap-2">
-                  <span className="font-semibold text-white text-base">
+                  <span className="font-semibold text-[#13171F] text-base">
                     {blogPost.authorUrl ? (
-                      <Link href={blogPost.authorUrl} className="hover:text-blue-400 transition-colors">
+                      <Link href={blogPost.authorUrl} className="hover:text-[#0A7C8C] transition-colors">
                         {blogPost.author}
                       </Link>
                     ) : (
@@ -370,11 +360,11 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                     )}
                   </span>
                   {blogPost.authorTitle && (
-                    <span className="text-sm text-white/50">, {blogPost.authorTitle}</span>
+                    <span className="text-sm text-[#8A92A0]">, {blogPost.authorTitle}</span>
                   )}
                 </div>
                 {blogPost.authorBio && (
-                  <p className="text-white/60 text-sm leading-relaxed max-w-2xl">{blogPost.authorBio}</p>
+                  <p className="text-[#5A626E] text-sm leading-relaxed max-w-2xl">{blogPost.authorBio}</p>
                 )}
               </div>
             </div>
@@ -462,14 +452,14 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
       </section>
 
       {/* About SurFox AI */}
-      <section className="py-10 px-4 sm:px-6 md:px-8 border-t border-white/[0.06]">
+      <section className="py-10 px-4 sm:px-6 md:px-8 border-t border-[#EDEEEB]">
         <div className="max-w-4xl mx-auto">
-          <p className="text-sm text-white/50 leading-relaxed mb-4">
-            <strong className="text-white/70">About SurFox AI</strong> - SurFox AI is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams with full conversation context.
+          <p className="text-sm text-[#8A92A0] leading-relaxed mb-4">
+            <strong className="text-[#5A626E]">About SurFox AI</strong> - SurFox AI is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams with full conversation context.
           </p>
           <Link
             href="/platform"
-            className="inline-flex items-center px-4 py-2 rounded-lg bg-blue-500/10 border border-blue-500/30 text-blue-400 font-medium text-xs hover:bg-blue-500/20 hover:border-blue-500/50 transition-colors"
+            className="inline-flex items-center px-4 py-2 rounded-lg bg-[#EAF7F9] border border-blue-500/30 text-[#0A7C8C] font-medium text-xs hover:bg-[#dCEEF1] hover:border-blue-500/50 transition-colors"
           >
             Read the platform overview &rarr;
           </Link>
@@ -478,9 +468,9 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
 
       {/* Related Posts */}
       {(relatedPosts.length > 0 || blogPost.productCard) && (
-        <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
+        <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-10 sm:mb-12 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#13171F] mb-10 sm:mb-12 text-center">
               Related Insights
             </h2>
 
@@ -492,19 +482,19 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-card-bg rounded-xl border-2 border-white/[0.08] p-6 hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 transition-all group"
+                  className="bg-white rounded-xl border-2 border-[#E4E6E2] p-6 hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 transition-all group"
                 >
                   <div className="mb-4">
-                    <span className="inline-block px-3 py-1 rounded-full glass-card border border-blue-500/20 text-xs font-semibold text-blue-400">
+                    <span className="inline-block px-3 py-1 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] text-xs font-semibold text-[#0A7C8C]">
                       {post.category}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-lg font-semibold text-[#13171F] mb-4 group-hover:text-[#0A7C8C] transition-colors">
                     {post.title}
                   </h3>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all text-sm"
+                    className="inline-flex items-center gap-2 text-[#0A7C8C] font-semibold hover:gap-3 transition-all text-sm"
                   >
                     Read More
                     <span>→</span>
@@ -517,22 +507,22 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: relatedPosts.length * 0.1 }}
-                  className="bg-card-bg rounded-xl border-2 border-blue-500/20 p-6 hover:border-blue-500/40 hover:shadow-sm shadow-blue-500/5 transition-all group"
+                  className="bg-white rounded-xl border-2 border-[#dCEEF1] p-6 hover:border-blue-500/40 hover:shadow-sm shadow-blue-500/5 transition-all group"
                 >
                   <div className="mb-4">
-                    <span className="inline-block px-3 py-1 rounded-full glass-card border border-blue-500/20 text-xs font-semibold text-blue-400">
+                    <span className="inline-block px-3 py-1 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] text-xs font-semibold text-[#0A7C8C]">
                       {blogPost.productCard.category}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-lg font-semibold text-[#13171F] mb-2 group-hover:text-[#0A7C8C] transition-colors">
                     {blogPost.productCard.title}
                   </h3>
-                  <p className="text-white/50 text-sm leading-relaxed mb-4">
+                  <p className="text-[#8A92A0] text-sm leading-relaxed mb-4">
                     {blogPost.productCard.description}
                   </p>
                   <Link
                     href={blogPost.productCard.href}
-                    className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all text-sm"
+                    className="inline-flex items-center gap-2 text-[#0A7C8C] font-semibold hover:gap-3 transition-all text-sm"
                   >
                     {blogPost.productCard.ctaText}
                   </Link>

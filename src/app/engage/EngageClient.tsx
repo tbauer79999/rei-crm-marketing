@@ -13,7 +13,7 @@ export default function SurFoxRevamped() {
   });
 
   return (
-    <div ref={containerRef} className="bg-card-bg text-white">
+    <div ref={containerRef} className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Hero Section */}
       <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 flex justify-center">
@@ -23,13 +23,13 @@ export default function SurFoxRevamped() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <div className="text-sm font-medium text-white/50 mb-4 tracking-wide">SURFOX ENGAGE</div>
-            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <div className="text-sm font-medium text-[#8A92A0] mb-4 tracking-wide">SURFOX ENGAGE</div>
+            <h1 className="text-4xl font-bold text-[#13171F] mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               AI-Powered SMS<br className="hidden sm:block" />
               <span className="sm:inline"> </span>Lead Qualification
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
               Upload thousands of cold leads. Let AI engage, score, and qualify them via SMS. Your sales team only talks to hot prospects.
             </p>
             
@@ -38,7 +38,7 @@ export default function SurFoxRevamped() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => window.location.href = 'https://www.getsurfox.com/pricing'}
-                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold hover:gradient-bg-600 transition flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-[#13171F] text-white text-base font-semibold hover:gradient-bg-600 transition flex items-center justify-center gap-2"
               >
                 Get Started
                 <ArrowRight className="w-5 h-5" />
@@ -48,7 +48,7 @@ export default function SurFoxRevamped() {
                 href="/demo"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/[0.1] text-white text-base font-semibold hover:border-white/[0.12] hover:bg-background transition"
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-[#E4E6E2] text-[#13171F] text-base font-semibold hover:border-[#c9cdc7] hover:bg-[#EDEEEB] transition"
               >
                 Request Demo
               </motion.a>
@@ -58,7 +58,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
+      <section id="how-it-works" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -67,10 +67,10 @@ export default function SurFoxRevamped() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               How It Works
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               Four simple steps from cold lead to hot prospect
             </p>
           </motion.div>
@@ -110,18 +110,18 @@ export default function SurFoxRevamped() {
                 transition={{ duration: 0.6, delay: i * 0.15 }}
                 className="text-center relative"
               >
-                <div className="text-blue-400 font-bold text-sm mb-4 tracking-wide">{step.step}</div>
+                <div className="text-[#0A7C8C] font-bold text-sm mb-4 tracking-wide">{step.step}</div>
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.15 + 0.2 }}
-                  className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 sm:mb-6 rounded-2xl glass-card border border-blue-500/20 flex items-center justify-center"
+                  className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 sm:mb-6 rounded-2xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center"
                 >
-                  <step.icon className="w-7 h-7 sm:w-8 sm:h-8 text-blue-400" />
+                  <step.icon className="w-7 h-7 sm:w-8 sm:h-8 text-[#0A7C8C]" />
                 </motion.div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3 sm:mb-4">{step.title}</h3>
-                <p className="text-white/60 leading-relaxed">{step.desc}</p>
+                <h3 className="text-xl sm:text-2xl font-semibold text-[#13171F] mb-3 sm:mb-4">{step.title}</h3>
+                <p className="text-[#5A626E] leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -129,7 +129,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* Features Section with Screenshots */}
-      <section id="features" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section id="features" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-[1400px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -137,10 +137,10 @@ export default function SurFoxRevamped() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Enterprise-Grade Platform
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               Everything you need to automate lead qualification at scale
             </p>
           </motion.div>
@@ -156,31 +156,31 @@ export default function SurFoxRevamped() {
             >
               <div className="order-2 lg:order-1">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center">
-                    <Users className="w-6 h-6 text-blue-400" />
+                  <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center">
+                    <Users className="w-6 h-6 text-[#0A7C8C]" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white">Lead Management</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[#13171F]">Lead Management</h3>
                 </div>
-                <p className="text-lg text-white/60 leading-relaxed mb-6">
+                <p className="text-lg text-[#5A626E] leading-relaxed mb-6">
                   Monitor your entire lead pipeline in real-time. Track status, engagement levels, and conversation progress across all prospects.
                 </p>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-3 text-white/60">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-[#5A626E]">
+                    <CheckCircle className="w-5 h-5 text-[#0A7C8C] mt-0.5 flex-shrink-0" />
                     <span>Real-time lead status tracking</span>
                   </li>
-                  <li className="flex items-start gap-3 text-white/60">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-[#5A626E]">
+                    <CheckCircle className="w-5 h-5 text-[#0A7C8C] mt-0.5 flex-shrink-0" />
                     <span>Automated categorization and filtering</span>
                   </li>
-                  <li className="flex items-start gap-3 text-white/60">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-[#5A626E]">
+                    <CheckCircle className="w-5 h-5 text-[#0A7C8C] mt-0.5 flex-shrink-0" />
                     <span>Campaign-specific lead organization</span>
                   </li>
                 </ul>
               </div>
               <div className="order-1 lg:order-2">
-                <div className="rounded-2xl overflow-hidden shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 border border-white/[0.08] hover-lift">
+                <div className="rounded-2xl overflow-hidden shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 border border-[#E4E6E2] hover-lift">
                   <Image
                     src="/images/dashboard.png"
                     alt="SurFox Engage lead management dashboard showing lead status, engagement scores, and conversation progress for each prospect"
@@ -201,7 +201,7 @@ export default function SurFoxRevamped() {
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center"
             >
               <div>
-                <div className="rounded-2xl overflow-hidden shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 border border-white/[0.08] hover-lift">
+                <div className="rounded-2xl overflow-hidden shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 border border-[#E4E6E2] hover-lift">
                   <Image
                     src="/images/control-room.png"
                     alt="SurFox AI Control Room displaying real-time system health metrics, AI performance statistics, and conversation quality indicators"
@@ -213,25 +213,25 @@ export default function SurFoxRevamped() {
               </div>
               <div>
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center">
-                    <Activity className="w-6 h-6 text-blue-400" />
+                  <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center">
+                    <Activity className="w-6 h-6 text-[#0A7C8C]" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white">AI Control Room</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[#13171F]">AI Control Room</h3>
                 </div>
-                <p className="text-lg text-white/60 leading-relaxed mb-6">
+                <p className="text-lg text-[#5A626E] leading-relaxed mb-6">
                   Monitor system health, AI performance, and conversation quality. Get real-time insights into how your AI agents are performing.
                 </p>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-3 text-white/60">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-[#5A626E]">
+                    <CheckCircle className="w-5 h-5 text-[#0A7C8C] mt-0.5 flex-shrink-0" />
                     <span>Live system performance metrics</span>
                   </li>
-                  <li className="flex items-start gap-3 text-white/60">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-[#5A626E]">
+                    <CheckCircle className="w-5 h-5 text-[#0A7C8C] mt-0.5 flex-shrink-0" />
                     <span>AI accuracy and optimization tracking</span>
                   </li>
-                  <li className="flex items-start gap-3 text-white/60">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-[#5A626E]">
+                    <CheckCircle className="w-5 h-5 text-[#0A7C8C] mt-0.5 flex-shrink-0" />
                     <span>Infrastructure health monitoring</span>
                   </li>
                 </ul>
@@ -248,31 +248,31 @@ export default function SurFoxRevamped() {
             >
               <div className="order-2 lg:order-1">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-blue-400" />
+                  <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center">
+                    <BarChart3 className="w-6 h-6 text-[#0A7C8C]" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white">Analytics & Performance</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[#13171F]">Analytics & Performance</h3>
                 </div>
-                <p className="text-lg text-white/60 leading-relaxed mb-6">
+                <p className="text-lg text-[#5A626E] leading-relaxed mb-6">
                   Track sales outcomes, conversion rates, and team performance. Understand which campaigns drive results and optimize accordingly.
                 </p>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-3 text-white/60">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-[#5A626E]">
+                    <CheckCircle className="w-5 h-5 text-[#0A7C8C] mt-0.5 flex-shrink-0" />
                     <span>Revenue and conversion tracking</span>
                   </li>
-                  <li className="flex items-start gap-3 text-white/60">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-[#5A626E]">
+                    <CheckCircle className="w-5 h-5 text-[#0A7C8C] mt-0.5 flex-shrink-0" />
                     <span>Sales rep performance metrics</span>
                   </li>
-                  <li className="flex items-start gap-3 text-white/60">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-[#5A626E]">
+                    <CheckCircle className="w-5 h-5 text-[#0A7C8C] mt-0.5 flex-shrink-0" />
                     <span>Win rate and pipeline analysis</span>
                   </li>
                 </ul>
               </div>
               <div className="order-1 lg:order-2">
-                <div className="rounded-2xl overflow-hidden shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 border border-white/[0.08] hover-lift">
+                <div className="rounded-2xl overflow-hidden shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 border border-[#E4E6E2] hover-lift">
                   <Image
                     src="/business-analytics.png"
                     alt="SurFox AI analytics dashboard showing revenue tracking, conversion rates, sales rep performance metrics, and pipeline analysis"
@@ -293,7 +293,7 @@ export default function SurFoxRevamped() {
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center"
             >
               <div>
-                <div className="rounded-2xl overflow-hidden shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 border border-white/[0.08] hover-lift">
+                <div className="rounded-2xl overflow-hidden shadow-sm shadow-blue-500/5 shadow-blue-500/5 shadow-blue-500/10 border border-[#E4E6E2] hover-lift">
                   <Image
                     src="/images/ab-testing.png"
                     alt="SurFox AI A/B testing interface for comparing message variants, conversation approaches, and statistical performance results"
@@ -305,25 +305,25 @@ export default function SurFoxRevamped() {
               </div>
               <div>
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center">
-                    <FlaskConical className="w-6 h-6 text-blue-400" />
+                  <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center">
+                    <FlaskConical className="w-6 h-6 text-[#0A7C8C]" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white">A/B Testing & Optimization</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[#13171F]">A/B Testing & Optimization</h3>
                 </div>
-                <p className="text-lg text-white/60 leading-relaxed mb-6">
+                <p className="text-lg text-[#5A626E] leading-relaxed mb-6">
                   Continuously optimize your AI's performance. Test different conversation approaches, messaging tones, and qualification criteria.
                 </p>
                 <ul className="space-y-3">
-                  <li className="flex items-start gap-3 text-white/60">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-[#5A626E]">
+                    <CheckCircle className="w-5 h-5 text-[#0A7C8C] mt-0.5 flex-shrink-0" />
                     <span>Multi-variant conversation testing</span>
                   </li>
-                  <li className="flex items-start gap-3 text-white/60">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-[#5A626E]">
+                    <CheckCircle className="w-5 h-5 text-[#0A7C8C] mt-0.5 flex-shrink-0" />
                     <span>Statistical significance tracking</span>
                   </li>
-                  <li className="flex items-start gap-3 text-white/60">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <li className="flex items-start gap-3 text-[#5A626E]">
+                    <CheckCircle className="w-5 h-5 text-[#0A7C8C] mt-0.5 flex-shrink-0" />
                     <span>Automated winner selection</span>
                   </li>
                 </ul>
@@ -334,7 +334,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* Knowledge Base Section */}
-      <section id="knowledge-base" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
+      <section id="knowledge-base" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -342,13 +342,13 @@ export default function SurFoxRevamped() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl glass-card border border-blue-500/20 flex items-center justify-center">
-              <FileText className="w-8 h-8 text-blue-400" />
+            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center">
+              <FileText className="w-8 h-8 text-[#0A7C8C]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Knowledge Base
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               Empower your AI with context. Upload documents, guides, and product information so your AI can have informed, accurate conversations.
             </p>
           </motion.div>
@@ -377,13 +377,13 @@ export default function SurFoxRevamped() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
-                className="bg-card-bg p-8 sm:p-10 rounded-2xl border border-white/[0.08] hover-lift"
+                className="bg-white p-8 sm:p-10 rounded-2xl border border-[#E4E6E2] hover-lift"
               >
-                <div className="w-12 h-12 mb-6 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center">
-                  <feature.icon className="w-6 h-6 text-blue-400" />
+                <div className="w-12 h-12 mb-6 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center">
+                  <feature.icon className="w-6 h-6 text-[#0A7C8C]" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-white/60 leading-relaxed">{feature.desc}</p>
+                <h3 className="text-xl sm:text-2xl font-semibold text-[#13171F] mb-3">{feature.title}</h3>
+                <p className="text-[#5A626E] leading-relaxed">{feature.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -391,7 +391,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* Benefits Section */}
-      <section id="benefits" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section id="benefits" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -399,10 +399,10 @@ export default function SurFoxRevamped() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Built to Scale
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               Stop wasting time on cold leads. Let AI do the qualification work.
             </p>
           </motion.div>
@@ -422,9 +422,9 @@ export default function SurFoxRevamped() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl sm:text-5xl font-bold text-blue-400 mb-3">{stat.value}</div>
-                <div className="text-lg sm:text-xl font-semibold text-white mb-2">{stat.label}</div>
-                <p className="text-white/60 leading-relaxed">{stat.desc}</p>
+                <div className="text-4xl sm:text-5xl font-bold text-[#0A7C8C] mb-3">{stat.value}</div>
+                <div className="text-lg sm:text-xl font-semibold text-[#13171F] mb-2">{stat.label}</div>
+                <p className="text-[#5A626E] leading-relaxed">{stat.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -432,7 +432,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* Security & Trust Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -440,10 +440,10 @@ export default function SurFoxRevamped() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-16 md:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Enterprise-Grade Security
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-4xl mx-auto leading-relaxed px-4">
               Built on trusted infrastructure with security and compliance at the core
             </p>
           </motion.div>
@@ -474,11 +474,11 @@ export default function SurFoxRevamped() {
                 transition={{ delay: i * 0.15 }}
                 className="text-center"
               >
-                <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 sm:mb-6 rounded-2xl glass-card border border-blue-500/20 flex items-center justify-center">
-                  <item.icon className="w-7 h-7 sm:w-8 sm:h-8 text-blue-400" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-5 sm:mb-6 rounded-2xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center">
+                  <item.icon className="w-7 h-7 sm:w-8 sm:h-8 text-[#0A7C8C]" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">{item.title}</h3>
-                <p className="text-white/60 leading-relaxed">{item.desc}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-[#13171F] mb-3">{item.title}</h3>
+                <p className="text-[#5A626E] leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -486,7 +486,7 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section id="faq" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -494,10 +494,10 @@ export default function SurFoxRevamped() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               Everything you need to know about SurFox Engage
             </p>
           </motion.div>
@@ -541,7 +541,7 @@ export default function SurFoxRevamped() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-card-bg border border-white/[0.08] rounded-2xl overflow-hidden hover-lift"
+                className="bg-white border border-[#E4E6E2] rounded-2xl overflow-hidden hover-lift"
               >
                 <button
                   onClick={() => {
@@ -550,17 +550,17 @@ export default function SurFoxRevamped() {
                       element.style.display = element.style.display === 'none' ? 'block' : 'none';
                     }
                   }}
-                  className="w-full px-6 sm:px-8 py-5 sm:py-6 text-left flex items-start justify-between gap-4 hover:bg-background transition-colors"
+                  className="w-full px-6 sm:px-8 py-5 sm:py-6 text-left flex items-start justify-between gap-4 hover:bg-[#EDEEEB] transition-colors"
                 >
-                  <h3 className="text-lg sm:text-xl font-semibold text-white pr-4 leading-relaxed">
+                  <h3 className="text-lg sm:text-xl font-semibold text-[#13171F] pr-4 leading-relaxed">
                     {faq.question}
                   </h3>
-                  <div className="w-6 h-6 rounded-full glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-1">
-                    <Plus className="w-4 h-4 text-blue-400" />
+                  <div className="w-6 h-6 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0 mt-1">
+                    <Plus className="w-4 h-4 text-[#0A7C8C]" />
                   </div>
                 </button>
                 <div id={`faq-${i}`} style={{ display: 'none' }} className="px-6 sm:px-8 pb-5 sm:pb-6">
-                  <p className="text-white/60 leading-relaxed">{faq.answer}</p>
+                  <p className="text-[#5A626E] leading-relaxed">{faq.answer}</p>
                 </div>
               </motion.div>
             ))}
@@ -569,19 +569,19 @@ export default function SurFoxRevamped() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6 sm:mb-8 px-4 leading-tight">
               Ready to automate your<br className="hidden sm:block" />
               <span className="sm:inline"> </span>lead qualification?
             </h2>
             
-            <p className="text-lg sm:text-xl text-white/60 mb-10 sm:mb-12 leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4">
               Join sales teams using SurFox Engage to let AI handle the tedious work while they focus on closing deals.
             </p>
             
@@ -589,15 +589,15 @@ export default function SurFoxRevamped() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => window.location.href = 'https://www.getsurfox.com/pricing'}
-              className="px-10 sm:px-12 py-4 sm:py-5 rounded-lg gradient-bg text-white text-lg font-semibold hover:gradient-bg-600 transition flex items-center justify-center gap-3 mx-auto"
+              className="px-10 sm:px-12 py-4 sm:py-5 rounded-lg bg-[#13171F] text-white text-lg font-semibold hover:gradient-bg-600 transition flex items-center justify-center gap-3 mx-auto"
             >
               Start Qualifying Leads Today
               <ArrowRight className="w-6 h-6" />
             </motion.button>
             
-            <div className="mt-8 flex items-center justify-center gap-2 text-sm text-white/50">
+            <div className="mt-8 flex items-center justify-center gap-2 text-sm text-[#8A92A0]">
               <span>Powered by</span>
-              <span className="font-semibold text-blue-400">SurFox Infinity</span>
+              <span className="font-semibold text-[#0A7C8C]">SurFox Infinity</span>
             </div>
           </motion.div>
         </div>

@@ -9,13 +9,13 @@ export default function About() {
   const containerRef = useRef(null);
 
   return (
-    <div ref={containerRef} className="bg-background text-white">
+    <div ref={containerRef} className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Hero Section */}
       <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 flex justify-center relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 gradient-bg/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-80 h-80 gradient-bg/5 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-64 h-64 bg-[#F0F8F9] rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#F0F8F9] rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
@@ -24,12 +24,12 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <h1 className="text-4xl font-bold text-[#13171F] mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               Building the Intelligence Layer<br className="hidden sm:block" />
               <span className="sm:inline"> </span>for Business
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
               SurFox AI transforms human interaction data into strategic intelligence. We believe every conversation, every signal, every interaction contains insight - and businesses deserve the tools to see it.
             </p>
           </motion.div>
@@ -37,7 +37,7 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16 md:gap-20">
 
@@ -48,16 +48,16 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="w-14 h-14 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-6">
-                <Target className="w-7 h-7 text-blue-400" />
+              <div className="w-14 h-14 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center mb-6">
+                <Target className="w-7 h-7 text-[#0A7C8C]" />
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-white/70 leading-relaxed mb-4">
+              <p className="text-lg text-[#5A626E] leading-relaxed mb-4">
                 Make human interaction intelligence accessible to every business. Not just Fortune 500 companies with unlimited budgets - but any organization that wants to understand their customers better.
               </p>
-              <p className="text-lg text-white/70 leading-relaxed">
+              <p className="text-lg text-[#5A626E] leading-relaxed">
                 We are building the infrastructure that turns unstructured interaction data into strategic advantage.
               </p>
             </motion.div>
@@ -69,16 +69,16 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="w-14 h-14 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-6">
-                <Eye className="w-7 h-7 text-blue-400" />
+              <div className="w-14 h-14 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center mb-6">
+                <Eye className="w-7 h-7 text-[#0A7C8C]" />
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6">
                 Our Vision
               </h2>
-              <p className="text-lg text-white/70 leading-relaxed mb-4">
+              <p className="text-lg text-[#5A626E] leading-relaxed mb-4">
                 A future where every business decision is informed by deep customer understanding. Where AI does not replace human judgment but enhances it with visibility, foresight, and intelligence.
               </p>
-              <p className="text-lg text-white/70 leading-relaxed">
+              <p className="text-lg text-[#5A626E] leading-relaxed">
                 We are building the foundational layer that makes this possible - one customer, one insight at a time.
               </p>
             </motion.div>
@@ -87,7 +87,7 @@ export default function About() {
       </section>
 
       {/* The Story */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -95,10 +95,10 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Why SurFox AI Exists
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               Built by an operator who lived the problem
             </p>
           </motion.div>
@@ -107,27 +107,27 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 sm:p-10 md:p-12"
+            className="bg-white rounded-2xl border-2 border-[#E4E6E2] p-8 sm:p-10 md:p-12"
           >
             <div className="space-y-6">
-              <p className="text-lg text-white/70 leading-relaxed">
+              <p className="text-lg text-[#5A626E] leading-relaxed">
                 SurFox AI was born from 20+ years in the trenches of sales and revenue operations. After decades watching businesses generate massive amounts of interaction data - calls, messages, emails, transactions - and struggle to make sense of it, the gap became impossible to ignore.
               </p>
 
-              <p className="text-lg text-white/70 leading-relaxed">
+              <p className="text-lg text-[#5A626E] leading-relaxed">
                 Existing tools offered surface-level analytics. They could tell you how many messages were sent, but not what motivated the customer. They could show you conversion rates, but not predict who would convert next. They gave you dashboards full of numbers, but no real intelligence.
               </p>
 
               <div className="bg-blue-500/5 border-l-4 border-blue-500 rounded-lg p-6 my-8">
-                <p className="text-xl font-semibold text-white mb-3">
+                <p className="text-xl font-semibold text-[#13171F] mb-3">
                   The gap was clear:
                 </p>
-                <p className="text-lg text-white/70 leading-relaxed">
+                <p className="text-lg text-[#5A626E] leading-relaxed">
                   Businesses needed more than analytics. They needed intelligence. Not just visibility into what happened, but insight into what it means and foresight into what happens next.
                 </p>
               </div>
 
-              <p className="text-lg text-white/70 leading-relaxed">
+              <p className="text-lg text-[#5A626E] leading-relaxed">
                 So we built SurFox AI. An AI-powered platform that does not just track interactions - it understands them. That does not just report on the past - it predicts the future. That does not just give you data - it gives you intelligence.
               </p>
             </div>
@@ -136,7 +136,7 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -144,10 +144,10 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Our Core Values
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               The principles that guide everything we build
             </p>
           </motion.div>
@@ -191,14 +191,14 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-6 sm:p-8 rounded-2xl border border-white/[0.08] bg-card-bg hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover-lift"
+                className="p-6 sm:p-8 rounded-2xl border border-[#E4E6E2] bg-white hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover-lift"
               >
-                <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
-                  <value.icon className="w-6 h-6 text-blue-400" />
+                <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center mb-5">
+                  <value.icon className="w-6 h-6 text-[#0A7C8C]" />
                 </div>
 
-                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                <p className="text-white/60 leading-relaxed">{value.desc}</p>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">{value.title}</h3>
+                <p className="text-[#5A626E] leading-relaxed">{value.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -206,7 +206,7 @@ export default function About() {
       </section>
 
       {/* Where We're Going */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -214,7 +214,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Where We Are Going
             </h2>
           </motion.div>
@@ -223,14 +223,14 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 sm:p-10 md:p-12"
+            className="bg-white rounded-2xl border-2 border-[#E4E6E2] p-8 sm:p-10 md:p-12"
           >
             <div className="space-y-6">
-              <p className="text-lg text-white/70 leading-relaxed">
+              <p className="text-lg text-[#5A626E] leading-relaxed">
                 We started with AI-powered lead qualification because that is where the pain was most acute. But the platform we are building is designed for so much more.
               </p>
 
-              <p className="text-lg text-white/70 leading-relaxed">
+              <p className="text-lg text-[#5A626E] leading-relaxed">
                 The same intelligence layer that powers sales conversations can power customer support, recruiting, retail operations, healthcare interactions, and industries we have not even imagined yet.
               </p>
 
@@ -243,21 +243,21 @@ export default function About() {
                   'Financial Services Compliance',
                   'Education & Training Insights'
                 ].map((vertical, i) => (
-                  <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-background">
+                  <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-[#F4F5F3]">
                     <div className="w-2 h-2 rounded-full gradient-bg flex-shrink-0"></div>
-                    <span className="text-white/70 font-medium">{vertical}</span>
+                    <span className="text-[#5A626E] font-medium">{vertical}</span>
                   </div>
                 ))}
               </div>
 
-              <p className="text-lg text-white/70 leading-relaxed">
+              <p className="text-lg text-[#5A626E] leading-relaxed">
                 Our goal is ambitious but clear: become the foundational intelligence layer that powers human-to-business interaction across every industry. One unified platform, infinite applications.
               </p>
 
               <div className="pt-4">
                 <Link
                   href="/platform"
-                  className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-[#0A7C8C] font-semibold hover:gap-3 transition-all"
                 >
                   See the full platform vision
                   <ArrowRight className="w-4 h-4" />
@@ -269,7 +269,7 @@ export default function About() {
       </section>
 
       {/* Get Involved */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -277,10 +277,10 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Get Involved
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               We are just getting started
             </p>
           </motion.div>
@@ -308,18 +308,18 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-6 sm:p-8 rounded-2xl border border-white/[0.08] bg-card-bg hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover-lift"
+                className="p-6 sm:p-8 rounded-2xl border border-[#E4E6E2] bg-white hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 hover-lift"
               >
-                <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
-                  <cta.icon className="w-6 h-6 text-blue-400" />
+                <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center mb-5">
+                  <cta.icon className="w-6 h-6 text-[#0A7C8C]" />
                 </div>
 
-                <h3 className="text-xl font-semibold text-white mb-3">{cta.title}</h3>
-                <p className="text-white/60 leading-relaxed mb-6">{cta.desc}</p>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">{cta.title}</h3>
+                <p className="text-[#5A626E] leading-relaxed mb-6">{cta.desc}</p>
 
                 <Link
                   href={cta.link}
-                  className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-[#0A7C8C] font-semibold hover:gap-3 transition-all"
                 >
                   {cta.linkText}
                   <ArrowRight className="w-4 h-4" />
@@ -331,22 +331,22 @@ export default function About() {
       </section>
 
       {/* Closing Statement */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6 sm:mb-8 px-4 leading-tight">
               This Is Just the Beginning
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/60 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
               We are building the intelligence infrastructure that every business will eventually need. Join us on this journey - as a customer or a partner.
             </p>
 
-            <p className="text-base sm:text-lg font-semibold text-blue-400 px-4">
+            <p className="text-base sm:text-lg font-semibold text-[#0A7C8C] px-4">
               The future of business intelligence is human interaction intelligence.<br />
               And we are building it.
             </p>

@@ -172,7 +172,7 @@ export default function IndustriesClient() {
   const [activeIndustry, setActiveIndustry] = useState(0)
 
   return (
-    <div className="bg-card-bg text-white">
+    <div className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
@@ -182,17 +182,17 @@ export default function IndustriesClient() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block px-4 py-2 rounded-full glass-card border border-blue-500/20 border border-orange/20 mb-6">
-              <span className="text-sm font-semibold text-blue-400">INDUSTRIES</span>
+            <div className="inline-block px-4 py-2 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] border border-[#dCEEF1] mb-6">
+              <span className="text-sm font-semibold text-[#0A7C8C]">INDUSTRIES</span>
             </div>
 
-            <h1 className="text-4xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl font-bold text-[#13171F] mb-8 leading-[1.1] tracking-tight">
               Every Industry Has{' '}<br className="hidden sm:block" />
               Dead Leads.{' '}<br className="hidden sm:block" />
-              <span className="text-white/40">We Bring Them Back.</span>
+              <span className="text-[#8A92A0]">We Bring Them Back.</span>
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-10 max-w-3xl mx-auto leading-relaxed">
               Every sales organization has the same problem: expensive leads that go nowhere. SurFox AI works across every industry because human psychology is universal.
             </p>
 
@@ -200,7 +200,7 @@ export default function IndustriesClient() {
               href="/pricing"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 px-10 py-4 rounded-lg gradient-bg text-white text-lg font-semibold hover:gradient-bg-600 transition"
+              className="inline-flex items-center gap-2 px-10 py-4 rounded-lg bg-[#13171F] text-white text-lg font-semibold hover:gradient-bg-600 transition"
             >
               Get Started
               <ArrowRight className="w-5 h-5" />
@@ -210,7 +210,7 @@ export default function IndustriesClient() {
       </section>
 
       {/* Popular Use Cases Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -218,10 +218,10 @@ export default function IndustriesClient() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6">
               Popular Use Cases
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed">
               SurFox AI works across every industry where leads go cold.
             </p>
           </motion.div>
@@ -242,16 +242,16 @@ export default function IndustriesClient() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.07 }}
-                  className="group bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 flex flex-col gap-4 hover:border-white/[0.16] transition-colors"
+                  className="group bg-white rounded-2xl border-2 border-[#E4E6E2] p-8 flex flex-col gap-4 hover:border-[#d4d8d3] transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                    {React.createElement(industry.icon, { className: 'w-6 h-6 text-blue-400' })}
+                  <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                    {React.createElement(industry.icon, { className: 'w-6 h-6 text-[#0A7C8C]' })}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white mb-1">{industry.title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed">{industry.subtitle}</p>
+                    <h3 className="text-lg font-semibold text-[#13171F] mb-1">{industry.title}</h3>
+                    <p className="text-[#5A626E] text-sm leading-relaxed">{industry.subtitle}</p>
                   </div>
-                  <div className="flex items-center gap-1 text-blue-400 text-sm font-medium">
+                  <div className="flex items-center gap-1 text-[#0A7C8C] text-sm font-medium">
                     Learn more
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </div>
@@ -263,7 +263,7 @@ export default function IndustriesClient() {
       </section>
 
       {/* Common Challenges Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -271,10 +271,10 @@ export default function IndustriesClient() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6">
               The Universal Problem
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed">
               Every sales industry faces the same core challenges. SurFox AI solves them all.
             </p>
           </motion.div>
@@ -287,16 +287,16 @@ export default function IndustriesClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8"
+                className="bg-white rounded-2xl border-2 border-[#E4E6E2] p-8"
               >
-                <h3 className="text-xl font-semibold text-white mb-3">{challenge.problem}</h3>
-                <p className="text-white/60 mb-4">{challenge.description}</p>
-                <div className="gradient-bg/5 border border-orange/20 rounded-xl p-4">
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">{challenge.problem}</h3>
+                <p className="text-[#5A626E] mb-4">{challenge.description}</p>
+                <div className="bg-[#F0F8F9] border border-[#dCEEF1] rounded-xl p-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                      <Brain className="w-4 h-4 text-blue-400" />
+                    <div className="w-8 h-8 rounded-lg bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                      <Brain className="w-4 h-4 text-[#0A7C8C]" />
                     </div>
-                    <p className="text-white/70 text-sm leading-relaxed">{challenge.solution}</p>
+                    <p className="text-[#5A626E] text-sm leading-relaxed">{challenge.solution}</p>
                   </div>
                 </div>
               </motion.div>
@@ -306,7 +306,7 @@ export default function IndustriesClient() {
       </section>
 
       {/* Industry Solutions Section */}
-      <section id="solutions" className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section id="solutions" className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -314,10 +314,10 @@ export default function IndustriesClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6">
               Solutions by Industry
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed">
               See how SurFox AI transforms sales results in your specific industry.
             </p>
           </motion.div>
@@ -330,8 +330,8 @@ export default function IndustriesClient() {
                 onClick={() => setActiveIndustry(index)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
                   activeIndustry === index
-                    ? 'gradient-bg text-white'
-                    : 'bg-blue-500/10 text-white/60 hover:bg-blue-500/20'
+                    ? 'bg-[#13171F] text-white'
+                    : 'bg-[#EAF7F9] text-[#5A626E] hover:bg-[#dCEEF1]'
                 }`}
               >
                 <industry.icon className="w-4 h-4" />
@@ -347,17 +347,17 @@ export default function IndustriesClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="bg-card-bg rounded-2xl border-2 border-white/[0.08] overflow-hidden"
+            className="bg-white rounded-2xl border-2 border-[#E4E6E2] overflow-hidden"
           >
             <div className="p-8 sm:p-10 md:p-12">
               {/* Industry Header */}
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
-                <div className="w-16 h-16 rounded-2xl glass-card border border-blue-500/20 flex items-center justify-center">
-                  {React.createElement(industries[activeIndustry].icon, { className: "w-8 h-8 text-blue-400" })}
+                <div className="w-16 h-16 rounded-2xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center">
+                  {React.createElement(industries[activeIndustry].icon, { className: "w-8 h-8 text-[#0A7C8C]" })}
                 </div>
                 <div className="text-center sm:text-left">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white">{industries[activeIndustry].title}</h3>
-                  <p className="text-lg text-white/60">{industries[activeIndustry].subtitle}</p>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[#13171F]">{industries[activeIndustry].title}</h3>
+                  <p className="text-lg text-[#5A626E]">{industries[activeIndustry].subtitle}</p>
                 </div>
               </div>
 
@@ -365,12 +365,12 @@ export default function IndustriesClient() {
                 {/* Left Column */}
                 <div className="space-y-6">
                   {/* Pain Points */}
-                  <div className="bg-background rounded-xl p-6 border border-white/[0.08]">
-                    <h4 className="text-lg font-semibold text-white mb-4">Common Challenges</h4>
+                  <div className="bg-[#F4F5F3] rounded-xl p-6 border border-[#E4E6E2]">
+                    <h4 className="text-lg font-semibold text-[#13171F] mb-4">Common Challenges</h4>
                     <ul className="space-y-3">
                       {industries[activeIndustry].painPoints.map((pain, index) => (
-                        <li key={index} className="flex items-start gap-3 text-white/60">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 flex-shrink-0"></span>
+                        <li key={index} className="flex items-start gap-3 text-[#5A626E]">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#c2c7cd] mt-2 flex-shrink-0"></span>
                           {pain}
                         </li>
                       ))}
@@ -378,24 +378,24 @@ export default function IndustriesClient() {
                   </div>
 
                   {/* Solution */}
-                  <div className="gradient-bg/5 rounded-xl p-6 border border-orange/20">
-                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                      <Brain className="w-5 h-5 text-blue-400" />
+                  <div className="bg-[#F0F8F9] rounded-xl p-6 border border-[#dCEEF1]">
+                    <h4 className="text-lg font-semibold text-[#13171F] mb-3 flex items-center gap-2">
+                      <Brain className="w-5 h-5 text-[#0A7C8C]" />
                       How SurFox AI Helps
                     </h4>
-                    <p className="text-white/70 leading-relaxed">{industries[activeIndustry].solution}</p>
+                    <p className="text-[#5A626E] leading-relaxed">{industries[activeIndustry].solution}</p>
                   </div>
                 </div>
 
                 {/* Right Column */}
                 <div className="space-y-6">
                   {/* Results */}
-                  <div className="bg-background rounded-xl p-6 border border-white/[0.08]">
-                    <h4 className="text-lg font-semibold text-white mb-4">Typical Results</h4>
+                  <div className="bg-[#F4F5F3] rounded-xl p-6 border border-[#E4E6E2]">
+                    <h4 className="text-lg font-semibold text-[#13171F] mb-4">Typical Results</h4>
                     <ul className="space-y-3">
                       {industries[activeIndustry].results.map((result, index) => (
-                        <li key={index} className="flex items-start gap-3 text-white/70">
-                          <Check className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                        <li key={index} className="flex items-start gap-3 text-[#5A626E]">
+                          <Check className="w-5 h-5 text-[#0A7C8C] flex-shrink-0 mt-0.5" />
                           {result}
                         </li>
                       ))}
@@ -403,15 +403,15 @@ export default function IndustriesClient() {
                   </div>
 
                   {/* Use Cases */}
-                  <div className="bg-background rounded-xl p-6 border border-white/[0.08]">
-                    <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                      <Target className="w-5 h-5 text-blue-400" />
+                  <div className="bg-[#F4F5F3] rounded-xl p-6 border border-[#E4E6E2]">
+                    <h4 className="text-lg font-semibold text-[#13171F] mb-4 flex items-center gap-2">
+                      <Target className="w-5 h-5 text-[#0A7C8C]" />
                       Common Use Cases
                     </h4>
                     <ul className="space-y-3">
                       {industries[activeIndustry].useCases.map((useCase, index) => (
-                        <li key={index} className="flex items-start gap-3 text-white/60">
-                          <ArrowRight className="w-4 h-4 text-blue-400 flex-shrink-0 mt-1" />
+                        <li key={index} className="flex items-start gap-3 text-[#5A626E]">
+                          <ArrowRight className="w-4 h-4 text-[#0A7C8C] flex-shrink-0 mt-1" />
                           {useCase}
                         </li>
                       ))}
@@ -425,7 +425,7 @@ export default function IndustriesClient() {
       </section>
 
       {/* Why It Works Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -433,10 +433,10 @@ export default function IndustriesClient() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6">
               Why Psychology Works Everywhere
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed">
               Human behavior is universal. Whether buying a house or insurance, people make decisions the same way.
             </p>
           </motion.div>
@@ -446,13 +446,13 @@ export default function IndustriesClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 text-center"
+              className="bg-white rounded-2xl border-2 border-[#E4E6E2] p-8 text-center"
             >
-              <div className="w-14 h-14 rounded-2xl glass-card border border-blue-500/20 flex items-center justify-center mx-auto mb-6">
-                <Brain className="w-7 h-7 text-blue-400" />
+              <div className="w-14 h-14 rounded-2xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center mx-auto mb-6">
+                <Brain className="w-7 h-7 text-[#0A7C8C]" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Universal Psychology</h3>
-              <p className="text-white/60 leading-relaxed">
+              <h3 className="text-xl font-semibold text-[#13171F] mb-3">Universal Psychology</h3>
+              <p className="text-[#5A626E] leading-relaxed">
                 Fear, desire, urgency, and trust work the same across all industries. SurFox AI understands these fundamental drivers.
               </p>
             </motion.div>
@@ -462,13 +462,13 @@ export default function IndustriesClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 text-center"
+              className="bg-white rounded-2xl border-2 border-[#E4E6E2] p-8 text-center"
             >
-              <div className="w-14 h-14 rounded-2xl glass-card border border-blue-500/20 flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-7 h-7 text-blue-400" />
+              <div className="w-14 h-14 rounded-2xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-7 h-7 text-[#0A7C8C]" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Proven Patterns</h3>
-              <p className="text-white/60 leading-relaxed">
+              <h3 className="text-xl font-semibold text-[#13171F] mb-3">Proven Patterns</h3>
+              <p className="text-[#5A626E] leading-relaxed">
                 The same psychological triggers that sell houses also sell insurance, solar, and software.
               </p>
             </motion.div>
@@ -478,13 +478,13 @@ export default function IndustriesClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 text-center"
+              className="bg-white rounded-2xl border-2 border-[#E4E6E2] p-8 text-center"
             >
-              <div className="w-14 h-14 rounded-2xl glass-card border border-blue-500/20 flex items-center justify-center mx-auto mb-6">
-                <MessageSquare className="w-7 h-7 text-blue-400" />
+              <div className="w-14 h-14 rounded-2xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center mx-auto mb-6">
+                <MessageSquare className="w-7 h-7 text-[#0A7C8C]" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Adaptive Conversations</h3>
-              <p className="text-white/60 leading-relaxed">
+              <h3 className="text-xl font-semibold text-[#13171F] mb-3">Adaptive Conversations</h3>
+              <p className="text-[#5A626E] leading-relaxed">
                 SurFox AI learns what works in your industry and adapts its approach based on each prospect's responses.
               </p>
             </motion.div>
@@ -493,18 +493,18 @@ export default function IndustriesClient() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6">
               Ready to Revive Your Dead Leads?
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/60 mb-10 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-[#5A626E] mb-10 leading-relaxed max-w-2xl mx-auto">
               Stop letting expensive leads go to waste. See how SurFox AI can transform your results - regardless of your industry.
             </p>
 
@@ -513,7 +513,7 @@ export default function IndustriesClient() {
                 href="/pricing"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-10 py-4 rounded-lg gradient-bg text-white font-semibold hover:gradient-bg-600 transition inline-flex items-center gap-2"
+                className="px-10 py-4 rounded-lg bg-[#13171F] text-white font-semibold hover:gradient-bg-600 transition inline-flex items-center gap-2"
               >
                 Get Started
                 <ArrowRight className="w-5 h-5" />
@@ -523,13 +523,13 @@ export default function IndustriesClient() {
                 href="/demo"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-10 py-4 rounded-lg border-2 border-white/[0.1] text-white font-semibold hover:border-white/[0.12] hover:bg-background transition"
+                className="px-10 py-4 rounded-lg border-2 border-[#E4E6E2] text-[#13171F] font-semibold hover:border-[#c9cdc7] hover:bg-[#F4F5F3] transition"
               >
                 See a Demo
               </motion.a>
             </div>
 
-            <p className="text-sm text-white/50 mt-8">
+            <p className="text-sm text-[#8A92A0] mt-8">
               14-day free trial. 2,000 messages. Up to 1,000 leads. No setup fees.
             </p>
           </motion.div>

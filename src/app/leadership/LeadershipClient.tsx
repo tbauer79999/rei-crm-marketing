@@ -10,13 +10,13 @@ export default function Leadership() {
   const containerRef = useRef(null);
 
   return (
-    <div ref={containerRef} className="bg-card-bg text-white">
+    <div ref={containerRef} className="bg-[#F4F5F3] text-[#13171F]">
     
       {/* Hero Section */}
       <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 flex justify-center relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 gradient-bg/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-80 h-80 gradient-bg/5 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-64 h-64 bg-[#F0F8F9] rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#F0F8F9] rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
@@ -25,12 +25,12 @@ export default function Leadership() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <h1 className="text-4xl font-bold text-[#13171F] mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               Building the Future of<br className="hidden sm:block" />
               <span className="sm:inline"> </span>Human Interaction Intelligence
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
               Led by an operator who understands what it takes to turn human signals into actionable intelligence at scale.
             </p>
           </motion.div>
@@ -38,7 +38,7 @@ export default function Leadership() {
       </section>
 
       {/* Founder Profile - Featured */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -47,10 +47,10 @@ export default function Leadership() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <div className="inline-block px-4 py-2 rounded-full glass-card border border-blue-500/20 border border-orange/20 mb-6">
-              <span className="text-sm font-semibold text-blue-400">FOUNDER & CEO</span>
+            <div className="inline-block px-4 py-2 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] border border-[#dCEEF1] mb-6">
+              <span className="text-sm font-semibold text-[#0A7C8C]">FOUNDER & CEO</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Meet the Founder
             </h2>
           </motion.div>
@@ -62,18 +62,18 @@ export default function Leadership() {
             transition={{ duration: 0.6 }}
             className="max-w-5xl mx-auto"
           >
-            <div className="bg-card-bg rounded-2xl border-2 border-white/[0.08] overflow-hidden hover:border-orange/30 hover:shadow-xl transition-all duration-300">
+            <div className="bg-white rounded-2xl border-2 border-[#E4E6E2] overflow-hidden hover:border-[#E4E6E2]/30 hover:shadow-xl transition-all duration-300">
               <div className="grid grid-cols-1 md:grid-cols-5 gap-0">
                 {/* Profile Image Section */}
-                <div className="md:col-span-2 bg-gradient-to-br from-blue-500/5 to-violet-500/5 p-8 flex items-center justify-center">
+                <div className="md:col-span-2 bg-[#F0F8F9] p-8 flex items-center justify-center">
                   <div className="relative">
-                    <div className="w-72 h-72 rounded-2xl bg-gradient-to-br from-orange/20 to-gray-200 flex items-center justify-center overflow-hidden">
+                    <div className="w-72 h-72 rounded-2xl bg-[#EDEEEB] flex items-center justify-center overflow-hidden">
                       <Image
                         src="/tom-bauer.jpg"
                         alt="Tom Bauer, Founder and CEO of SurFox AI"
                         width={288}
                         height={288}
-                        className="rounded-2xl object-contain bg-card-bg p-10"
+                        className="rounded-2xl object-contain bg-white p-10"
                       />
                     </div>
                   </div>
@@ -81,27 +81,27 @@ export default function Leadership() {
 
                 {/* Bio Section */}
                 <div className="md:col-span-3 p-8 sm:p-10 md:p-12">
-                  <h3 className="text-3xl font-bold text-white mb-2">Tom Bauer</h3>
-                  <p className="text-lg text-blue-400 font-medium mb-6">Founder & CEO</p>
+                  <h3 className="text-3xl font-bold text-[#13171F] mb-2">Tom Bauer</h3>
+                  <p className="text-lg text-[#0A7C8C] font-medium mb-6">Founder & CEO</p>
                   
                   <div className="space-y-4 mb-8">
-                    <p className="text-white/70 leading-relaxed">
+                    <p className="text-[#5A626E] leading-relaxed">
                       Tom founded SurFox AI with a clear mission: transform how businesses understand and act on human interactions. With over 20 years in sales and revenue operations, he witnessed firsthand how companies struggled to extract intelligence from their communication data.
                     </p>
                     
-                    <p className="text-white/70 leading-relaxed">
+                    <p className="text-[#5A626E] leading-relaxed">
                       His approach is rooted in practical experience - having built and scaled sales teams, Tom understands the gap between what AI promises and what operators actually need. SurFox AI bridges that gap.
                     </p>
                     
-                    <p className="text-white/70 leading-relaxed">
+                    <p className="text-[#5A626E] leading-relaxed">
                       Before SurFox AI, Tom led revenue initiatives across multiple industries, consistently identifying patterns that others missed. That pattern recognition became the foundation for SurFox Infinity's predictive analytics engine.
                     </p>
                   </div>
 
                   <div className="flex gap-4">
                     <a 
-                      href="mailto:tom@getsurfox.com"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-white/[0.1] text-white font-semibold hover:border-white/[0.12] hover:bg-background transition"
+                      href="mailto:sales@getsurfox.com"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-[#E4E6E2] text-[#13171F] font-semibold hover:border-[#c9cdc7] hover:bg-[#EDEEEB] transition"
                     >
                       <Mail className="w-5 h-5" />
                       Contact
@@ -115,7 +115,7 @@ export default function Leadership() {
       </section>
 
       {/* Founding Principles */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -123,10 +123,10 @@ export default function Leadership() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Founding Principles
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               The values that guide every decision
             </p>
           </motion.div>
@@ -160,11 +160,11 @@ export default function Leadership() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-8 rounded-2xl border border-white/[0.08] bg-card-bg hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 transition-all duration-300"
+                className="p-8 rounded-2xl border border-[#E4E6E2] bg-white hover:border-[#E4E6E2]/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 transition-all duration-300"
               >
-                <div className="text-5xl font-bold text-blue-400/20 mb-4">{principle.number}</div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3">{principle.title}</h3>
-                <p className="text-white/60 leading-relaxed">{principle.desc}</p>
+                <div className="text-5xl font-bold text-[#0A7C8C]/20 mb-4">{principle.number}</div>
+                <h3 className="text-xl sm:text-2xl font-semibold text-[#13171F] mb-3">{principle.title}</h3>
+                <p className="text-[#5A626E] leading-relaxed">{principle.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -172,7 +172,7 @@ export default function Leadership() {
       </section>
 
       {/* Vision Section */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -180,10 +180,10 @@ export default function Leadership() {
             viewport={{ once: true }}
             className="text-center mb-16 sm:mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Where We Are Headed
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               Building the infrastructure for human interaction intelligence
             </p>
           </motion.div>
@@ -193,27 +193,27 @@ export default function Leadership() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-card-bg rounded-2xl border border-white/[0.08] p-8 sm:p-10 md:p-12"
+              className="bg-white rounded-2xl border border-[#E4E6E2] p-8 sm:p-10 md:p-12"
             >
               <div className="space-y-6">
-                <p className="text-lg text-white/70 leading-relaxed">
+                <p className="text-lg text-[#5A626E] leading-relaxed">
                   SurFox AI started with a simple observation: businesses generate massive amounts of interaction data but have no systematic way to understand it. Messages, transactions, behavioral signals - all sitting in silos, waiting to tell their story.
                 </p>
                 
-                <p className="text-lg text-white/70 leading-relaxed">
+                <p className="text-lg text-[#5A626E] leading-relaxed">
                   I am building the platform that makes sense of it all. Not just for one use case or one industry, but as foundational infrastructure that any business can leverage to understand their customers better.
                 </p>
                 
-                <div className="gradient-bg/5 border-l-4 border-orange rounded-lg p-6 my-8">
-                  <p className="text-xl font-semibold text-white mb-3">
+                <div className="bg-[#F0F8F9] border-l-4 border-[#E4E6E2] rounded-lg p-6 my-8">
+                  <p className="text-xl font-semibold text-[#13171F] mb-3">
                     The goal is ambitious but clear:
                   </p>
-                  <p className="text-lg text-white/70 leading-relaxed">
+                  <p className="text-lg text-[#5A626E] leading-relaxed">
                     Become the intelligence layer that powers every human-to-business interaction - from sales to support, recruiting to retail, and everything in between.
                   </p>
                 </div>
 
-                <p className="text-lg text-white/70 leading-relaxed">
+                <p className="text-lg text-[#5A626E] leading-relaxed">
                   As SurFox AI grows, the team will grow with it - bringing on operators, engineers, and data scientists who share this vision and want to help build the future of business intelligence.
                 </p>
               </div>
@@ -223,32 +223,32 @@ export default function Leadership() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6 sm:mb-8 px-4 leading-tight">
               Want to Connect?
             </h2>
             
-            <p className="text-lg sm:text-xl text-white/60 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
               Whether you are interested in SurFox AI as a customer, partner, or just want to talk about the future of human interaction intelligence - I would love to hear from you.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <Link 
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg gradient-bg text-white text-base font-semibold hover:gradient-bg-600 transition"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-[#13171F] text-white text-base font-semibold hover:gradient-bg-600 transition"
               >
                 Get in Touch
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link 
                 href="/platform"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border-2 border-white/[0.1] text-white text-base font-semibold hover:border-white/[0.12] hover:bg-background transition"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border-2 border-[#E4E6E2] text-[#13171F] text-base font-semibold hover:border-[#c9cdc7] hover:bg-[#EDEEEB] transition"
               >
                 See the Platform Vision
               </Link>

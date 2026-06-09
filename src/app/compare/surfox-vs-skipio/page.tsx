@@ -65,7 +65,7 @@ export default function Page() {
           }),
         }}
       />
-      <div className="bg-background text-white">
+      <div className="bg-[#F4F5F3] text-[#13171F]">
 
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20">
@@ -74,44 +74,44 @@ export default function Page() {
               {/* Platform Comparison */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
                 <div className="flex items-center gap-3 p-4 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
-                  <div className="w-12 h-12 rounded-xl gradient-bg overflow-hidden flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E4E6E2] overflow-hidden flex items-center justify-center">
                     <Image src="/logo.png" alt="SurFox AI" width={48} height={48} className="w-full h-full object-contain" />
                   </div>
                   <div className="text-left">
-                    <div className="text-2xl font-semibold text-white">SurFox AI</div>
-                    <div className="text-sm text-white/60">SMS Lead Qualification</div>
+                    <div className="text-2xl font-semibold text-[#13171F]">SurFox AI</div>
+                    <div className="text-sm text-[#5A626E]">SMS Lead Qualification</div>
                   </div>
                 </div>
 
-                <div className="text-3xl font-semibold text-white/40">VS</div>
+                <div className="text-3xl font-semibold text-[#8A92A0]">VS</div>
 
-                <div className="flex items-center gap-3 p-4 rounded-2xl border-2 border-white/[0.08] bg-card-bg">
+                <div className="flex items-center gap-3 p-4 rounded-2xl border-2 border-[#E4E6E2] bg-white">
                   <div className="w-12 h-12 rounded-xl bg-white/[0.06] flex items-center justify-center">
-                    <Calendar className="w-6 h-6 text-white/50" />
+                    <Calendar className="w-6 h-6 text-[#8A92A0]" />
                   </div>
                   <div className="text-left">
-                    <div className="text-2xl font-semibold text-white/60">Skipio</div>
-                    <div className="text-sm text-white/50">Appointment Booking</div>
+                    <div className="text-2xl font-semibold text-[#5A626E]">Skipio</div>
+                    <div className="text-sm text-[#8A92A0]">Appointment Booking</div>
                   </div>
                 </div>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#13171F] mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
                 AI That Closes Deals<br className="hidden sm:block" />
                 vs Basic Scheduling
               </h1>
 
-              <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-4 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-                <strong className="text-white">Skipio helps you book appointments efficiently.</strong>
+              <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-4 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+                <strong className="text-[#13171F]">Skipio helps you book appointments efficiently.</strong>
               </p>
-              <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-                <strong className="text-blue-400">SurFox AI turns your dead leads into actual deals that close.</strong>
+              <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+                <strong className="text-[#0A7C8C]">SurFox AI turns your dead leads into actual deals that close.</strong>
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
                 <a
                   href="/pricing"
-                  className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold transition flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-[#13171F] text-white text-base font-semibold transition flex items-center justify-center gap-2"
                 >
                   Stop Settling for Appointments
                   <ArrowRight className="w-5 h-5" />
@@ -119,7 +119,7 @@ export default function Page() {
 
                 <a
                   href="/contact"
-                  className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/[0.1] text-white text-base font-semibold hover:border-white/[0.2] hover:bg-card-bg transition"
+                  className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-[#E4E6E2] text-[#13171F] text-base font-semibold hover:border-[#E4E6E2] hover:bg-[#F4F5F3] transition"
                 >
                   See AI in Action
                 </a>
@@ -128,10 +128,10 @@ export default function Page() {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4">
                 {heroStats.map((item, i) => (
-                  <div key={i} className="p-4 sm:p-6 rounded-2xl border-2 border-white/[0.08] bg-background">
-                    <div className="text-2xl sm:text-3xl font-semibold text-blue-400 mb-2">{item.value}</div>
-                    <div className="text-sm text-white/60">{item.label}</div>
-                    <div className="text-xs text-white/40 mt-1">{item.sub}</div>
+                  <div key={i} className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
+                    <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">{item.value}</div>
+                    <div className="text-sm text-[#5A626E]">{item.label}</div>
+                    <div className="text-xs text-[#8A92A0] mt-1">{item.sub}</div>
                   </div>
                 ))}
               </div>
@@ -140,63 +140,63 @@ export default function Page() {
         </section>
 
         {/* Core Difference */}
-        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-4 sm:mb-6 px-4">
                 Two Different Results
               </h2>
-              <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+              <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
                 Skipio gets you appointments. SurFox AI gets you deals.
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
               {/* Skipio */}
-              <div className="p-6 sm:p-8 rounded-2xl border-2 border-white/[0.08] bg-background">
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 rounded-xl bg-white/[0.06] flex items-center justify-center mr-4">
-                    <Calendar className="w-6 h-6 text-white/50" />
+                    <Calendar className="w-6 h-6 text-[#8A92A0]" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">Skipio</h3>
-                    <p className="text-sm text-white/60">Basic Appointment Booking</p>
+                    <h3 className="text-xl font-semibold text-[#13171F]">Skipio</h3>
+                    <p className="text-sm text-[#5A626E]">Basic Appointment Booking</p>
                   </div>
                 </div>
 
                 <div className="space-y-4 mb-6">
-                  <div className="p-4 rounded-xl border border-white/[0.08] bg-card-bg">
-                    <h4 className="font-semibold text-white mb-2 text-sm">What You Get:</h4>
-                    <p className="text-sm text-white/70">"Help with scheduling appointments and basic follow-up automation"</p>
+                  <div className="p-4 rounded-xl border border-[#E4E6E2] bg-white">
+                    <h4 className="font-semibold text-[#13171F] mb-2 text-sm">What You Get:</h4>
+                    <p className="text-sm text-[#5A626E]">"Help with scheduling appointments and basic follow-up automation"</p>
                   </div>
 
                   <div className="space-y-3">
-                    <div className="flex items-start text-sm text-white/70">
+                    <div className="flex items-start text-sm text-[#5A626E]">
                       <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
                       <span>Good for booking appointments</span>
                     </div>
-                    <div className="flex items-start text-sm text-white/70">
+                    <div className="flex items-start text-sm text-[#5A626E]">
                       <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
                       <span>Multi-channel communication</span>
                     </div>
-                    <div className="flex items-start text-sm text-white/60">
+                    <div className="flex items-start text-sm text-[#5A626E]">
                       <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
                       <span>You manually write and review everything</span>
                     </div>
-                    <div className="flex items-start text-sm text-white/60">
+                    <div className="flex items-start text-sm text-[#5A626E]">
                       <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
                       <span>No AI to find your best leads</span>
                     </div>
-                    <div className="flex items-start text-sm text-white/60">
+                    <div className="flex items-start text-sm text-[#5A626E]">
                       <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
                       <span>All the selling work still falls on you</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl border border-white/[0.08] bg-card-bg">
-                  <p className="text-sm text-white/70">
-                    <strong className="text-white">Best For:</strong> Teams that just need appointment scheduling help
+                <div className="p-4 rounded-xl border border-[#E4E6E2] bg-white">
+                  <p className="text-sm text-[#5A626E]">
+                    <strong className="text-[#13171F]">Best For:</strong> Teams that just need appointment scheduling help
                   </p>
                 </div>
               </div>
@@ -204,48 +204,48 @@ export default function Page() {
               {/* SurFox AI */}
               <div className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 rounded-xl gradient-bg overflow-hidden flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E4E6E2] overflow-hidden flex items-center justify-center mr-4">
                     <Image src="/logo.png" alt="SurFox AI" width={48} height={48} className="w-full h-full object-contain" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">SurFox AI</h3>
-                    <p className="text-sm text-white/60">SMS Lead Qualification</p>
+                    <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI</h3>
+                    <p className="text-sm text-[#5A626E]">SMS Lead Qualification</p>
                   </div>
                 </div>
 
                 <div className="space-y-4 mb-6">
-                  <div className="p-4 rounded-xl border border-blue-500/20 bg-background">
-                    <h4 className="font-semibold text-white mb-2 text-sm">What You Get:</h4>
-                    <p className="text-sm text-white/70">"AI that turns your dead leads into actual deals that close"</p>
+                  <div className="p-4 rounded-xl border border-[#dCEEF1] bg-[#F4F5F3]">
+                    <h4 className="font-semibold text-[#13171F] mb-2 text-sm">What You Get:</h4>
+                    <p className="text-sm text-[#5A626E]">"AI that turns your dead leads into actual deals that close"</p>
                   </div>
 
                   <div className="space-y-3">
-                    <div className="flex items-start text-sm text-white/70">
-                      <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                    <div className="flex items-start text-sm text-[#5A626E]">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                       <span>SurFox AI handles all conversations for you</span>
                     </div>
-                    <div className="flex items-start text-sm text-white/70">
-                      <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                    <div className="flex items-start text-sm text-[#5A626E]">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                       <span>Automatically finds your hottest leads</span>
                     </div>
-                    <div className="flex items-start text-sm text-white/70">
-                      <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                    <div className="flex items-start text-sm text-[#5A626E]">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                       <span>Delivers qualified prospects ready to buy</span>
                     </div>
-                    <div className="flex items-start text-sm text-white/70">
-                      <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                    <div className="flex items-start text-sm text-[#5A626E]">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                       <span>Gets smarter with every conversation</span>
                     </div>
-                    <div className="flex items-start text-sm text-white/70">
-                      <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                    <div className="flex items-start text-sm text-[#5A626E]">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                       <span>Works 24/7 without breaks or oversight</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl border border-blue-500/20 bg-background">
-                  <p className="text-sm text-white/70">
-                    <strong className="text-white">Best For:</strong> Businesses that need to convert prospects into actual customers
+                <div className="p-4 rounded-xl border border-[#dCEEF1] bg-[#F4F5F3]">
+                  <p className="text-sm text-[#5A626E]">
+                    <strong className="text-[#13171F]">Best For:</strong> Businesses that need to convert prospects into actual customers
                   </p>
                 </div>
               </div>
@@ -254,13 +254,13 @@ export default function Page() {
         </section>
 
         {/* Daily Workflow */}
-        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-4 sm:mb-6 px-4">
                 Your Daily Workflow: Before vs After
               </h2>
-              <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+              <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
                 See exactly how SurFox AI eliminates the manual work that appointment tools require.
               </p>
             </div>
@@ -270,17 +270,17 @@ export default function Page() {
               <div className="p-6 sm:p-8 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
                 <div className="flex items-center mb-6">
                   <Clock className="w-6 h-6 text-red-600 mr-3" />
-                  <h3 className="text-lg font-semibold text-white">Skipio: Your Daily 4+ Hours</h3>
+                  <h3 className="text-lg font-semibold text-[#13171F]">Skipio: Your Daily 4+ Hours</h3>
                 </div>
 
                 <div className="space-y-4 mb-6">
                   {skipioWorkflow.map((item, i) => (
-                    <div key={i} className="p-3 rounded-lg border border-red-500/20 bg-background">
+                    <div key={i} className="p-3 rounded-lg border border-red-500/20 bg-[#F4F5F3]">
                       <div className="flex items-center mb-2">
-                        <Clock className="w-4 h-4 mr-2 text-white/60" />
-                        <span className="text-xs font-medium text-white/70">{item.time}</span>
+                        <Clock className="w-4 h-4 mr-2 text-[#5A626E]" />
+                        <span className="text-xs font-medium text-[#5A626E]">{item.time}</span>
                       </div>
-                      <p className="text-sm text-white/70">{item.desc}</p>
+                      <p className="text-sm text-[#5A626E]">{item.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -295,21 +295,21 @@ export default function Page() {
               <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
                 <div className="flex items-center mb-6">
                   <Sparkles className="w-6 h-6 text-green-400 mr-3" />
-                  <h3 className="text-lg font-semibold text-white">SurFox AI: Your Daily 30 Minutes</h3>
+                  <h3 className="text-lg font-semibold text-[#13171F]">SurFox AI: Your Daily 30 Minutes</h3>
                 </div>
 
                 <div className="space-y-4 mb-6">
                   {surfoxWorkflow.map((item, i) => (
-                    <div key={i} className="p-3 rounded-lg border border-green-200 bg-background">
+                    <div key={i} className="p-3 rounded-lg border border-green-200 bg-[#F4F5F3]">
                       <div className="flex items-center mb-2">
                         {item.isSparkles ? (
                           <Sparkles className="w-4 h-4 mr-2 text-green-400" />
                         ) : (
-                          <Clock className="w-4 h-4 mr-2 text-white/60" />
+                          <Clock className="w-4 h-4 mr-2 text-[#5A626E]" />
                         )}
-                        <span className="text-xs font-medium text-white/70">{item.time}</span>
+                        <span className="text-xs font-medium text-[#5A626E]">{item.time}</span>
                       </div>
-                      <p className="text-sm text-white/70">{item.desc}</p>
+                      <p className="text-sm text-[#5A626E]">{item.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -327,13 +327,13 @@ export default function Page() {
         <SkipioClient />
 
         {/* Lead Resurrection Section */}
-        <section className="py-20 px-4 sm:px-6 md:px-8 bg-background">
+        <section className="py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6">
                 The Hidden Gold Mine They Miss
               </h2>
-              <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto">
                 Every competitor focuses on NEW leads. SurFox AI finds money in the OLD leads you already own.
               </p>
             </div>
@@ -343,11 +343,11 @@ export default function Page() {
               <div className="p-6 sm:p-8 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-xl bg-red-500 flex items-center justify-center mr-4">
-                    <X className="w-6 h-6 text-white" />
+                    <X className="w-6 h-6 text-[#13171F]" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Traditional Platforms</h3>
+                  <h3 className="text-xl font-semibold text-[#13171F]">Traditional Platforms</h3>
                 </div>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-[#5A626E] leading-relaxed">
                   Only work on new leads flowing in. Your old CRM database sits there gathering dust.
                   Thousands of leads you already paid for, completely ignored.
                 </p>
@@ -357,11 +357,11 @@ export default function Page() {
               <div className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mr-4">
-                    <Check className="w-6 h-6 text-white" />
+                    <Check className="w-6 h-6 text-[#13171F]" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">SurFox AI Advantage</h3>
+                  <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI Advantage</h3>
                 </div>
-                <p className="text-white/70 leading-relaxed">
+                <p className="text-[#5A626E] leading-relaxed">
                   Upload your entire old lead database. SurFox AI finds the 3-5% who are actually ready to buy
                   but nobody ever followed up with properly. Turn yesterday's dead leads into today's deals.
                 </p>
@@ -370,8 +370,8 @@ export default function Page() {
 
             {/* ROI Callout */}
             <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10 text-center">
-              <h3 className="text-2xl font-semibold text-white mb-6">Real ROI Example</h3>
-              <div className="space-y-3 text-white/70 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-semibold text-[#13171F] mb-6">Real ROI Example</h3>
+              <div className="space-y-3 text-[#5A626E] max-w-2xl mx-auto">
                 <p className="text-base sm:text-lg">
                   <strong>10,000 old leads × 3% AI engagement = 300 conversations</strong>
                 </p>
@@ -381,7 +381,7 @@ export default function Page() {
                 <p className="text-base sm:text-lg">
                   <strong>30 appointments × $3,000 avg deal = $90,000 revenue</strong>
                 </p>
-                <p className="text-sm text-white/60 italic mt-4">
+                <p className="text-sm text-[#5A626E] italic mt-4">
                   From leads you already owned and paid for
                 </p>
               </div>
@@ -393,23 +393,23 @@ export default function Page() {
         </section>
 
         {/* Cost Comparison */}
-        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-4 sm:mb-6 px-4">
                 The Bottom Line
               </h2>
-              <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+              <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
                 Do you want help booking meetings, or do you want more deals?
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 mb-12">
-              <div className="text-center p-6 rounded-2xl border-2 border-white/[0.08] bg-card-bg">
-                <div className="text-sm text-white/60 mb-2">Skipio Gives You</div>
-                <div className="text-4xl font-semibold text-white/60 mb-2">Appointments</div>
-                <div className="text-xs text-white/60 mb-4">But you still do all the selling</div>
-                <div className="text-xs text-white/70 space-y-1">
+              <div className="text-center p-6 rounded-2xl border-2 border-[#E4E6E2] bg-white">
+                <div className="text-sm text-[#5A626E] mb-2">Skipio Gives You</div>
+                <div className="text-4xl font-semibold text-[#5A626E] mb-2">Appointments</div>
+                <div className="text-xs text-[#5A626E] mb-4">But you still do all the selling</div>
+                <div className="text-xs text-[#5A626E] space-y-1">
                   <div>• Manual message writing</div>
                   <div>• Manual qualification</div>
                   <div>• 4+ hours daily work</div>
@@ -417,10 +417,10 @@ export default function Page() {
               </div>
 
               <div className="text-center p-6 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
-                <div className="text-sm text-white/60 mb-2">SurFox AI Gives You</div>
+                <div className="text-sm text-[#5A626E] mb-2">SurFox AI Gives You</div>
                 <div className="text-4xl font-semibold text-green-400 mb-2">Deals</div>
-                <div className="text-xs text-white/60 mb-4">Qualified prospects ready to buy</div>
-                <div className="text-xs text-white/70 space-y-1">
+                <div className="text-xs text-[#5A626E] mb-4">Qualified prospects ready to buy</div>
+                <div className="text-xs text-[#5A626E] space-y-1">
                   <div>• AI writes all messages</div>
                   <div>• AI qualifies all leads</div>
                   <div>• 30 min daily review</div>
@@ -428,10 +428,10 @@ export default function Page() {
               </div>
 
               <div className="text-center p-6 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
-                <div className="text-sm text-white/60 mb-2">Result</div>
-                <div className="text-4xl font-semibold text-blue-400 mb-2">3-5x More</div>
-                <div className="text-xs text-white/60 mb-4">deals closed</div>
-                <div className="text-xs text-white/70 space-y-1">
+                <div className="text-sm text-[#5A626E] mb-2">Result</div>
+                <div className="text-4xl font-semibold text-[#0A7C8C] mb-2">3-5x More</div>
+                <div className="text-xs text-[#5A626E] mb-4">deals closed</div>
+                <div className="text-xs text-[#5A626E] space-y-1">
                   <div>• Higher quality leads</div>
                   <div>• Better conversion rates</div>
                   <div>• More revenue generated</div>
@@ -440,44 +440,44 @@ export default function Page() {
             </div>
 
             <div className="p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5 text-center">
-              <h3 className="text-2xl font-semibold text-white mb-4">Simple Choice</h3>
-              <p className="text-lg text-white/70 leading-relaxed max-w-3xl mx-auto">
-                <strong className="text-white">If you just need help scheduling:</strong> Skipio works fine.<br />
-                <strong className="text-blue-400">If you need to close more deals:</strong> SurFox AI is what you want.
+              <h3 className="text-2xl font-semibold text-[#13171F] mb-4">Simple Choice</h3>
+              <p className="text-lg text-[#5A626E] leading-relaxed max-w-3xl mx-auto">
+                <strong className="text-[#13171F]">If you just need help scheduling:</strong> Skipio works fine.<br />
+                <strong className="text-[#0A7C8C]">If you need to close more deals:</strong> SurFox AI is what you want.
               </p>
             </div>
           </div>
         </section>
 
         {/* When to Choose */}
-        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-4 sm:mb-6 px-4">
                 Choose The Right Tool
               </h2>
-              <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+              <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
                 Both have their place, but they solve very different problems.
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
-              <div className="p-6 sm:p-8 rounded-2xl border-2 border-white/[0.08] bg-background">
-                <h3 className="text-xl font-semibold text-white mb-4">Choose Skipio When:</h3>
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
+                <h3 className="text-xl font-semibold text-[#13171F] mb-4">Choose Skipio When:</h3>
                 <div className="space-y-3 mb-6">
-                  <div className="flex items-start text-sm text-white/70">
+                  <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
                     <span>You just need help booking appointments</span>
                   </div>
-                  <div className="flex items-start text-sm text-white/70">
+                  <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
                     <span>You're happy writing all your own messages</span>
                   </div>
-                  <div className="flex items-start text-sm text-white/70">
+                  <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
                     <span>Your business is appointment-driven (coaching, medical)</span>
                   </div>
-                  <div className="flex items-start text-sm text-white/70">
+                  <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
                     <span>You want manual control over everything</span>
                   </div>
@@ -485,22 +485,22 @@ export default function Page() {
               </div>
 
               <div className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
-                <h3 className="text-xl font-semibold text-white mb-4">Choose SurFox AI When:</h3>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-4">Choose SurFox AI When:</h3>
                 <div className="space-y-3 mb-6">
-                  <div className="flex items-start text-sm text-white/70">
-                    <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-[#5A626E]">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                     <span>You need more deals, not just appointments</span>
                   </div>
-                  <div className="flex items-start text-sm text-white/70">
-                    <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-[#5A626E]">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                     <span>Your follow-ups aren't working</span>
                   </div>
-                  <div className="flex items-start text-sm text-white/70">
-                    <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-[#5A626E]">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                     <span>You want SurFox AI to handle conversations for you</span>
                   </div>
-                  <div className="flex items-start text-sm text-white/70">
-                    <Check className="w-5 h-5 mr-2 mt-0.5 text-blue-400 flex-shrink-0" />
+                  <div className="flex items-start text-sm text-[#5A626E]">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                     <span>Results matter more than monthly cost</span>
                   </div>
                 </div>
@@ -510,13 +510,13 @@ export default function Page() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-lg text-white/60">
+              <p className="text-lg text-[#5A626E]">
                 Common questions about Skipio vs SurFox AI
               </p>
             </div>
@@ -525,10 +525,10 @@ export default function Page() {
               {faqData.map((faq, index) => (
                 <div
                   key={index}
-                  className="p-6 rounded-2xl border-2 border-white/[0.08] bg-card-bg"
+                  className="p-6 rounded-2xl border-2 border-[#E4E6E2] bg-white"
                 >
-                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                  <p className="text-white/70 leading-relaxed">{faq.answer}</p>
+                  <h3 className="text-lg font-semibold text-[#13171F] mb-3">{faq.question}</h3>
+                  <p className="text-[#5A626E] leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -536,25 +536,25 @@ export default function Page() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6 sm:mb-8 px-4 leading-tight">
               Ready for More<br className="hidden sm:block" />
               Deals?
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/60 mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-              Stop settling for appointments. Get AI that turns your leads into actual deals. <strong className="text-white">30-day money back guarantee.</strong>
+            <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
+              Stop settling for appointments. Get AI that turns your leads into actual deals. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
             </p>
 
-            <p className="text-base text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">
               Plans start at $147/month. Most teams choose Growth at $597 for learning AI.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">
               <a
                 href="/pricing"
-                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg gradient-bg text-white text-base font-semibold transition flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-[#13171F] text-white text-base font-semibold transition flex items-center justify-center gap-2"
               >
                 Get Started Risk-Free
                 <ArrowRight className="w-5 h-5" />
@@ -562,23 +562,23 @@ export default function Page() {
 
               <a
                 href="/contact"
-                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-white/[0.1] text-white text-base font-semibold hover:border-white/[0.2] hover:bg-card-bg transition"
+                className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-[#E4E6E2] text-[#13171F] text-base font-semibold hover:border-[#E4E6E2] hover:bg-[#F4F5F3] transition"
               >
                 See SurFox AI Demo
               </a>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-[#5A626E]">
               <div className="flex items-center">
-                <Shield className="w-5 h-5 mr-2 text-blue-400" />
+                <Shield className="w-5 h-5 mr-2 text-[#0A7C8C]" />
                 30-day guarantee
               </div>
               <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-2 text-blue-400" />
+                <Clock className="w-5 h-5 mr-2 text-[#0A7C8C]" />
                 Setup in 15 minutes
               </div>
               <div className="flex items-center">
-                <Award className="w-5 h-5 mr-2 text-blue-400" />
+                <Award className="w-5 h-5 mr-2 text-[#0A7C8C]" />
                 Cancel anytime
               </div>
             </div>

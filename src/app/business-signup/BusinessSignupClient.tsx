@@ -156,7 +156,7 @@ function BusinessSignupContent() {
     if (!invitation?.partner_type) return null;
 
     const badges: Record<string, { text: string; color: string }> = {
-      franchise: { text: 'Franchise Partner', color: 'bg-blue-500/10 text-blue-400 border border-blue-500/20' },
+      franchise: { text: 'Franchise Partner', color: 'bg-[#EAF7F9] text-[#0A7C8C] border border-[#dCEEF1]' },
       white_label: { text: 'White Label Partner', color: 'bg-violet-500/10 text-violet-400 border border-violet-500/20' },
       enterprise: { text: 'Enterprise Partner', color: 'bg-green-500/10 text-green-400 border border-green-500/20' }
     };
@@ -173,7 +173,7 @@ function BusinessSignupContent() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen bg-[#F4F5F3] flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
@@ -181,11 +181,11 @@ function BusinessSignupContent() {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center p-4">
-        <div className="bg-card-bg rounded-2xl shadow-xl p-8 max-w-md w-full">
+      <div className="min-h-screen bg-[#F4F5F3] flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">
           <AlertCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-          <h1 className="text-2xl font-bold text-white text-center mb-2">Invitation Error</h1>
-          <p className="text-white/60 text-center">{error}</p>
+          <h1 className="text-2xl font-bold text-[#13171F] text-center mb-2">Invitation Error</h1>
+          <p className="text-[#5A626E] text-center">{error}</p>
         </div>
       </div>
     );
@@ -193,26 +193,26 @@ function BusinessSignupContent() {
 
   if (!invitation) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen bg-[#F4F5F3] flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-background py-12 px-4 pt-24">
+    <div className="min-h-screen bg-[#F4F5F3] py-12 px-4 pt-24">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Sparkles className="w-8 h-8 text-blue-400" />
-            <h1 className="text-4xl font-bold text-white">Welcome to SurFox AI!</h1>
+            <Sparkles className="w-8 h-8 text-[#0A7C8C]" />
+            <h1 className="text-4xl font-bold text-[#13171F]">Welcome to SurFox AI!</h1>
           </div>
           
           {invitation.partner_name && (
             <div className="flex items-center justify-center gap-2 mb-4">
-              <p className="text-lg text-white/60">
-                You've been invited by <span className="font-semibold text-blue-400">{invitation.partner_name}</span>
+              <p className="text-lg text-[#5A626E]">
+                You've been invited by <span className="font-semibold text-[#0A7C8C]">{invitation.partner_name}</span>
               </p>
               {getPartnerBadge()}
             </div>
@@ -224,27 +224,27 @@ function BusinessSignupContent() {
             </div>
           )}
 
-          <p className="text-white/60 mt-4">
+          <p className="text-[#5A626E] mt-4">
             Setting up location for: <span className="font-medium">{invitation.first_name} {invitation.last_name}</span>
           </p>
-          <p className="text-sm text-white/50">{invitation.email}</p>
+          <p className="text-sm text-[#8A92A0]">{invitation.email}</p>
         </div>
 
         {/* Terms Agreement Checkboxes */}
-        <div className="max-w-2xl mx-auto mb-8 bg-card-bg rounded-2xl border-2 border-white/[0.08] p-6 space-y-3">
+        <div className="max-w-2xl mx-auto mb-8 bg-white rounded-2xl border-2 border-[#E4E6E2] p-6 space-y-3">
           <div>
             <label className="flex items-start gap-3 cursor-pointer">
               <input
                 type="checkbox"
                 checked={agreedToTerms}
                 onChange={(e) => { setAgreedToTerms(e.target.checked); if (e.target.checked) setTermsError(''); }}
-                className="mt-1 h-4 w-4 rounded border-white/20 accent-blue-400"
+                className="mt-1 h-4 w-4 rounded border-[#E4E6E2] accent-blue-400"
               />
-              <span className="text-sm text-white/70">
+              <span className="text-sm text-[#5A626E]">
                 I have read and agree to the SurFox AI{' '}
-                <a href="https://www.getsurfox.com/terms" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Terms of Service</a>
+                <a href="https://www.getsurfox.com/terms" target="_blank" rel="noopener noreferrer" className="text-[#0A7C8C] hover:underline">Terms of Service</a>
                 {' '}and{' '}
-                <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Privacy Policy</a>.
+                <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-[#0A7C8C] hover:underline">Privacy Policy</a>.
               </span>
             </label>
             {termsError && <p className="text-red-400 text-xs mt-1 ml-7">{termsError}</p>}
@@ -256,9 +256,9 @@ function BusinessSignupContent() {
                 type="checkbox"
                 checked={agreedToTcpa}
                 onChange={(e) => { setAgreedToTcpa(e.target.checked); if (e.target.checked) setTcpaError(''); }}
-                className="mt-1 h-4 w-4 rounded border-white/20 accent-blue-400"
+                className="mt-1 h-4 w-4 rounded border-[#E4E6E2] accent-blue-400"
               />
-              <span className="text-sm text-white/70">
+              <span className="text-sm text-[#5A626E]">
                 I accept full responsibility for TCPA compliance and all applicable messaging laws. I understand that SurFox AI is not responsible for my messaging practices.
               </span>
             </label>
@@ -269,22 +269,22 @@ function BusinessSignupContent() {
         {/* Pricing Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Starter Plan */}
-          <div className="bg-card-bg rounded-2xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 overflow-hidden border-2 border-white/[0.08]">
+          <div className="bg-white rounded-2xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 overflow-hidden border-2 border-[#E4E6E2]">
             <div className="p-6">
-              <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
-              <p className="text-white/60 text-sm mb-4">Perfect for getting started</p>
+              <h3 className="text-xl font-bold text-[#13171F] mb-2">Starter</h3>
+              <p className="text-[#5A626E] text-sm mb-4">Perfect for getting started</p>
               
               <div className="mb-4">
                 <div className="flex items-baseline gap-2">
                   {invitation.business_admin_discount > 0 && (
-                    <span className="text-2xl text-white/40 line-through">
+                    <span className="text-2xl text-[#8A92A0] line-through">
                       ${standardPricing.starter.monthly}
                     </span>
                   )}
-                  <span className="text-4xl font-bold text-white">
+                  <span className="text-4xl font-bold text-[#13171F]">
                     ${calculateDiscountedPrice(standardPricing.starter.monthly)}
                   </span>
-                  <span className="text-white/60">/month</span>
+                  <span className="text-[#5A626E]">/month</span>
                 </div>
                 {invitation.business_admin_discount > 0 && (
                   <p className="text-sm text-green-400 font-medium mt-1">
@@ -296,15 +296,15 @@ function BusinessSignupContent() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/70">Up to 500 leads/month</span>
+                  <span className="text-[#5A626E]">Up to 500 leads/month</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/70">AI-powered responses</span>
+                  <span className="text-[#5A626E]">AI-powered responses</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/70">Basic analytics</span>
+                  <span className="text-[#5A626E]">Basic analytics</span>
                 </li>
               </ul>
 
@@ -319,25 +319,25 @@ function BusinessSignupContent() {
           </div>
 
           {/* Growth Plan */}
-          <div className="bg-card-bg rounded-2xl shadow-xl overflow-hidden border-2 border-blue-500/50 relative">
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-blue-500/50 relative">
             <div className="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 text-sm font-semibold rounded-bl-lg">
               RECOMMENDED
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold text-white mb-2">Growth</h3>
-              <p className="text-white/60 text-sm mb-4">For scaling businesses</p>
+              <h3 className="text-xl font-bold text-[#13171F] mb-2">Growth</h3>
+              <p className="text-[#5A626E] text-sm mb-4">For scaling businesses</p>
               
               <div className="mb-4">
                 <div className="flex items-baseline gap-2">
                   {invitation.business_admin_discount > 0 && (
-                    <span className="text-2xl text-white/40 line-through">
+                    <span className="text-2xl text-[#8A92A0] line-through">
                       ${standardPricing.growth.monthly}
                     </span>
                   )}
-                  <span className="text-4xl font-bold text-white">
+                  <span className="text-4xl font-bold text-[#13171F]">
                     ${calculateDiscountedPrice(standardPricing.growth.monthly)}
                   </span>
-                  <span className="text-white/60">/month</span>
+                  <span className="text-[#5A626E]">/month</span>
                 </div>
                 {invitation.business_admin_discount > 0 && (
                   <p className="text-sm text-green-400 font-medium mt-1">
@@ -349,19 +349,19 @@ function BusinessSignupContent() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/70">Up to 2,000 leads/month</span>
+                  <span className="text-[#5A626E]">Up to 2,000 leads/month</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/70">Advanced AI features</span>
+                  <span className="text-[#5A626E]">Advanced AI features</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/70">Priority support</span>
+                  <span className="text-[#5A626E]">Priority support</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/70">Custom integrations</span>
+                  <span className="text-[#5A626E]">Custom integrations</span>
                 </li>
               </ul>
 
@@ -376,22 +376,22 @@ function BusinessSignupContent() {
           </div>
 
           {/* Scale Plan */}
-          <div className="bg-card-bg rounded-2xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 overflow-hidden border-2 border-white/[0.08]">
+          <div className="bg-white rounded-2xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 overflow-hidden border-2 border-[#E4E6E2]">
             <div className="p-6">
-              <h3 className="text-xl font-bold text-white mb-2">Scale</h3>
-              <p className="text-white/60 text-sm mb-4">For enterprise teams</p>
+              <h3 className="text-xl font-bold text-[#13171F] mb-2">Scale</h3>
+              <p className="text-[#5A626E] text-sm mb-4">For enterprise teams</p>
               
               <div className="mb-4">
                 <div className="flex items-baseline gap-2">
                   {invitation.business_admin_discount > 0 && (
-                    <span className="text-2xl text-white/40 line-through">
+                    <span className="text-2xl text-[#8A92A0] line-through">
                       ${standardPricing.scale.monthly}
                     </span>
                   )}
-                  <span className="text-4xl font-bold text-white">
+                  <span className="text-4xl font-bold text-[#13171F]">
                     ${calculateDiscountedPrice(standardPricing.scale.monthly)}
                   </span>
-                  <span className="text-white/60">/month</span>
+                  <span className="text-[#5A626E]">/month</span>
                 </div>
                 {invitation.business_admin_discount > 0 && (
                   <p className="text-sm text-green-400 font-medium mt-1">
@@ -403,19 +403,19 @@ function BusinessSignupContent() {
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/70">Unlimited leads</span>
+                  <span className="text-[#5A626E]">Unlimited leads</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/70">White-label options</span>
+                  <span className="text-[#5A626E]">White-label options</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/70">Dedicated support</span>
+                  <span className="text-[#5A626E]">Dedicated support</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/70">Custom SLA</span>
+                  <span className="text-[#5A626E]">Custom SLA</span>
                 </li>
               </ul>
 
@@ -431,14 +431,14 @@ function BusinessSignupContent() {
         </div>
 
         {/* 14-Day Trial Notice */}
-        <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 text-center">
-          <p className="text-white/80 font-medium">
+        <div className="bg-[#EAF7F9] border border-[#dCEEF1] rounded-xl p-6 text-center">
+          <p className="text-[#5A626E] font-medium">
             ✨ 14-day free trial included • Cancel anytime
           </p>
         </div>
 
         {/* Footer Info */}
-        <div className="mt-8 text-center text-sm text-white/50">
+        <div className="mt-8 text-center text-sm text-[#8A92A0]">
           <p>This invitation expires on {new Date(invitation.expires_at).toLocaleDateString()}</p>
           <p className="mt-2">Questions? Contact {invitation.partner_name || 'your partner administrator'}</p>
         </div>
@@ -450,7 +450,7 @@ function BusinessSignupContent() {
 export default function BusinessSignupPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen bg-[#F4F5F3] flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     }>

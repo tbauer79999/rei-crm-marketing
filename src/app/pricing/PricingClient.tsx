@@ -1,427 +1,359 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { Check, X, Mail, Target } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { Check, X, Mail } from 'lucide-react';
+import '../home.css';
+
+type FeatureItem = { t: string; sub?: string; off?: boolean };
+type Plan = {
+  slug: 'starter' | 'growth' | 'scale';
+  name: string;
+  desc: string;
+  price: string;
+  vol: string;
+  callout: string;
+  popular: boolean;
+  btn: 'btn-ghost' | 'btn-cyan';
+  groups: { h: string; items: FeatureItem[] }[];
+};
+
+const plans: Plan[] = [
+  {
+    slug: 'starter',
+    name: 'Starter',
+    desc: 'For operators testing the waters on a focused list.',
+    price: '$147',
+    vol: '2,000 messages / mo',
+    callout: 'Core AI that texts, qualifies, and books. Conversation learning not included yet.',
+    popular: false,
+    btn: 'btn-ghost',
+    groups: [
+      {
+        h: 'Monthly limits',
+        items: [
+          {
+            t: '2,000 SMS messages per month',
+            sub: 'Each conversation uses ~4 to 8 messages (your outbound plus lead replies combined).',
+          },
+          {
+            t: '200 website chat conversations per month',
+            sub: 'Qualifies inbound website visitors 24/7.',
+          },
+          { t: '1 team member account' },
+        ],
+      },
+      {
+        h: 'AI capabilities',
+        items: [
+          { t: 'AI conversation engine' },
+          { t: '50 qualification signals tracked' },
+          { t: 'Knowledge base upload' },
+          { t: 'Google & Outlook calendar booking' },
+          { t: 'Conversation learning', off: true },
+        ],
+      },
+      {
+        h: 'Support & compliance',
+        items: [
+          { t: 'Basic analytics dashboard' },
+          { t: 'Email support' },
+          { t: 'Automatic opt-out detection. STOP and inferred opt-out language honored instantly' },
+          { t: 'Built on TCPA-compliant infrastructure' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'growth',
+    name: 'Growth',
+    desc: 'For teams ready to work a full list every month.',
+    price: '$597',
+    vol: '10,000 messages / mo',
+    callout: 'Learning AI that studies your last 100 conversations and gets sharper over time.',
+    popular: true,
+    btn: 'btn-cyan',
+    groups: [
+      {
+        h: 'Monthly limits',
+        items: [
+          {
+            t: '10,000 SMS messages per month',
+            sub: 'Each conversation uses ~4 to 8 messages (your outbound plus lead replies combined).',
+          },
+          {
+            t: '500 website chat conversations per month',
+            sub: 'Qualifies inbound website visitors 24/7.',
+          },
+          { t: '5 team member accounts' },
+        ],
+      },
+      {
+        h: 'AI capabilities',
+        items: [
+          { t: 'Everything in Starter, plus:' },
+          { t: 'Conversation learning (last 100)' },
+          { t: 'A/B testing & optimization' },
+          { t: 'Zapier integration' },
+          { t: 'Chrome extension for lead capture' },
+        ],
+      },
+      {
+        h: 'Support & compliance',
+        items: [
+          { t: 'Priority email & chat support' },
+          { t: '5,000 DNC scrubs per month included' },
+          { t: 'Automatic opt-out detection. STOP and inferred opt-out language honored instantly' },
+          { t: 'Built on TCPA-compliant infrastructure' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'scale',
+    name: 'Scale',
+    desc: 'For high-volume operations running constant campaigns.',
+    price: '$2,497',
+    vol: '40,000 messages / mo',
+    callout: 'Maximum intelligence. Learns from your last 1,000 conversations across every campaign.',
+    popular: false,
+    btn: 'btn-ghost',
+    groups: [
+      {
+        h: 'Monthly limits',
+        items: [
+          {
+            t: '40,000 SMS messages per month',
+            sub: 'Each conversation uses ~4 to 8 messages (your outbound plus lead replies combined).',
+          },
+          {
+            t: '2,000 website chat conversations per month',
+            sub: 'Qualifies inbound website visitors 24/7.',
+          },
+          { t: '15+ team member accounts' },
+        ],
+      },
+      {
+        h: 'AI capabilities',
+        items: [
+          { t: 'Everything in Growth, plus:' },
+          { t: 'Conversation learning (last 1,000)' },
+          { t: 'Multiple personas & campaigns' },
+          { t: 'Unlimited knowledge base uploads' },
+        ],
+      },
+      {
+        h: 'Support & compliance',
+        items: [
+          { t: 'White-glove onboarding' },
+          { t: 'Dedicated success manager' },
+          { t: '25,000 DNC scrubs per month included' },
+          { t: 'Automatic opt-out detection. STOP and inferred opt-out language honored instantly' },
+          { t: 'Built on TCPA-compliant infrastructure' },
+        ],
+      },
+    ],
+  },
+];
+
+const faqs = [
+  {
+    q: 'What happens if I exceed my message limit?',
+    a: 'We email you as you approach your limit so there are no surprises. You approve any overage before it is added, and you can move up a plan at any time.',
+  },
+  {
+    q: 'How is this different from text blasting tools?',
+    a: 'Text blasters send identical messages to thousands of people and leave you to handle every reply. SurFox AI holds a real, qualifying conversation with each contact, reads intent, and only hands off the contacts genuinely ready to talk. You get fewer calls, but every one is worth taking.',
+  },
+  {
+    q: 'When will I see my first qualified lead?',
+    a: 'Most customers see their first qualified lead within 7 to 14 days, depending on your industry and the quality of your list. Real estate and B2B services typically see faster results.',
+  },
+  {
+    q: 'Can I cancel anytime?',
+    a: 'Yes. Cancel anytime with 24 hours notice. No contracts, no cancellation fees. SurFox AI finishes any active conversations, then stops working new contacts.',
+  },
+  {
+    q: 'Do you offer annual discounts?',
+    a: 'We are focused on monthly pricing while we are early stage. Annual options may come later once we have proven consistent value.',
+  },
+];
+
+function ChevronDown() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+}
 
 export default function PricingClient() {
-  const [billingCycle, setBillingCycle] = useState('monthly')
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const startTrial = (slug: Plan['slug']) => {
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get('ref');
+    const aff = params.get('aff');
+    const qs = new URLSearchParams();
+    if (ref) qs.set('ref', ref);
+    if (aff) qs.set('aff', aff);
+    const suffix = qs.toString() ? `?${qs.toString()}` : '';
+    window.location.href = `/subscribe/${slug}${suffix}`;
+  };
 
   return (
-    <>
-
-      <div className="min-h-screen bg-card-bg text-white">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-
-          {/* Header */}
-          <div className="text-center mb-20">
-            <div className="text-sm font-medium text-white/50 mb-4 tracking-wide">PRICING</div>
-            <h1 className="text-5xl font-bold text-white mb-6 leading-tight">
-              Choose Your AI Sales<br />Automation Plan
-            </h1>
-            <p className="text-xl text-white/60 mb-4 max-w-3xl mx-auto leading-relaxed">
-              All plans include AI-powered lead qualification, psychology-based scoring, and a 14-day free trial. 2,000 messages and up to 1,000 leads included.
-            </p>
-            <p className="text-lg text-blue-400 font-semibold">
-              Higher tiers = Smarter AI = Better conversations = More qualified prospects
+    <div className="sfx">
+      {/* Header */}
+      <section style={{ paddingBottom: 0 }}>
+        <div className="wrap">
+          <div className="sec-head">
+            <span className="eyebrow">Pricing</span>
+            <h2 className="disp">Pay for messages, not headcount.</h2>
+            <p>
+              Real conversational AI at SMB pricing. Every plan includes a 14-day free trial and the
+              same AI that texts, qualifies, and books your leads.
             </p>
           </div>
+        </div>
+      </section>
 
-          {/* Pricing Tiers */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-24">
-
-            {/* Starter */}
-            <div className="bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 text-center hover-lift">
-              <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
-              <div className="text-4xl font-bold text-white mb-4">
-                $147<span className="text-lg text-white/50">/month</span>
-              </div>
-              <p className="text-white/60 mb-6">Perfect for individual sales professionals ready to eliminate manual outreach</p>
-
-              <div className="bg-background rounded-lg p-4 mb-6 border border-white/[0.08]">
-                <div className="text-sm font-semibold text-white">What you get:</div>
-                <div className="text-sm text-white/60 mt-1">Basic AI that handles conversations but does not learn</div>
-                <div className="text-xs text-white/50 mt-1">Still way better than mass text blasting</div>
-              </div>
-
-              <div className="text-left space-y-4 mb-8">
-                <div className="border-b border-white/[0.08] pb-3">
-                  <div className="text-sm font-semibold text-white mb-2">Monthly Limits:</div>
-                  <div className="text-sm text-white/70 flex items-center">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    2,000 SMS messages per month
-                  </div>
-                  <div className="text-xs text-white/50 mt-1 ml-6">Each conversation uses ~4–8 messages (your outbound + lead replies combined)</div>
-
-                  <div className="text-sm text-white/70 flex items-center mt-2">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    200 web chat conversations per month
-                  </div>
-                  <div className="text-xs text-white/50 mt-1 ml-6">Infinity qualifies inbound visitors on your website 24/7</div>
-
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    1 team member account
-                  </div>
+      {/* Plans */}
+      <section className="pricing" style={{ paddingTop: 40 }}>
+        <div className="wrap">
+          <div className="price-grid">
+            {plans.map((plan) => (
+              <div className={`plan${plan.popular ? ' pop' : ''}`} key={plan.slug}>
+                {plan.popular && <span className="pin">Most popular</span>}
+                <div className="pname">{plan.name}</div>
+                <div className="pdesc">{plan.desc}</div>
+                <div className="price">
+                  {plan.price}
+                  <span> / mo</span>
                 </div>
+                <div className="vol">{plan.vol}</div>
+                <div className="plan-callout">{plan.callout}</div>
 
-                <div className="border-b border-white/[0.08] pb-3">
-                  <div className="text-sm font-semibold text-white mb-2">AI Capabilities:</div>
-                  <div className="text-sm text-white/70 flex items-center">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Psychology-based conversations
+                {plan.groups.map((group) => (
+                  <div className="pgroup" key={group.h}>
+                    <div className="pgroup-h">{group.h}</div>
+                    <ul>
+                      {group.items.map((item) => (
+                        <li className={item.off ? 'off' : undefined} key={item.t}>
+                          {item.off ? (
+                            <X size={16} className="text-[#8A92A0]" />
+                          ) : (
+                            <Check size={16} className="text-[#0A7C8C]" />
+                          )}
+                          <span>
+                            {item.t}
+                            {item.sub && <span className="psub">{item.sub}</span>}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Automated qualification questions
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Basic objection handling
-                  </div>
-                  <div className="text-sm text-white/50 flex items-center mt-1">
-                    <X className="w-4 h-4 text-white/40 mr-2 flex-shrink-0" />
-                    No learning from conversations
-                  </div>
-                </div>
+                ))}
 
-                <div className="border-b border-white/[0.08] pb-3">
-                  <div className="text-sm font-semibold text-white mb-2">Support & Analytics:</div>
-                  <div className="text-sm text-white/70 flex items-center">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Basic analytics dashboard
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Email support
-                  </div>
-                </div>
-
-                <div>
-                  <div className="text-sm font-semibold text-white mb-2">Compliance & Protection:</div>
-                  <div className="text-sm text-white/70 flex items-start">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Automatic opt-out detection. STOP and inferred opt-out language honored instantly</span>
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Built on TCPA-compliant infrastructure
-                  </div>
+                <div className="pbtn" style={{ marginTop: 28 }}>
+                  <button
+                    type="button"
+                    className={`btn ${plan.btn}`}
+                    onClick={() => startTrial(plan.slug)}
+                  >
+                    Start free trial
+                  </button>
                 </div>
               </div>
-
-              <button
-              onClick={() => {
-                const params = new URLSearchParams(window.location.search);
-                const ref = params.get('ref');
-                const aff = params.get('aff');
-                const qs = new URLSearchParams();
-                if (ref) qs.set('ref', ref);
-                if (aff) qs.set('aff', aff);
-                const suffix = qs.toString() ? `?${qs.toString()}` : '';
-                window.location.href = `/subscribe/starter${suffix}`;
-              }}
-              className="w-full bg-blue-500/20 text-white px-6 py-3 rounded-xl hover:bg-white/[0.08] transition-colors font-semibold cursor-pointer"
-            >
-              Start Today
-            </button>
-            </div>
-
-            {/* Growth - Most Popular */}
-            <div className="relative transform scale-105">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
-                <span className="gradient-bg text-white px-4 py-1 rounded-full text-xs font-bold shadow-sm shadow-blue-500/5 shadow-blue-500/5">
-                  Most Popular
-                </span>
-              </div>
-              <div className="relative overflow-hidden bg-card-bg rounded-2xl border-2 border-blue-500/50 p-8 text-center shadow-xl hover-lift">
-                <span className="absolute top-[24px] right-[-46px] w-[160px] rotate-45 bg-emerald-600/90 text-white/95 text-[10px] font-medium tracking-wide uppercase text-center py-1 z-10 pointer-events-none">
-                  DNC Protected
-                </span>
-
-              <h3 className="text-xl font-bold text-white mb-2">Growth</h3>
-              <div className="text-4xl font-bold text-white mb-4">
-                $597<span className="text-lg text-white/50">/month</span>
-              </div>
-              <p className="text-white/60 mb-6">For growing sales teams ready to scale AI-powered conversations</p>
-
-              <div className="glass-card border border-blue-500/20 rounded-lg p-4 mb-6">
-                <div className="text-sm font-semibold text-blue-400">What you get:</div>
-                <div className="text-sm text-white/70 mt-1">Learning AI with 100 conversation memory</div>
-                <div className="text-xs text-blue-400 mt-1">Gets smarter with every conversation</div>
-              </div>
-
-              <div className="text-left space-y-4 mb-8">
-                <div className="border-b border-white/[0.08] pb-3">
-                  <div className="text-sm font-semibold text-white mb-2">Monthly Limits:</div>
-                  <div className="text-sm text-white/70 flex items-center">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    10,000 SMS messages per month
-                  </div>
-                  <div className="text-xs text-white/50 mt-1 ml-6">Each conversation uses ~4–8 messages (your outbound + lead replies combined)</div>
-
-                  <div className="text-sm text-white/70 flex items-center mt-2">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    500 web chat conversations per month
-                  </div>
-                  <div className="text-xs text-white/50 mt-1 ml-6">Infinity qualifies inbound visitors on your website 24/7</div>
-
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    5 team member accounts
-                  </div>
-                </div>
-
-                <div className="border-b border-white/[0.08] pb-3">
-                  <div className="text-sm font-semibold text-white mb-2">AI Capabilities:</div>
-                  <div className="text-sm text-white/70 flex items-center">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Everything in Starter, plus:
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    SurFox AI learns from 100 conversations
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Advanced objection handling
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Chrome extension for lead capture
-                  </div>
-                </div>
-
-                <div className="border-b border-white/[0.08] pb-3">
-                  <div className="text-sm font-semibold text-white mb-2">Support & Features:</div>
-                  <div className="text-sm text-white/70 flex items-center">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Priority email & chat support
-                  </div>
-                </div>
-
-                <div>
-                  <div className="text-sm font-semibold text-white mb-2">Compliance & Protection:</div>
-                  <div className="text-sm text-white/70 flex items-center">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    5,000 DNC scrubs per month included
-                  </div>
-                  <div className="text-sm text-white/70 flex items-start mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Automatic opt-out detection. STOP and inferred opt-out language honored instantly</span>
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Built on TCPA-compliant infrastructure
-                  </div>
-                </div>
-              </div>
-
-              <button
-              onClick={() => {
-                const params = new URLSearchParams(window.location.search);
-                const ref = params.get('ref');
-                const aff = params.get('aff');
-                const qs = new URLSearchParams();
-                if (ref) qs.set('ref', ref);
-                if (aff) qs.set('aff', aff);
-                const suffix = qs.toString() ? `?${qs.toString()}` : '';
-                window.location.href = `/subscribe/growth${suffix}`;
-              }}
-              className="w-full gradient-bg text-white px-6 py-3 rounded-xl hover:gradient-bg-600 transition-colors font-semibold cursor-pointer"
-            >
-              Try Risk-Free
-            </button>
-              </div>
-            </div>
-
-            {/* Scale */}
-            <div className="relative overflow-hidden bg-card-bg rounded-2xl border-2 border-white/[0.08] p-8 text-center hover-lift">
-              <span className="absolute top-[24px] right-[-46px] w-[160px] rotate-45 bg-emerald-600/90 text-white/95 text-[10px] font-medium tracking-wide uppercase text-center py-1 z-10 pointer-events-none">
-                DNC Protected
-              </span>
-              <h3 className="text-xl font-bold text-white mb-2">Scale</h3>
-              <div className="text-4xl font-bold text-white mb-4">
-                $2,497<span className="text-lg text-white/50">/month</span>
-              </div>
-              <p className="text-white/60 mb-6">Full-featured plan for enterprises scaling AI-powered sales operations</p>
-
-              <div className="bg-card-bg/5 rounded-lg p-4 mb-6 border border-white/[0.08]/20">
-                <div className="text-sm font-semibold text-white">What you get:</div>
-                <div className="text-sm text-white/70 mt-1">Advanced learning AI with 1000 conversation memory</div>
-                <div className="text-xs text-white mt-1">Maximum intelligence for complex sales</div>
-              </div>
-
-              <div className="text-left space-y-4 mb-8">
-                <div className="border-b border-white/[0.08] pb-3">
-                  <div className="text-sm font-semibold text-white mb-2">Monthly Limits:</div>
-                  <div className="text-sm text-white/70 flex items-center">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    40,000 SMS messages per month
-                  </div>
-                  <div className="text-xs text-white/50 mt-1 ml-6">Each conversation uses ~4–8 messages (your outbound + lead replies combined)</div>
-
-                  <div className="text-sm text-white/70 flex items-center mt-2">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    2,000 web chat conversations per month
-                  </div>
-                  <div className="text-xs text-white/50 mt-1 ml-6">Infinity qualifies inbound visitors on your website 24/7</div>
-
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    15+ team member accounts
-                  </div>
-                </div>
-
-                <div className="border-b border-white/[0.08] pb-3">
-                  <div className="text-sm font-semibold text-white mb-2">AI Capabilities:</div>
-                  <div className="text-sm text-white/70 flex items-center">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Everything in Growth, plus:
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    SurFox AI learns from 1000 conversations
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Unlimited knowledge base uploads
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Message A/B testing
-                  </div>
-                </div>
-
-                <div className="border-b border-white/[0.08] pb-3">
-                  <div className="text-sm font-semibold text-white mb-2">Support & Onboarding:</div>
-                  <div className="text-sm text-white/70 flex items-center">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    White-glove onboarding
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Dedicated success manager
-                  </div>
-                </div>
-
-                <div>
-                  <div className="text-sm font-semibold text-white mb-2">Compliance & Protection:</div>
-                  <div className="text-sm text-white/70 flex items-center">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    25,000 DNC scrubs per month included
-                  </div>
-                  <div className="text-sm text-white/70 flex items-start mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0 mt-0.5" />
-                    <span>Automatic opt-out detection. STOP and inferred opt-out language honored instantly</span>
-                  </div>
-                  <div className="text-sm text-white/70 flex items-center mt-1">
-                    <Check className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                    Built on TCPA-compliant infrastructure
-                  </div>
-                </div>
-              </div>
-
-              <button
-                onClick={() => {
-                  const params = new URLSearchParams(window.location.search);
-                  const ref = params.get('ref');
-                  const aff = params.get('aff');
-                  const qs = new URLSearchParams();
-                  if (ref) qs.set('ref', ref);
-                  if (aff) qs.set('aff', aff);
-                  const suffix = qs.toString() ? `?${qs.toString()}` : '';
-                  window.location.href = `/subscribe/scale${suffix}`;
-                }}
-                className="w-full bg-blue-500/20 text-white px-6 py-3 rounded-xl hover:bg-white/[0.08] transition-colors font-semibold cursor-pointer"
-              >
-                Try Risk-Free
-              </button>
-            </div>
+            ))}
           </div>
 
-          <p className="text-center text-xs text-white/40 mb-20 max-w-2xl mx-auto">
-            DNC scrubbing is available on paid plans only and is not included during the 14-day free trial.
+          <p className="price-note">
+            14-day free trial on every plan · Pre-approved Twilio A2P so you can text within minutes
           </p>
+          <p
+            className="price-note"
+            style={{ marginTop: 8, textTransform: 'none', letterSpacing: 0 }}
+          >
+            DNC scrubbing is available on paid plans only and is not included during the 14-day free
+            trial.
+          </p>
+        </div>
+      </section>
 
-          {/* Cost Transparency Section */}
-          <div className="max-w-4xl mx-auto mb-20">
-            <div className="bg-background rounded-2xl border border-white/[0.08] p-8">
-              <h2 className="text-3xl font-bold text-white mb-6">What Your Investment Covers</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Infrastructure & AI Processing</h3>
-                  <ul className="space-y-2 text-sm text-white/70">
-                    <li>• Advanced AI model hosting and processing</li>
-                    <li>• Secure cloud infrastructure and data storage</li>
-                    <li>• SMS/communication platform costs</li>
-                    <li>• 99.9% uptime monitoring and maintenance</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Development & Support</h3>
-                  <ul className="space-y-2 text-sm text-white/70">
-                    <li>• Ongoing AI model improvements</li>
-                    <li>• Customer support and onboarding</li>
-                    <li>• Security updates and compliance</li>
-                    <li>• Platform development and new features</li>
-                  </ul>
-                </div>
+      {/* What your investment covers */}
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap" style={{ maxWidth: 900 }}>
+          <div className="panel">
+            <h2>What your investment covers</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-7">
+              <div>
+                <h3>Infrastructure & AI</h3>
+                <ul>
+                  <li>Advanced AI model hosting and processing</li>
+                  <li>Secure cloud infrastructure and data storage</li>
+                  <li>SMS and communication platform costs</li>
+                  <li>99.9% uptime monitoring and maintenance</li>
+                </ul>
               </div>
-              <div className="mt-6 p-4 bg-card-bg rounded-lg border border-white/[0.08]">
-                <p className="text-sm text-white/70">
-                  <strong className="text-white">Honest pricing:</strong> We price based on actual AI processing costs and value delivered, not arbitrary markup.
-                  Higher tiers cost more because the learning AI requires significantly more computational resources.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* FAQ Section */}
-          <div className="max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl font-bold text-white mb-8 text-center">Pricing Questions & Answers</h2>
-            <div className="space-y-4">
-              <div className="bg-card-bg rounded-xl border border-white/[0.08] p-6 hover-lift">
-                <h3 className="text-lg font-semibold text-white mb-3">What happens if I exceed my prospect limit?</h3>
-                <p className="text-white/70">Additional prospects are $0.20 each. We will email you when you are approaching your limit. No surprise charges - you approve any overages first.</p>
-              </div>
-
-              <div className="bg-card-bg rounded-xl border border-white/[0.08] p-6 hover-lift">
-                <h3 className="text-lg font-semibold text-white mb-3">How is this different from text blasting tools?</h3>
-                <p className="text-white/70">Text blasters send identical messages to thousands of people. SurFox AI has unique conversations with each prospect, reads their psychology, and only escalates genuinely interested buyers. You get fewer calls, but they are all worth taking.</p>
-              </div>
-
-              <div className="bg-card-bg rounded-xl border border-white/[0.08] p-6 hover-lift">
-                <h3 className="text-lg font-semibold text-white mb-3">When will I see my first qualified prospect?</h3>
-                <p className="text-white/70">Most customers receive their first qualified prospect within 7-14 days, depending on your industry and the quality of your prospect list. Real estate and B2B services typically see faster results.</p>
-              </div>
-
-              <div className="bg-card-bg rounded-xl border border-white/[0.08] p-6 hover-lift">
-                <h3 className="text-lg font-semibold text-white mb-3">Can I cancel anytime?</h3>
-                <p className="text-white/70">Yes, cancel anytime with 24 hours notice. No contracts, no cancellation fees. SurFox AI will finish any active conversations, then stop processing new prospects.</p>
-              </div>
-
-              <div className="bg-card-bg rounded-xl border border-white/[0.08] p-6 hover-lift">
-                <h3 className="text-lg font-semibold text-white mb-3">Do you offer annual discounts?</h3>
-                <p className="text-white/70">We are focused on monthly pricing while we are early stage. Annual options may be available in the future after we have proven consistent value delivery.</p>
+              <div>
+                <h3>Product & support</h3>
+                <ul>
+                  <li>Ongoing AI model improvements</li>
+                  <li>Customer support and onboarding</li>
+                  <li>Security updates and compliance</li>
+                  <li>New features and platform development</li>
+                </ul>
               </div>
             </div>
+            <div className="note">
+              <b>Honest pricing.</b> We price on the actual cost of running the AI and the value it
+              delivers, not arbitrary markup. Higher tiers cost more because the learning AI uses
+              meaningfully more compute.
+            </div>
           </div>
+        </div>
+      </section>
 
-          {/* Contact Section */}
-          <div className="text-center bg-background rounded-2xl p-10 border border-white/[0.08]">
-            <h3 className="text-3xl font-bold text-white mb-4">Questions About Pricing?</h3>
-            <p className="text-white/70 mb-6 text-lg">Talk directly with our founder about which plan fits your needs.</p>
-            <a
-              href="mailto:tom@getsurfox.com"
-              className="inline-flex items-center px-8 py-4 gradient-bg text-white rounded-xl font-semibold hover:gradient-bg-600 transition-all shadow-sm shadow-blue-500/5 shadow-blue-500/5 cursor-pointer"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Email Tom Directly
+      {/* FAQ */}
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap" style={{ maxWidth: 760 }}>
+          <div className="sec-head">
+            <span className="eyebrow">Pricing FAQ</span>
+            <h2 className="disp">Questions, answered.</h2>
+          </div>
+          <div className="faq-list">
+            {faqs.map((faq, i) => {
+              const isOpen = openFaq === i;
+              return (
+                <div className={`faq-item${isOpen ? ' open' : ''}`} key={faq.q}>
+                  <button
+                    type="button"
+                    className="faq-q"
+                    aria-expanded={isOpen}
+                    onClick={() => setOpenFaq(isOpen ? null : i)}
+                  >
+                    <span>{faq.q}</span>
+                    <ChevronDown />
+                  </button>
+                  {isOpen && <div className="faq-a">{faq.a}</div>}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap" style={{ maxWidth: 760 }}>
+          <div className="contact-cta">
+            <h2 className="disp">Questions about pricing?</h2>
+            <p>Talk to our team about which plan fits your list.</p>
+            <a className="btn btn-ink" href="mailto:sales@getsurfox.com">
+              <Mail size={17} /> Email our sales team
             </a>
           </div>
         </div>
-      </div>
-    </>
-  )
+      </section>
+    </div>
+  );
 }

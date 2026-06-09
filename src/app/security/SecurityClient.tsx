@@ -14,14 +14,14 @@ export default function SecurityCompliance() {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
 
   return (
-    <div ref={containerRef} className="bg-card-bg text-white">
+    <div ref={containerRef} className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Hero Section */}
       <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 flex justify-center relative overflow-hidden">
         {/* Subtle animated background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 gradient-bg/5 rounded-full blur-3xl animate-shield" />
-          <div className="absolute bottom-20 right-10 w-80 h-80 gradient-bg/5 rounded-full blur-3xl animate-shield" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-20 left-10 w-64 h-64 bg-[#F0F8F9] rounded-full blur-3xl animate-shield" />
+          <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#F0F8F9] rounded-full blur-3xl animate-shield" style={{ animationDelay: '2s' }} />
         </div>
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
@@ -30,12 +30,12 @@ export default function SecurityCompliance() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h1 className="text-4xl font-bold text-white mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <h1 className="text-4xl font-bold text-[#13171F] mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
               Security Built into<br className="hidden sm:block" />
               <span className="sm:inline"> </span>Every Layer
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
               Enterprise-grade protection designed for the most sensitive human interaction data. Built for compliance, architected for trust.
             </p>
           </motion.div>
@@ -43,7 +43,7 @@ export default function SecurityCompliance() {
       </section>
 
       {/* Security Framework */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -52,10 +52,10 @@ export default function SecurityCompliance() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Security Framework
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               Multi-layered protection across infrastructure, application, and data
             </p>
           </motion.div>
@@ -87,20 +87,20 @@ export default function SecurityCompliance() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-6 sm:p-8 rounded-2xl border border-white/[0.08] bg-card-bg hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 transition-all duration-300"
+                className="p-6 sm:p-8 rounded-2xl border border-[#E4E6E2] bg-white hover:border-[#E4E6E2]/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 transition-all duration-300"
               >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
-                  <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-blue-400" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center mb-5">
+                  <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-[#0A7C8C]" />
                 </div>
                 
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">{item.title}</h3>
-                <p className="text-white/60 leading-relaxed mb-4">{item.desc}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-[#13171F] mb-3">{item.title}</h3>
+                <p className="text-[#5A626E] leading-relaxed mb-4">{item.desc}</p>
                 
                 <div className="space-y-2">
                   {item.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                      <span className="text-sm text-white/60">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-[#0A7C8C] flex-shrink-0" />
+                      <span className="text-sm text-[#5A626E]">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -111,7 +111,7 @@ export default function SecurityCompliance() {
       </section>
 
       {/* Compliance Standards */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -119,10 +119,10 @@ export default function SecurityCompliance() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Compliance Standards
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               Architected to meet enterprise security and privacy requirements
             </p>
           </motion.div>
@@ -168,26 +168,26 @@ export default function SecurityCompliance() {
                 onMouseLeave={() => setHoveredItem(null)}
                 className={`
                   p-8 sm:p-10 rounded-2xl border-2 transition-all duration-300 cursor-pointer
-                  ${hoveredItem === i 
-                    ? 'border-orange bg-gradient-to-br ' + item.gradient + ' shadow-sm shadow-blue-500/5 shadow-blue-500/5 scale-[1.02]' 
-                    : 'border-white/[0.08] bg-card-bg hover:border-white/[0.1]'
+                  ${hoveredItem === i
+                    ? 'border-[#dCEEF1] bg-[#F0F8F9] shadow-sm scale-[1.02]'
+                    : 'border-[#E4E6E2] bg-white hover:border-[#dCEEF1]'
                   }
                 `}
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className={`
                     w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center transition-all duration-300
-                    ${hoveredItem === i ? 'gradient-bg' : 'glass-card border border-blue-500/20'}
+                    ${hoveredItem === i ? 'gradient-bg' : 'bg-[#EAF7F9] border border-[#dCEEF1]'}
                   `}>
-                    <item.icon className={`w-6 h-6 sm:w-7 sm:h-7 ${hoveredItem === i ? 'text-white' : 'text-blue-400'}`} />
+                    <item.icon className={`w-6 h-6 sm:w-7 sm:h-7 ${hoveredItem === i ? 'text-[#13171F]' : 'text-[#0A7C8C]'}`} />
                   </div>
                   
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-xl sm:text-2xl font-semibold text-white">{item.title}</h3>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-[#13171F]">{item.title}</h3>
                       <span className={`
                         text-xs font-semibold px-2 py-1 rounded
-                        ${item.status === 'Active' ? 'bg-green-100 text-green-700' : 'glass-card border border-blue-500/20 text-blue-400'}
+                        ${item.status === 'Active' ? 'bg-green-100 text-green-700' : 'bg-[#EAF7F9] border border-[#dCEEF1] text-[#0A7C8C]'}
                       `}>
                         {item.status}
                       </span>
@@ -195,7 +195,7 @@ export default function SecurityCompliance() {
                   </div>
                 </div>
                 
-                <p className="text-white/60 leading-relaxed">{item.desc}</p>
+                <p className="text-[#5A626E] leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -203,7 +203,7 @@ export default function SecurityCompliance() {
       </section>
 
       {/* Infrastructure Security */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -211,13 +211,13 @@ export default function SecurityCompliance() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <div className="inline-block px-4 py-2 rounded-full bg-card-bg/5 border border-white/[0.08]/20 mb-6">
-              <span className="text-sm font-semibold text-white">INFRASTRUCTURE</span>
+            <div className="inline-block px-4 py-2 rounded-full bg-[#F4F5F3] border border-[#E4E6E2]/20 mb-6">
+              <span className="text-sm font-semibold text-[#13171F]">INFRASTRUCTURE</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Built on Trusted Infrastructure
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               Enterprise-grade cloud infrastructure with proven security credentials
             </p>
           </motion.div>
@@ -255,20 +255,20 @@ export default function SecurityCompliance() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="p-6 sm:p-8 rounded-2xl border border-white/[0.08] bg-card-bg hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 transition-all duration-300"
+                className="p-6 sm:p-8 rounded-2xl border border-[#E4E6E2] bg-white hover:border-[#E4E6E2]/30 hover:shadow-sm shadow-blue-500/5 shadow-blue-500/5 transition-all duration-300"
               >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl glass-card border border-blue-500/20 flex items-center justify-center mb-5">
-                  <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-blue-400" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center mb-5">
+                  <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-[#0A7C8C]" />
                 </div>
                 
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">{item.title}</h3>
-                <p className="text-white/60 leading-relaxed mb-4">{item.desc}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-[#13171F] mb-3">{item.title}</h3>
+                <p className="text-[#5A626E] leading-relaxed mb-4">{item.desc}</p>
                 
                 <div className="space-y-2">
                   {item.details.map((detail, idx) => (
                     <div key={idx} className="flex items-center gap-2">
                       <div className="w-1.5 h-1.5 rounded-full gradient-bg" />
-                      <span className="text-sm text-white/60">{detail}</span>
+                      <span className="text-sm text-[#5A626E]">{detail}</span>
                     </div>
                   ))}
                 </div>
@@ -279,7 +279,7 @@ export default function SecurityCompliance() {
       </section>
 
       {/* Security Practices */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -287,10 +287,10 @@ export default function SecurityCompliance() {
             viewport={{ once: true }}
             className="text-center mb-12 sm:mb-14 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-4 sm:mb-6 px-4">
               Security Practices
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
               Continuous improvement through testing, training, and transparency
             </p>
           </motion.div>
@@ -332,15 +332,15 @@ export default function SecurityCompliance() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-6 rounded-xl border border-white/[0.08] bg-card-bg hover:border-orange/30 hover:shadow-sm shadow-blue-500/5 transition-all duration-300"
+                className="p-6 rounded-xl border border-[#E4E6E2] bg-white hover:border-[#E4E6E2]/30 hover:shadow-sm shadow-blue-500/5 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full glass-card border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <CheckCircle className="w-4 h-4 text-blue-400" />
+                  <div className="w-6 h-6 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle className="w-4 h-4 text-[#0A7C8C]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{practice.title}</h3>
-                    <p className="text-white/60 leading-relaxed">{practice.desc}</p>
+                    <h3 className="text-lg font-semibold text-[#13171F] mb-2">{practice.title}</h3>
+                    <p className="text-[#5A626E] leading-relaxed">{practice.desc}</p>
                   </div>
                 </div>
               </motion.div>
@@ -350,22 +350,22 @@ export default function SecurityCompliance() {
       </section>
 
       {/* Closing Section */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 sm:mb-8 px-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6 sm:mb-8 px-4 leading-tight">
               Trust Through Transparency
             </h2>
             
-            <p className="text-lg sm:text-xl text-white/60 mb-8 sm:mb-10 leading-relaxed px-4 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-[#5A626E] mb-8 sm:mb-10 leading-relaxed px-4 max-w-3xl mx-auto">
               Security and compliance are foundational to the SurFox AI Platform. We are committed to maintaining the highest standards of data protection as we grow.
             </p>
 
-            <p className="text-base sm:text-lg font-semibold text-blue-400 mb-10 sm:mb-12 px-4">
+            <p className="text-base sm:text-lg font-semibold text-[#0A7C8C] mb-10 sm:mb-12 px-4">
               Questions about our security practices? Contact our security team.
             </p>
           </motion.div>

@@ -1,260 +1,214 @@
-'use client'
+'use client';
 
 /* =============================================================================
-   NAVBAR - Obsidian Intelligence Design System
-   Glassmorphism navigation with dark theme and gradient accents
+   NAV - Homepage redesign ("Thread")
+   Minimal light-mode SaaS nav: Logo | Product ▾ | Pricing | Company ▾ |
+   Sign in | Start free trial. Hover/focus dropdowns as white cards, one ink CTA.
    ============================================================================= */
 
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Menu, ChevronDown, Zap } from 'lucide-react'
-import { usePathname } from 'next/navigation'
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
-export default function Nav() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const pathname = usePathname()
+const productLinks = [
+  { label: 'For Staffing Firms', href: '/staffing' },
+  { label: 'For Real Estate', href: '/wholesalers' },
+  // Home Services lands here once that page exists.
+];
 
-  // Determine product name based on route
-  const getProductName = () => {
-    if (pathname.startsWith('/engage')) return 'Engage'
-    if (pathname.startsWith('/pulse')) return 'Pulse'
-    if (pathname.startsWith('/insights')) return 'Insights'
-    if (pathname.startsWith('/orchestrate')) return 'Orchestrate'
-    return null
-  }
-  
-  const productName = getProductName()
+const companyLinks = [
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+];
 
-  // Scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
+function Dropdown({
+  label,
+  links,
+}: {
+  label: string;
+  links: { label: string; href: string }[];
+}) {
+  // Hover opens the menu; clicking an option (or leaving) closes it.
+  const [open, setOpen] = useState(false);
   return (
-    <nav
-      className={`fixed top-0 w-full z-40 transition-all duration-300 backdrop-blur-xl border-b ${
-        isScrolled
-          ? 'border-white/[0.08] shadow-sm shadow-blue-500/10'
-          : 'border-white/[0.06]'
-      }`}
-      style={{ backgroundColor: 'rgba(5, 8, 16, 0.95)' }}
+    <div
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group flex-shrink-0">
-            <Image
-              src="/newSurFoxLogo1.png"
-              alt="SurFox AI"
-              width={120}
-              height={32}
-              className="h-8 w-auto object-contain"
-              priority
-            />
-            {productName && (
-              <span className="ml-3 text-xs font-medium px-2 py-1 rounded-full glass-card border border-blue-500/20 text-blue-300">
-                {productName}
-              </span>
-            )}
-          </Link>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {/* SOLUTIONS Dropdown */}
-            <div className="relative group">
-              <div className="flex items-center space-x-1 text-white/70 hover:text-white transition-colors text-sm font-medium cursor-pointer group">
-                <span className="relative">
-                  Solutions
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 gradient-bg group-hover:w-full transition-all duration-300"></span>
-                </span>
-                <ChevronDown className="w-4 h-4" />
-              </div>
-              <div className="absolute left-0 mt-2 w-64 rounded-xl border border-white/[0.10] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl shadow-black/40" style={{ backgroundColor: '#0a0f1e' }}>
-                <Link href="/" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
-                  <div className="font-semibold">SurFox Engage</div>
-                  <div className="text-xs text-white/40 mt-1">AI for Sales Conversations</div>
-                </Link>
-                <Link href="/wholesalers" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
-                  <div className="font-semibold">Real Estate Wholesalers</div>
-                  <div className="text-xs text-white/40 mt-1">Work motivated seller replies</div>
-                </Link>
-                <Link href="/staffing" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
-                  <div className="font-semibold">Staffing Agencies</div>
-                  <div className="text-xs text-white/40 mt-1">Qualify applicants via SMS</div>
-                </Link>
-                <Link href="/events" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors">
-                  <div className="font-semibold">Webinars & Events</div>
-                  <div className="text-xs text-white/40 mt-1">Follow up with every registrant</div>
-                </Link>
-              </div>
-            </div>
-
-            {/* TECHNOLOGY Dropdown */}
-            <div className="relative group">
-              <div className="flex items-center space-x-1 text-white/70 hover:text-white transition-colors text-sm font-medium cursor-pointer group">
-                <span className="relative">
-                  Technology
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 gradient-bg group-hover:w-full transition-all duration-300"></span>
-                </span>
-                <ChevronDown className="w-4 h-4" />
-              </div>
-              <div className="absolute left-0 mt-2 w-64 rounded-xl border border-white/[0.10] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl shadow-black/40" style={{ backgroundColor: '#0a0f1e' }}>
-                <Link href="/platform" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
-                  Platform Overview
-                </Link>
-                <Link href="/integrations" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
-                  Integrations
-                </Link>
-                <Link href="/security" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors">
-                  Security & Compliance
-                </Link>
-              </div>
-            </div>
-
-            {/* COMPANY Dropdown */}
-            <div className="relative group">
-              <div className="flex items-center space-x-1 text-white/70 hover:text-white transition-colors text-sm font-medium cursor-pointer group">
-                <span className="relative">
-                  Company
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 gradient-bg group-hover:w-full transition-all duration-300"></span>
-                </span>
-                <ChevronDown className="w-4 h-4" />
-              </div>
-              <div className="absolute left-0 mt-2 w-56 rounded-xl border border-white/[0.10] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl shadow-black/40" style={{ backgroundColor: '#0a0f1e' }}>
-                <Link href="/about" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
-                  About SurFox AI
-                </Link>
-                <Link href="/leadership" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors">
-                  Leadership
-                </Link>
-              </div>
-            </div>
-
-            {/* LEARN Dropdown */}
-            <div className="relative group">
-              <div className="flex items-center space-x-1 text-white/70 hover:text-white transition-colors text-sm font-medium cursor-pointer group">
-                <span className="relative">
-                  Learn
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 gradient-bg group-hover:w-full transition-all duration-300"></span>
-                </span>
-                <ChevronDown className="w-4 h-4" />
-              </div>
-              <div className="absolute left-0 mt-2 w-64 rounded-xl border border-white/[0.10] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl shadow-black/40" style={{ backgroundColor: '#0a0f1e' }}>
-                <Link href="/blog" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
-                  Insights
-                </Link>
-                <Link href="/roi" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors border-b border-white/[0.06]">
-                  ROI Calculator
-                </Link>
-                <Link href="/ai-principles" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors">
-                  AI Principles
-                </Link>
-              </div>
-            </div>
-
-            {/* PRICING Link */}
-            <Link href="/pricing" className="text-white/70 hover:text-white transition-colors text-sm font-medium group">
-              <span className="relative">
-                Pricing
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 gradient-bg group-hover:w-full transition-all duration-300"></span>
-              </span>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
+          open ? 'text-[#13171F]' : 'text-[#5A626E] hover:text-[#13171F]'
+        }`}
+      >
+        {label}
+        <ChevronDown
+          className={`w-3.5 h-3.5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+        />
+      </button>
+      {/* pt-4 bridges the gap so the card stays open while moving the cursor onto it */}
+      <div
+        className={`absolute left-[-12px] top-full pt-4 transition-all duration-200 ${
+          open
+            ? 'opacity-100 visible translate-y-0'
+            : 'opacity-0 invisible -translate-y-1.5 pointer-events-none'
+        }`}
+      >
+        <div
+          className="min-w-[208px] bg-white border border-[#E4E6E2] rounded-xl p-[7px]"
+          style={{ boxShadow: '0 18px 40px -18px rgba(19,23,31,.22)' }}
+        >
+          {links.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              onClick={() => setOpen(false)}
+              className="block px-3 py-2.5 text-sm font-medium text-[#5A626E] rounded-lg hover:bg-[#F4F5F3] hover:text-[#13171F] transition-colors"
+            >
+              {l.label}
             </Link>
-
-            {/* CONTACT Dropdown */}
-            <div className="relative group">
-              <div className="flex items-center space-x-1 text-white/70 hover:text-white transition-colors text-sm font-medium cursor-pointer group">
-                <span className="relative">
-                  Contact
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 gradient-bg group-hover:w-full transition-all duration-300"></span>
-                </span>
-                <ChevronDown className="w-4 h-4" />
-              </div>
-              <div className="absolute left-0 mt-2 w-56 rounded-xl border border-white/[0.10] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl shadow-black/40" style={{ backgroundColor: '#0a0f1e' }}>
-                <Link href="/contact" className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-card-bg/[0.05] transition-colors">
-                  Get in Touch
-                </Link>
-              </div>
-            </div>
-
-            {/* Right Side Actions */}
-            <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-white/[0.06]">
-              <a href="https://surfox.ai" className="text-white/70 hover:text-white transition-colors text-sm font-medium">
-                Sign In
-              </a>
-              <Link href="/demo" className="px-4 py-2 rounded-lg border border-blue-400/40 text-white text-sm font-semibold hover:border-blue-400/80 hover:bg-blue-500/10 transition-colors">
-                Request Demo
-              </Link>
-              <a href="/pricing" className="px-4 py-2 rounded-lg gradient-bg text-white text-sm font-semibold hover:opacity-90 transition-opacity">
-                Get Started
-              </a>
-            </div>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white/70 hover:text-white transition-colors"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileMenuOpen}
-          >
-            <Menu className="w-6 h-6" />
-          </button>
+          ))}
         </div>
       </div>
+    </div>
+  );
+}
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden glass-card border-t border-white/[0.06] animate-fade-in">
-          <div className="px-4 py-6 max-h-[calc(100vh-4rem)] overflow-y-auto">
-            {/* Primary links */}
-            <div className="space-y-1">
-              <Link href="/platform" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Platform</Link>
-              <Link href="/wholesalers" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Wholesalers</Link>
-              <Link href="/staffing" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Staffing</Link>
-              <Link href="/integrations" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Integrations</Link>
-              <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Pricing</Link>
-              <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Blog</Link>
-              <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">About</Link>
-              <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block py-2.5 text-white/80 hover:text-white transition-colors font-medium">Contact</Link>
-            </div>
+export default function Nav() {
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-            {/* Actions */}
-            <div className="mt-4 pt-4 border-t border-white/[0.06] space-y-3">
-              <a href="https://surfox.ai" className="block text-white/70 hover:text-white transition-colors font-medium text-center py-2">
-                Sign In
-              </a>
-              <Link href="/demo" onClick={() => setMobileMenuOpen(false)} className="block border border-blue-400/40 text-white font-semibold text-center py-2 rounded-lg hover:border-blue-400/80 hover:bg-blue-500/10 transition-colors">
-                Request Demo
+  return (
+    <header
+      className="sticky top-0 z-50 border-b border-[#E4E6E2]"
+      style={{
+        backgroundColor: '#ffffff',
+        fontFamily: 'var(--font-ibm-plex-sans)',
+      }}
+    >
+      <div className="max-w-[1180px] mx-auto px-8 h-[68px] flex items-center gap-10">
+        <Link href="/" className="flex items-center flex-shrink-0">
+          <Image
+            src="/newSurFoxLogo1.png"
+            alt="SurFox AI"
+            width={140}
+            height={34}
+            className="h-[34px] w-auto object-contain"
+            priority
+          />
+        </Link>
+
+        {/* Desktop links */}
+        <nav className="hidden md:flex items-center gap-[30px]">
+          <Dropdown label="Product" links={productLinks} />
+          <Link
+            href="/pricing"
+            className="text-sm font-medium text-[#5A626E] hover:text-[#13171F] transition-colors"
+          >
+            Pricing
+          </Link>
+          <Link
+            href="/demo"
+            className="text-sm font-medium text-[#5A626E] hover:text-[#13171F] transition-colors"
+          >
+            Demo
+          </Link>
+          <Dropdown label="Company" links={companyLinks} />
+        </nav>
+
+        {/* Desktop right side */}
+        <div className="hidden md:flex items-center gap-[22px] ml-auto">
+          <a
+            href="https://surfox.ai"
+            className="text-sm font-medium text-[#5A626E] hover:text-[#13171F] transition-colors"
+          >
+            Sign in
+          </a>
+          <Link
+            href="/#pricing"
+            className="inline-flex items-center rounded-[9px] bg-[#13171F] text-white text-sm font-semibold px-5 py-[11px] hover:bg-black transition-colors"
+          >
+            Start free trial
+          </Link>
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          type="button"
+          className="md:hidden ml-auto text-[#13171F]"
+          onClick={() => setMobileOpen((v) => !v)}
+          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={mobileOpen}
+        >
+          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div
+          className="md:hidden border-t border-[#E4E6E2] bg-[#F4F5F3]"
+          style={{ fontFamily: 'var(--font-ibm-plex-sans)' }}
+        >
+          <div className="px-8 py-6 flex flex-col gap-1">
+            <p className="text-[11px] font-medium uppercase tracking-[.12em] text-[#8A92A0] mt-2 mb-1">
+              Product
+            </p>
+            {productLinks.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={() => setMobileOpen(false)}
+                className="py-2 text-sm font-medium text-[#5A626E] hover:text-[#13171F]"
+              >
+                {l.label}
               </Link>
-              <a href="/pricing" className="block gradient-bg text-white font-semibold text-center py-2 rounded-lg hover:opacity-90 transition-opacity">
-                Get Started
+            ))}
+            <Link
+              href="/pricing"
+              onClick={() => setMobileOpen(false)}
+              className="py-2 text-sm font-medium text-[#5A626E] hover:text-[#13171F]"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/demo"
+              onClick={() => setMobileOpen(false)}
+              className="py-2 text-sm font-medium text-[#5A626E] hover:text-[#13171F]"
+            >
+              Demo
+            </Link>
+            <p className="text-[11px] font-medium uppercase tracking-[.12em] text-[#8A92A0] mt-3 mb-1">
+              Company
+            </p>
+            {companyLinks.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={() => setMobileOpen(false)}
+                className="py-2 text-sm font-medium text-[#5A626E] hover:text-[#13171F]"
+              >
+                {l.label}
+              </Link>
+            ))}
+            <div className="flex items-center gap-4 mt-4 pt-4 border-t border-[#E4E6E2]">
+              <a href="https://surfox.ai" className="text-sm font-medium text-[#5A626E]">
+                Sign in
               </a>
+              <Link
+                href="/#pricing"
+                onClick={() => setMobileOpen(false)}
+                className="inline-flex items-center rounded-[9px] bg-[#13171F] text-white text-sm font-semibold px-5 py-[11px]"
+              >
+                Start free trial
+              </Link>
             </div>
           </div>
         </div>
       )}
-
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.2s ease-out;
-        }
-      `}</style>
-    </nav>
-  )
+    </header>
+  );
 }

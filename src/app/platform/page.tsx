@@ -58,23 +58,23 @@ const whatComesNextItems = [
 
 export default function Page() {
   return (
-    <div className="bg-background text-white">
+    <div className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Hero - The Problem */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
+      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-24 sm:py-28 md:py-36">
         <div className="max-w-4xl mx-auto text-center">
           <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight" style={{ fontFamily: 'var(--font-sora)' }}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#13171F] mb-8 leading-[1.05] tracking-tight">
               Your customers are{' '}<br className="hidden sm:block" />
               telling you everything.{' '}<br className="hidden sm:block" />
-              <span className="text-white/50">Most of it is lost.</span>
+              <span className="text-[#8A92A0]">Most of it is lost.</span>
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-white/60 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-10 max-w-3xl mx-auto leading-relaxed">
               Calls. Texts. Transactions. Reviews. Support tickets. Bookings. The signals are everywhere - but they live in silos, and no one connects them.
             </p>
 
-            <p className="text-lg sm:text-xl text-white font-medium">
+            <p className="text-lg sm:text-xl text-[#13171F] font-medium">
               SurFox AI is the AI layer that listens to all of it - and knows what to do next.
             </p>
           </div>
@@ -82,67 +82,67 @@ export default function Page() {
       </section>
 
       {/* Two Sides of SurFox AI */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6" style={{ fontFamily: 'var(--font-sora)' }}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6">
               Two sides. One platform.
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed">
               SurFox AI is being built to handle both directions of customer intelligence.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Signals In */}
-            <div className="p-8 sm:p-10 rounded-2xl border-2 border-white/[0.08] bg-card-bg">
-              <div className="w-14 h-14 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6">
-                <ArrowDownLeft className="w-7 h-7 text-blue-400" />
+            <div className="p-8 sm:p-10 rounded-[22px] border border-[#E4E6E2] bg-white shadow-[0_30px_64px_-38px_rgba(19,23,31,0.24)]">
+              <div className="w-14 h-14 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center mb-6">
+                <ArrowDownLeft className="w-7 h-7 text-[#0A7C8C]" />
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'var(--font-sora)' }}>Signals In</h3>
+              <h3 className="text-2xl sm:text-3xl font-semibold text-[#13171F] mb-4">Signals In</h3>
 
-              <p className="text-white/60 leading-relaxed mb-6">
+              <p className="text-[#5A626E] leading-relaxed mb-6">
                 Every customer interaction flowing into one intelligence layer. SurFox AI ingests, understands, and learns from all of it.
               </p>
 
               <div className="grid grid-cols-2 gap-3 mb-6">
                 {signalsInItems.map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 text-sm text-white/50">
+                  <div key={i} className="flex items-center gap-2 text-sm text-[#8A92A0]">
                     <item.icon className="w-4 h-4" />
                     <span>{item.label}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="pt-4 border-t border-white/[0.06]">
-                <span className="text-sm font-medium text-white/40">Coming as the platform matures</span>
+              <div className="pt-4 border-t border-[#EDEEEB]">
+                <span className="text-sm font-medium text-[#8A92A0]">Coming as the platform matures</span>
               </div>
             </div>
 
             {/* Actions Out */}
-            <div className="p-8 sm:p-10 rounded-2xl border-2 border-white/[0.08] bg-card-bg">
-              <div className="w-14 h-14 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center mb-6">
-                <ArrowUpRight className="w-7 h-7 text-violet-400" />
+            <div className="p-8 sm:p-10 rounded-[22px] border border-[#E4E6E2] bg-white shadow-[0_30px_64px_-38px_rgba(19,23,31,0.24)]">
+              <div className="w-14 h-14 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center mb-6">
+                <ArrowUpRight className="w-7 h-7 text-[#0A7C8C]" />
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'var(--font-sora)' }}>Actions Out</h3>
+              <h3 className="text-2xl sm:text-3xl font-semibold text-[#13171F] mb-4">Actions Out</h3>
 
-              <p className="text-white/60 leading-relaxed mb-6">
+              <p className="text-[#5A626E] leading-relaxed mb-6">
                 AI-initiated outreach, follow-ups, and automations - triggered by what SurFox AI learns. The system doesn't just listen. It acts.
               </p>
 
               <div className="space-y-3 mb-6">
                 {actionsOutItems.map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 text-sm text-white/70">
-                    <CheckCircle className="w-4 h-4 text-blue-400" />
+                  <div key={i} className="flex items-center gap-2 text-sm text-[#5A626E]">
+                    <CheckCircle className="w-4 h-4 text-[#0A7C8C]" />
                     <span>{item}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="pt-4 border-t border-white/[0.06]">
-                <span className="text-sm font-semibold text-blue-400">This is where we start - live now</span>
+              <div className="pt-4 border-t border-[#EDEEEB]">
+                <span className="text-sm font-semibold text-[#0A7C8C]">This is where we start - live now</span>
               </div>
             </div>
           </div>
@@ -150,18 +150,18 @@ export default function Page() {
       </section>
 
       {/* The Engine: Infinity */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white border-y border-[#E4E6E2]">
         <div className="max-w-4xl mx-auto text-center">
           <div>
-            <div className="inline-block px-4 py-2 rounded-full glass-card border border-blue-500/20 border border-orange/20 mb-6">
-              <span className="text-sm font-semibold text-blue-400">THE ENGINE</span>
+            <div className="inline-block px-4 py-2 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] mb-6">
+              <span className="text-xs font-medium tracking-[0.18em] text-[#0A7C8C]" style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}>THE ENGINE</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#13171F] mb-6">
               Powered by SurFox Infinity
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed">
               Infinity is the AI brain underneath everything. It ingests interaction data, learns patterns within your environment, predicts outcomes, and decides what actions to take. Both sides of the platform - signals in, actions out - run on this single foundation.
             </p>
           </div>
@@ -169,32 +169,32 @@ export default function Page() {
       </section>
 
       {/* Where We Are Today */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-background">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#13171F] mb-6">
               Where we are today
             </h2>
           </div>
 
-          <div className="p-8 sm:p-10 rounded-2xl border-2 border-orange bg-card-bg shadow-sm shadow-blue-500/5 shadow-blue-500/5">
+          <div className="p-8 sm:p-10 rounded-[22px] border border-[#0FB6C9] bg-white shadow-[0_26px_54px_-32px_rgba(15,182,201,0.5)]">
             <div className="flex items-center gap-3 mb-4">
-              <div className="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+              <div className="px-3 py-1 rounded-full bg-[#E9F8EF] text-[#0c7a3c] text-xs font-semibold">
                 LIVE NOW
               </div>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-[#13171F] mb-4">
               AI-powered SMS lead qualification
             </h3>
 
-            <p className="text-white/60 leading-relaxed mb-6">
+            <p className="text-[#5A626E] leading-relaxed mb-6">
               Upload cold leads. SurFox AI reaches out via SMS, has personalized conversations, scores and qualifies each one. Your sales team only talks to prospects who are ready. This is Actions Out in its first form - proving that Infinity can understand conversations, track intent, and take intelligent action.
             </p>
 
             <a
               href="/pricing"
-              className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:underline"
+              className="inline-flex items-center gap-2 text-[#0A7C8C] font-semibold hover:underline"
             >
               Get started today
               <ArrowRight className="w-4 h-4" />
@@ -204,13 +204,13 @@ export default function Page() {
       </section>
 
       {/* What Comes Next */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white border-y border-[#E4E6E2]">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#13171F] mb-6">
               What comes next
             </h2>
-            <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed">
               We're building this one layer at a time. Here's the progression.
             </p>
           </div>
@@ -219,14 +219,14 @@ export default function Page() {
             {whatComesNextItems.map((item) => (
               <div
                 key={item.step}
-                className="flex items-start gap-6 p-6 rounded-xl bg-background border border-white/[0.08]"
+                className="flex items-start gap-6 p-6 rounded-[16px] bg-[#F4F5F3] border border-[#E4E6E2]"
               >
-                <div className="w-10 h-10 rounded-full gradient-bg text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-[#13171F] text-white flex items-center justify-center font-bold flex-shrink-0">
                   {item.step}
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-white/60 leading-relaxed">
+                  <h3 className="text-lg font-semibold text-[#13171F] mb-2">{item.title}</h3>
+                  <p className="text-[#5A626E] leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -237,22 +237,22 @@ export default function Page() {
       </section>
 
       {/* The 20-Year View */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg text-white">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-4xl mx-auto text-center">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-8">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#13171F] mb-8">
               The long-term vision
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/30 leading-relaxed mb-6">
+            <p className="text-lg sm:text-xl text-[#8A92A0] leading-relaxed mb-6">
               When you log into SurFox AI in the future, you won't see a "lead qualification tool." You'll see your business's entire customer intelligence layer.
             </p>
 
-            <p className="text-lg sm:text-xl text-white/30 leading-relaxed mb-6">
+            <p className="text-lg sm:text-xl text-[#8A92A0] leading-relaxed mb-6">
               Every interaction flowing in. Predictions surfacing before you ask. Automations running in the background. A unified view of every customer - not just leads, everyone.
             </p>
 
-            <p className="text-lg sm:text-xl text-white font-medium">
+            <p className="text-lg sm:text-xl text-[#13171F] font-medium">
               That's the operating system for how your business understands and responds to humans.
             </p>
           </div>
@@ -263,21 +263,21 @@ export default function Page() {
       <PlatformClient />
 
       {/* CTA */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-card-bg">
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white border-t border-[#E4E6E2]">
         <div className="max-w-4xl mx-auto text-center">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#13171F] mb-6">
               Start with what's live today.
             </h2>
 
-            <p className="text-lg text-white/60 mb-10 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-[#5A626E] mb-10 leading-relaxed max-w-2xl mx-auto">
               AI-powered lead qualification is ready now. Your team only talks to hot prospects. That's Actions Out in its first form - and the foundation for everything that comes next.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="/pricing"
-                className="px-8 py-4 rounded-lg gradient-bg text-white font-semibold hover:gradient-bg-600 transition inline-flex items-center gap-2"
+                className="px-7 py-3.5 rounded-[9px] bg-[#13171F] text-white font-semibold hover:bg-black transition inline-flex items-center gap-2"
               >
                 Get Started
                 <ArrowRight className="w-5 h-5" />
@@ -285,7 +285,7 @@ export default function Page() {
 
               <a
                 href="/contact"
-                className="px-8 py-4 rounded-lg border-2 border-white/[0.1] text-white font-semibold hover:border-white/[0.12] hover:bg-background transition"
+                className="px-7 py-3.5 rounded-[9px] border border-[#E4E6E2] bg-white text-[#13171F] font-semibold hover:border-[#c9cdc7] transition"
               >
                 Talk to Us
               </a>
