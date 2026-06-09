@@ -93,16 +93,16 @@
   gap: 48px;
   align-items: center;
 }
-.sfx .hero-copy { max-width: 540px; }
+.sfx .hero-copy { max-width: 540px; min-width: 0; }
 .sfx .hero .eyebrow { display: inline-block; margin-bottom: 20px; }
 .sfx .hero h1 { font-size: 52px; font-weight: 600; margin: 0 0 20px; line-height: 1.04; }
 .sfx .hero h1 em { font-style: normal; color: var(--cyan-deep); }
 .sfx .hero .lede { font-size: 19px; color: var(--muted); max-width: 470px; margin: 0 0 30px; }
 .sfx .hero-cta { display: flex; gap: 14px; justify-content: flex-start; }
-.sfx .hero-phone { display: flex; justify-content: center; }
+.sfx .hero-phone { display: flex; justify-content: center; min-width: 0; }
 
 /* ---------- PHONE ---------- */
-.sfx .convo-wrap { position: relative; max-width: 420px; margin: 0 auto; }
+.sfx .convo-wrap { position: relative; width: 100%; max-width: 420px; margin: 0 auto; }
 /* Mascot peeking from behind the phone: lower z-index than the phone, face pokes
    out the right edge. Hidden on small screens. */
 .sfx .fox-peek {
@@ -118,8 +118,8 @@
 .sfx .phone {
   position: relative;
   z-index: 1;
-  width: 392px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 392px;
   margin: 0 auto;
   background: #0e1320;
   border-radius: 52px;
