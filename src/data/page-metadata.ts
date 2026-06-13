@@ -112,9 +112,9 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/home-services',
   },
   events: {
-    title: 'AI SMS Follow-up for Webinars and Events | SurFox AI',
-    description: 'SurFox AI follows up with every registrant the moment your event ends. Attendees who did not convert, no-shows, replay viewers. Every lead worked automatically while the event is still fresh.',
-    keywords: ['webinar follow-up automation', 'event lead follow-up', 'AI SMS for webinars', 'no-show follow-up', 'event marketing automation', 'SurFox AI events', 'trade show lead follow-up'],
+    title: 'AI SMS Follow-up for Events & Entertainment | SurFox AI',
+    description: 'SurFox AI follows up with every event attendee and no-show automatically via SMS. Work your badge scans before you leave the venue. Built for trade shows, conferences, and product launches.',
+    keywords: ['event lead follow-up', 'trade show lead follow-up', 'badge scan follow-up', 'no-show follow-up', 'event marketing automation', 'AI SMS for events', 'SurFox AI events'],
     path: '/events',
   },
   'ai-principles': {
