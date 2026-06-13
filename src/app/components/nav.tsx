@@ -12,9 +12,11 @@ import Image from 'next/image';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 const productLinks = [
-  { label: 'For Staffing Firms', href: '/staffing' },
-  { label: 'For Real Estate', href: '/wholesalers' },
-  // Home Services lands here once that page exists.
+  { label: 'Staffing Agencies', href: '/staffing' },
+  { label: 'Real Estate Wholesalers', href: '/wholesalers' },
+  { label: 'Home Services', href: '/home-services' },
+  { label: 'Event & Entertainment', href: '/events' },
+  { label: 'All Industries →', href: '/industries' },
 ];
 
 const companyLinks = [

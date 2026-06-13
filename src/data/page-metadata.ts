@@ -105,6 +105,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['real estate wholesaler SMS', 'motivated seller lead qualification', 'wholesale SMS automation', 'AI SMS wholesaler', 'SurFox AI wholesalers', 'SmarterContact alternative'],
     path: '/wholesalers',
   },
+  'home-services': {
+    title: 'AI SMS Lead Follow-Up for Home Services | SurFox AI',
+    description: 'SurFox AI responds to new home services leads instantly and reactivates your cold list automatically. Win the job by responding first. Built for HVAC, roofing, plumbing, and more.',
+    keywords: ['home services lead follow-up', 'HVAC lead automation', 'roofing SMS automation', 'contractor lead qualification', 'speed to lead home services', 'AI SMS contractors', 'SurFox AI home services'],
+    path: '/home-services',
+  },
   events: {
     title: 'AI SMS Follow-up for Webinars and Events | SurFox AI',
     description: 'SurFox AI follows up with every registrant the moment your event ends. Attendees who did not convert, no-shows, replay viewers. Every lead worked automatically while the event is still fresh.',

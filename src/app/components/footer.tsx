@@ -27,7 +27,7 @@ const columns: { title: string; links: { label: string; href: string }[]; wide?:
     links: [
       { label: 'For Staffing Firms', href: '/staffing' },
       { label: 'For Real Estate', href: '/wholesalers' },
-      { label: 'Home Services', href: '#' },
+      { label: 'Home Services', href: '/home-services' },
     ],
   },
   {
