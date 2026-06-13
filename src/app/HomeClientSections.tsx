@@ -146,7 +146,15 @@ export function HeroPhone() {
         { threshold: 0.01, rootMargin: '0px 0px -80px 0px' }
       );
       obs.observe(phone);
-      safety = setTimeout(start, 2500); // never leave the chat hidden
+      // Safety net for a broken/late observer, but only if the phone is already
+      // on screen. Otherwise (e.g. below the fold on mobile) we wait for the user
+      // to scroll it into view so they actually see the animation play.
+      safety = setTimeout(() => {
+        if (started) return;
+        const rect = phone.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight && rect.bottom > 0;
+        if (inView) start();
+      }, 2500);
     } else {
       start();
     }
