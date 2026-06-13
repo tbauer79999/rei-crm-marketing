@@ -142,9 +142,9 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/enterprise',
   },
   industries: {
-    title: 'Industries - AI Lead Qualification for Every Sales Team',
-    description: 'SurFox AI works across real estate, wholesale, insurance, solar, recruiting, and B2B sales. Human psychology is universal - our AI adapts to any industry.',
-    keywords: ['AI for real estate', 'AI for insurance', 'AI for solar', 'sales AI', 'lead qualification'],
+    title: 'AI Lead Qualification for Every Industry | SurFox AI',
+    description: 'Every industry has the same lead problem: slow follow-up and cold contacts. SurFox AI qualifies leads via SMS for staffing, home services, events, real estate, and any business that talks to prospects.',
+    keywords: ['AI lead qualification', 'SMS lead follow-up', 'AI for staffing', 'AI for home services', 'AI for events', 'AI for real estate', 'sales AI'],
     path: '/industries',
   },
   'compare-meera-ai': {

@@ -75,7 +75,7 @@ export default function Page() {
     <div className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Section 1: Hero */}
-      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
+      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-28">
         <div className="max-w-4xl mx-auto text-center">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] mb-8">
