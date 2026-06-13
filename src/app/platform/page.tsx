@@ -7,12 +7,12 @@ import {
   Brain,
   Plug,
   Zap,
-  Phone,
   ShieldCheck,
   Chrome,
   LayoutDashboard,
   Building2,
 } from 'lucide-react';
+import ProofResults from '../components/ProofResults';
 
 export const metadata = generatePageMetadata('platform');
 
@@ -66,11 +66,6 @@ const features = [
     desc: 'Connect SurFox AI to 6,000+ apps. Live and public.',
   },
   {
-    icon: Phone,
-    title: 'AI Voice Channel',
-    desc: "Voice follow-up powered by Retell AI for leads who don't respond to SMS.",
-  },
-  {
     icon: ShieldCheck,
     title: 'DNC Scrubbing',
     desc: 'Automatic do-not-contact list scrubbing via Blacklist Alliance (Growth and Scale plans).',
@@ -90,12 +85,6 @@ const features = [
     title: 'Multi-Tenant Architecture',
     desc: 'Each account learns independently. Your data stays yours.',
   },
-];
-
-const results = [
-  { value: '23,942', label: 'Messages sent' },
-  { value: '28', label: 'Hot leads identified' },
-  { value: '11', label: 'Appointments booked' },
 ];
 
 const integrations = ['GoHighLevel', 'Zapier', 'Twilio', 'Retell AI'];
@@ -193,28 +182,7 @@ export default function Page() {
       </section>
 
       {/* Social Proof / Results */}
-      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white border-y border-[#E4E6E2]">
-        <div className="max-w-4xl mx-auto">
-          <div className="p-8 sm:p-12 rounded-[22px] border border-[#0FB6C9] bg-[#F4F5F3] shadow-[0_26px_54px_-32px_rgba(15,182,201,0.5)]">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#13171F]">
-                Real results from a real customer.
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              {results.map((result) => (
-                <div key={result.label} className="text-center">
-                  <div className="text-4xl sm:text-5xl font-semibold text-[#13171F] mb-2 tracking-tight">
-                    {result.value}
-                  </div>
-                  <div className="text-sm font-medium text-[#5A626E]">{result.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProofResults />
 
       {/* Integrations */}
       <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">

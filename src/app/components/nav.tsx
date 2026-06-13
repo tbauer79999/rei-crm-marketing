@@ -103,7 +103,7 @@ export default function Nav() {
 
         {/* Desktop links */}
         <nav className="hidden md:flex items-center gap-[30px]">
-          <Dropdown label="Product" links={productLinks} />
+          <Dropdown label="Solutions" links={productLinks} />
           <Link
             href="/pricing"
             className="text-sm font-medium text-[#5A626E] hover:text-[#13171F] transition-colors"
@@ -155,7 +155,7 @@ export default function Nav() {
         >
           <div className="px-8 py-6 flex flex-col gap-1">
             <p className="text-[11px] font-medium uppercase tracking-[.12em] text-[#8A92A0] mt-2 mb-1">
-              Product
+              Solutions
             </p>
             {productLinks.map((l) => (
               <Link
