@@ -67,7 +67,7 @@ export default function Leadership() {
                 {/* Profile Image Section */}
                 <div className="md:col-span-2 bg-[#F0F8F9] p-8 flex items-center justify-center">
                   <div className="relative">
-                    <div className="w-72 h-72 rounded-2xl bg-[#EDEEEB] flex items-center justify-center overflow-hidden">
+                    <div className="w-full max-w-[288px] aspect-square rounded-2xl bg-[#EDEEEB] flex items-center justify-center overflow-hidden">
                       <Image
                         src="/tom-bauer.jpg"
                         alt="Tom Bauer, Founder and CEO of SurFox AI"

@@ -91,7 +91,7 @@ export default function Nav() {
         fontFamily: 'var(--font-ibm-plex-sans)',
       }}
     >
-      <div className="max-w-[1180px] mx-auto px-8 h-[68px] flex items-center gap-10">
+      <div className="max-w-[1180px] mx-auto px-4 sm:px-6 md:px-8 h-[68px] flex items-center gap-10">
         <Link href="/" className="flex items-center flex-shrink-0">
           <Image
             src="/newSurFoxLogo1.png"

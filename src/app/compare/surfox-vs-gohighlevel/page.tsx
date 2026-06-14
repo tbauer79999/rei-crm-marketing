@@ -167,7 +167,8 @@ export default function Page() {
               </p>
             </div>
 
-            <div className="overflow-hidden rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
+            <div className="overflow-x-auto">
+            <div className="min-w-[480px] overflow-hidden rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
               {/* Table Header */}
               <div className="grid grid-cols-3 bg-white/[0.03] border-b-2 border-[#E4E6E2]">
                 <div className="p-4 sm:p-6 font-semibold text-[#13171F] text-sm sm:text-base">Feature</div>
@@ -197,6 +198,7 @@ export default function Page() {
                   </div>
                 </div>
               ))}
+            </div>
             </div>
           </div>
         </section>

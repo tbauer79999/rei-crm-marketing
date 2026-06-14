@@ -321,7 +321,7 @@ export default function Page() {
             </div>
 
             <div className="px-4 overflow-x-auto">
-              <table className="w-full border-collapse">
+              <table className="w-full min-w-[600px] border-collapse">
                 <thead>
                   <tr>
                     <th className="text-left p-4 bg-white border-b-2 border-[#E4E6E2] font-semibold text-[#13171F]">Factor</th>

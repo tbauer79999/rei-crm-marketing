@@ -89,7 +89,7 @@ export default function TermsOfService() {
                 Account Requirements
               </h2>
             </div>
-            <div className="ml-16 text-[#5A626E] leading-relaxed space-y-4">
+            <div className="ml-0 sm:ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>To use SurFox AI, you must:</p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
@@ -135,7 +135,7 @@ export default function TermsOfService() {
               </h2>
             </div>
 
-            <div className="ml-16 space-y-6">
+            <div className="ml-0 sm:ml-16 space-y-6">
               <div>
                 <h3 className="text-xl font-semibold text-[#13171F] mb-3">You may use SurFox AI to:</h3>
                 <ul className="space-y-2 text-[#5A626E]">
@@ -253,7 +253,7 @@ export default function TermsOfService() {
               </h2>
             </div>
 
-            <div className="ml-16 space-y-6">
+            <div className="ml-0 sm:ml-16 space-y-6">
               <div>
                 <h3 className="text-xl font-semibold text-[#13171F] mb-3">You are solely responsible for compliance with all applicable telecommunications laws, including but not limited to:</h3>
                 <ul className="space-y-2 text-[#5A626E]">
@@ -438,7 +438,7 @@ export default function TermsOfService() {
               </h2>
             </div>
 
-            <div className="ml-16 space-y-8">
+            <div className="ml-0 sm:ml-16 space-y-8">
               <div>
                 <h3 className="text-xl font-semibold text-[#13171F] mb-4">Available Plans:</h3>
 
@@ -627,7 +627,7 @@ export default function TermsOfService() {
               </h2>
             </div>
 
-            <div className="ml-16 space-y-6 text-[#5A626E]">
+            <div className="ml-0 sm:ml-16 space-y-6 text-[#5A626E]">
               <div>
                 <h3 className="text-xl font-semibold text-[#13171F] mb-3">You can cancel anytime:</h3>
                 <ul className="space-y-2">
@@ -769,7 +769,7 @@ export default function TermsOfService() {
               </h2>
             </div>
 
-            <div className="ml-16 space-y-6 text-[#5A626E]">
+            <div className="ml-0 sm:ml-16 space-y-6 text-[#5A626E]">
               <p className="font-semibold text-[#13171F]">
                 SurFox AI is provided "as is" without warranties.
               </p>
@@ -875,7 +875,7 @@ export default function TermsOfService() {
               </h2>
             </div>
 
-            <div className="ml-16 space-y-6 text-[#5A626E]">
+            <div className="ml-0 sm:ml-16 space-y-6 text-[#5A626E]">
               <p>
                 You agree to defend, indemnify, and hold harmless SurFox AI, Inc., its officers, directors, employees, contractors, and affiliates from and against any and all claims, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or relating to:
               </p>

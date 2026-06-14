@@ -573,6 +573,15 @@
   .sfx .rcell .rl { font-size: 12px; }
   .sfx .results-foot { padding: 18px 18px; }
   .sfx .results-foot .narr { font-size: 15px; }
+  /* tighten gutters + scale oversized type below 480px */
+  .sfx .wrap { padding: 0 18px; }
+  .sfx .hero h1 { font-size: 32px; }
+  .sfx .sec-head h2 { font-size: 28px; }
+  .sfx .annot { grid-template-columns: 1fr; }
+  .sfx .qrow { gap: 18px; }
+  .sfx .q .n { font-size: 34px; }
+  .sfx .plan .price { font-size: 38px; }
+  .sfx .panel { padding: 26px 20px; }
 }
 
 /* respect reduced motion: kill decorative pulses/blinks */

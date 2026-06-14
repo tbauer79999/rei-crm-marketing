@@ -98,7 +98,7 @@ export default function Footer() {
       className="bg-[#F4F5F3] border-t border-[#E4E6E2]"
       style={{ fontFamily: 'var(--font-ibm-plex-sans)' }}
     >
-      <div className="max-w-[1180px] mx-auto px-8 pt-16 pb-10">
+      <div className="max-w-[1180px] mx-auto px-4 sm:px-6 md:px-8 pt-16 pb-10">
         {/* Top region: brand + columns */}
         <div className="grid grid-cols-1 lg:grid-cols-[230px_1fr] gap-12 pb-10 border-b border-[#E4E6E2]">
           {/* Brand block (with newsletter) */}
@@ -155,7 +155,7 @@ export default function Footer() {
           </div>
 
           {/* 4-column link grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-10">
+          <div className="grid grid-cols-1 min-[420px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-10">
             {columns.map((col) => (
               <div key={col.title} className={col.wide ? 'lg:col-span-2' : undefined}>
                 <h5

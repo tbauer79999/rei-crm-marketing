@@ -29,13 +29,13 @@ export default function Page() {
     <div className="bg-[#F4F5F3] text-foreground">
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
+      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-16 sm:py-24 md:py-32">
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-block px-4 py-2 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] border border-[#dCEEF1] mb-6">
             <span className="text-sm font-semibold text-[#0A7C8C]">ROI CALCULATOR</span>
           </div>
 
-          <h1 className="text-4xl font-bold text-[#13171F] mb-8 leading-[1.1] tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-8 leading-[1.1] tracking-tight">
             AI SDR vs Hiring a Human SDR:{' '}<br className="hidden sm:block" />
             Real Cost Comparison
           </h1>
@@ -104,7 +104,7 @@ export default function Page() {
                   <span className="text-[#5A626E]">Tech Stack (CRM, Dialer, Tools)</span>
                   <span className="font-semibold text-[#13171F]">$6,000 – $8,400</span>
                 </li>
-                <li className="flex justify-between items-center py-3 bg-[#F4F5F3] -mx-8 px-8 rounded-b-xl">
+                <li className="flex flex-wrap justify-between items-center gap-x-3 gap-y-1 py-3 bg-[#F4F5F3] -mx-8 px-8 rounded-b-xl">
                   <span className="font-semibold text-[#13171F]">Subtotal</span>
                   <span className="font-bold text-[#13171F] text-lg">$91,000 – $129,400</span>
                 </li>
@@ -141,7 +141,7 @@ export default function Page() {
                   </div>
                   <p className="text-sm text-[#8A92A0] mt-1">Per departure (average tenure: 14-18 months)</p>
                 </li>
-                <li className="flex justify-between items-center py-3 bg-[#F0F8F9] -mx-8 px-8 rounded-b-xl">
+                <li className="flex flex-wrap justify-between items-center gap-x-3 gap-y-1 py-3 bg-[#F0F8F9] -mx-8 px-8 rounded-b-xl">
                   <span className="font-semibold text-[#13171F]">True Annual Cost Per SDR</span>
                   <span className="font-bold text-[#0A7C8C] text-lg">$105,000 – $165,000</span>
                 </li>

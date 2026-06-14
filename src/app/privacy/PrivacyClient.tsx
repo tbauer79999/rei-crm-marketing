@@ -85,7 +85,7 @@ export default function PrivacyPolicy() {
               </h2>
             </div>
 
-            <div className="space-y-6 ml-16">
+            <div className="space-y-6 ml-0 sm:ml-16">
               <div>
                 <h3 className="text-xl font-semibold text-[#13171F] mb-3">Personal Information</h3>
                 <p className="text-[#5A626E] leading-relaxed">
@@ -154,7 +154,7 @@ export default function PrivacyPolicy() {
               </h2>
             </div>
 
-            <div className="ml-16 space-y-3 text-[#5A626E]">
+            <div className="ml-0 sm:ml-16 space-y-3 text-[#5A626E]">
               <p className="leading-relaxed">We use the collected information to:</p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
@@ -201,7 +201,7 @@ export default function PrivacyPolicy() {
               </h2>
             </div>
 
-            <div className="ml-16 space-y-4 text-[#5A626E] leading-relaxed">
+            <div className="ml-0 sm:ml-16 space-y-4 text-[#5A626E] leading-relaxed">
               <p>
                 We implement industry-standard security measures to protect your information, including:
               </p>
@@ -245,7 +245,7 @@ export default function PrivacyPolicy() {
               </h2>
             </div>
 
-            <div className="ml-16 text-[#5A626E] leading-relaxed space-y-4">
+            <div className="ml-0 sm:ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 SurFox AI operates with strict tenant isolation. Each organization's data is completely segregated and processed independently:
               </p>
@@ -286,7 +286,7 @@ export default function PrivacyPolicy() {
               </h2>
             </div>
 
-            <div className="ml-16 space-y-4 text-[#5A626E] leading-relaxed">
+            <div className="ml-0 sm:ml-16 space-y-4 text-[#5A626E] leading-relaxed">
               <p>We may share your information with:</p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">

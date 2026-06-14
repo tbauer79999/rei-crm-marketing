@@ -82,7 +82,7 @@ export default function Page() {
           <div
             className="calendly-inline-widget"
             data-url="https://calendly.com/tom-getsurfox/30min?hide_event_type_details=1&primary_color=ff9d00"
-            style={{ minWidth: '320px', height: '1000px' }}
+            style={{ minWidth: '0px', height: '1000px' }}
           />
           <Script
             src="https://assets.calendly.com/assets/external/widget.js"

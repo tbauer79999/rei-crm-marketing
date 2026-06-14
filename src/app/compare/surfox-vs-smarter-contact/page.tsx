@@ -439,7 +439,7 @@ export default function Page() {
             <div className="px-4 mb-8">
               <h3 className="text-xl font-semibold text-[#13171F] mb-4 text-center">SmarterContact Pricing (billed quarterly)</h3>
               <div className="overflow-x-auto">
-                <table className="w-full text-sm border-2 border-[#E4E6E2] rounded-2xl overflow-hidden">
+                <table className="w-full min-w-[560px] text-sm border-2 border-[#E4E6E2] rounded-2xl overflow-hidden">
                   <thead>
                     <tr className="bg-white/[0.03] text-[#13171F]">
                       <th className="text-left px-4 py-3 font-semibold">Plan</th>
