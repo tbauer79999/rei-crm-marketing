@@ -48,8 +48,8 @@ export default function Success() {
                   2
                 </span>
                 <div>
-                  <div className="font-semibold text-[#13171F]">Setup Email Sent</div>
-                  <div className="text-sm text-[#5A626E]">Check your inbox for login credentials and setup guide</div>
+                  <div className="font-semibold text-[#13171F]">Check Your Email</div>
+                  <div className="text-sm text-[#5A626E]">We just sent you an email to create your password and activate your account</div>
                 </div>
               </div>
               
@@ -89,17 +89,26 @@ export default function Success() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <a 
-            href="https://surfox.ai" 
-            className="inline-block bg-[#13171F] text-white px-8 py-4 rounded-xl hover:gradient-bg-600 transition-all font-semibold text-lg mb-4 shadow-sm shadow-blue-500/5 shadow-blue-500/5"
-          >
-            Access Your AI Dashboard
-          </a>
-          
+          {/* Primary next step: check email to set password */}
+          <div className="bg-[#13171F] text-white px-8 py-5 rounded-xl mb-4">
+            <div className="text-2xl mb-1">📧</div>
+            <div className="font-semibold text-lg">Check your inbox to create your password</div>
+            <div className="text-sm text-white/70 mt-1">
+              Your account is ready — open the email from SurFox and set a password to activate it and start onboarding.
+            </div>
+          </div>
+
+          {/* Secondary link: sign in after password is set */}
+          <p className="text-sm text-[#5A626E] mb-2">
+            Already set your password?{' '}
+            <a href="https://surfox.ai" className="font-semibold text-[#0A7C8C] hover:underline">
+              Sign in to your dashboard
+            </a>
+          </p>
+
           {/* Support note */}
           <p className="text-sm text-[#8A92A0]">
-            Need help getting started? Our setup guide will walk you through everything step-by-step.
+            Didn't get the email? Check your spam folder, or our setup guide will walk you through everything step-by-step.
           </p>
         </div>
       </div>
