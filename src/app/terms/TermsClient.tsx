@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FileText, Shield, AlertCircle, DollarSign, Users, XCircle, Scale } from 'lucide-react';
+import { FileText, Shield, AlertCircle, DollarSign, Users, XCircle, Scale, ShieldCheck } from 'lucide-react';
 
 export default function TermsOfService() {
   return (
@@ -553,7 +553,7 @@ export default function TermsOfService() {
                     Growth and Scale plan subscribers receive monthly Do Not Call (DNC) scrubbing credits as part of their plan. Growth includes 5,000 scrub credits per month. Scale includes 25,000 scrub credits per month. Starter plan subscribers do not receive DNC scrubbing.
                   </p>
                   <p>
-                    DNC scrubbing is a paid plan feature and is not available during the 14-day free trial period. Scrub credits are consumed per record scrubbed and do not roll over month to month. Unused credits expire at the end of each billing cycle.
+                    DNC scrubbing is a paid plan feature available once your subscription is active. Scrub credits are consumed per record scrubbed and do not roll over month to month. Unused credits expire at the end of each billing cycle.
                   </p>
                   <p>
                     While SurFox AI provides DNC scrubbing as a platform feature, you remain solely responsible for ensuring your contact lists comply with all applicable do-not-call regulations, including the National Do Not Call Registry. DNC scrubbing is a supplemental compliance tool and does not constitute legal compliance advice or guarantee that all contacts are legally reachable.
@@ -688,6 +688,69 @@ export default function TermsOfService() {
                     <span>Some data may be retained for legal compliance</span>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Money-Back Guarantee */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <ShieldCheck className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Money-Back Guarantee
+              </h2>
+            </div>
+
+            <div className="ml-0 sm:ml-16 space-y-6 text-[#5A626E] leading-relaxed">
+              <p>
+                SurFox AI offers a 30-day money-back guarantee, subject to the terms below.
+              </p>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">1. Billing and guarantee period</h3>
+                <p>
+                  You are charged on the first day of your subscription at signup. The 30-day money-back guarantee period does not begin on the date of payment. Instead, it begins on the date your A2P (application-to-person) messaging registration is approved. Your monthly message allotment does not unlock and cannot be used until A2P approval is granted.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">2. Scope of refund</h3>
+                <p>
+                  If you qualify for a refund under this guarantee, SurFox AI will refund all charges you have paid from signup up to the date of your refund claim, regardless of the number of billing cycles that have elapsed. This includes charges paid before A2P approval.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">3. Eligibility conditions</h3>
+                <p className="mb-3">To qualify for a refund, both of the following conditions must be satisfied:</p>
+                <div className="space-y-4">
+                  <div>
+                    <p className="font-semibold text-[#13171F] mb-2">(a) Usage threshold</p>
+                    <p>
+                      During the guarantee period, you must have sent at least 80% of your plan's monthly message allotment using your approved conversation flow. The applicable thresholds are: Starter, 1,600 of 2,000 messages; Growth, 8,000 of 10,000 messages; Scale, 32,000 of 40,000 messages. Messages sent outside of your approved conversation flow do not count toward this threshold.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#13171F] mb-2">(b) Performance failure</p>
+                    <p>
+                      The SurFox AI agent must have demonstrably failed to perform one or more of the following four core functions on a significant portion of conversations: (i) respond to inbound replies; (ii) follow your approved conversation flow; (iii) attempt to book a meeting or appointment with engaged leads; or (iv) cleanly disqualify a lead that was not a fit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">4. Claims</h3>
+                <p>
+                  A refund claim must be submitted within the 30-day guarantee period. SurFox AI may review your account activity, conversation logs, and message records to verify that both eligibility conditions have been met. Refunds are issued only where both conditions are satisfied and verified.
+                </p>
               </div>
             </div>
           </motion.div>

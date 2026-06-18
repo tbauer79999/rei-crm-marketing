@@ -405,7 +405,7 @@ export default function Page() {
               href="/pricing"
               className="px-10 py-4 rounded-lg bg-[#13171F] text-white font-semibold hover:gradient-bg-600 transition inline-flex items-center gap-2"
             >
-              Start Free Trial
+              Start today
               <ArrowRight className="w-5 h-5" />
             </a>
 
@@ -418,7 +418,7 @@ export default function Page() {
           </div>
 
           <p className="text-sm text-[#8A92A0] mb-4">
-            14-day free trial. 2,000 free messages. No setup fees. Cancel anytime.
+            30-day money-back guarantee. No setup fees. No risk.
           </p>
           <p className="text-sm text-[#5A626E]">
             Plans start at $147/month. Most teams choose Growth at $597 for learning AI.

@@ -53,7 +53,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   pricing: {
     title: 'Pricing - Pay for messages, not headcount',
-    description: 'Real conversational AI at SMB pricing. Starter $147, Growth $597, and Scale $2,497 per month. Every plan includes a 14-day free trial.',
+    description: 'Real conversational AI at SMB pricing. Starter $147, Growth $597, and Scale $2,497 per month. Every plan is backed by a 30-day money-back guarantee.',
     keywords: ['SurFox AI pricing', 'AI SMS pricing', 'lead qualification pricing', 'SMS lead qualification pricing'],
     path: '/pricing',
   },
@@ -89,7 +89,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   'integrations-gohighlevel': {
     title: 'GoHighLevel Integration | SurFox AI - Native HighLevel Workflows',
-    description: 'Connect HighLevel to SurFox AI directly. Native integration with tag-based campaign routing. No Zapier required. 14-day free trial.',
+    description: 'Connect HighLevel to SurFox AI directly. Native integration with tag-based campaign routing. No Zapier required. 30-day money-back guarantee.',
     keywords: ['GoHighLevel integration', 'HighLevel Workflows', 'native HighLevel integration', 'GHL SurFox', 'tag-based campaign routing', 'GHL AI lead qualification', 'GoHighLevel webhook'],
     path: '/integrations/gohighlevel',
   },
@@ -155,7 +155,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   'compare-gohighlevel': {
     title: 'SurFox AI vs GoHighLevel: Which is Right for You?',
-    description: 'Compare SurFox AI vs GoHighLevel. Built for conversations, not chaos. Setup in minutes vs weeks, 50-point psychological scoring, and AI that learns.',
+    description: 'Compare SurFox AI vs GoHighLevel. Built for conversations, not chaos. Self-serve setup, 50-point psychological scoring, and AI that learns.',
     keywords: ['SurFox vs GoHighLevel', 'GoHighLevel alternative', 'GHL alternative', 'AI lead qualification', 'SMS lead qualification', 'sales automation'],
     path: '/compare/surfox-vs-gohighlevel',
   },

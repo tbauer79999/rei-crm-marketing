@@ -36,7 +36,7 @@ export default function GoHighLevelClient() {
                 whileTap={{ scale: 0.98 }}
                 className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-[#13171F] text-white text-base font-semibold hover:gradient-bg-600 transition inline-flex items-center gap-2"
               >
-                Start Free Trial
+                Start today
                 <ArrowRight className="w-5 h-5" />
               </motion.a>
 
@@ -51,7 +51,7 @@ export default function GoHighLevelClient() {
             </div>
 
             <p className="text-sm text-[#8A92A0]">
-              No demo required. Trial includes 2,000 real messages and 14 days free.
+              No demo required. Backed by our 30-day money-back guarantee.
             </p>
           </motion.div>
         </div>
@@ -332,7 +332,7 @@ export default function GoHighLevelClient() {
 
           <div className="space-y-5">
             {[
-              'Start your SurFox AI free trial',
+              'Start your SurFox AI subscription',
               'Set up your knowledge base and AI persona',
               'Create your first campaign in SurFox AI',
               'Add tag mappings in Settings → Integrations → HighLevel',
@@ -366,7 +366,7 @@ export default function GoHighLevelClient() {
               whileTap={{ scale: 0.98 }}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-[#13171F] text-white font-semibold hover:gradient-bg-600 transition"
             >
-              Start Free Trial: 14 days, 2,000 messages
+              Start today
               <ArrowRight className="w-5 h-5" />
             </motion.a>
           </motion.div>
@@ -396,7 +396,7 @@ export default function GoHighLevelClient() {
                 whileTap={{ scale: 0.98 }}
                 className="px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-[#13171F] text-white font-semibold hover:gradient-bg-600 transition inline-flex items-center gap-2"
               >
-                Start Free Trial
+                Start today
                 <ArrowRight className="w-5 h-5" />
               </motion.a>
 

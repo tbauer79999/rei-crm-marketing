@@ -2186,7 +2186,7 @@ export const blogPosts: BlogPost[] = [
         type: 'cta-box',
         headline: 'SurFox AI sends the first SMS before your team leaves the show floor.',
         subhead: 'AI-powered lead qualification that engages every trade show lead via SMS within minutes of badge scan, surfaces buying signals automatically, and routes hot prospects to your team with full conversation context.',
-        primaryButton: { text: 'Start Free Trial', href: '/pricing' },
+        primaryButton: { text: 'Start today', href: '/pricing' },
         secondaryButton: { text: 'See How It Works', href: '/platform' }
       },
       {
@@ -3874,7 +3874,7 @@ export const blogPosts: BlogPost[] = [
         type: 'cta-box',
         headline: 'SurFox AI sends the first SMS before your team leaves the show floor.',
         subhead: 'AI-powered SMS lead qualification built for B2B teams that need to respond inside the conversion cliff. See how a structured post-trade-show SMS sequence works in practice.',
-        primaryButton: { text: 'Start Free Trial', href: '/pricing' },
+        primaryButton: { text: 'Start today', href: '/pricing' },
         secondaryButton: { text: 'See How It Works', href: '/platform' }
       },
       {

@@ -64,7 +64,8 @@
       "Bash(node -e ' *)",
       "Bash(node -e \"const s=require\\('fs'\\).readFileSync\\('public/images/peek1.png'\\);console.log\\('w',s.readUInt32BE\\(16\\),'h',s.readUInt32BE\\(20\\),'colorType',s[25],'\\(6=RGBA transparent\\)'\\)\")",
       "PowerShell(Get-NetTCPConnection -LocalPort 4153 -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess -Unique | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue }; \"clear\")",
-      "Bash(awk '{print}')"
+      "Bash(awk '{print}')",
+      "PowerShell(npm run build 2>&1)"
     ]
   }
 }

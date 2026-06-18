@@ -26,7 +26,7 @@ const comparisonData = [
   { factor: 'Lead sources', surfox: 'Any list - aged leads, purchased, events, scraped', spara: 'Only website traffic' },
   { factor: 'Target customer', surfox: 'SMBs, staffing agencies, real estate, service businesses', spara: 'Enterprise SaaS with high web traffic' },
   { factor: 'Pricing', surfox: '$147-$2,497/mo', spara: 'Enterprise contracts (unlisted)' },
-  { factor: 'Setup', surfox: 'Self-serve, live in minutes', spara: 'Sales-led implementation' },
+  { factor: 'Setup', surfox: 'Self-serve account setup; live once A2P approves', spara: 'Sales-led implementation' },
   { factor: 'Best for', surfox: 'Teams with lead lists but no time to text them all', spara: 'Companies with heavy inbound web traffic' },
 ];
 
@@ -300,7 +300,7 @@ export default function Page() {
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
-                    <span>Self-serve setup - live in minutes</span>
+                    <span>Self-serve setup, live once A2P approves</span>
                   </div>
                 </div>
               </div>
@@ -600,7 +600,7 @@ export default function Page() {
             </p>
 
             <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">
-              Plans start at $147/month. Self-serve setup - live in minutes.
+              Plans start at $147/month. Self-serve setup, live once A2P approves.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">
@@ -627,7 +627,7 @@ export default function Page() {
               </div>
               <div className="flex items-center">
                 <Clock className="w-5 h-5 mr-2 text-[#0A7C8C]" />
-                Setup in minutes
+                Setup in minutes, live when A2P approves
               </div>
               <div className="flex items-center">
                 <Award className="w-5 h-5 mr-2 text-[#0A7C8C]" />

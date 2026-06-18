@@ -234,7 +234,7 @@ export default function Page() {
                 SurFox AI Was Built Different
               </h2>
               <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
-                Conversation-first architecture means you start qualifying leads in minutes, not months.
+                Conversation-first architecture means you are qualifying leads in days, not months.
               </p>
             </div>
 
@@ -305,7 +305,7 @@ export default function Page() {
                   {[
                     'You need to qualify high-volume leads fast',
                     'You want AI that learns without manual training',
-                    'Setup in minutes matters more than endless customization',
+                    'Fast self-serve setup matters more than endless customization',
                     'You have a CRM already and need better lead intelligence',
                   ].map((item, i) => (
                     <div key={i} className="flex items-start text-sm text-[#5A626E]">
@@ -350,7 +350,7 @@ export default function Page() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6 sm:mb-8 px-4 leading-tight">
               Ready to Start Qualifying<br className="hidden sm:block" />
-              in Minutes, Not Months?
+              in Days, Not Months?
             </h2>
 
             <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
@@ -381,7 +381,7 @@ export default function Page() {
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5 text-[#0A7C8C]" />
-                Setup in minutes
+                Setup in minutes, live when A2P approves
               </div>
               <div className="flex items-center gap-2">
                 <Award className="w-5 h-5 text-[#0A7C8C]" />

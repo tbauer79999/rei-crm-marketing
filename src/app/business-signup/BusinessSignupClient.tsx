@@ -433,7 +433,7 @@ function BusinessSignupContent() {
         {/* 14-Day Trial Notice */}
         <div className="bg-[#EAF7F9] border border-[#dCEEF1] rounded-xl p-6 text-center">
           <p className="text-[#5A626E] font-medium">
-            ✨ 14-day free trial included • Cancel anytime
+            ✨ 30-day money-back guarantee • Cancel anytime
           </p>
         </div>
 

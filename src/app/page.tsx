@@ -226,7 +226,7 @@ export default function Page() {
                 name: 'How fast can I get started?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Faster than you think. When you sign up, you start a 14-day free trial and are immediately placed on our pre-approved Twilio A2P campaign - so you can start texting leads within minutes. During your trial, you register your own A2P campaign. By the time your trial ends, you own your sending infrastructure.',
+                  text: 'Most of the setup happens the day you sign up. You configure your AI, knowledge base, and conversation flow in well under an hour. The one external step is A2P messaging registration, which carriers typically approve in 7 to 10 days. The day your A2P is approved, your messaging unlocks and the AI starts texting and qualifying leads. Your 30-day money-back guarantee clock starts on that approval date, so the registration wait never counts against you.',
                 },
               },
             ],
@@ -248,7 +248,7 @@ export default function Page() {
             </p>
             <div className="hero-cta">
               <a className="btn btn-ink" href="#pricing">
-                Start free trial
+                Start today
               </a>
               <a className="btn btn-ghost" href="#pricing">
                 See pricing →
@@ -387,7 +387,7 @@ export default function Page() {
             <span className="eyebrow">Pricing</span>
             <h2 className="disp">Pay for messages, not headcount.</h2>
             <p>
-              Real conversational AI at SMB pricing. Every plan includes a 14-day free trial.
+              Real conversational AI at SMB pricing. Every plan is backed by a 30-day money-back guarantee.
             </p>
           </div>
           <div className="price-grid">
@@ -410,14 +410,14 @@ export default function Page() {
                 </ul>
                 <div className="pbtn">
                   <a className={`btn ${plan.btn}`} href={plan.href}>
-                    Start free trial
+                    Start today
                   </a>
                 </div>
               </div>
             ))}
           </div>
           <p className="price-note">
-            14-day free trial on every plan · Pre-approved Twilio A2P so you can text within minutes
+            30-day money-back guarantee. No setup fees. No risk.
           </p>
         </div>
       </section>
@@ -433,13 +433,13 @@ export default function Page() {
             <br />
             list <em>right now.</em>
           </h2>
-          <p>Upload a list and watch the first conversations begin within minutes.</p>
+          <p>Upload a list and let SurFox AI work the first conversations for you.</p>
           <a
             className="btn btn-cyan"
             href="#pricing"
             style={{ padding: '14px 28px', fontSize: 15 }}
           >
-            Start your free trial
+            Start today
           </a>
         </div>
       </section>

@@ -237,28 +237,24 @@ export default function Page() {
               href="/pricing"
               className="inline-block px-12 py-5 rounded-xl bg-[#13171F] text-white text-lg font-semibold shadow-sm shadow-blue-500/5 shadow-blue-500/5"
             >
-              Start 14-Day Free Trial
+              Start today
             </a>
           </div>
 
           {/* Trial terms */}
           <p className="text-[#5A626E] mb-10">
-            Start your trial - cancel anytime before day 14 if it&apos;s not for you.
+            Start today, backed by our 30-day money-back guarantee if it&apos;s not for you.
           </p>
 
           {/* Trust Badges */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-sm text-[#5A626E] mb-8">
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5 text-[#0A7C8C] flex-shrink-0" />
-              <span>14-day free trial</span>
+              <span>30-day money-back guarantee</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5 text-[#0A7C8C] flex-shrink-0" />
-              <span>2,000 free messages included</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Check className="w-5 h-5 text-[#0A7C8C] flex-shrink-0" />
-              <span>Setup in 15 minutes</span>
+              <span>Setup in minutes, live when A2P approves</span>
             </div>
           </div>
 

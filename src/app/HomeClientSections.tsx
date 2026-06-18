@@ -388,7 +388,7 @@ const faqItems = [
   {
     question: 'How fast can I get started?',
     answer:
-      'Faster than you think. When you sign up, you start a 14-day free trial and are immediately placed on our pre-approved Twilio A2P campaign, so you can start texting leads within minutes. During your trial, you register your own A2P campaign. By the time your trial ends, you own your sending infrastructure.',
+      'Most of the setup happens the day you sign up. You configure your AI, knowledge base, and conversation flow in well under an hour. The one external step is A2P messaging registration, which carriers typically approve in 7 to 10 days. The day your A2P is approved, your messaging unlocks and the AI starts texting and qualifying leads. Your 30-day money-back guarantee clock starts on that approval date, so the registration wait never counts against you.',
   },
 ];
 

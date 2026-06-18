@@ -209,8 +209,8 @@ export default function PricingClient() {
             <span className="eyebrow">Pricing</span>
             <h2 className="disp">Pay for messages, not headcount.</h2>
             <p>
-              Real conversational AI at SMB pricing. Every plan includes a 14-day free trial and the
-              same AI that texts, qualifies, and books your leads.
+              Real conversational AI at SMB pricing. Every plan is backed by a 30-day money-back
+              guarantee and includes the same AI that texts, qualifies, and books your leads.
             </p>
           </div>
         </div>
@@ -259,7 +259,7 @@ export default function PricingClient() {
                     className={`btn ${plan.btn}`}
                     onClick={() => startTrial(plan.slug)}
                   >
-                    Start free trial
+                    Start today
                   </button>
                 </div>
               </div>
@@ -267,15 +267,31 @@ export default function PricingClient() {
           </div>
 
           <p className="price-note">
-            14-day free trial on every plan · Pre-approved Twilio A2P so you can text within minutes
+            30-day money-back guarantee. No setup fees. No risk.
           </p>
           <p
             className="price-note"
             style={{ marginTop: 8, textTransform: 'none', letterSpacing: 0 }}
           >
-            DNC scrubbing is available on paid plans only and is not included during the 14-day free
-            trial.
+            DNC scrubbing is available on paid plans only.
           </p>
+        </div>
+      </section>
+
+      {/* Money-back guarantee */}
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap" style={{ maxWidth: 900 }}>
+          <div className="panel">
+            <h2>Our 30-day money-back guarantee</h2>
+            <p style={{ marginTop: 14 }}>
+              Send at least 80% of your monthly messages through your approved flow, and if SurFox
+              AI fails to respond to leads, follow your conversation flow, book interested prospects,
+              or disqualify bad fits, we refund every dollar you have paid, no matter how many months
+              it has been. Your guarantee clock starts when your A2P registration is approved, not
+              the day you sign up, so you never lose time to setup. No partial credits, no
+              fine-print games, just your money back.
+            </p>
+          </div>
         </div>
       </section>
 

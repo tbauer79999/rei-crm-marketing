@@ -133,7 +133,7 @@ export default function Nav() {
             href="/#pricing"
             className="inline-flex items-center rounded-[9px] bg-[#13171F] text-white text-sm font-semibold px-5 py-[11px] hover:bg-black transition-colors"
           >
-            Start free trial
+            Start today
           </Link>
         </div>
 
@@ -205,7 +205,7 @@ export default function Nav() {
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center rounded-[9px] bg-[#13171F] text-white text-sm font-semibold px-5 py-[11px]"
               >
-                Start free trial
+                Start today
               </Link>
             </div>
           </div>

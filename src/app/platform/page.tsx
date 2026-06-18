@@ -109,7 +109,7 @@ export default function Page() {
               href="/pricing"
               className="px-7 py-3.5 rounded-[9px] bg-[#13171F] text-white font-semibold hover:bg-black transition inline-flex items-center gap-2"
             >
-              Start Free Trial
+              Start today
               <ArrowRight className="w-5 h-5" />
             </a>
 
@@ -223,7 +223,7 @@ export default function Page() {
               href="/pricing"
               className="px-7 py-3.5 rounded-[9px] bg-[#13171F] text-white font-semibold hover:bg-black transition inline-flex items-center gap-2"
             >
-              Start Free Trial
+              Start today
               <ArrowRight className="w-5 h-5" />
             </a>
 

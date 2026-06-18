@@ -51,7 +51,7 @@ const comparisonRows: Array<{
 }> = [
   { label: 'Follows up with every attendee', manual: false, surfox: true },
   { label: 'Re-engages no-shows automatically', manual: false, surfox: true },
-  { label: 'Responds within minutes of upload', manual: false, surfox: true },
+  { label: 'Responds within minutes once your SMS line is active', manual: false, surfox: true },
   { label: 'Separate talk tracks per contact type', manual: false, surfox: true },
   { label: 'Available 24/7', manual: false, surfox: true },
   { label: 'Zapier integration', manual: false, surfox: true },
@@ -99,7 +99,7 @@ export default function Page() {
                 href="/pricing"
                 className="px-7 py-3.5 rounded-[9px] bg-[#13171F] text-white text-base font-semibold hover:bg-black transition inline-flex items-center gap-2"
               >
-                Start Free Trial
+                Start today
                 <ArrowRight className="w-5 h-5" />
               </a>
 
@@ -112,7 +112,7 @@ export default function Page() {
             </div>
 
             <p className="text-sm text-[#8A92A0]">
-              14-day free trial. 2,000 free messages. No setup fees.
+              30-day money-back guarantee. No setup fees. No risk.
             </p>
           </div>
         </div>
@@ -272,7 +272,7 @@ export default function Page() {
                 href="/pricing"
                 className="px-7 py-3.5 rounded-[9px] bg-[#13171F] text-white font-semibold hover:bg-black transition inline-flex items-center gap-2"
               >
-                Start Free Trial
+                Start today
                 <ArrowRight className="w-5 h-5" />
               </a>
 
@@ -285,7 +285,7 @@ export default function Page() {
             </div>
 
             <p className="text-sm text-[#8A92A0]">
-              Plans start at $147/month. 14-day free trial included.
+              Plans start at $147/month. Backed by our 30-day money-back guarantee.
             </p>
           </div>
         </div>
