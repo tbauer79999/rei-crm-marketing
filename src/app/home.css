@@ -281,6 +281,32 @@
 .sfx .result .booked .b1 { font-weight: 700; font-size: 13px; color: #0c7a3c; white-space: nowrap; }
 .sfx .result .booked .b2 { font-size: 11.5px; color: #3a8a5e; }
 
+/* rotating conversation body: crossfades between conversations */
+.sfx .convo-body { opacity: 1; transition: opacity 400ms ease; }
+.sfx .convo-body.is-fading { opacity: 0; }
+
+/* dot indicators below the phone */
+.sfx .convo-dots {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 20px;
+}
+.sfx .convo-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--line-2);
+  cursor: pointer;
+  transition: background 220ms ease, width 220ms ease;
+}
+.sfx .convo-dot:hover { background: var(--faint); }
+.sfx .convo-dot.is-active { width: 22px; border-radius: 999px; background: var(--cyan); }
+
 /* annotated moments under hero */
 .sfx .stage { padding: 42px 0 80px; }
 .sfx .annot {
@@ -587,4 +613,5 @@
 /* respect reduced motion: kill decorative pulses/blinks */
 @media (prefers-reduced-motion: reduce) {
   .sfx .live i, .sfx .typing i { animation: none; }
+  .sfx .convo-body, .sfx .convo-dot { transition: none; }
 }

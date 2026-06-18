@@ -21,11 +21,100 @@ function CheckIcon() {
   );
 }
 
+/* Hero conversations. The phone frame, status bar, "AI live" badge, annotation
+   pills, and "Call booked" card are identical across all three; only the
+   conversation content below changes as the hero rotates every 5 seconds. */
+type ConvRow =
+  | { side: 'ai'; text: string }
+  | { side: 'them'; tag: string; text: string };
+
+type Conversation = {
+  avatar: string;
+  name: string;
+  sub: string;
+  rows: ConvRow[];
+  meta: string;
+  booked: string;
+};
+
+const conversations: Conversation[] = [
+  {
+    avatar: 'M',
+    name: 'Marta R.',
+    sub: 'Motivated seller · Maple St',
+    rows: [
+      {
+        side: 'ai',
+        text:
+          'Hi Marta, Alex here with Brightway Homes. Saw you might consider an offer on the Maple St house. Still open to it?',
+      },
+      { side: 'them', tag: 'reads intent', text: "Maybe. Depends what you're offering." },
+      { side: 'ai', text: 'Fair. Ballpark, what number were you hoping for?' },
+      { side: 'them', tag: 'captures price', text: "Around 240 if it's cash and quick" },
+      {
+        side: 'ai',
+        text:
+          'That works on our end. Cash, no repairs, you pick the close date. Got 10 min tomorrow to talk specifics?',
+      },
+      { side: 'them', tag: 'books call', text: 'Yeah, after 5 is good' },
+      { side: 'ai', text: 'Booked you for 5:30. Talk then.' },
+    ],
+    meta: 'Motivated · price captured · cash-ready · 3m 12s',
+    booked: '5:30 PM',
+  },
+  {
+    avatar: 'J',
+    name: 'James K.',
+    sub: 'Operations Manager · Metro Logistics',
+    rows: [
+      {
+        side: 'ai',
+        text:
+          'Hi James, this is Surf with Apex Staffing. You submitted a request for temp-to-hire warehouse associates. Still looking to fill those roles?',
+      },
+      { side: 'them', tag: 'captures urgency', text: 'Yeah we need 3 by next Monday' },
+      { side: 'ai', text: 'Got it. What shift and pay range are you working with?' },
+      { side: 'them', tag: 'qualifies requirement', text: '6am-2pm, $18-20/hr' },
+    ],
+    meta: 'Urgent · pay captured · ready-to-hire · 4m 3s',
+    booked: '4:00 PM',
+  },
+  {
+    avatar: 'R',
+    name: 'Rachel T.',
+    sub: 'Homeowner · Oak Ridge Dr',
+    rows: [
+      {
+        side: 'ai',
+        text:
+          'Hi Rachel, this is Surf with ProHome Services. You requested a quote for HVAC service. Still need someone out there?',
+      },
+      { side: 'them', tag: 'captures urgency', text: 'Yes, AC stopped working this morning' },
+      {
+        side: 'ai',
+        text: 'Sorry to hear that. Are you the homeowner and is this your primary residence?',
+      },
+      { side: 'them', tag: 'qualifies intent', text: 'Yes and yes, need it fixed today if possible' },
+    ],
+    meta: 'Urgent · homeowner confirmed · same-day · 2m 48s',
+    booked: '2:00 PM',
+  },
+];
+
+const ROTATE_MS = 5000;
+const FADE_MS = 400;
+
 export function HeroPhone() {
-  const rootRef = useRef<HTMLDivElement>(null);
   // Keep "9:41" for SSR + first paint (hydration-safe), then show the viewer's
   // real local time and keep it ticking.
   const [clock, setClock] = useState('9:41');
+
+  // Rotation state: `shown` is the conversation on screen, `active` is the
+  // target. When they differ we fade `shown` out, swap, then fade back in.
+  const [shown, setShown] = useState(0);
+  const [active, setActive] = useState(0);
+  const [fading, setFading] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     const format = () => {
@@ -39,136 +128,42 @@ export function HeroPhone() {
     return () => clearInterval(id);
   }, []);
 
+  // Auto-advance on a uniform cadence. Each time a conversation settles on
+  // screen we schedule a single timer to move to the next one. Targeting an
+  // absolute index off `shown` (rather than incrementing) keeps the dwell time
+  // tied to what's displayed and makes any duplicate timer idempotent, so the
+  // cadence stays even. Paused while hovered, and disabled for reduced motion
+  // (those viewers get the first conversation statically and can use the dots).
   useEffect(() => {
-    const root = rootRef.current;
-    if (!root) return;
-
+    if (hovered) return;
     const prefersReduced =
       typeof window !== 'undefined' &&
       window.matchMedia &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return;
 
-    const thread = root.querySelector<HTMLElement>('.thread');
-    const result = root.querySelector<HTMLElement>('.result');
-    const phone = root.querySelector<HTMLElement>('.phone');
-    if (!thread || prefersReduced) return; // static render stays fully visible
+    const id = setTimeout(() => {
+      setActive((shown + 1) % conversations.length);
+    }, ROTATE_MS);
+    return () => clearTimeout(id);
+  }, [shown, hovered]);
 
-    const rows = Array.from(thread.querySelectorAll<HTMLElement>('.row'));
-    const timers: ReturnType<typeof setTimeout>[] = [];
-    const at = (ms: number, fn: () => void) => timers.push(setTimeout(fn, ms));
-    const toBottom = () => {
-      thread.scrollTop = thread.scrollHeight; // instant, not smooth
-    };
+  // Crossfade: fade the current conversation out, swap, then fade the next in.
+  useEffect(() => {
+    if (active === shown) return;
+    setFading(true);
+    const id = setTimeout(() => {
+      setShown(active);
+      setFading(false);
+    }, FADE_MS);
+    return () => clearTimeout(id);
+  }, [active, shown]);
 
-    // Hide everything past the first message up front (inline styles win the cascade).
-    function arm() {
-      rows.forEach((row, i) => {
-        if (i === 0) return; // first message is on screen immediately
-        row.style.display = 'none';
-        const typing = row.querySelector<HTMLElement>('.typing');
-        const bodyEl = row.querySelector<HTMLElement>('.msg.ai.body');
-        if (typing && bodyEl) {
-          typing.style.display = 'flex';
-          bodyEl.style.display = 'none';
-        }
-        const tag = row.querySelector<HTMLElement>('.tag');
-        if (tag) tag.style.opacity = '0';
-      });
-      if (result) result.style.opacity = '0';
-    }
-
-    function play() {
-      let t = 700;
-      rows.forEach((row, i) => {
-        if (i === 0) return; // already visible
-        const typing = row.querySelector<HTMLElement>('.typing');
-        const bodyEl = row.querySelector<HTMLElement>('.msg.ai.body');
-        const tag = row.querySelector<HTMLElement>('.tag');
-
-        at(t, () => {
-          row.style.display = 'flex';
-          row.style.animation = 'sfxrise .42s ease';
-          toBottom();
-        });
-
-        if (typing) {
-          const len = bodyEl ? bodyEl.textContent!.length : 40;
-          const dur = Math.max(620, Math.min(1180, len * 16));
-          at(t + dur, () => {
-            typing.style.display = 'none';
-            if (bodyEl) {
-              bodyEl.style.display = 'block';
-              bodyEl.style.animation = 'sfxrise .3s ease';
-            }
-            toBottom();
-          });
-          t += dur + 470;
-        } else {
-          if (tag) {
-            at(t + 240, () => {
-              tag.style.opacity = '1';
-              tag.style.animation = 'sfxrise .35s ease';
-            });
-          }
-          t += 720;
-        }
-      });
-
-      at(t + 260, () => {
-        if (result) {
-          result.style.opacity = '1';
-          result.style.animation = 'sfxrise .5s ease';
-        }
-      });
-    }
-
-    arm();
-
-    let started = false;
-    const start = () => {
-      if (started) return;
-      started = true;
-      play();
-    };
-
-    let obs: IntersectionObserver | undefined;
-    let safety: ReturnType<typeof setTimeout> | undefined;
-    if ('IntersectionObserver' in window && phone) {
-      obs = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              obs?.disconnect();
-              start();
-            }
-          });
-        },
-        { threshold: 0.01, rootMargin: '0px 0px -80px 0px' }
-      );
-      obs.observe(phone);
-      // Safety net for a broken/late observer, but only if the phone is already
-      // on screen. Otherwise (e.g. below the fold on mobile) we wait for the user
-      // to scroll it into view so they actually see the animation play.
-      safety = setTimeout(() => {
-        if (started) return;
-        const rect = phone.getBoundingClientRect();
-        const inView = rect.top < window.innerHeight && rect.bottom > 0;
-        if (inView) start();
-      }, 2500);
-    } else {
-      start();
-    }
-
-    return () => {
-      timers.forEach(clearTimeout);
-      if (safety) clearTimeout(safety);
-      obs?.disconnect();
-    };
-  }, []);
+  const conv = conversations[shown];
 
   return (
     <div className="hero-phone">
-      <div className="convo-wrap" ref={rootRef}>
+      <div className="convo-wrap">
         {/* SurFox mascot peeking out from behind the phone */}
         <Image
           src="/images/peek1.png"
@@ -178,7 +173,11 @@ export function HeroPhone() {
           className="fox-peek"
           priority={false}
         />
-        <div className="phone">
+        <div
+          className="phone"
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
           <div className="screen">
             <div className="island" />
             <div className="statusbar">
@@ -196,84 +195,62 @@ export function HeroPhone() {
               </span>
             </div>
 
-            <div className="convo-top">
-              <div className="avatar">M</div>
-              <div>
-                <div className="nm">Marta R.</div>
-                <div className="sub">Motivated seller · Maple St</div>
-              </div>
-              <span className="live">
-                <i /> AI live
-              </span>
-            </div>
-
-            <div className="thread">
-              <div className="row">
-                <div className="msg ai typing">
-                  <i />
-                  <i />
-                  <i />
-                </div>
-                <div className="msg ai body">
-                  Hi Marta, Alex here with Brightway Homes. Saw you might consider an offer on the
-                  Maple St house. Still open to it?
-                </div>
-              </div>
-              <div className="row r">
-                <span className="tag">reads intent</span>
-                <div className="msg them body">Maybe. Depends what you&apos;re offering.</div>
-              </div>
-              <div className="row">
-                <div className="msg ai typing">
-                  <i />
-                  <i />
-                  <i />
-                </div>
-                <div className="msg ai body">Fair. Ballpark, what number were you hoping for?</div>
-              </div>
-              <div className="row r">
-                <span className="tag">captures price</span>
-                <div className="msg them body">Around 240 if it&apos;s cash and quick</div>
-              </div>
-              <div className="row">
-                <div className="msg ai typing">
-                  <i />
-                  <i />
-                  <i />
-                </div>
-                <div className="msg ai body">
-                  That works on our end. Cash, no repairs, you pick the close date. Got 10 min
-                  tomorrow to talk specifics?
-                </div>
-              </div>
-              <div className="row r">
-                <span className="tag">books call</span>
-                <div className="msg them body">Yeah, after 5 is good</div>
-              </div>
-              <div className="row">
-                <div className="msg ai typing">
-                  <i />
-                  <i />
-                  <i />
-                </div>
-                <div className="msg ai body">Booked you for 5:30. Talk then.</div>
-              </div>
-            </div>
-
-            <div className="result">
-              <div>
-                <div className="hot">Hot · qualified</div>
-                <div className="meta">Motivated · price captured · cash-ready · 3m 12s</div>
-              </div>
-              <div className="booked">
-                <CheckIcon />
+            <div className={`convo-body${fading ? ' is-fading' : ''}`}>
+              <div className="convo-top">
+                <div className="avatar">{conv.avatar}</div>
                 <div>
-                  <div className="b1">Call booked · 5:30 PM</div>
-                  <div className="b2">Handed off to your team</div>
+                  <div className="nm">{conv.name}</div>
+                  <div className="sub">{conv.sub}</div>
+                </div>
+                <span className="live">
+                  <i /> AI live
+                </span>
+              </div>
+
+              <div className="thread">
+                {conv.rows.map((m, i) =>
+                  m.side === 'ai' ? (
+                    <div className="row" key={`${shown}-${i}`}>
+                      <div className="msg ai body">{m.text}</div>
+                    </div>
+                  ) : (
+                    <div className="row r" key={`${shown}-${i}`}>
+                      <span className="tag">{m.tag}</span>
+                      <div className="msg them body">{m.text}</div>
+                    </div>
+                  )
+                )}
+              </div>
+
+              <div className="result">
+                <div>
+                  <div className="hot">Hot · qualified</div>
+                  <div className="meta">{conv.meta}</div>
+                </div>
+                <div className="booked">
+                  <CheckIcon />
+                  <div>
+                    <div className="b1">Call booked · {conv.booked}</div>
+                    <div className="b2">Handed off to your team</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="convo-dots" role="tablist" aria-label="Featured conversations">
+          {conversations.map((c, i) => (
+            <button
+              key={i}
+              type="button"
+              role="tab"
+              aria-selected={i === active}
+              aria-label={`Show ${c.name} conversation`}
+              className={`convo-dot${i === active ? ' is-active' : ''}`}
+              onClick={() => setActive(i)}
+            />
+          ))}
         </div>
       </div>
     </div>
