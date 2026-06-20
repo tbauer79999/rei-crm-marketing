@@ -2,6 +2,7 @@ import '../home.css';
 
 export default function ProofResults() {
   return (
+    <div className="sfx">
     <section className="proof-results">
       <div className="wrap">
         <div className="results-card">
@@ -42,5 +43,6 @@ export default function ProofResults() {
         </div>
       </div>
     </section>
+    </div>
   );
 }
