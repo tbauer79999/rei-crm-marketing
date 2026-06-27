@@ -101,7 +101,6 @@ const plans: Plan[] = [
         h: 'Support & compliance',
         items: [
           { t: 'Priority email & chat support' },
-          { t: '5,000 DNC scrubs per month included' },
           { t: 'Automatic opt-out detection. STOP and inferred opt-out language honored instantly' },
           { t: 'Built on TCPA-compliant infrastructure' },
         ],
@@ -146,7 +145,6 @@ const plans: Plan[] = [
         items: [
           { t: 'White-glove onboarding' },
           { t: 'Dedicated success manager' },
-          { t: '25,000 DNC scrubs per month included' },
           { t: 'Automatic opt-out detection. STOP and inferred opt-out language honored instantly' },
           { t: 'Built on TCPA-compliant infrastructure' },
         ],
@@ -268,12 +266,6 @@ export default function PricingClient() {
 
           <p className="price-note">
             30-day money-back guarantee. No setup fees. No risk.
-          </p>
-          <p
-            className="price-note"
-            style={{ marginTop: 8, textTransform: 'none', letterSpacing: 0 }}
-          >
-            DNC scrubbing is available on paid plans only.
           </p>
         </div>
       </section>

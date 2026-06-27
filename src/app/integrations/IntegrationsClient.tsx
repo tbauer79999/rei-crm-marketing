@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageSquare, Mail, Phone, Database, CreditCard, ShoppingCart, Calendar, CheckCircle, Clock, Circle, LayoutDashboard } from 'lucide-react';
+import { ArrowRight, MessageSquare, Mail, Phone, Database, CreditCard, ShoppingCart, Calendar, CheckCircle, Clock, Circle, LayoutDashboard, Users } from 'lucide-react';
 
 const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
 
@@ -102,6 +102,32 @@ export default function Integrations() {
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
+            </motion.a>
+
+            {/* Follow Up Boss */}
+            <motion.a
+              href="/integrations/follow-up-boss"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm hover:shadow-sm shadow-blue-500/5 transition-shadow group flex flex-col"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
+                  <Users className="w-6 h-6 text-green-600" />
+                </div>
+                <span className="px-2 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                  LIVE
+                </span>
+              </div>
+              <h3 className="text-lg font-semibold text-[#13171F] mb-2">Follow Up Boss</h3>
+              <p className="text-[#5A626E] text-sm leading-relaxed">
+                Native Follow Up Boss integration with stage-based campaign routing and two-way sync. Move a lead into a mapped stage and AI takes over the conversation. No Zapier required.
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#0A7C8C] group-hover:gap-3 transition-all mt-4">
+                View Integration
+                <ArrowRight className="w-4 h-4" />
+              </span>
             </motion.a>
 
             <motion.div

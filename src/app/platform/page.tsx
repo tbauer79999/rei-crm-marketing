@@ -7,7 +7,6 @@ import {
   Brain,
   Plug,
   Zap,
-  ShieldCheck,
   Chrome,
   LayoutDashboard,
   Building2,
@@ -64,11 +63,6 @@ const features = [
     icon: Zap,
     title: 'Zapier Integration',
     desc: 'Connect SurFox AI to 6,000+ apps. Live and public.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'DNC Scrubbing',
-    desc: 'Automatic do-not-contact list scrubbing via Blacklist Alliance (Growth and Scale plans).',
   },
   {
     icon: Chrome,

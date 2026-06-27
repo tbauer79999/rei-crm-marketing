@@ -547,21 +547,6 @@ export default function TermsOfService() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-[#13171F] mb-3">DNC Scrubbing:</h3>
-                <div className="space-y-4 text-[#5A626E] leading-relaxed">
-                  <p>
-                    Growth and Scale plan subscribers receive monthly Do Not Call (DNC) scrubbing credits as part of their plan. Growth includes 5,000 scrub credits per month. Scale includes 25,000 scrub credits per month. Starter plan subscribers do not receive DNC scrubbing.
-                  </p>
-                  <p>
-                    DNC scrubbing is a paid plan feature available once your subscription is active. Scrub credits are consumed per record scrubbed and do not roll over month to month. Unused credits expire at the end of each billing cycle.
-                  </p>
-                  <p>
-                    While SurFox AI provides DNC scrubbing as a platform feature, you remain solely responsible for ensuring your contact lists comply with all applicable do-not-call regulations, including the National Do Not Call Registry. DNC scrubbing is a supplemental compliance tool and does not constitute legal compliance advice or guarantee that all contacts are legally reachable.
-                  </p>
-                </div>
-              </div>
-
-              <div>
                 <h3 className="text-xl font-semibold text-[#13171F] mb-3">Billing:</h3>
                 <ul className="space-y-2 text-[#5A626E]">
                   <li className="flex items-start gap-2">

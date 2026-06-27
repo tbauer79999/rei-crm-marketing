@@ -93,6 +93,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['GoHighLevel integration', 'HighLevel Workflows', 'native HighLevel integration', 'GHL SurFox', 'tag-based campaign routing', 'GHL AI lead qualification', 'GoHighLevel webhook'],
     path: '/integrations/gohighlevel',
   },
+  'integrations-follow-up-boss': {
+    title: 'Follow Up Boss Integration | SurFox AI - Native FUB Integration',
+    description: 'Connect Follow Up Boss to SurFox AI natively. Stage-based campaign routing, two-way sync, no Zapier required. 30-day money-back guarantee.',
+    keywords: ['Follow Up Boss integration', 'FUB SurFox', 'native Follow Up Boss integration', 'FUB AI lead qualification', 'Follow Up Boss webhook', 'real estate AI SMS'],
+    path: '/integrations/follow-up-boss',
+  },
   staffing: {
     title: 'AI SMS Lead Qualification for Staffing Agencies | SurFox AI',
     description: 'SurFox AI qualifies applicants and client leads via SMS automatically. No VA. No SDR. Every lead followed up instantly. Built for high-volume staffing.',
