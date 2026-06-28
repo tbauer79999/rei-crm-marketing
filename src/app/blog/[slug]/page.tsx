@@ -17,17 +17,21 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   if (!blogPost) {
     return {
-      title: 'Post Not Found | SurFox AI',
+      title: 'Post Not Found',
       description: 'The blog post you are looking for could not be found.',
     };
   }
 
+  // metaTitle keeps brand for social cards (OG/Twitter don't use the root title template).
   const metaTitle = blogPost.metaTitle || `${blogPost.title} | SurFox AI`;
+  // baseTitle is the bare title for the <title> tag; the root layout template (`%s | SurFox AI`)
+  // appends branding, so strip any trailing "| SurFox" / "| SurFox AI" to avoid duplication.
+  const baseTitle = (blogPost.metaTitle || blogPost.title).replace(/\s*\|\s*SurFox(?:\s+AI)?\s*$/i, '');
   const metaDescription = blogPost.metaDescription || blogPost.excerpt;
   const url = `https://www.getsurfox.com/blog/${slug}`;
 
   return {
-    title: metaTitle,
+    title: baseTitle,
     description: metaDescription,
     openGraph: {
       title: metaTitle,
@@ -40,7 +44,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       siteName: 'SurFox AI',
       images: [
         {
-          url: blogPost.featuredImage || 'https://www.getsurfox.com/og-image.png',
+          url: blogPost.featuredImage || 'https://www.getsurfox.com/og-default.png',
           width: 1200,
           height: 630,
           alt: metaTitle,

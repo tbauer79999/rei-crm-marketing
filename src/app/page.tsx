@@ -5,7 +5,7 @@ import ProofResults from './components/ProofResults';
 import './home.css';
 
 export const metadata: Metadata = {
-  title: 'SMS Lead Qualification at SMB Pricing | SurFox AI',
+  title: 'SMS Lead Qualification at SMB Pricing',
   description:
     'No human touched this conversation. SurFox AI texts, qualifies, and books your leads autonomously over SMS. Upload your list and watch cold leads become booked calls.',
   keywords: [

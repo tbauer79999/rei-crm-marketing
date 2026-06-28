@@ -9,7 +9,7 @@ export interface PageMetadataConfig {
 
 export const pageMetadata: Record<string, PageMetadataConfig> = {
   homepage: {
-    title: 'SMS Lead Qualification at SMB Pricing | SurFox AI',
+    title: 'SMS Lead Qualification at SMB Pricing',
     description:
       'SurFox AI qualifies your contact list via SMS. Upload thousands of leads, AI works every conversation, your team only talks to the contacts ready to buy. Real conversational AI at SMB pricing.',
     keywords: [
@@ -100,7 +100,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/integrations/follow-up-boss',
   },
   staffing: {
-    title: 'AI SMS Lead Qualification for Staffing Agencies | SurFox AI',
+    title: 'AI SMS Lead Qualification for Staffing Agencies',
     description: 'SurFox AI qualifies applicants and client leads via SMS automatically. No VA. No SDR. Every lead followed up instantly. Built for high-volume staffing.',
     keywords: ['staffing agency SMS automation', 'AI lead qualification staffing', 'applicant follow-up automation', 'SMS AI staffing', 'SurFox AI staffing'],
     path: '/staffing',
@@ -112,13 +112,13 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/wholesalers',
   },
   'home-services': {
-    title: 'AI SMS Lead Follow-Up for Home Services | SurFox AI',
+    title: 'AI SMS Lead Follow-Up for Home Services',
     description: 'SurFox AI responds to new home services leads instantly and reactivates your cold list automatically. Win the job by responding first. Built for HVAC, roofing, plumbing, and more.',
     keywords: ['home services lead follow-up', 'HVAC lead automation', 'roofing SMS automation', 'contractor lead qualification', 'speed to lead home services', 'AI SMS contractors', 'SurFox AI home services'],
     path: '/home-services',
   },
   events: {
-    title: 'AI SMS Follow-up for Events & Entertainment | SurFox AI',
+    title: 'AI SMS Follow-up for Events & Entertainment',
     description: 'SurFox AI follows up with every event attendee and no-show automatically via SMS. Work your badge scans before you leave the venue. Built for trade shows, conferences, and product launches.',
     keywords: ['event lead follow-up', 'trade show lead follow-up', 'badge scan follow-up', 'no-show follow-up', 'event marketing automation', 'AI SMS for events', 'SurFox AI events'],
     path: '/events',
@@ -148,7 +148,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/enterprise',
   },
   industries: {
-    title: 'AI Lead Qualification for Every Industry | SurFox AI',
+    title: 'AI Lead Qualification for Every Industry',
     description: 'Every industry has the same lead problem: slow follow-up and cold contacts. SurFox AI qualifies leads via SMS for staffing, home services, events, real estate, and any business that talks to prospects.',
     keywords: ['AI lead qualification', 'SMS lead follow-up', 'AI for staffing', 'AI for home services', 'AI for events', 'AI for real estate', 'sales AI'],
     path: '/industries',
@@ -293,12 +293,19 @@ export function generatePageMetadata(pageKey: string): Metadata {
   const fullTitle = config.title;
   const url = `https://www.getsurfox.com${config.path}`;
 
+  // The <title> tag is branded by the root layout template ("%s | SurFox AI"), so config.title
+  // is stored bare. OG/Twitter titles do NOT pass through that template, so brand them here to
+  // keep social cards consistent. Guard against double-branding if a title already ends in it.
+  const brandedTitle = /\|\s*SurFox AI\s*$/i.test(fullTitle)
+    ? fullTitle
+    : `${fullTitle} | SurFox AI`;
+
   return {
     title: fullTitle,
     description: config.description,
     keywords: config.keywords,
     openGraph: {
-      title: fullTitle,
+      title: brandedTitle,
       description: config.description,
       url: url,
       type: 'website',
@@ -306,7 +313,7 @@ export function generatePageMetadata(pageKey: string): Metadata {
     },
     twitter: {
       card: 'summary_large_image',
-      title: fullTitle,
+      title: brandedTitle,
       description: config.description,
     },
     alternates: {
