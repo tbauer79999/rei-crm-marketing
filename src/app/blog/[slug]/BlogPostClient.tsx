@@ -113,11 +113,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
       {/* Article Header */}
       <section className="pt-12 pb-6 sm:pt-16 sm:pb-8 md:pt-20 md:pb-8 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             {/* Category Badge */}
             <div className="mb-6">
               <span className="inline-block px-4 py-2 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] text-sm font-semibold text-[#0A7C8C]">
@@ -190,19 +186,14 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Article Content */}
       <section className="pt-0 pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <motion.article
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="prose prose-lg max-w-none"
-          >
+          <article className="prose prose-lg max-w-none">
             {blogPost.content.map((block, index) => {
               switch (block.type) {
                 case 'tldr':
@@ -343,7 +334,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                   return null;
               }
             })}
-          </motion.article>
+          </article>
 
           {/* Author Bio */}
           {(blogPost.authorTitle || blogPost.authorBio) && (
@@ -379,7 +370,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
                 '@type': 'BlogPosting',
                 headline: blogPost.title,
                 description: blogPost.excerpt,
-                image: blogPost.featuredImage || 'https://www.getsurfox.com/og-image.png',
+                image: blogPost.featuredImage || 'https://www.getsurfox.com/og-default.png',
                 author: {
                   '@type': 'Person',
                   name: blogPost.author,
