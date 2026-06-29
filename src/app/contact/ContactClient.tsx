@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Clock, Send, MessageSquare, Linkedin } from 'lucide-react';
 
 const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
 
@@ -128,24 +128,6 @@ export default function Contact() {
                     <h3 className="font-semibold text-[#13171F] mb-1">Email</h3>
                     <a href="mailto:sales@getsurfox.com" className="text-[#5A626E] hover:text-[#0A7C8C] transition">
                       sales@getsurfox.com
-                    </a>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-white border border-[#E4E6E2] hover:border-blue-500/30 hover:shadow-sm shadow-blue-500/5 transition-all"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-[#0A7C8C]" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-[#13171F] mb-1">Phone</h3>
-                    <a href="tel:+18888186402" className="text-[#5A626E] hover:text-[#0A7C8C] transition">
-                      +1 (888) 818-6402
                     </a>
                   </div>
                 </motion.div>
@@ -491,7 +473,7 @@ export default function Contact() {
             {[
               {
                 q: 'How quickly can I expect a response?',
-                a: 'Our team typically responds to inquiries within 24 hours during business days. For urgent matters, please call us directly at +1 (888) 587-7369.'
+                a: 'Our team typically responds to inquiries within 24 hours during business days.'
               },
               {
                 q: 'Can I schedule a demo directly?',
