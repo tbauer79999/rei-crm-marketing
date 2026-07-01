@@ -740,6 +740,55 @@ export default function TermsOfService() {
             </div>
           </motion.div>
 
+          {/* A2P Carrier Registration */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Scale className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                A2P Carrier Registration
+              </h2>
+            </div>
+
+            <div className="ml-0 sm:ml-16 space-y-6 text-[#5A626E] leading-relaxed">
+              <p>
+                To send SMS messages through SurFox AI, your business must be registered with wireless carriers through a process called A2P (Application-to-Person) messaging registration. By subscribing to SurFox AI, you acknowledge and agree that:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>A2P registration is a mandatory prerequisite to sending any messages through the platform</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>Registration is submitted to and reviewed by Twilio and wireless carriers, which are independent third parties outside SurFox AI's control</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>Approval is not guaranteed. Carriers may reject registrations for reasons including but not limited to incomplete business information, website consent language, campaign description, or carrier policy changes</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>Rejection does not constitute a failure of service by SurFox AI and does not entitle you to a refund outside the Money-Back Guarantee terms above</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>If your registration is rejected, SurFox AI will notify you of the reason and assist with resubmission, but cannot guarantee approval on resubmission or any specific timeline</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>Delays or rejections caused by A2P registration do not pause, extend, or otherwise affect your billing cycle</span>
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+
           {/* Service Availability */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
