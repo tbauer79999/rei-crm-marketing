@@ -51,16 +51,27 @@ function renderContent(text: string): React.ReactNode {
 
   while ((match = linkRegex.exec(text)) !== null) {
     if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+    const href = match[2];
     parts.push(
-      <a
-        key={key++}
-        href={match[2]}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline underline-offset-2 opacity-60 hover:opacity-100 transition-opacity text-sm font-medium"
-      >
-        {match[1]}
-      </a>
+      href.startsWith('/') ? (
+        <Link
+          key={key++}
+          href={href}
+          className="underline underline-offset-2 opacity-100 hover:opacity-80 transition-opacity font-medium"
+        >
+          {match[1]}
+        </Link>
+      ) : (
+        <a
+          key={key++}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 opacity-60 hover:opacity-100 transition-opacity text-sm font-medium"
+        >
+          {match[1]}
+        </a>
+      )
     );
     lastIndex = match.index + match[0].length;
   }
