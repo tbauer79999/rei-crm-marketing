@@ -24,7 +24,7 @@ export default function TermsOfService() {
               Terms of Service
             </h1>
             <p className="text-lg sm:text-xl text-[#5A626E] leading-relaxed">
-              Last Updated: May 16, 2026
+              Last Updated: July 3, 2026
             </p>
           </motion.div>
         </div>
@@ -786,6 +786,19 @@ export default function TermsOfService() {
                   <span>Delays or rejections caused by A2P registration do not pause, extend, or otherwise affect your billing cycle</span>
                 </li>
               </ul>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Customer Opt-In Infrastructure Responsibility</h3>
+                <p>
+                  Carrier registration requirements are determined by Twilio and wireless carriers and are subject to change without notice. As part of the A2P registration process, carriers may require changes to your website, lead capture forms, landing pages, CRM workflows, or other systems through which you collect contact information.
+                </p>
+                <p className="mt-4">
+                  You are solely responsible for making any and all modifications to your own systems, platforms, or third-party tools that are required to achieve or maintain A2P registration approval. SurFox AI will notify you of required changes and provide guidance, but cannot make changes to systems outside the Platform on your behalf.
+                </p>
+                <p className="mt-4">
+                  If your website vendor, CRM provider, or any third-party tool cannot support the modifications required by carriers, you are responsible for finding an alternative solution. SurFox AI bears no liability for registration delays, rejections, or your inability to send messages resulting from your failure or inability to implement required changes to your own systems.
+                </p>
+              </div>
             </div>
           </motion.div>
 
