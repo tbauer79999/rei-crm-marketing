@@ -242,7 +242,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Most companies see qualified leads within the first week. Full ROI - where the AI cost is clearly justified by pipeline generated - typically happens within 30-60 days. The fastest wins come from re-engaging dormant lead databases where you\'re finding money in leads you already paid to acquire.'
+        content: 'Most companies see qualified leads within the first week. [Full ROI](/roi) - where the AI cost is clearly justified by pipeline generated - typically happens within 30-60 days. The fastest wins come from re-engaging dormant lead databases where you\'re finding money in leads you already paid to acquire.'
       },
       {
         type: 'subheading',
@@ -767,7 +767,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI-powered qualification flips the traditional model. Instead of humans doing initial outreach and manually scoring responses, AI handles the entire top-of-funnel conversation. It engages every lead instantly, asks qualifying questions, handles objections, and only escalates the prospects worth human attention.'
+        content: '[AI-powered qualification](/blog/what-is-ai-lead-qualification) flips the traditional model. Instead of humans doing initial outreach and manually scoring responses, AI handles the entire top-of-funnel conversation. It engages every lead instantly, asks qualifying questions, handles objections, and only escalates the prospects worth human attention.'
       },
       {
         type: 'paragraph',
@@ -787,7 +787,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The result: your cost per actually-qualified lead drops by 60-80%. Not cost per lead touched - cost per lead ready for a sales conversation.'
+        content: 'The result: your [cost per actually-qualified lead](/blog/ai-lead-qualification-cost-pricing-guide-2026) drops by 60-80%. Not cost per lead touched - cost per lead ready for a sales conversation.'
       },
       {
         type: 'quote',
@@ -901,7 +901,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI lead qualification typically delivers 60-80% reduction in cost per qualified lead, 4x improvement in conversion rates due to faster response times, and significant found revenue from re-engaging dormant databases. Most companies see payback within 3-6 months.'
+        content: 'AI lead qualification typically delivers 60-80% reduction in cost per qualified lead, 4x improvement in conversion rates due to faster response times, and significant found revenue from re-engaging dormant databases. Most companies see [payback within 3-6 months](/roi).'
       },
       {
         type: 'subheading',
@@ -1254,7 +1254,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI is the clear choice when you have a dormant lead database. Those 10,000 old leads sitting in your CRM that your team wrote off? At any given time, 3-5% are back in a buying window. AI can re-engage all of them simultaneously. A human SDR would take months to work through that list manually-by which point the window has closed.'
+        content: 'AI is the clear choice when you have a [dormant lead database](/blog/reactivate-dormant-leads-ai). Those 10,000 old leads sitting in your CRM that your team wrote off? At any given time, 3-5% are back in a buying window. AI can re-engage all of them simultaneously. A human SDR would take months to work through that list manually-by which point the window has closed.'
       },
       {
         type: 'paragraph',
@@ -1318,7 +1318,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'We built an ROI calculator that lets you plug in your actual numbers and see the comparison for your business. It accounts for the hidden costs most people miss-management overhead, ramp time, turnover-and shows you the real math on AI versus human SDRs.'
+        content: 'We built an [ROI calculator](/roi) that lets you plug in your actual numbers and see the comparison for your business. It accounts for the hidden costs most people miss-management overhead, ramp time, turnover-and shows you the real math on AI versus human SDRs.'
       },
       {
         type: 'callout',
@@ -1467,7 +1467,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Here\'s what that looks like in practice: AI sends a natural, conversational text to your dormant database. Something that references their original interest, acknowledges the time gap, and asks a low-pressure question. When someone responds, AI continues the conversation - asking qualifying questions, gauging intent, handling basic objections. When the lead shows real buying signals, AI escalates to your human closer with the full conversation history. Your rep walks into a warm conversation with a prospect who\'s already expressed interest.'
+        content: 'Here\'s what that looks like in practice: AI sends a natural, conversational text to your dormant database. Something that references their original interest, acknowledges the time gap, and asks a low-pressure question. When someone responds, AI continues the conversation - [asking qualifying questions](/blog/what-is-ai-lead-qualification), gauging intent, handling basic objections. When the lead shows real buying signals, AI escalates to your human closer with the full conversation history. Your rep walks into a warm conversation with a prospect who\'s already expressed interest.'
       },
       {
         type: 'callout',
@@ -1605,7 +1605,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Absolutely. Dormant lead reactivation has the highest ROI of any sales AI use case because you\'re monetizing leads you already paid to acquire. The acquisition cost is zero - you\'re only paying for the AI platform to re-engage them. Most companies see payback within weeks, not months.'
+        content: 'Absolutely. Dormant lead reactivation has the highest ROI of any sales AI use case because you\'re monetizing leads you already paid to acquire. The acquisition cost is zero - you\'re only paying for the AI platform to re-engage them. Most companies see [payback within weeks](/blog/ai-lead-qualification-cost-pricing-guide-2026), not months.'
       },
       {
         type: 'subheading',
@@ -1718,7 +1718,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI-powered lead qualification via SMS flips every one of these problems. Instead of human SDRs manually qualifying leads with inconsistent standards and slow response times, AI handles initial conversations at scale - instantly, consistently, and without bias.'
+        content: '[AI-powered lead qualification](/blog/what-is-ai-lead-qualification) via SMS flips every one of these problems. Instead of human SDRs manually qualifying leads with inconsistent standards and slow response times, AI handles initial conversations at scale - instantly, consistently, and without bias.'
       },
       {
         type: 'paragraph',
@@ -1822,7 +1822,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI responds in under 60 seconds. At 2am on a Saturday. During your team meeting. While your SDRs are on other calls. Every lead gets engaged immediately, right when their intent is highest. This alone can double your qualification rate - not because AI is smarter, but because it is faster.'
+        content: 'AI responds in under 60 seconds. At 2am on a Saturday. During your team meeting. While your SDRs are on other calls. Every lead gets engaged immediately, right when their intent is highest. This alone can [double your qualification rate](/blog/qualify-leads-faster-ai) - not because AI is smarter, but because it is faster.'
       },
       {
         type: 'heading',
@@ -1980,7 +1980,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Yes. Small teams benefit most because AI handles qualification volume that would require multiple SDRs, responds 24/7 when human teams are offline, and provides consistent scoring that makes limited pipeline more predictable. One AI qualification system can reduce customer acquisition cost by up to 60% while handling qualification volume that would otherwise require multiple SDRs.'
+        content: 'Yes. Small teams benefit most because AI handles qualification volume that would require multiple SDRs, responds 24/7 when human teams are offline, and provides consistent scoring that makes limited pipeline more predictable. One AI qualification system can [reduce customer acquisition cost by up to 60%](/roi) while handling qualification volume that would otherwise require multiple SDRs.'
       }
     ],
     relatedPosts: ['ai-sdr-vs-hiring-sdr-roi-2026', 'qualify-leads-faster-ai', 'reactivate-dormant-leads-ai']
@@ -2536,7 +2536,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The inflated metrics were symptoms of a deeper issue: the gap between what AI SDR tools demo and what they deliver in production is often enormous. A controlled demo with seeded data looks nothing like a live deployment against a real prospect list with real variability.'
+        content: 'The inflated metrics were symptoms of a deeper issue: [the gap between what AI SDR tools demo and what they deliver](/blog/why-ai-sdr-tools-fail) in production is often enormous. A controlled demo with seeded data looks nothing like a live deployment against a real prospect list with real variability.'
       },
       {
         type: 'quote',
@@ -2648,7 +2648,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'SurFox AI uses SMS instead of email, which sidesteps deliverability issues entirely. It is built for qualification and warm handoff - not blast volume. And it is priced to make the cost of trying it lower than the cost of a single bad hire.'
+        content: 'SurFox AI uses SMS instead of email, which sidesteps deliverability issues entirely. It is built for qualification and warm handoff - not blast volume. And it is [priced to make the cost of trying it lower](/pricing) than the cost of a single bad hire.'
       },
       {
         type: 'subheading',
@@ -2815,7 +2815,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'A prospect fills out a demo request form at 11pm on a Friday. Without AI, that lead sits until Monday morning. With AI qualification, the system engages the prospect immediately, asks the right follow-up questions, and routes a fully qualified lead to the right rep before the weekend is over. Speed-to-lead is the single biggest driver of inbound conversion rates.'
+        content: 'A prospect fills out a demo request form at 11pm on a Friday. Without AI, that lead sits until Monday morning. With AI qualification, the system engages the prospect immediately, asks the right follow-up questions, and routes a fully qualified lead to the right rep before the weekend is over. [Speed-to-lead](/blog/qualify-leads-faster-ai) is the single biggest driver of inbound conversion rates.'
       },
       {
         type: 'subheading',
@@ -2894,7 +2894,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The cost-per-qualified-lead metric tells the clearest story. Organizations report the cost dropping from $300 per qualified lead to approximately $50 over a 12-month implementation period. Most businesses see positive ROI within 60 to 90 days. High performers in e-commerce and healthcare report returns exceeding 500%.'
+        content: 'The cost-per-qualified-lead metric tells the clearest story. Organizations report the cost dropping from $300 per qualified lead to approximately $50 over a 12-month implementation period. Most businesses see [positive ROI within 60 to 90 days](/roi). High performers in e-commerce and healthcare report returns exceeding 500%.'
       },
       {
         type: 'paragraph',
@@ -3033,7 +3033,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI lead qualification platforms typically range from $12,000 to $60,000 per year depending on message volume, features, and tier. This compares favorably to a team of three to five SDRs, which costs $540,000 to $900,000 over three years when you include salary, benefits, training, and turnover. SurFox AI starts at $147/month for teams getting started with SMS-based qualification.'
+        content: 'AI lead qualification platforms typically [range from $12,000 to $60,000 per year](/blog/ai-lead-qualification-cost-pricing-guide-2026) depending on message volume, features, and tier. This compares favorably to a team of three to five SDRs, which costs $540,000 to $900,000 over three years when you include salary, benefits, training, and turnover. SurFox AI starts at $147/month for teams getting started with SMS-based qualification.'
       },
     ]
   }
@@ -3384,7 +3384,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The pricing architecture for AI lead qualification has matured well beyond simple per-user SaaS subscriptions. In 2026, the market uses four primary models - and understanding which one applies to a given platform tells you a lot about how they expect to grow with you.'
+        content: 'The pricing architecture for [AI lead qualification](/blog/what-is-ai-lead-qualification) has matured well beyond simple per-user SaaS subscriptions. In 2026, the market uses four primary models - and understanding which one applies to a given platform tells you a lot about how they expect to grow with you.'
       },
       {
         type: 'paragraph',
@@ -3621,11 +3621,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'For smaller teams using AI qualification on SMS campaigns - the SurFox AI use case - the math is even simpler. At $597 per month on the Growth plan, a single additional deal closed from AI-qualified leads covers multiple months of platform cost. Most real estate wholesalers, staffing agencies, and home service companies running meaningful SMS volume find the ROI case closes itself.'
+        content: 'For smaller teams using AI qualification on SMS campaigns - the SurFox AI use case - the math is even simpler. At [$597 per month on the Growth plan](/pricing), a single additional deal closed from AI-qualified leads covers multiple months of platform cost. Most real estate wholesalers, staffing agencies, and home service companies running meaningful SMS volume find the ROI case closes itself.'
       },
       {
         type: 'paragraph',
-        content: 'Most businesses see positive ROI within 60 to 90 days of implementation. The organizations that see the strongest returns treat the initial configuration as a strategic investment rather than a setup task - defining clear qualification criteria, verifying their lead data, and monitoring early conversations before scaling volume.'
+        content: 'Most businesses see [positive ROI within 60 to 90 days](/roi) of implementation. The organizations that see the strongest returns treat the initial configuration as a strategic investment rather than a setup task - defining clear qualification criteria, verifying their lead data, and monitoring early conversations before scaling volume.'
       },
       {
         type: 'heading',
@@ -3844,7 +3844,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'For the individual exhibitor, the math is more immediate. A mid-market firm spending $30,000 to attend four shows a year is investing $7,500 per show in booth, travel, staff time, and logistics. If 80% of the resulting leads receive no follow-up, that firm is treating $24,000 of every $30,000 as a sunk cost they have decided in advance to lose.'
+        content: 'For the individual exhibitor, the math is more immediate. A mid-market firm spending $30,000 to attend four shows a year is investing $7,500 per show in booth, travel, staff time, and logistics. If 80% of the resulting leads [receive no follow-up](/blog/trade-show-lead-follow-up-failure), that firm is treating $24,000 of every $30,000 as a sunk cost they have decided in advance to lose.'
       },
       {
         type: 'paragraph',
@@ -4006,7 +4006,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'If your VA responds in 15 minutes instead of 5, that\'s a 10-minute delay on every lead. On a business generating $500,000 in annual revenue from inbound leads, that\'s $75,000 in lost revenue every year. Not from bad leads. From slow ones.'
+        content: 'If your VA responds in 15 minutes instead of 5, that\'s a 10-minute delay on every lead. On a business generating $500,000 in annual revenue from inbound leads, that\'s [$75,000 in lost revenue every year](/roi). Not from bad leads. From slow ones.'
       },
       {
         type: 'paragraph',
@@ -4046,7 +4046,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'A lead texts your number at 9:17pm on a Tuesday. They\'re a motivated seller. They want to know if you\'re still buying in their area.'
+        content: 'A lead texts your number at 9:17pm on a Tuesday. They\'re a [motivated seller](/blog/motivated-seller-texts-9pm). They want to know if you\'re still buying in their area.'
       },
       {
         type: 'paragraph',
@@ -4246,7 +4246,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'list',
         items: [
-          '**Forward leads to a VA who works business hours.** The VA is great during the day. At 9pm they\'re unavailable.',
+          '**Forward leads to [a VA who works business hours](/blog/va-costing-you-deals).** The VA is great during the day. At 9pm they\'re unavailable.',
           '**Set up an auto-reply email.** The seller submitted via text or form. The email goes to an inbox they\'re not checking at 9pm.',
           '**Personally monitor their phone.** Until they don\'t. Because nobody can be on call 24 hours a day indefinitely.'
         ]
@@ -4507,7 +4507,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The agencies closing this gap are using AI to engage candidates immediately when they submit, regardless of time of day. The first message goes out in minutes, not hours. It confirms receipt, sets expectations for next steps, asks qualifying questions to advance the screening process, and keeps the candidate engaged while your recruiters are handling other calls.'
+        content: 'The agencies closing this gap are using AI to engage candidates immediately when they submit, regardless of time of day. The first message goes out in minutes, not hours. It confirms receipt, sets expectations for next steps, [asks qualifying questions](/blog/qualify-leads-faster-ai) to advance the screening process, and keeps the candidate engaged while your recruiters are handling other calls.'
       },
       {
         type: 'paragraph',
@@ -4531,7 +4531,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Candidates who feel ignored are 37% less likely to work with the same agency in the future, even if they eventually find placement elsewhere. In an industry where candidate relationships drive repeat business and referrals, each dropped follow-up erodes the database you have been building.'
+        content: 'Candidates who feel ignored are 37% less likely to work with the same agency in the future, even if they eventually find placement elsewhere. In an industry where candidate relationships drive repeat business and referrals, each dropped follow-up erodes [the database you have been building](/blog/reactivate-dormant-leads-ai).'
       },
       {
         type: 'paragraph',
