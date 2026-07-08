@@ -39,6 +39,20 @@ const PLANS = {
     ],
     description: 'Advanced features for growing businesses'
   },
+  growth_plus: {
+    name: 'Growth Plus',
+    price: 1497,
+    priceId: 'price_GROWTHPLUS_LIVE_REPLACE',
+    leads: '25,000 monthly messages (in & out)',
+    keyFeatures: [
+      'Everything in Scale, just 25,000 messages:',
+      'Unlimited AI knowledge base uploads',
+      '1000 conversation memory/learning',
+      'Message A/B testing',
+      '15 team seats'
+    ],
+    description: 'Full Scale power, sized for 25,000 messages a month'
+  },
   scale: {
     name: 'Scale',
     price: 2497,

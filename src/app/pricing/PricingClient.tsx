@@ -6,7 +6,7 @@ import '../home.css';
 
 type FeatureItem = { t: string; sub?: string; off?: boolean };
 type Plan = {
-  slug: 'starter' | 'growth' | 'scale';
+  slug: 'starter' | 'growth' | 'growth_plus' | 'scale';
   name: string;
   desc: string;
   price: string;
@@ -101,6 +101,50 @@ const plans: Plan[] = [
         h: 'Support & compliance',
         items: [
           { t: 'Priority email & chat support' },
+          { t: 'Automatic opt-out detection. STOP and inferred opt-out language honored instantly' },
+          { t: 'Built on TCPA-compliant infrastructure' },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'growth_plus',
+    name: 'Growth Plus',
+    desc: 'Full Scale intelligence, sized for a 25,000 message month.',
+    price: '$1,497',
+    vol: '25,000 messages / mo',
+    callout: 'Everything in Scale, including learning from your last 1,000 conversations. Just 25,000 messages.',
+    popular: false,
+    btn: 'btn-ghost',
+    groups: [
+      {
+        h: 'Monthly limits',
+        items: [
+          {
+            t: '25,000 SMS messages per month',
+            sub: 'Each conversation uses ~4 to 8 messages (your outbound plus lead replies combined).',
+          },
+          {
+            t: '2,000 website chat conversations per month',
+            sub: 'Qualifies inbound website visitors 24/7.',
+          },
+          { t: '15 team member accounts' },
+        ],
+      },
+      {
+        h: 'AI capabilities',
+        items: [
+          { t: 'Everything in Growth, plus:' },
+          { t: 'Conversation learning (last 1,000)' },
+          { t: 'Multiple personas & campaigns' },
+          { t: 'Unlimited knowledge base uploads' },
+        ],
+      },
+      {
+        h: 'Support & compliance',
+        items: [
+          { t: 'White-glove onboarding' },
+          { t: 'Dedicated success manager' },
           { t: 'Automatic opt-out detection. STOP and inferred opt-out language honored instantly' },
           { t: 'Built on TCPA-compliant infrastructure' },
         ],

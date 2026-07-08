@@ -81,12 +81,27 @@ const plans = [
     popular: true,
   },
   {
+    name: 'Growth Plus',
+    desc: 'Full Scale intelligence, sized for a 25,000 message month.',
+    price: '$1,497',
+    vol: '25,000 messages / mo',
+    features: [
+      'Everything in Growth',
+      'Conversation learning (last 1,000)',
+      'Multiple personas & campaigns',
+      'Unlimited knowledge base uploads',
+    ],
+    btn: 'btn-ghost',
+    href: '/subscribe/growth_plus',
+    popular: false,
+  },
+  {
     name: 'Scale',
     desc: 'For high-volume operations running constant campaigns.',
     price: '$2,497',
     vol: '40,000 messages / mo',
     features: [
-      'Everything in Growth',
+      'Everything in Growth Plus',
       'Conversation learning (last 1,000)',
       'Multiple personas & campaigns',
       'Priority support',

@@ -38,6 +38,7 @@ function BusinessSignupContent() {
   const standardPricing = {
     starter: { monthly: 147, yearly: 1470 },
     growth: { monthly: 597, yearly: 5970 },
+    growth_plus: { monthly: 1497, yearly: 14970 },
     scale: { monthly: 2497, yearly: 24970 }
   };
 
@@ -267,7 +268,7 @@ function BusinessSignupContent() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Starter Plan */}
           <div className="bg-white rounded-2xl shadow-sm shadow-blue-500/5 shadow-blue-500/5 overflow-hidden border-2 border-[#E4E6E2]">
             <div className="p-6">
@@ -367,6 +368,60 @@ function BusinessSignupContent() {
 
               <button
                 onClick={() => handleCheckout('growth', 'month')}
+                disabled={processingPayment}
+                className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50"
+              >
+                {processingPayment ? 'Processing...' : 'Get Started'}
+              </button>
+            </div>
+          </div>
+
+          {/* Growth Plus Plan */}
+          <div className="bg-white rounded-2xl shadow-sm shadow-blue-500/5 overflow-hidden border-2 border-[#E4E6E2]">
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-[#13171F] mb-2">Growth Plus</h3>
+              <p className="text-[#5A626E] text-sm mb-4">Full Scale power, 25,000 messages</p>
+
+              <div className="mb-4">
+                <div className="flex items-baseline gap-2">
+                  {invitation.business_admin_discount > 0 && (
+                    <span className="text-2xl text-[#8A92A0] line-through">
+                      ${standardPricing.growth_plus.monthly}
+                    </span>
+                  )}
+                  <span className="text-4xl font-bold text-[#13171F]">
+                    ${calculateDiscountedPrice(standardPricing.growth_plus.monthly)}
+                  </span>
+                  <span className="text-[#5A626E]">/month</span>
+                </div>
+                {invitation.business_admin_discount > 0 && (
+                  <p className="text-sm text-green-400 font-medium mt-1">
+                    Save ${standardPricing.growth_plus.monthly - calculateDiscountedPrice(standardPricing.growth_plus.monthly)}/month
+                  </p>
+                )}
+              </div>
+
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-[#5A626E]">25,000 messages/month</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-[#5A626E]">Everything in Scale</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-[#5A626E]">White-glove onboarding</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <span className="text-[#5A626E]">Dedicated support</span>
+                </li>
+              </ul>
+
+              <button
+                onClick={() => handleCheckout('growth_plus', 'month')}
                 disabled={processingPayment}
                 className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50"
               >
