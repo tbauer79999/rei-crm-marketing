@@ -42,7 +42,7 @@ const PLANS = {
   growth_plus: {
     name: 'Growth Plus',
     price: 1497,
-    priceId: 'price_GROWTHPLUS_LIVE_REPLACE',
+    priceId: 'price_1Tqya92Mug1fO97sivQSdhhy',
     leads: '25,000 monthly messages (in & out)',
     keyFeatures: [
       'Everything in Scale, just 25,000 messages:',
