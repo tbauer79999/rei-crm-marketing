@@ -261,6 +261,11 @@ export default function Page() {
               No human touched this conversation. SurFox AI texted, qualified, and booked, while you
               were doing something else.
             </p>
+            <p className="capsule">
+              SurFox AI is an AI-powered SMS lead qualification platform that responds to inbound
+              leads within seconds, qualifies conversations autonomously, and hands your team a warm
+              prospect ready to close, 24 hours a day, 7 days a week, without human involvement.
+            </p>
             <div className="hero-cta">
               <a className="btn btn-ink" href="#pricing">
                 Start today

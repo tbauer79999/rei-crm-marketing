@@ -98,6 +98,7 @@
 .sfx .hero h1 { font-size: 52px; font-weight: 600; margin: 0 0 20px; line-height: 1.04; }
 .sfx .hero h1 em { font-style: normal; color: var(--cyan-deep); }
 .sfx .hero .lede { font-size: 19px; color: var(--muted); max-width: 470px; margin: 0 0 30px; }
+.sfx .hero .capsule { font-size: 15px; font-weight: 600; color: var(--muted); max-width: 470px; line-height: 1.55; margin: 0 0 30px; }
 .sfx .hero-cta { display: flex; gap: 14px; justify-content: flex-start; }
 .sfx .hero-phone { display: flex; justify-content: center; min-width: 0; }
 
