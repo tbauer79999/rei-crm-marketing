@@ -94,6 +94,10 @@ export default function Page() {
               You were on a job. They didn&apos;t leave a voicemail. SurFox AI responds the second they reach out, qualifying the conversation, asking the right questions, and flagging the ones worth calling back.
             </p>
 
+            <p className="text-base sm:text-lg font-semibold text-[#5A626E] mb-10 max-w-3xl mx-auto leading-relaxed">
+              SurFox AI is an AI-powered SMS lead qualification platform that responds to inbound service requests within seconds, qualifies conversations autonomously, and hands your team a booked appointment ready to confirm, 24 hours a day, 7 days a week, without human involvement.
+            </p>
+
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <a
                 href="/pricing"

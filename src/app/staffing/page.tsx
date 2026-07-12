@@ -91,6 +91,10 @@ export default function Page() {
               SurFox AI qualifies every applicant the moment they reply. Hot leads routed to your team instantly. No VA. No SDR. No manual work.
             </p>
 
+            <p className="text-base sm:text-lg font-semibold text-[#5A626E] mb-10 max-w-3xl mx-auto leading-relaxed">
+              SurFox AI is an AI-powered SMS lead qualification platform that responds to candidate and client inquiries within seconds, qualifies conversations autonomously, and hands your team a warm prospect ready to engage, 24 hours a day, 7 days a week, without human involvement.
+            </p>
+
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <a
                 href="/demo"
