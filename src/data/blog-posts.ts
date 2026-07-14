@@ -4840,7 +4840,7 @@ export const blogPosts: BlogPost[] = [
         headline: 'See how SurFox AI handles after-hours leads.',
         subhead: 'SurFox AI answers every inbound lead by SMS within seconds, day or night, qualifies the conversation, and hands your team a warm lead ready to book before your competitor picks up.',
         primaryButton: { text: 'Start today', href: '/pricing' },
-        secondaryButton: { text: 'See pricing', href: '/pricing' }
+        secondaryButton: { text: 'See how it works', href: '/platform' }
       },
       {
         type: 'heading',

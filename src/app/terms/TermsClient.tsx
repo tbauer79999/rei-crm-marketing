@@ -295,6 +295,10 @@ export default function TermsOfService() {
                     <span className="text-[#0A7C8C] mt-1">•</span>
                     <span>You will not upload numbers belonging to individuals who have previously opted out, requested removal, or are on any do-not-contact list</span>
                   </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span>You have not and will not upload contact lists that were purchased, rented, leased, scraped, or obtained from any third-party data broker, list vendor, or affiliate network, regardless of how the list was marketed or described. Only contact lists for which you can provide a verifiable, first-party consent audit trail, documenting when, where, and how each individual consented to receive SMS communications from your specific organization, are permitted on the platform.</span>
+                  </li>
                 </ul>
               </div>
 
@@ -1024,7 +1028,7 @@ export default function TermsOfService() {
                 </li>
               </ul>
               <p className="font-semibold text-[#13171F]">
-                This indemnification obligation survives termination of your account.
+                This indemnification obligation is uncapped and expressly supersedes and survives any limitation of liability set forth elsewhere in these Terms, including but not limited to the maximum liability cap in the Limitations of Liability section. This indemnification obligation survives termination of your account.
               </p>
             </div>
           </motion.div>
