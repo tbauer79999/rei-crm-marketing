@@ -70,7 +70,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/leadership',
   },
   blog: {
-    title: 'Insights - AI, Sales Strategy & Product Updates',
+    title: 'AI Lead Qualification Blog',
     description: 'Expert insights on AI, sales intelligence, and the future of customer engagement. Stay updated with the latest from SurFox AI.',
     keywords: ['AI sales blog', 'SMS lead qualification insights', 'sales strategy', 'AI technology'],
     path: '/blog',
@@ -88,13 +88,13 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/integrations',
   },
   'integrations-gohighlevel': {
-    title: 'GoHighLevel Integration | SurFox AI - Native HighLevel Workflows',
+    title: 'GoHighLevel Integration - Native HighLevel Workflows',
     description: 'Connect HighLevel to SurFox AI directly. Native integration with tag-based campaign routing. No Zapier required. 30-day money-back guarantee.',
     keywords: ['GoHighLevel integration', 'HighLevel Workflows', 'native HighLevel integration', 'GHL SurFox', 'tag-based campaign routing', 'GHL AI lead qualification', 'GoHighLevel webhook'],
     path: '/integrations/gohighlevel',
   },
   'integrations-follow-up-boss': {
-    title: 'Follow Up Boss Integration | SurFox AI - Native FUB Integration',
+    title: 'Follow Up Boss Integration - Native FUB Integration',
     description: 'Connect Follow Up Boss to SurFox AI natively. Stage-based campaign routing, two-way sync, no Zapier required. 30-day money-back guarantee.',
     keywords: ['Follow Up Boss integration', 'FUB SurFox', 'native Follow Up Boss integration', 'FUB AI lead qualification', 'Follow Up Boss webhook', 'real estate AI SMS'],
     path: '/integrations/follow-up-boss',
@@ -140,12 +140,6 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     description: 'Read SurFox AI\'s Terms of Service. Understand your rights, responsibilities, and our service guarantees when using the platform.',
     keywords: ['terms of service', 'terms and conditions', 'legal agreement', 'user agreement', 'TOS'],
     path: '/terms',
-  },
-  enterprise: {
-    title: 'Enterprise Solutions - AI at Scale',
-    description: 'Enterprise-grade AI sales intelligence for large teams. Custom deployment, dedicated support, and advanced security features.',
-    keywords: ['enterprise AI', 'enterprise sales software', 'large team solutions', 'custom deployment'],
-    path: '/enterprise',
   },
   industries: {
     title: 'AI Lead Qualification for Every Industry',
