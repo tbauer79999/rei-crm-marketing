@@ -8,25 +8,6 @@ export interface PageMetadataConfig {
 }
 
 export const pageMetadata: Record<string, PageMetadataConfig> = {
-  homepage: {
-    title: 'SMS Lead Qualification at SMB Pricing',
-    description:
-      'SurFox AI qualifies your contact list via SMS. Upload thousands of leads, AI works every conversation, your team only talks to the contacts ready to buy. Real conversational AI at SMB pricing.',
-    keywords: [
-      'SMS lead qualification',
-      'AI lead qualification software',
-      'automated lead qualification',
-      'AI SMS for real estate',
-      'AI SMS for staffing',
-      'cold list activation',
-      'speed to lead AI',
-      'real estate wholesaler SMS',
-      'conversational AI SMS',
-      'AI text qualification',
-      'lead scoring software',
-    ],
-    path: '/',
-  },
   platform: {
     title: 'AI SMS Lead Qualification Platform',
     description: 'AI-powered SMS lead qualification platform. Automatically engage, qualify, and schedule appointments with leads 24/7. Automate lead qualification without hiring.',
@@ -44,12 +25,6 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     description: 'Have questions about SurFox AI? Get in touch with our team. We\'re here to help you transform your sales process with AI-powered intelligence.',
     keywords: ['contact SurFox AI', 'sales inquiry', 'product demo', 'customer support'],
     path: '/contact',
-  },
-  engage: {
-    title: 'SurFox Engage - AI-Powered Lead Qualification',
-    description: 'Automatically qualify leads via SMS with AI. Upload leads, let AI engage and score them, your team only talks to hot prospects. Try SurFox Engage today.',
-    keywords: ['AI lead qualification', 'SMS lead engagement', 'automated lead scoring', 'SurFox Engage'],
-    path: '/engage',
   },
   pricing: {
     title: 'Pricing - Pay for messages, not headcount',
