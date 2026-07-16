@@ -1,4 +1,4 @@
-import { generatePageMetadata } from '@/data/page-metadata';
+import { generatePageMetadata, generateSoftwareApplicationSchema } from '@/data/page-metadata';
 import {
   ArrowRight,
   Calculator,
@@ -24,8 +24,65 @@ const speedStats = [
   { stat: '24/7', desc: 'AI monitors for replies - even nights and weekends' },
 ];
 
+const faqData = [
+  {
+    question: 'What is the ROI of AI lead qualification?',
+    answer:
+      'It comes from three places: a lower cost per qualified lead, faster response times, and revenue recovered from leads you already paid for. A human SDR costs $262 per qualified lead. With SurFox AI that figure drops to $26. The AI also works your entire database rather than the slice one rep has time to cover, so the same list produces more qualified conversations without adding headcount.',
+  },
+  {
+    question: 'How much does a human SDR actually cost per year?',
+    answer:
+      'The visible costs run $91,000 to $129,400 once you add base salary, commission, benefits and taxes, and the tech stack. Hidden costs push the true figure to $105,000 to $165,000: management overhead, a 3 to 4 month ramp where you pay full salary for 25 to 50% output, and turnover replacement at $100,000 to $115,000 per departure against an average tenure of 14 to 18 months.',
+  },
+  {
+    question: 'What is the ROI of reactivating a cold or dormant lead list?',
+    answer:
+      'Take 10,000 old leads sitting in your CRM. At a 3% engagement rate that is 300 conversations, and at a 10% qualification rate that is 30 qualified appointments. At a $3,000 average deal, that is $90,000 in revenue from leads you already own, with no new ad spend and no new lead acquisition cost.',
+  },
+  {
+    question: 'How much does speed to lead affect ROI?',
+    answer:
+      'A lead responded to within 5 minutes is 21 times more likely to convert, and qualification odds drop roughly 80% after just 5 minutes of delay. 78% of customers buy from whoever responds first. SurFox AI replies in under 60 seconds, 24 hours a day, against an average human response time of 42 to 47 hours on re-engaged leads.',
+  },
+  {
+    question: 'How quickly will I see a return?',
+    answer:
+      'There is no ramp period. SurFox AI starts working your list in minutes rather than the 3 to 4 months a new hire needs to reach productivity. Most customers see their first qualified lead within 7 to 14 days, depending on your industry and the quality of your list.',
+  },
+];
+
+// Built from faqData so the markup always matches the FAQ rendered on the page.
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function Page() {
+  const softwareSchema = generateSoftwareApplicationSchema();
+
   return (
+    <>
+      {/* SoftwareApplication schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+
+      {/* FAQPage schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
     <div className="bg-[#F4F5F3] text-foreground">
 
       {/* Hero Section */}
@@ -205,7 +262,7 @@ export default function Page() {
                 <tr>
                   <td className="px-6 py-4 text-[#5A626E]">Annual Cost</td>
                   <td className="px-6 py-4 text-[#13171F] font-medium">$105,000 – $165,000</td>
-                  <td className="px-6 py-4 text-[#0A7C8C] font-semibold">$5,964 – $23,964</td>
+                  <td className="px-6 py-4 text-[#0A7C8C] font-semibold">$1,764 – $29,964</td>
                 </tr>
                 <tr className="bg-[#F4F5F3]/50">
                   <td className="px-6 py-4 text-[#5A626E]">Response Time to Replies</td>
@@ -389,6 +446,29 @@ export default function Page() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#13171F] mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-[#5A626E]">
+              Common questions about the ROI of AI lead qualification
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <div key={index} className="p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
+                <h3 className="text-lg font-semibold text-[#13171F] mb-3">{faq.question}</h3>
+                <p className="text-[#5A626E] leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-4xl mx-auto text-center">
@@ -426,5 +506,6 @@ export default function Page() {
         </div>
       </section>
     </div>
+    </>
   );
 }

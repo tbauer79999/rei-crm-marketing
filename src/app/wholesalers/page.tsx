@@ -1,4 +1,4 @@
-import { generatePageMetadata } from '@/data/page-metadata';
+import { generatePageMetadata, generateSoftwareApplicationSchema } from '@/data/page-metadata';
 import { ArrowRight, CheckCircle, XCircle, MessageSquare, Zap, Clock, BarChart2, Bell } from 'lucide-react';
 
 export const metadata = generatePageMetadata('wholesalers');
@@ -72,7 +72,20 @@ const objections = [
 ];
 
 export default function Page() {
+  const softwareSchema = generateSoftwareApplicationSchema({
+    audienceType: 'Real estate wholesalers and investors',
+    featureList:
+      'Qualifies every motivated seller reply instantly over SMS and flags the deals worth calling, so wholesalers stop sorting cold replies by hand.',
+  });
+
   return (
+    <>
+      {/* SoftwareApplication schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+
     <div className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Section 1: Hero */}
@@ -303,5 +316,6 @@ export default function Page() {
         </div>
       </section>
     </div>
+    </>
   );
 }

@@ -4,7 +4,7 @@ import PricingClient from './PricingClient';
 export const metadata = generatePageMetadata('pricing');
 
 export default function Page() {
-  // Product Schema for all three pricing tiers
+  // Product Schema for all four pricing tiers
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -59,6 +59,28 @@ export default function Page() {
           "@type": "Service",
           "name": "SurFox Growth",
           "description": "10,000 messages per month (in & out), 5 team member accounts, AI learns from 100 conversations, advanced objection handling, Chrome extension for lead capture, priority email & chat support, funnel module"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Growth Plus Plan",
+        "description": "Full Scale intelligence, sized for a 25,000 message month. Everything in Scale, including learning from your last 1,000 conversations.",
+        "price": "1497",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.getsurfox.com/subscribe/growth_plus",
+        "billingIncrement": "P1M",
+        "category": "Subscription",
+        "eligibleQuantity": {
+          "@type": "QuantitativeValue",
+          "value": "15",
+          "unitText": "team members"
+        },
+        "itemOffered": {
+          "@type": "Service",
+          "name": "SurFox Growth Plus",
+          "description": "25,000 messages per month (in & out), 2,000 website chat conversations per month, 15 team member accounts, AI learns from 1000 conversations, multiple personas & campaigns, unlimited knowledge base uploads, white-glove onboarding, dedicated success manager"
         }
       },
       {

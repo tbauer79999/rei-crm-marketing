@@ -1,4 +1,4 @@
-import { generatePageMetadata } from '@/data/page-metadata';
+import { generatePageMetadata, generateSoftwareApplicationSchema } from '@/data/page-metadata';
 import {
   ArrowRight,
   MessageSquare,
@@ -84,7 +84,16 @@ const features = [
 const integrations = ['GoHighLevel', 'Zapier', 'Twilio', 'Retell AI'];
 
 export default function Page() {
+  const softwareSchema = generateSoftwareApplicationSchema();
+
   return (
+    <>
+      {/* SoftwareApplication schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+
     <div className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Hero */}
@@ -235,5 +244,6 @@ export default function Page() {
         </div>
       </section>
     </div>
+    </>
   );
 }

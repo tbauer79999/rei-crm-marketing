@@ -1,4 +1,4 @@
-import { generatePageMetadata } from '@/data/page-metadata';
+import { generatePageMetadata, generateSoftwareApplicationSchema } from '@/data/page-metadata';
 import { ArrowRight, CheckCircle, XCircle, MessageSquare, Phone, Zap, Clock, Wrench, RefreshCw } from 'lucide-react';
 
 export const metadata = generatePageMetadata('home-services');
@@ -74,7 +74,20 @@ const objections = [
 ];
 
 export default function Page() {
+  const softwareSchema = generateSoftwareApplicationSchema({
+    audienceType: 'Home services contractors, including HVAC, roofing, and plumbing',
+    featureList:
+      'Responds to new home services leads within seconds over SMS and reactivates cold lists automatically, so contractors win the job by responding first.',
+  });
+
   return (
+    <>
+      {/* SoftwareApplication schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+
     <div className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Section 1: Hero */}
@@ -295,5 +308,6 @@ export default function Page() {
         </div>
       </section>
     </div>
+    </>
   );
 }

@@ -1,4 +1,4 @@
-import { generatePageMetadata } from '@/data/page-metadata';
+import { generatePageMetadata, generateSoftwareApplicationSchema } from '@/data/page-metadata';
 import { ArrowRight, CheckCircle, XCircle, MessageSquare, Phone, Upload, Zap, Clock, Users } from 'lucide-react';
 
 export const metadata = generatePageMetadata('staffing');
@@ -71,7 +71,20 @@ const objections = [
 ];
 
 export default function Page() {
+  const softwareSchema = generateSoftwareApplicationSchema({
+    audienceType: 'Staffing and recruiting agencies',
+    featureList:
+      'Automatically qualifies applicants and client leads over SMS for high-volume staffing agencies, with instant follow-up on every inbound reply.',
+  });
+
   return (
+    <>
+      {/* SoftwareApplication schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+
     <div className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Section 1: Hero */}
@@ -302,5 +315,6 @@ export default function Page() {
         </div>
       </section>
     </div>
+    </>
   );
 }

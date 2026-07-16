@@ -27,8 +27,8 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/contact',
   },
   pricing: {
-    title: 'Pricing - Pay for messages, not headcount',
-    description: 'Real conversational AI at SMB pricing. Starter $147, Growth $597, and Scale $2,497 per month. Every plan is backed by a 30-day money-back guarantee.',
+    title: 'AI Lead Qualification Pricing Plans',
+    description: 'Real conversational AI at SMB pricing. Starter $147, Growth $597, Growth Plus $1,497, and Scale $2,497 per month. Backed by a 30-day money-back guarantee.',
     keywords: ['SurFox AI pricing', 'AI SMS pricing', 'lead qualification pricing', 'SMS lead qualification pricing'],
     path: '/pricing',
   },
@@ -51,13 +51,13 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/blog',
   },
   demo: {
-    title: 'Book a Demo - See SurFox AI in Action',
+    title: 'See AI Lead Qualification in Action',
     description: 'Schedule a personalized demo of SurFox AI. See how AI-powered lead qualification can transform your sales process in just 30 minutes.',
     keywords: ['product demo', 'SurFox AI demo', 'AI sales demo', 'schedule demo'],
     path: '/demo',
   },
   integrations: {
-    title: 'Integrations - Connect SurFox AI to Your Stack',
+    title: 'AI Lead Qualification Integrations',
     description: 'SurFox AI integrates seamlessly with your existing tools. CRM sync, API access, webhooks, and more. Built on AWS, Twilio, and OpenAI.',
     keywords: ['CRM integration', 'API', 'webhooks', 'integrations', 'sales stack'],
     path: '/integrations',
@@ -217,6 +217,51 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/roi',
   },
 };
+
+/**
+ * Canonical SoftwareApplication values, shared by every page that emits the schema so the
+ * product description and pricing tiers cannot drift apart across the site.
+ */
+const SOFTWARE_APP_DESCRIPTION =
+  'AI-powered SMS lead qualification platform that responds to inbound leads within seconds, qualifies conversations autonomously, and hands sales teams a warm prospect ready to close, 24 hours a day, 7 days a week.';
+
+const SOFTWARE_APP_TIERS = [
+  { name: 'Starter', price: '147', slug: 'starter' },
+  { name: 'Growth', price: '597', slug: 'growth' },
+  { name: 'Growth Plus', price: '1497', slug: 'growth_plus' },
+  { name: 'Scale', price: '2497', slug: 'scale' },
+];
+
+/**
+ * Generate SoftwareApplication schema. `featureList` and `audienceType` let a vertical or
+ * integration page add its own context without diverging from the canonical values above.
+ */
+export function generateSoftwareApplicationSchema(context?: {
+  featureList?: string;
+  audienceType?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'SurFox AI',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    url: 'https://www.getsurfox.com',
+    description: SOFTWARE_APP_DESCRIPTION,
+    ...(context?.featureList ? { featureList: context.featureList } : {}),
+    ...(context?.audienceType
+      ? { audience: { '@type': 'Audience', audienceType: context.audienceType } }
+      : {}),
+    offers: SOFTWARE_APP_TIERS.map((tier) => ({
+      '@type': 'Offer',
+      name: `${tier.name} Plan`,
+      price: tier.price,
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: `https://www.getsurfox.com/subscribe/${tier.slug}`,
+    })),
+  };
+}
 
 /**
  * Generate breadcrumb schema for compare pages
