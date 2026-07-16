@@ -28,9 +28,9 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/',
   },
   platform: {
-    title: 'SurFox AI Platform: Customer Intelligence & Automation',
+    title: 'AI SMS Lead Qualification Platform',
     description: 'AI-powered SMS lead qualification platform. Automatically engage, qualify, and schedule appointments with leads 24/7. Automate lead qualification without hiring.',
-    keywords: ['AI platform', 'customer intelligence platform', 'sales automation platform', 'conversation AI platform'],
+    keywords: ['AI lead qualification platform', 'SMS lead qualification', 'AI lead qualification software', 'automated lead qualification', 'conversational AI platform'],
     path: '/platform',
   },
   about: {
