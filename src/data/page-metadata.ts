@@ -9,9 +9,9 @@ export interface PageMetadataConfig {
 
 export const pageMetadata: Record<string, PageMetadataConfig> = {
   platform: {
-    title: 'AI SMS Lead Qualification Platform',
-    description: 'AI-powered SMS lead qualification platform. Automatically engage, qualify, and schedule appointments with leads 24/7. Automate lead qualification without hiring.',
-    keywords: ['AI lead qualification platform', 'SMS lead qualification', 'AI lead qualification software', 'automated lead qualification', 'conversational AI platform'],
+    title: 'How SurFox AI Works',
+    description: 'SurFox AI handles every lead conversation from first text to booked call. Upload your leads, set your goal, and your team only talks to people who are ready.',
+    keywords: ['SMS lead qualification software', 'conversational AI platform', 'automated lead follow up', 'AI sales automation', 'lead response automation'],
     path: '/platform',
   },
   about: {
@@ -222,7 +222,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
  * Canonical SoftwareApplication values, shared by every page that emits the schema so the
  * product description and pricing tiers cannot drift apart across the site.
  */
-const SOFTWARE_APP_DESCRIPTION =
+export const SOFTWARE_APP_DESCRIPTION =
   'AI-powered SMS lead qualification platform that responds to inbound leads within seconds, qualifies conversations autonomously, and hands sales teams a warm prospect ready to close, 24 hours a day, 7 days a week.';
 
 const SOFTWARE_APP_TIERS = [

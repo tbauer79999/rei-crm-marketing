@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { HeroPhone, AnnotatedMoments, FAQSection } from './HomeClientSections';
+import { SOFTWARE_APP_DESCRIPTION } from '@/data/page-metadata';
 import ProofResults from './components/ProofResults';
 import './home.css';
 
@@ -176,8 +177,7 @@ export default function Page() {
               url: 'https://www.getsurfox.com/pricing',
             },
             operatingSystem: 'Web Browser',
-            description:
-              'AI-powered SMS lead qualification platform - upload cold leads, let AI engage and qualify them, your team only talks to hot prospects',
+            description: SOFTWARE_APP_DESCRIPTION,
           }),
         }}
       />
@@ -264,9 +264,9 @@ export default function Page() {
               were doing something else.
             </p>
             <p className="capsule">
-              SurFox AI is an AI-powered SMS lead qualification platform that responds to inbound
-              leads within seconds, qualifies conversations autonomously, and hands your team a warm
-              prospect ready to close, 24 hours a day, 7 days a week, without human involvement.
+              SurFox AI texts your leads the moment they come in, qualifies the conversation
+              automatically, and hands your team a warm prospect ready to close. It runs 24 hours a
+              day, 7 days a week, without a human in the loop.
             </p>
             <div className="hero-cta">
               <a className="btn btn-ink" href="#pricing">
