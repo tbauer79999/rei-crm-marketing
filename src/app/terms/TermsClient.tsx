@@ -24,7 +24,7 @@ export default function TermsOfService() {
               Terms of Service
             </h1>
             <p className="text-lg sm:text-xl text-[#5A626E] leading-relaxed">
-              Last Updated: July 3, 2026
+              Last Updated: July 26, 2026
             </p>
           </motion.div>
         </div>
@@ -50,6 +50,9 @@ export default function TermsOfService() {
               </p>
               <p>
                 SurFox AI is operated by SurFox AI, Inc. ("we," "us," or "our").
+              </p>
+              <p>
+                SurFox AI, Inc. is a Delaware corporation.
               </p>
             </div>
           </motion.div>
@@ -1195,6 +1198,24 @@ export default function TermsOfService() {
             </div>
           </motion.div>
 
+          {/* Governing Law */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
+              Governing Law
+            </h2>
+
+            <div className="space-y-4 text-[#5A626E] leading-relaxed">
+              <p>
+                These Terms and any dispute arising out of or relating to them or to the Platform are governed by the laws of the State of Delaware, without regard to its conflict-of-laws principles.
+              </p>
+            </div>
+          </motion.div>
+
           {/* Dispute Resolution */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1215,33 +1236,25 @@ export default function TermsOfService() {
               </div>
 
               <p className="pt-4">
-                If we can't resolve it:
+                <strong className="text-[#13171F]">Binding arbitration.</strong> If we can't resolve a dispute informally within 30 days, it will be resolved by binding arbitration administered by JAMS under its Streamlined Arbitration Rules, conducted in Delaware, before a single arbitrator. The arbitrator, not any court, has exclusive authority to resolve any dispute over the interpretation, applicability, or enforceability of this arbitration agreement. Each party bears its own attorneys' fees; arbitration filing and administrative fees are allocated per JAMS rules unless the arbitrator orders otherwise.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#0A7C8C] mt-1">•</span>
-                  <span>Disputes will be governed by Delaware law</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#0A7C8C] mt-1">•</span>
-                  <span>Both parties agree to binding arbitration</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#0A7C8C] mt-1">•</span>
-                  <span>Arbitration will be conducted by JAMS</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#0A7C8C] mt-1">•</span>
-                  <span>Location: Delaware</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#0A7C8C] mt-1">•</span>
-                  <span>No class actions - individual disputes only</span>
-                </li>
-              </ul>
 
               <p>
-                You have 30 days from the dispute to notify us if you want to arbitrate.
+                <strong className="text-[#13171F]">Exceptions.</strong> Either party may bring an individual claim in small claims court, and either party may seek injunctive or equitable relief in the state or federal courts located in Delaware for claims involving intellectual property rights or unauthorized access to the Platform. Both parties consent to the exclusive jurisdiction and venue of those courts for any claim not subject to arbitration.
+              </p>
+
+              <p>
+                <strong className="text-[#13171F]">Class action waiver.</strong> All claims must be brought individually. Neither party may bring a claim as a plaintiff or class member in any class, consolidated, or representative proceeding.
+              </p>
+
+              <div className="bg-[#F0F8F9] border-l-4 border-[#E4E6E2] rounded-r-lg p-4">
+                <p className="font-semibold text-[#13171F]">
+                  Jury trial waiver. TO THE EXTENT ANY CLAIM PROCEEDS IN COURT RATHER THAN ARBITRATION, BOTH PARTIES WAIVE ANY RIGHT TO A JURY TRIAL.
+                </p>
+              </div>
+
+              <p>
+                <strong className="text-[#13171F]">Notice.</strong> You have 30 days from the date a dispute arises to notify us in writing of your intent to arbitrate. Notice must be sent to legal@getsurfox.com or to 390 NE 191st St STE 17376, Miami, FL 33179.
               </p>
             </div>
           </motion.div>
@@ -1283,7 +1296,7 @@ export default function TermsOfService() {
               </p>
               <div className="bg-[#F4F5F3] rounded-xl p-6 space-y-2">
                 <p><strong className="text-[#13171F]">Email:</strong> privacy@getsurfox.com</p>
-                <p><strong className="text-[#13171F]">Address:</strong> SurFox AI, Inc.</p>
+                <p><strong className="text-[#13171F]">Address:</strong> SurFox AI, Inc., 390 NE 191st St STE 17376, Miami, FL 33179</p>
                 <p><strong className="text-[#13171F]">Website:</strong> <a href="https://www.getsurfox.com" className="text-[#0A7C8C] hover:underline">https://www.getsurfox.com</a></p>
               </div>
             </div>
