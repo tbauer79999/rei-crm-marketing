@@ -49,7 +49,12 @@
       "Bash(git --no-pager diff -- src/app/platform/page.tsx src/data/page-metadata.ts)",
       "Bash(git --no-pager diff --stat -- src/app/page.tsx src/app/platform/page.tsx src/data/page-metadata.ts)",
       "Bash(git --no-pager diff -- src/data/page-metadata.ts)",
-      "Bash(echo \"=== EXIT $? ===\")"
+      "Bash(echo \"=== EXIT $? ===\")",
+      "Bash(curl -I -L \"http://www.getsurfox.com/blog/what-is-ai-lead-qualification\")",
+      "Bash(curl -s \"https://www.getsurfox.com/blog/what-is-ai-lead-qualification\")",
+      "Bash(awk 'NR>=2673 && NR<=3100 && /slug: |Frequently Asked|faqSchema|faq:/ {print NR\": \"$0}' src/data/blog-posts.ts)",
+      "Bash(git checkout *)",
+      "Bash(git --no-pager diff -- \"src/app/blog/[slug]/BlogPostClient.tsx\")"
     ],
     "additionalDirectories": [
       "D:\\REI-CRM\\lead-app\\my-tailwind-app\\supabase\\functions\\generate-web-chat-reply",

@@ -6,6 +6,13 @@ import Link from 'next/link';
 import { Calendar, Clock, User, ArrowLeft, Share2, Linkedin, Mail, RefreshCw } from 'lucide-react';
 import { BlogPost, ContentBlock, ProductCalloutBlock, CtaBoxBlock } from '@/data/blog-posts';
 
+// Answers are authored as markdown, but JSON-LD answer text is plain text -
+// raw [label](/href) syntax would ship the brackets to Google verbatim. Keep
+// the label, drop the link.
+function stripMarkdownLinks(text: string): string {
+  return text.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1');
+}
+
 function extractFAQs(content: ContentBlock[]): Array<{ question: string; answer: string }> {
   const faqIndex = content.findIndex(
     b => b.type === 'heading' && 'content' in b && b.content.toLowerCase().includes('frequently asked')
@@ -20,7 +27,7 @@ function extractFAQs(content: ContentBlock[]): Array<{ question: string; answer:
     const block = content[i];
     if (block.type === 'subheading' && 'content' in block) {
       if (currentQuestion && answerParts.length > 0) {
-        faqs.push({ question: currentQuestion, answer: answerParts.join(' ') });
+        faqs.push({ question: currentQuestion, answer: stripMarkdownLinks(answerParts.join(' ')) });
       }
       currentQuestion = block.content;
       answerParts = [];
@@ -29,7 +36,7 @@ function extractFAQs(content: ContentBlock[]): Array<{ question: string; answer:
     }
   }
   if (currentQuestion && answerParts.length > 0) {
-    faqs.push({ question: currentQuestion, answer: answerParts.join(' ') });
+    faqs.push({ question: currentQuestion, answer: stripMarkdownLinks(answerParts.join(' ')) });
   }
   return faqs;
 }
