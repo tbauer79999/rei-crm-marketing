@@ -74,6 +74,8 @@ export default function Subscribe() {
   const plan = Array.isArray(params.plan) ? params.plan[0] : params.plan;
   const selectedPlan = plan ? PLANS[plan as keyof typeof PLANS] : null;
 
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [agreedToTcpa, setAgreedToTcpa] = useState(false);
   const [termsError, setTermsError] = useState('');
@@ -98,10 +100,19 @@ export default function Subscribe() {
   if (!selectedPlan) return;
 
   // Clickwrap validation
+  setEmailError('');
   setTermsError('');
   setTcpaError('');
   setSubmitError('');
   let hasError = false;
+  // Collected here rather than on Stripe's page so an abandoned checkout still
+  // leaves us a contactable address. Passed through as customer_email, which
+  // prefills Stripe's own email field so it is never typed twice.
+  const trimmedEmail = email.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
+    setEmailError('Enter a valid email so we can send your receipt and login details.');
+    hasError = true;
+  }
   if (!agreedToTerms) {
     setTermsError('You must agree to the Terms of Service and Privacy Policy.');
     hasError = true;
@@ -133,6 +144,7 @@ export default function Subscribe() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         priceId: selectedPlan.priceId,
+        email: trimmedEmail,
         referralCode: referralCode,
         affiliateCode: affiliateCode,
         metadata: {
@@ -258,6 +270,26 @@ export default function Subscribe() {
                 <div>Start qualifying leads today</div>
               </div>
             </div>
+          </div>
+
+          {/* Email */}
+          <div className="mb-6">
+            <label htmlFor="subscribe-email" className="block text-sm font-medium text-[#13171F] mb-2">
+              Work email
+            </label>
+            <input
+              id="subscribe-email"
+              type="email"
+              inputMode="email"
+              autoComplete="email"
+              value={email}
+              onChange={(e) => { setEmail(e.target.value); if (emailError) setEmailError(''); }}
+              placeholder="you@company.com"
+              className={`w-full rounded-xl border px-4 py-3 text-[#13171F] placeholder-[#8A92A0] transition-colors focus:outline-none focus:ring-1 ${emailError ? 'border-red-400 focus:border-red-400 focus:ring-red-400' : 'border-[#E4E6E2] focus:border-[#0A7C8C] focus:ring-[#0A7C8C]'}`}
+            />
+            {emailError
+              ? <p className="text-red-400 text-xs mt-1">{emailError}</p>
+              : <p className="text-[#8A92A0] text-xs mt-1">This is where your receipt and login details go. We'll fill it in for you at checkout.</p>}
           </div>
 
           {/* Terms Agreement Checkboxes */}

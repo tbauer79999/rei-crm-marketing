@@ -54,7 +54,10 @@
       "Bash(curl -s \"https://www.getsurfox.com/blog/what-is-ai-lead-qualification\")",
       "Bash(awk 'NR>=2673 && NR<=3100 && /slug: |Frequently Asked|faqSchema|faq:/ {print NR\": \"$0}' src/data/blog-posts.ts)",
       "Bash(git checkout *)",
-      "Bash(git --no-pager diff -- \"src/app/blog/[slug]/BlogPostClient.tsx\")"
+      "Bash(git --no-pager diff -- \"src/app/blog/[slug]/BlogPostClient.tsx\")",
+      "Bash(grep -o -n 'SurFox.\\\\{0,4\\\\}' src/app/contact/ContactClient.tsx)",
+      "Bash(grep -o 'shadow-blue[^,{ ]*' .next/static/css/643a45e11ce2eff4.css)",
+      "Bash(grep -o 'shadow-sm[^,{ ]*' .next/static/css/643a45e11ce2eff4.css)"
     ],
     "additionalDirectories": [
       "D:\\REI-CRM\\lead-app\\my-tailwind-app\\supabase\\functions\\generate-web-chat-reply",
