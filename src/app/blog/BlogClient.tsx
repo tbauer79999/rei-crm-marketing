@@ -6,8 +6,9 @@ import Link from 'next/link';
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
 import { getAllBlogPosts } from '@/data/blog-posts';
 
-// Get all blog posts from centralized data
-const blogPosts = getAllBlogPosts();
+// Get all blog posts from centralized data. Posts are authored in append order,
+// so sort newest-first for display. ISO YYYY-MM-DD dates sort lexicographically.
+const blogPosts = [...getAllBlogPosts()].sort((a, b) => b.date.localeCompare(a.date));
 
 const categories = ['All', 'AI & Technology', 'Product Insights', 'Sales Strategy', 'Security & Privacy', 'Strategy', 'Business Impact'];
 
