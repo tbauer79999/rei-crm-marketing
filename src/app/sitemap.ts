@@ -32,6 +32,7 @@ const keyRoutes = [
   '/compare/surfox-vs-launch-control',
   '/compare/surfox-vs-lead-sherpa',
   '/compare/surfox-vs-meera-ai',
+  '/compare/surfox-vs-qualified',
   '/compare/surfox-vs-skipio',
   '/compare/surfox-vs-smarter-contact',
   '/compare/surfox-vs-spara',

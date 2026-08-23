@@ -60,6 +60,7 @@ const columns: { title: string; links: { label: string; href: string }[]; wide?:
       { label: 'SurFox AI vs Meera AI', href: '/compare/surfox-vs-meera-ai' },
       { label: 'SurFox AI vs GoHighLevel', href: '/compare/surfox-vs-gohighlevel' },
       { label: 'SurFox AI vs Spara', href: '/compare/surfox-vs-spara' },
+      { label: 'SurFox AI vs Qualified', href: '/compare/surfox-vs-qualified' },
     ],
   },
 ];
