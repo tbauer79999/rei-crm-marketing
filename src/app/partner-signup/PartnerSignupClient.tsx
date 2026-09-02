@@ -290,34 +290,31 @@ function PartnerSignupContent() {
               </div>
               
               {/* Custom limits if present */}
-              {(invite.custom_plan_limits || invite.legal_notice) && (
+              {invite.custom_plan_limits && (
                 <div className="border-t border-[#E4E6E2] pt-4 mt-4">
                   <div className="text-sm font-medium text-[#5A626E] mb-2">Your Plan Includes:</div>
                   <div className="space-y-1 text-sm text-[#5A626E]">
-                    {invite.custom_plan_limits?.sms_limit && (
+                    {invite.custom_plan_limits.sms_limit && (
                       <div>
                         <div>• {invite.custom_plan_limits.sms_limit.toLocaleString()} messages/month (in & out)</div>
                         <div className="text-xs text-[#8A92A0] ml-3">Each conversation uses ~4–8 messages (your outbound + lead replies combined)</div>
                       </div>
                     )}
-                    {invite.custom_plan_limits?.campaigns_limit && (
+                    {invite.custom_plan_limits.campaigns_limit && (
                       <div>• {invite.custom_plan_limits.campaigns_limit} campaigns</div>
                     )}
-                    {invite.custom_plan_limits?.knowledge_docs_limit && (
+                    {invite.custom_plan_limits.knowledge_docs_limit && (
                       <div>• {invite.custom_plan_limits.knowledge_docs_limit} knowledge docs</div>
                     )}
-                    {invite.custom_plan_limits?.ai_learning_history_limit && (
+                    {invite.custom_plan_limits.ai_learning_history_limit && (
                       <div>• {invite.custom_plan_limits.ai_learning_history_limit} AI learning entries</div>
-                    )}
-                    {invite.legal_notice && (
-                      <div className="whitespace-pre-line">• {invite.legal_notice}</div>
                     )}
                   </div>
                 </div>
               )}
               
               {/* Trust indicators */}
-              <div className={`space-y-2 text-sm text-[#5A626E] ${(invite.custom_plan_limits || invite.legal_notice) ? 'mt-4 pt-4 border-t border-[#E4E6E2]' : ''}`}>
+              <div className={`space-y-2 text-sm text-[#5A626E] ${invite.custom_plan_limits ? 'mt-4 pt-4 border-t border-[#E4E6E2]' : ''}`}>
                 {invite.trial_days > 0 && (
                   <div className="flex items-center justify-center gap-2">
                     <span className={`w-2 h-2 rounded-full ${isPartnerAdmin ? 'bg-purple-600' : 'gradient-bg-600'}`}></span>
@@ -436,6 +433,18 @@ function PartnerSignupContent() {
               </div>
             </div>
           </div>
+
+          {/* Disclaimer set on the invite. Notice only, no separate consent. */}
+          {invite.legal_notice && (
+            <div className="rounded-xl border border-[#E4E6E2] bg-[#F4F5F3] p-5 mb-6">
+              <div className="text-xs font-semibold uppercase tracking-wide text-[#8A92A0] mb-2">
+                Please note
+              </div>
+              <p className="text-sm leading-relaxed text-[#5A626E] whitespace-pre-line">
+                {invite.legal_notice}
+              </p>
+            </div>
+          )}
 
           {/* Terms Agreement Checkboxes */}
           <div className="space-y-3 mb-6">
