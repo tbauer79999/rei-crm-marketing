@@ -333,10 +333,14 @@ function PartnerSignupContent() {
                   <span className={`w-2 h-2 rounded-full ${isPartnerAdmin ? 'bg-purple-600' : 'gradient-bg-600'}`}></span>
                   Cancel anytime
                 </div>
-                <div className="flex items-center justify-center gap-2">
-                  <span className={`w-2 h-2 rounded-full ${isPartnerAdmin ? 'bg-purple-600' : 'gradient-bg-600'}`}></span>
-                  Priority support
-                </div>
+                {/* The business_admin feature list already claims this one, so only
+                    partners (whose list does not) get it here. */}
+                {isPartnerAdmin && (
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-purple-600"></span>
+                    Priority support
+                  </div>
+                )}
               </div>
             </div>
 
