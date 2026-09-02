@@ -23,8 +23,8 @@ interface PartnerInvite {
   legal_notice: string | null;
   custom_plan_limits: {
     sms_limit?: number;
-    campaigns_limit?: number;
-    knowledge_docs_limit?: number;
+    campaigns_limit?: number | null;
+    knowledge_docs_limit?: number | null;
     ai_learning_history_limit?: number;
   } | null;
 }
@@ -300,11 +300,19 @@ function PartnerSignupContent() {
                         <div className="text-xs text-[#8A92A0] ml-3">Each conversation uses ~4–8 messages (your outbound + lead replies combined)</div>
                       </div>
                     )}
-                    {invite.custom_plan_limits.campaigns_limit && (
-                      <div>• {invite.custom_plan_limits.campaigns_limit} campaigns</div>
+                    {invite.custom_plan_limits.campaigns_limit !== undefined && (
+                      <div>
+                        • {invite.custom_plan_limits.campaigns_limit === null
+                          ? 'Unlimited'
+                          : invite.custom_plan_limits.campaigns_limit} campaigns
+                      </div>
                     )}
-                    {invite.custom_plan_limits.knowledge_docs_limit && (
-                      <div>• {invite.custom_plan_limits.knowledge_docs_limit} knowledge docs</div>
+                    {invite.custom_plan_limits.knowledge_docs_limit !== undefined && (
+                      <div>
+                        • {invite.custom_plan_limits.knowledge_docs_limit === null
+                          ? 'Unlimited'
+                          : invite.custom_plan_limits.knowledge_docs_limit} knowledge docs
+                      </div>
                     )}
                     {invite.custom_plan_limits.ai_learning_history_limit && (
                       <div>• {invite.custom_plan_limits.ai_learning_history_limit} AI learning entries</div>
