@@ -454,7 +454,7 @@ function PartnerSignupContent() {
                   type="checkbox"
                   checked={agreedToTerms}
                   onChange={(e) => { setAgreedToTerms(e.target.checked); if (e.target.checked) setTermsError(''); }}
-                  className="mt-1 h-4 w-4 rounded border-[#E4E6E2] accent-blue-400"
+                  className="mt-1 h-4 w-4 shrink-0 rounded border-[#E4E6E2] accent-blue-400"
                 />
                 <span className="text-sm text-[#5A626E]">
                   I have read and agree to the SurFox AI{' '}
@@ -472,7 +472,7 @@ function PartnerSignupContent() {
                   type="checkbox"
                   checked={agreedToTcpa}
                   onChange={(e) => { setAgreedToTcpa(e.target.checked); if (e.target.checked) setTcpaError(''); }}
-                  className="mt-1 h-4 w-4 rounded border-[#E4E6E2] accent-blue-400"
+                  className="mt-1 h-4 w-4 shrink-0 rounded border-[#E4E6E2] accent-blue-400"
                 />
                 <span className="text-sm text-[#5A626E]">
                   I accept full responsibility for TCPA compliance and all applicable messaging laws. I understand that SurFox AI is not responsible for my messaging practices.
