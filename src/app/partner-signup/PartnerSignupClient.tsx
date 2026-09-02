@@ -20,6 +20,7 @@ interface PartnerInvite {
   target_role: string;
   logo_url: string | null;
   trial_days: number;
+  legal_notice: string | null;
   custom_plan_limits: {
     sms_limit?: number;
     campaigns_limit?: number;
@@ -28,9 +29,13 @@ interface PartnerInvite {
   } | null;
 }
 
+// Origins allowed to drive preview mode via postMessage (the SurFox app itself).
+const PREVIEW_ORIGINS = ['https://surfox.ai', 'https://www.surfox.ai', 'http://localhost:3000'];
+
 function PartnerSignupContent() {
   const searchParams = useSearchParams();
   const code = searchParams.get('code');
+  const isPreview = searchParams.get('preview') === '1';
   
   const [invite, setInvite] = useState<PartnerInvite | null>(null);
   const [loading, setLoading] = useState(true);
@@ -40,7 +45,25 @@ function PartnerSignupContent() {
   const [termsError, setTermsError] = useState('');
   const [tcpaError, setTcpaError] = useState('');
 
+  // Preview mode: the Deal Builder posts an unsaved invite in, nothing is read
+  // from the DB and checkout is hard-disabled below. Payload never rides in the
+  // URL, so a crafted link on its own renders an empty shell.
   useEffect(() => {
+    if (!isPreview) return;
+    const onMessage = (e: MessageEvent) => {
+      if (!PREVIEW_ORIGINS.includes(e.origin)) return;
+      if (e.data?.type !== 'surfox:preview-invite') return;
+      setInvite(e.data.invite as PartnerInvite);
+      setError(null);
+      setLoading(false);
+    };
+    window.addEventListener('message', onMessage);
+    window.parent?.postMessage({ type: 'surfox:preview-ready' }, '*');
+    return () => window.removeEventListener('message', onMessage);
+  }, [isPreview]);
+
+  useEffect(() => {
+    if (isPreview) return;
     if (!code) {
       setError('No invite code provided');
       setLoading(false);
@@ -74,10 +97,11 @@ function PartnerSignupContent() {
     };
 
     fetchInvite();
-  }, [code]);
+  }, [code, isPreview]);
 
   const handleSubscribe = async () => {
     if (!invite) return;
+    if (isPreview) return; // preview renders the page, it never takes money
 
     // Clickwrap validation
     setTermsError('');
@@ -173,7 +197,12 @@ function PartnerSignupContent() {
   return (
     <>
 
-      <div className="min-h-screen bg-white flex items-center justify-center px-4 pt-28 pb-12">
+      {isPreview && (
+        <div className="sticky top-0 z-50 bg-amber-400 text-[#13171F] text-center text-sm font-semibold py-2 px-4">
+          PREVIEW ONLY. This invite has not been created and checkout is disabled.
+        </div>
+      )}
+      <div className={`min-h-screen bg-white flex items-center justify-center px-4 pb-12 ${isPreview ? 'pt-8' : 'pt-28'}`}>
         <div className="max-w-2xl w-full bg-white rounded-2xl border-2 border-purple-200 p-8 shadow-xl">
           
           {/* Header */}
@@ -261,31 +290,34 @@ function PartnerSignupContent() {
               </div>
               
               {/* Custom limits if present */}
-              {invite.custom_plan_limits && (
+              {(invite.custom_plan_limits || invite.legal_notice) && (
                 <div className="border-t border-[#E4E6E2] pt-4 mt-4">
                   <div className="text-sm font-medium text-[#5A626E] mb-2">Your Plan Includes:</div>
                   <div className="space-y-1 text-sm text-[#5A626E]">
-                    {invite.custom_plan_limits.sms_limit && (
+                    {invite.custom_plan_limits?.sms_limit && (
                       <div>
                         <div>• {invite.custom_plan_limits.sms_limit.toLocaleString()} messages/month (in & out)</div>
                         <div className="text-xs text-[#8A92A0] ml-3">Each conversation uses ~4–8 messages (your outbound + lead replies combined)</div>
                       </div>
                     )}
-                    {invite.custom_plan_limits.campaigns_limit && (
+                    {invite.custom_plan_limits?.campaigns_limit && (
                       <div>• {invite.custom_plan_limits.campaigns_limit} campaigns</div>
                     )}
-                    {invite.custom_plan_limits.knowledge_docs_limit && (
+                    {invite.custom_plan_limits?.knowledge_docs_limit && (
                       <div>• {invite.custom_plan_limits.knowledge_docs_limit} knowledge docs</div>
                     )}
-                    {invite.custom_plan_limits.ai_learning_history_limit && (
+                    {invite.custom_plan_limits?.ai_learning_history_limit && (
                       <div>• {invite.custom_plan_limits.ai_learning_history_limit} AI learning entries</div>
+                    )}
+                    {invite.legal_notice && (
+                      <div className="whitespace-pre-line">• {invite.legal_notice}</div>
                     )}
                   </div>
                 </div>
               )}
               
               {/* Trust indicators */}
-              <div className={`space-y-2 text-sm text-[#5A626E] ${invite.custom_plan_limits ? 'mt-4 pt-4 border-t border-[#E4E6E2]' : ''}`}>
+              <div className={`space-y-2 text-sm text-[#5A626E] ${(invite.custom_plan_limits || invite.legal_notice) ? 'mt-4 pt-4 border-t border-[#E4E6E2]' : ''}`}>
                 {invite.trial_days > 0 && (
                   <div className="flex items-center justify-center gap-2">
                     <span className={`w-2 h-2 rounded-full ${isPartnerAdmin ? 'bg-purple-600' : 'gradient-bg-600'}`}></span>
@@ -444,11 +476,14 @@ function PartnerSignupContent() {
           {/* CTA Button */}
           <button
             onClick={handleSubscribe}
-            className={`w-full text-[#13171F] px-8 py-4 rounded-xl hover:opacity-90 transition-all font-semibold text-lg shadow-sm shadow-blue-500/5 shadow-blue-500/5 ${
-              isPartnerAdmin ? 'bg-purple-600 hover:bg-purple-700' : 'gradient-bg-600 hover:gradient-bg-700'
+            disabled={isPreview}
+            className={`w-full text-[#13171F] px-8 py-4 rounded-xl transition-all font-semibold text-lg shadow-sm shadow-blue-500/5 ${
+              isPreview
+                ? 'bg-[#E4E6E2] text-[#8A92A0] cursor-not-allowed'
+                : `hover:opacity-90 ${isPartnerAdmin ? 'bg-purple-600 hover:bg-purple-700' : 'gradient-bg-600 hover:gradient-bg-700'}`
             }`}
           >
-            Continue to Secure Checkout
+            {isPreview ? 'Continue to Secure Checkout (disabled in preview)' : 'Continue to Secure Checkout'}
           </button>
 
           {/* Security notice */}
