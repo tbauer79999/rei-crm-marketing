@@ -7673,7 +7673,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'callout',
-        content: 'Verdict: this one doesn\'t hold up under any specific origin study. It\'s a rounded, memorable ratio with no attributable peer-reviewed source, and real conversion rates swing heavily by lead source and market. It\'s not wrong to use as a rough mental model of funnel shape, but it tells you nothing about when to call, text, or follow up, which is the question this post is actually answering.'
+        content: 'Unlike most sales acronyms, this one has a real origin. It comes from life insurance sales, where New York Life agent Al Granum built it into his One Card System: for every 10 qualified prospects contacted, roughly 3 engage in a genuine conversation and 1 closes. It was a production planning tool, designed to tell an agent how many prospects they needed at the top to hit a quota at the bottom.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Verdict: real framework, wrong question. 10-3-1 tells you how many prospects you need in the pipeline to produce one deal, and the actual ratio swings hard by lead source and market, so treat the numbers as a shape rather than a benchmark. What it does not tell you is when to place any of those touches. It is a volume planning tool that gets misquoted as a contact schedule, which is a different failure from 2-2-2 and 30-60-90. Those two are real frameworks applied to the wrong problem. This one is a real framework misread as a timing rule it never claimed to be.'
       },
       {
         type: 'heading',
@@ -7706,6 +7710,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'Tuesday and Wednesday consistently outperform the rest of the week. ZoomInfo\'s analysis of 1.4 million outbound calls found Tuesday and Wednesday combined account for 44% of all meetings booked. Salesfinity\'s independent analysis of 3.5 million dials arrived at the same 44% figure. A 2025 HubSpot survey of 379 sales professionals found 39% rated Tuesday as their best day for contacts, with Wednesday second at 27%. Cognism\'s dataset of 10,000 cold calls also names Tuesday as the top day for booking meetings.'
+      },
+      {
+        type: 'callout',
+        content: 'One caveat worth knowing, because it changes the answer for this audience. Every dataset above is general B2B sales. Vulcan7\'s analysis of 76 million real estate dials puts the peak on Monday morning instead, not Tuesday. The hour agrees across all of them at roughly 10:00 to 11:30 AM. The day does not, and the split runs along the line you would expect: B2B buyers are settling into the week by Tuesday, while homeowners and distressed sellers are most reachable at the start of it. If your list is seller leads rather than businesses, weight Monday first and treat Tuesday and Wednesday as the backup.'
       },
       {
         type: 'paragraph',
@@ -7763,7 +7771,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Named cadence rules borrowed from other sales contexts, like 2-2-2 from retail and 30-60-90 from onboarding, don\'t transfer cleanly to seller lead follow-up, and 10-3-1 was never built on real data to begin with. What actually holds up is speed on inbound leads, patience on outbound leads, and a preference for Tuesday and Wednesday mornings between 10:00 AM and 11:30 AM. Build your cadence around those facts, not around a catchy acronym.'
+        content: 'Named cadence rules borrowed from other sales contexts don\'t transfer cleanly to seller lead follow-up. 2-2-2 came from retail and 30-60-90 from onboarding, so neither was built for this. 10-3-1 is a real framework from insurance sales, but it answers how many prospects you need, not when to reach them. What actually holds up is speed on inbound leads, patience on outbound leads, and a mid-morning window between 10:00 AM and 11:30 AM. On the day, follow your list: Monday first for seller leads, Tuesday and Wednesday for everything else. Build your cadence around those facts, not around a catchy acronym.'
       },
       {
         type: 'paragraph',
@@ -7802,7 +7810,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Tuesday and Wednesday, which together account for 44% of meetings booked in both ZoomInfo\'s 1.4 million call dataset and Salesfinity\'s 3.5 million dial dataset.'
+        content: 'It depends on who you are calling, and the two big datasets disagree in a way that matters. For general B2B sales, Tuesday and Wednesday together account for 44% of meetings booked, in both ZoomInfo\'s 1.4 million call dataset and Salesfinity\'s 3.5 million dial dataset. For real estate specifically, Vulcan7\'s analysis of 76 million dials puts the peak on Monday morning. Both agree on the hour, roughly 10:00 to 11:30 AM. If you are working seller leads, weight Monday first and use Tuesday and Wednesday as the backup.'
       },
       {
         type: 'subheading',
