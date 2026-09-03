@@ -5140,7 +5140,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'How Fast Do You Have to Call a Real Estate Lead Back?',
     metaDescription: 'Calling within 5 minutes makes you 100x more likely to reach a lead than waiting 30. Here are the real speed-to-lead benchmarks and what is actually realistic for a solo operator.',
-    relatedPosts: ['real-estate-leads-not-answering', 'too-many-leads-not-enough-time', 'ai-sms-follow-up-real-estate-wholesalers'],
+    relatedPosts: ['real-estate-leads-not-answering', 'too-many-leads-not-enough-time', 'missed-call-text-back-real-estate'],
     content: [
       {
         type: 'paragraph',
@@ -6589,7 +6589,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'Real Estate Follow-Up Text Scripts for Leads Who Went Quiet',
     metaDescription: 'Copy-ready follow-up text scripts for cold real estate leads, plus the cadence behind them, why carriers filter some texts before delivery, and what to say when a quiet lead replies.',
-    relatedPosts: ['how-many-times-to-follow-up-with-a-lead', 'real-estate-leads-not-answering', 'revive-dead-real-estate-leads'],
+    relatedPosts: ['how-many-times-to-follow-up-with-a-lead', 'real-estate-leads-not-answering', 'missed-call-text-back-real-estate'],
     howToSteps: [
       { name: 'Answer Within the First 5 Minutes', text: 'Send a text inside 5 minutes of the inquiry that confirms you got it and asks one specific question. Lead Response Management research found contacting a lead within 5 minutes makes you roughly 21 times more likely to qualify it than waiting 30 minutes.' },
       { name: 'Alternate Text, Video, and Call Across Days 1 to 10', text: 'Rotate channels instead of repeating one. This is the highest-response window, and a lead who ignores a dial from an unknown number will often reply to a text on the same day.' },
@@ -6842,6 +6842,386 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'After a lead has ignored three or four written messages, yes. A fifth written text competes with the four they already skipped, while a 15-second phone video changes the format entirely and signals that a real person is sending it. It needs no production value, just a phone camera and a sentence that does not ask for a call back.'
+      }
+    ]
+  },
+  {
+    id: 32,
+    slug: 'missed-call-text-back-real-estate',
+    title: 'Every Missed Call Is a Lost Deal: Setting Up Automatic Text-Back',
+    excerpt: 'Only 37.8% of inbound calls to service businesses get answered live by a person, and 85% of callers who reach no one never try again. Here is what missed calls actually cost a real estate operation, what the free auto text-back options can and cannot do, and how to set each one up.',
+    category: 'Sales Strategy',
+    date: '2026-09-02',
+    lastUpdated: '2026-09-02',
+    readTime: '11 min read',
+    author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    authorTitle: 'Founder & CEO, SurFox AI',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
+    metaTitle: 'Missed Call Text-Back for Real Estate: Setup Guide and Real Cost',
+    metaDescription: 'Only 37.8% of inbound calls get answered live, and 85% of callers never call back. What missed calls cost a real estate business, plus how to set up automatic text-back on iPhone, Android, and Google Voice.',
+    relatedPosts: ['how-fast-to-call-a-real-estate-lead', 'real-estate-follow-up-text-scripts', 'motivated-seller-texts-9pm'],
+    howToSteps: [
+      { name: 'Measure Your Actual Missed Call Rate', text: 'Pull 30 days of call logs from your phone or tracking number and count how many inbound calls were never answered by a person. Field-based real estate work typically lands between 25% and 40%. You cannot size the problem until you know your own number rather than the industry average.' },
+      { name: 'Write the Message Before You Pick the Tool', text: 'Draft a reply under 160 characters that names you or your business immediately, explains the miss without over-apologizing, and asks one direct question. The tool is easy to swap later. A vague message fails on every platform equally.' },
+      { name: 'Pick a Trigger That Fires Without Touching the Phone', text: 'Native iPhone and Android quick-reply features only send if you tap the screen while the call is ringing. If the phone is in your pocket on a job site, nothing goes out. Choose an option that fires on the missed call itself, not on your interaction with it.' },
+      { name: 'Set the Trigger Specifically to Missed Calls', text: 'Inside whichever app or platform you chose, set the automation to fire on a missed inbound call rather than on incoming texts or on a Focus or Do Not Disturb mode. Driving Focus auto-reply, for example, responds to messages only and never to voice calls.' },
+      { name: 'Scope Who It Applies To and When It Runs', text: 'Limit the automation to non-contacts so you are not auto-texting your spouse, and decide whether it runs 24/7 or only outside business hours. Most real estate operations want it on around the clock, because seller calls do not respect office hours.' },
+      { name: 'Test It From a Number That Is Not Yours', text: 'Call your business line from a phone that is not in your contacts, let it ring out, and confirm the text arrives and reads correctly on a locked screen. Background SMS permissions on Android are unreliable across devices, so verify rather than assume.' },
+      { name: 'Decide Whether a Static Reply Is Actually Enough', text: 'A one-line auto-text acknowledges the call but does not qualify anyone. If replies come in while you are still on a job site and sit unanswered, the automation moved the problem rather than solving it, and it is time for something that can hold the conversation.' },
+    ],
+    content: [
+      {
+        type: 'paragraph',
+        content: 'You\'re on a job site. Drywall dust, a nail gun going off somewhere behind you, a contractor asking you a question. Your phone buzzes in your pocket. By the time you dig it out, it\'s stopped ringing.'
+      },
+      {
+        type: 'paragraph',
+        content: 'You call back twenty minutes later. No answer. You call again that evening. Still nothing. That seller already talked to the next investor on their list.'
+      },
+      {
+        type: 'paragraph',
+        content: 'That\'s not a hypothetical. It\'s the single most common way real estate professionals, especially wholesalers and agents working solo, lose deals they never even knew they were in the running for.'
+      },
+      {
+        type: 'tldr',
+        content: 'A 2024 study by 411 Locals across 85 service businesses in 58 industries found only 37.8% of inbound calls were answered live by a person.\nField-based professionals miss an average of 27% of calls during normal hours (Invoca), and 30% to 40% of calls to real estate agencies go unanswered (Voqo, 2026).\n85% of callers whose call goes unanswered never try again (Numa Small Business Phone Report, 2021).\n86% of people who reach a business voicemail hang up without leaving a message (Forbes consumer survey, 2025).\n78% of buyers and sellers do business with whoever responds to them first (MIT / InsideSales.com).\nNative iPhone and Android quick-reply features do not fire unless you tap the screen mid-ring, which is exactly what you cannot do on a job site.\nFor a solo wholesaler missing 6 calls a week, the annual cost runs to roughly $117,000 in lost assignment fees.'
+      },
+      {
+        type: 'heading',
+        content: 'How Many Calls Are You Actually Missing?'
+      },
+      {
+        type: 'paragraph',
+        content: 'More than you\'d guess. A 2024 study by 411 Locals tracked 85 service businesses across 58 industries for 30 days and found only 37.8% of inbound calls were answered live by a person. Of the rest, some went to voicemail, but nearly a quarter got no response at all, not even an automated pickup.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Field-based work misses even more. Home service and field professionals miss an average of 27% of incoming calls during normal hours, according to research from Invoca, and a 2026 industry analysis from Voqo found that 30% to 40% of inbound calls to real estate agencies go unanswered. If you\'re running a wholesale operation off direct mail and PPC while also managing active job sites, you\'re likely on the higher end of that range.'
+      },
+      {
+        type: 'table',
+        headers: ['Source', 'What It Measured', 'Finding'],
+        rows: [
+          ['411 Locals (2024)', '85 service businesses across 58 industries, 30 days', 'Only 37.8% of inbound calls answered live by a person'],
+          ['Invoca', 'Home service and field professionals', '27% of incoming calls missed during normal hours, on average'],
+          ['Voqo (2026)', 'Inbound calls to real estate agencies', '30% to 40% go unanswered'],
+          ['Numa Small Business Phone Report (2021)', 'Callers who reach no one', '85% never try a second time'],
+          ['Forbes consumer survey (2025)', 'Callers who reach voicemail', '86% hang up without leaving a message'],
+          ['MIT / InsideSales.com', 'Buyer and seller lead response', '78% do business with whoever responds first'],
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'Here\'s why it matters so much: this isn\'t a "they\'ll call back later" situation. Research from PATLive and the 2021 Numa Small Business Phone Report found that 85% of callers whose call goes unanswered never try again. A 2025 Forbes consumer survey found 86% of people who hit a business voicemail hang up without leaving a message. And a landmark MIT/InsideSales.com study on lead response found that 78% of buyers and sellers end up doing business with whichever provider responds to them first.'
+      },
+      {
+        type: 'quote',
+        content: 'A missed call isn\'t a delay. For 85% of callers, it\'s the end of the conversation before it started.'
+      },
+      {
+        type: 'paragraph',
+        content: 'That first-responder advantage is the same mechanic behind speed-to-lead on web forms, and it compounds the same way. We broke the timing math down in [how fast you actually have to call a real estate lead back](/blog/how-fast-to-call-a-real-estate-lead).'
+      },
+      {
+        type: 'heading',
+        content: 'What a Missed Call Actually Costs You'
+      },
+      {
+        type: 'paragraph',
+        content: 'It\'s easy to shrug off one missed call. It\'s harder to shrug off what they add up to over a year. Here\'s the math, using rough industry ranges.'
+      },
+      {
+        type: 'list',
+        items: [
+          '**Missed calls per week** = your weekly inbound call volume x your missed call rate (typically 25% to 40% for field-based real estate work)',
+          '**Lost deals per year** = missed calls per week x 52 x your qualified-lead rate x your close rate on qualified conversations',
+          '**Dollar cost** = lost deals per year x your average deal value',
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'Run it for a solo wholesaler doing direct mail and PPC. Twenty inbound seller calls a week, missing 30% of them, is 6 missed calls a week and 312 a year. If half of those are genuinely qualified seller conversations and you close 5% of qualified conversations, that is roughly 7 to 8 deals. At a $15,000 average assignment fee, missed calls alone cost about $117,000 a year. A residential agent with lower volume and a smaller close rate still loses a real deal or two annually to nothing more than bad timing.'
+      },
+      {
+        type: 'table',
+        headers: ['Input', 'Solo Wholesaler', 'Residential Agent'],
+        rows: [
+          ['Inbound calls per week', '20', '8'],
+          ['Missed call rate', '30%', '27%'],
+          ['Missed calls per year', '312', '104'],
+          ['Share that are qualified', '50% (156)', '40% (42)'],
+          ['Close rate on qualified conversations', '5%', '3%'],
+          ['Deals lost per year', 'About 7 to 8', 'About 1 to 2'],
+          ['Average deal value', '$15,000 assignment fee', '$9,000 commission'],
+          ['Annual cost of missed calls', 'About $117,000', 'About $11,000'],
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'There\'s a second cost stacked on top of that: the ad spend that generated the call in the first place. If a real estate lead costs $45 to $75 to generate through Google Ads, every missed call is also money you already spent and got nothing for. At 312 missed calls a year, that is somewhere between $14,000 and $23,000 of marketing budget that produced a ring and nothing else.'
+      },
+      {
+        type: 'callout',
+        content: 'You don\'t need exact numbers to know this is worth fixing. Even a conservative estimate usually lands somewhere your attention belongs.'
+      },
+      {
+        type: 'heading',
+        content: 'How Do You Text Someone That You Missed Their Call?'
+      },
+      {
+        type: 'paragraph',
+        content: 'The message needs to do three things fast: identify who you are, explain why you missed them without over-apologizing, and give them a reason to keep the conversation going by text instead of waiting for a callback.'
+      },
+      {
+        type: 'paragraph',
+        content: 'A few rules that actually matter.'
+      },
+      {
+        type: 'list',
+        items: [
+          '**Keep it under 160 characters** so it sends as one message instead of splitting.',
+          '**Say who you are immediately.** A text from an unknown number with no name gets ignored or reported as spam.',
+          '**Skip the vague promises.** "I\'ll call you back soon" doesn\'t give the caller anything to do right now. Ask a direct question instead.',
+          '**Match your voice to your business.** A solo wholesaler shouldn\'t sound like a corporate "our team," and a residential agent shouldn\'t sound like a call center script.',
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'A workable seller-lead version:'
+      },
+      {
+        type: 'quote',
+        content: 'Thanks for calling [Name/Business]! I\'m out inspecting a property right now. What\'s the address of the home you\'re looking to sell? Text me here anytime.'
+      },
+      {
+        type: 'paragraph',
+        content: 'A buyer or listing version:'
+      },
+      {
+        type: 'quote',
+        content: 'Hi! Thanks for calling [Agent Name]. I\'m currently showing a home. How can I help? Feel free to text the details here.'
+      },
+      {
+        type: 'paragraph',
+        content: 'An after-hours version:'
+      },
+      {
+        type: 'quote',
+        content: 'Thanks for reaching out to [Business]! Our office is closed right now. Reply with your property or question and I\'ll follow up first thing tomorrow.'
+      },
+      {
+        type: 'paragraph',
+        content: 'If the caller replies and the thread keeps going, you need scripts for what comes next rather than improvising on a job site. There is a full library of those in [real estate follow-up text scripts for leads who went quiet](/blog/real-estate-follow-up-text-scripts).'
+      },
+      {
+        type: 'heading',
+        content: 'Is There a Free App That Will Automatically Send Texts?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Yes, with real limitations worth knowing before you build a lead-capture strategy around one.'
+      },
+      {
+        type: 'paragraph',
+        content: '**On iPhone**, native "Respond with Text" lets you decline a call and fire off a preset reply, but it only works if you physically tap the screen during the ring. If your phone is in your pocket or you\'re mid-conversation with a client, it won\'t fire on its own. Driving Focus mode can auto-reply to texts, but it doesn\'t trigger on missed voice calls at all, only incoming messages while the mode is active.'
+      },
+      {
+        type: 'paragraph',
+        content: '**On Android**, Samsung and stock Google Phone apps both have Quick Decline messages, same limitation: you have to interact with the call in the moment. If you never see it ring, nothing gets sent.'
+      },
+      {
+        type: 'paragraph',
+        content: '**Google Voice**, popular with real estate solopreneurs for its low cost, has no native auto text-back for missed calls at all, on any plan, as of mid-2026.'
+      },
+      {
+        type: 'paragraph',
+        content: '**Free Android apps** like SMS Auto Reply genuinely can send an automatic text on a missed call with zero manual interaction, which native OS features can\'t do. That makes them the closest thing to a true free automation. But they come with real trade-offs: everything lives on one personal device, there\'s no way to track who you\'ve already texted inside a CRM, the message can\'t pull in a property address or reference where the lead came from, and background SMS permissions on Android can be unreliable depending on the phone and OS version.'
+      },
+      {
+        type: 'table',
+        headers: ['Option', 'Fires Without Touching the Phone?', 'Main Limitation'],
+        rows: [
+          ['iPhone Respond with Text', 'No', 'Requires tapping the screen while the call is ringing'],
+          ['iPhone Driving Focus auto-reply', 'No', 'Triggers on incoming texts only, never on missed voice calls'],
+          ['Samsung or Google Phone Quick Decline', 'No', 'Same constraint. You have to interact with the live call'],
+          ['Google Voice', 'No', 'No native missed-call text-back on any plan as of mid-2026'],
+          ['Free Android auto-reply app', 'Yes', 'One personal device, no CRM logging, no property or campaign context'],
+          ['Missed-call automation inside a CRM', 'Yes', 'Paid, and quality ranges from a static reply to a real conversation'],
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'None of these free options are useless. They\'re a legitimate zero-cost starting point. But they all break the same way: they\'re built for a single phone in a single person\'s hand, not a growing pipeline.'
+      },
+      {
+        type: 'heading',
+        content: 'How Can I Set Up an Auto Text Reply for Missed Calls?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Here\'s how to configure each option as of mid-2026. Screens change with OS updates, so if a menu name looks slightly different, look for the closest match.'
+      },
+      {
+        type: 'subheading',
+        content: 'iPhone (iOS 17 and 18)'
+      },
+      {
+        type: 'list',
+        ordered: true,
+        items: [
+          'Open Settings, then go to Phone (iOS 17) or Apps > Phone (iOS 18).',
+          'Tap Respond with Text.',
+          'Edit one of the three preset message fields with your custom reply.',
+          'Exit Settings. It saves automatically.',
+          'During a live call, tap the message icon above the answer bar and select your reply.',
+        ]
+      },
+      {
+        type: 'subheading',
+        content: 'Samsung (One UI 6)'
+      },
+      {
+        type: 'list',
+        ordered: true,
+        items: [
+          'Open the Phone app, tap the three-dot menu, then Settings.',
+          'Tap Quick Decline Messages.',
+          'Edit an existing template or tap + to write your own.',
+          'During a call, swipe up and select the message from the quick response menu.',
+        ]
+      },
+      {
+        type: 'subheading',
+        content: 'Google Pixel and stock Android'
+      },
+      {
+        type: 'list',
+        ordered: true,
+        items: [
+          'Open the Phone app, tap the three dots in the search bar, then Settings.',
+          'Tap Quick Responses.',
+          'Edit one of the four preset messages.',
+          'During a call, tap Respond on the incoming call screen and choose your message.',
+        ]
+      },
+      {
+        type: 'subheading',
+        content: 'Free Android auto-reply app (for example, SMS Auto Reply)'
+      },
+      {
+        type: 'list',
+        ordered: true,
+        items: [
+          'Install the app from the Google Play Store.',
+          'Grant SMS, Contacts, and Notification Access permissions.',
+          'Create a new automation profile and write your custom message.',
+          'Set the trigger to missed calls.',
+          'Choose when it runs (24/7, business hours only, nights and weekends).',
+          'Choose who it applies to (all numbers, or non-contacts only, so you\'re not auto-texting your spouse).',
+          'Save to activate.',
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'If you want the reply to happen automatically, every time, with zero manual step during the call, the free Android app is currently the only option here that actually delivers that on a personal phone.'
+      },
+      {
+        type: 'product-callout',
+        content: 'A static auto-text acknowledges the call. It does not ask about the property, the timeline, or the motivation, and it does nothing when the seller replies while you are still on a job site. SurFox AI starts a real two-way qualifying conversation the second a call goes unanswered.',
+        linkText: 'See how SurFox AI works',
+        linkHref: '/platform'
+      },
+      {
+        type: 'heading',
+        content: 'When It\'s Time to Move Past a Personal Phone Setup'
+      },
+      {
+        type: 'paragraph',
+        content: 'The free and native options solve the first problem: at least something gets sent. What they can\'t solve is everything after that. A static text doesn\'t ask the seller anything. It doesn\'t know if this is a hot lead or a wrong number. It doesn\'t log the conversation anywhere, doesn\'t tell you which marketing campaign the call came from, and doesn\'t do anything if the person actually replies while you\'re still on the job site.'
+      },
+      {
+        type: 'paragraph',
+        content: 'That\'s the gap between "acknowledged the call" and "captured the lead." A missed call that gets a real, two-way conversation, one that asks about the property, the timeline, and the motivation, and then puts a qualified conversation on your calendar without you touching your phone, is a fundamentally different outcome than a one-line auto-text sitting unanswered in someone\'s inbox.'
+      },
+      {
+        type: 'paragraph',
+        content: 'This is also where the volume problem shows up. Once the auto-text is working, replies start arriving, and they arrive at the same times you were already too busy to pick up the phone. If you are a solo operator, that ceiling is the real constraint, and we covered it in [working a full pipeline solo](/blog/too-many-leads-not-enough-time). Seller calls that come in after hours have the same shape, which is the subject of [what happens when a motivated seller texts you at 9pm](/blog/motivated-seller-texts-9pm).'
+      },
+      {
+        type: 'paragraph',
+        content: 'That\'s the layer SurFox AI runs on top of your missed calls: not just a reply, but a live qualifying conversation that starts the second the call goes unanswered, logs everything, and gets the ready-now leads back in front of you before they\'ve called the next name on their list.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Set up the free version today if you don\'t have anything running yet. But know what it\'s actually buying you, and what it isn\'t.'
+      },
+      {
+        type: 'cta-box',
+        headline: 'Stop losing deals to a phone in your pocket.',
+        subhead: 'SurFox AI answers every missed call by text within seconds, qualifies the seller in a real conversation, and hands you the ones ready to talk now.',
+        primaryButton: { text: 'Start today', href: '/pricing' },
+        secondaryButton: { text: 'See how it works', href: '/platform' }
+      },
+      {
+        type: 'heading',
+        content: 'Frequently Asked Questions'
+      },
+      {
+        type: 'subheading',
+        content: 'How many calls do small businesses actually miss?'
+      },
+      {
+        type: 'paragraph',
+        content: 'A 2024 study by 411 Locals tracked 85 service businesses across 58 industries for 30 days and found only 37.8% of inbound calls were answered live by a person, with nearly a quarter receiving no response at all. Field-based professionals miss an average of 27% of calls during normal hours according to Invoca, and a 2026 Voqo analysis put unanswered calls to real estate agencies at 30% to 40%.'
+      },
+      {
+        type: 'subheading',
+        content: 'Do people call back if you miss their call?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Usually not. The 2021 Numa Small Business Phone Report found that 85% of callers whose call goes unanswered never try again, and a 2025 Forbes consumer survey found 86% of people who reach a business voicemail hang up without leaving a message. Since 78% of buyers and sellers do business with whoever responds first (MIT / InsideSales.com), an unanswered call usually means the caller is already talking to a competitor.'
+      },
+      {
+        type: 'subheading',
+        content: 'Is there a free app that will automatically send texts when you miss a call?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Yes. Free Android apps such as SMS Auto Reply can send a text automatically on a missed call with no manual interaction, which native iPhone and Android features cannot do. The trade-offs are that everything lives on one personal device, nothing gets logged to a CRM, the message cannot reference a property address or the campaign the call came from, and background SMS permissions vary in reliability across Android versions.'
+      },
+      {
+        type: 'subheading',
+        content: 'How do I set up an automatic text reply for missed calls on iPhone?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Open Settings, go to Phone on iOS 17 or Apps > Phone on iOS 18, tap Respond with Text, and edit one of the three preset messages. Be aware of the limitation: iPhone\'s Respond with Text only sends if you tap the message icon while the call is ringing. There is no native iPhone setting that fires a text automatically on a missed call, and Driving Focus auto-reply responds to incoming messages only, never to voice calls.'
+      },
+      {
+        type: 'subheading',
+        content: 'Does Google Voice have automatic text-back for missed calls?'
+      },
+      {
+        type: 'paragraph',
+        content: 'No. As of mid-2026, Google Voice has no native missed-call auto text-back on any plan, personal or Workspace. If you use Google Voice as your business line, you need either a third-party auto-reply app or a CRM-level automation to cover missed calls.'
+      },
+      {
+        type: 'subheading',
+        content: 'What should a missed call text message say?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Keep it under 160 characters, name yourself or your business in the first few words, briefly explain the miss without over-apologizing, and ask one direct question that gives the caller something to do right now. For a seller lead, asking for the property address works better than promising a callback, because it moves the conversation forward instead of parking it.'
+      },
+      {
+        type: 'subheading',
+        content: 'Is it legal to send an automatic text after a missed call?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Replying by text to someone who just called your business is generally permitted, because the inbound call establishes the relationship and the consent. The rules tighten around cold, unsolicited marketing texts to numbers that never contacted you, which fall under TCPA and carrier policy. If you send from a CRM or automation platform, register your outbound numbers under A2P 10DLC and honor opt-outs immediately.'
       }
     ]
   }
