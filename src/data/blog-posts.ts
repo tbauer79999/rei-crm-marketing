@@ -5802,7 +5802,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'How to Revive Dead Real Estate Leads (They Aren\'t Dead)',
     metaDescription: 'The average agent quits after 1.3 follow-up attempts. Your "dead" list is unworked, not dead. Here is the revival sequence and what those leads are actually worth.',
-    relatedPosts: ['real-estate-leads-not-answering', 'reactivate-dormant-leads-ai', 'ai-sms-follow-up-real-estate-wholesalers'],
+    relatedPosts: ['real-estate-leads-not-answering', 'real-estate-follow-up-text-scripts', 'ai-sms-follow-up-real-estate-wholesalers'],
     howToSteps: [
       { name: 'Lead With Text, Not a Call', text: 'Open with SMS rather than a dial. Text messages carry roughly a 98% open rate compared to 20% to 37% for email, and a text does not have to survive the unknown-number screen the way a phone call does. If the goal is a response rather than a sent message, start with text.' },
       { name: 'Keep the First Message Short and Low Pressure', text: 'Send something like "Hey, is this still [Name]? Following up on the property on [Street]. Still thinking about selling?" It reopens the door without asking for a commitment, which is what actually pulls a reply out of someone who went quiet.' },
@@ -6062,7 +6062,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'How Many Times Should You Follow Up With a Lead? (5 to 12)',
     metaDescription: 'About 80% of closed deals need 5 to 12 follow-up attempts, but most agents stop at 2 or 3. The real frameworks explained, the fake one debunked, plus a full cadence.',
-    relatedPosts: ['revive-dead-real-estate-leads', 'real-estate-leads-not-answering', 'how-fast-to-call-a-real-estate-lead'],
+    relatedPosts: ['revive-dead-real-estate-leads', 'real-estate-leads-not-answering', 'real-estate-follow-up-text-scripts'],
     howToSteps: [
       { name: 'Respond Within 5 Minutes by Text', text: 'Send a text within 5 minutes of the lead coming in that confirms receipt and asks one simple qualifying question. Responding this fast makes you roughly 21 times more likely to qualify the lead than waiting 30 minutes.' },
       { name: 'Pair a Call and a Text on Days 1 to 3', text: 'Make your direct follow-up attempt with paired touches across two channels rather than relying on the phone alone. A lead who ignores a dial will often reply to a text, and the reverse is also true.' },
@@ -6571,6 +6571,277 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'Only when it replaces the conversation instead of starting it. Automation belongs on the first touch and the background nurture lanes, where the alternative is silence for several hours. The qualifying exchange establishes timeline and funding, and the human takes over for the part that requires judgment. A lead who gets a relevant reply in 90 seconds does not experience that as impersonal, they experience a 15-hour wait as impersonal.'
+      }
+    ]
+  },
+  {
+    id: 31,
+    slug: 'real-estate-follow-up-text-scripts',
+    title: 'Real Estate Follow-Up Text Scripts for Leads Who Went Quiet',
+    excerpt: 'The average buyer searches for about 10 weeks, and most deals take 5 to 12 touches. Most agents stop at 2. Here are the follow-up texts that get replies, why some never arrive at all, and what to say when a quiet lead finally answers.',
+    category: 'Sales Strategy',
+    date: '2026-09-02',
+    lastUpdated: '2026-09-02',
+    readTime: '10 min read',
+    author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    authorTitle: 'Founder & CEO, SurFox AI',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
+    metaTitle: 'Real Estate Follow-Up Text Scripts for Leads Who Went Quiet',
+    metaDescription: 'Copy-ready follow-up text scripts for cold real estate leads, plus the cadence behind them, why carriers filter some texts before delivery, and what to say when a quiet lead replies.',
+    relatedPosts: ['how-many-times-to-follow-up-with-a-lead', 'real-estate-leads-not-answering', 'revive-dead-real-estate-leads'],
+    howToSteps: [
+      { name: 'Answer Within the First 5 Minutes', text: 'Send a text inside 5 minutes of the inquiry that confirms you got it and asks one specific question. Lead Response Management research found contacting a lead within 5 minutes makes you roughly 21 times more likely to qualify it than waiting 30 minutes.' },
+      { name: 'Alternate Text, Video, and Call Across Days 1 to 10', text: 'Rotate channels instead of repeating one. This is the highest-response window, and a lead who ignores a dial from an unknown number will often reply to a text on the same day.' },
+      { name: 'Move to Every Other Week From Day 11 to Day 30', text: 'Space the touches out and attach something useful to each one: a new listing that fits their criteria, a market update, a comp on their street. The touch count matters less than whether the message carries information.' },
+      { name: 'Switch to Weekly Light Touches From Day 31 to Day 90', text: 'Send one short question rather than another paragraph of information. A single line asking whether they are still looking outperforms a market summary at this stage because it is easier to answer than to ignore.' },
+      { name: 'Keep a Monthly Market Touch Past Day 90', text: 'Do not close the file. Buyers average roughly 10 weeks of searching before they transact, so a lead that went quiet at week three is often still in the market at week twelve.' },
+      { name: 'Handle the Reply, Not Just the Send', text: 'Write a response for "not ready yet" and "already working with someone" before you need one. These are the two most common replies to a revival text and both are the start of a conversation, not the end of one.' },
+    ],
+    content: [
+      {
+        type: 'paragraph',
+        content: 'You sent the text. They didn\'t reply. Now you\'re staring at the same conversation thread three days later, cursor blinking, trying to figure out what to say that doesn\'t sound desperate or like a form letter.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Here\'s the uncomfortable part: the silence probably isn\'t rejection. It\'s timing. And the messages that break it are shorter, plainer, and less clever than most agents expect.'
+      },
+      {
+        type: 'tldr',
+        content: 'The average home buyer searches for about 10 weeks before transacting, so a lead who goes quiet in week two is usually still in the market in week ten.\nMost transactions take 5 to 12 touchpoints across 30 to 90 days. Roughly 44% of salespeople quit after one follow-up, and about 92% quit by the fourth.\nVelocify data on 3.5 million leads found 93% of leads who eventually convert are reached by the sixth attempt.\n"Just checking in" fails because it puts the work back on the lead. Every script below asks exactly one specific question.\nTexts sent from a number that is not registered through A2P 10DLC can be filtered by carriers before the lead ever sees them.\nThe hardest part is not the wording. It is running 12 timed touches across a full pipeline without dropping any.'
+      },
+      {
+        type: 'heading',
+        content: 'Why Leads Go Quiet in the First Place'
+      },
+      {
+        type: 'paragraph',
+        content: 'The National Association of Realtors Profile of Home Buyers and Sellers puts the typical buyer search at about 10 weeks. Most transactions take somewhere between 5 and 12 touchpoints spread across 30 to 90 days to actually close. Set those two numbers next to how long the average agent actually stays in contact and the problem stops being mysterious.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Marketing Donut found that about 44% of salespeople give up after a single follow-up, and roughly 92% stop by the fourth attempt. Velocify, analyzing 3.5 million leads, found that 93% of leads who eventually convert are reached by the sixth attempt. In real estate specifically, the average agent makes about 1.3 follow-up attempts before moving on.'
+      },
+      {
+        type: 'callout',
+        content: 'Most conversions happen between touch 5 and touch 12. Most agents quit at touch 4. The leads did not disappear. The follow-up did. For the full breakdown of that gap, see [how many times it is actually okay to follow up](/blog/how-many-times-to-follow-up-with-a-lead).'
+      },
+      {
+        type: 'subheading',
+        content: 'The Second Reason: Your Message Gave Them Homework'
+      },
+      {
+        type: 'paragraph',
+        content: 'Timing explains part of the silence. Wording explains the rest. A message that says "just checking in" or "wanted to see if you had any questions" hands the work back to the lead. They have to figure out what you want, decide whether it is worth a reply, and then compose one. Most people do not do that work. They leave it on read.'
+      },
+      {
+        type: 'paragraph',
+        content: 'There is also a channel problem underneath it. Surveys consistently find that around 80% of adults will not answer a call from a number they do not recognize, which is why a text with a low reply cost outperforms another voicemail. More on the mechanics of that in [why real estate leads stop answering](/blog/real-estate-leads-not-answering).'
+      },
+      {
+        type: 'heading',
+        content: 'Follow-Up Text Scripts That Actually Get Replies'
+      },
+      {
+        type: 'paragraph',
+        content: 'The texts that get answered share three traits. They are short enough to read on a lock screen, they ask exactly one specific question, and they do not require the lead to do anything except answer it.'
+      },
+      {
+        type: 'table',
+        headers: ['Situation', 'Script', 'Why it works'],
+        rows: [
+          ['Buyer lead gone cold', '"Hey [First Name], still looking for something in [City/Neighborhood], or has the plan changed?"', 'One question, two possible answers, no context required to reply.'],
+          ['Seller lead sitting quiet', '"[First Name], a home just sold near you for [Price]. Want a quick one-page comparison for yours?"', 'Leads with new information they did not have, then offers something concrete.'],
+          ['Open house visitor who never followed up', '"[First Name], thanks for stopping by [Address] on Sunday. The seller just updated the disclosures. Want me to send over the PDF?"', 'Anchors to a real shared moment and gives a legitimate reason to be texting today.'],
+          ['Lead on listing alerts who went silent', '"[First Name], I want to make sure the listings I\'m sending are actually what you\'re looking for. No need to reply if they\'re on target. If not, let me know and I\'ll adjust the search."', 'Removes the pressure to respond. Silence becomes confirmation instead of another dead end.'],
+          ['Long-quiet lead, 30+ days', 'A 15-second video text: "Hey, driving through [Neighborhood], saw this place come up and thought of you. No need to call back."', 'Gets opened almost every time and reminds them a person is on the other end, not a drip campaign.'],
+          ['Past client or sphere contact', '"[First Name], values on [Street] moved about [X]% since you bought. Want the current number on yours?"', 'Specific to their address, and the answer is yes or no.'],
+        ]
+      },
+      {
+        type: 'subheading',
+        content: 'The Opt-Out Script Is the One Most Agents Skip'
+      },
+      {
+        type: 'paragraph',
+        content: 'Look again at the listing-alert script. "No need to reply if they\'re on target" is doing something the other messages are not. It reframes silence as agreement rather than rejection, which means you stop reading non-response as a verdict. And if the criteria really are wrong, you find that out instead of sending another six listings nobody wanted.'
+      },
+      {
+        type: 'subheading',
+        content: 'Why Video Beats Another Line of Copy After 30 Days'
+      },
+      {
+        type: 'paragraph',
+        content: 'Once a lead has ignored three or four written messages, a fifth written message is competing with the four they already skipped. A short video text changes the format entirely. It does not need production value. A phone camera, a street, and fifteen seconds is the whole thing. The point is not the property in the clip. It is that a recognizable human being is on the other end of the number.'
+      },
+      {
+        type: 'heading',
+        content: 'Why Some of Your Texts Never Arrive at All'
+      },
+      {
+        type: 'paragraph',
+        content: 'If your messages seem to vanish into a void, there may be a technical answer rather than a copywriting one. Carriers actively filter business text messages in the United States. Traffic sent from a number that has not been registered through A2P 10DLC, the carrier system that verifies who is sending business texts, can be throttled or blocked before it ever reaches a handset.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Three things get messages flagged fastest, all of them addressed in the CTIA Messaging Principles and Best Practices: no clear opt-out language, no identifiable sender in the message body, and public link shorteners like bit.ly, which are shared by so many senders that carriers treat them as a risk signal. Use your own domain for links, identify yourself in the first message of any new thread, and register the number.'
+      },
+      {
+        type: 'callout',
+        content: 'A perfect script sent from an unregistered number is a script nobody reads. Deliverability sits upstream of wording.'
+      },
+      {
+        type: 'subheading',
+        content: 'Why Homeowners Already Distrust the Channel'
+      },
+      {
+        type: 'paragraph',
+        content: 'There is a reason consumers are primed to ignore anything that looks automated. Wholesalers buy public property records, run them through skip-tracing tools to attach phone numbers, and blast "want to sell your house for cash" messages with no consent on file and no carrier registration. It works often enough to keep happening, and it has trained an entire market to treat unexpected property texts as spam.'
+      },
+      {
+        type: 'paragraph',
+        content: 'A legitimate agent\'s follow-up gets sorted into that same mental spam folder the moment it reads like one of those blasts. Specificity is the defense. A message naming their street, their open house, or the listing they clicked on cannot be confused with a bulk send, because a bulk send does not know any of that.'
+      },
+      {
+        type: 'heading',
+        content: 'The Cadence That Makes the Scripts Work'
+      },
+      {
+        type: 'paragraph',
+        content: 'Scripts only work when they go out on a schedule instead of whenever you remember. Here is a structure that holds up across a full pipeline.'
+      },
+      {
+        type: 'table',
+        headers: ['Window', 'Channel mix', 'What to send'],
+        rows: [
+          ['First 5 minutes', 'Text', 'Acknowledge the inquiry and offer to talk. Contact inside 5 minutes makes you roughly 21 times more likely to qualify the lead than waiting 30 minutes.'],
+          ['Days 1 to 10', 'Text, short video, call', 'Alternate all three. This is the highest-response window in the entire sequence.'],
+          ['Days 11 to 30', 'Text or email, every other week', 'Something useful attached: a new listing, a market update, a comp.'],
+          ['Days 31 to 90', 'Text, weekly light touch', 'One short check-in question. At this stage a question outperforms another paragraph of information.'],
+          ['Day 90+', 'Monthly market touch', 'Stay present until timing changes. Some of the best closings come from someone who went quiet for months and then answered a single line.'],
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'If you already have a pile of leads sitting past that day 90 mark, that list is worth working before you buy new ones. The economics of [reviving dead real estate leads](/blog/revive-dead-real-estate-leads) beat almost any lead source, for the simple reason that you already paid for them.'
+      },
+      {
+        type: 'heading',
+        content: 'What To Say When a Quiet Lead Actually Replies'
+      },
+      {
+        type: 'paragraph',
+        content: 'Almost every follow-up guide stops at the send. But the reply is where the deal is won or lost, and the two most common answers to a revival text get treated as rejections when neither one is.'
+      },
+      {
+        type: 'subheading',
+        content: 'When they say "not ready yet"'
+      },
+      {
+        type: 'paragraph',
+        content: 'This is a timing statement, not a no. The only useful next move is to get a date attached to it. Something like: "Totally fine. Rough sense of when, this fall or more like next spring? I\'ll just check back then instead of bugging you." You get a timeline, they get relief from pressure, and the lead moves from unknown to scheduled.'
+      },
+      {
+        type: 'subheading',
+        content: 'When they say "already working with someone"'
+      },
+      {
+        type: 'paragraph',
+        content: 'Do not argue and do not vanish. Try: "Good, glad you\'ve got someone. If anything changes I\'m here. Want me to keep sending [Neighborhood] listings in the meantime, or take you off?" A meaningful share of those relationships do not survive to closing, and the agent still politely in the thread is the one who gets the call when it does not.'
+      },
+      {
+        type: 'subheading',
+        content: 'When they say "just looking"'
+      },
+      {
+        type: 'paragraph',
+        content: 'Answer it literally and give them a reason to stay in contact: "Makes sense. Want me to send the ones that actually fit so you\'re not scrolling everything?" It converts a browsing lead into a subscribed one without asking for a commitment they are not ready to make.'
+      },
+      {
+        type: 'callout',
+        content: 'The follow-up to the follow-up matters as much as the first message did. "Not ready yet" is a new conversation, not a closed file.'
+      },
+      {
+        type: 'heading',
+        content: 'The Real Constraint Is Not the Wording'
+      },
+      {
+        type: 'paragraph',
+        content: 'None of the scripts above are hard to write. What is hard is running 12 timed touchpoints per lead, across a full pipeline, with a different message each time, while also doing showings, contracts, and the rest of the job. That is where the sequence quietly collapses back to one or two attempts and the pipeline starts looking like a dead list.'
+      },
+      {
+        type: 'product-callout',
+        content: 'That is exactly the piece SurFox AI carries. It follows up by text automatically, on the right cadence, with responses built around what each lead actually said instead of a static template, so the ones who go quiet do not stay that way and your team only steps into conversations that are already live.',
+        linkText: 'See how SurFox AI works',
+        linkHref: '/platform'
+      },
+      {
+        type: 'cta-box',
+        headline: 'Send touches 3 through 12 without remembering to.',
+        subhead: 'SurFox AI runs the follow-up sequence by SMS, handles the replies, and hands your team the leads who answered instead of the ones who never got a fourth message.',
+        primaryButton: { text: 'Start today', href: '/pricing' },
+        secondaryButton: { text: 'See how it works', href: '/platform' }
+      },
+      {
+        type: 'heading',
+        content: 'Frequently Asked Questions'
+      },
+      {
+        type: 'subheading',
+        content: 'What do you text a real estate lead who stopped responding?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Send one short, specific question that can be answered in a few words. For a buyer: "Hey [First Name], still looking for something in [City], or has the plan changed?" For a seller: "[First Name], a home just sold near you for [Price]. Want a quick one-page comparison for yours?" Avoid "just checking in," which gives the lead no information and makes them do the work of deciding what you want.'
+      },
+      {
+        type: 'subheading',
+        content: 'How long should you keep following up with a cold real estate lead?'
+      },
+      {
+        type: 'paragraph',
+        content: 'At least 90 days of active follow-up, then a monthly market touch after that. The typical home buyer searches for about 10 weeks before transacting, and most deals take 5 to 12 touchpoints across 30 to 90 days, so stopping at week three means quitting in the middle of the average buyer\'s search.'
+      },
+      {
+        type: 'subheading',
+        content: 'How many times should you follow up before giving up on a lead?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Six attempts is the floor and 12 is closer to the real ceiling. Velocify data on 3.5 million leads found 93% of leads who eventually convert are reached by the sixth attempt, while Marketing Donut found roughly 44% of salespeople quit after one follow-up and about 92% quit by the fourth.'
+      },
+      {
+        type: 'subheading',
+        content: 'Why are my real estate text messages not being delivered?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Most often because the sending number is not registered through A2P 10DLC, the carrier system that verifies business text senders in the United States. Unregistered traffic can be throttled or blocked before delivery. Messages that use public link shorteners such as bit.ly, omit opt-out language, or do not identify the sender get filtered for the same reason.'
+      },
+      {
+        type: 'subheading',
+        content: 'Is it better to text or call a lead who has gone quiet?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Text first, then alternate. Around 80% of adults will not answer a call from an unrecognized number, so a text carries a lower barrier to a reply. The strongest cadence rotates text, a short video message, and a call across the first 10 days rather than repeating the same channel.'
+      },
+      {
+        type: 'subheading',
+        content: 'What do you say when a lead replies "not ready yet"?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Get a date attached to it instead of closing the file. A reply like "Totally fine. Rough sense of when, this fall or more like next spring? I\'ll check back then instead of bugging you" gives you a timeline and gives them relief from pressure. It moves the lead from unknown to scheduled.'
+      },
+      {
+        type: 'subheading',
+        content: 'Do video texts work better than regular texts for cold leads?'
+      },
+      {
+        type: 'paragraph',
+        content: 'After a lead has ignored three or four written messages, yes. A fifth written text competes with the four they already skipped, while a 15-second phone video changes the format entirely and signals that a real person is sending it. It needs no production value, just a phone camera and a sentence that does not ask for a call back.'
       }
     ]
   }
