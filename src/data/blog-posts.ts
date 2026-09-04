@@ -5065,6 +5065,10 @@ export const blogPosts: BlogPost[] = [
         content: 'The fix isn\'t working harder to sound more convincing. It\'s responding faster, following up more than twice, and sending messages that lower the pressure instead of raising it. Silence is a system problem, not a verdict on the deal.'
       },
       {
+        type: 'paragraph',
+        content: 'That is the per-lead version of the problem. If it is happening across your whole pipeline rather than to individual sellers, the question stops being what to send and starts being where the drop-off is. [Why your leads are not converting](/blog/real-estate-leads-not-converting) walks the six gates in order and separates a follow-up problem from a genuine lead-quality one.'
+      },
+      {
         type: 'cta-box',
         headline: 'Stop losing sellers to silence.',
         subhead: 'SurFox AI answers every seller lead by SMS within seconds, runs the full follow-up sequence instead of stopping at attempt two, and hands your team the conversations that are actually going somewhere.',
@@ -6477,7 +6481,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Triage buys you clarity. It doesn\'t buy you more hours in the day. Once your lanes are defined, the honest problem is still sitting there: a solo agent physically cannot hit a 5-minute response window on every hot lead while also running showings and closings.'
+        content: 'Triage buys you clarity. It doesn\'t buy you more hours in the day. Once your lanes are defined, the honest problem is still sitting there: a solo agent physically cannot hit a 5-minute response window on every hot lead while also running showings and closings. And if triaging properly still leaves you with nothing closing, the bottleneck is further down: the [six-gate conversion diagnostic](/blog/real-estate-leads-not-converting) shows you which gate is actually leaking.'
       },
       {
         type: 'paragraph',
@@ -7775,7 +7779,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Timing is only half of it. If you are also trying to work more leads than the hours in your day allow, the triage side of the problem is in [too many leads, not enough time](/blog/too-many-leads-not-enough-time).'
+        content: 'Timing is only half of it. If you are also trying to work more leads than the hours in your day allow, the triage side of the problem is in [too many leads, not enough time](/blog/too-many-leads-not-enough-time). And if you have fixed the cadence and the pipeline still is not producing, run the [six-gate conversion diagnostic](/blog/real-estate-leads-not-converting) before you blame the lead source.'
       },
       {
         type: 'cta-box',
