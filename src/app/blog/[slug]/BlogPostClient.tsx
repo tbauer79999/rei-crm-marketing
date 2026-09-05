@@ -10,7 +10,9 @@ import { BlogPost, ContentBlock, ProductCalloutBlock, CtaBoxBlock } from '@/data
 // raw [label](/href) syntax would ship the brackets to Google verbatim. Keep
 // the label, drop the link.
 function stripMarkdownLinks(text: string): string {
-  return text.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1');
+  return text
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/\*\*(.+?)\*\*/g, '$1');
 }
 
 function extractFAQs(content: ContentBlock[]): Array<{ question: string; answer: string }> {
@@ -46,40 +48,54 @@ interface BlogPostClientProps {
   relatedPosts: BlogPost[];
 }
 
+// Inline markdown supported in any text block: [label](/href) links and **bold**.
+// One pass over both so a bold span inside a sentence with a link still renders.
+// Groups: 1-2 = link label/href, 3 = bold text.
+const INLINE_REGEX = /\[([^\]]+)\]\(([^)]+)\)|\*\*(.+?)\*\*/g;
+
 function renderContent(text: string): React.ReactNode {
-  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-  if (!linkRegex.test(text)) return text;
-  linkRegex.lastIndex = 0;
+  INLINE_REGEX.lastIndex = 0;
+  if (!INLINE_REGEX.test(text)) return text;
+  INLINE_REGEX.lastIndex = 0;
 
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
   let match;
   let key = 0;
 
-  while ((match = linkRegex.exec(text)) !== null) {
+  while ((match = INLINE_REGEX.exec(text)) !== null) {
     if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
-    const href = match[2];
-    parts.push(
-      href.startsWith('/') ? (
-        <Link
-          key={key++}
-          href={href}
-          className="underline underline-offset-2 opacity-100 hover:opacity-80 transition-opacity font-medium"
-        >
-          {match[1]}
-        </Link>
-      ) : (
-        <a
-          key={key++}
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline underline-offset-2 opacity-60 hover:opacity-100 transition-opacity text-sm font-medium"
-        >
-          {match[1]}
-        </a>
-      )
-    );
+
+    if (match[3] !== undefined) {
+      parts.push(
+        <strong key={key++} className="font-semibold text-[#13171F]">
+          {match[3]}
+        </strong>
+      );
+    } else {
+      const href = match[2];
+      parts.push(
+        href.startsWith('/') ? (
+          <Link
+            key={key++}
+            href={href}
+            className="underline underline-offset-2 opacity-100 hover:opacity-80 transition-opacity font-medium"
+          >
+            {match[1]}
+          </Link>
+        ) : (
+          <a
+            key={key++}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 opacity-60 hover:opacity-100 transition-opacity text-sm font-medium"
+          >
+            {match[1]}
+          </a>
+        )
+      );
+    }
     lastIndex = match.index + match[0].length;
   }
 
