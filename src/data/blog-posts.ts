@@ -7865,7 +7865,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'Candidate Screening: The 5 C\'s, the 80/20 Rule, and What Predicts a Hire',
     metaDescription: 'Structured interviews predict job performance at r = .42, ahead of cognitive ability testing. Unstructured interviews, the most common method, manage only .19. What screening research actually says.',
-    relatedPosts: ['how-to-reject-a-candidate-politely', 'why-candidates-stop-responding', 'staffing-follow-up-gap'],
+    relatedPosts: ['how-to-reject-a-candidate-politely', 'texting-candidates-what-gets-a-reply', 'staffing-follow-up-gap'],
     howToSteps: [
       { name: 'Review Applications and Documents', text: 'Match resumes and cover letters against the job spec. This is the cheapest filter you have, so it goes first.' },
       { name: 'Apply Hard-Stop Pre-Screening Criteria', text: 'Filter on binary, non-negotiable facts: work authorization, location, licensing, availability, rate expectations. Yes or no only, no judgment calls.' },
@@ -8176,7 +8176,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'How to Reject a Candidate Politely: Templates, Timing and Legal Limits',
     metaDescription: 'Between 65% and 75% of applications get no response at all. What silence actually costs, how fast to send a rejection, what you are legally allowed to say, and templates by stage.',
-    relatedPosts: ['candidate-screening-what-predicts-a-hire', 'why-candidates-stop-responding', 'triaging-high-volume-applicant-flow'],
+    relatedPosts: ['candidate-screening-what-predicts-a-hire', 'texting-candidates-what-gets-a-reply', 'triaging-high-volume-applicant-flow'],
     howToSteps: [
       { name: 'Acknowledge the Application Automatically', text: 'Send an automated confirmation within minutes to 48 hours of receipt. This costs nothing and removes the largest single source of candidate silence.' },
       { name: 'Disposition Screened-Out Applicants Within 3 to 5 Days', text: 'Candidates assume they have been ghosted after roughly 7 days of silence. Employers who disposition within 3 to 5 business days of an evaluation stage see 52% fewer extended wait-time complaints.' },
@@ -8340,6 +8340,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'If a background check informed the decision, a staffing agency cannot go straight to a rejection notice. The Fair Credit Reporting Act requires a two-step adverse action process: a **pre-adverse action notice**, sent before any final decision, including a full copy of the consumer report and the FCRA Summary of Your Rights, followed by a **dispute window**, generally treated as 5 business days, during which the candidate can flag errors with the reporting agency. Only after that window closes should a **final adverse action notice** go out, naming the reporting agency, stating it did not make the hiring decision, and informing the candidate of their right to a free copy of the report within 60 days. Skipping straight to rejection when a background check drove the decision is one of the more common, and more preventable, FCRA violations in staffing.'
+      },
+      {
+        type: 'paragraph',
+        content: 'One more constraint applies to the channel rather than the content. If any of these notices go out by SMS, they fall under the TCPA as well, which carries $500 to $1,500 in statutory damages per message and requires that opt-outs be honored across every system you run. The rules governing [what you are allowed to text a candidate](/blog/texting-candidates-what-gets-a-reply) are separate from the rules governing what you are allowed to tell them, and a compliant rejection sent through a non-compliant channel is still exposure.'
       },
       {
         type: 'heading',
@@ -8528,6 +8532,343 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'When a background check contributes to a rejection, send a pre-adverse action notice with a copy of the report and a summary of the candidate\'s rights, allow a dispute window generally treated as 5 business days, then send a final adverse action notice naming the reporting agency and the candidate\'s right to a free report copy within 60 days.'
+      }
+    ]
+  },
+  {
+    id: 37,
+    slug: 'texting-candidates-what-gets-a-reply',
+    title: 'Texting Candidates: What Actually Gets a Reply, and What the Law Actually Requires',
+    excerpt: 'Candidate texts get 60% to 70% response rates. They also sit under TCPA rules most staffing firms have never checked. What earns a reply, and what the law requires before you send the first message.',
+    category: 'Sales Strategy',
+    date: '2026-09-04',
+    lastUpdated: '2026-09-04',
+    readTime: '12 min read',
+    author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    authorTitle: 'Founder & CEO, SurFox AI',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
+    metaTitle: 'Texting Candidates: What Gets a Reply and What the Law Requires',
+    metaDescription: 'Candidate texts hit 60% to 70% response rates against 5.4% for cold email. TCPA damages run $500 to $1,500 per message. What works, what is compliant, and what makes a recruiting text look legitimate.',
+    relatedPosts: ['how-to-reject-a-candidate-politely', 'candidate-screening-what-predicts-a-hire', 'triaging-high-volume-applicant-flow'],
+    howToSteps: [
+      { name: 'Register for A2P 10DLC Before You Send Anything', text: 'Carriers began automatically blocking unregistered business texts on February 1, 2025. Unregistered traffic sees delivery failure above 40%. Register your brand and your recruiting use case through The Campaign Registry, which typically takes 1 to 7 business days.' },
+      { name: 'Text Immediately on Application, While Consent Is Freshest', text: 'Submitting a phone number on an application is generally treated as prior express consent for texts about that specific role. Send the first message right away, identifying the recruiter and the agency by name.' },
+      { name: 'Cap Follow-Ups at 3 to 6 Touches, Spaced 2 to 5 Days', text: 'Reply rates decay steeply after the first touch and opt-outs climb past six attempts. Repeatedly texting someone who never replies also damages your sending number reputation with carriers.' },
+      { name: 'Run a Three-Touch Reminder Before Every Interview', text: 'Automated reminders at 48 hours, 24 hours, and 2 hours before an interview cut candidate no-shows by 35% to 50%.' },
+      { name: 'Honor Opt-Outs Immediately and Sync Them Everywhere', text: 'Recognize STOP, UNSUBSCRIBE, CANCEL, END and QUIT. FCC guidance requires processing across all internal systems within 10 business days, and carrier policy expects immediate suppression. Failure to sync suppression lists across tools is a leading cause of TCPA class actions.' },
+    ],
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Text gets read. Recruiters have known this for years, and the data backs it up. What has changed is that candidates have also learned to distrust an unknown number offering them work, because so many of those numbers belong to scammers.'
+      },
+      {
+        type: 'paragraph',
+        content: 'At the same time, most staffing firms texting applicants have never checked which consent standard applies to them. TCPA violations carry statutory damages per message, several states have stacked stricter rules on top of federal law, and a text that reads as normal to a recruiter can be the exact message a court has already ruled illegal.'
+      },
+      {
+        type: 'paragraph',
+        content: 'This post covers both halves: what earns a reply, and what the law actually requires before you send that first text.'
+      },
+      {
+        type: 'tldr',
+        content: 'Candidate texts achieve response rates of 60% to 70%, against roughly 5.4% for a first-touch cold email (GoHire benchmarks; Pin Research, 2024).\nTCPA violations carry statutory damages of $500 per negligent text and up to $1,500 per willful violation, and damages accrue per message (47 U.S.C. 227).\nFTC data shows consumers lost $470 million to text-based scams in 2024, up from $90 million in 2020 (FTC, 2024).\nCarriers began automatically blocking unregistered A2P 10DLC business texts on February 1, 2025, with unregistered traffic seeing delivery failure rates above 40%.\nA three-touch automated interview reminder sequence cuts candidate no-shows by 35% to 50% (EZ Texting workflow research).'
+      },
+      {
+        type: 'heading',
+        content: 'Does Texting Candidates Actually Work'
+      },
+      {
+        type: 'paragraph',
+        content: 'Yes, by a wide margin, but it works best as a channel for engaged applicants rather than cold outreach.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Candidate SMS achieves open rates near 98%, compared to roughly 20% for recruiting email, and candidates typically respond within 90 seconds to 3 minutes of receiving a text (CTIA industry data; SHRM CDW case study). Response rates for consented candidate texting run 60% to 70%, against a 5.4% first-touch reply rate for cold email that decays to about 1.5% by the fifth attempt (Pin Research, 2024). Phone calls fare worse still, with voicemail listen rates under 20% and cold calls increasingly ignored outright.'
+      },
+      {
+        type: 'table',
+        headers: ['Metric', 'SMS', 'Email', 'Cold Calls'],
+        rows: [
+          ['Open rate', '~98%', '~20%', 'N/A (voicemail listen rate under 20%)'],
+          ['Response rate', '60% to 70%', '5.4% first touch, decaying to 1.5%', 'Very low, declining'],
+          ['Time to response', '90 seconds to 3 minutes', 'Hours to days', 'Delayed or ignored'],
+          ['Opt-out rate', '25x lower than email when consented', 'Standard baseline', 'Immediate call blocking'],
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'Candidate preference follows the same pattern. Jobvite\'s Job Seeker Nation study found 64% of job seekers who received a recruiting text after applying preferred SMS for ongoing communication over email or phone calls. GoHire data found agencies using structured SMS workflows, single-ask questions under 160 characters with clear sender identification, saw 92% of qualified candidates self-schedule an interview within 24 hours, and a SHRM case study at CDW recorded an 87% response rate with a 3-minute average response time.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The consistent finding is that SMS works because candidates already opted in by applying, not because texting is inherently more persuasive. It is the highest-performing channel for people who already raised their hand. If you want the research on which screening methods actually predict who to move forward once someone replies, see [what actually predicts a good hire](/blog/candidate-screening-what-predicts-a-hire).'
+      },
+      {
+        type: 'heading',
+        content: 'The "3 Text Rule": Folklore or Real Cadence Science'
+      },
+      {
+        type: 'paragraph',
+        content: 'The claim is specific: stop texting a candidate after two to three unanswered messages, and either drop the channel or fall back to email.'
+      },
+      {
+        type: 'paragraph',
+        content: 'It comes from vendor trade blogs, notably GoHire, not from a peer-reviewed study or a controlled trial. Like the [5 C\'s and the 80/20 interviewing rule](/blog/candidate-screening-what-predicts-a-hire), it is a practitioner heuristic, not an academic finding, and it should be labeled as one.'
+      },
+      {
+        type: 'paragraph',
+        content: 'That said, the mechanism behind it holds up better than most folklore rules do. Carriers track opt-out velocity and delivery failure rates against every business number, and repeatedly texting someone who never replies measurably damages that number\'s reputation score, which can get future messages throttled or dropped. So while "exactly three" is not a validated threshold, the underlying caution is grounded in how carrier filtering actually works.'
+      },
+      {
+        type: 'callout',
+        content: 'The more useful research sits in multi-channel sequencing rather than a single-channel touch count. The pattern that holds: cap total outreach at **3 to 6 touches spaced 2 to 5 business days apart** across whatever channels you are using, introduce SMS after a candidate has already engaged, and stop past 6 attempts, since conversion drops sharply and opt-outs climb. That is a cadence limit, not a texting-specific rule, and it is a better standard than "three texts" alone.'
+      },
+      {
+        type: 'heading',
+        content: 'Why Candidates Think Your Text Is a Scam'
+      },
+      {
+        type: 'paragraph',
+        content: 'This is not a complaint about candidate paranoia. It is a rational response to scale.'
+      },
+      {
+        type: 'paragraph',
+        content: 'FTC data shows consumers reported losing $470 million to text-based scams in 2024, a fivefold jump from $90 million in 2020. Fake job offers are one of the two most-reported categories of text fraud nationwide, alongside fake delivery notices. Within that, "task scams," unsolicited texts offering remote work rating products or completing repetitive tasks, quadrupled from about 5,000 reports in 2023 to roughly 20,000 in the first half of 2024 alone. Job scam losses topped $500 million in 2023, with a median loss of $1,500 per victim.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Given that volume, candidate suspicion of an unknown recruiting text is a rational baseline, not a failure of trust. What separates a legitimate message from a scam is specific and learnable.'
+      },
+      {
+        type: 'table',
+        headers: ['Signal', 'Fraud Red Flag', 'Legitimate Standard'],
+        rows: [
+          ['Identification', 'Generic greeting, no sender name', 'Candidate first name, recruiter full name, agency name'],
+          ['Platform', 'Pushes to Telegram, WhatsApp, or Signal', 'Stays on SMS, official email, or the ATS portal'],
+          ['Job details', 'Vague ("earn $500/day rating apps")', 'Specific title, location, shift, and application reference'],
+          ['Money', 'Requests payment for equipment or "unlocking" tasks', 'Never charges applicants anything'],
+          ['Links', 'Public shorteners (bit.ly, tinyurl)', 'Simple reply triggers ("Reply YES") or a branded ATS link'],
+          ['Process', 'Offers a job over text with no interview', 'Schedules a real screening call before any offer'],
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'The practical fix is to make every message you send match the legitimate column on sight: full names, a specific job reference, no payment request, no link shortener, and a simple response prompt instead of a demand to move to another app.'
+      },
+      {
+        type: 'heading',
+        content: 'What the Law Actually Requires'
+      },
+      {
+        type: 'callout',
+        content: 'This section is general information, not legal advice. Requirements vary by state, and this area has active, unresolved circuit splits, so confirm anything here with employment counsel before building a texting policy on it.'
+      },
+      {
+        type: 'subheading',
+        content: 'Marketing versus informational'
+      },
+      {
+        type: 'paragraph',
+        content: 'Under the TCPA, texts are legally treated as calls, and the required consent standard depends on whether a message is informational or telemarketing. A text tied to an active job application, an interview confirmation, shift logistics, or a status update on a role the candidate applied for is generally treated as informational. In Andersen v. Nexa Mortgage, LLC (E.D. Cal., 2024), the court held that texts recruiting a specific individual, discussing pay and role details, are not solicitations or telemarketing under federal do-not-call rules, because they do not promote the sale of goods or services. Mass cold texts to a purchased or scraped list, or general marketing of your agency\'s services, fall into the stricter telemarketing category.'
+      },
+      {
+        type: 'subheading',
+        content: 'Does applying count as consent?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Generally yes, for the specific role applied to. Submitting a phone number on an application is treated as prior express consent to receive texts about that application. But the Ninth Circuit\'s decision in Loyhayem v. Fraser Financial & Insurance Services (2021) held that non-emergency recruitment texts to cell phones require prior express consent regardless of whether the message is informational or promotional, so "they applied, so anything goes" is not accurate. Consent has scope. A candidate who applied to one role in 2023 has not consented to texts about unrelated openings in 2026, and contacts inactive for more than 18 months should generally be re-engaged by email before resuming texts.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The law here is genuinely unsettled right now. In Bradford v. Sovereign Pest Control of TX, Inc. (5th Cir., February 25, 2026), the court applied the Supreme Court\'s Loper Bright and McLaughlin v. McKesson rulings curtailing deference to federal agencies and rejected the FCC\'s long-standing requirement of prior express written consent for telemarketing, holding that the statute\'s plain text requires only prior express consent, whether oral or written. That case concerned prerecorded calls rather than texts, but the TCPA treats texts as calls and the same consent provision governs both, so the reasoning carries. It also creates a live split between circuits, and how it resolves will change what consent means for texting outside Texas, Louisiana and Mississippi.'
+      },
+      {
+        type: 'subheading',
+        content: 'Opt-outs'
+      },
+      {
+        type: 'paragraph',
+        content: 'Systems must recognize STOP, UNSUBSCRIBE, CANCEL, END, and QUIT, and honor them immediately. FCC guidance requires opt-outs to be processed across all internal systems within 10 business days, and CTIA carrier policy expects immediate suppression on receipt of STOP. Opt-outs submitted by any reasonable method must sync to your suppression list. Failing to sync that list across tools is reportedly the leading cause of TCPA class actions, and the 2026 Palm Beach Tan settlement, $2.5 million with individual class members eligible for up to $1,500 per post-stop text, illustrates the exposure of getting this wrong.'
+      },
+      {
+        type: 'subheading',
+        content: 'Quiet hours and state rules'
+      },
+      {
+        type: 'paragraph',
+        content: 'Federal rules restrict business texting to 8:00 AM to 9:00 PM in the recipient\'s local time zone. Several states are stricter.'
+      },
+      {
+        type: 'table',
+        headers: ['State', 'Quiet Hours', 'Notable Provision'],
+        rows: [
+          ['Florida (FTSA)', '8:00 AM to 8:00 PM', '$500 to $1,500 per text, fee-shifting, and a 15-day safe harbor requiring the recipient to text STOP before suing'],
+          ['Oklahoma (OTSA)', '8:00 AM to 8:00 PM', 'Mirrors Florida rules but without fee-shifting'],
+          ['Washington (CEMA)', 'Standard state windows', '$500 per text plus Consumer Protection Act treble damages; Aaland v. CRST (2025) held recruitment texts to prospective workers are commercial'],
+          ['Maryland', '8:00 AM to 8:00 PM', 'Requires prior express written consent for automated commercial messaging'],
+        ]
+      },
+      {
+        type: 'callout',
+        content: '**Damages.** TCPA violations carry statutory damages of $500 per negligent text and up to $1,500 per willful violation, and because damages accrue per message, an unconsented campaign to a few hundred numbers can generate exposure in the millions.'
+      },
+      {
+        type: 'heading',
+        content: 'A2P 10DLC Registration and Carrier Filtering'
+      },
+      {
+        type: 'paragraph',
+        content: 'Beyond the legal layer, carriers run their own technical gate. Application-to-Person 10-Digit Long Code, or A2P 10DLC, is the framework AT&T, T-Mobile, and Verizon use to verify business identity for text traffic sent from standard local numbers, administered through The Campaign Registry.'
+      },
+      {
+        type: 'paragraph',
+        content: 'As of February 1, 2025, carriers began automatically blocking unregistered A2P traffic. Unregistered senders see delivery failure rates above 40%, while properly registered traffic with clean content typically delivers at 95% to 98%. Registering requires submitting your legal business name, EIN, address, and website at the brand level, then registering the use case, such as recruiting, with sample templates and opt-in language at the campaign level. Approval usually takes 1 to 7 business days, and submissions without a visible privacy policy or clear opt-in language are commonly rejected outright.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Even fully registered, compliant messages get silently dropped if content trips carrier spam filters. Phrases like "earn fast cash" or "no background check needed" can trigger financial-fraud filters, public link shorteners like bit.ly are widely blocked because scammers rely on them, emojis shift message encoding and cut the character limit from 160 to 70, and sending identical unpersonalized text to hundreds of numbers at once triggers velocity filters. None of this shows up as a bounce the way email does. It fails quietly, and the sender has no idea unless they are watching delivery rates directly.'
+      },
+      {
+        type: 'heading',
+        content: 'Cadence and What to Actually Send'
+      },
+      {
+        type: 'table',
+        headers: ['Stage', 'Timing', 'Channel'],
+        rows: [
+          ['First contact', 'Immediately upon application', 'SMS, automated'],
+          ['No-reply follow-up', '2 to 5 business days after prior touch, cap at 3 to 6 total attempts', 'SMS or email'],
+          ['Interview reminders', '48 hours, 24 hours, and 2 hours before', 'SMS, automated'],
+          ['Status updates', 'Every 4 to 5 days if a decision is pending', 'SMS'],
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: '**First contact:** "Hi [First Name], this is [Recruiter Name] with [Agency Name]. Thanks for applying to the [Job Title] role. Are you still interested? Reply YES to continue."'
+      },
+      {
+        type: 'paragraph',
+        content: '**Follow-up after no reply:** "Hi [First Name], following up on the [Job Title] opening at [Agency Name]. Still want to move forward? Reply YES or STOP to opt out."'
+      },
+      {
+        type: 'paragraph',
+        content: '**Interview scheduling:** "Hi [First Name], this is [Recruiter Name] from [Agency Name]. We would like to schedule your interview for [Job Title]. Does [Day, Time] work? Reply YES to confirm or suggest another time."'
+      },
+      {
+        type: 'paragraph',
+        content: '**Status update:** "Hi [First Name], quick update on your [Job Title] application with [Agency Name]. We are still reviewing candidates and expect a decision by [Date]. Thanks for your patience."'
+      },
+      {
+        type: 'paragraph',
+        content: 'Every message keeps the recruiter and agency name in the first line, states the specific job, and uses a plain reply prompt instead of a link. If a background check ends up factoring into a later decision, the adverse action steps that follow are covered in [how to reject a candidate politely](/blog/how-to-reject-a-candidate-politely), which walks through the FCRA notice requirements in full.'
+      },
+      {
+        type: 'heading',
+        content: 'Where SurFox AI Fits'
+      },
+      {
+        type: 'paragraph',
+        content: 'None of the above is exotic advice. Most recruiters already know to identify themselves, keep messages short, and stop after a few unanswered texts. What is hard is doing it correctly, every time, for every applicant, while tracking consent scope, syncing opt-outs across every tool, and staying inside quiet hours across multiple state jurisdictions at once.'
+      },
+      {
+        type: 'product-callout',
+        content: 'SurFox AI handles identification, consent and opt-outs on every message.',
+        linkText: 'See a 2-min demo →',
+        linkHref: '/demo'
+      },
+      {
+        type: 'paragraph',
+        content: 'SurFox AI is not built as a texting blaster. It runs the screening conversation itself over SMS, with sender identification, consent handling, and opt-out processing built into every message rather than left to a recruiter\'s memory. Every applicant gets the same compliant, consistent conversation, not just the ones a recruiter had time to text manually before moving to the next requisition. That does not remove the legal judgment calls above, which still require agency-level review of consent scope and state rules. It removes the operational risk of those rules being applied inconsistently across hundreds of applicants a week. If the volume itself is the problem, the [triage side of it is here](/blog/triaging-high-volume-applicant-flow).'
+      },
+      {
+        type: 'heading',
+        content: 'The Takeaway'
+      },
+      {
+        type: 'paragraph',
+        content: 'Texting candidates works, and the data on response rates and speed is not close. The failure mode is not the channel, it is treating it casually: sending unidentified messages that read like the scams candidates have learned to fear, or texting without knowing which consent standard applies.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The "3 text rule" is a reasonable deliverability instinct dressed up as a hard number, and the real research points to a broader cadence cap of 3 to 6 touches, spaced days apart, across channels. The legal side is not optional reading. Statutory damages accrue per message, several states have stacked stricter rules on top of federal law, and at least one federal circuit split is actively unresolved. Getting texting right means getting identification, consent, and opt-out handling right on every message, not just the ones that happen to get noticed.'
+      },
+      {
+        type: 'cta-box',
+        headline: 'Text every applicant, compliantly, without a recruiter writing each one.',
+        subhead: 'SurFox AI runs the screening conversation over SMS with sender identification, consent handling and opt-out processing built into every message, then routes the candidates who clear your criteria to a recruiter.',
+        primaryButton: { text: 'Start today', href: '/pricing' },
+        secondaryButton: { text: 'See how it works', href: '/platform' }
+      },
+      {
+        type: 'heading',
+        content: 'Frequently Asked Questions'
+      },
+      {
+        type: 'subheading',
+        content: 'What is the 3 text rule?'
+      },
+      {
+        type: 'paragraph',
+        content: 'It is an informal guideline from SMS vendor trade blogs stating recruiters should stop texting a candidate after two to three unanswered messages. It has no academic origin, but the underlying caution is grounded in carrier deliverability data, since repeated unanswered texts damage a sending number reputation and increase opt-outs.'
+      },
+      {
+        type: 'subheading',
+        content: 'Is it unprofessional to text a candidate?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Not when the candidate applied and provided a phone number. Consented candidate texting achieves 60% to 70% response rates and near-98% open rates. Cold-texting someone who never applied or opted in is widely viewed as invasive and is routinely blocked as spam on candidate forums.'
+      },
+      {
+        type: 'subheading',
+        content: 'Is it normal for recruiters to reach out via text?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Yes. Roughly 52% of talent acquisition teams use centralized texting software for candidate communication, and CTIA reported 2.2 trillion SMS and MMS messages sent in the US in 2024, reflecting how standard the channel has become.'
+      },
+      {
+        type: 'subheading',
+        content: 'Are text messages offering jobs legit, and how can you tell?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Many are legitimate, but the channel also carries heavy fraud. The FTC reported $470 million in text scam losses in 2024. A legitimate message identifies the recruiter and agency by name, references a specific job, never asks for payment, and avoids pushing you to apps like Telegram or WhatsApp.'
+      },
+      {
+        type: 'subheading',
+        content: 'Do you need consent to text a job applicant?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Yes. Submitting a phone number on an application generally provides consent for texts about that specific role, but that consent has scope limits and does not cover unrelated future outreach or cold-sourced numbers. Marketing or promotional texts require a stricter written consent standard.'
+      },
+      {
+        type: 'subheading',
+        content: 'What is the best texting cadence for candidates?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Immediate automated contact upon application, then 3 to 6 total follow-up touches spaced 2 to 5 business days apart across channels. For scheduled interviews, a three-touch reminder sequence at 48 hours, 24 hours, and 2 hours before the interview has been shown to cut no-shows by 35% to 50%.'
+      },
+      {
+        type: 'subheading',
+        content: 'Why do compliant recruiting texts sometimes never arrive?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Carrier spam filters can silently drop messages that trip financial-fraud keyword filters, use public link shorteners, contain multiple emojis, or get sent identically to large batches of numbers at once. None of this produces a visible bounce, so a sender may not know delivery failed unless they track delivery rates directly.'
+      },
+      {
+        type: 'subheading',
+        content: 'Can a staffing agency get sued for texting candidates?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Yes. TCPA violations carry $500 to $1,500 in statutory damages per message, and several 2025 and 2026 settlements and court rulings, including a $2.5 million settlement over unprocessed opt-outs, show this is actively litigated. This is general information, not legal advice, and specific exposure depends on your state and your consent records, so review your texting program with counsel.'
       }
     ]
   }
