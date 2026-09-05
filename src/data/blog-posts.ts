@@ -4903,7 +4903,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'Why Real Estate Leads Stop Answering (And How to Get Them Back)',
     metaDescription: '80% of adults ignore unknown numbers, and 93% of converting leads take six attempts to reach. Here\'s why motivated sellers go quiet and the follow-up system that brings them back.',
-    relatedPosts: ['how-fast-to-call-a-real-estate-lead', 'too-many-leads-not-enough-time', 'ai-sms-follow-up-real-estate-wholesalers'],
+    relatedPosts: ['how-fast-to-call-a-real-estate-lead', 'follow-up-after-no-answer', 'ai-sms-follow-up-real-estate-wholesalers'],
     howToSteps: [
       { name: 'Respond Within 5 Minutes', text: 'Treat the first 5 minutes after an inquiry as the entire window. MIT research found that contacting a lead inside 5 minutes makes you 100 times more likely to reach them than waiting 30 minutes. Every minute past that is odds you hand to a competitor.' },
       { name: 'Try Again 30 to 60 Minutes Later', text: 'When the first call goes unanswered, call back inside the next 30 to 60 minutes rather than the next day. Velocify found this second-attempt window outperforms longer waits and adds meaningfully to conversion when it is built into a routine.' },
@@ -6066,7 +6066,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'How Many Times Should You Follow Up With a Lead? (5 to 12)',
     metaDescription: 'About 80% of closed deals need 5 to 12 follow-up attempts, but most agents stop at 2 or 3. The real frameworks explained, the fake one debunked, plus a full cadence.',
-    relatedPosts: ['how-often-to-follow-up-with-a-lead', 'real-estate-leads-not-converting', 'real-estate-follow-up-text-scripts'],
+    relatedPosts: ['how-often-to-follow-up-with-a-lead', 'follow-up-after-no-answer', 'real-estate-follow-up-text-scripts'],
     howToSteps: [
       { name: 'Respond Within 5 Minutes by Text', text: 'Send a text within 5 minutes of the lead coming in that confirms receipt and asks one simple qualifying question. Responding this fast makes you roughly 21 times more likely to qualify the lead than waiting 30 minutes.' },
       { name: 'Pair a Call and a Text on Days 1 to 3', text: 'Make your direct follow-up attempt with paired touches across two channels rather than relying on the phone alone. A lead who ignores a dial will often reply to a text, and the reverse is also true.' },
@@ -6725,6 +6725,10 @@ export const blogPosts: BlogPost[] = [
           ['Days 31 to 90', 'Text, weekly light touch', 'One short check-in question. At this stage a question outperforms another paragraph of information.'],
           ['Day 90+', 'Monthly market touch', 'Stay present until timing changes. Some of the best closings come from someone who went quiet for months and then answered a single line.'],
         ]
+      },
+      {
+        type: 'paragraph',
+        content: 'That cadence is text-first because text is where these sellers actually answer. When you also have an email address on the lead, the same touches can run email-led with SMS as the secondary channel, and the timing between touches changes with it. We mapped that version out touch by touch in [the email and text sequence for following up after no answer](/blog/follow-up-after-no-answer).'
       },
       {
         type: 'paragraph',
@@ -8869,6 +8873,338 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'Yes. TCPA violations carry $500 to $1,500 in statutory damages per message, and several 2025 and 2026 settlements and court rulings, including a $2.5 million settlement over unprocessed opt-outs, show this is actively litigated. This is general information, not legal advice, and specific exposure depends on your state and your consent records, so review your texting program with counsel.'
+      }
+    ]
+  },
+  {
+    id: 38,
+    slug: 'follow-up-after-no-answer',
+    title: 'How to Follow Up After No Answer: The Email and Text Sequence That Actually Gets a Reply',
+    excerpt: 'The call went to voicemail and now you have to write something that does not sound desperate. Here is the seven-touch sequence, the timing between each one, and the exact wording.',
+    category: 'Sales Strategy',
+    date: '2026-09-05',
+    lastUpdated: '2026-09-05',
+    readTime: '11 min read',
+    author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    authorTitle: 'Founder & CEO, SurFox AI',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
+    metaTitle: 'How to Follow Up After No Answer: Email and Text Templates',
+    metaDescription: '42% of everyone who eventually replies does so after the first message. The seven-touch email and text sequence for seller leads who went quiet, with copy-paste templates for each touch.',
+    relatedPosts: ['real-estate-follow-up-text-scripts', 'real-estate-leads-not-answering', 'how-many-times-to-follow-up-with-a-lead'],
+    howToSteps: [
+      { name: 'Wait at Least 72 Hours Before Touch Two', text: 'Spacing the second touch three days out rather than bumping the next day improves reply conversion by 31% (Salesloft, 2024). Send it threaded on the original email subject, with a short text a few hours later.' },
+      { name: 'Widen the Gap as the Sequence Advances', text: 'Two to three business days between touch one and two, three to four between two and three, five to seven between three and four, then seven to fourteen from there. Progressive spacing beats a fixed interval.' },
+      { name: 'Alternate Email and Text', text: 'Single-channel email cadences reply at 1% to 3%. Adding phone and text takes the same list to 6% to 10%. Give at least two of the seven touches to text, never both channels inside the same 24 hours.' },
+      { name: 'Lead Every Message With Something New', text: 'Short "just checking in" messages are the lowest-performing category Gong measured. Follow-ups of four or more sentences that introduce new context book 15 times more meetings.' },
+      { name: 'Close With a Real Break-Up Message', text: 'Break-up messages reply 26% higher than standard mid-sequence follow-ups, at an absolute 8% to 15%. Send one, mean it, and leave the door open rather than letting the file go quietly cold.' },
+    ],
+    content: [
+      {
+        type: 'paragraph',
+        content: 'The call rings, rings, and drops into voicemail. You know the seller is there. Maybe they saw your number and let it go. Maybe they were in the shower. Either way, you\'re staring at a blank message box, and whatever you type next has to sound like a person, not a script.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Most wholesalers freeze here. They send one flat "just following up" text, get nothing back, and quietly close the file. That\'s a mistake with a real cost attached to it.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The data on what happens after that first no-answer is well documented, and it says the opposite of what your instincts might tell you. The first attempt is rarely the one that gets the reply. The sequence after it is where the deal actually shows up.'
+      },
+      {
+        type: 'paragraph',
+        content: 'This post covers what to send, on which channel, and how far apart to space it, from touch two through touch seven. It does not cover why sellers go quiet in the first place. If you want that background, [we have written about the psychology of unresponsive leads separately](/blog/real-estate-leads-not-answering).'
+      },
+      {
+        type: 'tldr',
+        content: 'A single follow-up message lifts total reply rate by 65.8% compared to a one-and-done outreach attempt (Backlinko, 2024).\nIn B2B cold-sequence benchmarks, full sequences of 4 to 7 touches produce roughly 27% cumulative reply rates, versus about 9% for a single message (Cirrus Insight and SalesHive, 2024). Real estate seller sequences typically run longer.\nSpacing the second touch at least 72 hours after the first improves reply conversion by 31% over a same-day or next-day bump (Salesloft, 2024).\nPairing an unanswered email with a short voicemail lifts the follow-up email reply rate from 2.73% to 5.87%, a 115% relative gain (Gong, 2024).\nFormal break-up messages outperform standard mid-sequence follow-ups by 26%, landing an absolute reply rate of 8% to 15% (Woodpecker, 2024; Mailshake, 2024).'
+      },
+      {
+        type: 'heading',
+        content: 'The Reply Decay Curve: What Happens at Touch 2, 3, 4, 5, 6, and 7'
+      },
+      {
+        type: 'paragraph',
+        content: 'Response rates across a follow-up sequence don\'t drop off evenly. The first touch pulls the largest single share of replies, but it is far from the whole story. Data compiled from Woodpecker, Instantly, and Titan Email shows the first message accounts for about 58% of total replies across a sequence, meaning **42% of everyone who eventually responds does so after silence** (Woodpecker, 2026; Instantly, 2026). Stopping after touch one, which happens in 70% of outreach sequences according to Backlinko\'s review of 12 million emails, forfeits nearly half of the reachable pipeline (Backlinko, 2024).'
+      },
+      {
+        type: 'paragraph',
+        content: 'Here is the touch-by-touch pattern, mapped to an email-led, text-secondary cadence for seller outreach:'
+      },
+      {
+        type: 'table',
+        headers: ['Touch', 'Timing', 'Primary Channel', 'Expected Reply Rate'],
+        rows: [
+          ['1', 'Day 0', 'Email', '3.4% to 18.0%'],
+          ['2', 'Day 3 to 4', 'Email (threaded) plus text backup', '2.5% to 14.0%'],
+          ['3', 'Day 7 to 8', 'Email', '1.8% to 12.0%'],
+          ['4', 'Day 12 to 14', 'Text', '1.0% to 5.0%'],
+          ['5', 'Day 18 to 21', 'Email', '0.8% to 3.0%'],
+          ['6', 'Day 25 to 28', 'Text', '0.4% to 1.8%'],
+          ['7', 'Day 30+', 'Email (break-up)', '0.2% to 1.5%'],
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'Source: adapted from Woodpecker (2026), Instantly (2026), Titan Email, and LeadHaste sequence benchmarking.'
+      },
+      {
+        type: 'paragraph',
+        content: 'By touch four, per-touch reply rates in general cold pools fall under 3%, and in **B2B cold-sequence benchmarks**, pushing past seven touches adds less than a 1% incremental lift while tripling spam complaints (Growth List, 2026; Small Business Expo, 2026). That 4-to-7 ceiling is a B2B cold-outreach figure, not a real estate one, and it doesn\'t carry over cleanly. Seller motivation shifts with life events, not sales quotas, so wholesaler CRMs commonly extend nurture well past 30 days. REsimpli\'s account data shows over 50% of closed wholesale deals originate from follow-up after the first touch, not from the initial call or letter (REsimpli, 2024). For how many total attempts to actually make on a seller lead before moving on, [see our full breakdown of follow-up attempt counts](/blog/how-many-times-to-follow-up-with-a-lead).'
+      },
+      {
+        type: 'paragraph',
+        content: 'This post covers the shape of that sequence, meaning the timing, channel order, and wording of touch two through touch seven. For the mechanics of when in the week and day to place each attempt, [see our breakdown of follow-up cadence and timing rules](/blog/how-often-to-follow-up-with-a-lead).'
+      },
+      {
+        type: 'heading',
+        content: 'How Long to Wait Before Touch Two (and Whether the Gaps Should Widen)'
+      },
+      {
+        type: 'paragraph',
+        content: 'Yes, the gaps should widen as the sequence advances. Salesloft\'s analysis of 47 million B2B contacts found that progressive spacing consistently outperforms a fixed interval (Salesloft, 2024). The pattern that holds up across datasets:'
+      },
+      {
+        type: 'list',
+        items: [
+          '**Touch 1 to Touch 2:** 2 to 3 business days. Waiting at least 72 hours before the second touch improves reply rates by 31% compared to a 24-hour bump (Salesloft, 2024).',
+          '**Touch 2 to Touch 3:** 3 to 4 business days.',
+          '**Touch 3 to Touch 4:** 5 to 7 business days.',
+          '**Touch 4 onward:** 7 to 14 business days between attempts.',
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'This applies to cold or post-no-answer outbound. It does not apply to a seller who just filled out a web form. Inbound speed-to-lead runs on an entirely different clock: the MIT Lead Response Management Study, which analyzed over 15,000 leads and 100,000 call attempts, found that contacting an inbound lead within 5 minutes makes a rep 21 times more likely to qualify it compared to a 30-minute wait, and the odds of making contact at all are 100 times higher (Oldroyd, MIT / InsideSales.com). Most agents miss this window badly. The Inman Real Estate Technology Survey found the median agent response time to a web inquiry was 917 minutes, and 41% of tested brokerages never responded at all (Inman via Roof AI, 2024).'
+      },
+      {
+        type: 'callout',
+        content: 'The sequence in this post is for the seller who has already gone quiet after an initial contact attempt, not the fresh inbound lead who needs a response in seconds.'
+      },
+      {
+        type: 'heading',
+        content: 'Does Switching Channels Beat Staying on One?'
+      },
+      {
+        type: 'paragraph',
+        content: 'It does, by a wide margin. Single-channel email cadences typically land in the 1% to 3% reply range. Layer in phone and text, and the same list produces 6% to 10% (Kontrol Media, 2024). Gong\'s study of over 304,000 sales interactions found that pairing an unanswered email with a short voicemail lifts the subsequent email reply rate from 2.73% to 5.87%, a 115% relative gain, because the voicemail acts as a pattern interrupt that sends the prospect back to their inbox (Gong, 2024). ProfitOutreach puts the general multi-channel lift at 128% over single-channel outreach (ProfitOutreach, 2024).'
+      },
+      {
+        type: 'paragraph',
+        content: 'For a seller sequence, that means don\'t let touch two through seven all arrive as email. Give at least two of the seven touches to text, spaced so the recipient isn\'t hearing from you on two channels in the same 24 hours. If you want ready-made text copy rather than the email-plus-text hybrid this post focuses on, [our SMS script library covers that in depth](/blog/real-estate-follow-up-text-scripts).'
+      },
+      {
+        type: 'heading',
+        content: 'What Not to Send'
+      },
+      {
+        type: 'paragraph',
+        content: 'Certain phrases are measurably worse than saying nothing new at all. Gong\'s analysis of over 304,000 follow-up emails found that short "just checking in" messages are the single lowest-performing category in the dataset, while follow-ups of four or more sentences that introduce new context book 15 times more meetings (Gong, 2024). Guilt framing backfires in a specific way: "I never heard back from you" slightly increases raw reply volume but cuts meetings actually booked by 14%, because prospects respond to defend themselves rather than to move the deal forward (Gong, 2024). Stacking on a fifth or sixth rapid-fire follow-up adds less than 1% to reply rates while pushing spam complaints up nearly 300% (Small Business Expo, 2026), and false urgency lines like "final offer" on a lead that isn\'t actually expiring raise opt-outs by 30%.'
+      },
+      {
+        type: 'table',
+        headers: ['Avoid', 'Use Instead'],
+        rows: [
+          ['"Just checking in" / "Just following up"', 'Lead with something new: "Saw the tax record update on 118 Birchwood"'],
+          ['"I never heard back from you"', '"Circling back in case this fell off your radar"'],
+          ['"Bumping this to the top of your inbox"', '"One quick thought on the repair timeline at the property"'],
+          ['"As per my last email"', 'Restate the core point without referencing the silence'],
+          ['"Are you the right person to talk to?"', '"Who in the family is handling the property decision?"'],
+        ]
+      },
+      {
+        type: 'heading',
+        content: 'The Templates'
+      },
+      {
+        type: 'paragraph',
+        content: 'These are built for a seller who went quiet after an initial call or first email. Swap in the actual address, timeline, and situation each time. Keep the automated version generic and you\'ll see why: SalesHive found unedited, fully templated AI copy gets up to 90% fewer replies than a message that\'s actually been customized to the lead (SalesHive, 2024).'
+      },
+      {
+        type: 'subheading',
+        content: 'Touch 2: Day 3, email (threaded on the original subject)'
+      },
+      {
+        type: 'paragraph',
+        content: '**Subject:** Re: [original subject line]'
+      },
+      {
+        type: 'paragraph',
+        content: 'Hi [First Name], wanted to follow up on 123 Maple St. If timing\'s off right now, no problem, just let me know a better week to reconnect. One thing that might help: I can usually close in 10 to 14 days with no repairs or showings needed on your end. Is a cash offer still something worth exploring for the property? [Your Name]'
+      },
+      {
+        type: 'subheading',
+        content: 'Touch 2: Day 3, text (a few hours after the email)'
+      },
+      {
+        type: 'paragraph',
+        content: 'Hi [First Name], it\'s [Your Name]. Sent a note on 123 Maple St in case it\'s easier to reach you here. Still open to hearing what a fair offer looks like, or should I close this out?'
+      },
+      {
+        type: 'subheading',
+        content: 'Touch 3: Day 7, email'
+      },
+      {
+        type: 'paragraph',
+        content: '**Subject:** closed a place two streets over from Maple St'
+      },
+      {
+        type: 'paragraph',
+        content: 'Hi [First Name], just closed on a house two streets over from 123 Maple St, similar layout, similar condition. Took 12 days start to finish, seller didn\'t have to clean or repair anything. Wondering if that timeline works better for your situation than it did a week ago. Worth a quick call? [Your Name]'
+      },
+      {
+        type: 'subheading',
+        content: 'Touch 4: Day 12, text'
+      },
+      {
+        type: 'paragraph',
+        content: '[First Name], following up on 123 Maple St one more time. No pressure either way, just want to know if this is still worth a conversation or if I should take it off my list.'
+      },
+      {
+        type: 'subheading',
+        content: 'Touch 5: Day 19, email'
+      },
+      {
+        type: 'paragraph',
+        content: '**Subject:** a different option for 123 Maple St'
+      },
+      {
+        type: 'paragraph',
+        content: 'Hi [First Name], if a full cash sale isn\'t the right fit right now, I also work with sellers on lease-back arrangements and partial-repair credits depending on what makes sense for your timeline. Happy to walk through what that could look like for 123 Maple St, no obligation. [Your Name]'
+      },
+      {
+        type: 'subheading',
+        content: 'Touch 6: Day 26, text'
+      },
+      {
+        type: 'paragraph',
+        content: 'Hi [First Name], last check-in from me on 123 Maple St for now. If anything changes on your end, my number\'s the same. Hope things are going well.'
+      },
+      {
+        type: 'subheading',
+        content: 'Touch 7: Day 33, email (break-up)'
+      },
+      {
+        type: 'paragraph',
+        content: '**Subject:** closing out the file on 123 Maple St'
+      },
+      {
+        type: 'paragraph',
+        content: 'Hi [First Name], I\'ve reached out a few times about 123 Maple St and haven\'t heard back, so I\'m going to close this file on my end for now. If your situation changes down the road, whether that\'s next month or next year, feel free to reach out and I\'ll pick things back up. No hard feelings either way. Wishing you the best with the property. [Your Name]'
+      },
+      {
+        type: 'heading',
+        content: 'The Break-Up Message: Does It Actually Work?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Yes, and the evidence here is stronger than for most other tactics in this sequence. Woodpecker\'s review of over 40,000 cold email campaigns found break-up messages generate a 26% higher reply rate than standard mid-sequence follow-ups (Woodpecker, 2024). Mailshake\'s benchmark data puts the absolute reply rate for break-up messages at 8% to 15%, and Overloop\'s corpus analysis lands at 12%, making it one of the highest-converting individual touches in the entire sequence (Mailshake, 2024; Overloop, 2024).'
+      },
+      {
+        type: 'paragraph',
+        content: 'The mechanism is straightforward. Announcing that contact is ending triggers loss aversion in a seller who intended to respond but kept putting it off. It also removes pressure, since granting someone permission to walk away lowers their guard, and it gives a silent lead a low-friction reason to correct the record: we weren\'t ignoring you, we were just dealing with a family situation.'
+      },
+      {
+        type: 'callout',
+        content: 'The one place the evidence is thin: there is little data on doing more than one break-up message per lead, or on shortening the sequence to trigger it earlier. Treat it as a single, final step, not a recurring reminder.'
+      },
+      {
+        type: 'heading',
+        content: 'Where SurFox AI Fits'
+      },
+      {
+        type: 'paragraph',
+        content: 'Running a seven-touch, two-channel sequence correctly on every seller lead isn\'t a knowledge problem at this point. You have the timing, the copy, and the channel mix above. It\'s a capacity problem. Manually tracking which lead is on day 4 versus day 19, and which channel each one is due for next, doesn\'t scale much past a handful of active files.'
+      },
+      {
+        type: 'product-callout',
+        content: 'SurFox AI runs the SMS side of the sequence for you.',
+        linkText: 'See a 2-min demo →',
+        linkHref: '/demo'
+      },
+      {
+        type: 'paragraph',
+        content: '[SurFox AI](/platform) runs the SMS side of this sequence automatically once a lead goes quiet, sending the right message at the right interval without someone having to remember to do it. When a seller responds, the conversation gets handed to you directly instead of sitting in a queue. It doesn\'t replace the email side of this cadence or write your voicemail scripts. It handles the part of the sequence that depends on consistency more than creativity, which is usually the part that falls apart first when a pipeline gets busy.'
+      },
+      {
+        type: 'heading',
+        content: 'The Takeaway'
+      },
+      {
+        type: 'paragraph',
+        content: 'No answer on the first call isn\'t a dead lead, it\'s the start of the sequence. The data is consistent across B2B and real estate datasets alike: 42% of eventual replies come after the first message, full sequences convert at roughly 3x the rate of a single touch, and the specific messages that fail hardest, "just checking in," guilt framing, rapid-fire bumps, are avoidable.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Build the seven touches, widen the spacing as you go, split the channel between email and text, and close it out with a genuine break-up message instead of letting the file go cold on its own.'
+      },
+      {
+        type: 'cta-box',
+        headline: 'Run the whole sequence on every quiet lead, not just the ones you remember.',
+        subhead: 'SurFox AI texts your seller leads on the right interval after they go silent, keeps the conversation going past the touch most operators quit at, and hands you the ones that come back alive.',
+        primaryButton: { text: 'Start today', href: '/pricing' },
+        secondaryButton: { text: 'See how it works', href: '/platform' }
+      },
+      {
+        type: 'heading',
+        content: 'Frequently Asked Questions'
+      },
+      {
+        type: 'subheading',
+        content: 'How do you follow up after no response?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Move from a single attempt to a multi-touch, multi-channel sequence. Each message should add something new rather than repeating the first one, space touches with a widening gap, roughly 2 to 3 days at first and extending to 7 to 14 days later, and stop the sequence once you get a reply or reach the break-up step.'
+      },
+      {
+        type: 'subheading',
+        content: 'Is it rude to send a follow-up email after no response?'
+      },
+      {
+        type: 'paragraph',
+        content: 'No. Inbox volume is the more likely explanation for silence than annoyance. Adding one follow-up email lifts response rates by 65.8% over a single send (Backlinko, 2024). It becomes intrusive only with daily frequency, copy-pasted templates, or guilt-driven language.'
+      },
+      {
+        type: 'subheading',
+        content: 'How soon should you send a follow-up email after no response?'
+      },
+      {
+        type: 'paragraph',
+        content: 'For a cold or post-call follow-up, 2 to 3 business days is the tested window. Sooner than 48 hours can read as automated or desperate. Longer than 5 business days and the seller starts to forget who you are. This is different from an inbound web lead, which needs contact within 5 minutes to avoid a 21-fold drop in qualification odds.'
+      },
+      {
+        type: 'subheading',
+        content: 'How do you politely follow up after no response?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Keep it to 25 to 60 words, reference something specific from the earlier contact, add one new piece of value such as a comparable sale or a new option, and close with a low-friction question about whether the topic is still relevant, rather than pushing for a call time.'
+      },
+      {
+        type: 'subheading',
+        content: 'How do you politely follow up on an unanswered text?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Send it 2 to 3 days after the last message, keep it under 160 characters, reference the property directly, and give a simple either-or path: still interested, or should the file be closed. Skip links, which can trigger carrier filtering.'
+      },
+      {
+        type: 'subheading',
+        content: 'How do you politely email someone who has not responded?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Drop defensive phrases like "just checking in" or "as per my last email." Structure the message around a brief reference to the prior contact, one new piece of value, a clear connection between their situation and what you are offering, and a low-pressure close.'
+      },
+      {
+        type: 'subheading',
+        content: 'What is a normal reply rate for a follow-up email?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Individual touches range from under 1% to around 14% depending on where they fall in the sequence, with the first email typically the highest at 3.4% to 18%. In B2B cold-sequence benchmarks, a full 4-to-7 touch sequence aggregates to roughly 27% total reply rate, compared to about 9% for a single message (Cirrus Insight and SalesHive, 2024).'
       }
     ]
   }
