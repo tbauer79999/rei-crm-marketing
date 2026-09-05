@@ -478,7 +478,7 @@ export const blogPosts: BlogPost[] = [
         content: 'Not necessarily, but hiring strategy should change. Hire fewer SDRs with different expectations: they should be capable of managing AI systems, handling complex situations AI cannot, and eventually transitioning to closing roles. The traditional SDR-as-pipeline approach is becoming obsolete.'
       }
     ],
-    relatedPosts: ['qualify-leads-faster-ai', 'customer-first-ai-strategy', 'future-of-ai-in-sales']
+    relatedPosts: ['qualify-leads-faster-ai', 'customer-first-ai-strategy', 'ai-lead-qualification-pipeline-forecast-accuracy']
   },
   {
     id: 3,
@@ -709,7 +709,7 @@ export const blogPosts: BlogPost[] = [
         content: 'No. Encryption protects data from external attackers but does not prevent the platform from using your data to train shared models. You need both encryption and tenant isolation for complete protection.'
       }
     ],
-    relatedPosts: ['customer-first-ai-strategy', 'future-of-ai-in-sales', 'data-privacy-ai-businesses']
+    relatedPosts: ['customer-first-ai-strategy', 'future-of-ai-in-sales', 'what-is-ai-lead-qualification']
   },
   {
     id: 4,
@@ -920,7 +920,7 @@ export const blogPosts: BlogPost[] = [
         content: 'AI can re-engage your entire dormant database simultaneously via SMS or email. At any given time, 3-5% of old leads are back in a buying window. AI identifies and qualifies these without requiring any manual effort from your team.'
       }
     ],
-    relatedPosts: ['future-of-ai-in-sales', 'qualify-leads-faster-ai', 'data-privacy-ai-businesses']
+    relatedPosts: ['future-of-ai-in-sales', 'surfox-now-on-zapier', 'data-privacy-ai-businesses']
   },
   {
     id: 5,
@@ -1385,7 +1385,7 @@ export const blogPosts: BlogPost[] = [
         content: 'Not necessarily replace-restructure. The winning model is AI handling top-of-funnel qualification and humans handling qualified conversations. This typically means fewer SDRs (or SDRs evolved into closers) supported by AI that handles the volume work. Same pipeline, 60-80% lower cost.'
       }
     ],
-    relatedPosts: ['reduce-sdr-headcount-ai', 'future-of-ai-in-sales', 'ai-sdr-vs-hiring-sdr-roi-2026']
+    relatedPosts: ['reduce-sdr-headcount-ai', 'future-of-ai-in-sales', 'ai-sdr-fraud-buyer-due-diligence']
   },
   {
     id: 9,
@@ -2164,7 +2164,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The companies hitting the top of these ranges share one trait: they follow up within 24 hours and they don\'t stop after one touch. Most manufacturing sales teams do neither.'
+        content: 'The companies hitting the top of these ranges share one trait: they follow up within 24 hours and they don\'t stop after one touch. Most manufacturing sales teams do neither. The [21-day post-show sequence and where it actually breaks](/blog/trade-show-follow-up-conversion-cliff) covers what that cadence should look like in practice.'
       },
       {
         type: 'heading',
@@ -2426,7 +2426,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'If your current AI SDR tool is producing noise instead of pipeline, it might not be a configuration problem. It might be a category problem. Comparing [how the major platforms differ by category](/compare/surfox-vs-all-competitors) is usually more useful than tuning the one that is failing.'
+        content: 'If your current AI SDR tool is producing noise instead of pipeline, it might not be a configuration problem. It might be a category problem. Comparing [how the major platforms differ by category](/compare/surfox-vs-all-competitors) is usually more useful than tuning the one that is failing, and the [due diligence questions worth asking before you sign the next one](/blog/ai-sdr-fraud-buyer-due-diligence) are worth reading first.'
       },
       {
         type: 'callout',
@@ -2683,7 +2683,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'What Is AI Lead Qualification? The Complete Guide (2026)',
     metaDescription: 'AI lead qualification uses machine learning and conversational AI to evaluate buyer fit and intent automatically. Learn how it works, what it costs, and whether it\'s right for your sales team.',
-    relatedPosts: ['qualify-leads-faster-ai', 'reduce-sdr-headcount-ai', 'ai-sdr-vs-hiring-sdr-roi-2026'],
+    relatedPosts: ['qualify-leads-faster-ai', 'ai-lead-qualification-pipeline-forecast-accuracy', 'ai-sdr-vs-hiring-sdr-roi-2026'],
     howToSteps: [
       { name: 'Define Your Qualification Criteria', text: 'Audit the specific questions your best reps ask in their first conversation. Document what a "qualified lead" actually looks like in your business - not a generic BANT framework, but the real signals your closers act on.' },
       { name: 'Start with a Data Quality Audit', text: 'AI is only as good as the data feeding it. AI models typically require 500 to 1,000 historical leads to establish an accurate baseline. If your CRM data is fragmented or unreliable, fix that first.' },
@@ -6864,7 +6864,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'Missed Call Text-Back for Real Estate: Setup Guide and Real Cost',
     metaDescription: 'Only 37.8% of inbound calls get answered live, and 85% of callers never call back. What missed calls cost a real estate business, plus how to set up automatic text-back on iPhone, Android, and Google Voice.',
-    relatedPosts: ['how-fast-to-call-a-real-estate-lead', 'real-estate-follow-up-text-scripts', 'real-estate-leads-not-converting'],
+    relatedPosts: ['how-fast-to-call-a-real-estate-lead', 'home-services-lead-response-window', 'real-estate-leads-not-converting'],
     howToSteps: [
       { name: 'Measure Your Actual Missed Call Rate', text: 'Pull 30 days of call logs from your phone or tracking number and count how many inbound calls were never answered by a person. Field-based real estate work typically lands between 25% and 40%. You cannot size the problem until you know your own number rather than the industry average.' },
       { name: 'Write the Message Before You Pick the Tool', text: 'Draft a reply under 160 characters that names you or your business immediately, explains the miss without over-apologizing, and asks one direct question. The tool is easy to swap later. A vague message fails on every platform equally.' },
