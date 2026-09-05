@@ -5347,7 +5347,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'Why Candidates Stop Responding (And How to Re-Engage Them)',
     metaDescription: 'Candidates go quiet mid-process because something moved faster, usually another offer or a counteroffer. Here\'s the real research and how to follow up so they tell you the truth.',
-    relatedPosts: ['triaging-high-volume-applicant-flow', 'staffing-follow-up-gap', 'candidate-screening-what-predicts-a-hire'],
+    relatedPosts: ['triaging-high-volume-applicant-flow', 'how-to-reject-a-candidate-politely', 'candidate-screening-what-predicts-a-hire'],
     howToSteps: [
       { name: 'Raise the Counteroffer Conversation Early', text: 'Talk about counteroffers before the candidate is holding one, not after they go quiet. Roughly half of employees who accept a counteroffer leave within 12 months anyway, and a candidate who knows that going in is less likely to take one and disappear on you.' },
       { name: 'Switch Channels Before You Give Up', text: 'If email has gone unanswered, that often means unread rather than rejected. A short, direct text reaches candidates faster than another email in a pile they have not opened.' },
@@ -7865,7 +7865,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'Candidate Screening: The 5 C\'s, the 80/20 Rule, and What Predicts a Hire',
     metaDescription: 'Structured interviews predict job performance at r = .42, ahead of cognitive ability testing. Unstructured interviews, the most common method, manage only .19. What screening research actually says.',
-    relatedPosts: ['triaging-high-volume-applicant-flow', 'why-candidates-stop-responding', 'staffing-follow-up-gap'],
+    relatedPosts: ['how-to-reject-a-candidate-politely', 'why-candidates-stop-responding', 'staffing-follow-up-gap'],
     howToSteps: [
       { name: 'Review Applications and Documents', text: 'Match resumes and cover letters against the job spec. This is the cheapest filter you have, so it goes first.' },
       { name: 'Apply Hard-Stop Pre-Screening Criteria', text: 'Filter on binary, non-negotiable facts: work authorization, location, licensing, availability, rate expectations. Yes or no only, no judgment calls.' },
@@ -8081,6 +8081,10 @@ export const blogPosts: BlogPost[] = [
         content: 'What is validated, repeatedly, across nearly a century of aggregated research, is structure: the same questions, the same order, the same scoring, applied consistently. Structured interviews at r = .42 beat every other individual method on the table, including cognitive ability testing, and they do it while also reducing the bias that unstructured formats let through. The gap between agencies that know this and agencies that act on it consistently, at volume, across every applicant, is where the actual competitive advantage sits.'
       },
       {
+        type: 'paragraph',
+        content: 'One thing worth remembering: screening is the front half of a funnel whose back half is rejection. Every structured screen you run produces far more people who do not advance than people who do, and between 65% and 75% of applications currently get no response at all. The same discipline applies to [how you tell a candidate no](/blog/how-to-reject-a-candidate-politely), and it carries its own legal constraints when a background check drove the decision.'
+      },
+      {
         type: 'cta-box',
         headline: 'Run the structured screen on every applicant, not just the ones you reach.',
         subhead: 'SurFox AI asks your qualification questions in the same order with every candidate by SMS, then routes the ones who clear the bar to a recruiter with the full conversation attached.',
@@ -8154,6 +8158,376 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'Unstructured interviews predict job performance at only r = .19 because they let recruiter rapport, first impressions, and candidate impression management dominate the evaluation instead of job-relevant, standardized criteria. Levashina and Campion (2007) found that over 90% of candidates engage in conscious impression management, and an unstructured format does nothing to control for it.'
+      }
+    ]
+  },
+  {
+    id: 36,
+    slug: 'how-to-reject-a-candidate-politely',
+    title: 'How to Reject a Candidate Politely (Templates, Timing, and What You Are Legally Allowed to Say)',
+    excerpt: 'Most applicants never hear back, and silence costs more than a rejection does. The data on what it costs, the legal constraints on what you can say, and copy-paste templates by stage.',
+    category: 'Sales Strategy',
+    date: '2026-09-04',
+    lastUpdated: '2026-09-04',
+    readTime: '12 min read',
+    author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    authorTitle: 'Founder & CEO, SurFox AI',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
+    metaTitle: 'How to Reject a Candidate Politely: Templates, Timing and Legal Limits',
+    metaDescription: 'Between 65% and 75% of applications get no response at all. What silence actually costs, how fast to send a rejection, what you are legally allowed to say, and templates by stage.',
+    relatedPosts: ['candidate-screening-what-predicts-a-hire', 'why-candidates-stop-responding', 'triaging-high-volume-applicant-flow'],
+    howToSteps: [
+      { name: 'Acknowledge the Application Automatically', text: 'Send an automated confirmation within minutes to 48 hours of receipt. This costs nothing and removes the largest single source of candidate silence.' },
+      { name: 'Disposition Screened-Out Applicants Within 3 to 5 Days', text: 'Candidates assume they have been ghosted after roughly 7 days of silence. Employers who disposition within 3 to 5 business days of an evaluation stage see 52% fewer extended wait-time complaints.' },
+      { name: 'Notify Interviewed Candidates Within 72 Hours', text: 'Once a decision is made, send it within 72 hours. Speed matters more than eloquence. A short factual message on time beats a thoughtful one two weeks late.' },
+      { name: 'Send a Status Update Every 4 to 5 Days While a Decision Is Pending', text: 'If a hiring manager decision is still outstanding, say so. Perception degrades fast during unannounced silence, and a holding message protects the relationship.' },
+      { name: 'Follow the FCRA Two-Step If a Background Check Drove the Decision', text: 'Send a pre-adverse action notice with the report and Summary of Rights, allow a dispute window generally treated as 5 business days, then send the final adverse action notice. Skipping straight to rejection is a common and preventable violation.' },
+    ],
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Rejecting a candidate produces nothing. It closes a file, generates no placement fee, and takes time from the requisitions that do pay. That is the entire reason it gets skipped, not because recruiters are careless or unkind.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The result is silence at scale. Most applicants never hear anything back, not even a form email. Candidates notice, remember, and act on it, and the legal exposure of saying nothing or saying the wrong thing is not smaller than the exposure of doing rejection properly. It is often larger.'
+      },
+      {
+        type: 'paragraph',
+        content: 'This is not an argument for being nicer to candidates for its own sake. It is an argument that a fast, structured, low-effort rejection is cheaper than silence and safer than an unstructured one, and the data on both points is specific enough to act on. If you have read our post on [what actually predicts a good hire](/blog/candidate-screening-what-predicts-a-hire), this is the other end of the same funnel: the candidates who did not make it, and what happens after they do not hear from you.'
+      },
+      {
+        type: 'tldr',
+        content: 'Between 65% and 75% of job applications receive no response at all (Talent Board, 2024; Zety via Classet, 2026).\n61% of candidates completely sever ties with an employer that ghosts them, while those who get timely updates are 52% more likely to reapply (Talent Board, 2024).\nA poor employer reputation forces firms to pay $4,723 more in base salary per hire to attract comparable talent (Glassdoor Effect study, 2026).\nVirgin Media traced 4.4 million pounds a year in cancelled customer subscriptions directly to poor candidate rejection experiences (widely cited 2014 analysis).\nTop-performing employers disposition candidates within 3 to 5 days of an evaluation stage, producing a Candidate Experience NPS of 59 against an industry average of 40 (Talent Board / Criteria Corp).'
+      },
+      {
+        type: 'heading',
+        content: 'How Often Candidates Never Hear Back'
+      },
+      {
+        type: 'paragraph',
+        content: 'Silence is heaviest at the top of the funnel and most damaging near the bottom.'
+      },
+      {
+        type: 'paragraph',
+        content: 'At the application stage, estimates cluster between 65% and 75% of applications receiving no response at all. The 2025 Ghosted Jobs Report put the figure at 67%, Classet reported 65% in 2026 citing Zety research, Talent Board found 73% of candidates never hear back, and The Interview Guys 2025 Ghosting Index put it as high as 75%, finding applicants three times less likely to receive any feedback than in 2021. However it is measured, most applicants are simply never told the outcome, and that volume is driven by capacity, not indifference. Greenhouse platform data showed recruiter workloads rose 26% in late 2024, driven by a 38% surge in mass applications submitted through automated tools.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The drop-off does not stop once a candidate gets a human touchpoint. iHire\'s 2025 research, tracking 1,421 job seekers, found that 16% of candidate disappearances happen right after the phone screen, and 20% happen after the first formal interview.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The sharpest number sits at the interview stage. Greenhouse\'s 2024 State of Job Hunting study, surveying 2,500 global workers, found that 61% of job seekers have been ghosted after a formal interview, up 9 percentage points from earlier in the year. That rate is uneven: 66% of historically underrepresented job seekers reported post-interview ghosting compared to 59% of white candidates. Firm size matters too. Small companies ghost candidates at roughly twice the rate of large enterprises, largely because they are less likely to have automated disposition workflows in place when a recruiter\'s queue backs up.'
+      },
+      {
+        type: 'callout',
+        content: 'Candidates are not blameless bystanders. Indeed research found 76% of employers report being ghosted by candidates, and SHRM\'s 2025 Talent Trends report found 41% of organizations experienced candidate ghosting during the interview process. Silence has become a two-way habit, which does not make either side\'s silence less costly. If candidates are going quiet on your team mid-process, that pattern is covered in [why candidates stop responding](/blog/why-candidates-stop-responding).'
+      },
+      {
+        type: 'heading',
+        content: 'What Silence Actually Costs'
+      },
+      {
+        type: 'paragraph',
+        content: 'Public review sites function as a pre-application filter. Glassdoor\'s 2025 Employer Branding research found that 86% of job seekers check company reviews before applying, and CareerArc found that 55% abandon an application after reading negative reviews. It also costs money directly: a 2026 Glassdoor Effect study calculated that firms with a poor employer reputation pay $4,723 more in base salary per hire to attract comparable candidates.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Negative experiences travel further than positive ones. CareerPlug\'s 2024 research found that 72% of applicants with a negative hiring experience told their professional network, against only 38% of candidates with a positive one. A 2024 Starred benchmark report found 34% of candidates share negative experiences online specifically.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Ghosted candidates do not just complain, they leave the pipeline entirely. Talent Board found that 61% of candidates completely cut ties with an employer that ghosts them, while candidates who receive timely, structured updates are 52% more likely to reapply for a future role. Referrals compound that loss. Employee referrals make up only 7% of applicants but account for 30% of hires, converting at 4 to 5 times the rate of cold applications (Jobvite / ERIN, 2025).'
+      },
+      {
+        type: 'paragraph',
+        content: 'In consumer-facing industries, the damage reaches revenue directly. A Software Advice study found that 42% of candidates with a negative recruitment experience stopped buying from the company, and 34% actively encouraged others to boycott it. The clearest single data point comes from Virgin Media, whose talent acquisition team analyzed 123,000 rejected applicants over 12 months in a widely cited 2014 analysis. They found 18% of all applicants were existing paying customers, and 6% of those customer-applicants, about 7,500 people, cancelled their subscriptions within four weeks of a poor rejection experience. At roughly 50 pounds a month, that came to 4.4 million pounds in lost annual revenue, nearly matching Virgin Media\'s entire recruitment budget.'
+      },
+      {
+        type: 'paragraph',
+        content: 'There is also a slower operational cost. Gem\'s 2025 benchmarking study put average time-to-hire at 41 days, up 24% since 2021, and SHRM\'s 2025 Recruiting Benchmarking report put average cost-per-hire at $5,475 for non-executive roles. An unfilled revenue-generating role costs an estimated $7,000 to $10,000 a month in lost productivity while candidates drop out due to prolonged silence.'
+      },
+      {
+        type: 'heading',
+        content: 'Timing: How Fast, and Whether Speed Changes Perception'
+      },
+      {
+        type: 'paragraph',
+        content: 'Speed changes perception directly, and the threshold is short. Candidates assume they have been ghosted after about 7 days of silence following any interaction, and past that point responsiveness drops and the odds of them accepting a competing offer rise. Employers who disposition candidates within 3 to 5 days of an evaluation stage see 52% fewer extended wait-time complaints and a Candidate Experience NPS of 59, well above the industry average of 40 (Talent Board / Criteria Corp).'
+      },
+      {
+        type: 'paragraph',
+        content: 'A reasonable set of service levels, drawn from the same body of research:'
+      },
+      {
+        type: 'list',
+        items: [
+          '**Application receipt:** automated confirmation within minutes to 48 hours.',
+          '**Initial screening decision:** dispositioned within 3 to 5 business days.',
+          '**Post-interview status:** communicated within 72 hours of the decision.',
+          '**Extended review windows:** a brief status update every 4 to 5 days if a hiring manager decision is still pending, since perception degrades fast during unannounced silence.',
+        ]
+      },
+      {
+        type: 'callout',
+        content: 'None of these windows require the recruiter to have a finished, thoughtful message ready. They require something to arrive on time. A short, honest "still under review, expect an update by [date]" beats a well-crafted rejection sent two weeks late.'
+      },
+      {
+        type: 'heading',
+        content: 'Should You Give a Rejected Candidate Feedback?'
+      },
+      {
+        type: 'paragraph',
+        content: 'There is a real case on both sides here, and no single correct answer for every stage.'
+      },
+      {
+        type: 'paragraph',
+        content: '**The case for feedback.** In Greenhouse\'s 2024 survey, 42% of applicants named stronger recruiter communication as the single biggest improvement the hiring process needs. Candidates who put in 10 to 15 hours across interviews and assessments reasonably expect more than a form letter, and feedback that is specific and professional lines up with the reapplication and referral numbers above.'
+      },
+      {
+        type: 'paragraph',
+        content: '**The case against feedback.** Employment counsel routinely advises against specific feedback, for practical reasons that hold up. A rejected candidate can challenge a decision by arguing the stated reason was pretext for discrimination under Title VII, the ADEA, or the ADA. Subjective language, "lacked energy," "not a culture fit," "seemed overqualified," is exactly the kind of language plaintiff\'s counsel can point to as evidence of bias, even when none was intended. Feedback also tends to invite debate rather than closure, and by the final round most remaining candidates are qualified, so the real differentiator is often a narrow, subjective call that is genuinely hard to put in writing without creating risk.'
+      },
+      {
+        type: 'paragraph',
+        content: 'There is no clean resolution to this tension, and this post will not pretend there is one. A workable middle ground many firms land on: skip individualized feedback for early-stage applicants, where volume and thin evaluation data make it impractical anyway, and offer brief, objective, skill-based feedback only to final-round candidates whose evaluation was documented and job-related, when your firm\'s risk tolerance and legal counsel are comfortable with it.'
+      },
+      {
+        type: 'heading',
+        content: 'The Legal and Compliance Constraints'
+      },
+      {
+        type: 'callout',
+        content: 'This section is general information, not legal advice. Requirements vary by jurisdiction, by whether a firm is a federal contractor, and by the specific facts of a hire, so confirm anything here with employment counsel before it becomes policy.'
+      },
+      {
+        type: 'subheading',
+        content: 'Is it legal to state the specific reason?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Generally yes. Communicating a specific, job-related, factual, non-discriminatory reason is legal under federal law, including Title VII, the ADEA, and the ADA. The risk is not in stating a reason, it is in stating a subjective one. "We selected a candidate whose background more closely matched the required certifications" is defensible. "You didn\'t seem like the right fit" is not, because it gives a plaintiff\'s attorney room to argue the real reason was age, race, sex, or disability, and the vague language cannot disprove it.'
+      },
+      {
+        type: 'subheading',
+        content: 'Record retention obligations'
+      },
+      {
+        type: 'paragraph',
+        content: 'Federal recordkeeping obligations do not disappear once a rejection email is sent.'
+      },
+      {
+        type: 'table',
+        headers: ['Regulation', 'Covered Entities', 'Retention Period', 'What Must Be Kept'],
+        rows: [
+          ['EEOC, 29 CFR 1602.14', 'Private employers, 15+ employees', '1 year from the record or the action', 'Applications, resumes, interview notes, test results, screening logs'],
+          ['EEOC, 29 CFR 1602.31', 'State/local government, education', '2 years', 'Personnel records, applications, test results, evaluations'],
+          ['ADEA, 29 CFR 1627.3', 'Employers, 20+ employees', 'Payroll 3 years; benefit plans, duration plus 1 year', 'Payroll data, job evaluations, seniority and merit systems'],
+          ['OFCCP, 41 CFR 60-1.12', 'Federal contractors (150+ employees, $150k+ contracts)', '2 years (1 year below that threshold)', 'Applications, interview notes, pay data, non-selection reasons'],
+          ['OFCCP, 41 CFR 60-300 / 741', 'Federal contractors under affirmative action obligations', '3 years', 'Outreach and recruitment effort logs'],
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'If a candidate files an EEOC charge or lawsuit, these clocks stop, and every related record must be preserved until the matter is fully resolved, including the 90-day right-to-sue window.'
+      },
+      {
+        type: 'subheading',
+        content: 'FCRA and background checks'
+      },
+      {
+        type: 'paragraph',
+        content: 'If a background check informed the decision, a staffing agency cannot go straight to a rejection notice. The Fair Credit Reporting Act requires a two-step adverse action process: a **pre-adverse action notice**, sent before any final decision, including a full copy of the consumer report and the FCRA Summary of Your Rights, followed by a **dispute window**, generally treated as 5 business days, during which the candidate can flag errors with the reporting agency. Only after that window closes should a **final adverse action notice** go out, naming the reporting agency, stating it did not make the hiring decision, and informing the candidate of their right to a free copy of the report within 60 days. Skipping straight to rejection when a background check drove the decision is one of the more common, and more preventable, FCRA violations in staffing.'
+      },
+      {
+        type: 'heading',
+        content: 'Rejection Templates by Stage'
+      },
+      {
+        type: 'paragraph',
+        content: 'The template matters less than the timing and the tone. Keep the language factual, keep it short, and match the effort to how much time the candidate put in.'
+      },
+      {
+        type: 'table',
+        headers: ['Stage', 'When to Send', 'What the Message Must Contain'],
+        rows: [
+          ['Post-application', 'Within 48 hours to 5 days of review', 'Thanks, clear decision, no specific rationale needed'],
+          ['Post-phone-screen', 'Within 3 to 5 business days', 'Thanks for the call, factual comparative reason, well wishes'],
+          ['Post-interview', 'Within 72 hours of the decision', 'Acknowledgment of interview effort, factual reason tied to role requirements'],
+          ['Post-final-round', 'Within 72 hours, personalized', 'Specific acknowledgment of the process, factual differentiator, genuine closure'],
+          ['Keep-in-touch', 'With the rejection or shortly after, for strong runners-up', 'Invitation to stay in the talent network, no obligation implied'],
+        ]
+      },
+      {
+        type: 'subheading',
+        content: 'Template 1: post-application'
+      },
+      {
+        type: 'paragraph',
+        content: '**Subject:** Update on your application for [Job Title] at [Agency Name]'
+      },
+      {
+        type: 'paragraph',
+        content: 'Dear [Candidate First Name], thank you for applying for the [Job Title] position at [Company Name]. We reviewed your background against the role\'s requirements and have decided to move forward with other candidates. We appreciate your interest and wish you success in your search. Sincerely, [Recruiter Name], [Agency Name]'
+      },
+      {
+        type: 'subheading',
+        content: 'Template 2: post-phone-screen'
+      },
+      {
+        type: 'paragraph',
+        content: '**Subject:** Your application for [Job Title] with [Company Name]'
+      },
+      {
+        type: 'paragraph',
+        content: 'Dear [Candidate First Name], thank you for speaking with me about the [Job Title] opportunity. After reviewing your profile against the scope of this role, we have decided to prioritize candidates whose experience more directly matches the client\'s immediate requirements. Thank you again for your time, and I wish you the best in your search. Best regards, [Recruiter Name], [Agency Name]'
+      },
+      {
+        type: 'subheading',
+        content: 'Template 3: post-interview'
+      },
+      {
+        type: 'paragraph',
+        content: '**Subject:** Status of your application for [Job Title], [Company Name]'
+      },
+      {
+        type: 'paragraph',
+        content: 'Dear [Candidate First Name], thank you for taking the time to interview for the [Job Title] role. We have chosen to move forward with a candidate whose experience in [specific requirement] more closely matches our current needs. We are grateful for the chance to connect and wish you continued success. Sincerely, [Recruiter Name], [Agency Name]'
+      },
+      {
+        type: 'subheading',
+        content: 'Template 4: post-final-round'
+      },
+      {
+        type: 'paragraph',
+        content: '**Subject:** [Job Title] interview process with [Company Name]'
+      },
+      {
+        type: 'paragraph',
+        content: 'Dear [Candidate First Name], thank you for your commitment throughout this process, including your final-round conversation with our leadership team. This was a competitive search with several strong candidates. After careful review, we selected another applicant with deeper direct experience in [specific qualification]. We were impressed by your background throughout, and while this role was not the right match, we hold your qualifications in high regard. Warm regards, [Recruiter Name], [Agency Name]'
+      },
+      {
+        type: 'subheading',
+        content: 'Template 5: keep-in-touch'
+      },
+      {
+        type: 'paragraph',
+        content: '**Subject:** Continuing our conversation, [Agency Name] Talent Network'
+      },
+      {
+        type: 'paragraph',
+        content: 'Dear [Candidate First Name], thank you for going through our process for the [Job Title] role. We selected another candidate for this opening, but your background stood out. We regularly work on roles requiring skills like yours in [specialization]. With your permission, we would like to keep your information on file and reach out when a closer match opens up. Let me know if you would like to stay connected. Best regards, [Recruiter Name], [Agency Name]'
+      },
+      {
+        type: 'heading',
+        content: 'Where SurFox AI Fits'
+      },
+      {
+        type: 'paragraph',
+        content: 'This is not a case for being kinder to candidates. It is a case for capacity.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Recruiters do not skip rejection notices because they are indifferent to how candidates feel. They skip them because closing the loop with 300 applicants for a role that hired one person produces zero revenue, and every hour spent on it is an hour not spent on a requisition that pays. That is exactly why most applications get no response at all.'
+      },
+      {
+        type: 'product-callout',
+        content: 'SurFox AI closes the loop with every applicant automatically.',
+        linkText: 'See a 2-min demo →',
+        linkHref: '/demo'
+      },
+      {
+        type: 'paragraph',
+        content: 'SurFox AI already runs the initial screening conversation with applicants over SMS, checking them against the role\'s actual qualification criteria in real time. Because that conversation is already happening, the same system can close the loop the moment a candidate does not clear it, without a recruiter drafting or sending anything. That does not replace human judgment at the interview and final-round stages, where the stakes are higher and a person should be writing the message. It addresses the volume problem at the top of the funnel, which is where most of the silence documented above happens. If the pile itself is the problem, the [triage side of it is here](/blog/triaging-high-volume-applicant-flow).'
+      },
+      {
+        type: 'heading',
+        content: 'The Takeaway'
+      },
+      {
+        type: 'paragraph',
+        content: 'Silence is not a neutral default, it is a choice with a measurable cost. Most applicants never hear back, most agencies know it, and the data on brand damage, reapplication loss, and in at least one documented case direct revenue loss shows that the cost of doing nothing is not smaller than the cost of doing rejection properly.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Speed matters more than eloquence: a short, on-time, factual message beats a thoughtful one sent two weeks late. On the legal side, the safer path is not silence and it is not detailed personal feedback, it is a brief, factual, comparative reason delivered on a consistent schedule, backed by the record retention and FCRA processes your compliance program already requires. None of this needs to be complicated. It needs to happen, on time, for every candidate, not just the ones a recruiter had time to reach.'
+      },
+      {
+        type: 'cta-box',
+        headline: 'Close the loop with every applicant, not just the ones you reach.',
+        subhead: 'SurFox AI screens applicants by SMS against your qualification criteria and dispositions the ones who do not clear it the moment they do not, so nobody is left waiting on a message that was never coming.',
+        primaryButton: { text: 'Start today', href: '/pricing' },
+        secondaryButton: { text: 'See how it works', href: '/platform' }
+      },
+      {
+        type: 'heading',
+        content: 'Frequently Asked Questions'
+      },
+      {
+        type: 'subheading',
+        content: 'How do you respond to unsuccessful candidates?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Match the response to the stage. Early applicants can receive an automated, timely acknowledgment through your ATS. Candidates who reached a phone screen, interview, or final round should get a human-sent, factual message within your stated service level, typically 3 to 5 days after that stage concludes.'
+      },
+      {
+        type: 'subheading',
+        content: 'How do you politely say no to a candidate?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Thank them for their time, state the decision clearly near the top rather than burying it, frame the outcome around the selected candidate\'s alignment rather than the rejected candidate\'s deficiencies, and close with a genuine well-wish.'
+      },
+      {
+        type: 'subheading',
+        content: 'How do you politely reject a candidate in an email?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Use a clear subject line naming the role, address the candidate by name, state the decision in the opening lines, give an objective, pool-based rationale rather than a personal one, acknowledge the time they invested, and note whether their profile will stay in your talent network.'
+      },
+      {
+        type: 'subheading',
+        content: 'How soon should you tell a candidate they did not get the job?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Early-stage applicants should hear back within 48 hours to 5 days of application review. Candidates who interviewed should be notified within 72 hours of the decision, or 3 to 5 business days after the interview. Waiting beyond about 7 days without an update is when candidates typically conclude they have been ghosted.'
+      },
+      {
+        type: 'subheading',
+        content: 'Should you give a rejected candidate feedback on why?'
+      },
+      {
+        type: 'paragraph',
+        content: 'It depends on the stage and your risk tolerance. Detailed feedback for early-stage applicants is generally not practical given volume and adds legal exposure with little evaluation data to back it up. For final-round candidates who invested significant time, brief, objective, job-related feedback can improve candidate sentiment, provided legal counsel is comfortable with the language used.'
+      },
+      {
+        type: 'subheading',
+        content: 'Is it legal to tell a candidate the specific reason they were rejected?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Generally yes, as long as the reason is factual, job-related, and non-discriminatory under Title VII, the ADEA, and the ADA. The legal risk comes from subjective language, not from stating a reason at all. This is general information, not legal advice, and requirements vary by jurisdiction, so confirm specifics with employment counsel.'
+      },
+      {
+        type: 'subheading',
+        content: 'How long do staffing agencies have to keep rejected candidate records?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Under EEOC rules, most private employers with 15 or more employees must keep application and interview records for at least 1 year from the date of the record or the hiring decision. Federal contractors under OFCCP rules generally face a 2-year retention requirement. These periods pause if a charge or lawsuit is filed.'
+      },
+      {
+        type: 'subheading',
+        content: 'What is the FCRA adverse action process for background checks?'
+      },
+      {
+        type: 'paragraph',
+        content: 'When a background check contributes to a rejection, send a pre-adverse action notice with a copy of the report and a summary of the candidate\'s rights, allow a dispute window generally treated as 5 business days, then send a final adverse action notice naming the reporting agency and the candidate\'s right to a free report copy within 60 days.'
       }
     ]
   }
