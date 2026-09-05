@@ -5347,7 +5347,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'Why Candidates Stop Responding (And How to Re-Engage Them)',
     metaDescription: 'Candidates go quiet mid-process because something moved faster, usually another offer or a counteroffer. Here\'s the real research and how to follow up so they tell you the truth.',
-    relatedPosts: ['triaging-high-volume-applicant-flow', 'staffing-follow-up-gap', 'reactivate-dormant-leads-ai'],
+    relatedPosts: ['triaging-high-volume-applicant-flow', 'staffing-follow-up-gap', 'candidate-screening-what-predicts-a-hire'],
     howToSteps: [
       { name: 'Raise the Counteroffer Conversation Early', text: 'Talk about counteroffers before the candidate is holding one, not after they go quiet. Roughly half of employees who accept a counteroffer leave within 12 months anyway, and a candidate who knows that going in is less likely to take one and disappear on you.' },
       { name: 'Switch Channels Before You Give Up', text: 'If email has gone unanswered, that often means unread rather than rejected. A short, direct text reaches candidates faster than another email in a pile they have not opened.' },
@@ -5572,7 +5572,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'Too Many Applicants to Call: How to Triage High-Volume Applicant Flow',
     metaDescription: '400 applicants doesn\'t mean 400 decisions. Set hard gates before you read, prioritize by source, and move fast on whoever clears. A practical triage system for high-volume hiring.',
-    relatedPosts: ['why-candidates-stop-responding', 'staffing-follow-up-gap', 'reactivate-dormant-leads-ai'],
+    relatedPosts: ['why-candidates-stop-responding', 'staffing-follow-up-gap', 'candidate-screening-what-predicts-a-hire'],
     howToSteps: [
       { name: 'Decide Your Hard Gates Before You Read Anything', text: 'Write down what is genuinely non-negotiable: work authorization, a required license, availability for a specific shift. These are yes-or-no facts, not judgment calls. Anything that requires an opinion is not a gate.' },
       { name: 'Ask the Gate Questions at the Point of Application', text: 'Put the gates into the application itself so anyone who fails one never reaches a human reader. This protects your reading time for people who could actually take the job.' },
@@ -5640,7 +5640,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The researchers called these people "hidden workers." The point for you isn\'t to feel guilty about your ATS. It\'s to know that automated filtering has real, documented blind spots, so if you\'re relying entirely on software to narrow 400 down to 40, you may be losing good candidates for reasons that have nothing to do with fit.'
+        content: 'The researchers called these people "hidden workers." The point for you isn\'t to feel guilty about your ATS. It\'s to know that automated filtering has real, documented blind spots, so if you\'re relying entirely on software to narrow 400 down to 40, you may be losing good candidates for reasons that have nothing to do with fit. If you want the other half of that picture, the evidence on [which screening methods actually predict job performance](/blog/candidate-screening-what-predicts-a-hire) shows structured interviews leading at r = .42 while the unstructured calls most recruiters default to manage only .19.'
       },
       {
         type: 'heading',
@@ -7847,6 +7847,313 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: '12:00 PM to 2:00 PM. HubSpot and Sales Hacker both report a 35% drop in answer rates during that window.'
+      }
+    ]
+  },
+  {
+    id: 35,
+    slug: 'candidate-screening-what-predicts-a-hire',
+    title: 'Candidate Screening: The 5 C\'s, the 80/20 Rule, and What Actually Predicts a Hire',
+    excerpt: 'Most screening advice gets repeated because it sounds right, not because anyone checked it against job performance. Here is what nearly a century of selection research actually says.',
+    category: 'Sales Strategy',
+    date: '2026-09-04',
+    lastUpdated: '2026-09-04',
+    readTime: '11 min read',
+    author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    authorTitle: 'Founder & CEO, SurFox AI',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
+    metaTitle: 'Candidate Screening: The 5 C\'s, the 80/20 Rule, and What Predicts a Hire',
+    metaDescription: 'Structured interviews predict job performance at r = .42, ahead of cognitive ability testing. Unstructured interviews, the most common method, manage only .19. What screening research actually says.',
+    relatedPosts: ['triaging-high-volume-applicant-flow', 'why-candidates-stop-responding', 'staffing-follow-up-gap'],
+    howToSteps: [
+      { name: 'Review Applications and Documents', text: 'Match resumes and cover letters against the job spec. This is the cheapest filter you have, so it goes first.' },
+      { name: 'Apply Hard-Stop Pre-Screening Criteria', text: 'Filter on binary, non-negotiable facts: work authorization, location, licensing, availability, rate expectations. Yes or no only, no judgment calls.' },
+      { name: 'Run an Objective Competency Screen', text: 'A brief job knowledge test or structured questionnaire. Job knowledge tests predict performance at r = .40, second only to structured interviews, and they are reusable once built.' },
+      { name: 'Conduct a Structured Recruiter Screen', text: 'A phone or video interview using identical job-analyzed questions in the same order, scored against an anchored rubric. This is the single highest-validity method available at r = .42.' },
+      { name: 'Verify and Check References', text: 'Confirm employment history, education, and background. Reference checks predict performance at only r = .13, so treat this as verification rather than evaluation.' },
+    ],
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Most screening advice in staffing gets repeated because it sounds right, not because anyone checked it against a hire\'s actual job performance. The 5 C\'s get taught in onboarding decks. The 80/20 rule gets quoted in interview training. Almost none of it traces back to a study.'
+      },
+      {
+        type: 'paragraph',
+        content: 'That gap matters more than it looks. A staffing agency\'s entire value proposition is picking better candidates faster than the client could alone. If the screening method itself has weak predictive power, the agency is charging for a coin flip dressed up as expertise.'
+      },
+      {
+        type: 'paragraph',
+        content: 'This post separates the two categories cleanly. Some screening conventions are genuinely useful shorthand. Others are folklore that survives because nobody measured the outcome. The research on what predicts job performance is old, well replicated, and recently corrected. It is worth knowing exactly what it says.'
+      },
+      {
+        type: 'tldr',
+        content: 'Structured interviews are the single best predictor of job performance at r = .42, ahead of cognitive ability testing (Sackett et al., 2022).\nUnstructured interviews, the most common screening method in practice, predict performance at only r = .19 (Sackett et al., 2022).\nAutomated tracking systems reject qualified candidates in 88% of employer cases surveyed, and 94% for middle-skill roles (Fuller and Raman, Harvard Business School / Accenture, 2021).\nRecruiters spend an average of 7.4 seconds on an initial resume scan (Ladders Eye-Tracking Study, 2018).\nOver 90% of candidates engage in conscious impression management during interviews, which unstructured formats do nothing to control for (Levashina and Campion, 2007).'
+      },
+      {
+        type: 'heading',
+        content: 'What Candidate Screening Actually Means'
+      },
+      {
+        type: 'paragraph',
+        content: 'Candidate screening is the systematic evaluation of an applicant pool against job-related minimum qualifications and core competencies, used to decide who advances to deeper evaluation. It sits in the middle of the hiring funnel, and it gets confused with the stages on either side of it.'
+      },
+      {
+        type: 'table',
+        headers: ['Stage', 'What It Actually Is'],
+        rows: [
+          ['Sourcing', 'Finding people. Active or passive identification of talent through job boards, headhunting, databases, and referrals. Nothing is evaluated yet.'],
+          ['Pre-screening', 'A lightweight pass on binary, non-negotiable facts: work authorization, location, licensing, availability, rate expectations. A yes/no filter, not an evaluation of skill.'],
+          ['Candidate screening', 'The actual judgment call. Evaluates technical skill, professional history, core competencies, and baseline behavior to decide whether someone justifies client presentation or a deeper look.'],
+          ['Assessment', 'The depth stage. Structured behavioral interviews, job knowledge exams, work samples, and psychometric instruments. More expensive, more accurate, reserved for candidates who already cleared screening.'],
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'The standard screening workflow runs in five steps:'
+      },
+      {
+        type: 'list',
+        ordered: true,
+        items: [
+          'Application and document review, matching resumes and cover letters to the job spec.',
+          'Initial pre-screening filter for hard-stop criteria like location, visa status, and rate.',
+          'Objective competency and skills screen, typically a brief test or structured questionnaire.',
+          'Structured recruiter screen, a phone or video interview using standardized questions and a scoring rubric.',
+          'Verification and reference screening, confirming employment history, education, and background checks.',
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'The order matters. Cheap, binary filters go first. Expensive human judgment goes last, applied only to the candidates who survived the earlier steps.'
+      },
+      {
+        type: 'heading',
+        content: 'The 5 C\'s of Recruitment'
+      },
+      {
+        type: 'paragraph',
+        content: 'Two different frameworks both go by the name "5 C\'s," and they get mixed up constantly.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The first is the onboarding and retention 5 C\'s, common in formal HR literature: Compliance, Clarification, Culture, Connection, and Check-back. This version is about integrating someone after they are hired, not about screening them beforehand.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The second is the candidate evaluation 5 C\'s, more common in executive search and recruitment trade press: Character, Competence, Culture (or Chemistry), Calling (or Commitment), and Community. This version is meant to be applied during screening and interviewing.'
+      },
+      {
+        type: 'callout',
+        content: 'Here is the honest verdict: neither framework has peer-reviewed, meta-analytic evidence validating it as a predictive selection instrument. Both are practitioner taxonomies that developed in management trade literature, not in industrial-organizational psychology research. They function as qualitative categories a recruiter can use to organize notes about a candidate. They are not measurement tools.'
+      },
+      {
+        type: 'paragraph',
+        content: 'That does not make them useless. Categorizing what you noticed about a candidate is fine practice. The mistake is treating "we ran them through the 5 C\'s" as equivalent to a validated selection method, when the framework has never been tested that way.'
+      },
+      {
+        type: 'heading',
+        content: 'The 80/20 Rule in Interviewing'
+      },
+      {
+        type: 'paragraph',
+        content: 'The claim is specific: in a good screening interview, the candidate should talk 80% of the time and the interviewer should talk 20% of the time.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The rule is commonly attributed to Mark McCormack\'s 1984 book What They Don\'t Teach You at Harvard Business School, which applied the Pareto Principle to the listen-to-talk ratio in executive meetings. It was never a study of hiring outcomes. It was a management heuristic that migrated into recruiting practice.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The research on talk ratio and hire quality is direct: controlling talk ratio alone has no measured correlation with hire quality or predictive validity. Levashina and Campion (2007) found that over 90% of candidates engage in conscious faking or impression management during interviews, and a high candidate talk-time ratio does not constrain that behavior. If anything, more unstructured candidate airtime gives more room for a well-rehearsed narrative to run uninterrupted.'
+      },
+      {
+        type: 'paragraph',
+        content: 'What actually drives predictive validity is interview structure: standardized questions, job relevance, and anchored rating scales, independent of who is talking or for how long. An unstructured interview run at a perfect 80/20 ratio still predicts job performance at only r = .19. The 80/20 rule is a reasonable listening discipline. It is not a validated screening method, and it should not be presented as one.'
+      },
+      {
+        type: 'heading',
+        content: 'What Actually Predicts Job Performance'
+      },
+      {
+        type: 'paragraph',
+        content: 'For over two decades, the reference point for selection science was Schmidt and Hunter\'s 1998 meta-analysis in Psychological Bulletin, which aggregated 85 years of personnel selection research. It concluded that general mental ability combined with structured interviews or work samples produced the strongest predictive validity for job performance.'
+      },
+      {
+        type: 'paragraph',
+        content: 'In 2022, Sackett, Zhang, Berry, and Lievens published a re-analysis in the Journal of Applied Psychology that corrected two statistical errors in the earlier work: overly aggressive range-restriction corrections, and the use of internal consistency reliability instead of interrater reliability for supervisor rating criteria. Correcting these errors reduced most validity coefficients by .10 to .20. The relative ranking of methods held, and one thing changed at the top: structured interviews overtook cognitive ability as the single best individual predictor.'
+      },
+      {
+        type: 'table',
+        headers: ['Selection Method', 'Schmidt & Hunter 1998', 'Sackett et al. 2022', 'Time Cost'],
+        rows: [
+          ['Structured interviews', '.51', '.42', '20 to 30 min per candidate, requires a written rubric'],
+          ['Job knowledge tests', '.48', '.40', '15 to 20 min, reusable across candidates once built'],
+          ['Empirically keyed biodata', '.35', '.38', 'Low per-candidate cost once the scoring key exists'],
+          ['Work sample tests', '.54', '.33', '30 to 60 min, highest setup cost, does not generalize across roles'],
+          ['Assessment centers', '.37', '.33', 'Half day or more, multi-rater'],
+          ['General mental ability', '.51', '.31', '15 to 30 min standardized test'],
+          ['Integrity tests', '.41', '.31', '10 to 20 min standardized test'],
+          ['Conscientiousness (Big Five)', '.22', '.19', '10 to 15 min standardized test'],
+          ['Unstructured interviews', '.38', '.19', '20 to 30 min, no rubric required, most common method in practice'],
+          ['Reference checks', '.26', '.13', '15 to 30 min per reference, low reliability'],
+          ['Years of job experience', '.18', '.08', 'Free, read off a resume'],
+          ['Years of education', '.10', '.06', 'Free, read off a resume'],
+          ['Graphology (handwriting)', '.02', '.02', 'Not used by credible operators, included for scale'],
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'Structured interviews at r = .42 (Sackett et al., 2022) are not just the top predictor, they beat cognitive ability testing, which had held the top spot for decades. The mechanism is structure itself: identical job-analyzed questions, anchored scoring, no room for the conversation to drift toward rapport.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Unstructured interviews sit at r = .19, the same predictive validity as conscientiousness testing and barely above chance relative to top-tier methods. This is despite being, by a wide margin, the most commonly used screening tool in staffing.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Years of experience (r = .08) and years of education (r = .06) are close to useless as standalone predictors once cognitive ability and structured skill are controlled for. Experience predicts performance only in the first few years of a role and plateaus after that. A resume filter that weights tenure heavily is optimizing for a number with almost no relationship to how well someone will do the job.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Work sample tests dropped the most in the re-analysis, from .54 to .33. Still a strong method, but with a caveat: they do not generalize well across distinct roles and work best for experienced candidates being evaluated for a specific task, not entry-level screening at volume.'
+      },
+      {
+        type: 'callout',
+        content: 'The takeaway for a staffing agency is blunt. If a screening process is built primarily around resume review, years of experience, and a conversational phone call, it is running near the bottom of this table while presenting itself to clients as expertise.'
+      },
+      {
+        type: 'heading',
+        content: 'Where Screening Quietly Fails'
+      },
+      {
+        type: 'paragraph',
+        content: 'Two failure modes show up repeatedly in the research, and both are invisible from inside the process.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The first is automated rejection of qualified candidates. Harvard Business School\'s 2021 Hidden Workers study with Accenture found 88% of employers confirmed qualified people were being filtered out by rigid keyword criteria, rising to 94% for middle-skill roles. That failure has its own post: [what your ATS is silently filtering](/blog/triaging-high-volume-applicant-flow).'
+      },
+      {
+        type: 'paragraph',
+        content: 'The second failure mode is bias in unstructured interviews. Beyond the low predictive validity number, unstructured formats let non-job-related characteristics dominate the evaluation. Studies on interview structure and weight bias found significant discrimination against overweight candidates in unstructured formats, and that a structured protocol with fixed questions and anchored scoring measurably reduced that bias. Related research shows the same pattern for pregnancy status, physical disability, and racial background. Structure is not just a validity improvement. It is a bias control.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The EEOC has also weighed in directly on the technology side. Guidance issued in May 2022 addressed ADA compliance for automated tools like gamified assessments and video screening, which can disadvantage applicants with disabilities. Guidance issued in May 2023 addressed Title VII disparate impact, holding employers and agencies liable if an AI or algorithmic screening tool produces outcomes that violate the historic four-fifths rule across protected classes.'
+      },
+      {
+        type: 'heading',
+        content: 'Where SurFox AI Fits'
+      },
+      {
+        type: 'paragraph',
+        content: 'None of this is a knowledge problem. Most experienced recruiters already know a structured screening conversation beats resume skimming and unstructured small talk. The research has said so for decades.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The problem is capacity. Running a genuinely structured screen, the same job-analyzed questions in the same order against the same evaluation criteria, takes real time per candidate. A recruiter can do that consistently for ten applicants. It gets much harder to do it consistently for three hundred, especially when the ones worth screening are mixed in with the ones who are not.'
+      },
+      {
+        type: 'product-callout',
+        content: 'SurFox AI runs the structured screen on every applicant.',
+        linkText: 'See a 2-min demo →',
+        linkHref: '/demo'
+      },
+      {
+        type: 'paragraph',
+        content: 'SurFox AI runs the same structured screening conversation, built from your own qualification criteria, over SMS with every applicant who comes in rather than a filtered subset. It asks the same questions in the same order every time, which is the actual mechanism behind the r = .42 validity number for structured interviews, not a proprietary shortcut around it. Candidates who clear the criteria get routed to a recruiter for the higher-value stages, the phone screen and the assessment, where human judgment has always mattered most.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The honest framing is that this addresses volume and consistency, not the ceiling on validity itself. A structured SMS conversation still needs job-analyzed questions and clear qualification logic behind it to be worth anything. What it changes is whether that structure gets applied to every applicant or only the ones a recruiter had time to reach. If the pile is the problem in the first place, the [triage side of it is here](/blog/triaging-high-volume-applicant-flow), and the [candidates who go quiet mid-process](/blog/why-candidates-stop-responding) are a separate failure worth closing too.'
+      },
+      {
+        type: 'heading',
+        content: 'The Takeaway'
+      },
+      {
+        type: 'paragraph',
+        content: 'Screening conventions and screening science are not the same thing, and most agencies are running on the conventions. The 5 C\'s and the 80/20 rule are organizing habits, not validated predictors, and neither should be presented to a client as evidence of rigor.'
+      },
+      {
+        type: 'paragraph',
+        content: 'What is validated, repeatedly, across nearly a century of aggregated research, is structure: the same questions, the same order, the same scoring, applied consistently. Structured interviews at r = .42 beat every other individual method on the table, including cognitive ability testing, and they do it while also reducing the bias that unstructured formats let through. The gap between agencies that know this and agencies that act on it consistently, at volume, across every applicant, is where the actual competitive advantage sits.'
+      },
+      {
+        type: 'cta-box',
+        headline: 'Run the structured screen on every applicant, not just the ones you reach.',
+        subhead: 'SurFox AI asks your qualification questions in the same order with every candidate by SMS, then routes the ones who clear the bar to a recruiter with the full conversation attached.',
+        primaryButton: { text: 'Start today', href: '/pricing' },
+        secondaryButton: { text: 'See how it works', href: '/platform' }
+      },
+      {
+        type: 'heading',
+        content: 'Frequently Asked Questions'
+      },
+      {
+        type: 'subheading',
+        content: 'What does "candidate screening" mean?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Candidate screening is the systematic evaluation of an applicant pool against job-related minimum qualifications and core competencies, used to decide who advances toward client presentation or deeper assessment. It sits between sourcing and full assessment in the hiring funnel.'
+      },
+      {
+        type: 'subheading',
+        content: 'What are the 5 C\'s of recruitment?'
+      },
+      {
+        type: 'paragraph',
+        content: 'There are two competing versions. The onboarding and retention version is Compliance, Clarification, Culture, Connection, and Check-back. The candidate evaluation version is Character, Competence, Culture (or Chemistry), Calling (or Commitment), and Community. Neither has peer-reviewed evidence validating it as a predictive selection instrument. Both are practitioner categorization tools.'
+      },
+      {
+        type: 'subheading',
+        content: 'What is the 80/20 rule in interviewing?'
+      },
+      {
+        type: 'paragraph',
+        content: 'It holds that the candidate should talk 80% of the time and the interviewer 20%. It is commonly attributed to Mark McCormack\'s 1984 book applying the Pareto Principle to executive communication, not to hiring research. Studies show talk ratio alone has no measured correlation with hire quality. What predicts hire quality is interview structure, not talk time.'
+      },
+      {
+        type: 'subheading',
+        content: 'How do you screen a candidate?'
+      },
+      {
+        type: 'paragraph',
+        content: 'The standard process runs five steps: application and document review, an initial pre-screening filter for binary criteria like location and visa status, an objective skills or competency screen, a structured recruiter interview using standardized questions and a scoring rubric, and verification through references and background checks.'
+      },
+      {
+        type: 'subheading',
+        content: 'What do employers use to screen job applicants?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Common tools include resumes and cover letters, structured application questionnaires, automated applicant tracking systems that parse resumes and enforce keyword or criteria cutoffs, short-form job knowledge tests, and structured recruiter screening calls of 15 to 30 minutes.'
+      },
+      {
+        type: 'subheading',
+        content: 'What are the steps in the screening process?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Application and document review, pre-screening for hard-stop criteria, an objective competency or skills screen, a structured recruiter interview, and reference or background verification, in that order. Cheap binary filters go first, expensive human judgment last.'
+      },
+      {
+        type: 'subheading',
+        content: 'Which screening method has the highest predictive validity?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Structured interviews, at r = .42 in the corrected 2022 meta-analysis by Sackett and colleagues, ahead of job knowledge tests at .40 and general mental ability at .31.'
+      },
+      {
+        type: 'subheading',
+        content: 'Why do unstructured interviews perform so poorly despite being so common?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Unstructured interviews predict job performance at only r = .19 because they let recruiter rapport, first impressions, and candidate impression management dominate the evaluation instead of job-relevant, standardized criteria. Levashina and Campion (2007) found that over 90% of candidates engage in conscious impression management, and an unstructured format does nothing to control for it.'
       }
     ]
   }
