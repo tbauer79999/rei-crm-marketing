@@ -185,12 +185,6 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['SurFox vs TextUs', 'TextUs alternative', 'AI SMS platform', 'automated lead qualification', 'business texting'],
     path: '/compare/surfox-vs-textus',
   },
-  'compare-launch-control': {
-    title: 'SurFox AI vs Launch Control: Smart AI vs Mass Messaging',
-    description: 'Compare SurFox AI vs Launch Control. SurFox uses psychology AI for intelligent conversations. Launch Control focuses on volume-based mass messaging.',
-    keywords: ['SurFox vs Launch Control', 'Launch Control alternative', 'AI lead qualification', 'real estate SMS', 'REI marketing'],
-    path: '/compare/surfox-vs-launch-control',
-  },
   'compare-skipio': {
     title: 'SurFox AI vs Skipio: Pricing, Features & Reviews Compared (2026)',
     description: 'Compare SurFox AI vs Skipio. SurFox learns from conversations and adapts messaging. Skipio offers basic drip campaigns without AI intelligence.',
@@ -198,9 +192,9 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/compare/surfox-vs-skipio',
   },
   'compare-smarter-contact': {
-    title: 'SurFox AI vs Smarter Contact: Pricing & Feature Comparison (2026)',
-    description: 'Compare SurFox AI vs Smarter Contact. SurFox qualifies leads with psychology AI that learns. Smarter Contact sends batch messages without AI.',
-    keywords: ['SurFox vs Smarter Contact', 'Smarter Contact alternative', 'AI SMS', 'real estate marketing', 'lead qualification'],
+    title: 'SurFox AI vs Smarter Contact & Launch Control: Pricing (2026)',
+    description: 'Smarter Contact acquired Launch Control. Compare both to SurFox AI: Smarter Contact from $199/mo plus $0.025/text, Launch Control from $497/mo, SurFox AI Growth $597/mo flat.',
+    keywords: ['SurFox vs Smarter Contact', 'Smarter Contact alternative', 'SurFox vs Launch Control', 'Launch Control alternative', 'Smarter Contact pricing', 'Launch Control pricing', 'real estate SMS', 'lead qualification'],
     path: '/compare/surfox-vs-smarter-contact',
   },
   'compare-lead-sherpa': {

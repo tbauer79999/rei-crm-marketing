@@ -53,7 +53,6 @@ const columns: { title: string; links: { label: string; href: string }[]; wide?:
     links: [
       { label: 'SurFox AI vs All Competitors', href: '/compare/surfox-vs-all-competitors' },
       { label: 'SurFox AI vs Textus', href: '/compare/surfox-vs-textus' },
-      { label: 'SurFox AI vs Launch Control', href: '/compare/surfox-vs-launch-control' },
       { label: 'SurFox AI vs Lead Sherpa', href: '/compare/surfox-vs-lead-sherpa' },
       { label: 'SurFox AI vs Skipio', href: '/compare/surfox-vs-skipio' },
       { label: 'SurFox AI vs Smarter Contact', href: '/compare/surfox-vs-smarter-contact' },

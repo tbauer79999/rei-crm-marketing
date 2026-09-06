@@ -29,7 +29,6 @@ const keyRoutes = [
   '/home-services',
   '/compare/surfox-vs-all-competitors',
   '/compare/surfox-vs-gohighlevel',
-  '/compare/surfox-vs-launch-control',
   '/compare/surfox-vs-lead-sherpa',
   '/compare/surfox-vs-meera-ai',
   '/compare/surfox-vs-qualified',

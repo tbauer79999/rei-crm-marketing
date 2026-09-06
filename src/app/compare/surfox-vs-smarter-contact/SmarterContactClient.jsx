@@ -41,11 +41,11 @@ const featureSets = [
     category: 'Business Value',
     icon: DollarSign,
     features: [
-      { name: 'Pricing Model', surfox: 'Growth plan $597/month with learning AI, starts at $147', smarter: 'Base fee plus per-message costs' },
+      { name: 'Pricing Model', surfox: 'Flat monthly price, messages included, no usage fees', smarter: 'Smarter Contact meters per message; Launch Control bundles messages into higher tiers' },
       { name: 'Time Investment', surfox: 'Minimal ongoing management required', smarter: 'Constant manual conversation monitoring' },
       { name: 'ROI Tracking', surfox: 'Full conversion tracking from lead to close', smarter: 'Basic volume and open rate metrics' },
       { name: 'Scalability', surfox: 'SurFox AI scales conversations without adding staff', smarter: 'More leads = more manual work' },
-      { name: 'Total Cost', surfox: 'Growth $597/month, Starter $147/month', smarter: '$199+ base + usage fees + labor costs' }
+      { name: 'Total Cost', surfox: 'Growth $597/month flat, Starter $147/month, no per-message fee', smarter: 'Smarter Contact from $199/mo plus per-message fees; Launch Control from $497/mo plus a provider fee' }
     ]
   }
 ];
@@ -61,7 +61,7 @@ export default function SmarterContactClient() {
             Feature-by-Feature Breakdown
           </h2>
           <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
-            See exactly where SurFox AI outperforms traditional mass messaging platforms.
+            See exactly where SurFox AI differs from Smarter Contact and Launch Control.
           </p>
         </div>
 
@@ -104,7 +104,7 @@ export default function SmarterContactClient() {
                 <div className="p-4 rounded-xl border border-white/[0.08] bg-card-bg">
                   <div className="flex items-center mb-2">
                     <X className="w-5 h-5 text-red-600 mr-2" />
-                    <span className="font-medium text-sm text-white/60">Smarter Contact</span>
+                    <span className="font-medium text-sm text-white/60">Smarter Contact &amp; Launch Control</span>
                   </div>
                   <p className="text-sm text-white/60">{item.smarter}</p>
                 </div>

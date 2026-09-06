@@ -10,12 +10,57 @@ import {
   Shield,
   Award,
   Clock,
+  Rocket,
 } from 'lucide-react';
 import SmarterContactClient from './SmarterContactClient';
 
 export const metadata = generatePageMetadata('compare-smarter-contact');
 
 const breadcrumbSchema = generateCompareBreadcrumb('Smarter Contact', '/compare/surfox-vs-smarter-contact');
+
+// Ported from the retired /compare/surfox-vs-launch-control page. This is an
+// illustrative day, not measured data, and the copy says so on the page.
+const campaignOpsWorkflow = [
+  {
+    time: '8:00 AM - Morning setup (45 mins)',
+    description: 'Review overnight responses, update campaign templates, adjust targeting rules, prep new sequences',
+  },
+  {
+    time: '10:00 AM - Response management (2 hours)',
+    description: 'Read every response, craft individual replies, qualify leads manually, update contact records',
+  },
+  {
+    time: '2:00 PM - Campaign monitoring (1.5 hours)',
+    description: 'Check delivery rates, analyze engagement, adjust message timing, create A/B test variations',
+  },
+  {
+    time: '4:00 PM - Lead follow-up (1+ hour)',
+    description: 'Manual follow-ups based on rules, schedule calls with qualified leads, update CRM',
+  },
+];
+
+const surfoxWorkflow = [
+  {
+    time: '9:00 AM - Hot lead review (15 mins)',
+    description: 'Review leads SurFox AI flagged as ready to buy, with the full conversation context attached',
+    icon: Clock,
+  },
+  {
+    time: '12:00 PM - Quick check (5 mins)',
+    description: 'Glance at the AI performance dashboard, approve any escalated edge cases',
+    icon: Clock,
+  },
+  {
+    time: '5:00 PM - End of day (10 mins)',
+    description: 'Review the appointments SurFox AI booked, check conversion metrics, done for the day',
+    icon: Clock,
+  },
+  {
+    time: '24/7 - The AI keeps working',
+    description: 'SurFox AI handles conversations overnight and on weekends, and learns from each one',
+    icon: Sparkles,
+  },
+];
 
 const faqData = [
   {
@@ -32,6 +77,31 @@ const faqData = [
     question: 'What is the difference between Smarter Contact and SurFox AI?',
     answer:
       'Smarter Contact is a bulk messaging platform. SurFox AI is an AI qualification platform. Smarter Contact sends thousands of texts. SurFox AI has thousands of conversations.',
+  },
+  {
+    question: 'Did Smarter Contact acquire Launch Control?',
+    answer:
+      'Yes. Smarter Contact states on its own website that it "has acquired Launch Control to become the undisputed real estate market leader." No closing date has been published. Both products were still sold under their own names and their own pricing at the time this page was last updated, which is why both price lists appear above.',
+  },
+  {
+    question: 'How much does Launch Control cost?',
+    answer:
+      'Launch Control publishes four tiers: Lite at $497/month for 12,500 outbound messages, Core at $797 for 25,000, Pro at $1,497 for 60,000, and Pro Plus at $2,297 for 90,000. Each tier adds a provider fee, from $22/month on Lite to $135/month on Pro Plus, and skip tracing is billed separately at $0.10 to $0.13 per record.',
+  },
+  {
+    question: 'What is the best Launch Control alternative for real estate investors?',
+    answer:
+      'It depends on which part of the job you want solved. Launch Control and Smarter Contact are both strong at sending high volume, and at pure broadcast volume they are cheaper per message than SurFox AI. SurFox AI is the alternative worth looking at if the bottleneck is the replies rather than the sends, because the AI qualifies responses instead of handing them to a person.',
+  },
+  {
+    question: 'Is Launch Control good for real estate investors?',
+    answer:
+      'Yes. Launch Control is built specifically for real estate investors doing SMS outreach to distressed property leads, it handles compliance carefully, and it integrates with the common investor CRMs. The tradeoff is that every reply still lands in a human inbox. SurFox AI handles that qualification conversation automatically.',
+  },
+  {
+    question: 'Can I use Launch Control or Smarter Contact alongside SurFox AI?',
+    answer:
+      'Yes, and some teams do. You can run the initial outreach on Launch Control or Smarter Contact and pass responding leads into SurFox AI for qualification. You will pay two platform fees to do it. Most teams that make the switch end up running both the outreach and the qualification in SurFox AI instead.',
   },
 ];
 
@@ -121,8 +191,8 @@ export default function Page() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4">
                 <div className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
                   <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">$597</div>
-                  <div className="text-sm text-[#5A626E]">SurFox Growth Plan</div>
-                  <div className="text-xs text-[#8A92A0] mt-1">vs $199+ Smarter</div>
+                  <div className="text-sm text-[#5A626E]">SurFox AI Growth Plan</div>
+                  <div className="text-xs text-[#8A92A0] mt-1">flat, no per-message fees</div>
                 </div>
                 <div className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
                   <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">90%</div>
@@ -140,6 +210,24 @@ export default function Page() {
                   <div className="text-xs text-[#8A92A0] mt-1">vs hours of setup</div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Acquisition note */}
+        <section className="px-4 sm:px-6 md:px-8 pb-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="p-6 sm:p-8 rounded-2xl border-2 border-[#dCEEF1] bg-white">
+              <h2 className="text-lg font-semibold text-[#13171F] mb-3">
+                One note before the comparison: Smarter Contact acquired Launch Control
+              </h2>
+              <p className="text-[#5A626E] leading-relaxed text-sm sm:text-base">
+                Smarter Contact states on its own site that it has acquired Launch Control. No closing date has
+                been published, and at the time this page was last updated both products were still sold
+                separately, under their own names and their own price lists. This page covers both, so if you
+                landed here looking for a Launch Control comparison, you are in the right place. Both price
+                lists appear in the cost section below.
+              </p>
             </div>
           </div>
         </section>
@@ -164,15 +252,15 @@ export default function Page() {
                     <MessageSquare className="w-6 h-6 text-[#8A92A0]" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-[#13171F]">Smarter Contact</h3>
-                    <p className="text-sm text-[#5A626E]">Mass Messaging Approach</p>
+                    <h3 className="text-xl font-semibold text-[#13171F]">Smarter Contact &amp; Launch Control</h3>
+                    <p className="text-sm text-[#5A626E]">Mass Messaging and Campaign Management</p>
                   </div>
                 </div>
 
                 <div className="space-y-4 mb-6">
                   <div className="p-4 rounded-xl border border-[#E4E6E2] bg-white">
                     <h4 className="font-semibold text-[#13171F] mb-2 text-sm">The Problem They Solve:</h4>
-                    <p className="text-sm text-[#5A626E]">"I need to reach thousands of contacts fast and want ringless voicemail in the mix"</p>
+                    <p className="text-sm text-[#5A626E]">"I need to reach thousands of contacts fast, with ringless voicemail in the mix and real control over my campaigns"</p>
                   </div>
 
                   <div className="space-y-3">
@@ -189,8 +277,16 @@ export default function Page() {
                       <span>Popular with RE investors doing volume outreach</span>
                     </div>
                     <div className="flex items-start text-sm text-[#5A626E]">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
+                      <span>Launch Control adds a deep template library and campaign variables</span>
+                    </div>
+                    <div className="flex items-start text-sm text-[#5A626E]">
                       <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
                       <span>All responses require manual handling</span>
+                    </div>
+                    <div className="flex items-start text-sm text-[#5A626E]">
+                      <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
+                      <span>Campaign setup and monitoring is an ongoing job for someone</span>
                     </div>
                     <div className="flex items-start text-sm text-[#5A626E]">
                       <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
@@ -198,7 +294,7 @@ export default function Page() {
                     </div>
                     <div className="flex items-start text-sm text-[#5A626E]">
                       <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
-                      <span>Per-message fees compound fast at volume</span>
+                      <span>Smarter Contact bills per message on its pay-as-you-go tiers</span>
                     </div>
                   </div>
                 </div>
@@ -354,6 +450,82 @@ export default function Page() {
           </div>
         </section>
 
+        {/* Daily Workflow: Before vs After (ported from the retired Launch Control page) */}
+        <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-4 sm:mb-6 px-4">
+                Your Daily Workflow: Before vs After
+              </h2>
+              <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
+                This is where the real cost difference lives. Not in the platform fee, in the hours.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
+              {/* Campaign ops */}
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
+                <div className="flex items-center mb-6">
+                  <Rocket className="w-6 h-6 text-red-600 mr-3" />
+                  <h3 className="text-lg font-semibold text-[#13171F]">Running campaigns manually</h3>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  {campaignOpsWorkflow.map((item, i) => (
+                    <div key={i} className="p-3 rounded-lg border border-red-500/20 bg-[#F4F5F3]">
+                      <div className="flex items-center mb-2">
+                        <Clock className="w-4 h-4 mr-2 text-[#5A626E]" />
+                        <span className="text-xs font-medium text-[#5A626E]">{item.time}</span>
+                      </div>
+                      <p className="text-sm text-[#5A626E]">{item.description}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="p-4 rounded-xl border-2 border-red-300 bg-red-100 text-center">
+                  <p className="text-red-700 font-semibold">Roughly 5 hours a day</p>
+                  <p className="text-red-600 text-sm">Plus evening and weekend monitoring</p>
+                </div>
+              </div>
+
+              {/* SurFox AI */}
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
+                <div className="flex items-center mb-6">
+                  <Sparkles className="w-6 h-6 text-green-400 mr-3" />
+                  <h3 className="text-lg font-semibold text-[#13171F]">Running the same outreach on SurFox AI</h3>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  {surfoxWorkflow.map((item, i) => {
+                    const Icon = item.icon;
+                    const iconColor = Icon === Sparkles ? 'text-green-400' : 'text-[#5A626E]';
+                    return (
+                      <div key={i} className="p-3 rounded-lg border border-green-200 bg-[#F4F5F3]">
+                        <div className="flex items-center mb-2">
+                          <Icon className={`w-4 h-4 mr-2 ${iconColor}`} />
+                          <span className="text-xs font-medium text-[#5A626E]">{item.time}</span>
+                        </div>
+                        <p className="text-sm text-[#5A626E]">{item.description}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                <div className="p-4 rounded-xl border-2 border-green-500/30 bg-green-500/10 text-center">
+                  <p className="text-green-400 font-semibold">Roughly 30 minutes a day</p>
+                  <p className="text-green-400 text-sm">The AI works nights and weekends</p>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-sm text-[#8A92A0] italic max-w-3xl mx-auto text-center mt-8 px-4">
+              This is an illustrative day built from how these tools are typically run, not a measured study.
+              Your own hours will depend on your list size, your reply rate, and how much of the follow-up you
+              already automate.
+            </p>
+          </div>
+        </section>
+
         {/* Feature Comparison (interactive tabs) */}
         <SmarterContactClient />
 
@@ -428,16 +600,22 @@ export default function Page() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-4 sm:mb-6 px-4">
-                The Hidden Cost Reality
+                What Each Platform Actually Costs
               </h2>
               <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
-                SurFox AI delivers superior AI while actually costing less when you factor in usage fees and manual work.
+                Published list prices for all three, and the arithmetic on a realistic month. We have not put a
+                thumb on the scale, including where the numbers do not favor us.
               </p>
             </div>
 
-            {/* SmarterContact Tier Breakdown */}
+            {/* Smarter Contact pricing */}
             <div className="px-4 mb-8">
-              <h3 className="text-xl font-semibold text-[#13171F] mb-4 text-center">SmarterContact Pricing (billed quarterly)</h3>
+              <h3 className="text-xl font-semibold text-[#13171F] mb-2 text-center">Smarter Contact</h3>
+              <p className="text-sm text-[#8A92A0] text-center mb-4">
+                Pay-as-you-go tiers, prices shown for quarterly billing. Annual billing is lower
+                ($169 / $339 / $419). Smarter Contact also sells committed-volume Elite Plus plans with
+                messages included.
+              </p>
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[560px] text-sm border-2 border-[#E4E6E2] rounded-2xl overflow-hidden">
                   <thead>
@@ -454,79 +632,191 @@ export default function Page() {
                       <td className="px-4 py-3 font-medium text-[#5A626E]">Starter</td>
                       <td className="px-4 py-3 text-right text-[#5A626E]">$199</td>
                       <td className="px-4 py-3 text-right text-[#5A626E]">$0.03/text</td>
-                      <td className="px-4 py-3 text-right text-[#5A626E]">$0.02/min</td>
-                      <td className="px-4 py-3 text-right text-[#8A92A0]">-</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$0.03/min</td>
+                      <td className="px-4 py-3 text-right text-[#8A92A0]">not listed</td>
                     </tr>
                     <tr className="bg-white">
                       <td className="px-4 py-3 font-medium text-[#5A626E]">Pro</td>
                       <td className="px-4 py-3 text-right text-[#5A626E]">$399</td>
                       <td className="px-4 py-3 text-right text-[#5A626E]">$0.025/text</td>
-                      <td className="px-4 py-3 text-right text-[#5A626E]">$0.015/min</td>
-                      <td className="px-4 py-3 text-right text-[#5A626E]">$0.03/drop</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$0.025/min</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$0.025/drop</td>
                     </tr>
                     <tr>
                       <td className="px-4 py-3 font-medium text-[#5A626E]">Elite</td>
                       <td className="px-4 py-3 text-right text-[#5A626E]">$499</td>
                       <td className="px-4 py-3 text-right text-[#5A626E]">$0.02/text</td>
-                      <td className="px-4 py-3 text-right text-[#5A626E]">$0.01/min</td>
-                      <td className="px-4 py-3 text-right text-[#5A626E]">$0.025/drop</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$0.02/min</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$0.02/drop</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
 
-            {/* Real Math Example */}
+            {/* Launch Control pricing */}
             <div className="px-4 mb-8">
-              <div className="p-6 sm:p-8 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
-                <h3 className="text-lg font-semibold text-[#13171F] mb-4">Real Math: SmarterContact Pro at 20K texts/month</h3>
-                <div className="grid sm:grid-cols-3 gap-4 mb-4 text-sm">
-                  <div className="p-4 rounded-xl bg-[#F4F5F3] border border-red-500/20 text-center">
-                    <div className="text-[#8A92A0] mb-1">Base plan</div>
-                    <div className="text-2xl font-semibold text-[#13171F]">$399</div>
-                  </div>
-                  <div className="p-4 rounded-xl bg-[#F4F5F3] border border-red-500/20 text-center">
-                    <div className="text-[#8A92A0] mb-1">20K texts × $0.025</div>
-                    <div className="text-2xl font-semibold text-red-600">+$500</div>
-                  </div>
-                  <div className="p-4 rounded-xl bg-[#F4F5F3] border border-red-300 text-center">
-                    <div className="text-[#8A92A0] mb-1">Monthly total</div>
-                    <div className="text-2xl font-semibold text-red-600">~$900</div>
-                  </div>
-                </div>
-                <p className="text-sm text-[#5A626E] italic">That's before any calling minutes or voicemail drops. Usage fees compound fast at volume.</p>
+              <h3 className="text-xl font-semibold text-[#13171F] mb-2 text-center">Launch Control</h3>
+              <p className="text-sm text-[#8A92A0] text-center mb-4">
+                Messages are included rather than metered, and each tier carries a separate provider fee.
+                Skip tracing is billed on top at $0.10 to $0.13 per record.
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[560px] text-sm border-2 border-[#E4E6E2] rounded-2xl overflow-hidden">
+                  <thead>
+                    <tr className="bg-white/[0.03] text-[#13171F]">
+                      <th className="text-left px-4 py-3 font-semibold">Plan</th>
+                      <th className="text-right px-4 py-3 font-semibold">Base/mo</th>
+                      <th className="text-right px-4 py-3 font-semibold">Outbound Messages</th>
+                      <th className="text-right px-4 py-3 font-semibold">Provider Fee</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-[#F4F5F3] divide-y divide-gray-100">
+                    <tr>
+                      <td className="px-4 py-3 font-medium text-[#5A626E]">Lite</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$497</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">12,500</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">+$22</td>
+                    </tr>
+                    <tr className="bg-white">
+                      <td className="px-4 py-3 font-medium text-[#5A626E]">Core</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$797</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">25,000</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">+$55</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3 font-medium text-[#5A626E]">Pro</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$1,497</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">60,000</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">+$85</td>
+                    </tr>
+                    <tr className="bg-white">
+                      <td className="px-4 py-3 font-medium text-[#5A626E]">Pro Plus</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$2,297</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">90,000</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">+$135</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
 
-            {/* Side-by-side comparison */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 mb-8">
-              <div className="text-center p-6 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
-                <div className="text-sm text-[#5A626E] mb-2">SmarterContact Pro - 20K texts/mo</div>
-                <div className="text-4xl font-semibold text-red-600 mb-2">~$900</div>
-                <div className="text-xs text-[#5A626E] mb-4">per month</div>
-                <div className="text-xs text-[#5A626E] space-y-1">
-                  <div>• $399 base + $500 SMS fees</div>
-                  <div>• Calling & voicemail billed separately</div>
-                  <div>• Every reply still handled manually</div>
-                </div>
+            {/* SurFox AI pricing */}
+            <div className="px-4 mb-10">
+              <h3 className="text-xl font-semibold text-[#13171F] mb-2 text-center">SurFox AI</h3>
+              <p className="text-sm text-[#8A92A0] text-center mb-4">
+                Flat monthly price, no per-message fee. The message allowance counts inbound and outbound
+                together, because the AI is having the conversation rather than just sending it.
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[560px] text-sm border-2 border-[#dCEEF1] rounded-2xl overflow-hidden">
+                  <thead>
+                    <tr className="bg-white/[0.03] text-[#13171F]">
+                      <th className="text-left px-4 py-3 font-semibold">Plan</th>
+                      <th className="text-right px-4 py-3 font-semibold">Price/mo</th>
+                      <th className="text-right px-4 py-3 font-semibold">Messages (in + out)</th>
+                      <th className="text-right px-4 py-3 font-semibold">Per-message Fee</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-[#F4F5F3] divide-y divide-gray-100">
+                    <tr>
+                      <td className="px-4 py-3 font-medium text-[#5A626E]">Starter</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$147</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">2,000</td>
+                      <td className="px-4 py-3 text-right text-[#0A7C8C]">none</td>
+                    </tr>
+                    <tr className="bg-white">
+                      <td className="px-4 py-3 font-medium text-[#5A626E]">Growth</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$597</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">10,000</td>
+                      <td className="px-4 py-3 text-right text-[#0A7C8C]">none</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3 font-medium text-[#5A626E]">Scale</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$2,497</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">40,000</td>
+                      <td className="px-4 py-3 text-right text-[#0A7C8C]">none</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+            </div>
 
-              <div className="text-center p-6 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
-                <div className="text-sm text-[#5A626E] mb-2">SurFox Growth</div>
-                <div className="text-4xl font-semibold text-green-400 mb-2">$597</div>
-                <div className="text-xs text-[#5A626E] mb-4">flat per month</div>
-                <div className="text-xs text-[#5A626E] space-y-1">
-                  <div>• 10,000 messages included</div>
-                  <div>• AI qualifies every reply automatically</div>
-                  <div>• No usage fees, no surprises</div>
+            {/* Worked example */}
+            <div className="px-4 mb-8">
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
+                <h3 className="text-lg font-semibold text-[#13171F] mb-2">
+                  A real month: 5,000 outbound texts and the replies they generate
+                </h3>
+                <p className="text-sm text-[#5A626E] mb-6">
+                  The same workload priced on each platform. Inbound messages are free on Smarter Contact and
+                  Launch Control and counted on SurFox AI, so this assumes roughly one reply per outbound text.
+                </p>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+                  <div className="p-4 rounded-xl bg-white border border-[#E4E6E2] text-center">
+                    <div className="text-[#8A92A0] mb-1">Smarter Contact Starter</div>
+                    <div className="text-2xl font-semibold text-[#13171F]">$349</div>
+                    <div className="text-xs text-[#8A92A0] mt-1">$199 + 5,000 x $0.03</div>
+                  </div>
+                  <div className="p-4 rounded-xl bg-white border border-[#E4E6E2] text-center">
+                    <div className="text-[#8A92A0] mb-1">Launch Control Lite</div>
+                    <div className="text-2xl font-semibold text-[#13171F]">$519</div>
+                    <div className="text-xs text-[#8A92A0] mt-1">$497 + $22 provider fee</div>
+                  </div>
+                  <div className="p-4 rounded-xl bg-white border border-[#E4E6E2] text-center">
+                    <div className="text-[#8A92A0] mb-1">Smarter Contact Pro</div>
+                    <div className="text-2xl font-semibold text-[#13171F]">$524</div>
+                    <div className="text-xs text-[#8A92A0] mt-1">$399 + 5,000 x $0.025</div>
+                  </div>
+                  <div className="p-4 rounded-xl bg-white border-2 border-[#0A7C8C] text-center">
+                    <div className="text-[#8A92A0] mb-1">SurFox AI Growth</div>
+                    <div className="text-2xl font-semibold text-[#0A7C8C]">$597</div>
+                    <div className="text-xs text-[#8A92A0] mt-1">flat, replies handled by AI</div>
+                  </div>
                 </div>
+                <p className="text-[#5A626E] leading-relaxed mt-6">
+                  <strong className="text-[#13171F]">
+                    At this volume SurFox AI is the most expensive of the four, by $73 to $248 a month.
+                  </strong>{' '}
+                  That is the honest number, and you would find it yourself in ten minutes anyway. What the
+                  extra buys is the reply handling. On the other three, every one of those replies goes to a
+                  person. At a $25 per hour loaded rate, $73 to $248 is three to ten hours of someone&apos;s
+                  month. If working those replies takes your team longer than that, the difference has already
+                  paid for itself.
+                </p>
+              </div>
+            </div>
+
+            {/* Where the competitors win */}
+            <div className="px-4 mb-8">
+              <div className="p-6 sm:p-8 rounded-2xl border-2 border-[#E4E6E2] bg-white">
+                <h3 className="text-lg font-semibold text-[#13171F] mb-3">
+                  Where Smarter Contact and Launch Control win on price
+                </h3>
+                <p className="text-[#5A626E] leading-relaxed text-sm sm:text-base">
+                  High-volume broadcasting. At 20,000 outbound texts a month, Smarter Contact Pro on
+                  pay-as-you-go runs about $899, its committed Elite Plus 20k plan is $759, and Launch Control
+                  Core is $852 including the provider fee. Putting that same volume through SurFox AI means the
+                  Scale plan at $2,497. If your model is pure send volume and you already have people to work
+                  the replies, they are the cheaper tools and we will not pretend otherwise. SurFox AI earns its
+                  price when the replies are the bottleneck, not the sends.
+                </p>
               </div>
             </div>
 
             <div className="p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5 text-center">
               <h3 className="text-2xl font-semibold text-[#13171F] mb-4">The Bottom Line</h3>
               <p className="text-lg text-[#5A626E] leading-relaxed max-w-3xl mx-auto">
-                SmarterContact's base price looks comparable - but the meter is always running. At any real sending volume, SurFox Growth at <strong className="text-[#13171F]">$597 flat</strong> comes out ahead, and the AI handles the follow-up work your team would otherwise do manually.
+                SurFox AI is not the cheapest way to send text messages, and at high volume it is not close.
+                It is the cheaper way to <strong className="text-[#13171F]">have the conversations</strong>,
+                because the qualification work that Smarter Contact and Launch Control hand to a person is
+                included in the flat price.
+              </p>
+              <p className="text-sm text-[#8A92A0] mt-6 max-w-3xl mx-auto">
+                Competitor pricing above is taken from the Smarter Contact and Launch Control published price
+                pages and was last checked in September 2026. Vendor pricing changes, and Launch Control
+                pricing may move further now that Smarter Contact has acquired it, so confirm both before you
+                decide.
               </p>
             </div>
           </div>
@@ -540,25 +830,29 @@ export default function Page() {
                 Which Platform Is Right for You?
               </h2>
               <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
-                Both solve real problems, but different ones. Here's how to decide.
+                All three solve real problems, but different ones. Here is how to decide.
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
               <div className="p-6 sm:p-8 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
-                <h3 className="text-xl font-semibold text-[#13171F] mb-4">Choose Smarter Contact When:</h3>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-4">Choose Smarter Contact or Launch Control When:</h3>
                 <div className="space-y-3">
+                  <div className="flex items-start text-sm text-[#5A626E]">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
+                    <span>High-volume broadcast is the core of your outreach strategy</span>
+                  </div>
+                  <div className="flex items-start text-sm text-[#5A626E]">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
+                    <span>You already have people to work every reply, and the cost per message matters more than the hours</span>
+                  </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
                     <span>You need ringless voicemail drops at scale</span>
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>You have a dedicated team to manually work every reply</span>
-                  </div>
-                  <div className="flex items-start text-sm text-[#5A626E]">
-                    <Check className="w-5 h-5 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
-                    <span>High-volume broadcast is the core of your outreach strategy</span>
+                    <span>You want hands-on control of templates, variables and campaign timing, which is Launch Control&apos;s strength</span>
                   </div>
                 </div>
               </div>
@@ -568,15 +862,19 @@ export default function Page() {
                 <div className="space-y-3">
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
-                    <span>You want qualified appointments, not random responses</span>
+                    <span>The replies are your bottleneck, not the sends</span>
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
-                    <span>You'd rather SurFox AI handle conversations 24/7</span>
+                    <span>You want qualified appointments, not a queue of responses to triage</span>
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
-                    <span>You want better results at lower total cost</span>
+                    <span>You would rather SurFox AI handle conversations 24/7 than add headcount to do it</span>
+                  </div>
+                  <div className="flex items-start text-sm text-[#5A626E]">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
+                    <span>You want one flat bill instead of a metered one</span>
                   </div>
                 </div>
               </div>

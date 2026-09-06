@@ -25,7 +25,7 @@ const competitorCategories = [
   {
     category: 'Mass Messaging Platforms',
     subtitle: 'Volume-Based Approach',
-    examples: ['Smarter Contact', 'Launch Control', 'ReiReply', 'Batch Leads'],
+    examples: ['Smarter Contact (incl. Launch Control)', 'ReiReply', 'Batch Leads'],
     description: 'Built for message volume, not conversation quality. High spam risk, low conversion rates.',
     icon: MessageSquare,
     limitations: [
@@ -161,7 +161,7 @@ const competitorLinks = [
   {
     title: 'SurFox AI vs Smarter Contact',
     subtitle: 'AI Intelligence vs Mass Messaging',
-    description: 'How psychology AI creates superior outcomes compared to volume-based approaches.',
+    description: 'Covers Launch Control too, since Smarter Contact acquired it. Pricing for both, and how AI conversations compare to campaign blasting.',
     link: '/compare/surfox-vs-smarter-contact',
     icon: Brain,
   },
@@ -171,13 +171,6 @@ const competitorLinks = [
     description: 'Cost advantages of AI automation over human-dependent workflows.',
     link: '/compare/surfox-vs-textus',
     icon: Zap,
-  },
-  {
-    title: 'SurFox AI vs Launch Control',
-    subtitle: 'Intelligence vs Power Tools',
-    description: 'AI-driven conversation management versus script-based automation.',
-    link: '/compare/surfox-vs-launch-control',
-    icon: Target,
   },
 ];
 

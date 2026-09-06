@@ -43,6 +43,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        // Smarter Contact acquired Launch Control; the two compare pages were
+        // merged into the Smarter Contact page, which now covers both.
+        source: '/compare/surfox-vs-launch-control',
+        destination: '/compare/surfox-vs-smarter-contact',
+        permanent: true,
+      },
+      {
         source: '/enterprise',
         destination: '/pricing',
         permanent: true,
