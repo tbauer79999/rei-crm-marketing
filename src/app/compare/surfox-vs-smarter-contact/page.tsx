@@ -159,8 +159,8 @@ export default function Page() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#13171F] mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
-                5x More Appointments<br className="hidden sm:block" />
-                vs Mass Blasting
+                They Send the Texts.<br className="hidden sm:block" />
+                We Have the Conversations.
               </h1>
 
               <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-4 max-w-3xl mx-auto leading-relaxed font-normal px-4">
@@ -195,14 +195,14 @@ export default function Page() {
                   <div className="text-xs text-[#8A92A0] mt-1">flat, no per-message fees</div>
                 </div>
                 <div className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
-                  <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">90%</div>
-                  <div className="text-sm text-[#5A626E]">AI Automation</div>
-                  <div className="text-xs text-[#8A92A0] mt-1">vs manual work</div>
+                  <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">$0</div>
+                  <div className="text-sm text-[#5A626E]">Per-message fees</div>
+                  <div className="text-xs text-[#8A92A0] mt-1">vs $0.02 to $0.03 a text</div>
                 </div>
                 <div className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
-                  <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">5x</div>
-                  <div className="text-sm text-[#5A626E]">Better Results</div>
-                  <div className="text-xs text-[#8A92A0] mt-1">vs mass blasting</div>
+                  <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">24/7</div>
+                  <div className="text-sm text-[#5A626E]">Replies answered</div>
+                  <div className="text-xs text-[#8A92A0] mt-1">nights and weekends too</div>
                 </div>
                 <div className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
                   <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">15min</div>
@@ -571,26 +571,45 @@ export default function Page() {
               </div>
             </div>
 
-            {/* ROI Callout */}
-            <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10 text-center">
-              <h3 className="text-2xl font-semibold text-[#13171F] mb-6">Real ROI Example</h3>
-              <div className="space-y-3 text-[#5A626E] max-w-2xl mx-auto">
+            {/* ROI model, with the assumptions stated as assumptions */}
+            <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
+              <h3 className="text-2xl font-semibold text-[#13171F] mb-2 text-center">
+                A Worked Example, With Our Assumptions Shown
+              </h3>
+              <p className="text-sm text-[#5A626E] text-center mb-6 max-w-2xl mx-auto">
+                This is a model, not a measurement. Every input is listed so you can replace it with your own.
+              </p>
+              <div className="space-y-3 text-[#5A626E] max-w-2xl mx-auto text-center">
                 <p className="text-base sm:text-lg">
-                  <strong>10,000 old leads × 3% AI engagement = 300 conversations</strong>
+                  <strong>10,000 aged leads x 3% engage when re-contacted = 300 conversations</strong>
                 </p>
                 <p className="text-base sm:text-lg">
-                  <strong>300 conversations × 10% conversion = 30 qualified appointments</strong>
+                  <strong>300 conversations x 10% qualify = 30 appointments</strong>
                 </p>
                 <p className="text-base sm:text-lg">
-                  <strong>30 appointments × $3,000 avg deal = $90,000 revenue</strong>
+                  <strong>30 appointments x $3,000 per closed deal = $90,000</strong>
                 </p>
                 <p className="text-sm text-[#5A626E] italic mt-4">
-                  From leads you already owned and paid for
+                  From leads you already owned and already paid for
                 </p>
               </div>
-              <p className="text-xl font-bold text-green-400 mt-6">
-                This is why SurFox AI pays for itself in month one.
-              </p>
+              <div className="mt-8 pt-6 border-t border-green-500/30 max-w-3xl mx-auto">
+                <p className="text-sm text-[#5A626E] leading-relaxed">
+                  <strong className="text-[#13171F]">Where these numbers come from.</strong> The 3% engagement
+                  and 10% qualification rates are our own assumptions. We looked for independent research to
+                  support them and there is none: no academic or government study of SMS re-engagement rates
+                  for aged real estate seller lists exists, and the figures that circulate online all trace
+                  back to vendor blog posts citing other vendor blog posts. Treat them as a starting point to
+                  argue with, not a benchmark.
+                </p>
+                <p className="text-sm text-[#5A626E] leading-relaxed mt-4">
+                  <strong className="text-[#13171F]">The $3,000 is deliberately low.</strong> Published
+                  industry figures for the average US wholesale assignment fee run from roughly $10,000 to
+                  $15,400. We model at $3,000 because it is closer to what a newer investor actually collects,
+                  and because a projection built on the conservative end is worth more to you than one built on
+                  the optimistic end. If your average deal is larger, the arithmetic moves in your favor.
+                </p>
+              </div>
             </div>
           </div>
         </section>

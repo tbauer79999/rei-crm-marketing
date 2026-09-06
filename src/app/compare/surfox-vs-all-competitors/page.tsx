@@ -435,69 +435,24 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Lead Resurrection Section */}
+        {/* Aged-database teaser. Full worked example lives on the Smarter Contact page. */}
         <section className="py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6">
-                The Hidden Gold Mine They Miss
-              </h2>
-              <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto">
-                Every competitor focuses on NEW leads. SurFox AI finds money in the OLD leads you already own.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-              {/* Traditional Platforms */}
-              <div className="p-6 sm:p-8 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-red-500 flex items-center justify-center mr-4">
-                    <X className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-[#13171F]">Traditional Platforms</h3>
-                </div>
-                <p className="text-[#5A626E] leading-relaxed">
-                  Only work on new leads flowing in. Your old CRM database sits there gathering dust.
-                  Thousands of leads you already paid for, completely ignored.
-                </p>
-              </div>
-
-              {/* SurFox AI Advantage */}
-              <div className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#0FB6C9] flex items-center justify-center mr-4">
-                    <Check className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI Advantage</h3>
-                </div>
-                <p className="text-[#5A626E] leading-relaxed">
-                  Upload your entire old lead database. SurFox AI finds the 3-5% who are actually ready to buy
-                  but nobody ever followed up with properly. Turn yesterday&apos;s dead leads into today&apos;s deals.
-                </p>
-              </div>
-            </div>
-
-            {/* ROI Callout */}
-            <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10 text-center">
-              <h3 className="text-2xl font-semibold text-[#13171F] mb-6">Real ROI Example</h3>
-              <div className="space-y-3 text-[#5A626E] max-w-2xl mx-auto">
-                <p className="text-base sm:text-lg">
-                  <strong>10,000 old leads × 3% AI engagement = 300 conversations</strong>
-                </p>
-                <p className="text-base sm:text-lg">
-                  <strong>300 conversations × 10% conversion = 30 qualified appointments</strong>
-                </p>
-                <p className="text-base sm:text-lg">
-                  <strong>30 appointments × $3,000 avg deal = $90,000 revenue</strong>
-                </p>
-                <p className="text-sm text-[#5A626E] italic mt-4">
-                  From leads you already owned and paid for
-                </p>
-              </div>
-              <p className="text-xl font-bold text-green-700 mt-6">
-                This is why SurFox AI pays for itself in month one.
-              </p>
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6">
+              The Database You Already Paid For
+            </h2>
+            <p className="text-lg sm:text-xl text-[#5A626E] leading-relaxed mb-8">
+              Every platform in the landscape above is built to work the leads coming in today. None of them
+              does anything with the thousands of records already sitting in your CRM. SurFox AI is built to
+              re-open those conversations, which is usually the cheapest pipeline a team owns.
+            </p>
+            <a
+              href="/compare/surfox-vs-smarter-contact"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-lg border-2 border-[#E4E6E2] text-[#13171F] text-base font-semibold hover:bg-white transition"
+            >
+              See the worked example, with our assumptions shown
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </div>
         </section>
 

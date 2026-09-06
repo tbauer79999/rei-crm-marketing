@@ -17,8 +17,8 @@ export const metadata = generatePageMetadata('compare-textus');
 const breadcrumbSchema = generateCompareBreadcrumb('TextUs', '/compare/surfox-vs-textus');
 
 const heroStats = [
-  { value: '$597', label: 'SurFox Growth Plan', sub: 'vs $2,000+ total' },
-  { value: '90%', label: 'AI Automation', sub: 'vs manual work' },
+  { value: '$597', label: 'SurFox AI Growth Plan', sub: 'flat monthly price' },
+  { value: '24/7', label: 'Replies answered', sub: 'without a rostered inbox' },
   { value: '20hrs', label: 'Weekly Time Saved', sub: 'vs constant work' },
   { value: '15min', label: 'Setup Time', sub: 'vs 2-3 hours' },
 ];
@@ -100,7 +100,7 @@ export default function Page() {
               </h1>
 
               <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-4 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-                <strong className="text-[#13171F]">TextUs charges $500+ for basic messaging that requires manual work.</strong>
+                <strong className="text-[#13171F]">TextUs gives your team a better inbox. Somebody still has to sit in it.</strong>
               </p>
               <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
                 <strong className="text-[#0A7C8C]">SurFox AI delivers AI-powered conversations starting at $147, with Growth at $597 for learning AI.</strong>
@@ -175,7 +175,7 @@ export default function Page() {
                     </div>
                     <div className="flex items-start text-sm text-[#5A626E]">
                       <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
-                      <span>$500+ monthly cost plus usage fees</span>
+                      <span>Priced per seat, so the bill grows with headcount</span>
                     </div>
                     <div className="flex items-start text-sm text-[#5A626E]">
                       <X className="w-5 h-5 mr-2 mt-0.5 text-red-600 flex-shrink-0" />
@@ -232,7 +232,7 @@ export default function Page() {
                     </div>
                     <div className="flex items-start text-sm text-[#5A626E]">
                       <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
-                      <span>SurFox AI handles 90% of conversations</span>
+                      <span>SurFox AI handles the qualification conversation end to end</span>
                     </div>
                     <div className="flex items-start text-sm text-[#5A626E]">
                       <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
@@ -315,40 +315,40 @@ export default function Page() {
               <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
                 <div className="flex items-center mb-6">
                   <Sparkles className="w-6 h-6 text-green-400 mr-3" />
-                  <h3 className="text-lg font-semibold text-[#13171F]">SurFox AI: Your Daily 30 Minutes</h3>
+                  <h3 className="text-lg font-semibold text-[#13171F]">SurFox AI: 30 Minutes, No Inbox</h3>
                 </div>
 
                 <div className="space-y-4 mb-6">
                   <div className="p-3 rounded-lg border border-green-200 bg-[#F4F5F3]">
                     <div className="flex items-center mb-2">
                       <Clock className="w-4 h-4 mr-2 text-[#5A626E]" />
-                      <span className="text-xs font-medium text-[#5A626E]">9:00 AM - Hot Lead Review (15 mins)</span>
+                      <span className="text-xs font-medium text-[#5A626E]">9:00 AM - Escalations only (15 mins)</span>
                     </div>
-                    <p className="text-sm text-[#5A626E]">Review leads SurFox AI flagged as "ready to buy" - complete conversation context provided</p>
+                    <p className="text-sm text-[#5A626E]">There is no inbox to triage. The AI has answered the routine replies and kept back only what needs you</p>
                   </div>
 
                   <div className="p-3 rounded-lg border border-green-200 bg-[#F4F5F3]">
                     <div className="flex items-center mb-2">
                       <Clock className="w-4 h-4 mr-2 text-[#5A626E]" />
-                      <span className="text-xs font-medium text-[#5A626E]">12:00 PM - Quick Check (5 mins)</span>
+                      <span className="text-xs font-medium text-[#5A626E]">12:00 PM - Spot check (5 mins)</span>
                     </div>
-                    <p className="text-sm text-[#5A626E]">Glance at AI performance dashboard, approve any escalated edge cases</p>
+                    <p className="text-sm text-[#5A626E]">Glance at conversation quality and adjust anything reading off tone</p>
                   </div>
 
                   <div className="p-3 rounded-lg border border-green-200 bg-[#F4F5F3]">
                     <div className="flex items-center mb-2">
                       <Clock className="w-4 h-4 mr-2 text-[#5A626E]" />
-                      <span className="text-xs font-medium text-[#5A626E]">5:00 PM - End of Day (10 mins)</span>
+                      <span className="text-xs font-medium text-[#5A626E]">5:00 PM - Results (10 mins)</span>
                     </div>
-                    <p className="text-sm text-[#5A626E]">Review appointment bookings SurFox AI secured, check conversion metrics, done for the day</p>
+                    <p className="text-sm text-[#5A626E]">Review what got booked, with no messages left sitting unanswered overnight</p>
                   </div>
 
                   <div className="p-3 rounded-lg border border-green-200 bg-[#F4F5F3]">
                     <div className="flex items-center mb-2">
                       <Sparkles className="w-4 h-4 mr-2 text-green-400" />
-                      <span className="text-xs font-medium text-[#5A626E]">24/7 - AI Works</span>
+                      <span className="text-xs font-medium text-[#5A626E]">24/7 - Nobody rostered on the inbox</span>
                     </div>
-                    <p className="text-sm text-[#5A626E]">SurFox AI handles all conversations, follows up perfectly, learns from every interaction</p>
+                    <p className="text-sm text-[#5A626E]">Replies get answered at 11pm and on a Sunday without anyone being scheduled to do it</p>
                   </div>
                 </div>
 
@@ -364,72 +364,6 @@ export default function Page() {
         {/* Feature Comparison - interactive tabs live in client island */}
         <TextusClient />
 
-        {/* Lead Resurrection Section */}
-        <section className="py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6">
-                The Hidden Gold Mine They Miss
-              </h2>
-              <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto">
-                Every competitor focuses on NEW leads. SurFox AI finds money in the OLD leads you already own.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-              {/* Traditional Platforms */}
-              <div className="p-6 sm:p-8 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-red-500 flex items-center justify-center mr-4">
-                    <X className="w-6 h-6 text-[#13171F]" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-[#13171F]">Traditional Platforms</h3>
-                </div>
-                <p className="text-[#5A626E] leading-relaxed">
-                  Only work on new leads flowing in. Your old CRM database sits there gathering dust.
-                  Thousands of leads you already paid for, completely ignored.
-                </p>
-              </div>
-
-              {/* SurFox AI Advantage */}
-              <div className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mr-4">
-                    <Check className="w-6 h-6 text-[#13171F]" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI Advantage</h3>
-                </div>
-                <p className="text-[#5A626E] leading-relaxed">
-                  Upload your entire old lead database. SurFox AI finds the 3-5% who are actually ready to buy
-                  but nobody ever followed up with properly. Turn yesterday's dead leads into today's deals.
-                </p>
-              </div>
-            </div>
-
-            {/* ROI Callout */}
-            <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10 text-center">
-              <h3 className="text-2xl font-semibold text-[#13171F] mb-6">Real ROI Example</h3>
-              <div className="space-y-3 text-[#5A626E] max-w-2xl mx-auto">
-                <p className="text-base sm:text-lg">
-                  <strong>10,000 old leads × 3% AI engagement = 300 conversations</strong>
-                </p>
-                <p className="text-base sm:text-lg">
-                  <strong>300 conversations × 10% conversion = 30 qualified appointments</strong>
-                </p>
-                <p className="text-base sm:text-lg">
-                  <strong>30 appointments × $3,000 avg deal = $90,000 revenue</strong>
-                </p>
-                <p className="text-sm text-[#5A626E] italic mt-4">
-                  From leads you already owned and paid for
-                </p>
-              </div>
-              <p className="text-xl font-bold text-green-400 mt-6">
-                This is why SurFox AI pays for itself in month one.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* Cost Comparison */}
         <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
           <div className="max-w-6xl mx-auto">
@@ -438,43 +372,42 @@ export default function Page() {
                 The Hidden Cost Reality
               </h2>
               <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
-                SurFox AI delivers superior AI automation at 90% lower total cost than TextUs + manual labor.
+                TextUs prices per user seat and quotes the rest, so a single headline total would be a guess. Here is what can actually be said.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 mb-8">
               <div className="text-center p-6 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
-                <div className="text-sm text-[#5A626E] mb-2">TextUs Reality</div>
-                <div className="text-4xl font-semibold text-red-600 mb-2">$2,000+</div>
-                <div className="text-xs text-[#5A626E] mb-4">Platform + manual labor</div>
+                <div className="text-sm text-[#5A626E] mb-2">TextUs</div>
+                <div className="text-4xl font-semibold text-red-600 mb-2">Per seat</div>
+                <div className="text-xs text-[#5A626E] mb-4">Cost scales with headcount</div>
                 <div className="text-xs text-[#5A626E] space-y-1">
-                  <div>• $500+ subscription</div>
-                  <div>• $1,200+ staff time</div>
-                  <div>• $300+ opportunity costs</div>
+                  <div>• Priced per user seat, with message credits per seat</div>
+                  <div>• Third-party listings report entry pricing from roughly $299/mo</div>
+                  <div>• Adding a person to work replies adds a seat</div>
+                  <div>• Replies still worked by a person</div>
                 </div>
               </div>
 
               <div className="text-center p-6 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
-                <div className="text-sm text-[#5A626E] mb-2">SurFox Growth</div>
+                <div className="text-sm text-[#5A626E] mb-2">SurFox AI Growth</div>
                 <div className="text-4xl font-semibold text-green-400 mb-2">$597</div>
-                <div className="text-xs text-[#5A626E] mb-4">Learning AI does all the work</div>
+                <div className="text-xs text-[#5A626E] mb-4">Flat, published, no usage fees</div>
                 <div className="text-xs text-[#5A626E] space-y-1">
-                  <div>• $597 with learning AI included</div>
-                  <div>• Starts at $147 for basic features</div>
                   <div>• 10,000 messages included</div>
+                  <div>• Starts at $147 on the Starter plan</div>
+                  <div>• Reply handling included, not billed as labor</div>
                 </div>
               </div>
+            </div>
 
-              <div className="text-center p-6 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
-                <div className="text-sm text-[#5A626E] mb-2">You Save</div>
-                <div className="text-4xl font-semibold text-[#0A7C8C] mb-2">$1,800+</div>
-                <div className="text-xs text-[#5A626E] mb-4">per month</div>
-                <div className="text-xs text-[#5A626E] space-y-1">
-                  <div>• 90% cost savings</div>
-                  <div>• 20+ hours/week saved</div>
-                  <div>• Better results with AI</div>
-                </div>
-              </div>
+            <div className="px-4 mb-12">
+              <p className="text-sm text-[#5A626E] leading-relaxed max-w-3xl mx-auto text-center">
+                We previously published a $2,000 TextUs total here. Two thirds of it was an estimate of staff
+                time and lost opportunity that we could not source, so we removed it. The structural point
+                stands without invented numbers: a per-seat tool gets more expensive as you add the people who
+                read and answer the messages, which is the cost SurFox AI is designed to remove.
+              </p>
             </div>
 
             <div className="p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5 text-center">

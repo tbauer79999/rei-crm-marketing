@@ -109,7 +109,7 @@ export default function Page() {
                 <div className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
                   <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">$597</div>
                   <div className="text-sm text-[#5A626E]">SurFox Growth Plan</div>
-                  <div className="text-xs text-[#8A92A0] mt-1">vs $1,299+ Sherpa</div>
+                  <div className="text-xs text-[#8A92A0] mt-1">flat, published price</div>
                 </div>
                 <div className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
                   <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">90%</div>
@@ -309,40 +309,40 @@ export default function Page() {
               <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
                 <div className="flex items-center mb-6">
                   <Sparkles className="w-6 h-6 text-green-400 mr-3" />
-                  <h3 className="text-lg font-semibold text-[#13171F]">SurFox AI: Your Daily 30 Minutes</h3>
+                  <h3 className="text-lg font-semibold text-[#13171F]">SurFox AI: 30 Minutes On The Same List</h3>
                 </div>
 
                 <div className="space-y-4 mb-6">
                   <div className="p-3 rounded-lg border border-green-200 bg-[#F4F5F3]">
                     <div className="flex items-center mb-2">
                       <Clock className="w-4 h-4 mr-2 text-[#5A626E]" />
-                      <span className="text-xs font-medium text-[#5A626E]">9:00 AM - Hot Lead Review (15 mins)</span>
+                      <span className="text-xs font-medium text-[#5A626E]">9:00 AM - Motivated sellers only (15 mins)</span>
                     </div>
-                    <p className="text-sm text-[#5A626E]">Review leads SurFox AI flagged as &quot;ready to buy&quot; - complete conversation context provided</p>
+                    <p className="text-sm text-[#5A626E]">Open the skip-traced contacts the AI has already worked, filtered to the ones showing real selling motivation</p>
                   </div>
 
                   <div className="p-3 rounded-lg border border-green-200 bg-[#F4F5F3]">
                     <div className="flex items-center mb-2">
                       <Clock className="w-4 h-4 mr-2 text-[#5A626E]" />
-                      <span className="text-xs font-medium text-[#5A626E]">12:00 PM - Quick Check (5 mins)</span>
+                      <span className="text-xs font-medium text-[#5A626E]">12:00 PM - Spot check (5 mins)</span>
                     </div>
-                    <p className="text-sm text-[#5A626E]">Glance at AI performance dashboard, approve any escalated edge cases</p>
+                    <p className="text-sm text-[#5A626E]">Scan the conversations in flight, correct anything the AI misread about a property or a situation</p>
                   </div>
 
                   <div className="p-3 rounded-lg border border-green-200 bg-[#F4F5F3]">
                     <div className="flex items-center mb-2">
                       <Clock className="w-4 h-4 mr-2 text-[#5A626E]" />
-                      <span className="text-xs font-medium text-[#5A626E]">5:00 PM - End of Day (10 mins)</span>
+                      <span className="text-xs font-medium text-[#5A626E]">5:00 PM - Bookings (10 mins)</span>
                     </div>
-                    <p className="text-sm text-[#5A626E]">Review appointment bookings SurFox AI secured, check conversion metrics, done for the day</p>
+                    <p className="text-sm text-[#5A626E]">Review appointments set from records you had already paid to skip trace</p>
                   </div>
 
                   <div className="p-3 rounded-lg border border-green-200 bg-[#F4F5F3]">
                     <div className="flex items-center mb-2">
                       <Sparkles className="w-4 h-4 mr-2 text-green-400" />
-                      <span className="text-xs font-medium text-[#5A626E]">24/7 - AI Works</span>
+                      <span className="text-xs font-medium text-[#5A626E]">24/7 - Working the data you bought</span>
                     </div>
-                    <p className="text-sm text-[#5A626E]">SurFox AI handles all conversations, follows up perfectly, learns from every interaction</p>
+                    <p className="text-sm text-[#5A626E]">Every contact in the file gets a real conversation instead of one blast and silence</p>
                   </div>
                 </div>
 
@@ -371,72 +371,6 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Lead Resurrection Section */}
-        <section className="py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6">
-                The Hidden Gold Mine They Miss
-              </h2>
-              <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto">
-                Every competitor focuses on NEW leads. SurFox AI finds money in the OLD leads you already own.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-              {/* Traditional Platforms */}
-              <div className="p-6 sm:p-8 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-red-500 flex items-center justify-center mr-4">
-                    <X className="w-6 h-6 text-[#13171F]" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-[#13171F]">Traditional Platforms</h3>
-                </div>
-                <p className="text-[#5A626E] leading-relaxed">
-                  Only work on new leads flowing in. Your old CRM database sits there gathering dust.
-                  Thousands of leads you already paid for, completely ignored.
-                </p>
-              </div>
-
-              {/* SurFox AI Advantage */}
-              <div className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mr-4">
-                    <Check className="w-6 h-6 text-[#13171F]" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI Advantage</h3>
-                </div>
-                <p className="text-[#5A626E] leading-relaxed">
-                  Upload your entire old lead database. SurFox AI finds the 3-5% who are actually ready to buy
-                  but nobody ever followed up with properly. Turn yesterday&apos;s dead leads into today&apos;s deals.
-                </p>
-              </div>
-            </div>
-
-            {/* ROI Callout */}
-            <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10 text-center">
-              <h3 className="text-2xl font-semibold text-[#13171F] mb-6">Real ROI Example</h3>
-              <div className="space-y-3 text-[#5A626E] max-w-2xl mx-auto">
-                <p className="text-base sm:text-lg">
-                  <strong>10,000 old leads × 3% AI engagement = 300 conversations</strong>
-                </p>
-                <p className="text-base sm:text-lg">
-                  <strong>300 conversations × 10% conversion = 30 qualified appointments</strong>
-                </p>
-                <p className="text-base sm:text-lg">
-                  <strong>30 appointments × $3,000 avg deal = $90,000 revenue</strong>
-                </p>
-                <p className="text-sm text-[#5A626E] italic mt-4">
-                  From leads you already owned and paid for
-                </p>
-              </div>
-              <p className="text-xl font-bold text-green-400 mt-6">
-                This is why SurFox AI pays for itself in month one.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* Cost Comparison */}
         <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
           <div className="max-w-6xl mx-auto">
@@ -445,43 +379,42 @@ export default function Page() {
                 The True Cost Reality
               </h2>
               <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
-                SurFox AI delivers superior AI automation at 85% lower total cost than Lead Sherpa + manual labor.
+                Lead Sherpa does not publish a price list, so we are not going to invent a total for it. Here is what can actually be said.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 mb-8">
               <div className="text-center p-6 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
-                <div className="text-sm text-[#5A626E] mb-2">Lead Sherpa Reality</div>
-                <div className="text-4xl font-semibold text-red-600 mb-2">$1,500+</div>
-                <div className="text-xs text-[#5A626E] mb-4">Platform + manual labor</div>
+                <div className="text-sm text-[#5A626E] mb-2">Lead Sherpa</div>
+                <div className="text-4xl font-semibold text-red-600 mb-2">Quoted</div>
+                <div className="text-xs text-[#5A626E] mb-4">No public price list</div>
                 <div className="text-xs text-[#5A626E] space-y-1">
-                  <div>• $1,299+ subscription</div>
-                  <div>• 4+ hours daily management</div>
-                  <div>• Manual response handling</div>
+                  <div>• Sales-led pricing, quoted per team</div>
+                  <div>• Third-party listings report roughly $400 to $800/mo</div>
+                  <div>• Skip tracing and data billed on top</div>
+                  <div>• Replies still worked by a person</div>
                 </div>
               </div>
 
               <div className="text-center p-6 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
-                <div className="text-sm text-[#5A626E] mb-2">SurFox Growth</div>
+                <div className="text-sm text-[#5A626E] mb-2">SurFox AI Growth</div>
                 <div className="text-4xl font-semibold text-green-400 mb-2">$597</div>
-                <div className="text-xs text-[#5A626E] mb-4">Learning AI does all the work</div>
+                <div className="text-xs text-[#5A626E] mb-4">Flat, published, no usage fees</div>
                 <div className="text-xs text-[#5A626E] space-y-1">
-                  <div>• $597 with learning AI included</div>
-                  <div>• Starts at $147 for basic features</div>
                   <div>• 10,000 messages included</div>
+                  <div>• Starts at $147 on the Starter plan</div>
+                  <div>• Reply handling included, not billed as labor</div>
                 </div>
               </div>
+            </div>
 
-              <div className="text-center p-6 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
-                <div className="text-sm text-[#5A626E] mb-2">You Save</div>
-                <div className="text-4xl font-semibold text-[#0A7C8C] mb-2">$1,300+</div>
-                <div className="text-xs text-[#5A626E] mb-4">per month</div>
-                <div className="text-xs text-[#5A626E] space-y-1">
-                  <div>• 85% cost savings</div>
-                  <div>• 3.5+ hours/day saved</div>
-                  <div>• Better results with AI</div>
-                </div>
-              </div>
+            <div className="px-4 mb-12">
+              <p className="text-sm text-[#5A626E] leading-relaxed max-w-3xl mx-auto text-center">
+                We previously published a Lead Sherpa total on this page. It was built from a subscription
+                figure we could not source and an estimate of what a person costs, so we removed it. Lead
+                Sherpa quotes privately, and the only honest comparison is structural: their bill scales with
+                the data you pull and the people who work the replies, ours does not.
+              </p>
             </div>
 
             <div className="p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5 text-center">

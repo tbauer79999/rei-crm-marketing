@@ -408,25 +408,23 @@ export default function Page() {
               </div>
             </div>
 
-            {/* ROI Callout */}
-            <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10 text-center">
-              <h3 className="text-2xl font-semibold text-[#13171F] mb-6">Dead Lead ROI Example</h3>
-              <div className="space-y-3 text-[#5A626E] max-w-2xl mx-auto">
-                <p className="text-base sm:text-lg">
-                  <strong>10,000 old leads × 3% AI engagement = 300 conversations</strong>
-                </p>
-                <p className="text-base sm:text-lg">
-                  <strong>300 conversations × 10% conversion = 30 qualified appointments</strong>
-                </p>
-                <p className="text-base sm:text-lg">
-                  <strong>30 appointments × $3,000 avg deal = $90,000 revenue</strong>
-                </p>
-                <p className="text-sm text-[#5A626E] italic mt-4">
-                  From leads you already owned and paid for - no call center overhead
-                </p>
-              </div>
-              <p className="text-xl font-bold text-green-400 mt-6">
-                SurFox AI pays for itself in month one from your existing leads.
+            {/* Peer-specific: the overhead Meera's model requires and this one does not */}
+            <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
+              <h3 className="text-2xl font-semibold text-[#13171F] mb-4 text-center">
+                No Agents On Standby
+              </h3>
+              <p className="text-[#5A626E] leading-relaxed max-w-3xl mx-auto text-center">
+                A warm-transfer model only pays off if someone is sitting there to take the transfer. That
+                means staffed hours, and staffed hours are what make working an old database expensive enough
+                that most teams never do it. SurFox AI qualifies over SMS with nobody waiting on the other end,
+                so the cost of re-opening ten thousand cold records is the same whether three of them reply or
+                three hundred do.
+              </p>
+              <p className="text-sm text-[#5A626E] text-center mt-6">
+                Want the arithmetic?{' '}
+                <a href="/compare/surfox-vs-smarter-contact" className="text-[#0A7C8C] font-semibold underline">
+                  We show the full model, and our assumptions, here.
+                </a>
               </p>
             </div>
           </div>

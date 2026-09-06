@@ -22,10 +22,10 @@ const skipioWorkflow = [
 ];
 
 const surfoxWorkflow = [
-  { time: '9:00 AM - Hot Lead Review (15 mins)', desc: 'Review leads SurFox AI flagged as "ready to buy" - complete conversation context provided', isSparkles: false },
-  { time: '12:00 PM - Quick Check (5 mins)', desc: 'Glance at AI performance dashboard, approve any escalated edge cases', isSparkles: false },
-  { time: '5:00 PM - End of Day (10 mins)', desc: 'Review appointment bookings SurFox AI secured, check conversion metrics, done for the day', isSparkles: false },
-  { time: '24/7 - AI Works', desc: 'SurFox AI handles all conversations, follows up perfectly, learns from every interaction', isSparkles: true },
+  { time: '9:00 AM - Intent review (15 mins)', desc: 'Look at who the AI surfaced as genuinely ready, with the buying signals it picked up quoted underneath', isSparkles: false },
+  { time: '12:00 PM - Spot check (5 mins)', desc: 'Check whatever the AI escalated because it was not confident enough to answer on its own', isSparkles: false },
+  { time: '5:00 PM - Calendar (10 mins)', desc: 'Review what got booked, already qualified rather than merely scheduled', isSparkles: false },
+  { time: '24/7 - Holding the context', desc: 'The AI carries what each prospect said last time into the next message, with nobody re-reading the thread', isSparkles: true },
 ];
 
 const faqData = [
@@ -295,7 +295,7 @@ export default function Page() {
               <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10">
                 <div className="flex items-center mb-6">
                   <Sparkles className="w-6 h-6 text-green-400 mr-3" />
-                  <h3 className="text-lg font-semibold text-[#13171F]">SurFox AI: Your Daily 30 Minutes</h3>
+                  <h3 className="text-lg font-semibold text-[#13171F]">SurFox AI: 30 Minutes, Pre-Qualified</h3>
                 </div>
 
                 <div className="space-y-4 mb-6">
@@ -325,72 +325,6 @@ export default function Page() {
 
         {/* Feature Comparison (interactive) */}
         <SkipioClient />
-
-        {/* Lead Resurrection Section */}
-        <section className="py-20 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6">
-                The Hidden Gold Mine They Miss
-              </h2>
-              <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto">
-                Every competitor focuses on NEW leads. SurFox AI finds money in the OLD leads you already own.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-              {/* Traditional Platforms */}
-              <div className="p-6 sm:p-8 rounded-2xl border-2 border-red-500/20 bg-red-500/5">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-red-500 flex items-center justify-center mr-4">
-                    <X className="w-6 h-6 text-[#13171F]" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-[#13171F]">Traditional Platforms</h3>
-                </div>
-                <p className="text-[#5A626E] leading-relaxed">
-                  Only work on new leads flowing in. Your old CRM database sits there gathering dust.
-                  Thousands of leads you already paid for, completely ignored.
-                </p>
-              </div>
-
-              {/* SurFox AI Advantage */}
-              <div className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mr-4">
-                    <Check className="w-6 h-6 text-[#13171F]" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI Advantage</h3>
-                </div>
-                <p className="text-[#5A626E] leading-relaxed">
-                  Upload your entire old lead database. SurFox AI finds the 3-5% who are actually ready to buy
-                  but nobody ever followed up with properly. Turn yesterday's dead leads into today's deals.
-                </p>
-              </div>
-            </div>
-
-            {/* ROI Callout */}
-            <div className="p-6 sm:p-8 rounded-2xl border-2 border-green-500/30 bg-green-500/10 text-center">
-              <h3 className="text-2xl font-semibold text-[#13171F] mb-6">Real ROI Example</h3>
-              <div className="space-y-3 text-[#5A626E] max-w-2xl mx-auto">
-                <p className="text-base sm:text-lg">
-                  <strong>10,000 old leads × 3% AI engagement = 300 conversations</strong>
-                </p>
-                <p className="text-base sm:text-lg">
-                  <strong>300 conversations × 10% conversion = 30 qualified appointments</strong>
-                </p>
-                <p className="text-base sm:text-lg">
-                  <strong>30 appointments × $3,000 avg deal = $90,000 revenue</strong>
-                </p>
-                <p className="text-sm text-[#5A626E] italic mt-4">
-                  From leads you already owned and paid for
-                </p>
-              </div>
-              <p className="text-xl font-bold text-green-400 mt-6">
-                This is why SurFox AI pays for itself in month one.
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* Cost Comparison */}
         <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">

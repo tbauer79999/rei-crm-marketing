@@ -31,7 +31,7 @@ const featureSets = [
     icon: Zap,
     features: [
       { name: 'Setup Time', surfox: '15-minute Chrome extension setup', smarter: 'Manual list upload and configuration' },
-      { name: 'Conversation Handling', surfox: 'SurFox AI manages 90% of conversations autonomously', smarter: 'All conversations require manual handling' },
+      { name: 'Conversation Handling', surfox: 'SurFox AI runs the qualification conversation and escalates only what needs a person', smarter: 'All conversations require manual handling' },
       { name: 'AI Training', surfox: 'Upload PDFs, SOPs to train AI on your business', smarter: 'Template library only' },
       { name: 'Smart Follow-ups', surfox: 'SurFox AI determines optimal timing per lead', smarter: 'Fixed retry schedules' },
       { name: 'Spam Prevention', surfox: 'SurFox AI prevents spam detection automatically', smarter: 'Risk of spam flags with volume' }

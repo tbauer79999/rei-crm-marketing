@@ -38,12 +38,12 @@ const faqData = [
   {
     question: 'What is the ROI of reactivating a cold or dormant lead list?',
     answer:
-      'Take 10,000 old leads sitting in your CRM. At a 3% engagement rate that is 300 conversations, and at a 10% qualification rate that is 30 qualified appointments. At a $3,000 average deal, that is $90,000 in revenue from leads you already own, with no new ad spend and no new lead acquisition cost.',
+      'Here is the model with its inputs shown. Take 10,000 old leads sitting in your CRM. At a 3% engagement rate that is 300 conversations, and at a 10% qualification rate that is 30 qualified appointments. At $3,000 per closed deal that is $90,000 from leads you already own, with no new ad spend. The 3% and 10% are our own assumptions rather than published benchmarks, because no independent study of SMS re-engagement rates on aged lists exists. The $3,000 is deliberately conservative: published industry figures for the average US wholesale assignment fee run from about $10,000 to $15,400. Replace all three with your own numbers before relying on it.',
   },
   {
     question: 'How much does speed to lead affect ROI?',
     answer:
-      'A lead responded to within 5 minutes is 21 times more likely to convert, and qualification odds drop roughly 80% after just 5 minutes of delay. 78% of customers buy from whoever responds first. SurFox AI replies in under 60 seconds, 24 hours a day, against an average human response time of 42 to 47 hours on re-engaged leads.',
+      'The most cited figure here is the Lead Response Management study led by James Oldroyd, which analysed roughly 15,000 leads and found a lead contacted within 5 minutes was 21 times more likely to be qualified than one contacted at 30 minutes. It is worth knowing the detail: that is qualification rather than closed revenue, the study was funded by a sales software vendor, and the data is from 2004 to 2007. The separate 2011 Harvard Business Review study by the same lead author, covering 1.25 million leads, found firms responding within an hour were about 7 times more likely to qualify a lead. SurFox AI replies in under 60 seconds, 24 hours a day, which is the part we control.',
   },
   {
     question: 'How quickly will I see a return?',
