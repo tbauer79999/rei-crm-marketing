@@ -28,12 +28,12 @@ const faqData = [
   {
     question: 'What is the ROI of AI lead qualification?',
     answer:
-      'It comes from three places: cost per booked meeting, faster response times, and revenue recovered from leads you already paid for. Here is the first one with the arithmetic shown. The Bridge Group puts the median SDR at 14.6 booked meetings a month, roughly 175 a year. Against a fully loaded cost of $105,000 to $165,000, that is about $600 to $940 per booked meeting. SurFox AI Growth is $597 a month flat, so divide that by however many qualified conversations you expect and compare the two. We are not publishing a single cost-per-lead figure for our own side, because that number depends entirely on your list and we have not measured it across enough accounts to state one honestly. The AI also works your whole database rather than the slice one rep has time to cover.',
+      'It comes from three places: cost per booked meeting, faster response times, and revenue recovered from leads you already paid for. Here is the first one with the arithmetic shown. The Bridge Group puts the median SDR at 14.6 booked meetings a month, roughly 175 a year. Against a fully loaded cost of $115,000 to $165,000, that is about $660 to $940 per booked meeting. SurFox AI Growth is $597 a month flat, so divide that by however many qualified conversations you expect and compare the two. We are not publishing a single cost-per-lead figure for our own side, because that number depends entirely on your list and we have not measured it across enough accounts to state one honestly. The AI also works your whole database rather than the slice one rep has time to cover.',
   },
   {
     question: 'How much does a human SDR actually cost per year?',
     answer:
-      'The visible costs run $91,000 to $129,400 once you add base salary, commission, benefits and taxes, and the tech stack. Hidden costs push the true figure to $105,000 to $165,000 once you add management overhead and ramp. The Bridge Group SDR Metrics Report puts median ramp at 3.9 months to 80% quota and median tenure at 17.6 months, so a meaningful share of any SDR year is spent below full output or vacant. Treat the replacement cost of a departure as significant but unquantified here: the figures circulating for it come from secondary write-ups rather than a study we could read, so we are not going to put a number on it.',
+      'The visible costs run $91,000 to $129,400 once you add base salary, commission, benefits and taxes, and the tech stack. Hidden costs push the true figure to $115,000 to $165,000 once you add management overhead and ramp. The Bridge Group SDR Metrics Report puts median ramp at 3.9 months to 80% quota and median tenure at 17.6 months, so a meaningful share of any SDR year is spent below full output or vacant. Treat the replacement cost of a departure as significant but unquantified here: the figures circulating for it come from secondary write-ups rather than a study we could read, so we are not going to put a number on it.',
   },
   {
     question: 'What is the ROI of reactivating a cold or dormant lead list?',
@@ -200,7 +200,7 @@ export default function Page() {
                 </li>
                 <li className="flex flex-wrap justify-between items-center gap-x-3 gap-y-1 py-3 bg-[#F0F8F9] -mx-8 px-8 rounded-b-xl">
                   <span className="font-semibold text-[#13171F]">True Annual Cost Per SDR</span>
-                  <span className="font-bold text-[#0A7C8C] text-lg">$105,000 – $165,000</span>
+                  <span className="font-bold text-[#0A7C8C] text-lg">$115,000 – $165,000</span>
                 </li>
               </ul>
             </div>
@@ -261,7 +261,7 @@ export default function Page() {
               <tbody className="divide-y divide-gray-100">
                 <tr>
                   <td className="px-6 py-4 text-[#5A626E]">Annual Cost</td>
-                  <td className="px-6 py-4 text-[#13171F] font-medium">$105,000 – $165,000</td>
+                  <td className="px-6 py-4 text-[#13171F] font-medium">$115,000 – $165,000</td>
                   <td className="px-6 py-4 text-[#0A7C8C] font-semibold">$1,764 – $29,964</td>
                 </tr>
                 <tr className="bg-[#F4F5F3]/50">
@@ -286,7 +286,7 @@ export default function Page() {
                 </tr>
                 <tr className="bg-[#F4F5F3]/50">
                   <td className="px-6 py-4 text-[#5A626E]">Cost Per Booked Meeting</td>
-                  <td className="px-6 py-4 text-[#13171F] font-medium">$600 – $940</td>
+                  <td className="px-6 py-4 text-[#13171F] font-medium">$660 – $940</td>
                   <td className="px-6 py-4 text-[#0A7C8C] font-semibold">Your volume, at $597/mo flat</td>
                 </tr>
                 <tr>
