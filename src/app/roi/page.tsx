@@ -16,11 +16,11 @@ import ROIClient from './ROIClient';
 export const metadata = generatePageMetadata('roi');
 
 const speedStats = [
-  { stat: '21x', desc: 'more likely to convert when responded to within 5 minutes' },
-  { stat: '80%', desc: 'drop in qualification odds after just 5 minutes of delay' },
+  { stat: '21x', desc: 'more likely to qualify a lead at 5 minutes than at 30 (Oldroyd, MIT/InsideSales)' },
+  { stat: '4x', desc: 'qualification odds drop between 5 and 10 minutes, same study' },
+  { stat: '7x', desc: 'more likely to qualify inside 1 hour than after (Harvard Business Review, 2011)' },
   { stat: '<60 sec', desc: 'SurFox AI response time when leads reply' },
-  { stat: '42-47 hrs', desc: 'average human SDR response time to re-engaged leads' },
-  { stat: '78%', desc: 'of customers buy from whoever responds first' },
+  { stat: '42-47 hrs', desc: 'average reply time to a new inbound web form, per mystery-shopper audits' },
   { stat: '24/7', desc: 'AI monitors for replies - even nights and weekends' },
 ];
 
@@ -28,12 +28,12 @@ const faqData = [
   {
     question: 'What is the ROI of AI lead qualification?',
     answer:
-      'It comes from three places: a lower cost per qualified lead, faster response times, and revenue recovered from leads you already paid for. A human SDR costs $262 per qualified lead. With SurFox AI that figure drops to $26. The AI also works your entire database rather than the slice one rep has time to cover, so the same list produces more qualified conversations without adding headcount.',
+      'It comes from three places: cost per booked meeting, faster response times, and revenue recovered from leads you already paid for. Here is the first one with the arithmetic shown. The Bridge Group puts the median SDR at 14.6 booked meetings a month, roughly 175 a year. Against a fully loaded cost of $105,000 to $165,000, that is about $600 to $940 per booked meeting. SurFox AI Growth is $597 a month flat, so divide that by however many qualified conversations you expect and compare the two. We are not publishing a single cost-per-lead figure for our own side, because that number depends entirely on your list and we have not measured it across enough accounts to state one honestly. The AI also works your whole database rather than the slice one rep has time to cover.',
   },
   {
     question: 'How much does a human SDR actually cost per year?',
     answer:
-      'The visible costs run $91,000 to $129,400 once you add base salary, commission, benefits and taxes, and the tech stack. Hidden costs push the true figure to $105,000 to $165,000: management overhead, a 3 to 4 month ramp where you pay full salary for 25 to 50% output, and turnover replacement at $100,000 to $115,000 per departure against an average tenure of 14 to 18 months.',
+      'The visible costs run $91,000 to $129,400 once you add base salary, commission, benefits and taxes, and the tech stack. Hidden costs push the true figure to $105,000 to $165,000 once you add management overhead and ramp. The Bridge Group SDR Metrics Report puts median ramp at 3.9 months to 80% quota and median tenure at 17.6 months, so a meaningful share of any SDR year is spent below full output or vacant. Treat the replacement cost of a departure as significant but unquantified here: the figures circulating for it come from secondary write-ups rather than a study we could read, so we are not going to put a number on it.',
   },
   {
     question: 'What is the ROI of reactivating a cold or dormant lead list?',
@@ -265,7 +265,7 @@ export default function Page() {
                   <td className="px-6 py-4 text-[#0A7C8C] font-semibold">$1,764 – $29,964</td>
                 </tr>
                 <tr className="bg-[#F4F5F3]/50">
-                  <td className="px-6 py-4 text-[#5A626E]">Response Time to Replies</td>
+                  <td className="px-6 py-4 text-[#5A626E]">Response Time to a New Inbound Lead</td>
                   <td className="px-6 py-4 text-[#13171F] font-medium">42-47 hours average</td>
                   <td className="px-6 py-4 text-[#0A7C8C] font-semibold">Under 60 seconds</td>
                 </tr>
@@ -276,18 +276,18 @@ export default function Page() {
                 </tr>
                 <tr className="bg-[#F4F5F3]/50">
                   <td className="px-6 py-4 text-[#5A626E]">Ramp Time</td>
-                  <td className="px-6 py-4 text-[#13171F] font-medium">3-4 months</td>
+                  <td className="px-6 py-4 text-[#13171F] font-medium">3.9 months (median)</td>
                   <td className="px-6 py-4 text-[#0A7C8C] font-semibold">Minutes</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-[#5A626E]">Turnover Risk</td>
-                  <td className="px-6 py-4 text-[#13171F] font-medium">34-40% annually</td>
+                  <td className="px-6 py-4 text-[#13171F] font-medium">17.6 month median tenure</td>
                   <td className="px-6 py-4 text-[#0A7C8C] font-semibold">0%</td>
                 </tr>
                 <tr className="bg-[#F4F5F3]/50">
-                  <td className="px-6 py-4 text-[#5A626E]">Cost Per Qualified Lead</td>
-                  <td className="px-6 py-4 text-[#13171F] font-medium">$262</td>
-                  <td className="px-6 py-4 text-[#0A7C8C] font-semibold">$26</td>
+                  <td className="px-6 py-4 text-[#5A626E]">Cost Per Booked Meeting</td>
+                  <td className="px-6 py-4 text-[#13171F] font-medium">$600 – $940</td>
+                  <td className="px-6 py-4 text-[#0A7C8C] font-semibold">Your volume, at $597/mo flat</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-[#5A626E]">Database Coverage</td>
