@@ -1139,14 +1139,14 @@ export const blogPosts: BlogPost[] = [
     id: 8,
     slug: 'ai-sdr-vs-hiring-sdr-roi-2026',
     title: 'AI SDR vs Hiring an SDR: The 2026 ROI Breakdown',
-    excerpt: 'One SDR costs $105-165K/year fully loaded. One AI SDR platform costs $6-24K. Here\'s the honest math on when each makes sense-and when AI is a no-brainer.',
+    excerpt: 'One SDR costs $98-173K/year fully loaded. One AI SDR platform costs $6-24K. Here\'s the honest math on when each makes sense-and when AI is a no-brainer.',
     category: 'Sales Strategy',
     date: '2026-02-04',
     readTime: '9 min read',
     author: 'Tom Bauer',
     authorUrl: '/leadership',
     metaTitle: 'AI SDR vs Hiring an SDR: Real ROI Comparison 2026 (85% Cost Savings)',
-    metaDescription: 'SDR: $105-165K/year. AI SDR: $6-24K/year. 85% cost savings, 21x better speed-to-lead. When to hire humans vs deploy AI - honest math with real numbers.',
+    metaDescription: 'SDR: $98-173K/year. AI SDR: $6-24K/year. 85% cost savings, 21x better speed-to-lead. When to hire humans vs deploy AI - honest math with real numbers.',
     lastUpdated: '2026-02-25',
     authorTitle: 'Founder & CEO, SurFox AI',
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
@@ -1165,7 +1165,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'When you post that SDR job listing, you\'re not signing up for a $55K expense. You\'re signing up for $105,000 to $165,000 annually when you factor in everything. Let\'s break it down.'
+        content: 'When you post that SDR job listing, you\'re not signing up for a $55K expense. You\'re signing up for $98,000 to $173,000 annually when you factor in everything. Let\'s break it down.'
       },
       {
         type: 'subheading',
@@ -1185,11 +1185,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'And the killer: turnover. [Bridge Group\'s 2025 research](https://www.bridgegroupinc.com/blog/) puts average SDR tenure at 1.9 years (approximately 22 months), with annual attrition of 34-40% ([Xactly](https://www.xactlycorp.com/blog/sales-turnover-statistics)). When they leave - and they will - replacement costs approximately $115,000 when you factor in recruiting, training, and the productivity gap ([Rain Group](https://www.rainsalestraining.com/)). Amortize that across average tenure and it adds $60,000+ per year to your true cost.'
+        content: 'And the killer: turnover. [Bridge Group\'s 2025 research](https://www.bridgegroupinc.com/blog/) puts average SDR tenure at 1.9 years (approximately 22 months), with annual attrition of 34-40% ([Xactly](https://www.xactlycorp.com/blog/sales-turnover-statistics)). When they leave - and they will - replacement costs approximately $115,000 when you factor in recruiting, training, and the productivity gap ([Rain Group](https://www.rainsalestraining.com/)). Amortize that across average tenure and it works out to roughly $60,000 a year, which is a large part of why the fully-loaded benchmark lands so far above the offer letter.'
       },
       {
         type: 'callout',
-        content: 'The fully-loaded annual cost of one SDR: $98,000 to $173,000 ([Martal Group, 2025](https://martal.ca/2025-sdr-salary-guide/)). Not the $50-60K on the offer letter. The real number.'
+        content: 'Fully-loaded cost of one SDR, per [Martal Group, 2025](https://martal.ca/2025-sdr-salary-guide/): $98,000 to $173,000 a year. Not the $50-60K on the offer letter. The real number.'
       },
       {
         type: 'heading',
@@ -1366,7 +1366,15 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The true fully-loaded cost is $105,000-$165,000 annually when you include base salary, commission, benefits, tech stack, management overhead, ramp time, and amortized turnover costs. Most companies only budget for the $55-70K base salary and get surprised by the real number.'
+        content: 'The true fully-loaded cost is $98,000-$173,000 annually when you include base salary, commission, benefits, tech stack, management overhead, ramp time, and amortized turnover costs. Most companies only budget for the $55-70K base salary and get surprised by the real number.'
+      },
+      {
+        type: 'subheading',
+        content: 'What is the payback period on an AI SDR versus hiring one?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Run the two numbers against each other. A fully-loaded SDR at $98,000 to $173,000 a year costs $8,167 to $14,417 per month. The SurFox AI Growth plan is $597 a month, or $7,164 for a full year. Twelve months of the platform costs less than one month of an SDR at the low end of that range, and the platform covers its entire first-year cost in 15 to 27 days of avoided SDR spend. Ramp time widens the gap further: [Bridge Group](https://www.bridgegroupinc.com/blog/) puts SDR time to full productivity at roughly 3.2 months, and you pay full salary throughout it.'
       },
       {
         type: 'subheading',
