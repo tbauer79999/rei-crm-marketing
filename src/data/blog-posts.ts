@@ -97,7 +97,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'When you hire an SDR, you\'re not just paying their salary. The fully loaded cost includes base salary ($50-60K, with a median of $56K according to [Bridge Group\'s 2025 SDR benchmarks](https://www.bridgegroupinc.com/blog/)), benefits and taxes (25-30%), tools including CRM, dialer, email platforms, and data subscriptions ($3,000-$8,400/year), plus management overhead - typically 10-15 hours per week of a manager\'s time valued at $10,000-$25,000 annually. Add it all up and you\'re looking at $98,000-$173,000 per year per SDR ([Martal Group, 2025](https://martal.ca/2025-sdr-salary-guide/)).'
+        content: '[When you hire an SDR](/blog/ai-sdr-vs-hiring-sdr-roi-2026), you\'re not just paying their salary. The fully loaded cost includes base salary ($50-60K, with a median of $56K according to [Bridge Group\'s 2025 SDR benchmarks](https://www.bridgegroupinc.com/blog/)), benefits and taxes (25-30%), tools including CRM, dialer, email platforms, and data subscriptions ($3,000-$8,400/year), plus management overhead - typically 10-15 hours per week of a manager\'s time valued at $10,000-$25,000 annually. Add it all up and you\'re looking at $98,000-$173,000 per year per SDR ([Martal Group, 2025](https://martal.ca/2025-sdr-salary-guide/)).'
       },
       {
         type: 'paragraph',
@@ -2326,7 +2326,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The pitch for AI SDRs is compelling: 24/7 outreach, personalization at scale, a fraction of the cost of a human rep. And on paper, the economics are hard to argue with. A human SDR costs $80K+ per year in salary alone. AI tools run $5–6K per month. For high-volume outbound, the math seems obvious.'
+        content: 'The pitch for AI SDRs is compelling: 24/7 outreach, personalization at scale, a fraction of the cost of a human rep. And on paper, the economics are hard to argue with. A [human SDR](/blog/ai-sdr-vs-hiring-sdr-roi-2026) costs $80K+ per year in salary alone. AI tools run $5–6K per month. For high-volume outbound, the math seems obvious.'
       },
       {
         type: 'paragraph',
@@ -2807,7 +2807,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The financial case compounds over time. A standard team of three to five SDRs costs $882,000 to $2,595,000 over three years when you include salary, benefits, training, and turnover. An AI-powered qualification system typically runs $36,000 to $180,000 for the same period - a savings that pays for itself before the end of year one in most implementations.'
+        content: 'The financial case compounds over time. A standard team of three to five SDRs [costs $882,000 to $2,595,000 over three years](/blog/ai-sdr-vs-hiring-sdr-roi-2026) when you include salary, benefits, training, and turnover. An AI-powered qualification system typically runs $36,000 to $180,000 for the same period - a savings that pays for itself before the end of year one in most implementations.'
       },
       {
         type: 'heading',
@@ -3503,7 +3503,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'A fully loaded human SDR in a major US market costs between $98,000 and $173,000 per year. That number surprises most sales leaders who think in terms of base salary - but the full picture includes variable compensation, benefits, payroll taxes, software stack, and management overhead.'
+        content: 'A [fully loaded human SDR](/blog/ai-sdr-vs-hiring-sdr-roi-2026) in a major US market costs between $98,000 and $173,000 per year. That number surprises most sales leaders who think in terms of base salary - but the full picture includes variable compensation, benefits, payroll taxes, software stack, and management overhead.'
       },
       {
         type: 'table',
