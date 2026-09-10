@@ -1220,7 +1220,7 @@ export const blogPosts: BlogPost[] = [
           ['Availability', '8 hrs/day, 5 days/week', '24/7/365'],
           ['Ramp time', '~3.2 months ([Bridge Group, 2025](https://www.bridgegroupinc.com/blog/))', 'Minutes'],
           ['Annual turnover', '34–40% ([Xactly](https://www.xactlycorp.com/blog/sales-turnover-statistics))', 'Zero'],
-          ['Cost per booked meeting', '$660–$940 (at 14.6 meetings/mo median, [Bridge Group](https://www.bridgegroupinc.com/blog/))', 'Depends on your volume, at $597/mo flat'],
+          ['Cost per booked meeting', '$560–$990 (at 14.6 meetings/mo median, [Bridge Group](https://www.bridgegroupinc.com/blog/))', 'Depends on your volume, at $597/mo flat'],
           ['Database coverage', 'Limited by headcount', 'Entire database simultaneously'],
         ],
       },
@@ -2807,7 +2807,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The financial case compounds over time. A standard team of three to five SDRs costs $540,000 to $900,000 over three years when you include salary, benefits, training, and turnover. An AI-powered qualification system typically runs $36,000 to $180,000 for the same period - a savings that pays for itself before the end of year one in most implementations.'
+        content: 'The financial case compounds over time. A standard team of three to five SDRs costs $882,000 to $2,595,000 over three years when you include salary, benefits, training, and turnover. An AI-powered qualification system typically runs $36,000 to $180,000 for the same period - a savings that pays for itself before the end of year one in most implementations.'
       },
       {
         type: 'heading',
@@ -3041,7 +3041,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI lead qualification platforms typically [range from $12,000 to $60,000 per year](/blog/ai-lead-qualification-cost-pricing-guide-2026) depending on message volume, features, and tier. This compares favorably to a team of three to five SDRs, which costs $540,000 to $900,000 over three years when you include salary, benefits, training, and turnover. SurFox AI starts at $147/month for teams getting started with SMS-based qualification.'
+        content: 'AI lead qualification platforms typically [range from $12,000 to $60,000 per year](/blog/ai-lead-qualification-cost-pricing-guide-2026) depending on message volume, features, and tier. This compares favorably to a team of three to five SDRs, which costs $882,000 to $2,595,000 over three years when you include salary, benefits, training, and turnover. SurFox AI starts at $147/month for teams getting started with SMS-based qualification.'
       },
     ]
   }
@@ -3380,11 +3380,11 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: 'tldr',
-        content: 'AI lead qualification ranges from $30 to $10,000+/month - SMS-based (SurFox AI) starts at $147/month; enterprise runs $3K–$10K+/month.\nFully loaded human SDR costs $115K–$165K/year vs. $24K–$60K/year for a platform - roughly a 50% to 85% reduction depending on tier.\nCost per booked meeting with a human SDR works out to roughly $660 to $940, dividing a fully loaded salary by The Bridge Group\'s median of 14.6 meetings booked per month.\nMost businesses see positive ROI within 60–90 days.\nHidden costs - deliverability infrastructure, setup labor, prompt tuning - can double the visible price if unbudgeted.'
+        content: 'AI lead qualification ranges from $30 to $10,000+/month - SMS-based (SurFox AI) starts at $147/month; enterprise runs $3K–$10K+/month.\nFully loaded human SDR costs $98K–$173K/year vs. $24K–$60K/year for a platform - roughly a 40% to 85% reduction depending on tier.\nCost per booked meeting with a human SDR works out to roughly $560 to $990, dividing a fully loaded salary by The Bridge Group\'s median of 14.6 meetings booked per month.\nMost businesses see positive ROI within 60–90 days.\nHidden costs - deliverability infrastructure, setup labor, prompt tuning - can double the visible price if unbudgeted.'
       },
       {
         type: 'callout',
-        content: '**Quick Answer:** AI lead qualification platforms range from **$30 to $10,000+ per month** depending on volume, autonomy, and features. SMS-based qualification starts at **$147/month**. Mid-market platforms run **$500 to $2,500/month**. Enterprise autonomous AI SDR agents run **$3,000 to $10,000+/month**. All tiers compare favorably to a fully loaded human SDR at **$115,000 to $165,000 per year.**'
+        content: '**Quick Answer:** AI lead qualification platforms range from **$30 to $10,000+ per month** depending on volume, autonomy, and features. SMS-based qualification starts at **$147/month**. Mid-market platforms run **$500 to $2,500/month**. Enterprise autonomous AI SDR agents run **$3,000 to $10,000+/month**. All tiers compare favorably to a fully loaded human SDR at **$98,000 to $173,000 per year.**'
       },
       {
         type: 'heading',
@@ -3495,15 +3495,15 @@ export const blogPosts: BlogPost[] = [
         type: 'table',
         headers: ['Metric', 'Result'],
         rows: [
-          ['Fully loaded human SDR, per year', '$115,000 to $165,000'],
+          ['Fully loaded human SDR, per year', '$98,000 to $173,000'],
           ['Median meetings booked per SDR per month', '14.6 (Bridge Group)'],
-          ['Cost per booked meeting, human SDR', '$660 to $940'],
+          ['Cost per booked meeting, human SDR', '$560 to $990'],
           ['SurFox AI Growth plan, per year', '$7,164 flat'],
         ]
       },
       {
         type: 'paragraph',
-        content: 'A fully loaded human SDR in a major US market costs between $115,000 and $165,000 per year. That number surprises most sales leaders who think in terms of base salary - but the full picture includes variable compensation, benefits, payroll taxes, software stack, and management overhead.'
+        content: 'A fully loaded human SDR in a major US market costs between $98,000 and $173,000 per year. That number surprises most sales leaders who think in terms of base salary - but the full picture includes variable compensation, benefits, payroll taxes, software stack, and management overhead.'
       },
       {
         type: 'table',
@@ -3514,7 +3514,7 @@ export const blogPosts: BlogPost[] = [
           ['Benefits and taxes (30% of base)', '$20,000 – $30,000/yr', '$0'],
           ['Software stack', '$10,000 – $15,000/yr', 'Included'],
           ['Management and training', '$15,000 – $25,000/yr', '5–15 hrs/mo tuning'],
-          ['Total annual cost', '$115,000 – $165,000', '$1,764 – $29,964'],
+          ['Total annual cost', '$98,000 – $173,000', '$1,764 – $29,964'],
           ['Daily outreach capacity', '50 – 80 contacts', '500 – 2,000+ contacts'],
           ['Ramp time to productivity', '3.1 – 3.2 months', 'Same day to 2 weeks'],
           ['Annual turnover rate', '35% – 40%', '0%'],
@@ -3624,7 +3624,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'For teams replacing or supplementing human SDRs, the timing difference is the clearest part. The Bridge Group puts median SDR ramp at 3.9 months to reach 80% of quota, so a new hire is paid in full while producing partially for most of a quarter. Software has no ramp. On unit cost, a human SDR at $115,000 to $165,000 fully loaded, booking the Bridge Group median of 14.6 meetings a month, works out to roughly $660 to $940 per booked meeting.'
+        content: 'For teams replacing or supplementing human SDRs, the timing difference is the clearest part. The Bridge Group puts median SDR ramp at 3.9 months to reach 80% of quota, so a new hire is paid in full while producing partially for most of a quarter. Software has no ramp. On unit cost, a human SDR at $98,000 to $173,000 fully loaded, booking the Bridge Group median of 14.6 meetings a month, works out to roughly $560 to $990 per booked meeting.'
       },
       {
         type: 'paragraph',
@@ -3652,7 +3652,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Yes, significantly. A fully loaded human SDR costs $115,000 to $165,000 per year when you include salary, benefits, tools, and management overhead. An AI lead qualification platform typically costs $12,000 to $60,000 per year. Compare the two figures directly rather than trusting a headline percentage, and be honest about scope while you do it: the software covers qualification, not the whole SDR role.'
+        content: 'Yes, significantly. A fully loaded human SDR costs $98,000 to $173,000 per year when you include salary, benefits, tools, and management overhead. An AI lead qualification platform typically costs $12,000 to $60,000 per year. Compare the two figures directly rather than trusting a headline percentage, and be honest about scope while you do it: the software covers qualification, not the whole SDR role.'
       },
       {
         type: 'subheading',
@@ -3668,7 +3668,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'We do not publish a single ROI multiple, because it depends entirely on your deal size and close rate and any one number would be someone else\'s business rather than yours. What can be stated: a human SDR at $115,000 to $165,000 fully loaded, booking The Bridge Group\'s median of 14.6 meetings a month, costs roughly $660 to $940 per booked meeting. SurFox AI Growth is $597 a month flat. Put your own volume and average deal value against those two figures.'
+        content: 'We do not publish a single ROI multiple, because it depends entirely on your deal size and close rate and any one number would be someone else\'s business rather than yours. What can be stated: a human SDR at $98,000 to $173,000 fully loaded, booking The Bridge Group\'s median of 14.6 meetings a month, costs roughly $560 to $990 per booked meeting. SurFox AI Growth is $597 a month flat. Put your own volume and average deal value against those two figures.'
       },
       {
         type: 'subheading',
@@ -3684,7 +3684,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'A human SDR costs $115,000 to $165,000 per year fully loaded. An enterprise AI SDR platform costs $24,000 to $60,000 per year. The AI processes 500 to 2,000+ contacts per day versus 50 to 80 for a human, ramps in days rather than 3 months, and does not leave, which removes the replacement cost modelled earlier in this post.'
+        content: 'A human SDR costs $98,000 to $173,000 per year fully loaded. An enterprise AI SDR platform costs $24,000 to $60,000 per year. The AI processes 500 to 2,000+ contacts per day versus 50 to 80 for a human, ramps in days rather than 3 months, and does not leave, which removes the replacement cost modelled earlier in this post.'
       },
     ]
   },
