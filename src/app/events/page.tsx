@@ -222,7 +222,7 @@ export default function Page() {
           <div className="p-10 rounded-[22px] border border-[#dCEEF1] bg-[#F0F8F9]">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#dCEEF1] mb-6">
               <Zap className="w-4 h-4 text-[#0A7C8C]" />
-              <span className="text-xs font-medium text-[#0A7C8C] uppercase tracking-[0.18em]" style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}>Built for this workflow</span>
+              <span className="text-xs font-medium text-[#0A7C8C] uppercase tracking-[0.18em]" style={{ fontFamily: 'var(--font-plus-jakarta-sans)' }}>Built for this workflow</span>
             </div>
 
             <p className="text-lg sm:text-xl text-[#3b4350] leading-relaxed">

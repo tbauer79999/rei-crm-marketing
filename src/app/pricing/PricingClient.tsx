@@ -169,7 +169,7 @@ const plans: Plan[] = [
             sub: 'Each conversation uses ~4 to 8 messages (your outbound plus lead replies combined).',
           },
           {
-            t: '2,000 website chat conversations per month',
+            t: '5,000 website chat conversations per month',
             sub: 'Qualifies inbound website visitors 24/7.',
           },
           { t: '15+ team member accounts' },
@@ -203,8 +203,16 @@ const faqs = [
     a: 'We email you as you approach your limit so there are no surprises. You approve any overage before it is added, and you can move up a plan at any time.',
   },
   {
-    q: 'How is this different from text blasting tools?',
-    a: 'Text blasters send identical messages to thousands of people and leave you to handle every reply. SurFox AI holds a real, qualifying conversation with each contact, reads intent, and only hands off the contacts genuinely ready to talk. You get fewer calls, but every one is worth taking.',
+    q: 'How is this different from tools that only blast or only chat?',
+    a: 'Most tools pick one lane. Text blasters send identical messages to thousands of people and leave you to handle every reply. Chat-only tools only work the visitors who show up and open a widget on your site. SurFox AI holds a real, qualifying conversation with each lead, whether it starts over SMS or website chat, reads intent, and only hands off the contacts genuinely ready to talk. You get fewer calls, but every one is worth taking.',
+  },
+  {
+    q: 'What counts as a website chat?',
+    a: "One website chat is counted when a visitor sends their first message in the SurFox AI widget, which starts that conversation. The rest of the back-and-forth is still the same one chat. An empty widget opening or a page view with no message doesn't count.",
+  },
+  {
+    q: 'What happens when I hit my website chat limit?',
+    a: "When you reach your plan's website chat allotment for the billing period, new website chats pause until your next billing cycle begins or you upgrade to a plan with more capacity. That keeps your cost predictable. Your SMS messages are a separate limit and are not affected.",
   },
   {
     q: 'When will I see my first qualified lead?',
@@ -295,7 +303,7 @@ export default function PricingClient() {
                   </div>
                 ))}
 
-                <div className="pbtn" style={{ marginTop: 28 }}>
+                <div className="pbtn">
                   <button
                     type="button"
                     className={`btn ${plan.btn}`}
@@ -310,6 +318,10 @@ export default function PricingClient() {
 
           <p className="price-note">
             30-day money-back guarantee. No setup fees. No risk.
+          </p>
+          <p className="price-note">
+            When you hit your website chat limit, new chats pause until your next billing cycle
+            (or you upgrade). Cost stays predictable.
           </p>
         </div>
       </section>

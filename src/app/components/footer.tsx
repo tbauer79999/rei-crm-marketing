@@ -96,7 +96,7 @@ export default function Footer() {
   return (
     <footer
       className="bg-[#F4F5F3] border-t border-[#E4E6E2]"
-      style={{ fontFamily: 'var(--font-ibm-plex-sans)' }}
+      style={{ fontFamily: 'var(--font-plus-jakarta-sans)' }}
     >
       <div className="max-w-[1180px] mx-auto px-4 sm:px-6 md:px-8 pt-16 pb-10">
         {/* Top region: brand + columns */}
@@ -160,7 +160,7 @@ export default function Footer() {
               <div key={col.title} className={col.wide ? 'lg:col-span-2' : undefined}>
                 <h5
                   className="text-[11px] uppercase tracking-[.12em] text-[#8A92A0] font-medium mb-4"
-                  style={{ fontFamily: 'var(--font-ibm-plex-mono)' }}
+                  style={{ fontFamily: 'var(--font-plus-jakarta-sans)' }}
                 >
                   {col.title}
                 </h5>

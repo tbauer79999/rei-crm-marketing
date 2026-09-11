@@ -49,15 +49,11 @@ const conversations: Conversation[] = [
           'Hi Marta, Alex here with Brightway Homes. Saw you might consider an offer on the Maple St house. Still open to it?',
       },
       { side: 'them', tag: 'reads intent', text: "Maybe. Depends what you're offering." },
-      { side: 'ai', text: 'Fair. Ballpark, what number were you hoping for?' },
-      { side: 'them', tag: 'captures price', text: "Around 240 if it's cash and quick" },
       {
         side: 'ai',
-        text:
-          'That works on our end. Cash, no repairs, you pick the close date. Got 10 min tomorrow to talk specifics?',
+        text: 'Cash, no repairs, you pick the close date. Got 10 min tomorrow to talk specifics?',
       },
       { side: 'them', tag: 'books call', text: 'Yeah, after 5 is good' },
-      { side: 'ai', text: 'Booked you for 5:30. Talk then.' },
     ],
     meta: 'Motivated · price captured · cash-ready · 3m 12s',
     booked: '5:30 PM',
@@ -115,6 +111,7 @@ export function HeroPhone() {
   const [active, setActive] = useState(0);
   const [fading, setFading] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const threadRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const format = () => {
@@ -159,6 +156,15 @@ export function HeroPhone() {
     return () => clearTimeout(id);
   }, [active, shown]);
 
+  // Always show the tail of the conversation, not the top: the fixed-height
+  // thread can't fit every row, and the closing messages (price, booked call)
+  // are the ones the copy is selling.
+  useEffect(() => {
+    const el = threadRef.current;
+    if (!el) return;
+    el.scrollTop = el.scrollHeight;
+  }, [shown]);
+
   const conv = conversations[shown];
 
   return (
@@ -198,7 +204,7 @@ export function HeroPhone() {
             <div className={`convo-body${fading ? ' is-fading' : ''}`}>
               <div className="convo-top">
                 <div className="avatar">{conv.avatar}</div>
-                <div>
+                <div className="convo-id">
                   <div className="nm">{conv.name}</div>
                   <div className="sub">{conv.sub}</div>
                 </div>
@@ -207,7 +213,7 @@ export function HeroPhone() {
                 </span>
               </div>
 
-              <div className="thread">
+              <div className="thread" ref={threadRef}>
                 {conv.rows.map((m, i) =>
                   m.side === 'ai' ? (
                     <div className="row" key={`${shown}-${i}`}>
@@ -223,7 +229,7 @@ export function HeroPhone() {
               </div>
 
               <div className="result">
-                <div>
+                <div className="result-info">
                   <div className="hot">Hot · qualified</div>
                   <div className="meta">{conv.meta}</div>
                 </div>
@@ -332,10 +338,9 @@ export function AnnotatedMoments() {
 
 const faqItems = [
   {
-    question:
-      'How is SurFox AI different from text blasters like SmarterContact or Launch Control?',
+    question: 'How is SurFox AI different from tools that only blast or only chat?',
     answer:
-      'Text blasters send identical messages to thousands of contacts and rely on you to manually handle the replies. SurFox AI has real, qualifying conversations with each contact. It asks follow-up questions, handles objections, and flags only the contacts ready to talk. You get fewer calls, but every one is worth taking.',
+      'Most tools pick one lane. Text blasters like SmarterContact or Launch Control send identical messages to thousands of contacts and rely on you to manually handle the replies. Chat-only tools like Qualified or Spara only work the visitors who show up and open a widget on your site. SurFox AI has real, qualifying conversations with each lead, whether it starts over SMS or website chat. It asks follow-up questions, handles objections, and flags only the contacts ready to talk. You get fewer calls, but every one is worth taking.',
   },
   {
     question: 'How does the 50-signal lead scoring work?',

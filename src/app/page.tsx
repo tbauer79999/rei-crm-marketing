@@ -8,11 +8,12 @@ import './home.css';
 export const metadata: Metadata = {
   // Stored fully branded: the root layout's `%s | SurFox AI` template does not apply to the
   // root segment's own page, so this string renders as-is.
-  title: 'SurFox AI | SMS Lead Qualification at SMB Pricing',
+  title: 'SurFox AI | AI Lead Qualification for SMS & Website Chat',
   description:
-    'No human touched this conversation. SurFox AI texts, qualifies, and books your leads autonomously over SMS. Upload your list and watch cold leads become booked calls.',
+    'SurFox AI qualifies leads over SMS and website chat, then books the call. Upload your list or add the chat widget to your site and watch cold leads and website visitors become booked calls.',
   keywords: [
     'SMS lead qualification',
+    'website chat lead qualification',
     'AI lead qualification software',
     'automated lead qualification',
     'AI SMS for real estate',
@@ -25,18 +26,18 @@ export const metadata: Metadata = {
     'lead scoring software',
   ],
   openGraph: {
-    title: 'SurFox AI | SMS Lead Qualification at SMB Pricing',
+    title: 'SurFox AI | AI Lead Qualification for SMS & Website Chat',
     description:
-      'No human touched this conversation. SurFox AI texts, qualifies, and books your leads autonomously over SMS.',
+      'SurFox AI qualifies leads over SMS and website chat, then books the call. Same AI, two places for leads to start.',
     url: 'https://www.getsurfox.com',
     type: 'website',
     siteName: 'SurFox AI',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SurFox AI | SMS Lead Qualification at SMB Pricing',
+    title: 'SurFox AI | AI Lead Qualification for SMS & Website Chat',
     description:
-      'No human touched this conversation. SurFox AI texts, qualifies, and books your leads autonomously over SMS.',
+      'SurFox AI qualifies leads over SMS and website chat, then books the call. Same AI, two places for leads to start.',
   },
   alternates: {
     canonical: 'https://www.getsurfox.com',
@@ -57,7 +58,7 @@ const plans = [
     name: 'Starter',
     desc: 'For operators testing the waters on a focused list.',
     price: '$147',
-    vol: '2,000 messages / mo',
+    vol: '2,000 SMS + 200 website chats / mo',
     features: [
       'AI conversation engine',
       '50 qualification signals tracked',
@@ -72,7 +73,7 @@ const plans = [
     name: 'Growth',
     desc: 'For teams ready to work a full list every month.',
     price: '$597',
-    vol: '10,000 messages / mo',
+    vol: '10,000 SMS + 500 website chats / mo',
     features: [
       'Everything in Starter',
       'Conversation learning (last 100)',
@@ -87,7 +88,7 @@ const plans = [
     name: 'Growth Plus',
     desc: 'Full Scale intelligence, sized for a 25,000 message month.',
     price: '$1,497',
-    vol: '25,000 messages / mo',
+    vol: '25,000 SMS + 2,000 website chats / mo',
     features: [
       'Everything in Growth',
       'Conversation learning (last 1,000)',
@@ -102,7 +103,7 @@ const plans = [
     name: 'Scale',
     desc: 'For high-volume operations running constant campaigns.',
     price: '$2,497',
-    vol: '40,000 messages / mo',
+    vol: '40,000 SMS + 5,000 website chats / mo',
     features: [
       'Everything in Growth Plus',
       'Conversation learning (last 1,000)',
@@ -192,10 +193,10 @@ export default function Page() {
             mainEntity: [
               {
                 '@type': 'Question',
-                name: 'How is SurFox AI different from text blasters like SmarterContact or Launch Control?',
+                name: 'How is SurFox AI different from tools that only blast or only chat?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Text blasters send identical messages to thousands of contacts and rely on you to manually handle the replies. SurFox AI has real, qualifying conversations with each contact. It asks follow-up questions, handles objections, and flags only the contacts ready to talk. You get fewer calls, but every one is worth taking.',
+                  text: 'Most tools pick one lane. Text blasters like SmarterContact or Launch Control send identical messages to thousands of contacts and rely on you to manually handle the replies. Chat-only tools like Qualified or Spara only work the visitors who show up and open a widget on your site. SurFox AI has real, qualifying conversations with each lead, whether it starts over SMS or website chat. It asks follow-up questions, handles objections, and flags only the contacts ready to talk. You get fewer calls, but every one is worth taking.',
                 },
               },
               {
@@ -255,18 +256,20 @@ export default function Page() {
       <section className="hero">
         <div className="wrap hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">Conversational AI for SMS</span>
+            <div className="hero-badges">
+              <span className="chip">SMS</span>
+              <span className="chip-sep">·</span>
+              <span className="chip">Website chat</span>
+            </div>
             <h1 className="disp">
-              This is a cold lead becoming a <em>booked call.</em>
+              Cold leads become <em>calendar holds,</em> without the chase.
             </h1>
             <p className="lede">
-              No human touched this conversation. SurFox AI texted, qualified, and booked, while you
-              were doing something else.
+              SMS when the lead arrives. Website chat when they browse. You show up to the call.
             </p>
             <p className="capsule">
-              SurFox AI texts your leads the moment they come in, qualifies the conversation
-              automatically, and hands your team a warm prospect ready to close. It runs 24 hours a
-              day, 7 days a week, without a human in the loop.
+              SurFox AI qualifies on your list and on your site. Same AI job, two doors in. Runs
+              24/7.
             </p>
             <div className="hero-cta">
               <a className="btn btn-ink" href="#pricing">
@@ -278,6 +281,102 @@ export default function Page() {
             </div>
           </div>
           <HeroPhone />
+        </div>
+      </section>
+
+      {/* DUAL DEMO STRIP - SMS thread and web chat widget, side by side */}
+      <section className="dual-demo" id="channels">
+        <div className="wrap">
+          <div className="dual-grid">
+            <div className="dual-card" id="sms">
+              <span className="dual-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                SMS
+              </span>
+              <div className="mini-phone-frame">
+                <div className="mini-phone">
+                  <div className="mini-notch" />
+                  <div className="mini-top">
+                    <div className="mini-avatar">M</div>
+                    <div>
+                      <div className="mini-name">Marta R.</div>
+                      <div className="mini-sub">Motivated seller · Maple St</div>
+                    </div>
+                    <span className="mini-live" />
+                  </div>
+                  <div className="mini-thread">
+                    <div className="mini-msg ai">
+                      Hi Marta, still open to an offer on the Maple St house?
+                    </div>
+                    <div className="mini-msg them">Maybe. Depends what you&apos;re offering.</div>
+                    <div className="mini-msg ai">Fair. Ballpark, what number were you hoping for?</div>
+                    <div className="mini-msg them">Around 240 if it&apos;s cash and quick.</div>
+                    <div className="mini-msg ai">
+                      That works. Got 10 min tomorrow to talk specifics?
+                    </div>
+                    <div className="mini-msg them">Yeah, after 5 is good.</div>
+                  </div>
+                </div>
+              </div>
+              <div className="mini-outcome">
+                <span className="mo-dot" /> Hot · qualified <span className="mo-sep">·</span> Call
+                booked 5:30 PM
+              </div>
+            </div>
+            <div className="dual-card" id="web-chat">
+              <span className="dual-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+                </svg>
+                Website chat
+              </span>
+              <div className="mini-browser">
+                <div className="mini-bbar">
+                  <i className="tl-red" />
+                  <i className="tl-yellow" />
+                  <i className="tl-green" />
+                  <span className="mini-burl">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6">
+                      <rect x="5" y="11" width="14" height="9" rx="2" />
+                      <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+                    </svg>
+                    yoursite.com
+                  </span>
+                </div>
+                <div className="mini-page">
+                  <div className="mini-page-skel">
+                    <div className="sk-bar sk-w1" />
+                    <div className="sk-bar sk-w2" />
+                  </div>
+                  <div className="mini-widget">
+                    <div className="mini-widget-top">
+                      <span className="mini-widget-avatar">S</span>
+                      <span>Chat with us</span>
+                      <span className="mini-live" />
+                    </div>
+                    <div className="mini-thread">
+                      <div className="mini-msg ai">Hi! Looking for a quote or just browsing?</div>
+                      <div className="mini-msg them">Need someone out this week if possible.</div>
+                      <div className="mini-msg ai">
+                        Got it, what&apos;s the best number to text you the details?
+                      </div>
+                      <div className="mini-msg them">555-0148</div>
+                      <div className="mini-msg ai">Perfect, sending a couple time slots now.</div>
+                      <div className="mini-msg them">Sounds good, thanks!</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mini-outcome">
+                <span className="mo-dot" /> Hot · qualified <span className="mo-sep">·</span>{' '}
+                Handed to sales
+              </div>
+            </div>
+          </div>
+          <p className="dual-caption">Same job. Two places leads start.</p>
         </div>
       </section>
 
@@ -440,6 +539,10 @@ export default function Page() {
           </div>
           <p className="price-note">
             30-day money-back guarantee. No setup fees. No risk.
+          </p>
+          <p className="price-note">
+            When you hit your website chat limit, new chats pause until your next billing cycle
+            (or you upgrade). Cost stays predictable.
           </p>
         </div>
       </section>

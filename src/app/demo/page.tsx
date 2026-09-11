@@ -38,22 +38,22 @@ const timelineItems: TimelineItem[] = [
 
 const screenshots = [
   {
-    src: '/images/control-room.png',
+    src: '/AI-controlroom.png',
     alt: 'SurFox AI Control Room showing system health, active conversations, and real-time performance metrics',
     caption: 'What you see when you check in',
   },
   {
-    src: '/images/learning-dashboard.png',
+    src: '/AiLearning1.png',
     alt: 'SurFox AI Learning Dashboard displaying behavioral insights and patterns discovered from lead conversations',
     caption: 'What SurFox AI learned from your leads',
   },
   {
-    src: '/images/learning-dashboard2.png',
+    src: '/AiLearning2.png',
     alt: 'SurFox AI Learning Dashboard showing market-specific adaptations and messaging optimizations',
     caption: 'How SurFox AI adapts to your market',
   },
   {
-    src: '/images/hot-lead-detail.png',
+    src: '/hot-lead-detail.png',
     alt: 'SurFox AI hot lead detail view with conversation history, qualification score, and recommended next steps',
     caption: "What you get when someone's ready to buy",
   },

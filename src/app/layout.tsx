@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, DM_Sans, Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Sora, DM_Sans, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
@@ -22,36 +22,23 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
-// Homepage redesign ("Thread") typeface trio, exposed as CSS variables.
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+// Sitewide display + body typeface, exposed as a CSS variable. Replaces the former
+// Space Grotesk / IBM Plex Sans / IBM Plex Mono trio.
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700"],
-});
-
-const ibmPlexSans = IBM_Plex_Sans({
-  variable: "--font-ibm-plex-sans",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
-
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-ibm-plex-mono",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.getsurfox.com"),
   title: {
     template: '%s | SurFox AI',
-    default: 'SurFox AI | SMS Lead Qualification at SMB Pricing',
+    default: 'SurFox AI | AI Lead Qualification for SMS & Website Chat',
   },
-  description: 'SurFox AI qualifies your contact list via SMS. Upload thousands of leads, AI works every conversation, your team only talks to the contacts ready to buy. Real conversational AI at SMB pricing.',
-  keywords: ['SMS lead qualification', 'AI lead qualification software', 'automated lead qualification', 'AI SMS for real estate', 'AI SMS for staffing', 'cold list activation', 'speed to lead AI', 'real estate wholesaler SMS', 'conversational AI SMS', 'lead scoring software'],
+  description: 'SurFox AI qualifies your leads over SMS and website chat. Upload your list or add the widget to your site, the AI works every conversation, and your team only talks to the contacts ready to buy.',
+  keywords: ['SMS lead qualification', 'website chat lead qualification', 'AI lead qualification software', 'automated lead qualification', 'AI SMS for real estate', 'AI SMS for staffing', 'cold list activation', 'speed to lead AI', 'real estate wholesaler SMS', 'conversational AI SMS', 'lead scoring software'],
   authors: [{ name: 'SurFox Team' }],
   creator: 'SurFox AI',
   publisher: 'SurFox AI',
@@ -59,23 +46,23 @@ export const metadata: Metadata = {
     siteName: "SurFox AI",
     type: "website",
     url: "https://www.getsurfox.com",
-    title: 'SurFox AI | SMS Lead Qualification at SMB Pricing',
-    description: 'SurFox AI qualifies your contact list via SMS. Upload thousands of leads, AI works every conversation, your team only talks to the contacts ready to buy. Real conversational AI at SMB pricing.',
+    title: 'SurFox AI | AI Lead Qualification for SMS & Website Chat',
+    description: 'SurFox AI qualifies your leads over SMS and website chat. Upload your list or add the widget to your site, the AI works every conversation, and your team only talks to the contacts ready to buy.',
     locale: 'en_US',
     images: [
       {
         url: 'https://www.getsurfox.com/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'SurFox AI - SMS Lead Qualification Platform',
+        alt: 'SurFox AI - SMS & Website Chat Lead Qualification Platform',
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
     images: ['https://www.getsurfox.com/og-default.png'],
-    title: 'SurFox AI | SMS Lead Qualification at SMB Pricing',
-    description: 'SurFox AI qualifies your contact list via SMS. Upload thousands of leads, AI works every conversation, your team only talks to the contacts ready to buy. Real conversational AI at SMB pricing.',
+    title: 'SurFox AI | AI Lead Qualification for SMS & Website Chat',
+    description: 'SurFox AI qualifies your leads over SMS and website chat. Upload your list or add the widget to your site, the AI works every conversation, and your team only talks to the contacts ready to buy.',
   },
   robots: {
     index: true,
@@ -100,7 +87,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${sora.variable} ${dmSans.variable} ${spaceGrotesk.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable} antialiased`} style={{ fontFamily: 'var(--font-ibm-plex-sans)' }}>
+      <body className={`${sora.variable} ${dmSans.variable} ${plusJakartaSans.variable} antialiased`} style={{ fontFamily: 'var(--font-plus-jakarta-sans)' }}>
         {/* Google Tag Manager - lazyOnload to defer until idle */}
         <Script
           id="gtm-script"

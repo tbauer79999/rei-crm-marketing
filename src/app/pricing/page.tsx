@@ -123,10 +123,26 @@ export default function Page() {
       },
       {
         "@type": "Question",
-        "name": "How is this different from text blasting tools?",
+        "name": "How is this different from tools that only blast or only chat?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Text blasters send identical messages to thousands of people and leave you to handle every reply. SurFox AI holds a real, qualifying conversation with each contact, reads intent, and only hands off the contacts genuinely ready to talk. You get fewer calls, but every one is worth taking."
+          "text": "Most tools pick one lane. Text blasters send identical messages to thousands of people and leave you to handle every reply. Chat-only tools only work the visitors who show up and open a widget on your site. SurFox AI holds a real, qualifying conversation with each lead, whether it starts over SMS or website chat, reads intent, and only hands off the contacts genuinely ready to talk. You get fewer calls, but every one is worth taking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What counts as a website chat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One website chat is counted when a visitor sends their first message in the SurFox AI widget, which starts that conversation. The rest of the back-and-forth is still the same one chat. An empty widget opening or a page view with no message doesn't count."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens when I hit my website chat limit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When you reach your plan's website chat allotment for the billing period, new website chats pause until your next billing cycle begins or you upgrade to a plan with more capacity. That keeps your cost predictable. Your SMS messages are a separate limit and are not affected."
         }
       },
       {

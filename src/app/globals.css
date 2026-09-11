@@ -80,7 +80,7 @@ html, body {
 /* Brand display font for all headings sitewide. Pages scoped under .sfx set their
    own per-element fonts at higher specificity, so the homepage is unaffected. */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+  font-family: var(--font-plus-jakarta-sans), system-ui, sans-serif;
   letter-spacing: -0.02em;
 }
 

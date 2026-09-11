@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FileText, Shield, AlertCircle, DollarSign, Users, XCircle, Scale, ShieldCheck } from 'lucide-react';
+import { FileText, Shield, AlertCircle, DollarSign, Users, XCircle, Scale, ShieldCheck, MessageSquare } from 'lucide-react';
 
 export default function TermsOfService() {
   return (
@@ -24,7 +24,7 @@ export default function TermsOfService() {
               Terms of Service
             </h1>
             <p className="text-lg sm:text-xl text-[#5A626E] leading-relaxed">
-              Last Updated: July 26, 2026
+              Last Updated: September 10, 2026
             </p>
           </motion.div>
         </div>
@@ -462,6 +462,10 @@ export default function TermsOfService() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-[#0A7C8C] mt-1">•</span>
+                      <span>200 website chat conversations per month</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>1 team member account</span>
                     </li>
                     <li className="flex items-start gap-2">
@@ -490,6 +494,10 @@ export default function TermsOfService() {
                     <li className="flex items-start gap-2">
                       <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>10,000 messages per month (in & out)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#0A7C8C] mt-1">•</span>
+                      <span>500 website chat conversations per month</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-[#0A7C8C] mt-1">•</span>
@@ -569,6 +577,10 @@ export default function TermsOfService() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-[#0A7C8C] mt-1">•</span>
+                      <span>5,000 website chat conversations per month</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#0A7C8C] mt-1">•</span>
                       <span>15+ team member accounts</span>
                     </li>
                     <li className="flex items-start gap-2">
@@ -642,6 +654,35 @@ export default function TermsOfService() {
                   </li>
                 </ul>
               </div>
+            </div>
+          </motion.div>
+
+          {/* Website Chat */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <MessageSquare className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Website Chat
+              </h2>
+            </div>
+
+            <div className="ml-0 sm:ml-16 space-y-4 text-[#5A626E] leading-relaxed">
+              <p>
+                If your plan includes website chat, you may embed the SurFox AI website chat widget on your own website(s) for conversations with your visitors and customers. Your plan includes a stated number of Website Chat Conversations per billing period (as shown on your plan or order).
+              </p>
+              <p>
+                A Website Chat Conversation is counted when a visitor sends their first message in the widget, which starts that conversation. Additional messages in the same conversation do not create additional Website Chat Conversations. Opening or loading the widget without the visitor sending a message does not count.
+              </p>
+              <p>
+                When you reach your plan's Website Chat Conversation allotment for the billing period, website chat for your account will be disabled (kill switch) until the next billing period begins or you upgrade to a plan with additional capacity. Unused Website Chat Conversations do not roll over.
+              </p>
             </div>
           </motion.div>
 
