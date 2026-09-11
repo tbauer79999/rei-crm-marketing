@@ -86,15 +86,15 @@ export default function Leadership() {
                   
                   <div className="space-y-4 mb-8">
                     <p className="text-[#5A626E] leading-relaxed">
-                      Tom founded SurFox AI with a clear mission: transform how businesses understand and act on human interactions. With over 20 years in sales and revenue operations, he witnessed firsthand how companies struggled to extract intelligence from their communication data.
+                      Tom Bauer founded SurFox AI to close a gap he spent two decades living inside: sales and revenue teams generate endless conversations, but most tools only count messages instead of turning them into booked pipeline.
                     </p>
-                    
+
                     <p className="text-[#5A626E] leading-relaxed">
-                      His approach is rooted in practical experience - having built and scaled sales teams, Tom understands the gap between what AI promises and what operators actually need. SurFox AI bridges that gap.
+                      He has built and led revenue organizations across multiple industries. That operator background shapes how SurFox AI is built - practical systems that qualify leads over SMS, surface buying intent, and hand sales teams conversations worth taking, not another dashboard of vanity metrics.
                     </p>
-                    
+
                     <p className="text-[#5A626E] leading-relaxed">
-                      Before SurFox AI, Tom led revenue initiatives across multiple industries, consistently identifying patterns that others missed. That pattern recognition became the foundation for SurFox Infinity's predictive analytics engine.
+                      Under Tom's leadership, SurFox AI focuses on one job done well: AI lead qualification that works real lists, follows up consistently, and books appointments. The product vision stays grounded in what operators need on Monday morning, not AI theater.
                     </p>
                   </div>
 

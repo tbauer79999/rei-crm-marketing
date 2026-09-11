@@ -15,8 +15,8 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/platform',
   },
   about: {
-    title: 'About SurFox AI - Building the Future of Sales AI',
-    description: 'Learn about SurFox AI\'s mission to transform sales through AI-powered lead qualification. Meet our team and discover our vision for AI sales.',
+    title: 'About SurFox AI - AI Lead Qualification Built for Operators',
+    description: 'SurFox AI helps businesses work every lead by SMS and web chat, so sales teams spend time on conversations that are ready to close. Built by operators, not demos.',
     keywords: ['about SurFox AI', 'AI sales company', 'SMS lead qualification company', 'sales technology'],
     path: '/about',
   },
