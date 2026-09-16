@@ -118,7 +118,7 @@ export default function Page() {
         "name": "What happens if I exceed my message or Voice minute limit?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We email you as you approach your limit so there are no surprises. You approve any overage before it is added, at $0.25/min for Voice, and you can move up a plan at any time."
+          "text": "For messages, we email you as you approach your limit, and you choose whether to purchase a top-up. Voice works differently: minutes over your plan's bucket are billed automatically at $0.25/min, no approval step. You can move up a plan at any time to raise your included amount."
         }
       },
       {

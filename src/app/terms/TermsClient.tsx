@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FileText, Shield, AlertCircle, DollarSign, Users, XCircle, Scale, ShieldCheck, MessageSquare } from 'lucide-react';
+import { FileText, Shield, AlertCircle, DollarSign, Users, XCircle, Scale, ShieldCheck, MessageSquare, Phone } from 'lucide-react';
 
 export default function TermsOfService() {
   return (
@@ -683,6 +683,53 @@ export default function TermsOfService() {
               <p>
                 When you reach your plan's Website Chat Conversation allotment for the billing period, website chat for your account will be disabled (kill switch) until the next billing period begins or you upgrade to a plan with additional capacity. Unused Website Chat Conversations do not roll over.
               </p>
+            </div>
+          </motion.div>
+
+          {/* Voice */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Phone className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Voice
+              </h2>
+            </div>
+
+            <div className="ml-0 sm:ml-16 space-y-6 text-[#5A626E] leading-relaxed">
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Voice Minutes</h3>
+                <p>
+                  If your plan includes Voice, your plan includes a stated number of Voice minutes per billing period (as shown on your plan, order, or pricing page). Voice minutes are measured by SurFox&apos;s systems for outbound and inbound Voice calls placed through the Service. Unused Voice minutes do not roll over to a later billing period unless your plan expressly says otherwise.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Voice Overage</h3>
+                <p>
+                  If you use more Voice minutes than your plan includes in a billing period, excess minutes are Voice overage. Voice overage is billed automatically at the then-current per-minute rate shown on your plan, order, or pricing page (currently $0.25 per minute, unless a different rate is stated for your account). Voice overage is charged via our payment processor on a usage basis (including periodic usage reports); we do not require a separate purchase or approval for each overage increment, and we do not block or interrupt live Voice calls when your included minutes are exhausted. By enabling or using Voice, you authorize SurFox to charge your payment method on file for Voice overage as it accrues.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Relationship to Message Overages</h3>
+                <p>
+                  Message and SMS overage (if offered) remains subject to the Fair Usage and top-up rules elsewhere in these Terms, including any requirement that you approve or purchase additional message capacity before it is charged. Those message rules do not apply to Voice overage, which is automatic as described above.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Metering</h3>
+                <p>
+                  SurFox&apos;s metering and records of Voice usage control for billing purposes, absent clear error.
+                </p>
+              </div>
             </div>
           </motion.div>
 

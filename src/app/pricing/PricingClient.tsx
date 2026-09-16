@@ -216,7 +216,7 @@ const plans: Plan[] = [
 const faqs = [
   {
     q: 'What happens if I exceed my message or Voice minute limit?',
-    a: 'We email you as you approach your limit so there are no surprises. You approve any overage before it is added, at $0.25/min for Voice, and you can move up a plan at any time.',
+    a: 'For messages, we email you as you approach your limit, and you choose whether to purchase a top-up. Voice works differently: minutes over your plan’s bucket are billed automatically at $0.25/min, no approval step. You can move up a plan at any time to raise your included amount.',
   },
   {
     q: 'How is this different from tools that only blast or only chat?',
@@ -345,9 +345,9 @@ export default function PricingClient() {
             (or you upgrade). Cost stays predictable.
           </p>
           <p className="price-note">
-            Voice minutes work the same way: $0.25/min after your bucket, and we always get your
-            approval before adding overage. Only inbound calls to your published number count.
-            CSV and reactivation lists never touch it, Voice doesn&apos;t dial them.
+            Voice minutes work differently: $0.25/min after your bucket is billed automatically,
+            no approval step. Only inbound calls to your published number count. CSV and
+            reactivation lists never touch it, Voice doesn&apos;t dial them.
           </p>
         </div>
       </section>

@@ -582,9 +582,9 @@ export default function Page() {
             (or you upgrade). Cost stays predictable.
           </p>
           <p className="price-note">
-            Voice minutes work the same way: $0.25/min after your bucket, and we always get your
-            approval before adding overage. Only inbound calls to your published number count.
-            CSV and reactivation lists never touch it, Voice doesn&apos;t dial them.
+            Voice minutes work differently: $0.25/min after your bucket is billed automatically,
+            no approval step. Only inbound calls to your published number count. CSV and
+            reactivation lists never touch it, Voice doesn&apos;t dial them.
           </p>
         </div>
       </section>
