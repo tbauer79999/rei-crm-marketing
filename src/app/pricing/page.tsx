@@ -115,10 +115,10 @@ export default function Page() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What happens if I exceed my message limit?",
+        "name": "What happens if I exceed my message or Voice minute limit?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We email you as you approach your limit so there are no surprises. You approve any overage before it is added, and you can move up a plan at any time."
+          "text": "We email you as you approach your limit so there are no surprises. You approve any overage before it is added, at $0.25/min for Voice, and you can move up a plan at any time."
         }
       },
       {
@@ -126,7 +126,7 @@ export default function Page() {
         "name": "How is this different from tools that only blast or only chat?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most tools pick one lane. Text blasters send identical messages to thousands of people and leave you to handle every reply. Chat-only tools only work the visitors who show up and open a widget on your site. SurFox AI holds a real, qualifying conversation with each lead, whether it starts over SMS or website chat, reads intent, and only hands off the contacts genuinely ready to talk. You get fewer calls, but every one is worth taking."
+          "text": "Most tools pick one lane. Text blasters send identical messages to thousands of people and leave you to handle every reply. Chat-only tools only work the visitors who show up and open a widget on your site. SurFox AI holds a real, qualifying conversation with each lead, whether it starts over SMS, website chat, or a call to your published Voice number, reads intent, and only hands off the contacts genuinely ready to talk. You get fewer calls, but every one is worth taking."
         }
       },
       {
@@ -142,7 +142,15 @@ export default function Page() {
         "name": "What happens when I hit my website chat limit?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "When you reach your plan's website chat allotment for the billing period, new website chats pause until your next billing cycle begins or you upgrade to a plan with more capacity. That keeps your cost predictable. Your SMS messages are a separate limit and are not affected."
+          "text": "When you reach your plan's website chat allotment for the billing period, new website chats pause until your next billing cycle begins or you upgrade to a plan with more capacity. That keeps your cost predictable. Your SMS messages and Voice minutes are separate limits and are not affected."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What counts as a Voice minute?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only inbound calls to your published Voice number count against your monthly bucket, from an unknown caller who isn't already in SurFox AI. Uploaded lists and reactivation campaigns never burn Voice minutes, because Voice doesn't dial them."
         }
       },
       {
