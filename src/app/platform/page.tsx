@@ -10,6 +10,7 @@ import {
   Chrome,
   LayoutDashboard,
   Building2,
+  Phone,
 } from 'lucide-react';
 import ProofResults from '../components/ProofResults';
 
@@ -18,26 +19,36 @@ export const metadata = generatePageMetadata('platform');
 const howItWorks = [
   {
     step: 1,
-    title: 'Upload your leads',
-    desc: 'Drop in a CSV or connect your CRM. SurFox AI imports your contacts instantly.',
+    title: 'Open the door',
+    job: 'Meet demand the moment it shows up, known lead or total stranger.',
+    channels: ['Form/webhook SMS · near-instant', 'Website chat · instant', 'Published Voice number · instant'],
+    pacedNote: 'Separate job: uploaded lists and reactivation stay a paced, worked-list job, not a speed race.',
   },
   {
     step: 2,
-    title: 'AI engages via SMS',
-    desc: 'Personalized, two-way text conversations start automatically. No scripts, no templates, real conversations that adapt.',
+    title: 'Qualify & create',
+    job: 'Ask follow-up questions, handle objections, and score real intent, no scripts or templates.',
+    channels: ['SMS', 'Website chat', 'Voice'],
+    note: 'Scored the same way on every door. A Voice call from someone new creates the lead record on the spot.',
   },
   {
     step: 3,
-    title: 'Hot leads surface to your team',
-    desc: 'Qualified prospects get flagged and appointments get booked. Your team picks up from there.',
+    title: 'Book or hand off',
+    job: "Qualified leads land on your calendar, or get a live transfer the moment they're ready to talk.",
+    channels: ['Calendar hold', 'Voice live transfer', 'Hot notify'],
   },
 ];
 
 const features = [
   {
     icon: MessageSquare,
-    title: 'AI SMS Conversations',
-    desc: 'Two-way, personalized conversations with every lead automatically.',
+    title: 'AI SMS & Website Chat Conversations',
+    desc: 'Two-way, personalized conversations with every lead automatically, wherever they start.',
+  },
+  {
+    icon: Phone,
+    title: 'Voice: Publish a Number',
+    desc: "Unknown callers dial in, get qualified in a real conversation, and become a lead. Hot ones reach your team by live transfer or hot notify.",
   },
   {
     icon: Star,
@@ -100,11 +111,13 @@ export default function Page() {
       <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-24 sm:py-28 md:py-36">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#13171F] mb-8 leading-[1.05] tracking-tight">
-            AI that texts your leads, qualifies them, and books appointments, 24/7.
+            AI that qualifies your leads, then gets your team on the phone, 24/7.
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-10 max-w-3xl mx-auto leading-relaxed">
-            Upload your leads. SurFox AI handles the conversation. Your team only talks to people who are ready.
+            SurFox AI meets leads on SMS, website chat, or a call to your published Voice number,
+            has the qualifying conversation, and gets the hot ones to your team the moment
+            they&apos;re ready.
           </p>
 
           <p className="text-base sm:text-lg font-semibold text-[#5A626E] mb-10 max-w-3xl mx-auto leading-relaxed">
@@ -138,7 +151,8 @@ export default function Page() {
               How it works
             </h2>
             <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed">
-              Three steps from a list of leads to a calendar full of qualified appointments.
+              Three steps from first contact to a qualified conversation, whichever door the lead
+              walks through.
             </p>
           </div>
 
@@ -152,9 +166,72 @@ export default function Page() {
                   {item.step}
                 </div>
                 <h3 className="text-xl font-semibold text-[#13171F] mb-3">{item.title}</h3>
-                <p className="text-[#5A626E] leading-relaxed">{item.desc}</p>
+                <p className="text-[#5A626E] leading-relaxed mb-4">{item.job}</p>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {item.channels.map((c) => (
+                    <span
+                      key={c}
+                      className="px-2.5 py-1 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] text-[#0A7C8C] text-xs font-semibold"
+                    >
+                      {c}
+                    </span>
+                  ))}
+                </div>
+                {item.pacedNote && (
+                  <p className="text-xs text-[#8A92A0] leading-relaxed bg-white border border-dashed border-[#D8DBD6] rounded-lg px-3 py-2">
+                    {item.pacedNote}
+                  </p>
+                )}
+                {item.note && (
+                  <p className="text-xs text-[#8A92A0] leading-relaxed">{item.note}</p>
+                )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Voice - equal weight to SMS and website chat, not a footnote */}
+      <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white border-y border-[#E4E6E2]">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+          <div>
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] text-[#0A7C8C] text-xs font-semibold uppercase tracking-[.08em] mb-5">
+              Voice
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6 leading-tight">
+              Publish a number. Capture unknown callers.
+            </h2>
+            <p className="text-lg text-[#5A626E] leading-relaxed mb-4">
+              Turn on Voice as your third channel and publish the number, on your site, in ads,
+              as your missed-call line, on Google Business.
+            </p>
+            <p className="text-lg text-[#5A626E] leading-relaxed mb-4">
+              When someone who isn&apos;t already in SurFox AI calls, the AI answers in the
+              moment, qualifies them in a real conversation, and creates the lead. Hot intent
+              gets a live transfer to your number, or an instant hot notify to your team.
+            </p>
+            <p className="text-sm text-[#8A92A0] leading-relaxed">
+              Inbound form or webhook leads get the same near-instant SMS treatment, gated by
+              DNC/TCPA. Uploaded lists and reactivation stay a paced, worked-list job, and Voice
+              never dials them.
+            </p>
+          </div>
+          <div className="p-8 rounded-[22px] border border-[#E4E6E2] bg-[#F4F5F3]">
+            <ol className="space-y-6">
+              {[
+                'Publish your Voice number',
+                'An unknown caller dials in',
+                'The AI answers, qualifies, and creates the lead',
+                'Live transfer to you, or an instant hot notify',
+              ].map((label, i) => (
+                <li key={label} className="flex items-start gap-4">
+                  <span className="w-8 h-8 rounded-full bg-[#13171F] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
+                    {i + 1}
+                  </span>
+                  <span className="text-[#13171F] font-medium leading-relaxed pt-1">{label}</span>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </section>
@@ -211,6 +288,11 @@ export default function Page() {
               </div>
             ))}
           </div>
+          <p className="text-sm text-[#8A92A0] mt-8 max-w-xl mx-auto leading-relaxed">
+            Retell AI powers Voice: unknown callers get answered and qualified in a real
+            conversation, then hot ones get a live transfer or hot notify to your team.
+            It&apos;s not an outbound dialer working your list.
+          </p>
         </div>
       </section>
 

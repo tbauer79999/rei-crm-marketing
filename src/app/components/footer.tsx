@@ -111,7 +111,8 @@ export default function Footer() {
               className="h-[34px] w-auto object-contain mb-4"
             />
             <p className="text-sm text-[#5A626E] max-w-[260px] leading-relaxed mb-6">
-              AI that texts, qualifies, and books your leads, autonomously.
+              AI that qualifies your leads over SMS, website chat, and inbound Voice calls, then
+              gets your team on the phone, autonomously.
             </p>
 
             {isSubmitted ? (

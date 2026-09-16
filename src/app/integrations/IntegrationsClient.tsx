@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageSquare, Mail, Phone, Database, CreditCard, ShoppingCart, Calendar, CheckCircle, Clock, Circle, LayoutDashboard, Users } from 'lucide-react';
+import { ArrowRight, MessageSquare, Mail, Phone, Database, Calendar, LayoutDashboard, Users, Briefcase, Zap } from 'lucide-react';
 
 const API_URL = 'https://api.surfox.ai/api/public/contact-sales';
 
@@ -45,12 +45,12 @@ export default function Integrations() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl font-bold text-[#13171F] mb-6 sm:mb-8 leading-[1.1] tracking-tight">
-              Connect Every{' '}<br className="hidden sm:block" />
-              Human Signal
+              Works with the tools{' '}<br className="hidden sm:block" />
+              you already run
             </h1>
-            
+
             <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 max-w-3xl mx-auto leading-relaxed">
-              SurFox AI is built to ingest data from any source - communication channels, business systems, and transaction platforms. Today we start with SMS. Here's where we're headed.
+              SurFox AI qualifies your leads over SMS, website chat, and inbound Voice calls, then pushes hot ones straight into your CRM, your calendar, or your team's phone. No rip-and-replace, it plugs into what you already run.
             </p>
           </motion.div>
         </div>
@@ -92,7 +92,7 @@ export default function Integrations() {
                     <span className="px-2 py-1 rounded-full bg-[#EAF7F9] border border-[#dCEEF1] text-[#0A7C8C] text-xs font-semibold">FEATURED</span>
                   </div>
                   <p className="text-[#5A626E] text-sm leading-relaxed max-w-2xl">
-                    Connect SurFox AI to your GHL pipelines via Zapier. When a contact hits a stage, AI starts qualifying them via SMS. Hot leads are tagged and pushed straight back into your pipeline automatically.
+                    Native two-way sync with your GHL pipelines. When a contact hits a stage, SurFox AI starts qualifying them, tags hot leads, and pushes them straight back into your pipeline automatically.
                   </p>
                 </div>
               </div>
@@ -130,6 +130,50 @@ export default function Integrations() {
               </span>
             </motion.a>
 
+            {/* Odoo */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.02 }}
+              className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm flex flex-col"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
+                  <Database className="w-6 h-6 text-green-600" />
+                </div>
+                <span className="px-2 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                  LIVE
+                </span>
+              </div>
+              <h3 className="text-lg font-semibold text-[#13171F] mb-2">Odoo</h3>
+              <p className="text-[#5A626E] text-sm leading-relaxed">
+                Sync Odoo CRM leads to SurFox AI by stage, with hot-lead write-back once a conversation qualifies.
+              </p>
+            </motion.div>
+
+            {/* RecruiterFlow */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.04 }}
+              className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm flex flex-col"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
+                  <Briefcase className="w-6 h-6 text-green-600" />
+                </div>
+                <span className="px-2 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                  LIVE
+                </span>
+              </div>
+              <h3 className="text-lg font-semibold text-[#13171F] mb-2">RecruiterFlow</h3>
+              <p className="text-[#5A626E] text-sm leading-relaxed">
+                Native ATS integration. SurFox AI qualifies candidates and syncs hot leads straight back as RecruiterFlow candidates.
+              </p>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -147,6 +191,27 @@ export default function Integrations() {
               <h3 className="text-lg font-semibold text-[#13171F] mb-2">Twilio SMS</h3>
               <p className="text-[#5A626E] text-sm leading-relaxed">
                 Two-way SMS conversations powered by Twilio. A2P 10DLC compliant with full message tracking and delivery confirmation.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.03 }}
+              className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-green-600" />
+                </div>
+                <span className="px-2 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                  LIVE
+                </span>
+              </div>
+              <h3 className="text-lg font-semibold text-[#13171F] mb-2">Retell Voice</h3>
+              <p className="text-[#5A626E] text-sm leading-relaxed">
+                Inbound Voice AI, powered by Retell. Publish a number, and unknown callers get answered and qualified in a real conversation, not a script tree. Hot ones get a live transfer or an instant hot notify, not an outbound dialer.
               </p>
             </motion.div>
 
@@ -201,7 +266,7 @@ export default function Integrations() {
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
-                  <ArrowRight className="w-6 h-6 text-green-600" />
+                  <Zap className="w-6 h-6 text-green-600" />
                 </div>
                 <span className="px-2 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
                   LIVE
@@ -244,10 +309,10 @@ export default function Integrations() {
                 name: 'WhatsApp Business', 
                 desc: 'Connect with customers on WhatsApp through the official Business API.'
               },
-              { 
-                icon: Phone, 
-                name: 'Voice Transcription', 
-                desc: 'Ingest call recordings and transcribe them for unified lead intelligence.'
+              {
+                icon: Phone,
+                name: 'Voice Call Transcription',
+                desc: 'Ingest recordings from calls your team already takes and transcribe them for unified lead intelligence. Separate from live Voice AI qualification, which is available today.'
               }
             ].map((integration, i) => (
               <motion.div
@@ -271,81 +336,6 @@ export default function Integrations() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* On the Roadmap */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12"
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-3 h-3 rounded-full bg-[#c2c7cd]"></div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">On the Roadmap</h2>
-            </div>
-            <p className="text-[#5A626E]">Planned integrations as SurFox AI expands to multi-signal intelligence.</p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              { icon: Database, name: 'Salesforce', category: 'CRM' },
-              { icon: Database, name: 'HubSpot', category: 'CRM' },
-              { icon: Database, name: 'Pipedrive', category: 'CRM' },
-              { icon: Database, name: 'Zoho CRM', category: 'CRM' },
-              { icon: ShoppingCart, name: 'Shopify', category: 'E-Commerce' },
-              { icon: ShoppingCart, name: 'WooCommerce', category: 'E-Commerce' },
-              { icon: CreditCard, name: 'Stripe', category: 'Payments' },
-              { icon: CreditCard, name: 'Square', category: 'Payments' },
-              { icon: MessageSquare, name: 'Slack', category: 'Messaging' },
-              { icon: MessageSquare, name: 'Microsoft Teams', category: 'Messaging' },
-              { icon: MessageSquare, name: 'Intercom', category: 'Support' },
-              { icon: MessageSquare, name: 'Zendesk', category: 'Support' },
-            ].map((integration, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.03 }}
-                className="p-4 rounded-xl border border-[#E4E6E2] bg-white flex items-center gap-3"
-              >
-                <div className="w-10 h-10 rounded-lg bg-[#EAF7F9] flex items-center justify-center flex-shrink-0">
-                  <integration.icon className="w-5 h-5 text-[#8A92A0]" />
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold text-[#13171F]">{integration.name}</h3>
-                  <p className="text-xs text-[#8A92A0]">{integration.category}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* The Vision */}
-      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-white text-[#13171F]">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-              The bigger picture
-            </h2>
-            
-            <p className="text-lg text-[#8A92A0] leading-relaxed mb-6">
-              Today, SurFox AI starts with SMS - one channel, one signal type. But the architecture is built to ingest everything: calls, emails, transactions, reviews, bookings, support tickets.
-            </p>
-            
-            <p className="text-lg text-[#8A92A0] leading-relaxed">
-              Each integration adds another signal to the intelligence layer. The more signals flow in, the smarter SurFox AI gets about your customers.
-            </p>
-          </motion.div>
         </div>
       </section>
 
@@ -409,9 +399,9 @@ export default function Integrations() {
             </h2>
             
             <p className="text-lg text-[#5A626E] mb-8 leading-relaxed">
-              AI-powered SMS lead qualification is ready now. Get started and be first in line as new integrations go live.
+              AI-powered lead qualification over SMS, website chat, and Voice is ready now. Get started and be first in line as new integrations go live.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.a
                 href="/pricing"
@@ -422,14 +412,14 @@ export default function Integrations() {
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </motion.a>
-              
+
               <motion.a
                 href="/platform"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-4 rounded-lg border-2 border-[#E4E6E2] text-[#13171F] font-semibold hover:border-[#c9cdc7] hover:bg-[#EDEEEB] transition"
               >
-                See the Full Vision
+                See How It Works
               </motion.a>
             </div>
           </motion.div>

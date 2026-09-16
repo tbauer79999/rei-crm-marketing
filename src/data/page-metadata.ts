@@ -10,7 +10,7 @@ export interface PageMetadataConfig {
 export const pageMetadata: Record<string, PageMetadataConfig> = {
   platform: {
     title: 'How SurFox AI Works',
-    description: 'SurFox AI handles every lead conversation from first text to booked call. Upload your leads, set your goal, and your team only talks to people who are ready.',
+    description: 'SurFox AI engages every lead over SMS, website chat, or an inbound phone call, qualifies the conversation, and gets your team on the phone the moment they\'re ready, by live transfer or instant notification.',
     keywords: ['SMS lead qualification software', 'conversational AI platform', 'automated lead follow up', 'AI sales automation', 'lead response automation'],
     path: '/platform',
   },
@@ -236,7 +236,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
  * product description and pricing tiers cannot drift apart across the site.
  */
 export const SOFTWARE_APP_DESCRIPTION =
-  'AI-powered SMS lead qualification platform that responds to inbound leads within seconds, qualifies conversations autonomously, and hands sales teams a warm prospect ready to close, 24 hours a day, 7 days a week.';
+  'AI-powered lead qualification platform that engages leads over SMS, website chat, and inbound phone calls within seconds, qualifies the conversation autonomously by text, chat, or voice, and hands sales teams a warm prospect, by live phone transfer or instant notification, 24 hours a day, 7 days a week.';
 
 const SOFTWARE_APP_TIERS = [
   { name: 'Starter', price: '147', slug: 'starter' },

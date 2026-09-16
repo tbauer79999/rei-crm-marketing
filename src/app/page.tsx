@@ -8,9 +8,9 @@ import './home.css';
 export const metadata: Metadata = {
   // Stored fully branded: the root layout's `%s | SurFox AI` template does not apply to the
   // root segment's own page, so this string renders as-is.
-  title: 'SurFox AI | AI Lead Qualification for SMS & Website Chat',
+  title: 'SurFox AI | AI Lead Qualification for SMS, Website Chat & Voice',
   description:
-    'SurFox AI qualifies leads over SMS and website chat, then books the call. Upload your list or add the chat widget to your site and watch cold leads and website visitors become booked calls.',
+    'SurFox AI qualifies leads over SMS, website chat, and inbound Voice calls, then gets your team on the phone the moment one is ready. Upload your list, add the chat widget, or publish your Voice number, and watch leads become booked calls.',
   keywords: [
     'SMS lead qualification',
     'website chat lead qualification',
@@ -26,18 +26,18 @@ export const metadata: Metadata = {
     'lead scoring software',
   ],
   openGraph: {
-    title: 'SurFox AI | AI Lead Qualification for SMS & Website Chat',
+    title: 'SurFox AI | AI Lead Qualification for SMS, Website Chat & Voice',
     description:
-      'SurFox AI qualifies leads over SMS and website chat, then books the call. Same AI, two places for leads to start.',
+      'SurFox AI qualifies leads over SMS, website chat, and inbound Voice calls, then gets your team on the phone. Same AI job, three doors in.',
     url: 'https://www.getsurfox.com',
     type: 'website',
     siteName: 'SurFox AI',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SurFox AI | AI Lead Qualification for SMS & Website Chat',
+    title: 'SurFox AI | AI Lead Qualification for SMS, Website Chat & Voice',
     description:
-      'SurFox AI qualifies leads over SMS and website chat, then books the call. Same AI, two places for leads to start.',
+      'SurFox AI qualifies leads over SMS, website chat, and inbound Voice calls, then gets your team on the phone. Same AI job, three doors in.',
   },
   alternates: {
     canonical: 'https://www.getsurfox.com',
@@ -58,7 +58,7 @@ const plans = [
     name: 'Starter',
     desc: 'For operators testing the waters on a focused list.',
     price: '$147',
-    vol: '2,000 SMS + 200 website chats / mo',
+    vol: '2,000 SMS + 200 website chats + 100 Voice min / mo',
     features: [
       'AI conversation engine',
       '50 qualification signals tracked',
@@ -73,7 +73,7 @@ const plans = [
     name: 'Growth',
     desc: 'For teams ready to work a full list every month.',
     price: '$597',
-    vol: '10,000 SMS + 500 website chats / mo',
+    vol: '10,000 SMS + 500 website chats + 400 Voice min / mo',
     features: [
       'Everything in Starter',
       'Conversation learning (last 100)',
@@ -88,7 +88,7 @@ const plans = [
     name: 'Growth Plus',
     desc: 'Full Scale intelligence, sized for a 25,000 message month.',
     price: '$1,497',
-    vol: '25,000 SMS + 2,000 website chats / mo',
+    vol: '25,000 SMS + 2,000 website chats + 1,000 Voice min / mo',
     features: [
       'Everything in Growth',
       'Conversation learning (last 1,000)',
@@ -103,7 +103,7 @@ const plans = [
     name: 'Scale',
     desc: 'For high-volume operations running constant campaigns.',
     price: '$2,497',
-    vol: '40,000 SMS + 5,000 website chats / mo',
+    vol: '40,000 SMS + 5,000 website chats + 2,000 Voice min / mo',
     features: [
       'Everything in Growth Plus',
       'Conversation learning (last 1,000)',
@@ -132,7 +132,7 @@ export default function Page() {
             logo: 'https://www.getsurfox.com/newSurFoxLogo1.png',
             foundingDate: '2024',
             description:
-              'AI-powered SMS lead qualification platform that automatically engages, scores, and qualifies cold leads at scale',
+              'AI-powered lead qualification platform that automatically engages leads over SMS, website chat, and inbound phone calls, scores the conversation, and connects hot leads to your team by phone or instant notification',
             address: {
               '@type': 'PostalAddress',
               addressLocality: 'Orlando',
@@ -196,7 +196,7 @@ export default function Page() {
                 name: 'How is SurFox AI different from tools that only blast or only chat?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Most tools pick one lane. Text blasters like SmarterContact or Launch Control send identical messages to thousands of contacts and rely on you to manually handle the replies. Chat-only tools like Qualified or Spara only work the visitors who show up and open a widget on your site. SurFox AI has real, qualifying conversations with each lead, whether it starts over SMS or website chat. It asks follow-up questions, handles objections, and flags only the contacts ready to talk. You get fewer calls, but every one is worth taking.',
+                  text: 'Most tools pick one lane. Text blasters like SmarterContact or Launch Control send identical messages to thousands of contacts and rely on you to manually handle the replies. Chat-only tools like Qualified or Spara only work the visitors who show up and open a widget on your site. SurFox AI has real, qualifying conversations with each lead, whether it starts over SMS, website chat, or a phone call to your published Voice number. It asks follow-up questions, handles objections, and flags only the contacts ready to talk. When a lead is hot, your team gets a live transfer or an instant notification, not just another message. You get fewer calls, but every one is worth taking.',
                 },
               },
               {
@@ -260,15 +260,18 @@ export default function Page() {
               <span className="chip">SMS</span>
               <span className="chip-sep">·</span>
               <span className="chip">Website chat</span>
+              <span className="chip-sep">·</span>
+              <span className="chip">Voice</span>
             </div>
             <h1 className="disp">
               Cold leads become <em>calendar holds,</em> without the chase.
             </h1>
             <p className="lede">
-              SMS when the lead arrives. Website chat when they browse. You show up to the call.
+              A lead replies by text, chats on your site, or calls your published number.
+              SurFox AI answers in seconds, whichever door they use.
             </p>
             <p className="capsule">
-              SurFox AI qualifies on your list and on your site. Same AI job, two doors in. Runs
+              SurFox AI answers the moment they reach out. Same AI job, three doors in. Runs
               24/7.
             </p>
             <div className="hero-cta">
@@ -284,7 +287,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* DUAL DEMO STRIP - SMS thread and web chat widget, side by side */}
+      {/* CHANNEL STRIP - SMS thread, web chat widget, and an unknown caller qualified live by Voice */}
       <section className="dual-demo" id="channels">
         <div className="wrap">
           <div className="dual-grid">
@@ -295,6 +298,7 @@ export default function Page() {
                 </svg>
                 SMS
               </span>
+              <p className="dual-mode">Inbound reply, instant. Uploaded list, paced, never a blast.</p>
               <div className="mini-phone-frame">
                 <div className="mini-phone">
                   <div className="mini-notch" />
@@ -333,6 +337,7 @@ export default function Page() {
                 </svg>
                 Website chat
               </span>
+              <p className="dual-mode">Instant, the moment a stranger opens the widget.</p>
               <div className="mini-browser">
                 <div className="mini-bbar">
                   <i className="tl-red" />
@@ -375,8 +380,40 @@ export default function Page() {
                 Handed to sales
               </div>
             </div>
+            <div className="dual-card" id="voice">
+              <span className="dual-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                Voice
+              </span>
+              <p className="dual-mode">Instant, the moment a stranger calls your published number.</p>
+              <div className="mini-phone-frame">
+                <div className="mini-phone mini-callscreen">
+                  <div className="mini-notch" />
+                  <div className="mini-call-avatar">?</div>
+                  <div className="mini-call-name">Unknown caller</div>
+                  <div className="mini-call-sub">Dialed your published Voice number</div>
+                  <div className="mini-call-transcript">
+                    <p className="mini-call-line ai">
+                      &ldquo;Thanks for calling, what&apos;s got you looking today?&rdquo;
+                    </p>
+                    <p className="mini-call-line them">
+                      &ldquo;I&apos;ve got a rental I might sell.&rdquo;
+                    </p>
+                  </div>
+                  <div className="mini-call-status">
+                    <span className="mini-live" /> Creating lead&hellip;
+                  </div>
+                </div>
+              </div>
+              <div className="mini-outcome">
+                <span className="mo-dot" /> Hot · qualified <span className="mo-sep">·</span>{' '}
+                New lead, live transfer
+              </div>
+            </div>
           </div>
-          <p className="dual-caption">Same job. Two places leads start.</p>
+          <p className="dual-caption">Same job. Three places leads start.</p>
         </div>
       </section>
 
@@ -543,6 +580,11 @@ export default function Page() {
           <p className="price-note">
             When you hit your website chat limit, new chats pause until your next billing cycle
             (or you upgrade). Cost stays predictable.
+          </p>
+          <p className="price-note">
+            Voice minutes work the same way: $0.25/min after your bucket, and we always get your
+            approval before adding overage. Only inbound calls to your published number count.
+            CSV and reactivation lists never touch it, Voice doesn&apos;t dial them.
           </p>
         </div>
       </section>

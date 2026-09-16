@@ -39,6 +39,10 @@ const plans: Plan[] = [
             t: '200 website chat conversations per month',
             sub: 'Qualifies inbound website visitors 24/7.',
           },
+          {
+            t: '100 Voice minutes per month',
+            sub: 'Only inbound calls to your published number count. CSV and reactivation lists never touch it, Voice doesn’t dial them.',
+          },
           { t: '1 team member account' },
         ],
       },
@@ -84,6 +88,10 @@ const plans: Plan[] = [
             t: '500 website chat conversations per month',
             sub: 'Qualifies inbound website visitors 24/7.',
           },
+          {
+            t: '400 Voice minutes per month',
+            sub: 'Only inbound calls to your published number count. CSV and reactivation lists never touch it, Voice doesn’t dial them.',
+          },
           { t: '5 team member accounts' },
         ],
       },
@@ -127,6 +135,10 @@ const plans: Plan[] = [
           {
             t: '2,000 website chat conversations per month',
             sub: 'Qualifies inbound website visitors 24/7.',
+          },
+          {
+            t: '1,000 Voice minutes per month',
+            sub: 'Only inbound calls to your published number count. CSV and reactivation lists never touch it, Voice doesn’t dial them.',
           },
           { t: '15 team member accounts' },
         ],
@@ -172,6 +184,10 @@ const plans: Plan[] = [
             t: '5,000 website chat conversations per month',
             sub: 'Qualifies inbound website visitors 24/7.',
           },
+          {
+            t: '2,000 Voice minutes per month',
+            sub: 'Only inbound calls to your published number count. CSV and reactivation lists never touch it, Voice doesn’t dial them.',
+          },
           { t: '15+ team member accounts' },
         ],
       },
@@ -199,12 +215,12 @@ const plans: Plan[] = [
 
 const faqs = [
   {
-    q: 'What happens if I exceed my message limit?',
-    a: 'We email you as you approach your limit so there are no surprises. You approve any overage before it is added, and you can move up a plan at any time.',
+    q: 'What happens if I exceed my message or Voice minute limit?',
+    a: 'We email you as you approach your limit so there are no surprises. You approve any overage before it is added, at $0.25/min for Voice, and you can move up a plan at any time.',
   },
   {
     q: 'How is this different from tools that only blast or only chat?',
-    a: 'Most tools pick one lane. Text blasters send identical messages to thousands of people and leave you to handle every reply. Chat-only tools only work the visitors who show up and open a widget on your site. SurFox AI holds a real, qualifying conversation with each lead, whether it starts over SMS or website chat, reads intent, and only hands off the contacts genuinely ready to talk. You get fewer calls, but every one is worth taking.',
+    a: 'Most tools pick one lane. Text blasters send identical messages to thousands of people and leave you to handle every reply. Chat-only tools only work the visitors who show up and open a widget on your site. SurFox AI holds a real, qualifying conversation with each lead, whether it starts over SMS, website chat, or a call to your published Voice number, reads intent, and only hands off the contacts genuinely ready to talk. You get fewer calls, but every one is worth taking.',
   },
   {
     q: 'What counts as a website chat?',
@@ -212,7 +228,11 @@ const faqs = [
   },
   {
     q: 'What happens when I hit my website chat limit?',
-    a: "When you reach your plan's website chat allotment for the billing period, new website chats pause until your next billing cycle begins or you upgrade to a plan with more capacity. That keeps your cost predictable. Your SMS messages are a separate limit and are not affected.",
+    a: "When you reach your plan's website chat allotment for the billing period, new website chats pause until your next billing cycle begins or you upgrade to a plan with more capacity. That keeps your cost predictable. Your SMS messages and Voice minutes are separate limits and are not affected.",
+  },
+  {
+    q: 'What counts as a Voice minute?',
+    a: "Only inbound calls to your published Voice number count against your monthly bucket, from an unknown caller who isn't already in SurFox AI. Uploaded lists and reactivation campaigns never burn Voice minutes, because Voice doesn't dial them.",
   },
   {
     q: 'When will I see my first qualified lead?',
@@ -260,7 +280,8 @@ export default function PricingClient() {
             <h2 className="disp">Pay for messages, not headcount.</h2>
             <p>
               Real conversational AI at SMB pricing. Every plan is backed by a 30-day money-back
-              guarantee and includes the same AI that texts, qualifies, and books your leads.
+              guarantee and includes the same AI that qualifies and books your leads over SMS,
+              website chat, and Voice.
             </p>
           </div>
         </div>
@@ -322,6 +343,11 @@ export default function PricingClient() {
           <p className="price-note">
             When you hit your website chat limit, new chats pause until your next billing cycle
             (or you upgrade). Cost stays predictable.
+          </p>
+          <p className="price-note">
+            Voice minutes work the same way: $0.25/min after your bucket, and we always get your
+            approval before adding overage. Only inbound calls to your published number count.
+            CSV and reactivation lists never touch it, Voice doesn&apos;t dial them.
           </p>
         </div>
       </section>

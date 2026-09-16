@@ -2,7 +2,7 @@
 
 /* =============================================================================
    NAV - Homepage redesign ("Thread")
-   Minimal light-mode SaaS nav: Logo | Solutions ▾ | Pricing | Company ▾ |
+   Minimal light-mode SaaS nav: Logo | Platform | Solutions ▾ | Pricing | Company ▾ |
    Sign in | Start free trial. Hover/focus dropdowns as white cards, one ink CTA.
    ============================================================================= */
 
@@ -105,6 +105,12 @@ export default function Nav() {
 
         {/* Desktop links */}
         <nav className="hidden md:flex items-center gap-[30px]">
+          <Link
+            href="/platform"
+            className="text-sm font-medium text-[#5A626E] hover:text-[#13171F] transition-colors"
+          >
+            Platform
+          </Link>
           <Dropdown label="Solutions" links={productLinks} />
           <Link
             href="/pricing"
@@ -156,6 +162,13 @@ export default function Nav() {
           style={{ fontFamily: 'var(--font-plus-jakarta-sans)' }}
         >
           <div className="px-8 py-6 flex flex-col gap-1">
+            <Link
+              href="/platform"
+              onClick={() => setMobileOpen(false)}
+              className="py-2 text-sm font-medium text-[#5A626E] hover:text-[#13171F]"
+            >
+              Platform
+            </Link>
             <p className="text-[11px] font-medium uppercase tracking-[.12em] text-[#8A92A0] mt-2 mb-1">
               Solutions
             </p>
