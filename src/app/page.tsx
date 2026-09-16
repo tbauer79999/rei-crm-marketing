@@ -196,7 +196,7 @@ export default function Page() {
                 name: 'How is SurFox AI different from tools that only blast or only chat?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Most tools pick one lane. Text blasters like SmarterContact or Launch Control send identical messages to thousands of contacts and rely on you to manually handle the replies. Chat-only tools like Qualified or Spara only work the visitors who show up and open a widget on your site. SurFox AI has real, qualifying conversations with each lead, whether it starts over SMS, website chat, or a call to your published Voice number, where an unknown caller gets answered, qualified, and turned into a lead. It asks follow-up questions, handles objections, and flags only the contacts ready to talk. When a lead is hot, your team gets a live transfer or an instant notification, not just another message. You get fewer calls, but every one is worth taking.',
+                  text: 'Most tools pick one lane. Text blasters send the same message to thousands and leave you to handle replies. Chat-only tools only work visitors who open a widget. Dialers only work people who already pick up. SurFox AI has real qualifying conversations whether the lead texts back, chats on your site, or calls your published number. Same AI job, three doors in. You get fewer handoffs, and every one is ready to talk.',
                 },
               },
               {
@@ -595,12 +595,8 @@ export default function Page() {
       {/* FINAL CTA */}
       <section style={{ paddingTop: 8 }}>
         <div className="wrap cta">
-          <h2 className="disp">
-            Someone&apos;s reaching out
-            <br />
-            <em>right now.</em>
-          </h2>
-          <p>Pick a door: text, chat, or publish a number.</p>
+          <h2 className="disp">Pick a door: text, chat, or publish a number.</h2>
+          <p>SurFox AI answers in seconds, qualifies, and books the call.</p>
           <a
             className="btn btn-cyan"
             href="#pricing"
