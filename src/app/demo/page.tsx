@@ -88,6 +88,21 @@ export default function Page() {
             src="https://assets.calendly.com/assets/external/widget.js"
             strategy="afterInteractive"
           />
+          <Script
+            id="calendly-oai-conversion"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.addEventListener('message', function(e) {
+                  if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+                    if (window.oaiq) {
+                      oaiq('track', 'Appointment scheduled');
+                    }
+                  }
+                });
+              `
+            }}
+          />
         </div>
       </section>
 
