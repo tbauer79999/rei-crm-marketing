@@ -24,15 +24,15 @@ const breadcrumbSchema = generateCompareBreadcrumb('Meera AI', '/compare/surfox-
 const faqData = [
   {
     question: "What's the difference between SurFox AI and Meera AI?",
-    answer: "Meera AI is built for call centers - it focuses on getting leads on the phone via warm transfers. SurFox AI is built for lead intelligence - it qualifies leads via SMS before your team ever gets involved. Meera requires agents standing by; SurFox AI works while you sleep.",
+    answer: "Meera AI is built for call centers - it focuses on getting leads on the phone via warm transfers, to anyone who answers. SurFox AI is built for lead intelligence: it qualifies leads over SMS, website chat, and its own published Voice number before your team ever gets involved, then hands off or live-transfers the ones that are hot. Meera requires agents standing by; SurFox AI works while you sleep.",
   },
   {
     question: "Can SurFox AI replace my call center?",
-    answer: "Not exactly - SurFox AI replaces the need for a call center in the first place. Instead of transferring every lead to waiting agents, SurFox AI qualifies leads via SMS and only surfaces the ones worth calling. Your team calls pre-vetted leads, not random transfers.",
+    answer: "Not exactly - SurFox AI replaces the need for a call center in the first place. Instead of transferring every caller to waiting agents, SurFox AI qualifies leads over SMS, website chat, and a published Voice number, and only surfaces or live-transfers the ones worth calling. Your team talks to pre-vetted leads, not random transfers.",
   },
   {
     question: "Is SurFox AI good for inbound leads?",
-    answer: "SurFox AI works for both inbound and outbound, but it really shines with outbound reactivation - reviving old leads you already paid for. If you need pure inbound call handling, Meera might be a better fit. If you want AI-powered lead qualification, choose SurFox AI.",
+    answer: "Yes. SurFox AI handles inbound on text, website chat, and its own published Voice number, where an unknown caller gets a real qualifying conversation before any transfer happens. It also shines at outbound reactivation, reviving old leads you already paid for. The difference from Meera on phone calls specifically: Meera transfers everyone who calls in, SurFox AI qualifies the caller first and only transfers the ones worth your team's time.",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function Page() {
                   </div>
                   <div className="text-left">
                     <div className="text-2xl font-semibold text-[#13171F]">SurFox AI</div>
-                    <div className="text-sm text-[#5A626E]">SMS Lead Qualification</div>
+                    <div className="text-sm text-[#5A626E]">AI Lead Qualification - SMS, Chat &amp; Voice</div>
                   </div>
                 </div>
 
@@ -97,15 +97,15 @@ export default function Page() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#13171F] mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
-                SMS Qualification<br className="hidden sm:block" />
-                vs Call Transfers
+                Qualified Transfers<br className="hidden sm:block" />
+                vs Blind Transfers
               </h1>
 
               <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-4 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-                <strong className="text-[#13171F]">Meera gets leads on the phone.</strong>
+                <strong className="text-[#13171F]">Meera transfers every caller to a waiting agent.</strong>
               </p>
               <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-                <strong className="text-[#0A7C8C]">SurFox AI tells you which leads are worth calling.</strong>
+                <strong className="text-[#0A7C8C]">SurFox AI qualifies on text, chat, or its own Voice line first, then tells you who's worth calling.</strong>
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
@@ -209,7 +209,7 @@ export default function Page() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI</h3>
-                    <p className="text-sm text-[#5A626E]">SMS Lead Qualification Platform</p>
+                    <p className="text-sm text-[#5A626E]">AI Lead Qualification - SMS, Chat &amp; Voice</p>
                   </div>
                 </div>
 
@@ -222,6 +222,10 @@ export default function Page() {
                   <div className="space-y-3">
                     <div className="flex items-start text-sm text-[#5A626E]">
                       <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
+                      <span>Its own published Voice number: AI qualifies the caller live, then transfers only the hot ones</span>
+                    </div>
+                    <div className="flex items-start text-sm text-[#5A626E]">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                       <span>Dead lead resurrection and outbound reactivation</span>
                     </div>
                     <div className="flex items-start text-sm text-[#5A626E]">
@@ -230,7 +234,7 @@ export default function Page() {
                     </div>
                     <div className="flex items-start text-sm text-[#5A626E]">
                       <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
-                      <span>Qualify before human touch - not transfer to call center</span>
+                      <span>Qualifies before every handoff, on SMS, chat, or a live Voice transfer, not a blind transfer to a call center</span>
                     </div>
                     <div className="flex items-start text-sm text-[#5A626E]">
                       <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
@@ -420,6 +424,11 @@ export default function Page() {
                 so the cost of re-opening ten thousand cold records is the same whether three of them reply or
                 three hundred do.
               </p>
+              <p className="text-[#5A626E] leading-relaxed max-w-3xl mx-auto text-center mt-4">
+                Blind transfer just moves the triage problem from your calendar to your agents' desks, every
+                call still needs someone to work out if it was worth answering. SurFox AI does that qualifying
+                before the transfer happens, whether the door is its own Voice line, SMS, or website chat.
+              </p>
               <p className="text-sm text-[#5A626E] text-center mt-6">
                 Want the arithmetic?{' '}
                 <a href="/compare/surfox-vs-smarter-contact" className="text-[#0A7C8C] font-semibold underline">
@@ -504,7 +513,11 @@ export default function Page() {
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
-                    <span>You want AI to qualify before your team gets involved</span>
+                    <span>You want inbound calls qualified before they're transferred, not blind transfers</span>
+                  </div>
+                  <div className="flex items-start text-sm text-[#5A626E]">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
+                    <span>You want AI to qualify before your team gets involved, on text, chat, or a call</span>
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
@@ -560,7 +573,7 @@ export default function Page() {
               </h2>
 
               <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-                Stop building a call center. Start with lead intelligence. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
+                Stop building a call center. SurFox AI qualifies on text, chat, and its own published Voice number, so your team only takes the calls worth taking. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
               </p>
 
               <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">

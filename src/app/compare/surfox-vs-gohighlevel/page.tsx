@@ -48,15 +48,15 @@ const builtDifferentItems = [
 const faqData = [
   {
     question: 'Does GoHighLevel have AI lead qualification?',
-    answer: 'GoHighLevel has basic automation and workflows, but its AI capabilities require significant setup and configuration. SurFox AI is purpose-built for AI-powered SMS qualification with minimal setup. GoHighLevel is a swiss army knife. SurFox AI is a scalpel for lead qualification.',
+    answer: 'GoHighLevel has basic automation and workflows, but its AI capabilities require significant setup and configuration. SurFox AI is purpose-built for AI-powered qualification across text, website chat, and a published Voice number, with minimal setup. GoHighLevel is a swiss army knife. SurFox AI is a scalpel for lead qualification.',
   },
   {
     question: 'Is GoHighLevel good for SMS marketing?',
-    answer: 'Yes, GoHighLevel includes SMS as part of its all-in-one platform. However, the SMS features are one of many tools, not the core focus. SurFox AI is built specifically for AI-powered SMS conversations and lead qualification.',
+    answer: 'Yes, GoHighLevel includes SMS as part of its all-in-one platform. However, the SMS features are one of many tools, not the core focus. SurFox AI is built specifically for AI-powered lead qualification, on SMS, website chat, and a published Voice number where unknown callers get a real qualifying conversation.',
   },
   {
     question: 'Why choose SurFox AI over GoHighLevel?',
-    answer: 'Choose GoHighLevel if you need an all-in-one CRM, website builder, and marketing platform. Choose SurFox AI if you specifically need AI to qualify leads via SMS. Many teams use GoHighLevel as their CRM and SurFox AI for AI-powered lead qualification.',
+    answer: 'Choose GoHighLevel if you need an all-in-one CRM, website builder, and marketing platform. Choose SurFox AI if you specifically need AI to qualify leads on text, website chat, or a published Voice number, plus paced qualification of the lists you already own. Many teams use GoHighLevel as their CRM and SurFox AI for AI-powered lead qualification.',
   },
 ];
 
@@ -221,6 +221,9 @@ export default function Page() {
               </p>
               <p className="text-lg text-[#5A626E] leading-relaxed">
                 The 73% who quit aren&apos;t quitting because the tool is bad. They&apos;re quitting because they needed conversations, not a configuration project.
+              </p>
+              <p className="text-lg text-[#5A626E] leading-relaxed mt-6">
+                Even a well-configured GoHighLevel workflow still hands you a pile of replies to sort by hand once volume picks up, whether they land as texts, chats, or missed calls. That sorting is SurFox AI&apos;s job: reading every reply the moment it arrives, on any of its three doors, and surfacing only the ones worth a human&apos;s time.
               </p>
             </div>
           </div>

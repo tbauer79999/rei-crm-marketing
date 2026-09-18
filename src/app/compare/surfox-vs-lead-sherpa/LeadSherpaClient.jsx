@@ -19,7 +19,7 @@ const featureSets = [
     category: 'Conversion Power',
     icon: Brain,
     features: [
-      { name: 'Response Generation', surfox: 'Fully autonomous SurFox AI replies that adapt to each lead', sherpa: 'Manual responses or basic templates' },
+      { name: 'Response Generation', surfox: 'Fully autonomous SurFox AI replies across SMS, website chat, and Voice that adapt to each lead', sherpa: 'Manual responses or basic templates' },
       { name: 'Lead Intelligence', surfox: 'Real-time NLP analysis of motivation and urgency', sherpa: 'No sentiment or motivation analysis' },
       { name: 'Conversation Quality', surfox: 'SurFox AI learns and adapts to maximize conversions', sherpa: 'Static drip sequences with manual management' },
       { name: 'Hot Lead Detection', surfox: 'SurFox AI scores and prioritizes high-intent prospects', sherpa: 'Manual tagging and organization only' },
@@ -30,8 +30,8 @@ const featureSets = [
     category: 'Campaign Results',
     icon: Target,
     features: [
-      { name: 'SMS Campaigns', surfox: 'AI-adaptive sequences that respond to lead behavior', sherpa: 'Standard drip sequences with pause-on-reply' },
-      { name: 'Real-Time Responses', surfox: 'Contextual SurFox AI replies 24/7 without human input', sherpa: 'Quick replies with manual forwarding system' },
+      { name: 'Messaging Campaigns', surfox: 'AI-adaptive sequences across SMS, chat, and Voice that respond to lead behavior', sherpa: 'Standard drip sequences with pause-on-reply' },
+      { name: 'Real-Time Responses', surfox: 'Contextual SurFox AI replies 24/7 across SMS, chat, and Voice, without human input', sherpa: 'Quick replies with manual forwarding system' },
       { name: 'Performance Analytics', surfox: 'Conversion insights, lead scoring, ROI tracking', sherpa: 'Basic metrics: volume, opens, replies, DNC' },
       { name: 'Lead Qualification', surfox: 'SurFox AI identifies and escalates motivated sellers', sherpa: 'Manual review and qualification process' },
       { name: 'Conversion Optimization', surfox: 'SurFox AI learns what works and improves messaging', sherpa: 'Manual A/B testing and template updates' }

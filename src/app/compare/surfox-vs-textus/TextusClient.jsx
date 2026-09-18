@@ -8,6 +8,7 @@ const featureSets = [
     category: 'Conversion Power',
     icon: Brain,
     features: [
+      { name: 'Channel Coverage', surfox: 'SurFox AI qualifies leads on SMS, website chat, and a published Voice number, plus paced CSV and list qualification', textus: 'SMS texting only, one channel to manage' },
       { name: 'Message Creation', surfox: 'SurFox AI creates unique conversations for each lead', textus: 'Manual or canned messages only' },
       { name: 'Conversation Management', surfox: 'SurFox AI remembers and learns from every conversation', textus: 'No memory between conversations' },
       { name: 'Lead Qualification', surfox: 'SurFox AI automatically qualifies and scores prospects', textus: 'Manual qualification required for everything' },
@@ -57,7 +58,7 @@ export default function TextusClient() {
             Feature-by-Feature Breakdown
           </h2>
           <p className="text-lg sm:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed px-4">
-            See exactly where SurFox AI's AI automation outperforms TextUs's manual approach.
+            See exactly where SurFox AI's AI automation, across SMS, website chat, and Voice, outperforms TextUs's manual approach.
           </p>
         </div>
 

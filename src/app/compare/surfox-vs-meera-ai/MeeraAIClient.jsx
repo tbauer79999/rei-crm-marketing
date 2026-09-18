@@ -30,9 +30,9 @@ const featureSets = [
     category: 'Workflow Design',
     icon: Zap,
     features: [
-      { name: 'Human Touch Timing', surfox: 'Qualify before human touch - you only talk to vetted leads', meera: 'Warm transfer model - agents waiting by the phone' },
+      { name: 'Human Touch Timing', surfox: 'Qualifies before human touch on SMS, website chat, or its own Voice line - you only talk to vetted leads', meera: 'Warm transfer model - agents waiting by the phone' },
       { name: 'Agent Requirements', surfox: 'AI handles qualification - minimal staff needed', meera: 'Assumes you have a call center with agents standing by' },
-      { name: 'Escalation Logic', surfox: 'Only escalates leads worth your time', meera: 'Transfers anyone who answers - quality varies wildly' },
+      { name: 'Escalation Logic', surfox: 'Only escalates or live-transfers leads worth your time, on any door', meera: 'Transfers anyone who answers - quality varies wildly' },
       { name: 'Time Investment', surfox: '30 minutes daily reviewing qualified leads', meera: 'Staff must be available for every warm transfer' },
       { name: 'Output', surfox: '"Only call the ones worth calling"', meera: '"Get them on a call as fast as possible"' }
     ]

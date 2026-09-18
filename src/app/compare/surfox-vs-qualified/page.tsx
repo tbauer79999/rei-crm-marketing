@@ -22,9 +22,9 @@ export const metadata = generatePageMetadata('compare-qualified');
 const breadcrumbSchema = generateCompareBreadcrumb('Qualified', '/compare/surfox-vs-qualified');
 
 const comparisonData = [
-  { factor: 'Primary channel', surfox: 'SMS (98% open rate)', qualified: 'Website chat, email, voice' },
-  { factor: 'Use case', surfox: 'Outbound - work YOUR lead lists', qualified: 'Inbound - convert website visitors' },
-  { factor: 'Lead sources', surfox: 'Any list - aged leads, purchased, events, scraped', qualified: 'Only website traffic' },
+  { factor: 'Primary channel', surfox: 'SMS, website chat, and a published Voice number', qualified: 'Website chat, email, voice' },
+  { factor: 'Use case', surfox: 'Inbound doors (SMS, chat, Voice) plus paced outbound lists', qualified: 'Inbound - convert website visitors' },
+  { factor: 'Lead sources', surfox: 'Any list - aged leads, purchased, events, scraped - plus your own site and phone number', qualified: 'Only website traffic' },
   { factor: 'Target customer', surfox: 'SMBs, staffing agencies, real estate, service businesses', qualified: 'Enterprise B2B SaaS with high web traffic' },
   { factor: 'Pricing', surfox: '$147-$2,497/mo, published', qualified: 'Enterprise contracts, quote-based' },
   { factor: 'CRM requirement', surfox: 'Works standalone or with your CRM', qualified: 'Built around Salesforce' },
@@ -43,7 +43,7 @@ const faqData = [
   },
   {
     question: 'What is the best Qualified alternative for outbound lead qualification?',
-    answer: 'Qualified is built for inbound website visitors, so the alternative you want depends on your motion. If you need to proactively reach lead lists you already own, SurFox AI qualifies them by SMS with a 98% open rate. Qualified cannot reach those contacts at all, because its chat only engages people who are already on your site.',
+    answer: 'Qualified is built for inbound website visitors, so the alternative you want depends on your motion. If you need to proactively reach lead lists you already own, SurFox AI qualifies them by text with a 98% open rate. Qualified cannot reach those contacts at all, because its chat only engages people who are already on your site. SurFox AI also runs its own inbound doors, website chat and a published Voice number for unknown callers, so it covers both sides Qualified splits between different tools.',
   },
   {
     question: 'Do you need Salesforce to use SurFox AI?',
@@ -51,7 +51,7 @@ const faqData = [
   },
   {
     question: 'Can I use both Qualified and SurFox AI?',
-    answer: 'Yes. Qualified handles inbound website visitors while SurFox AI works your outbound lists by SMS. Different channels, complementary tools. Teams with both a strong inbound motion and owned lead databases often run one of each.',
+    answer: 'Yes. Qualified handles inbound website visitors through its widget while SurFox AI works your outbound lists by text and covers the rest of your inbound surface, its own website chat and a published Voice number for callers who are not yet in your CRM. Teams with a strong inbound motion and owned lead databases often run both.',
   },
 ];
 
@@ -78,11 +78,11 @@ export default function Page() {
             '@type': 'WebPage',
             name: 'SurFox AI vs Qualified: Pricing, ROI, and the Best Qualified Alternative for Outbound (2026)',
             description:
-              "Comparing Qualified pricing and ROI against SurFox AI? Qualified converts inbound website visitors. SurFox AI qualifies the outbound lead lists you already own, via SMS, from $147/mo.",
+              "Comparing Qualified pricing and ROI against SurFox AI? Qualified converts inbound website visitors. SurFox AI qualifies leads on SMS, website chat, and a published Voice number, plus the outbound lead lists you already own, from $147/mo.",
             mainEntity: {
               '@type': 'Product',
               name: 'SurFox AI',
-              description: 'AI-powered outbound lead qualification via SMS. Proactively reach and qualify your lead lists.',
+              description: 'AI-powered lead qualification across SMS, website chat, and a published Voice number, plus paced qualification of the lead lists you already own.',
               image: 'https://www.getsurfox.com/newSurFoxLogo1.png',
               brand: { '@type': 'Brand', name: 'SurFox AI' },
               offers: {
@@ -124,7 +124,7 @@ export default function Page() {
                 </div>
                 <div className="text-left">
                   <div className="text-2xl font-semibold text-[#13171F]">SurFox AI</div>
-                  <div className="text-sm text-[#5A626E]">Outbound SMS</div>
+                  <div className="text-sm text-[#5A626E]">SMS, Chat &amp; Voice</div>
                 </div>
               </div>
 
@@ -150,7 +150,7 @@ export default function Page() {
               <strong className="text-[#13171F]">Qualified converts the visitors who land on your website.</strong>
             </p>
             <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              <strong className="text-[#0A7C8C]">SurFox AI qualifies the lead lists you already own, via SMS.</strong>
+              <strong className="text-[#0A7C8C]">SurFox AI qualifies on text, website chat, and a published Voice number, plus the lead lists you already own.</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
@@ -223,7 +223,7 @@ export default function Page() {
 
                 <div className="p-4 rounded-xl border border-[#E4E6E2] bg-white mb-6">
                   <h4 className="font-semibold text-[#13171F] mb-2 text-sm">How It Works:</h4>
-                  <p className="text-sm text-[#5A626E]">Qualified identifies and engages visitors already on your website through chat, meetings, and its AI SDR, then routes them into Salesforce.</p>
+                  <p className="text-sm text-[#5A626E]">Qualified identifies and engages visitors already on your website through chat, meetings, and its AI SDR, then routes them into Salesforce. As that chat volume grows, someone still has to work through every conversation it generates and decide who is ready for a rep.</p>
                 </div>
 
                 <div className="space-y-3">
@@ -258,19 +258,23 @@ export default function Page() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI</h3>
-                    <p className="text-sm text-[#5A626E]">Outbound SMS Lead Qualification</p>
+                    <p className="text-sm text-[#5A626E]">AI Lead Qualification - SMS, Chat &amp; Voice</p>
                   </div>
                 </div>
 
                 <div className="p-4 rounded-xl border border-[#dCEEF1] bg-[#F4F5F3] mb-6">
                   <h4 className="font-semibold text-[#13171F] mb-2 text-sm">How It Works:</h4>
-                  <p className="text-sm text-[#5A626E]">SurFox AI proactively texts the lead lists you already own. Upload cold leads, AI qualifies them automatically, and your team only talks to hot prospects.</p>
+                  <p className="text-sm text-[#5A626E]">SurFox AI qualifies leads who text in, chat on your site, or call a published Voice number, and it proactively texts the lead lists you already own. Upload cold leads, AI qualifies them automatically, and your team only talks to hot prospects.</p>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                     <span>Works any lead list - aged, purchased, events, scraped</span>
+                  </div>
+                  <div className="flex items-start text-sm text-[#5A626E]">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
+                    <span>Also answers your own website chat and a published Voice number for callers not yet in your CRM</span>
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
@@ -520,7 +524,7 @@ export default function Page() {
               </h2>
 
               <p className="text-lg sm:text-xl text-[#5A626E] mb-8 leading-relaxed px-4">
-                <strong className="text-[#13171F]">Yes.</strong> Qualified handles your website visitors, SurFox AI works your outbound lists. Different channels, different use cases, complementary tools.
+                <strong className="text-[#13171F]">Yes.</strong> Qualified handles your website chat widget, SurFox AI works your outbound lists and covers the rest of inbound: its own website chat and a published Voice number. Different tools, and where they overlap, SurFox AI is doing more of the qualifying.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
@@ -532,7 +536,7 @@ export default function Page() {
                 <div className="p-6 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
                   <Smartphone className="w-10 h-10 text-[#0A7C8C] mx-auto mb-4" />
                   <h4 className="font-semibold text-[#13171F] mb-2">SurFox AI Handles</h4>
-                  <p className="text-sm text-[#5A626E]">Your lead lists - purchased, aged, events, any outbound source</p>
+                  <p className="text-sm text-[#5A626E]">Text, your website chat, a published Voice number for callers, and any lead list you already own</p>
                 </div>
               </div>
             </div>
@@ -635,12 +639,12 @@ export default function Page() {
         <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6 sm:mb-8 px-4 leading-tight">
-              Have a Lead List That<br className="hidden sm:block" />
-              Needs Qualifying?
+              Ready to Qualify<br className="hidden sm:block" />
+              Every Lead?
             </h2>
 
             <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-              Upload your leads, let SurFox AI qualify them via SMS, your team only talks to hot prospects. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
+              Qualify on text, chat, or a published Voice number, and let SurFox AI work the lead lists you already own. Your team only talks to hot prospects. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
             </p>
 
             <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">

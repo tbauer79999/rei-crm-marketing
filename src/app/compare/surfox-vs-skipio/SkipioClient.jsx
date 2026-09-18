@@ -8,7 +8,7 @@ const featureSets = [
     category: 'AI Power',
     icon: Brain,
     features: [
-      { name: 'Conversation Handling', surfox: 'SurFox AI writes every message and handles responses automatically', skipio: 'You write drafts manually, then review every response' },
+      { name: 'Conversation Handling', surfox: 'SurFox AI writes every message and handles responses automatically across SMS, website chat, and a published Voice number', skipio: 'You write drafts manually, then review every response' },
       { name: 'Conversation Memory', surfox: 'SurFox AI knows the full conversation history with each lead', skipio: 'No memory - treats every message as first contact' },
       { name: 'Learning Capability', surfox: 'SurFox AI learns your business and improves with every conversation', skipio: 'Same templates forever - no learning or improvement' },
       { name: 'Buying Signal Detection', surfox: 'SurFox AI reads when prospects are ready to buy and alerts you', skipio: 'You manually read every message to find hot leads' },
@@ -41,7 +41,7 @@ const featureSets = [
     category: 'Business Value',
     icon: DollarSign,
     features: [
-      { name: 'Primary Focus', surfox: 'Designed for businesses that need to close sales', skipio: 'Built for appointment booking and basic follow-ups' },
+      { name: 'Primary Focus', surfox: 'Designed for businesses that need to close sales, qualifying every inbound door: SMS, chat, and Voice, plus paced list work', skipio: 'Built for appointment booking and basic follow-ups' },
       { name: 'Success Metrics', surfox: 'Measures success by qualified leads and revenue generated', skipio: 'Measures success by appointments booked and messages sent' },
       { name: 'Pricing Model', surfox: 'Growth plan $597/month with learning AI, starts at $147', skipio: 'Base fee plus per-message costs' },
       { name: 'Time Investment', surfox: '30 minutes daily to review escalated leads', skipio: '4+ hours daily managing conversations' },

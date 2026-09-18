@@ -31,6 +31,7 @@ const featureSets = [
     icon: Zap,
     features: [
       { name: 'Setup Time', surfox: '15-minute Chrome extension setup', smarter: 'Manual list upload and configuration' },
+      { name: 'Channels Covered', surfox: 'SMS, website chat, and a published Voice number for unknown callers, plus paced CSV list qualification', smarter: 'Outbound SMS and ringless voicemail drops only, no AI conversation' },
       { name: 'Conversation Handling', surfox: 'SurFox AI runs the qualification conversation and escalates only what needs a person', smarter: 'All conversations require manual handling' },
       { name: 'AI Training', surfox: 'Upload PDFs, SOPs to train AI on your business', smarter: 'Template library only' },
       { name: 'Smart Follow-ups', surfox: 'SurFox AI determines optimal timing per lead', smarter: 'Fixed retry schedules' },

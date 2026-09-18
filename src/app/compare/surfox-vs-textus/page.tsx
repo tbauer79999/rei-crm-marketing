@@ -27,7 +27,7 @@ const faqData = [
   {
     question: 'Is TextUs good for lead qualification?',
     answer:
-      'TextUs is built for business texting and team collaboration. It is great for sales teams who want to text from their CRM. However, TextUs requires humans to manage every conversation. SurFox AI handles the back-and-forth automatically and only escalates qualified leads.',
+      'TextUs is built for business texting and team collaboration. It is great for sales teams who want to text from their CRM. However, TextUs requires humans to manage every conversation. SurFox AI handles the back-and-forth automatically across SMS, website chat, and a published Voice number, and only escalates qualified leads for a live handoff.',
   },
   {
     question: 'How does TextUs pricing compare to SurFox AI?',
@@ -77,7 +77,7 @@ export default function Page() {
                   </div>
                   <div className="text-left">
                     <div className="text-2xl font-semibold text-[#13171F]">SurFox AI</div>
-                    <div className="text-sm text-[#5A626E]">SMS Lead Qualification</div>
+                    <div className="text-sm text-[#5A626E]">AI Lead Qualification</div>
                   </div>
                 </div>
 
@@ -103,7 +103,7 @@ export default function Page() {
                 <strong className="text-[#13171F]">TextUs gives your team a better inbox. Somebody still has to sit in it.</strong>
               </p>
               <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-                <strong className="text-[#0A7C8C]">SurFox AI delivers AI-powered conversations starting at $147, with Growth at $597 for learning AI.</strong>
+                <strong className="text-[#0A7C8C]">SurFox AI qualifies leads on text, website chat, and a published Voice number, then books or hands off the hot ones, starting at $147 with Growth at $597 for learning AI.</strong>
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
@@ -146,6 +146,9 @@ export default function Page() {
               </h2>
               <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
                 TextUs forces your team to manually handle every message. SurFox AI does it automatically.
+              </p>
+              <p className="text-base text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4 mt-4">
+                Manual tools like TextUs put a human on every reply. Once volume grows, that person becomes the bottleneck. SurFox AI is the qualification layer that works the reply pile automatically, across SMS, website chat, and a published Voice number.
               </p>
             </div>
 
@@ -207,7 +210,7 @@ export default function Page() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI</h3>
-                    <p className="text-sm text-[#5A626E]">SMS Lead Qualification</p>
+                    <p className="text-sm text-[#5A626E]">AI Lead Qualification - SMS, Chat & Voice</p>
                   </div>
                 </div>
 
@@ -507,7 +510,7 @@ export default function Page() {
               </h2>
 
               <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-                Stop spending hours on manual messaging. Let SurFox AI deliver qualified appointments automatically. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
+                Stop spending hours on manual messaging. Let SurFox AI qualify on text, chat, or a published Voice number, then book or hand off the hot ones automatically. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
               </p>
 
               <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">

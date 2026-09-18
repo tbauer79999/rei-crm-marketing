@@ -39,7 +39,7 @@ const faqData = [
   },
   {
     question: 'What is the difference between Skipio and SurFox AI?',
-    answer: 'Skipio is an SMS sending platform. SurFox AI is an AI-powered SMS qualification platform. Skipio helps you send texts faster. SurFox AI has conversations for you and tells you who is ready to buy.',
+    answer: 'Skipio is an SMS sending platform. SurFox AI is an AI lead qualification platform that has real conversations on SMS, website chat, and a published Voice number, then books or hands off the ones who are ready. Skipio helps you send texts faster. SurFox AI has the conversations for you and tells you who is ready to buy.',
   },
 ];
 
@@ -79,7 +79,7 @@ export default function Page() {
                   </div>
                   <div className="text-left">
                     <div className="text-2xl font-semibold text-[#13171F]">SurFox AI</div>
-                    <div className="text-sm text-[#5A626E]">SMS Lead Qualification</div>
+                    <div className="text-sm text-[#5A626E]">AI Lead Qualification - SMS, Chat & Voice</div>
                   </div>
                 </div>
 
@@ -105,7 +105,7 @@ export default function Page() {
                 <strong className="text-[#13171F]">Skipio helps you book appointments efficiently.</strong>
               </p>
               <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-                <strong className="text-[#0A7C8C]">SurFox AI turns your dead leads into actual deals that close.</strong>
+                <strong className="text-[#0A7C8C]">SurFox AI qualifies on text, chat, and a published Voice number, then turns your dead leads into actual deals that close.</strong>
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
@@ -148,6 +148,9 @@ export default function Page() {
               </h2>
               <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
                 Skipio gets you appointments. SurFox AI gets you deals.
+              </p>
+              <p className="text-base sm:text-lg text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4 mt-4">
+                Skipio and other blasters are built to send volume. Once a blast lands, replies pile up faster than any team can read them. SurFox AI is the qualification layer that works that reply pile, on SMS, website chat, and a published Voice number, then books or hands off the ones that are ready.
               </p>
             </div>
 
@@ -209,7 +212,7 @@ export default function Page() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI</h3>
-                    <p className="text-sm text-[#5A626E]">SMS Lead Qualification</p>
+                    <p className="text-sm text-[#5A626E]">AI Lead Qualification - SMS, Chat & Voice</p>
                   </div>
                 </div>
 
@@ -222,7 +225,7 @@ export default function Page() {
                   <div className="space-y-3">
                     <div className="flex items-start text-sm text-[#5A626E]">
                       <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
-                      <span>SurFox AI handles all conversations for you</span>
+                      <span>SurFox AI handles all conversations for you on SMS, chat, and Voice</span>
                     </div>
                     <div className="flex items-start text-sm text-[#5A626E]">
                       <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
@@ -478,7 +481,7 @@ export default function Page() {
             </h2>
 
             <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-              Stop settling for appointments. Get AI that turns your leads into actual deals. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
+              Stop settling for appointments. Qualify on text, chat, or a published Voice number, then book or hand off the ones that are hot. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
             </p>
 
             <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">

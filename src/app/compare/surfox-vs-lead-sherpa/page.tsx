@@ -14,11 +14,11 @@ const faqData = [
   },
   {
     question: 'Can Lead Sherpa replace cold calling?',
-    answer: 'Lead Sherpa helps you text instead of call, but someone still needs to manage responses. SurFox AI can replace both cold calling and manual texting by handling two-way SMS conversations automatically.',
+    answer: 'Lead Sherpa helps you text instead of call, but someone still needs to manage responses. SurFox AI can replace both cold calling and manual texting by handling two-way conversations automatically across SMS, website chat, and a published Voice number.',
   },
   {
     question: 'What is the difference between Lead Sherpa and SurFox AI?',
-    answer: 'Lead Sherpa is a skip tracing and SMS blasting tool for real estate. SurFox AI is an AI-powered conversation platform that works across industries. Lead Sherpa sends messages. SurFox AI has conversations.',
+    answer: 'Lead Sherpa is a skip tracing and SMS blasting tool for real estate. SurFox AI is an AI-powered qualification platform that works across industries, on SMS, website chat, and a published Voice number, plus paced qualification of CSV and bulk lists. Lead Sherpa sends messages. SurFox AI has conversations and works the reply pile those messages create.',
   },
 ];
 
@@ -58,7 +58,7 @@ export default function Page() {
                   </div>
                   <div className="text-left">
                     <div className="text-2xl font-semibold text-[#13171F]">SurFox AI</div>
-                    <div className="text-sm text-[#5A626E]">SMS Lead Qualification</div>
+                    <div className="text-sm text-[#5A626E]">AI Lead Qualification - SMS, Chat & Voice</div>
                   </div>
                 </div>
 
@@ -141,6 +141,9 @@ export default function Page() {
               <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
                 Lead Sherpa solves &quot;how do I find contacts legally?&quot; SurFox AI solves &quot;how do I convert contacts into sales?&quot;
               </p>
+              <p className="text-base sm:text-lg text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4 mt-4">
+                Lead Sherpa&apos;s job stops once the text sends. Every blast that lands creates a reply pile bigger than one person can triage by hand. SurFox AI is the qualification layer that works that pile, on SMS, website chat, and a published Voice number, plus paced qualification of the CSV and bulk lists you already have, not another tool built to send more messages.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
@@ -201,7 +204,7 @@ export default function Page() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI</h3>
-                    <p className="text-sm text-[#5A626E]">SMS Lead Qualification</p>
+                    <p className="text-sm text-[#5A626E]">AI Lead Qualification - SMS, Chat & Voice</p>
                   </div>
                 </div>
 
@@ -481,7 +484,7 @@ export default function Page() {
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
-                    <span>You&apos;d rather SurFox AI handle conversations 24/7</span>
+                    <span>You&apos;d rather SurFox AI handle conversations 24/7 on SMS, chat, and a published Voice number</span>
                   </div>
                 </div>
               </div>
@@ -525,7 +528,7 @@ export default function Page() {
               </h2>
 
               <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-                If you have contacts but want better conversion rates, SurFox AI&apos;s AI will get you there. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
+                If you have contacts but want better conversion rates, SurFox AI qualifies them on SMS, website chat, or a published Voice number, then books the appointment or hands off the hot ones live. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
               </p>
 
               <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">

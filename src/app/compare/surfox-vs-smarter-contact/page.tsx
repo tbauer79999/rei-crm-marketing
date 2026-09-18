@@ -76,7 +76,7 @@ const faqData = [
   {
     question: 'What is the difference between Smarter Contact and SurFox AI?',
     answer:
-      'Smarter Contact is a bulk messaging platform. SurFox AI is an AI qualification platform. Smarter Contact sends thousands of texts. SurFox AI has thousands of conversations.',
+      'Smarter Contact is a bulk messaging platform. SurFox AI is an AI qualification platform. Smarter Contact sends thousands of texts. SurFox AI has thousands of conversations, on SMS, website chat, and a published Voice number for unknown callers, and it also runs paced CSV list qualification. Every door does the same job: qualify the lead, then book the appointment or hand off the hot ones.',
   },
   {
     question: 'Did Smarter Contact acquire Launch Control?',
@@ -141,7 +141,7 @@ export default function Page() {
                   </div>
                   <div className="text-left">
                     <div className="text-2xl font-semibold text-[#13171F]">SurFox AI</div>
-                    <div className="text-sm text-[#5A626E]">SMS Lead Qualification</div>
+                    <div className="text-sm text-[#5A626E]">AI Lead Qualification - SMS, Chat &amp; Voice</div>
                   </div>
                 </div>
 
@@ -167,7 +167,7 @@ export default function Page() {
                 <strong className="text-[#13171F]">Most platforms blast thousands and pray for replies.</strong>
               </p>
               <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-                <strong className="text-[#0A7C8C]">SurFox AI has AI conversations that book qualified appointments.</strong>
+                <strong className="text-[#0A7C8C]">SurFox AI qualifies on text, chat, or a published Voice number, then books the appointment or hands off hot leads.</strong>
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
@@ -242,6 +242,12 @@ export default function Page() {
               <p className="text-lg sm:text-xl text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4">
                 Smarter Contact focuses on volume and templates. SurFox AI focuses on AI conversations that actually close deals.
               </p>
+              <p className="text-base sm:text-lg text-[#5A626E] max-w-3xl mx-auto leading-relaxed px-4 mt-4">
+                Volume tools like Smarter Contact and Launch Control are built to get a blast out the door. Once it
+                lands, the replies pile up faster than a person can work them. SurFox AI is not another blaster,
+                it is the qualification layer that works that reply pile on SMS, website chat, or a published
+                Voice number, and only escalates the ones that are ready to talk.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 px-4">
@@ -314,7 +320,7 @@ export default function Page() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI</h3>
-                    <p className="text-sm text-[#5A626E]">SMS Lead Qualification</p>
+                    <p className="text-sm text-[#5A626E]">AI Lead Qualification - SMS, Chat &amp; Voice</p>
                   </div>
                 </div>
 
@@ -325,6 +331,10 @@ export default function Page() {
                   </div>
 
                   <div className="space-y-3">
+                    <div className="flex items-start text-sm text-[#5A626E]">
+                      <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
+                      <span>Qualifies replies on SMS, website chat, and a published Voice number, plus paced CSV list qualification</span>
+                    </div>
                     <div className="flex items-start text-sm text-[#5A626E]">
                       <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                       <span>SurFox AI creates unique conversations for each lead</span>
@@ -937,7 +947,7 @@ export default function Page() {
               </h2>
 
               <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-                Built for operators who are done doing it manually. AI-powered qualification, not manual inbox triage. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
+                Built for operators who are done doing it manually. SurFox AI qualifies on SMS, website chat, and a published Voice number, then books the appointment or hands off hot leads live. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
               </p>
 
               <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">

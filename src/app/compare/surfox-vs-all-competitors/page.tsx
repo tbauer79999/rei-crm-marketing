@@ -15,6 +15,7 @@ import {
   Mail,
   Shield,
   Sparkles,
+  Globe,
 } from 'lucide-react';
 
 export const metadata = generatePageMetadata('compare-all-competitors');
@@ -72,6 +73,19 @@ const competitorCategories = [
       'Poor mobile optimization',
       'Limited SMS deliverability',
       'Outdated communication strategy',
+    ],
+  },
+  {
+    category: 'Chat-Only Platforms',
+    subtitle: 'Website Visitors Only',
+    examples: ['Qualified', 'Spara'],
+    description: 'Built to engage visitors already on your website. No reach into the lists you already own, and no answer for the phone number on your site.',
+    icon: Globe,
+    limitations: [
+      'Only reaches leads who visit your site first',
+      'No SMS or text-based qualification',
+      'No published Voice number for inbound callers',
+      'Blind to lead lists, CSVs, or dormant CRM records',
     ],
   },
 ];
@@ -140,8 +154,8 @@ const moatFactors = [
 
 const faqData = [
   {
-    question: 'What makes SurFox AI different from other SMS platforms?',
-    answer: "SurFox AI is an SMS Lead Qualification platform built for SMBs. While other tools focus on message volume or basic automation, SurFox AI has real, qualifying conversations with each contact, reads engagement signals, and only flags the ones ready to talk. It's the difference between sending messages and having intelligent conversations.",
+    question: 'What makes SurFox AI different from other lead qualification platforms?',
+    answer: "SurFox AI is an AI Lead Qualification platform built for SMBs, working on SMS, website chat, and a published Voice number where unknown callers get a real qualifying conversation, plus paced qualification of the lists you already own. While mass-messaging tools focus on volume and chat-only tools only catch website visitors, SurFox AI has real, qualifying conversations on every door, reads engagement signals, and only flags or hands off the ones ready to talk. It's the difference between sending messages, waiting for a widget, and having intelligent conversations everywhere a lead can reach you.",
   },
   {
     question: 'How does SurFox AI learn?',
@@ -214,7 +228,7 @@ export default function Page() {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              We didn&apos;t build a better text blaster. We built a new category: <strong className="text-[#13171F]">SMS Lead Qualification</strong> - real conversational AI at SMB pricing that has qualifying conversations with every contact, not just blasts at them.
+              We didn&apos;t build a better text blaster or a chat widget. We built a new category: <strong className="text-[#13171F]">AI Lead Qualification</strong> across SMS, website chat, and a published Voice number, at SMB pricing, plus paced qualification of the lists you already own - real conversations with every contact, not just blasts or a widget waiting for visitors.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
@@ -238,8 +252,8 @@ export default function Page() {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4">
               <div className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
-                <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">FIRST</div>
-                <div className="text-sm text-[#5A626E]">SMS Lead Qualification</div>
+                <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">3 Doors</div>
+                <div className="text-sm text-[#5A626E]">SMS, Chat &amp; Voice</div>
               </div>
               <div className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
                 <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">50+</div>
@@ -308,6 +322,10 @@ export default function Page() {
               ))}
             </div>
 
+            <p className="text-lg text-[#5A626E] leading-relaxed max-w-4xl mx-auto text-center mb-12 px-4">
+              The mass-messaging and manual SMS tools above are built to send. Once a blast or a campaign lands, the replies still pile up faster than a team can read them, that reply pile is the actual bottleneck, not the sending. The chat-only tools have the opposite gap: they never miss a reply, but they only catch the visitors who happen to land on a website. SurFox AI is the qualification layer for both problems, on SMS, website chat, and a published Voice number, plus paced work on the lists everyone else ignores.
+            </p>
+
             {/* SurFox AI Position */}
             <div className="p-8 sm:p-10 md:p-12 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
               <div className="flex flex-col md:flex-row items-center justify-center mb-8">
@@ -316,29 +334,31 @@ export default function Page() {
                 </div>
                 <div className="text-center md:text-left">
                   <h3 className="text-3xl font-semibold text-[#13171F]">SurFox AI</h3>
-                  <p className="text-lg text-[#5A626E]">SMS Lead Qualification Platform</p>
+                  <p className="text-lg text-[#5A626E]">AI Lead Qualification - SMS, Chat &amp; Voice</p>
                   <p className="text-sm font-semibold text-[#0A7C8C]">THE NEW CATEGORY</p>
                 </div>
               </div>
 
               <h4 className="text-2xl font-semibold text-[#13171F] mb-6 text-center">
-                The First SMS Lead Qualification Platform Built for SMBs
+                The First AI Lead Qualification Platform Built for SMBs
               </h4>
 
               <p className="text-lg text-[#5A626E] leading-relaxed mb-8 max-w-4xl mx-auto text-center">
-                SurFox AI addresses fundamental industry limitations through proprietary AI that understands human psychology in sales contexts. Our platform doesn&apos;t compete on message volume or basic automation - we&apos;ve created an entirely new category focused on conversation quality and psychological intelligence.
+                SurFox AI addresses fundamental industry limitations through proprietary AI that understands human psychology in sales contexts. Our platform doesn&apos;t compete on message volume or a chat widget waiting for visitors - we&apos;ve created an entirely new category that qualifies leads on SMS, website chat, and a published Voice number, plus paced work on the lists you already own, all with the same conversation quality and psychological intelligence.
               </p>
 
               <div className="p-6 rounded-xl border border-[#dCEEF1] bg-[#F4F5F3]">
                 <h5 className="text-sm font-semibold text-[#13171F] mb-4">Core Differentiators:</h5>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {[
+                    'Qualifies on three inbound doors: SMS, website chat, and a published Voice number',
                     'Real-time psychological analysis across 50+ dimensions',
                     'Adaptive learning that improves with every conversation',
                     'Automated qualification based on behavioral indicators',
-                    'Intelligent escalation when prospects show buying intent',
+                    'Intelligent escalation and live handoff when prospects show buying intent',
                     'AI that maintains full conversation context',
                     'Psychology-based personalization at scale',
+                    'Paced qualification of CSV, purchased, and dormant lead lists',
                   ].map((feature, idx) => (
                     <div key={idx} className="flex items-start text-sm text-[#5A626E]">
                       <Check className="w-4 h-4 text-[#0A7C8C] mr-2 mt-0.5 flex-shrink-0" />
@@ -573,8 +593,8 @@ export default function Page() {
               <h3 className="text-xl font-semibold text-[#13171F] mb-6">Technology Leadership</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="text-2xl font-semibold text-[#0A7C8C] mb-2">FIRST</div>
-                  <div className="text-sm text-[#5A626E]">SMS Lead Qualification</div>
+                  <div className="text-2xl font-semibold text-[#0A7C8C] mb-2">3 Doors</div>
+                  <div className="text-sm text-[#5A626E]">SMS, Chat &amp; Voice</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-semibold text-[#0A7C8C] mb-2">50+</div>

@@ -21,9 +21,9 @@ export const metadata = generatePageMetadata('compare-spara');
 const breadcrumbSchema = generateCompareBreadcrumb('Spara', '/compare/surfox-vs-spara');
 
 const comparisonData = [
-  { factor: 'Primary channel', surfox: 'SMS (98% open rate)', spara: 'Website chat, email, voice' },
-  { factor: 'Use case', surfox: 'Outbound - work YOUR lead lists', spara: 'Inbound - convert website visitors' },
-  { factor: 'Lead sources', surfox: 'Any list - aged leads, purchased, events, scraped', spara: 'Only website traffic' },
+  { factor: 'Primary channel', surfox: 'SMS, website chat, and a published Voice number', spara: 'Website chat, email, voice' },
+  { factor: 'Use case', surfox: 'Inbound doors (SMS, chat, Voice) plus paced outbound lists', spara: 'Inbound - convert website visitors' },
+  { factor: 'Lead sources', surfox: 'Any list - aged leads, purchased, events, scraped - plus your own site and phone number', spara: 'Only website traffic' },
   { factor: 'Target customer', surfox: 'SMBs, staffing agencies, real estate, service businesses', spara: 'Enterprise SaaS with high web traffic' },
   { factor: 'Pricing', surfox: '$147-$2,497/mo', spara: 'Enterprise contracts (unlisted)' },
   { factor: 'Setup', surfox: 'Self-serve account setup; live once A2P approves', spara: 'Sales-led implementation' },
@@ -45,7 +45,7 @@ const faqData = [
   },
   {
     question: 'Can I use both Spara and SurFox AI?',
-    answer: 'Yes. Spara handles inbound website visitors. SurFox AI handles outbound to your existing lead lists via SMS. Different channels, complementary tools. Many sales teams use an inbound solution alongside an outbound solution.',
+    answer: 'Yes. Spara handles inbound website visitors through its chat widget. SurFox AI works your outbound lead lists by text and also covers its own inbound doors, website chat and a published Voice number for callers who are not yet in your CRM. Many sales teams run both, with SurFox AI covering the ground Spara does not reach.',
   },
 ];
 
@@ -71,11 +71,11 @@ export default function Page() {
             '@context': 'https://schema.org',
             '@type': 'WebPage',
             name: 'SurFox AI vs Spara: Best Spara Alternative for Outbound Lead Qualification (2026)',
-            description: "Looking for a Spara replacement for outbound lead lists? SurFox AI qualifies leads via SMS (98% open rate) - where Spara's inbound chat can't reach. Compare features, pricing & use cases.",
+            description: "Looking for a Spara replacement for outbound lead lists? SurFox AI qualifies leads on SMS, website chat, and a published Voice number, and it reaches the outbound lists Spara's inbound-only chat can't. Compare features, pricing & use cases.",
             mainEntity: {
               '@type': 'Product',
               name: 'SurFox AI',
-              description: 'AI-powered outbound lead qualification via SMS. Proactively reach and qualify your lead lists.',
+              description: 'AI-powered lead qualification across SMS, website chat, and a published Voice number, plus paced qualification of the lead lists you already own.',
               image: 'https://www.getsurfox.com/newSurFoxLogo1.png',
               brand: { '@type': 'Brand', name: 'SurFox AI' },
               offers: {
@@ -118,7 +118,7 @@ export default function Page() {
                 name: 'Can I use both Spara and SurFox AI?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Yes. Spara handles inbound website visitors. SurFox AI handles outbound to your existing lead lists via SMS. Different channels, complementary tools. Many sales teams use an inbound solution alongside an outbound solution.',
+                  text: 'Yes. Spara handles inbound website visitors through its chat widget. SurFox AI works your outbound lead lists by text and also covers its own inbound doors, website chat and a published Voice number for callers who are not yet in your CRM. Many sales teams run both, with SurFox AI covering the ground Spara does not reach.',
                 },
               },
             ],
@@ -138,7 +138,7 @@ export default function Page() {
                 </div>
                 <div className="text-left">
                   <div className="text-2xl font-semibold text-[#13171F]">SurFox AI</div>
-                  <div className="text-sm text-[#5A626E]">Outbound SMS</div>
+                  <div className="text-sm text-[#5A626E]">SMS, Chat &amp; Voice</div>
                 </div>
               </div>
 
@@ -164,7 +164,7 @@ export default function Page() {
               <strong className="text-[#13171F]">Spara handles inbound website visitors.</strong>
             </p>
             <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              <strong className="text-[#0A7C8C]">SurFox AI qualifies your outbound lead lists via SMS.</strong>
+              <strong className="text-[#0A7C8C]">SurFox AI qualifies on text, website chat, and a published Voice number, plus your outbound lead lists.</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
@@ -237,7 +237,7 @@ export default function Page() {
 
                 <div className="p-4 rounded-xl border border-[#E4E6E2] bg-white mb-6">
                   <h4 className="font-semibold text-[#13171F] mb-2 text-sm">How It Works:</h4>
-                  <p className="text-sm text-[#5A626E]">Spara engages visitors who come to your website through chat widget, email, and voice. It&apos;s an AI SDR for your inbound marketing motion.</p>
+                  <p className="text-sm text-[#5A626E]">Spara engages visitors who come to your website through chat widget, email, and voice. It&apos;s an AI SDR for your inbound marketing motion. As that chat volume grows, someone still has to work through every conversation it generates and decide who is ready for a rep.</p>
                 </div>
 
                 <div className="space-y-3">
@@ -272,19 +272,23 @@ export default function Page() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-[#13171F]">SurFox AI</h3>
-                    <p className="text-sm text-[#5A626E]">Outbound SMS Lead Qualification</p>
+                    <p className="text-sm text-[#5A626E]">AI Lead Qualification - SMS, Chat &amp; Voice</p>
                   </div>
                 </div>
 
                 <div className="p-4 rounded-xl border border-[#dCEEF1] bg-[#F4F5F3] mb-6">
                   <h4 className="font-semibold text-[#13171F] mb-2 text-sm">How It Works:</h4>
-                  <p className="text-sm text-[#5A626E]">SurFox AI proactively reaches out to YOUR lead lists via SMS. Upload cold leads, and AI qualifies them automatically. Your team only talks to hot prospects.</p>
+                  <p className="text-sm text-[#5A626E]">SurFox AI qualifies leads who text in, chat on your site, or call a published Voice number, and it proactively reaches out to YOUR lead lists by text. Upload cold leads, and AI qualifies them automatically. Your team only talks to hot prospects.</p>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
                     <span>Works any lead list - aged, purchased, events, scraped</span>
+                  </div>
+                  <div className="flex items-start text-sm text-[#5A626E]">
+                    <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
+                    <span>Also answers your own website chat and a published Voice number for callers not yet in your CRM</span>
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
@@ -476,7 +480,7 @@ export default function Page() {
               </h2>
 
               <p className="text-lg sm:text-xl text-[#5A626E] mb-8 leading-relaxed px-4">
-                <strong className="text-[#13171F]">Yes!</strong> Spara handles your website visitors, SurFox AI works your outbound lists. Different channels, different use cases, complementary tools.
+                <strong className="text-[#13171F]">Yes!</strong> Spara handles your website chat widget, SurFox AI works your outbound lists and covers the rest of inbound: its own website chat and a published Voice number. Different tools, and where they overlap, SurFox AI is doing more of the qualifying.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
@@ -488,7 +492,7 @@ export default function Page() {
                 <div className="p-6 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
                   <Smartphone className="w-10 h-10 text-[#0A7C8C] mx-auto mb-4" />
                   <h4 className="font-semibold text-[#13171F] mb-2">SurFox AI Handles</h4>
-                  <p className="text-sm text-[#5A626E]">Your lead lists - purchased, aged, events, any outbound source</p>
+                  <p className="text-sm text-[#5A626E]">Text, your website chat, a published Voice number for callers, and any lead list you already own</p>
                 </div>
               </div>
             </div>
@@ -591,12 +595,12 @@ export default function Page() {
         <section className="py-20 sm:py-28 md:py-32 px-4 sm:px-6 md:px-8 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6 sm:mb-8 px-4 leading-tight">
-              Have a Lead List That<br className="hidden sm:block" />
-              Needs Qualifying?
+              Ready to Qualify<br className="hidden sm:block" />
+              Every Lead?
             </h2>
 
             <p className="text-lg sm:text-xl text-[#5A626E] mb-10 sm:mb-12 leading-relaxed px-4 max-w-3xl mx-auto">
-              Upload your leads, let SurFox AI qualify them via SMS, your team only talks to hot prospects. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
+              Qualify on text, chat, or a published Voice number, and let SurFox AI work the lead lists you already own. Your team only talks to hot prospects. <strong className="text-[#13171F]">30-day money back guarantee.</strong>
             </p>
 
             <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">
