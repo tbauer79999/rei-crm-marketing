@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Shield, Bell, Lock, Eye, FileText, AlertCircle } from 'lucide-react';
+import { Shield, Bell, Lock, Eye, FileText, AlertCircle, Cookie } from 'lucide-react';
 
 export default function PrivacyPolicy() {
   return (
@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
               Privacy Policy
             </h1>
             <p className="text-lg sm:text-xl text-[#5A626E] leading-relaxed">
-              Last Updated: November 4, 2025
+              Last Updated: September 17, 2026
             </p>
           </motion.div>
         </div>
@@ -309,6 +309,93 @@ export default function PrivacyPolicy() {
               <p>
                 We do not sell your personal information to third parties.
               </p>
+            </div>
+          </motion.div>
+
+          {/* Cookies & Tracking Technologies */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Cookie className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Cookies & Tracking Technologies
+              </h2>
+            </div>
+
+            <div className="ml-0 sm:ml-16 space-y-6 text-[#5A626E] leading-relaxed">
+              <p>
+                We use cookies and similar tracking technologies to operate our platform and understand how visitors use our website.
+              </p>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Types of Technologies We Use</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span><strong>Essential cookies:</strong> Required for core site and platform functionality, such as maintaining your session and account authentication</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span><strong>Analytics cookies:</strong> We use Google Tag Manager and Google Analytics (GA4) to understand website traffic and usage patterns</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span><strong>Advertising cookies:</strong> We use the Meta (Facebook) Pixel and OpenAI's conversion pixel to measure the effectiveness of our advertising and to deliver relevant ads to prospective customers</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Third Parties Who May Set Cookies Through Our Site</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span>Google (Google Analytics, Google Tag Manager)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span>Meta Platforms, Inc. (Facebook Pixel)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span>OpenAI, L.L.C. (conversion tracking pixel)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Your Choices</h3>
+                <p>
+                  You can control or delete cookies through your browser settings. Most browsers let you refuse cookies, delete existing cookies, or receive a warning before a cookie is stored. Disabling certain cookies may affect the functionality of our website.
+                </p>
+                <p className="mt-3">
+                  We do not currently block non-essential cookies prior to consent. We are working toward implementing consent-based cookie management for visitors in the EU, UK, and other jurisdictions where required.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">California Privacy Rights</h3>
+                <p>
+                  The use of advertising pixels such as Meta and OpenAI's may be considered a "sale" or "sharing" of personal information under the California Consumer Privacy Act (CCPA). We do not sell personal information for monetary payment. To opt out of this sharing, contact us at privacy@getsurfox.com.
+                </p>
+              </div>
+
+              <p>
+                For more information on how these providers use data collected through their tools, see Google's Privacy Policy, Meta's Privacy Policy, and OpenAI's Privacy Policy.
+              </p>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Scope</h3>
+                <p>
+                  This Cookies & Tracking Technologies section applies to www.getsurfox.com only. It does not apply to websites operated by our customers that embed the SurFox AI chat widget. Cookies and tracking on those sites are controlled by the site operator, not SurFox AI.
+                </p>
+              </div>
             </div>
           </motion.div>
 
