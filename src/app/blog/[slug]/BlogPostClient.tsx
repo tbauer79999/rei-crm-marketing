@@ -480,7 +480,7 @@ export default function BlogPostClient({ blogPost, relatedPosts }: BlogPostClien
       <section className="py-10 px-4 sm:px-6 md:px-8 border-t border-[#EDEEEB]">
         <div className="max-w-4xl mx-auto">
           <p className="text-sm text-[#8A92A0] leading-relaxed mb-4">
-            <strong className="text-[#5A626E]">About SurFox AI</strong> - SurFox AI is an AI-powered lead qualification platform that engages leads via SMS 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams with full conversation context.
+            <strong className="text-[#5A626E]">About SurFox AI</strong> - SurFox AI is an AI-powered lead qualification platform that qualifies leads on SMS, website chat, and a published Voice number 24/7, surfaces buying signals automatically, and routes qualified prospects to sales teams with full conversation context or a live handoff.
           </p>
           <Link
             href="/platform"

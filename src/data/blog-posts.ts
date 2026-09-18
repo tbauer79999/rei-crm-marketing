@@ -1726,11 +1726,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: '[AI-powered lead qualification](/blog/what-is-ai-lead-qualification) via SMS flips every one of these problems. Instead of human SDRs manually qualifying leads with inconsistent standards and slow response times, AI handles initial conversations at scale - instantly, consistently, and without bias.'
+        content: '[AI-powered lead qualification](/blog/what-is-ai-lead-qualification) flips every one of these problems. Instead of human SDRs manually qualifying leads with inconsistent standards and slow response times, AI handles initial conversations the moment they arrive - whether the lead fills out a form, opens website chat, or calls a published number - instantly, consistently, and without bias.'
       },
       {
         type: 'paragraph',
-        content: 'When a lead comes in, AI engages immediately via SMS. It asks qualifying questions based on your criteria - budget, timeline, authority, need. It analyzes responses in real-time, looking for behavioral signals: response speed, engagement depth, commitment language, objection patterns, sentiment shifts. It scores the lead objectively based on data, not gut feel or quota pressure.'
+        content: 'When a lead comes in, AI engages immediately - by text, in website chat, or in a live voice conversation if they call in. It asks qualifying questions based on your criteria - budget, timeline, authority, need. It analyzes responses in real-time, looking for behavioral signals: response speed, engagement depth, commitment language, objection patterns, sentiment shifts. It scores the lead objectively based on data, not gut feel or quota pressure.'
       },
       {
         type: 'paragraph',
@@ -1739,6 +1739,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'callout',
         content: 'AI responds in under 60 seconds, asks the same questions every time, and scores based on 350+ data signals. No quota pressure. No human bias. Just consistent qualification at scale.'
+      },
+      {
+        type: 'paragraph',
+        content: 'None of this holds up if qualified conversations pile up faster than your team can act on them. The bottleneck that shows up next is not response speed, it is triage - reading every reply the moment it lands and deciding who is worth an AE\'s time. That qualification bandwidth, not just the first message, is what keeps a full pipeline from turning into a stalled one.'
       },
       {
         type: 'quote',
@@ -2188,12 +2192,16 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'callout',
-        content: 'The competitive advantage in the trade show landscape belongs to the first responder - the organization that combines the trust built through face-to-face conversation with [the speed of digital automation](/platform). [AI-powered SMS follow-up](/platform) can reach leads within minutes of badge scan, while the conversation is still fresh and your competitor is still packing up their booth.'
+        content: 'The competitive advantage in the trade show landscape belongs to the first responder - the organization that combines the trust built through face-to-face conversation with [the speed of digital automation](/platform). [AI-powered follow-up](/platform) can reach leads within minutes of badge scan, while the conversation is still fresh and your competitor is still packing up their booth.'
+      },
+      {
+        type: 'paragraph',
+        content: 'There is a second failure mode hiding behind the first one. Once automated follow-up gets a badge-scan list replying, someone still has to read every reply and decide who is ready for a rep. Volume without triage just moves the bottleneck from "nobody followed up" to "nobody got back to the people who did." The qualification layer, not the sending, is what keeps that pile from stalling.'
       },
       {
         type: 'cta-box',
-        headline: 'SurFox AI sends the first SMS before your team leaves the show floor.',
-        subhead: 'AI-powered lead qualification that engages every trade show lead via SMS within minutes of badge scan, surfaces buying signals automatically, and routes hot prospects to your team with full conversation context.',
+        headline: 'SurFox AI sends the first text before your team leaves the show floor.',
+        subhead: 'AI-powered lead qualification that texts every trade show lead within minutes of badge scan, keeps qualifying them on your website chat and a published Voice number if they call in, surfaces buying signals automatically, and routes hot prospects to your team with full conversation context.',
         primaryButton: { text: 'Start today', href: '/pricing' },
         secondaryButton: { text: 'See How It Works', href: '/platform' }
       },
@@ -2222,7 +2230,7 @@ export const blogPosts: BlogPost[] = [
     productCard: {
       category: 'Product',
       title: 'See SurFox AI in action',
-      description: '2-minute walkthrough of how SurFox AI qualifies leads via SMS while your team is still on the floor.',
+      description: '2-minute walkthrough of how SurFox AI qualifies leads by text, chat, and a published Voice number while your team is still on the floor.',
       ctaText: 'Request Demo \u2192',
       href: '/demo'
     }
@@ -4514,7 +4522,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'The agencies closing this gap are using AI to engage candidates immediately when they submit, regardless of time of day. The first message goes out in minutes, not hours. It confirms receipt, sets expectations for next steps, [asks qualifying questions](/blog/qualify-leads-faster-ai) to advance the screening process, and keeps the candidate engaged while your recruiters are handling other calls.'
+        content: 'The agencies closing this gap are using AI to engage candidates immediately when they submit, regardless of time of day, and to pick up the calls a recruiter cannot get to by publishing a number the AI can answer directly. The first message goes out in minutes, not hours. It confirms receipt, sets expectations for next steps, [asks qualifying questions](/blog/qualify-leads-faster-ai) to advance the screening process, and keeps the candidate engaged whether they reply by text, chat on your site, or call back.'
       },
       {
         type: 'paragraph',
@@ -4523,6 +4531,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'callout',
         content: 'This is not about replacing recruiters. It is about giving them better leads to call.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Instant first contact does not end the workload, it relocates it. Candidates reply, ask questions, and call back, and the gap reopens the moment those responses outpace whoever is supposed to be reading them. Closing it for good means the qualification layer keeps working through every reply, call, and chat message, not just the first text, until a recruiter is looking at a candidate who is actually ready to talk.'
       },
       {
         type: 'heading',
@@ -4571,7 +4583,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'cta-box',
         headline: 'SurFox AI closes the staffing follow-up gap before your competitors call back.',
-        subhead: 'SurFox AI engages every candidate with AI-powered SMS conversations within minutes of applying, pre-qualifies them automatically, and surfaces the ready-to-place leads for your recruiters to call.',
+        subhead: 'SurFox AI texts every candidate within minutes of applying, answers the calls your team misses on a published Voice line, and pre-qualifies them automatically, so recruiters call ready-to-place candidates instead of playing phone tag.',
         primaryButton: { text: 'Start today', href: '/pricing' },
         secondaryButton: { text: 'See How It Works', href: '/platform' }
       },
