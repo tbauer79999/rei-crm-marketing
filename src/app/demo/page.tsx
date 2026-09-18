@@ -96,7 +96,7 @@ export default function Page() {
                 window.addEventListener('message', function(e) {
                   if (e.data.event && e.data.event === 'calendly.event_scheduled') {
                     if (window.oaiq) {
-                      oaiq('track', 'Appointment scheduled');
+                      oaiq('measure', 'appointment_scheduled', { type: 'customer_action' });
                     }
                   }
                 });
