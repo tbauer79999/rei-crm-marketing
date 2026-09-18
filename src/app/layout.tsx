@@ -86,6 +86,17 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        {/* ChatGPT (OpenAI) Ads Pixel */}
+        <Script
+          id="oai-pixel"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");
+              oaiq("init",{pixelId:"3okzcUZpRKFwF8eabHEHV9",debug:true});
+            `
+          }}
+        />
       </head>
       <body className={`${sora.variable} ${dmSans.variable} ${plusJakartaSans.variable} antialiased`} style={{ fontFamily: 'var(--font-plus-jakarta-sans)' }}>
         {/* Google Tag Manager - lazyOnload to defer until idle */}
