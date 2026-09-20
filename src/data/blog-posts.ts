@@ -2031,7 +2031,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'tldr',
-        content: '80% of trade show leads receive no follow-up at all - not slow follow-up, zero follow-up (Momencio, 2026 State of US B2B Events Report).\nAn estimated $5.4 billion in annual waste from failed trade show follow-up in U.S. B2B alone.\nLeads contacted within 5 minutes are 21x more likely to qualify than those reached at 30 minutes (MIT/InsideSales.com).\nAfter 48 hours, connection likelihood drops 10x - and the average follow-up starts days after the event.\nCompanies using 3+ channels achieve 30% higher conversion rates than single-channel approaches.\nThe fix isn\'t a better checklist - it\'s [automation](/platform) that responds before the team even gets home.'
+        content: '80% of trade show leads receive no follow-up at all - not slow follow-up, zero follow-up (Momencio, 2026 State of US B2B Events Report).\nAn estimated $5.4 billion in annual waste from failed trade show follow-up in U.S. B2B alone.\nLeads contacted within 5 minutes are 21x more likely to qualify than those reached at 30 minutes (MIT/InsideSales.com).\nCompanies contacting a lead within an hour are nearly 7x more likely to qualify it than those who wait even an hour longer, and 60x more likely than those who wait a full 24 hours (Harvard Business Review, 2011).\nCompanies using 3+ channels achieve 30% higher conversion rates than single-channel approaches.\nThe fix isn\'t a better checklist - it\'s [automation](/platform) that responds before the team even gets home.'
       },
       {
         type: 'heading',
@@ -2095,13 +2095,11 @@ export const blogPosts: BlogPost[] = [
         items: [
           'Leads contacted within 5 minutes are 21x more likely to qualify than those contacted at 30 minutes',
           'The odds of making contact drop 100 times between the 5-minute and 30-minute mark',
-          'After 1 hour, leads are 7x less likely to qualify than those reached within 60 minutes',
-          'After 48 hours, connection likelihood drops by 10x',
         ]
       },
       {
         type: 'paragraph',
-        content: 'Harvard Business Review\'s analysis of 2.24 million sales leads found that firms contacting prospects within an hour were nearly seven times more likely to qualify the lead than those who waited even 60 minutes. For trade shows, where the average follow-up starts days after the event, these numbers are devastating.'
+        content: 'A separate 2011 Harvard Business Review study by Oldroyd, McElheran, and Elkington, based on 1.25 million leads across 42 U.S. companies, found that firms contacting prospects within an hour were nearly seven times more likely to qualify the lead than those who waited even an hour longer, and more than 60 times more likely than those who waited a full 24 hours. For trade shows, where the average follow-up starts days after the event, these numbers are devastating.'
       },
       {
         type: 'heading',
@@ -4648,7 +4646,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'Home Services Leads Have a 5-Minute Window. Most Companies Miss It.',
     metaDescription: 'The average home services company takes 29-47 hours to respond to a new lead. Here\'s what that delay is actually costing you and how to fix it.',
-    relatedPosts: ['speed-to-lead-sms-chat-voice', 'motivated-seller-texts-9pm', 'missed-inbound-sales-call-what-to-do'],
+    relatedPosts: ['speed-to-lead-sms-chat-voice', 'marketplace-leads-dont-respond-yelp-thumbtack-facebook', 'missed-inbound-sales-call-what-to-do'],
     content: [
       {
         type: 'paragraph',
@@ -5207,7 +5205,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Harvard Business Review published a separate study, based on 1.25 million leads across 2,241 companies, looking at what happens when businesses take longer. It found that calling within 1 hour made a company nearly 7 times more likely to qualify the lead than waiting 2 hours, and 60 times more likely than waiting a full 24 hours.'
+        content: 'Harvard Business Review published a separate study, based on 1.25 million leads across 42 U.S. companies, looking at what happens when businesses take longer. It found that calling within 1 hour made a company nearly 7 times more likely to qualify the lead than waiting even an hour longer, and 60 times more likely than waiting a full 24 hours.'
       },
       {
         type: 'paragraph',
@@ -5240,7 +5238,7 @@ export const blogPosts: BlogPost[] = [
           ['Within 60 seconds', '391% higher conversion rate than calling at the 2-minute mark', 'Velocify, 3.5M leads'],
           ['Within 5 minutes', '100x more likely to reach, 21x more likely to qualify vs. 30 minutes', 'MIT / InsideSales.com'],
           ['5 to 10 minutes', 'Odds of qualifying drop roughly 4x inside that single window', 'MIT / InsideSales.com'],
-          ['Within 1 hour', 'Nearly 7x more likely to qualify than waiting 2 hours', 'Harvard Business Review, 1.25M leads'],
+          ['Within 1 hour', 'Nearly 7x more likely to qualify than waiting an hour longer', 'Harvard Business Review, 1.25M leads'],
           ['After 24 hours', '60x less likely to qualify than calling within the hour', 'Harvard Business Review'],
         ]
       },
@@ -5323,7 +5321,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'It is not too late to try, but the odds collapse. Harvard Business Review research across 1.25 million leads and 2,241 companies found that calling within an hour made a company 60 times more likely to qualify the lead than waiting a full 24 hours. Aged leads are still worth working, they just need a different approach than a fresh inquiry.'
+        content: 'It is not too late to try, but the odds collapse. Harvard Business Review research across 1.25 million leads and 42 U.S. companies found that calling within an hour made a company 60 times more likely to qualify the lead than waiting a full 24 hours. Aged leads are still worth working, they just need a different approach than a fresh inquiry.'
       },
       {
         type: 'subheading',
@@ -9541,7 +9539,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'What to Do When You Miss a Sales Call',
     metaDescription: 'Most callers who don\'t reach a person move on. See what the data says about missed calls and how instant SMS recovery keeps the lead alive.',
-    relatedPosts: ['missed-call-text-back-real-estate', 'home-services-lead-response-window', 'too-many-leads-not-enough-time'],
+    relatedPosts: ['missed-call-text-back-real-estate', 'home-services-lead-response-window', 'marketplace-leads-dont-respond-yelp-thumbtack-facebook'],
     content: [
       {
         type: 'tldr',
@@ -9664,7 +9662,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Speed matters on top of channel. Research analyzing response intervals across roughly 15,000 leads found that contacting a lead within 5 minutes instead of 30 minutes increases the odds of connecting with that lead by 100 times and the odds of qualifying it by 21 times (Lead Response Management Study, Dr. James Oldroyd, InsideSales.com, 2007). A separate audit of 2,241 corporate sales teams found that responding within an hour made a meaningful conversation with a decision-maker nearly seven times more likely than responding after an hour, against an industry average response time of 42 hours (Oldroyd, McElheran & Elkington, "The Short Life of Online Sales Leads," Harvard Business Review, 2011). These are connection and qualification odds. They describe how likely you are to reach and qualify the right person, not a guarantee that the deal closes. We broke this timing math down further in [how fast you actually have to call a lead back](/blog/how-fast-to-call-a-real-estate-lead).'
+        content: 'Speed matters on top of channel. Research analyzing response intervals across roughly 15,000 leads found that contacting a lead within 5 minutes instead of 30 minutes increases the odds of connecting with that lead by 100 times and the odds of qualifying it by 21 times (Lead Response Management Study, Dr. James Oldroyd, InsideSales.com, 2007). That same Oldroyd research also includes a separate audit of 2,241 U.S. companies measuring response-time distribution, which found an average response time of 42 hours and 23% never responding to a test lead at all. A related study of 1.25 million leads across 42 U.S. companies found that firms contacting a lead within an hour were nearly seven times more likely to have a meaningful conversation with a decision-maker than those who waited even an hour longer, and more than 60 times more likely than those who waited 24 hours or longer (Oldroyd, McElheran & Elkington, "The Short Life of Online Sales Leads," Harvard Business Review, 2011). These are connection and qualification odds. They describe how likely you are to reach and qualify the right person, not a guarantee that the deal closes. We broke this timing math down further in [how fast you actually have to call a lead back](/blog/how-fast-to-call-a-real-estate-lead).'
       },
       {
         type: 'heading',
@@ -10006,6 +10004,239 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'No, and this is a common mix-up. The first outbound text you send has to clear DNC and TCPA consent screening before it goes out. An inbound reply to a conversation that\'s already started, or a text the buyer sends first, has no such gate. Both need a fast answer, but only one of them is speed-limited by compliance rather than by your team.'
+      }
+    ]
+  },
+  {
+    id: 42,
+    slug: 'marketplace-leads-dont-respond-yelp-thumbtack-facebook',
+    title: 'Why Yelp, Thumbtack, and Facebook Leads Don\'t Respond (And What Actually Fixes It)',
+    excerpt: 'Marketplace and social leads aren\'t bad, they\'re slow-followed. Here\'s what the research says about speed, and what actually converts them.',
+    category: 'Sales Strategy',
+    date: '2026-09-19',
+    lastUpdated: '2026-09-19',
+    readTime: '12 min read',
+    author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    authorTitle: 'Founder & CEO, SurFox AI',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
+    metaTitle: 'Why Yelp, Thumbtack, Facebook Leads Don\'t Respond',
+    metaDescription: 'Marketplace and social leads aren\'t bad, they\'re slow-followed. Here\'s what the research says about speed, and what actually converts them.',
+    relatedPosts: ['speed-to-lead-sms-chat-voice', 'missed-inbound-sales-call-what-to-do', 'home-services-lead-response-window'],
+    content: [
+      {
+        type: 'tldr',
+        content: 'The complaint "these leads are trash" is almost always a speed and channel problem, not a lead quality problem.\nOn shared marketplaces like Thumbtack, the same request goes out to four or five businesses at once, and the first one to respond usually wins the job.\nResponse-time research going back to a landmark 2007 study and a 2011 Harvard Business Review study shows qualification odds collapse within the first hour, and especially within the first five minutes.\nConsumers have largely stopped answering calls from unknown numbers, so phone-only follow-up misses a large share of leads that would have responded to a text.\nA meaningful share of home service demand arrives outside business hours, and manual teams routinely leave it sitting until the next business day.\nFixing this is a speed and channel problem: qualify and book on SMS, chat, or voice, whichever door the lead actually opened, fast.'
+      },
+      {
+        type: 'heading',
+        content: '"Leads Don\'t Respond" Is Usually an Ops Story'
+      },
+      {
+        type: 'paragraph',
+        content: 'Every local business that buys leads from Yelp, Thumbtack, Angi, or Facebook eventually says some version of the same thing: the leads are bad. They don\'t pick up, they don\'t text back, half of them look like they were never real people to begin with.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Some of that is real. But a lot of what gets filed under "bad lead" is actually a business that called an hour later, from a number the prospect didn\'t recognize, after the prospect had already heard back from someone else. The lead was real. The intent was real. It just wasn\'t there anymore by the time anyone reached out.'
+      },
+      {
+        type: 'callout',
+        content: 'The complaint "these leads are trash" is almost always a speed and channel problem, not a lead quality problem.'
+      },
+      {
+        type: 'paragraph',
+        content: 'That distinction matters, because the two problems have completely different fixes. A lead quality problem gets fixed by changing which platforms you buy from, or which categories you show up in. A response problem gets fixed by changing how fast, and on which channel, you actually engage the person. Most of what gets blamed on the first is actually the second.'
+      },
+      {
+        type: 'heading',
+        content: 'What the Data Says About Speed on Paid and Marketplace Inbound'
+      },
+      {
+        type: 'paragraph',
+        content: 'The foundational research on this is old and specific. A 2007 study led by James Oldroyd, run with InsideSales.com and later affiliated with MIT, analyzed more than 15,000 leads and over 100,000 phone call attempts. It found that contacting a lead within five minutes made a rep 100 times more likely to actually connect with them, and 21 times more likely to qualify them, than waiting even 30 minutes. Oldroyd followed that with a 2011 Harvard Business Review study with Kristina McElheran and David Elkington, "The Short Life of Online Sales Leads." That article reports two separate findings: an audit of 2,241 U.S. companies found an average response time of 42 hours, with a meaningful share of inquiries never answered at all; and a related study of 1.25 million leads across 42 U.S. companies found that firms contacting a lead within an hour were nearly seven times more likely to qualify it than those who waited even an hour longer, and more than 60 times more likely than those who waited 24 hours or longer. Both studies are measuring phone follow-up on a web form. Neither one accounted for a buyer who can also text or open a chat window.'
+      },
+      {
+        type: 'paragraph',
+        content: 'That research predates most of the platforms in question, but the mechanism is the same one driving marketplace behavior today. On a shared platform like Thumbtack, a single request typically goes out to four or five providers at once, and platform data has shown that a strong majority of consumers end up hiring whichever provider responds first. Yelp\'s Request-a-Quote works on a similar broadcast model, prompting the consumer to send the same request to several nearby businesses at once. In both cases, the lead was never exclusive. It\'s being answered by whoever gets there first, and speed decides the winner more than the specifics of the quote.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Home services businesses specifically are not keeping up with that speed requirement. An analysis of over 132,000 speed-to-lead campaigns in the home services sector found that 88% of contractors take longer than five minutes to respond to a new inquiry, 37% take a full day, and only 3% respond within a minute (Hatch). That gap between what the platform\'s competitive dynamics require and what businesses actually deliver is where most of the "these leads suck" frustration comes from.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Worth being direct about a gap in the evidence here: neither Yelp nor Thumbtack publishes independently audited data breaking down close rates specifically by contractor response time. The 78% first-responder figure comes from Thumbtack\'s own platform disclosures, not third-party research, and it should be read as marketplace data rather than an academic finding. It\'s directionally consistent with everything else in this article, but it\'s platform-reported, not peer-reviewed.'
+      },
+      {
+        type: 'heading',
+        content: 'Lead Quality and Response Behavior Are Two Separate Claims'
+      },
+      {
+        type: 'paragraph',
+        content: 'It\'s worth separating these explicitly, because vendors on both sides have an incentive to blur them. An agency selling leads will point to clicks and form fills as proof the leads were good. A sales team judging leads only by whether a phone call connected will call the same leads bad. Both are describing different moments in the same funnel.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The intent was real at the moment of submission. What happens to it after that is entirely about what the business does next: how fast it responds, on which channel, and whether that response actually engages what the person asked for or just acknowledges that a message came in. Slow, single-channel, acknowledgment-only follow-up will make good leads look bad. It doesn\'t mean the leads were bad to begin with.'
+      },
+      {
+        type: 'heading',
+        content: 'The Failure Modes: Single Channel, After Hours, and Triage Delay'
+      },
+      {
+        type: 'paragraph',
+        content: 'Three patterns show up over and over in how local businesses lose these leads.'
+      },
+      {
+        type: 'table',
+        headers: ['Failure Mode', 'What Happens', 'The Data'],
+        rows: [
+          ['Single-channel phone reliance', 'A business calls a fresh lead from a number the prospect has never seen, and gets ignored by default', 'Roughly 80% of Americans rarely or never answer calls from numbers they don\'t recognize (Pew Research Center, 2020)'],
+          ['Missed inbound calls', 'Even a lead who\'s willing to call back gets dropped, because the business itself doesn\'t answer', '28% of inbound calls to local businesses go completely unanswered (CallRail, 225,000+ business accounts)'],
+          ['After-hours and weekend triage delay', 'A lead submitted Friday evening sits untouched until Monday morning in a manual operation', '41% of home service job bookings happen outside standard business hours (Housecall Pro)'],
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'The first is single-channel reliance on outbound phone calls. Consumer phone habits have shifted hard away from answering unknown numbers. National survey research from Pew Research Center found that roughly 80% of Americans rarely or never answer calls from numbers they don\'t recognize (Pew Research Center, 2020). A business calling a fresh lead from an office line the prospect has never seen is asking to be ignored by default, not because the lead was disinterested, but because the format of the follow-up doesn\'t match how people actually screen calls anymore.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The second is missed inbound calls. This cuts both ways: local businesses are also bad at answering their own phones. Call-tracking data across more than 225,000 business accounts found that 28% of inbound calls to local businesses go completely unanswered (CallRail). So even a lead who\'s willing to call back is dropped a meaningful chunk of the time. We cover what to do about that specific failure in [Missed Inbound Sales Call: What to Do](/blog/missed-inbound-sales-call-what-to-do).'
+      },
+      {
+        type: 'paragraph',
+        content: 'The third is after-hours and weekend triage delay. Field service platform data shows that 41% of home service job bookings happen outside standard business hours (Housecall Pro). A lead submitted Friday evening through a marketplace or a Facebook ad routinely sits untouched until Monday morning in a manual operation, by which point it\'s gone cold or gone to a competitor.'
+      },
+      {
+        type: 'heading',
+        content: 'What Good Follow-Up Looks Like Across Text, Chat, and Voice'
+      },
+      {
+        type: 'paragraph',
+        content: 'Good follow-up on these leads does the same basic job regardless of platform: engage fast, on a channel the person will actually respond to, and get to a real qualifying conversation rather than a canned acknowledgment.'
+      },
+      {
+        type: 'paragraph',
+        content: 'In practice that usually means text or chat, not a cold phone call, is the better opening move. A phone call from an unrecognized number runs straight into the behavior described above: most people don\'t pick up numbers they don\'t know, and on a shared marketplace, whoever the lead hears back from first tends to win the job. A text or a chat message doesn\'t ask the person to answer a call from a stranger. It meets them where they already are, and it lets them respond on their own time without having to pick up.'
+      },
+      {
+        type: 'paragraph',
+        content: 'That doesn\'t mean voice goes away. It means voice works best as the second step, once a text or chat exchange has already established context and the person knows who\'s reaching out, rather than as the cold opening move to someone who\'s never heard of you. Website chat follows the same logic for the leads that land through a Facebook ad and click through to a landing page: answer inside the window the person is still paying attention, ask the questions that determine fit, and get to a booked time in that same conversation instead of promising a follow-up call later. We mapped what "fast" actually means on each of these doors in [Speed to Lead Across SMS, Chat, and Voice](/blog/speed-to-lead-sms-chat-voice).'
+      },
+      {
+        type: 'heading',
+        content: 'What SurFox AI Does With This Kind of Inbound'
+      },
+      {
+        type: 'paragraph',
+        content: 'SurFox AI qualifies inbound leads on SMS, website chat, and a published Voice number, on whichever door the lead actually opened. When a Yelp, Thumbtack, or Facebook lead texts back or starts a chat, SurFox AI asks the qualifying questions in that conversation and works toward a booked time, rather than sending an acknowledgment and waiting for a human to pick it up later. It runs the same job around the clock, which matters specifically for the after-hours and weekend share of marketplace and social volume that manual teams tend to miss.'
+      },
+      {
+        type: 'paragraph',
+        content: 'This isn\'t a claim that SurFox AI changes what platforms send you or how those platforms distribute leads to competitors. It\'s a tool for the part of the funnel that\'s actually inside your control: how fast and how well you respond to a real, live prospect once they\'ve reached out.'
+      },
+      {
+        type: 'heading',
+        content: 'How to Measure Whether This Is Actually Working'
+      },
+      {
+        type: 'paragraph',
+        content: 'Measure this per door, not as one blended response-time number, since a fast average can hide a channel that\'s quietly failing:'
+      },
+      {
+        type: 'list',
+        items: [
+          '**Time to meaningful reply, not first touch.** The first message that actually addresses what the lead asked, not an automated receipt.',
+          '**Reply-to-qualified rate.** Of the leads who get a real reply, how many make it through basic qualifying questions.',
+          '**Qualified-to-booked rate.** Of the ones who qualify, how many end up with an actual time on the calendar.',
+          '**After-hours share and outcome.** What percentage of marketplace and social leads arrive outside your staffed hours, and how those leads convert compared to daytime volume.',
+          '**Source-by-channel breakdown.** Whether Yelp, Thumbtack, and Facebook leads respond better to text than to a first phone call, and adjust which channel leads with accordingly.',
+        ]
+      },
+      {
+        type: 'heading',
+        content: 'Who This Matters Most For'
+      },
+      {
+        type: 'paragraph',
+        content: 'This is sharpest for [home services businesses](/blog/home-services-lead-response-window) running Yelp, Thumbtack, Angi, or Facebook Lead Ads alongside their own site, local SMBs paying per lead or per response on any shared marketplace, and real estate-adjacent businesses (wholesalers, property services) fielding inbound from more than one paid source at once. If you\'re paying for leads on a platform where the same request goes to your competitors too, response speed and channel choice are doing more work than your quote.'
+      },
+      {
+        type: 'cta-box',
+        headline: 'Never lose a marketplace lead to a slow follow-up.',
+        subhead: 'SurFox AI qualifies marketplace and social leads on SMS, website chat, and a published Voice number, around the clock.',
+        primaryButton: { text: 'Start today', href: '/pricing' },
+        secondaryButton: { text: 'See how it works', href: '/platform' }
+      },
+      {
+        type: 'heading',
+        content: 'Frequently Asked Questions'
+      },
+      {
+        type: 'subheading',
+        content: 'Why do leads from Yelp, Thumbtack, and Facebook fail to answer phone calls?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Mostly because consumers have stopped answering calls from numbers they don\'t recognize. National survey data from Pew Research Center (2020) shows roughly 80% of Americans rarely or never pick up unknown callers. On top of that, marketplaces like Thumbtack send the same request to several businesses at once, so by the time a business calls, the lead may have already heard back from someone else via text or chat.'
+      },
+      {
+        type: 'subheading',
+        content: 'Is poor conversion on marketplace leads a lead quality problem or a response speed problem?'
+      },
+      {
+        type: 'paragraph',
+        content: 'The evidence points mainly to response speed. Research on web lead follow-up shows qualification odds drop sharply within the first hour, and collapse further past 24 hours. Separately, industry data on home services specifically found that 88% of contractors take longer than five minutes to respond to a new lead. The leads were real at the moment of submission; slow, single-channel follow-up is what makes them look bad afterward.'
+      },
+      {
+        type: 'subheading',
+        content: 'How much home service demand actually happens after business hours?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Field service platform data from Housecall Pro puts it at 41% of job bookings occurring outside standard business hours. Leads submitted on evenings or weekends through a marketplace or a Facebook ad often sit until the next business day in a manual operation, which is a large share of demand to leave unworked.'
+      },
+      {
+        type: 'subheading',
+        content: 'Is texting really more effective than calling for a first response?'
+      },
+      {
+        type: 'paragraph',
+        content: 'For a first response, generally yes, but not because of open-rate math, because of how people actually behave. Most consumers don\'t answer calls from numbers they don\'t recognize, and on a shared marketplace, the lead is often already talking to whoever reached them first. A text or a chat message doesn\'t require the person to pick up a call from a stranger, so it tends to get a reply where a cold call gets ignored. Voice still matters, but it works better as a second step once text or chat has already opened the conversation.'
+      },
+      {
+        type: 'subheading',
+        content: 'Does slow response really cost businesses the job?'
+      },
+      {
+        type: 'paragraph',
+        content: 'The mechanism is well established even without a single headline number: on a shared marketplace, multiple businesses get the same lead at the same time, and the research on response decay shows qualification odds falling sharply within the first hour and collapsing further past 24 hours. Every hour a lead sits unanswered is an hour a faster competitor has to reach them first.'
+      },
+      {
+        type: 'subheading',
+        content: 'Are Yelp and Thumbtack leads actually fake or low quality?'
+      },
+      {
+        type: 'paragraph',
+        content: 'There\'s no solid evidence for that as a general claim, and it shouldn\'t be asserted without a specific, narrow source backing it up. What the data does support is that these platforms run broadcast or shared-distribution models, so a lead\'s attention gets split across several businesses immediately, and whichever one responds first has a structural advantage independent of quote quality.'
+      },
+      {
+        type: 'subheading',
+        content: 'Does fixing response speed replace the need for good sales follow-up?'
+      },
+      {
+        type: 'paragraph',
+        content: 'No. Fast, multi-channel qualification gets a real conversation started and a lead through basic fit questions. What happens after that, the quote, the close, the relationship, is still a human sales job. Speed determines whether that job ever gets a chance to happen.'
+      },
+      {
+        type: 'subheading',
+        content: 'Should businesses stop using Yelp, Thumbtack, or Facebook Lead Ads if response rates are low?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Not necessarily. The response problem usually sits with the business\'s own follow-up process, not the platform. Businesses that fix response speed and channel mix on the same lead sources typically see conversion improve without changing where the leads come from.'
       }
     ]
   }
