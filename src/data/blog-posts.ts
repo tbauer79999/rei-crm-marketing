@@ -10509,7 +10509,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: 'tldr',
-        content: 'Most "AI receptionist" tools sell overlapping but different jobs: taking a message, texting a link, or moving a caller to a real next step.\nSurFox AI Voice qualifies the caller live, then either transfers the call to a person or sends an instant hot notify. It does not book a calendar slot during the call.\nFewer than 3% of callers who reach voicemail leave a message (Invoca, 2024), and 82% say they would call a competitor instead of waiting for a callback (CallRail, September 2025).\nA small 2016 marketing-vendor study of 85 businesses found only 37.8% of calls answered live, an upper-bound baseline suggesting roughly 6 in 10 missed (411 Locals). Businesses using call tracking miss considerably fewer, 9% to 32% depending on industry (CallRail, January 2025, 1.1 million inbound leads).\nAsk any vendor one question before you buy: what happens in the first 30 seconds after the caller says yes.'
+        content: 'Most "AI receptionist" tools sell overlapping but different jobs: taking a message, texting a link, or moving a caller to a real next step.\nSurFox AI Voice can check availability and lock a confirmed appointment during the call. That booking is stored in SurFox AI, and the team gets a notification email with an .ics attachment. It does not write the event directly into Google Calendar or Outlook. Campaigns can also use live transfer or hot notify alongside booking.\nFewer than 3% of callers who reach voicemail leave a message (Invoca, 2024), and 82% say they would call a competitor instead of waiting for a callback (CallRail, September 2025).\nA small 2016 marketing-vendor study of 85 businesses found only 37.8% of calls answered live, an upper-bound baseline suggesting roughly 6 in 10 missed (411 Locals). Businesses using call tracking miss considerably fewer, 9% to 32% depending on industry (CallRail, January 2025, 1.1 million inbound leads).\nAsk any vendor one question before you buy: what happens in the first 30 seconds after the caller says yes.'
       },
       {
         type: 'heading',
@@ -10622,7 +10622,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Inbound Voice AI that qualifies live is the one this article is about: an agent that answers the call, asks qualifying questions, and moves the caller toward a real next step instead of ending in a raw message. That next step can look different depending on the platform. Some tools book a calendar slot directly. SurFox AI Voice qualifies the caller and then either live transfers the call to a person on the line, or sends the team an instant hot notify once qualification and lead creation are already done, rather than booking the appointment itself during the call.'
+        content: 'Inbound Voice AI that qualifies live is the one this article is about: an agent that answers the call, asks qualifying questions, and moves the caller toward a real next step instead of ending in a raw message. That next step can look different depending on the platform. Some tools book a calendar slot directly. SurFox AI Voice can check availability and lock a confirmed appointment during the call. That booking is stored in SurFox AI, and the team gets a notification email with an .ics attachment. It does not write the event directly into Google Calendar or Outlook. Campaigns can also use live transfer or hot notify alongside booking.'
       },
       {
         type: 'paragraph',
@@ -10719,8 +10719,8 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'cta-box',
-        headline: 'Qualify the caller live, then transfer or alert your team.',
-        subhead: 'SurFox AI Voice qualifies the caller live, then either transfers the call to a person on the line or sends the team an instant hot notify with the qualification and lead already done, so any callback starts from real information instead of a blank slate. It\'s not the only AI voice agent worth evaluating, and it won\'t be the right fit for every business, but if "AI receptionist" has meant a fancier voicemail so far, it\'s worth checking exactly where the tool you\'re evaluating lands on the table above.',
+        headline: 'Qualify the caller live, then book, transfer, or alert your team.',
+        subhead: 'SurFox AI Voice can check availability and lock a confirmed appointment during the call. That booking is stored in SurFox AI, and the team gets a notification email with an .ics attachment. It does not write the event directly into Google Calendar or Outlook. Campaigns can also use live transfer or hot notify alongside booking. It\'s not the only AI voice agent worth evaluating, and it won\'t be the right fit for every business, but if "AI receptionist" has meant a fancier voicemail so far, it\'s worth checking exactly where the tool you\'re evaluating lands on the table above.',
         primaryButton: { text: 'See how it works', href: '/platform' },
         secondaryButton: { text: 'Start today', href: '/pricing' }
       },
