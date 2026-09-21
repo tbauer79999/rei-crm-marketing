@@ -2,6 +2,15 @@
 
 import { useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { PLANS } from './plans';
+
+// Same shape check as ATTRIBUTION_CODE in middleware.ts; keep the two in sync.
+const ATTRIBUTION_CODE = /^[A-Za-z0-9_-]{1,64}$/;
+
+// Returns the code only if it is shaped like a real one, otherwise null.
+function validCode(value: string | null): string | null {
+  return value && ATTRIBUTION_CODE.test(value) ? value : null;
+}
 
 // Read an attribution cookie (surfox_ref / surfox_aff) set by middleware.ts.
 function readCookie(name: string): string | null {
@@ -9,65 +18,6 @@ function readCookie(name: string): string | null {
   const match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
   return match ? decodeURIComponent(match[1]) : null;
 }
-
-const PLANS = {
-  starter: {
-    name: 'Starter',
-    price: 147,
-    priceId: 'price_1TDcQU2Mug1fO97sWchG4ILV',
-    leads: '2,000 monthly messages (in & out)',
-    keyFeatures: [
-      'AI-generated initial SMS',
-      'AI auto-replies',
-      'Cold follow-up automations',
-      'Basic analytics',
-      '1 team seat'
-    ],
-    description: 'Perfect for individual sales professionals'
-  },
-  growth: {
-    name: 'Growth', 
-    price: 597,
-    priceId: 'price_1TDcSA2Mug1fO97sywh4ejnB',
-    leads: '10,000 monthly messages (in & out)',
-    keyFeatures: [
-      'Everything in Starter, plus:',
-      'Funnel module (Cold → Escalated)',
-      'Chrome extension',
-      '100 conversation memory/learning',
-      '5 team seats'
-    ],
-    description: 'Advanced features for growing businesses'
-  },
-  growth_plus: {
-    name: 'Growth Plus',
-    price: 1497,
-    priceId: 'price_1Tqya92Mug1fO97sivQSdhhy',
-    leads: '25,000 monthly messages (in & out)',
-    keyFeatures: [
-      'Everything in Scale, just 25,000 messages:',
-      'Unlimited AI knowledge base uploads',
-      '1000 conversation memory/learning',
-      'Message A/B testing',
-      '15 team seats'
-    ],
-    description: 'Full Scale power, sized for 25,000 messages a month'
-  },
-  scale: {
-    name: 'Scale',
-    price: 2497,
-    priceId: 'price_1TDcSs2Mug1fO97sEHhXl38Y',
-    leads: '40,000+ monthly messages (in & out)',
-    keyFeatures: [
-      'Everything in Growth, plus:',
-      'Unlimited AI knowledge base uploads',
-      '1000 conversation memory/learning',
-      'Message A/B testing',
-      '15+ team seats'
-    ],
-    description: 'Full-featured plan for scaling operations'
-  }
-};
 
 export default function Subscribe() {
   const params = useParams();
@@ -86,11 +36,11 @@ export default function Subscribe() {
     // Capture referral + affiliate codes from URL and store in localStorage
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    const refCode = urlParams.get('ref');
+    const refCode = validCode(urlParams.get('ref'));
     if (refCode) {
       localStorage.setItem('surfox_ref', refCode);
     }
-    const affCode = urlParams.get('aff');
+    const affCode = validCode(urlParams.get('aff'));
     if (affCode) {
       localStorage.setItem('surfox_aff', affCode);
     }
@@ -125,16 +75,16 @@ export default function Subscribe() {
 
   // Get referral + affiliate codes from URL OR localStorage
   const urlParams = new URLSearchParams(window.location.search);
-  let referralCode = urlParams.get('ref');
-  let affiliateCode = urlParams.get('aff');
+  let referralCode = validCode(urlParams.get('ref'));
+  let affiliateCode = validCode(urlParams.get('aff'));
 
   // If not in URL, check localStorage, then the attribution cookie set by
   // middleware.ts on first landing (survives browsing away and return visits).
   if (!referralCode) {
-    referralCode = localStorage.getItem('surfox_ref') || readCookie('surfox_ref');
+    referralCode = validCode(localStorage.getItem('surfox_ref')) || validCode(readCookie('surfox_ref'));
   }
   if (!affiliateCode) {
-    affiliateCode = localStorage.getItem('surfox_aff') || readCookie('surfox_aff');
+    affiliateCode = validCode(localStorage.getItem('surfox_aff')) || validCode(readCookie('surfox_aff'));
   }
 
   setIsSubmitting(true);

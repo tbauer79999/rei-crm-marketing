@@ -11,6 +11,10 @@ import type { NextRequest } from 'next/server';
 // fallback at checkout (URL -> localStorage -> cookie).
 const ATTRIBUTION_MAX_AGE = 60 * 60 * 24 * 60; // 60 days
 
+// Codes are later sent to the backend as referralCode / affiliateCode, so only
+// persist values shaped like a real code. Anything else is ignored, not stored.
+const ATTRIBUTION_CODE = /^[A-Za-z0-9_-]{1,64}$/;
+
 export function middleware(request: NextRequest) {
   const response = NextResponse.next();
   const { searchParams } = request.nextUrl;
@@ -28,7 +32,7 @@ export function middleware(request: NextRequest) {
     ['ref', 'surfox_ref'],
   ] as const) {
     const value = searchParams.get(param);
-    if (value) {
+    if (value && ATTRIBUTION_CODE.test(value)) {
       response.cookies.set(cookieName, value, {
         maxAge: ATTRIBUTION_MAX_AGE,
         path: '/',
