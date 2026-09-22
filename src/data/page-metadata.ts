@@ -229,6 +229,12 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     ],
     path: '/roi',
   },
+  'become-an-affiliate': {
+    title: 'Become a SurFox AI Affiliate - Earn Recurring Commission',
+    description: 'Refer businesses to SurFox AI and earn recurring commission on every payment they make, for as long as they stay a customer. Apply in minutes.',
+    keywords: ['SurFox AI affiliate program', 'become an affiliate', 'recurring commission', 'SaaS affiliate program', 'referral partner'],
+    path: '/become-an-affiliate',
+  },
 };
 
 /**

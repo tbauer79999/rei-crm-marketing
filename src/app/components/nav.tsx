@@ -22,6 +22,7 @@ const productLinks = [
 const companyLinks = [
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Become an Affiliate', href: '/become-an-affiliate' },
 ];
 
 function Dropdown({

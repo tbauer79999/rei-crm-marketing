@@ -24,7 +24,7 @@ export default function TermsOfService() {
               Terms of Service
             </h1>
             <p className="text-lg sm:text-xl text-[#5A626E] leading-relaxed">
-              Last Updated: September 10, 2026
+              Last Updated: September 22, 2026
             </p>
           </motion.div>
         </div>
@@ -1287,6 +1287,125 @@ export default function TermsOfService() {
                   <span>You must comply with their terms when using SurFox AI</span>
                 </li>
               </ul>
+            </div>
+          </motion.div>
+
+          {/* Affiliate Program Terms */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Users className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Affiliate Program Terms
+              </h2>
+            </div>
+
+            <div className="ml-0 sm:ml-16 space-y-6 text-[#5A626E] leading-relaxed">
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Program</h3>
+                <p>
+                  SurFox AI&apos;s Affiliate Program lets approved affiliates refer new customers to SurFox AI under these terms. Participation requires SurFox AI&apos;s written approval. SurFox AI may accept or reject applicants in its discretion, including to keep the program focused on qualified, consultative referrals (for example, Follow Up Boss consultants and similar partners) and not bulk &quot;blaster&quot; or spam-driven traffic.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Commission</h3>
+                <p>
+                  For each Qualifying Customer you refer who pays for a SurFox AI subscription, you earn a commission equal to twenty percent (20%) of that customer&apos;s Active MRR (base billing only) for each month the customer remains an active paying subscriber during the Commission Period. The Commission Period is twelve (12) months beginning on the customer&apos;s Start Date. After that twelve-month period, commission on that customer ends. This replaces any prior public or program description of a ten percent (10%) affiliate rate.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">First invoice hold</h3>
+                <p>
+                  Commission on a Qualifying Customer&apos;s first month of Active MRR (base billing) accrues but is held and is not paid out with the first invoice. If the customer remains an active paying subscriber and SurFox AI collects a second paid invoice, SurFox AI will pay the held first-month commission together with the second month&apos;s commission. The affiliate does not forfeit first-month commission solely because of the hold. If the customer cancels, churns, or is refunded under SurFox AI&apos;s money-back guarantee (or otherwise) before SurFox AI has collected that second paid invoice, the held first-month commission is forfeited and no commission is owed for that customer for the first month. Thereafter, commission continues on subsequent paid invoices during the twelve-month Commission Period while the customer remains an active paying subscriber.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Definitions</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span><strong className="text-[#13171F]">Qualifying Customer</strong> means a new SurFox AI customer who (a) signs up using your approved affiliate link, code, or other tracking method SurFox AI provides, (b) is not an existing SurFox AI customer or a reactivation of a previously churned account SurFox AI already recognizes, (c) is accepted by SurFox AI, and (d) pays for a paid plan.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span><strong className="text-[#13171F]">Start Date</strong> means the date the Qualifying Customer&apos;s paid subscription first becomes active.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span><strong className="text-[#13171F]">Active MRR (base billing)</strong> means the recurring monthly subscription fee actually collected by SurFox AI for that customer&apos;s then-current plan for the applicable month. It excludes taxes, one-time fees, setup fees, SMS/message overages and top-ups, Voice overage minutes, usage charges, professional services, and refunded or credited amounts. Downgrades and upgrades adjust Active MRR going forward. No commission accrues for months that are unpaid or fully refunded, except that first-month commission may accrue and be held as described above.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span><strong className="text-[#13171F]">Commission Period</strong> means the twelve (12) months starting on the Start Date.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Payment</h3>
+                <p>
+                  Eligible commissions (including released held first-month amounts) are calculated on collected Active MRR (base billing) and paid on SurFox AI&apos;s affiliate payout schedule (for example, Net 30 after month-end) via the payment method on file. SurFox AI may withhold or claw back commission for chargebacks, refunds, fraud, or self-referrals. Minimum payout thresholds may apply.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Your obligations</h3>
+                <p className="mb-3">You must:</p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span>Promote SurFox AI accurately and not misrepresent features, pricing, TCPA/compliance outcomes, or guarantees</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span>Comply with FTC endorsement guidelines and all applicable advertising laws, including clear disclosure that you may earn a commission</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span>Not use spam, purchased lists, scraping, or unsolicited bulk SMS/email to drive referrals</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span>Not bid on SurFox AI trademarks in paid search without written permission</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span>Not hold yourself out as an employee or agent of SurFox AI</span>
+                  </li>
+                </ul>
+                <p className="mt-3">
+                  You are an independent contractor.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Non-Qualifying activity</h3>
+                <p>
+                  SurFox AI may deny or reverse commission for self-referrals, duplicate accounts, fraudulent signups, referrals obtained through prohibited marketing, or referrals that do not meet Qualifying Customer criteria. SurFox AI may suspend or terminate an affiliate for breach or for conduct inconsistent with a qualify-and-book partner program.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Termination</h3>
+                <p>
+                  Either party may terminate participation with notice. On termination, unpaid earned commissions remain payable subject to these terms; no new Qualifying Customers are attributed after termination. SurFox AI may modify the program prospectively with notice.
+                </p>
+              </div>
+
+              <div className="bg-[#F0F8F9] border-l-4 border-[#E4E6E2] rounded-r-lg p-4">
+                <p className="font-semibold text-[#13171F]">
+                  These Affiliate Program Terms supplement SurFox AI&apos;s Terms of Service and Privacy Policy. If there is a conflict on commission, these terms control for affiliates.
+                </p>
+              </div>
             </div>
           </motion.div>
 

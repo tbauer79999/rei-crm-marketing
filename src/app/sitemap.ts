@@ -49,6 +49,7 @@ const secondaryRoutes = [
   '/privacy',
   '/terms',
   '/demo',
+  '/become-an-affiliate',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

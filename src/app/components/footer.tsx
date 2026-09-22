@@ -37,6 +37,7 @@ const columns: { title: string; links: { label: string; href: string }[]; wide?:
       { label: 'Contact', href: '/contact' },
       { label: 'Leadership', href: '/leadership' },
       { label: 'Careers', href: '/careers' },
+      { label: 'Become an Affiliate', href: '/become-an-affiliate' },
     ],
   },
   {
