@@ -61,31 +61,49 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
   // a real ad/link impression being followed again, not a stale cookie.
   const affValue = searchParams.get('aff');
   if (affValue && ATTRIBUTION_CODE.test(affValue)) {
-    const rawSrc = searchParams.get('src');
-    const channel = rawSrc && ATTRIBUTION_CODE.test(rawSrc) ? rawSrc : null;
-    const clickId = crypto.randomUUID();
+    // Real browsers send Sec-Fetch-Mode: 'navigate' on an actual top-level
+    // page navigation (someone following a link); link-preview crawlers
+    // (iMessage/SMS rich previews, WhatsApp, Slack/Discord unfurling,
+    // Facebook/Twitter card bots) fetch the URL server-side to build a
+    // preview card and essentially never send this browser-only Fetch
+    // Metadata header. Texting an affiliate link to a phone was logging
+    // TWO clicks — one from the messaging app's automatic preview fetch,
+    // one from the real tap seconds later — silently doubling click counts
+    // on exactly the sharing pattern (DM/text/group chat) most affiliates
+    // actually use. Gating on this header is a strict allow-list on purpose:
+    // undercounting an obscure client that omits it is a far safer failure
+    // than overcounting bot traffic in a feature whose whole point is that
+    // affiliates can trust the number.
+    const isRealNavigation = request.headers.get('sec-fetch-mode') === 'navigate';
 
-    response.cookies.set('surfox_click_id', clickId, cookieOptions(ATTRIBUTION_MAX_AGE, cookieDomain));
+    if (isRealNavigation) {
+      const rawSrc = searchParams.get('src');
+      const channel = rawSrc && ATTRIBUTION_CODE.test(rawSrc) ? rawSrc : null;
+      const clickId = crypto.randomUUID();
 
-    // event.waitUntil, NOT a bare un-awaited fetch: the edge runtime can tear
-    // down this request's execution context as soon as the response is
-    // returned above, which would silently kill an in-flight fetch and
-    // undercount clicks in production with no visible error — exactly the
-    // trust problem this feature exists to fix. waitUntil keeps the fetch
-    // alive past the response.
-    event.waitUntil(
-      fetch(CLICK_LOG_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          click_id: clickId,
-          code: affValue,
-          channel,
-          referrer: request.headers.get('referer') || null,
-          landing_path: request.nextUrl.pathname,
-        }),
-      }).catch(() => {}) // best-effort; a dropped click-log call must never surface to the visitor
-    );
+      response.cookies.set('surfox_click_id', clickId, cookieOptions(ATTRIBUTION_MAX_AGE, cookieDomain));
+
+      // event.waitUntil, NOT a bare un-awaited fetch: the edge runtime can tear
+      // down this request's execution context as soon as the response is
+      // returned above, which would silently kill an in-flight fetch and
+      // undercount clicks in production with no visible error — exactly the
+      // trust problem this feature exists to fix. waitUntil keeps the fetch
+      // alive past the response.
+      event.waitUntil(
+        fetch(CLICK_LOG_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            click_id: clickId,
+            code: affValue,
+            channel,
+            referrer: request.headers.get('referer') || null,
+            landing_path: request.nextUrl.pathname,
+            user_agent: request.headers.get('user-agent') || null,
+          }),
+        }).catch(() => {}) // best-effort; a dropped click-log call must never surface to the visitor
+      );
+    }
   }
 
   return response;
