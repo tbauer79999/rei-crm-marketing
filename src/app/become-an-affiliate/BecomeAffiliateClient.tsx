@@ -140,7 +140,7 @@ export default function BecomeAffiliateClient() {
               Earn 20% recurring commission, every month, for a year
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed font-normal px-4">
-              Refer a business to SurFox AI and get paid 20% of what they pay us, every month they stay a customer, for up to 12 months per referral. Real cash, paid directly to you.
+              Refer a business to SurFox AI and get paid 20% of what they pay us, for 12 months from their signup date, as long as they stay an active customer. Real cash, paid directly to you.
             </p>
             <a
               href="#apply"
@@ -189,7 +189,7 @@ export default function BecomeAffiliateClient() {
             })}
           </div>
           <p className="text-center text-sm text-[#8A92A0] mt-8 max-w-2xl mx-auto">
-            Refer more than one business and it compounds — five Growth-plan referrals is over $7,000 in your first year alone.
+            Refer more than one business and it compounds: five Growth-plan referrals is over $7,000 in your first year alone.
           </p>
         </div>
       </section>
@@ -200,7 +200,7 @@ export default function BecomeAffiliateClient() {
           {[
             { icon: Send, title: '1. Apply', desc: 'Tell us a bit about yourself and how you’d promote SurFox AI. We review every application personally, usually within a couple of days.' },
             { icon: DollarSign, title: '2. Get your link', desc: 'Once approved, you get a personal referral link and a dashboard to track every referral and commission you’ve earned.' },
-            { icon: Users, title: '3. Earn recurring commission', desc: 'Every month a company you referred stays a customer, you earn 20% of what they pay — for up to 12 months per referral, paid out to you directly.' },
+            { icon: Users, title: '3. Earn recurring commission', desc: 'You earn 20% of what they pay for 12 months from their signup date, as long as they stay an active customer, paid out to you directly.' },
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -235,7 +235,7 @@ export default function BecomeAffiliateClient() {
             <div>
               <h3 className="font-semibold text-[#13171F] mb-1">Your first payout is protected</h3>
               <p className="text-[#5A626E] text-sm leading-relaxed">
-                SurFox AI has a 30-day money-back guarantee, so your first month's commission is held rather than paid immediately. It releases in full — you don't lose it — as soon as your referral makes their second payment.
+                SurFox AI has a 30-day money-back guarantee, so your first month's commission is held rather than paid immediately. You don't lose it: it releases in full as soon as your referral makes their second payment.
               </p>
             </div>
           </motion.div>
@@ -252,7 +252,7 @@ export default function BecomeAffiliateClient() {
             <div>
               <h3 className="font-semibold text-[#13171F] mb-1">12 months per referral</h3>
               <p className="text-[#5A626E] text-sm leading-relaxed">
-                Commission runs for each referred company's first 12 paid months. Bring in a steady stream of referrals and you're always earning on a full pipeline of them.
+                Commission runs for 12 months from each referral's signup date, for as long as they stay an active customer. Bring in a steady stream of referrals and you're always earning on a full pipeline of them.
               </p>
             </div>
           </motion.div>
@@ -335,7 +335,7 @@ export default function BecomeAffiliateClient() {
                       id="applicationNote" name="applicationNote" rows={5}
                       value={formData.applicationNote} onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-[#E4E6E2] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 bg-[#F4F5F3] text-[#13171F] placeholder:text-[#8A92A0] outline-none transition resize-none"
-                      placeholder="Your audience, network, or channel — website, social, industry contacts, etc."
+                      placeholder="Your audience, network, or channel: website, social, industry contacts, etc."
                     />
                   </div>
 
