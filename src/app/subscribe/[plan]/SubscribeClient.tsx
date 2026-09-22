@@ -87,6 +87,12 @@ export default function Subscribe() {
     affiliateCode = validCode(localStorage.getItem('surfox_aff')) || validCode(readCookie('surfox_aff'));
   }
 
+  // click_id has no URL param — it's minted server-side by middleware.ts the
+  // moment a visitor follows a real "?aff=" link, and only ever lives in the
+  // cookie it sets there. Absent (no affiliate link followed this session) is
+  // the normal case and just means no click to correlate.
+  const clickId = validCode(readCookie('surfox_click_id'));
+
   setIsSubmitting(true);
   try {
     const response = await fetch('https://api.surfox.ai/api/stripe/create-checkout-session', {
@@ -97,6 +103,7 @@ export default function Subscribe() {
         email: trimmedEmail,
         referralCode: referralCode,
         affiliateCode: affiliateCode,
+        clickId: clickId,
         metadata: {
           terms_agreed_at: new Date().toISOString()
         }
