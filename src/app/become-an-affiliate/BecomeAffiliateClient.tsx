@@ -140,7 +140,7 @@ export default function BecomeAffiliateClient() {
               Earn 20% recurring commission, every month, for a year
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed font-normal px-4">
-              Refer a business to SurFox AI and get paid 20% of what they pay us, for 12 months from their signup date, as long as they stay an active customer. Real cash, paid directly to you.
+              Refer a business to SurFox AI and earn 20% of their monthly plan for a full year while they stay active. That means Starter, Growth, or Scale. Extra SMS and Voice usage is not part of the cut. We pay you each month. Real cash, paid directly to you.
             </p>
             <a
               href="#apply"
