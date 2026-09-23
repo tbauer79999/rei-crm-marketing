@@ -10646,7 +10646,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Retell AI provides infrastructure for teams that want to build a custom voice agent, with a visual flow editor and an API, Cal.com integration for booking, and usage priced at $0.07 to $0.31 per minute. SurFox AI Voice is built on Retell AI.'
+        content: 'Retell AI provides infrastructure for teams that want to build a custom voice agent, with a visual flow editor and an API, Cal.com integration for booking, and usage priced at $0.07 to $0.31 per minute.'
       },
       {
         type: 'paragraph',

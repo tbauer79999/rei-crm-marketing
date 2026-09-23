@@ -92,7 +92,7 @@ const features = [
   },
 ];
 
-const integrations = ['GoHighLevel', 'Zapier', 'Twilio', 'Retell AI'];
+const integrations = ['GoHighLevel', 'Zapier', 'Twilio'];
 
 export default function Page() {
   const softwareSchema = generateSoftwareApplicationSchema();
@@ -289,7 +289,7 @@ export default function Page() {
             ))}
           </div>
           <p className="text-sm text-[#8A92A0] mt-8 max-w-xl mx-auto leading-relaxed">
-            Retell AI powers Voice: unknown callers get answered and qualified in a real
+            Voice: unknown callers get answered and qualified in a real
             conversation, then hot ones get a live transfer or hot notify to your team.
             It&apos;s not an outbound dialer working your list.
           </p>

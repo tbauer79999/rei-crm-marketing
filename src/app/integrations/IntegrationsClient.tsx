@@ -209,9 +209,9 @@ export default function Integrations() {
                   LIVE
                 </span>
               </div>
-              <h3 className="text-lg font-semibold text-[#13171F] mb-2">Retell Voice</h3>
+              <h3 className="text-lg font-semibold text-[#13171F] mb-2">Inbound Voice AI</h3>
               <p className="text-[#5A626E] text-sm leading-relaxed">
-                Inbound Voice AI, powered by Retell. Publish a number, and unknown callers get answered and qualified in a real conversation, not a script tree. Hot ones get a live transfer or an instant hot notify, not an outbound dialer.
+                Publish a number, and unknown callers get answered and qualified in a real conversation, not a script tree. Hot ones get a live transfer or an instant hot notify, not an outbound dialer.
               </p>
             </motion.div>
 
