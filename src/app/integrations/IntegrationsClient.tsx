@@ -37,7 +37,7 @@ export default function Integrations() {
     <div className="bg-[#F4F5F3] text-[#13171F]">
 
       {/* Hero Section */}
-      <section className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
+      <section className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
           >
