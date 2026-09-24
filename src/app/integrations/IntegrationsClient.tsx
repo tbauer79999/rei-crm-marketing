@@ -40,9 +40,6 @@ export default function Integrations() {
       <section className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl font-bold text-[#13171F] mb-6 sm:mb-8 leading-[1.1] tracking-tight">
               Works with the tools{' '}<br className="hidden sm:block" />
@@ -60,9 +57,6 @@ export default function Integrations() {
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-5xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             className="mb-12"
           >
             <div className="flex items-center gap-3 mb-4">
@@ -76,9 +70,6 @@ export default function Integrations() {
             {/* GoHighLevel - Featured Integration */}
             <motion.a
               href="/integrations/gohighlevel"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
               className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm hover:shadow-sm shadow-blue-500/5 transition-shadow group col-span-1 sm:col-span-2 md:col-span-3 flex flex-col sm:flex-row sm:items-center gap-6"
             >
               <div className="flex items-start gap-4 flex-1">
@@ -107,9 +98,6 @@ export default function Integrations() {
             {/* Follow Up Boss */}
             <motion.a
               href="/integrations/follow-up-boss"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
               className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm hover:shadow-sm shadow-blue-500/5 transition-shadow group flex flex-col"
             >
               <div className="flex items-start justify-between mb-4">
@@ -132,10 +120,6 @@ export default function Integrations() {
 
             {/* Odoo */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.02 }}
               className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm flex flex-col"
             >
               <div className="flex items-start justify-between mb-4">
@@ -154,10 +138,6 @@ export default function Integrations() {
 
             {/* RecruiterFlow */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.04 }}
               className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm flex flex-col"
             >
               <div className="flex items-start justify-between mb-4">
@@ -175,9 +155,6 @@ export default function Integrations() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
               className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm"
             >
               <div className="flex items-start justify-between mb-4">
@@ -195,10 +172,6 @@ export default function Integrations() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.03 }}
               className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm"
             >
               <div className="flex items-start justify-between mb-4">
@@ -216,10 +189,6 @@ export default function Integrations() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.05 }}
               className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm"
             >
               <div className="flex items-start justify-between mb-4">
@@ -237,10 +206,6 @@ export default function Integrations() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
               className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm"
             >
               <div className="flex items-start justify-between mb-4">
@@ -258,10 +223,6 @@ export default function Integrations() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.15 }}
               className="p-6 rounded-2xl border-2 border-green-500 bg-white shadow-sm"
             >
               <div className="flex items-start justify-between mb-4">
@@ -285,9 +246,6 @@ export default function Integrations() {
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-5xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             className="mb-12"
           >
             <div className="flex items-center gap-3 mb-4">
@@ -317,10 +275,6 @@ export default function Integrations() {
             ].map((integration, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
                 className="p-6 rounded-2xl border border-[#E4E6E2] bg-[#F4F5F3]"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -343,9 +297,6 @@ export default function Integrations() {
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-white">
         <div className="max-w-2xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-4">
               Don't see what you need?
@@ -390,9 +341,6 @@ export default function Integrations() {
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-[#F4F5F3]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
               Ready to start with what's live today?
