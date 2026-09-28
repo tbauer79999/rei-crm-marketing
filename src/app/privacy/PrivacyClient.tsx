@@ -440,6 +440,38 @@ export default function PrivacyPolicy() {
             </div>
           </motion.div>
 
+          {/* Data Deletion Requests */}
+          <motion.div
+            id="data-deletion"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16 scroll-mt-24"
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
+              Data Deletion Requests
+            </h2>
+
+            <div className="text-[#5A626E] leading-relaxed space-y-4">
+              <p>
+                SurFox AI stores conversation and contact information on behalf of the businesses that use our platform. If you messaged one of those businesses on Facebook Messenger and want your data deleted, you can request it in either of these ways:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>Email privacy@getsurfox.com with the subject line "Data Deletion Request." Include your name as it appears on Facebook and the name of the business you messaged, so we can find your records.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>Contact the business you messaged directly and ask them to submit the request to SurFox AI.</span>
+                </li>
+              </ul>
+              <p>
+                We will confirm receipt within 5 business days and complete the deletion within 30 days, except where we are required by law to keep certain records. You can also remove SurFox AI's access to your Facebook data at any time in your Facebook settings under Apps and Websites.
+              </p>
+            </div>
+          </motion.div>
+
           {/* Data Retention */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
