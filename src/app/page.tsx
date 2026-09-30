@@ -256,6 +256,14 @@ export default function Page() {
       <section className="hero">
         <div className="wrap hero-grid">
           <div className="hero-copy">
+            <a className="hero-ribbon" href="#pricing">
+              <span className="hero-ribbon-tag">Limited pricing</span>
+              <span className="hero-ribbon-text">
+                Plans starting at <strong>$49</strong>
+                <small>/mo</small>
+              </span>
+              <span className="hero-ribbon-arrow" aria-hidden="true">→</span>
+            </a>
             <div className="hero-badges">
               <span className="chip">SMS</span>
               <span className="chip-sep">·</span>
