@@ -322,13 +322,10 @@ function PartnerSignupContent() {
               )}
               
               {/* Trust indicators */}
+              {/* No trial offer, by design (2026-09-29) — SurFox does not offer a trial. Was gated on
+                  invite.trial_days > 0, which create-partner-invite has zeroed for every new invite
+                  since; removed entirely rather than left as a permanently-false condition. */}
               <div className={`space-y-2 text-sm text-[#5A626E] ${invite.custom_plan_limits ? 'mt-4 pt-4 border-t border-[#E4E6E2]' : ''}`}>
-                {invite.trial_days > 0 && (
-                  <div className="flex items-center justify-center gap-2">
-                    <span className={`w-2 h-2 rounded-full ${isPartnerAdmin ? 'bg-purple-600' : 'gradient-bg-600'}`}></span>
-                    {invite.trial_days}-day free trial
-                  </div>
-                )}
                 <div className="flex items-center justify-center gap-2">
                   <span className={`w-2 h-2 rounded-full ${isPartnerAdmin ? 'bg-purple-600' : 'gradient-bg-600'}`}></span>
                   Cancel anytime

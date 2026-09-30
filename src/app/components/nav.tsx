@@ -3,7 +3,7 @@
 /* =============================================================================
    NAV - Homepage redesign ("Thread")
    Minimal light-mode SaaS nav: Logo | Platform | Solutions ▾ | Pricing | Company ▾ |
-   Sign in | Start free trial. Hover/focus dropdowns as white cards, one ink CTA.
+   Sign in | Start today. Hover/focus dropdowns as white cards, one ink CTA.
    ============================================================================= */
 
 import { useState } from 'react';
