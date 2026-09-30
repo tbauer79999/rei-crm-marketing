@@ -2,7 +2,7 @@ export const PLANS = {
   starter: {
     name: 'Starter',
     price: 147,
-    priceId: 'price_1TDcQU2Mug1fO97sWchG4ILV',
+    priceId: 'price_1ULDXr2Mug1fO97sWvsUyufo',
     leads: '2,000 monthly messages (in & out)',
     keyFeatures: [
       'AI-generated initial SMS',
