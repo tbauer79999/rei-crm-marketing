@@ -21,7 +21,7 @@ export default function Page() {
         "@type": "Offer",
         "name": "Starter Plan",
         "description": "For operators testing the waters on a focused list. Core AI that texts, qualifies, and books, without conversation learning.",
-        "price": "147",
+        "price": "49",
         "priceCurrency": "USD",
         "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
@@ -36,7 +36,7 @@ export default function Page() {
         "itemOffered": {
           "@type": "Service",
           "name": "SurFox Starter",
-          "description": "2,000 messages per month (in & out), psychology-based conversations, automated qualification questions, basic objection handling, basic analytics dashboard, email support"
+          "description": "1,000 messages per month (in & out), 500 SMS leads ingested per month, 100 website chat conversations, 20 Voice AI minutes, 3 campaigns, psychology-based conversations, automated qualification questions, basic objection handling, basic analytics dashboard, email support"
         }
       },
       {

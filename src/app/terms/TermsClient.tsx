@@ -453,16 +453,28 @@ export default function TermsOfService() {
                 <div className="mb-6 bg-[#F4F5F3] rounded-xl p-6">
                   <div className="flex items-baseline gap-3 mb-3">
                     <h4 className="text-lg font-semibold text-[#13171F]">Starter</h4>
-                    <span className="text-2xl font-bold text-[#13171F]">$147<span className="text-sm text-[#8A92A0]">/month</span></span>
+                    <span className="text-2xl font-bold text-[#13171F]">$49<span className="text-sm text-[#8A92A0]">/month</span></span>
                   </div>
                   <ul className="space-y-1 text-[#5A626E] text-sm">
                     <li className="flex items-start gap-2">
                       <span className="text-[#0A7C8C] mt-1">•</span>
-                      <span>2,000 messages per month (in & out)</span>
+                      <span>1,000 messages per month (in & out)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-[#0A7C8C] mt-1">•</span>
-                      <span>200 website chat conversations per month</span>
+                      <span>500 SMS leads ingested per month</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#0A7C8C] mt-1">•</span>
+                      <span>100 website chat conversations per month</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#0A7C8C] mt-1">•</span>
+                      <span>20 Voice AI minutes per month</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#0A7C8C] mt-1">•</span>
+                      <span>3 campaigns maximum</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-[#0A7C8C] mt-1">•</span>
@@ -856,7 +868,7 @@ export default function TermsOfService() {
                   <div>
                     <p className="font-semibold text-[#13171F] mb-2">(a) Usage threshold</p>
                     <p>
-                      During the guarantee period, you must have sent at least 80% of your plan's monthly message allotment using your approved conversation flow. The applicable thresholds are: Starter, 1,600 of 2,000 messages; Growth, 8,000 of 10,000 messages; Growth Plus, 20,000 of 25,000 messages; Scale, 32,000 of 40,000 messages. Messages sent outside of your approved conversation flow do not count toward this threshold.
+                      During the guarantee period, you must have sent at least 80% of your plan's monthly message allotment using your approved conversation flow. The applicable thresholds are: Starter, 800 of 1,000 messages; Growth, 8,000 of 10,000 messages; Growth Plus, 20,000 of 25,000 messages; Scale, 32,000 of 40,000 messages. Messages sent outside of your approved conversation flow do not count toward this threshold.
                     </p>
                   </div>
                   <div>

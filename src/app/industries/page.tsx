@@ -260,7 +260,7 @@ export default function Page() {
             </div>
 
             <p className="text-sm text-[#8A92A0]">
-              Plans start at $147/month. Backed by our 30-day money-back guarantee. No setup fees.
+              Plans start at $49/month. Backed by our 30-day money-back guarantee. No setup fees.
             </p>
           </div>
         </div>

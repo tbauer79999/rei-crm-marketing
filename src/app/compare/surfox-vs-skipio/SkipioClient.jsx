@@ -43,7 +43,7 @@ const featureSets = [
     features: [
       { name: 'Primary Focus', surfox: 'Designed for businesses that need to close sales, qualifying every inbound door: SMS, chat, and Voice, plus paced list work', skipio: 'Built for appointment booking and basic follow-ups' },
       { name: 'Success Metrics', surfox: 'Measures success by qualified leads and revenue generated', skipio: 'Measures success by appointments booked and messages sent' },
-      { name: 'Pricing Model', surfox: 'Growth plan $597/month with learning AI, starts at $147', skipio: 'Base fee plus per-message costs' },
+      { name: 'Pricing Model', surfox: 'Growth plan $597/month with learning AI, starts at $49', skipio: 'Base fee plus per-message costs' },
       { name: 'Time Investment', surfox: '30 minutes daily to review escalated leads', skipio: '4+ hours daily managing conversations' },
       { name: 'Team Requirements', surfox: 'AI handles conversations - minimal staff needed', skipio: 'Requires dedicated team for message management' }
     ]

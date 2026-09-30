@@ -28,7 +28,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   pricing: {
     title: 'AI Lead Qualification Pricing Plans',
-    description: 'Real conversational AI at SMB pricing. Starter $147, Growth $597, Growth Plus $1,497, and Scale $2,497 per month. Backed by a 30-day money-back guarantee.',
+    description: 'Real conversational AI at SMB pricing. Starter $49, Growth $597, Growth Plus $1,497, and Scale $2,497 per month. Backed by a 30-day money-back guarantee.',
     keywords: ['SurFox AI pricing', 'AI SMS pricing', 'lead qualification pricing', 'SMS lead qualification pricing'],
     path: '/pricing',
   },
@@ -136,7 +136,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   'compare-qualified': {
     title: 'SurFox AI vs Qualified: Pricing, ROI & Best Qualified Alternative (2026)',
-    description: 'Comparing Qualified pricing and ROI? Qualified converts inbound website visitors. SurFox AI qualifies the outbound lead lists you already own via SMS, from $147/mo with published pricing.',
+    description: 'Comparing Qualified pricing and ROI? Qualified converts inbound website visitors. SurFox AI qualifies the outbound lead lists you already own via SMS, from $49/mo with published pricing.',
     keywords: [
       'SurFox vs Qualified',
       'Qualified alternative',
@@ -245,7 +245,7 @@ export const SOFTWARE_APP_DESCRIPTION =
   'AI-powered lead qualification platform that engages leads over SMS, website chat, and inbound phone calls within seconds, qualifies the conversation autonomously by text, chat, or voice, and hands sales teams a warm prospect, by live phone transfer or instant notification, 24 hours a day, 7 days a week.';
 
 const SOFTWARE_APP_TIERS = [
-  { name: 'Starter', price: '147', slug: 'starter' },
+  { name: 'Starter', price: '49', slug: 'starter' },
   { name: 'Growth', price: '597', slug: 'growth' },
   { name: 'Growth Plus', price: '1497', slug: 'growth_plus' },
   { name: 'Scale', price: '2497', slug: 'scale' },

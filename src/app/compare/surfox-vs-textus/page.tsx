@@ -32,7 +32,7 @@ const faqData = [
   {
     question: 'How does TextUs pricing compare to SurFox AI?',
     answer:
-      'TextUs starts around $300 per month per user for basic plans and scales up for teams. SurFox AI starts at $147 per month and handles unlimited AI conversations. For teams doing high-volume outreach, SurFox AI is significantly more cost-effective.',
+      'TextUs starts around $300 per month per user for basic plans and scales up for teams. SurFox AI starts at $49 per month and handles unlimited AI conversations. For teams doing high-volume outreach, SurFox AI is significantly more cost-effective.',
   },
   {
     question: 'Can TextUs automate lead qualification?',
@@ -103,7 +103,7 @@ export default function Page() {
                 <strong className="text-[#13171F]">TextUs gives your team a better inbox. Somebody still has to sit in it.</strong>
               </p>
               <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-                <strong className="text-[#0A7C8C]">SurFox AI qualifies leads on text, website chat, and a published Voice number, then books or hands off the hot ones, starting at $147 with Growth at $597 for learning AI.</strong>
+                <strong className="text-[#0A7C8C]">SurFox AI qualifies leads on text, website chat, and a published Voice number, then books or hands off the hot ones, starting at $49 with Growth at $597 for learning AI.</strong>
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
@@ -398,7 +398,7 @@ export default function Page() {
                 <div className="text-xs text-[#5A626E] mb-4">Flat, published, no usage fees</div>
                 <div className="text-xs text-[#5A626E] space-y-1">
                   <div>• 10,000 messages included</div>
-                  <div>• Starts at $147 on the Starter plan</div>
+                  <div>• Starts at $49 on the Starter plan</div>
                   <div>• Reply handling included, not billed as labor</div>
                 </div>
               </div>
@@ -514,7 +514,7 @@ export default function Page() {
               </p>
 
               <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">
-                Plans start at $147/month. Most teams choose Growth at $597 for learning AI.
+                Plans start at $49/month. Most teams choose Growth at $597 for learning AI.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">

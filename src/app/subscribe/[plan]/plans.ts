@@ -1,14 +1,17 @@
 export const PLANS = {
   starter: {
     name: 'Starter',
-    price: 147,
+    price: 49,
     priceId: 'price_1ULDXr2Mug1fO97sWvsUyufo',
-    leads: '2,000 monthly messages (in & out)',
+    leads: '1,000 monthly messages (in & out), 500 SMS leads/month',
     keyFeatures: [
       'AI-generated initial SMS',
       'AI auto-replies',
       'Cold follow-up automations',
       'Basic analytics',
+      '100 web chat conversations',
+      '20 Voice AI minutes',
+      '3 campaigns',
       '1 team seat'
     ],
     description: 'Perfect for individual sales professionals'

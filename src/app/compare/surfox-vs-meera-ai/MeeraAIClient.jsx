@@ -43,7 +43,7 @@ const featureSets = [
     features: [
       { name: 'Integration Options', surfox: 'Zapier (5,000+ apps), RecruiterFlow native, API access', meera: 'Limited integrations - primarily built for call centers' },
       { name: 'Data Privacy', surfox: 'Tenant-only learning - your data never trains competitors', meera: 'Standard data handling - no isolation guarantees' },
-      { name: 'Pricing Model', surfox: 'Starts at $147/month - scales with results', meera: 'Enterprise pricing - built for large call centers' },
+      { name: 'Pricing Model', surfox: 'Starts at $49/month - scales with results', meera: 'Enterprise pricing - built for large call centers' },
       { name: 'Setup Complexity', surfox: 'Self-serve setup in 15 minutes', meera: 'Complex implementation requiring IT resources' },
       { name: 'Target Customer', surfox: 'Sales teams who want qualified leads, not call volume', meera: 'Call centers focused on connection rates' }
     ]

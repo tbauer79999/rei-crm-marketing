@@ -405,7 +405,7 @@ export default function Page() {
                 <div className="text-xs text-[#5A626E] mb-4">Flat, published, no usage fees</div>
                 <div className="text-xs text-[#5A626E] space-y-1">
                   <div>• 10,000 messages included</div>
-                  <div>• Starts at $147 on the Starter plan</div>
+                  <div>• Starts at $49 on the Starter plan</div>
                   <div>• Reply handling included, not billed as labor</div>
                 </div>
               </div>
@@ -532,7 +532,7 @@ export default function Page() {
               </p>
 
               <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">
-                Plans start at $147/month. Most teams choose Growth at $597 for learning AI.
+                Plans start at $49/month. Most teams choose Growth at $597 for learning AI.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">

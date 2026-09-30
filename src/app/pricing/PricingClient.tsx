@@ -22,8 +22,8 @@ const plans: Plan[] = [
     slug: 'starter',
     name: 'Starter',
     desc: 'For operators testing the waters on a focused list.',
-    price: '$147',
-    vol: '2,000 messages / mo',
+    price: '$49',
+    vol: '1,000 messages / mo',
     callout: 'Core AI that texts, qualifies, and books. Conversation learning not included yet.',
     popular: false,
     btn: 'btn-ghost',
@@ -32,17 +32,19 @@ const plans: Plan[] = [
         h: 'Monthly limits',
         items: [
           {
-            t: '2,000 SMS messages per month',
+            t: '1,000 SMS messages per month',
             sub: 'Each conversation uses ~4 to 8 messages (your outbound plus lead replies combined).',
           },
           {
-            t: '200 website chat conversations per month',
+            t: '100 website chat conversations per month',
             sub: 'Qualifies inbound website visitors 24/7.',
           },
           {
-            t: '100 Voice minutes per month',
+            t: '20 Voice minutes per month',
             sub: 'Only inbound calls to your published number count. CSV and reactivation lists never touch it, Voice doesn’t dial them.',
           },
+          { t: '500 new SMS leads ingested per month' },
+          { t: '3 active campaigns' },
           { t: '1 team member account' },
         ],
       },

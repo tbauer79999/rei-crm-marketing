@@ -501,7 +501,7 @@ export default function Page() {
             30-day money-back guarantee. No setup fees. No risk.
           </p>
           <p className="text-sm text-[#5A626E]">
-            Plans start at $147/month. Most teams choose Growth at $597 for learning AI.
+            Plans start at $49/month. Most teams choose Growth at $597 for learning AI.
           </p>
         </div>
       </section>

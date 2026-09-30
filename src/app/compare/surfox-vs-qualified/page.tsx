@@ -26,7 +26,7 @@ const comparisonData = [
   { factor: 'Use case', surfox: 'Inbound doors (SMS, chat, Voice) plus paced outbound lists', qualified: 'Inbound - convert website visitors' },
   { factor: 'Lead sources', surfox: 'Any list - aged leads, purchased, events, scraped - plus your own site and phone number', qualified: 'Only website traffic' },
   { factor: 'Target customer', surfox: 'SMBs, staffing agencies, real estate, service businesses', qualified: 'Enterprise B2B SaaS with high web traffic' },
-  { factor: 'Pricing', surfox: '$147-$2,497/mo, published', qualified: 'Enterprise contracts, quote-based' },
+  { factor: 'Pricing', surfox: '$49-$2,497/mo, published', qualified: 'Enterprise contracts, quote-based' },
   { factor: 'CRM requirement', surfox: 'Works standalone or with your CRM', qualified: 'Built around Salesforce' },
   { factor: 'Setup', surfox: 'Self-serve account setup; live once A2P approves', qualified: 'Sales-led implementation' },
   { factor: 'Best for', surfox: 'Teams with lead lists but no time to text them all', qualified: 'Enterprises with heavy inbound web traffic' },
@@ -35,7 +35,7 @@ const comparisonData = [
 const faqData = [
   {
     question: 'How much does Qualified cost compared to SurFox AI?',
-    answer: 'Qualified is sold through enterprise contracts with quote-based pricing, which typically puts it well beyond most SMB budgets and requires a sales conversation before you see a number. SurFox AI publishes its pricing: plans run from $147 to $2,497 per month with self-serve signup. If you are running an ROI comparison, the practical difference is that you can start with SurFox AI today and calculate real returns from your own data, rather than modeling projections in a calculator before you have talked to anyone.',
+    answer: 'Qualified is sold through enterprise contracts with quote-based pricing, which typically puts it well beyond most SMB budgets and requires a sales conversation before you see a number. SurFox AI publishes its pricing: plans run from $49 to $2,497 per month with self-serve signup. If you are running an ROI comparison, the practical difference is that you can start with SurFox AI today and calculate real returns from your own data, rather than modeling projections in a calculator before you have talked to anyone.',
   },
   {
     question: 'Is there a Qualified ROI calculator, and what does it actually tell you?',
@@ -78,7 +78,7 @@ export default function Page() {
             '@type': 'WebPage',
             name: 'SurFox AI vs Qualified: Pricing, ROI, and the Best Qualified Alternative for Outbound (2026)',
             description:
-              "Comparing Qualified pricing and ROI against SurFox AI? Qualified converts inbound website visitors. SurFox AI qualifies leads on SMS, website chat, and a published Voice number, plus the outbound lead lists you already own, from $147/mo.",
+              "Comparing Qualified pricing and ROI against SurFox AI? Qualified converts inbound website visitors. SurFox AI qualifies leads on SMS, website chat, and a published Voice number, plus the outbound lead lists you already own, from $49/mo.",
             mainEntity: {
               '@type': 'Product',
               name: 'SurFox AI',
@@ -88,7 +88,7 @@ export default function Page() {
               offers: {
                 '@type': 'Offer',
                 priceCurrency: 'USD',
-                price: '147',
+                price: '49',
                 priceValidUntil: '2026-12-31',
                 availability: 'https://schema.org/InStock',
                 url: 'https://www.getsurfox.com/pricing',
@@ -183,7 +183,7 @@ export default function Page() {
                 <div className="text-xs text-[#8A92A0] mt-1">people text back</div>
               </div>
               <div className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
-                <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">$147</div>
+                <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">$49</div>
                 <div className="text-sm text-[#5A626E]">Starting Price</div>
                 <div className="text-xs text-[#8A92A0] mt-1">published, not quoted</div>
               </div>
@@ -286,7 +286,7 @@ export default function Page() {
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
-                    <span>Published pricing starting at $147/mo</span>
+                    <span>Published pricing starting at $49/mo</span>
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
@@ -365,7 +365,7 @@ export default function Page() {
               <div className="p-6 sm:p-8 rounded-2xl border-2 border-blue-500/30 bg-blue-500/5">
                 <h3 className="text-xl font-semibold text-[#13171F] mb-4">SurFox AI</h3>
                 <ul className="space-y-3 text-sm text-[#5A626E]">
-                  <li className="flex items-start"><span className="text-[#0A7C8C] mr-2 flex-shrink-0">✓</span>Published pricing from $147 to $2,497 per month</li>
+                  <li className="flex items-start"><span className="text-[#0A7C8C] mr-2 flex-shrink-0">✓</span>Published pricing from $49 to $2,497 per month</li>
                   <li className="flex items-start"><span className="text-[#0A7C8C] mr-2 flex-shrink-0">✓</span>Self-serve signup, no sales call required</li>
                   <li className="flex items-start"><span className="text-[#0A7C8C] mr-2 flex-shrink-0">✓</span>Live once A2P registration approves</li>
                   <li className="flex items-start"><span className="text-[#0A7C8C] mr-2 flex-shrink-0">✓</span>30-day money back guarantee</li>
@@ -648,7 +648,7 @@ export default function Page() {
             </p>
 
             <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">
-              Plans start at $147/month. Self-serve setup, live once A2P approves.
+              Plans start at $49/month. Self-serve setup, live once A2P approves.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">

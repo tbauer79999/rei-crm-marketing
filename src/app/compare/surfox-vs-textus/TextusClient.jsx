@@ -39,7 +39,7 @@ const featureSets = [
     category: 'Business Value',
     icon: DollarSign,
     features: [
-      { name: 'Pricing Model', surfox: 'Growth plan $597/month with learning AI, starts at $147', textus: '$500+ base with hidden fees and limits' },
+      { name: 'Pricing Model', surfox: 'Growth plan $597/month with learning AI, starts at $49', textus: '$500+ base with hidden fees and limits' },
       { name: 'Staff Requirements', surfox: 'No dedicated messaging staff needed', textus: 'Requires full-time manual management' },
       { name: 'ROI Tracking', surfox: 'Full conversion tracking from lead to close', textus: 'Basic message delivery metrics only' },
       { name: 'Scalability', surfox: 'SurFox AI scales conversations without adding staff', textus: 'More leads = more manual work required' }

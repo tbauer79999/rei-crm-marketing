@@ -750,8 +750,8 @@ export default function Page() {
                   <tbody className="bg-[#F4F5F3] divide-y divide-gray-100">
                     <tr>
                       <td className="px-4 py-3 font-medium text-[#5A626E]">Starter</td>
-                      <td className="px-4 py-3 text-right text-[#5A626E]">$147</td>
-                      <td className="px-4 py-3 text-right text-[#5A626E]">2,000</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">$49</td>
+                      <td className="px-4 py-3 text-right text-[#5A626E]">1,000</td>
                       <td className="px-4 py-3 text-right text-[#0A7C8C]">none</td>
                     </tr>
                     <tr className="bg-white">
@@ -951,7 +951,7 @@ export default function Page() {
               </p>
 
               <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">
-                Plans start at $147/month. Most teams choose Growth at $597 for learning AI.
+                Plans start at $49/month. Most teams choose Growth at $597 for learning AI.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">

@@ -37,7 +37,7 @@ const faqData = [
 ];
 
 const heroStats = [
-  { stat: '$147', label: 'Starting Price', sub: 'vs enterprise pricing' },
+  { stat: '$49', label: 'Starting Price', sub: 'vs enterprise pricing' },
   { stat: '5,000+', label: 'Zapier Integrations', sub: 'connect anything' },
   { stat: 'Zero', label: 'Call Center Needed', sub: 'AI qualifies first' },
   { stat: '100%', label: 'Data Isolation', sub: 'your data stays yours' },
@@ -354,7 +354,7 @@ export default function Page() {
                       <DollarSign className="w-4 h-4 mr-2 text-green-400" />
                       <span className="text-xs font-medium text-[#5A626E]">Cost Structure</span>
                     </div>
-                    <p className="text-sm text-[#5A626E]">Starts at $147/month - no call center needed, works with existing leads</p>
+                    <p className="text-sm text-[#5A626E]">Starts at $49/month - no call center needed, works with existing leads</p>
                   </div>
                 </div>
 
@@ -529,7 +529,7 @@ export default function Page() {
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
-                    <span>You want to start at $147/month without call center overhead</span>
+                    <span>You want to start at $49/month without call center overhead</span>
                   </div>
                 </div>
               </div>
@@ -577,7 +577,7 @@ export default function Page() {
               </p>
 
               <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">
-                Plans start at $147/month. Most teams choose Growth at $597 for learning AI.
+                Plans start at $49/month. Most teams choose Growth at $597 for learning AI.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">

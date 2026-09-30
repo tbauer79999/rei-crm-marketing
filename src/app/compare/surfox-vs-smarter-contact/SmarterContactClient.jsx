@@ -46,7 +46,7 @@ const featureSets = [
       { name: 'Time Investment', surfox: 'Minimal ongoing management required', smarter: 'Constant manual conversation monitoring' },
       { name: 'ROI Tracking', surfox: 'Full conversion tracking from lead to close', smarter: 'Basic volume and open rate metrics' },
       { name: 'Scalability', surfox: 'SurFox AI scales conversations without adding staff', smarter: 'More leads = more manual work' },
-      { name: 'Total Cost', surfox: 'Growth $597/month flat, Starter $147/month, no per-message fee', smarter: 'Smarter Contact from $199/mo plus per-message fees; Launch Control from $497/mo plus a provider fee' }
+      { name: 'Total Cost', surfox: 'Growth $597/month flat, Starter $49/month, no per-message fee', smarter: 'Smarter Contact from $199/mo plus per-message fees; Launch Control from $497/mo plus a provider fee' }
     ]
   }
 ];

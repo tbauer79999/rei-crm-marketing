@@ -3047,7 +3047,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI lead qualification platforms typically [range from $12,000 to $60,000 per year](/blog/ai-lead-qualification-cost-pricing-guide-2026) depending on message volume, features, and tier. This compares favorably to a team of three to five SDRs, which costs $882,000 to $2,595,000 over three years when you include salary, benefits, training, and turnover. SurFox AI starts at $147/month for teams getting started with SMS-based qualification.'
+        content: 'AI lead qualification platforms typically [range from $12,000 to $60,000 per year](/blog/ai-lead-qualification-cost-pricing-guide-2026) depending on message volume, features, and tier. This compares favorably to a team of three to five SDRs, which costs $882,000 to $2,595,000 over three years when you include salary, benefits, training, and turnover. SurFox AI starts at $49/month for teams getting started with SMS-based qualification.'
       },
     ]
   }
@@ -3381,16 +3381,16 @@ export const blogPosts: BlogPost[] = [
     authorTitle: 'Founder & CEO, SurFox AI',
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'How Much Does AI Lead Qualification Cost in 2026? (Complete Pricing Guide)',
-    metaDescription: 'AI lead qualification costs $147 to $10,000+ per month depending on volume and features. Here\'s every pricing tier, hidden cost, and how it compares to hiring an SDR.',
+    metaDescription: 'AI lead qualification costs $49 to $10,000+ per month depending on volume and features. Here\'s every pricing tier, hidden cost, and how it compares to hiring an SDR.',
     relatedPosts: ['ai-sdr-vs-hiring-sdr-roi-2026', 'reduce-sdr-headcount-ai', 'what-is-ai-lead-qualification'],
     content: [
       {
         type: 'tldr',
-        content: 'AI lead qualification ranges from $30 to $10,000+/month - SMS-based (SurFox AI) starts at $147/month; enterprise runs $3K–$10K+/month.\nFully loaded human SDR costs $98K–$173K/year vs. $24K–$60K/year for a platform - roughly a 40% to 85% reduction depending on tier.\nCost per booked meeting with a human SDR works out to roughly $560 to $990, dividing a fully loaded salary by The Bridge Group\'s median of 14.6 meetings booked per month.\nMost businesses see positive ROI within 60–90 days.\nHidden costs - deliverability infrastructure, setup labor, prompt tuning - can double the visible price if unbudgeted.'
+        content: 'AI lead qualification ranges from $30 to $10,000+/month - SMS-based (SurFox AI) starts at $49/month; enterprise runs $3K–$10K+/month.\nFully loaded human SDR costs $98K–$173K/year vs. $24K–$60K/year for a platform - roughly a 40% to 85% reduction depending on tier.\nCost per booked meeting with a human SDR works out to roughly $560 to $990, dividing a fully loaded salary by The Bridge Group\'s median of 14.6 meetings booked per month.\nMost businesses see positive ROI within 60–90 days.\nHidden costs - deliverability infrastructure, setup labor, prompt tuning - can double the visible price if unbudgeted.'
       },
       {
         type: 'callout',
-        content: '**Quick Answer:** AI lead qualification platforms range from **$30 to $10,000+ per month** depending on volume, autonomy, and features. SMS-based qualification starts at **$147/month**. Mid-market platforms run **$500 to $2,500/month**. Enterprise autonomous AI SDR agents run **$3,000 to $10,000+/month**. All tiers compare favorably to a fully loaded human SDR at **$98,000 to $173,000 per year.**'
+        content: '**Quick Answer:** AI lead qualification platforms range from **$30 to $10,000+ per month** depending on volume, autonomy, and features. SMS-based qualification starts at **$49/month**. Mid-market platforms run **$500 to $2,500/month**. Enterprise autonomous AI SDR agents run **$3,000 to $10,000+/month**. All tiers compare favorably to a fully loaded human SDR at **$98,000 to $173,000 per year.**'
       },
       {
         type: 'heading',
@@ -3430,7 +3430,7 @@ export const blogPosts: BlogPost[] = [
         rows: [
           ['Instantly', '$30/mo', 'Flat subscription', '5,000 emails, 1,000 contacts, unlimited warmups'],
           ['Apollo.io', '$49/user/mo', 'Per user', '275M+ contacts, basic sequencing, AI writing assistant'],
-          ['SurFox AI Starter', '$147/mo', 'Flat bundle', '2,000 SMS + 200 web chat, 1 user, full AI qualification'],
+          ['SurFox AI Starter', '$49/mo', 'Flat bundle', '1,000 SMS + 100 web chat + 20 Voice min, 3 campaigns, 1 user, full AI qualification'],
           ['LeadLoft', '$99/mo', 'Flat rate', 'Basic prospecting automation, monthly billing'],
         ]
       },
@@ -3440,7 +3440,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'callout',
-        content: '**Where SurFox AI fits in this tier:** At $147/month, SurFox AI\'s Starter plan sits at the higher end of entry-level pricing but includes full AI qualification conversations over SMS - not just sequencing or email automation. That is a meaningfully different product than a $30 email sender. You are paying for a system that qualifies leads through real dialogue, not one that automates sending.'
+        content: '**Where SurFox AI fits in this tier:** At $49/month, SurFox AI\'s Starter plan sits at the low end of entry-level pricing and includes full AI qualification conversations over SMS - not just sequencing or email automation. That is a meaningfully different product than a $30 email sender. You are paying for a system that qualifies leads through real dialogue, not one that automates sending.'
       },
       {
         type: 'heading',
@@ -3602,7 +3602,7 @@ export const blogPosts: BlogPost[] = [
         type: 'table',
         headers: ['Platform', 'Pricing Transparency', 'Starting Price', 'Notes'],
         rows: [
-          ['SurFox AI', 'Public', '$147/mo', 'Full tier breakdown on pricing page'],
+          ['SurFox AI', 'Public', '$49/mo', 'Full tier breakdown on pricing page'],
           ['Instantly', 'Public', '$30/mo', 'Email infrastructure focus'],
           ['Apollo.io', 'Public', '$0 (free tier)', 'Paid from $49/user/mo'],
           ['AiSDR', 'Public', '$900/mo', 'Quarterly billing required'],
@@ -3650,7 +3650,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI lead qualification platforms range from $30 to $10,000+ per month depending on volume, autonomy, and features. SMS-based qualification like SurFox AI starts at $147 per month. Mid-market platforms run $500 to $2,500 per month. Enterprise autonomous AI SDR platforms like 11x.ai and Artisan run $3,000 to $10,000+ per month.'
+        content: 'AI lead qualification platforms range from $30 to $10,000+ per month depending on volume, autonomy, and features. SMS-based qualification like SurFox AI starts at $49 per month. Mid-market platforms run $500 to $2,500 per month. Enterprise autonomous AI SDR platforms like 11x.ai and Artisan run $3,000 to $10,000+ per month.'
       },
       {
         type: 'subheading',
@@ -3682,7 +3682,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Platforms with transparent public pricing include SurFox AI (starting at $147/month), Apollo.io (free tier available, paid from $49/user/month), Instantly ($30/month), AiSDR ($900/month), and Agent Frank ($499/month). Enterprise platforms including 11x.ai, Artisan, and Qualified require a demo and do not publish pricing.'
+        content: 'Platforms with transparent public pricing include SurFox AI (starting at $49/month), Apollo.io (free tier available, paid from $49/user/month), Instantly ($30/month), AiSDR ($900/month), and Agent Frank ($499/month). Enterprise platforms including 11x.ai, Artisan, and Qualified require a demo and do not publish pricing.'
       },
       {
         type: 'subheading',

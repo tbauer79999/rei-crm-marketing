@@ -57,8 +57,8 @@ const plans = [
   {
     name: 'Starter',
     desc: 'For operators testing the waters on a focused list.',
-    price: '$147',
-    vol: '2,000 SMS + 200 website chats + 100 Voice min / mo',
+    price: '$49',
+    vol: '1,000 SMS + 100 website chats + 20 Voice min / mo',
     features: [
       'AI conversation engine',
       '50 qualification signals tracked',
@@ -173,8 +173,8 @@ export default function Page() {
             offers: {
               '@type': 'Offer',
               priceCurrency: 'USD',
-              price: '147',
-              description: 'Plans start from $147/month',
+              price: '49',
+              description: 'Plans start from $49/month',
               url: 'https://www.getsurfox.com/pricing',
             },
             operatingSystem: 'Web Browser',
@@ -443,7 +443,7 @@ export default function Page() {
             <div className="l">follow-up, no headcount</div>
           </div>
           <div className="q">
-            <div className="n">$147</div>
+            <div className="n">$49</div>
             <div className="l">to start, not $1,000</div>
           </div>
         </div>

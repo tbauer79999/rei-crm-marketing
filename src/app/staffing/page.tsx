@@ -52,7 +52,7 @@ const comparisonRows: Array<{
   { label: 'Available 24/7', manual: false, smarter: false, surfox: true },
   { label: 'Learns from conversations', manual: false, smarter: false, surfox: true },
   { label: 'Zapier integration', manual: false, smarter: 'Limited', surfox: true },
-  { label: 'Cost', manual: '$800+/mo + labor', smarter: '$800+/mo + labor', surfox: 'From $147/mo' },
+  { label: 'Cost', manual: '$800+/mo + labor', smarter: '$800+/mo + labor', surfox: 'From $49/mo' },
 ];
 
 const objections = [
@@ -309,7 +309,7 @@ export default function Page() {
             </div>
 
             <p className="text-sm text-[#8A92A0]">
-              Plans start at $147/month. Backed by our 30-day money-back guarantee.
+              Plans start at $49/month. Backed by our 30-day money-back guarantee.
             </p>
           </div>
         </div>

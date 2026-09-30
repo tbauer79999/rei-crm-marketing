@@ -43,9 +43,9 @@ const featureSets = [
     features: [
       { name: 'Primary Purpose', surfox: 'Convert cold leads into qualified appointments', sherpa: 'Compliant lead acquisition and basic outreach' },
       { name: 'Target Market', surfox: 'Any sales team with leads to convert', sherpa: 'Real estate investors and wholesalers' },
-      { name: 'Pricing Strategy', surfox: 'Growth plan $597/month with learning AI, starts at $147', sherpa: '$1,299+/month plus per-message costs' },
+      { name: 'Pricing Strategy', surfox: 'Growth plan $597/month with learning AI, starts at $49', sherpa: '$1,299+/month plus per-message costs' },
       { name: 'Time Investment', surfox: '30 minutes daily to review escalated leads', sherpa: '4+ hours daily for campaign management' },
-      { name: 'Total Cost of Ownership', surfox: 'Growth $597/month, Starter $147/month', sherpa: '$1,500+/month including labor costs' }
+      { name: 'Total Cost of Ownership', surfox: 'Growth $597/month, Starter $49/month', sherpa: '$1,500+/month including labor costs' }
     ]
   }
 ];

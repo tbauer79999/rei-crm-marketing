@@ -55,7 +55,7 @@ const comparisonRows: Array<{
   { label: 'Separate talk tracks per contact type', manual: false, surfox: true },
   { label: 'Available 24/7', manual: false, surfox: true },
   { label: 'Zapier integration', manual: false, surfox: true },
-  { label: 'Cost', manual: 'Your time + missed pipeline', surfox: 'From $147/mo' },
+  { label: 'Cost', manual: 'Your time + missed pipeline', surfox: 'From $49/mo' },
 ];
 
 const objections = [
@@ -285,7 +285,7 @@ export default function Page() {
             </div>
 
             <p className="text-sm text-[#8A92A0]">
-              Plans start at $147/month. Backed by our 30-day money-back guarantee.
+              Plans start at $49/month. Backed by our 30-day money-back guarantee.
             </p>
           </div>
         </div>

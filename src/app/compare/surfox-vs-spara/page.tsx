@@ -25,7 +25,7 @@ const comparisonData = [
   { factor: 'Use case', surfox: 'Inbound doors (SMS, chat, Voice) plus paced outbound lists', spara: 'Inbound - convert website visitors' },
   { factor: 'Lead sources', surfox: 'Any list - aged leads, purchased, events, scraped - plus your own site and phone number', spara: 'Only website traffic' },
   { factor: 'Target customer', surfox: 'SMBs, staffing agencies, real estate, service businesses', spara: 'Enterprise SaaS with high web traffic' },
-  { factor: 'Pricing', surfox: '$147-$2,497/mo', spara: 'Enterprise contracts (unlisted)' },
+  { factor: 'Pricing', surfox: '$49-$2,497/mo', spara: 'Enterprise contracts (unlisted)' },
   { factor: 'Setup', surfox: 'Self-serve account setup; live once A2P approves', spara: 'Sales-led implementation' },
   { factor: 'Best for', surfox: 'Teams with lead lists but no time to text them all', spara: 'Companies with heavy inbound web traffic' },
 ];
@@ -197,7 +197,7 @@ export default function Page() {
                 <div className="text-xs text-[#8A92A0] mt-1">people text back</div>
               </div>
               <div className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-[#F4F5F3]">
-                <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">$147</div>
+                <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">$49</div>
                 <div className="text-sm text-[#5A626E]">Starting Price</div>
                 <div className="text-xs text-[#8A92A0] mt-1">self-serve setup</div>
               </div>
@@ -300,7 +300,7 @@ export default function Page() {
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
-                    <span>SMB-friendly pricing starting at $147/mo</span>
+                    <span>SMB-friendly pricing starting at $49/mo</span>
                   </div>
                   <div className="flex items-start text-sm text-[#5A626E]">
                     <Check className="w-5 h-5 mr-2 mt-0.5 text-[#0A7C8C] flex-shrink-0" />
@@ -604,7 +604,7 @@ export default function Page() {
             </p>
 
             <p className="text-base text-[#8A92A0] mb-8 max-w-2xl mx-auto">
-              Plans start at $147/month. Self-serve setup, live once A2P approves.
+              Plans start at $49/month. Self-serve setup, live once A2P approves.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">
