@@ -60,6 +60,8 @@ const plans = [
     price: '$49',
     vol: '1,000 SMS + 100 website chats + 20 Voice min / mo',
     features: [
+      '500 SMS leads ingested per month',
+      '3 active campaigns',
       'AI conversation engine',
       '50 qualification signals tracked',
       'Knowledge base upload',

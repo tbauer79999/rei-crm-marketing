@@ -24,7 +24,7 @@ const plans: Plan[] = [
     desc: 'For operators testing the waters on a focused list.',
     price: '$49',
     vol: '1,000 messages / mo',
-    callout: 'Core AI that texts, qualifies, and books. Conversation learning not included yet.',
+    callout: 'Core AI that texts, qualifies, and books. Up to 500 SMS leads ingested per month. Conversation learning not included yet.',
     popular: false,
     btn: 'btn-ghost',
     groups: [
