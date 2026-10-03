@@ -321,6 +321,49 @@ function TypedText({ text, onDone }: { text: string; onDone: () => void }) {
 }
 
 
+/* The real build takes a minute or two after the seven pillars have finished locking in. This keeps the screen visibly alive for
+   that wait: a moving indicator, a line that changes as time passes (worded to match what the build is doing, in its real order),
+   and an honest note if it runs long. No progress bar: we cannot know the real percentage. */
+const BUILD_LINES: { from: number; text: string }[] = [
+  { from: 0, text: 'Building your workspace. This usually takes about two minutes.' },
+  { from: 25, text: 'Writing your campaign from what I read on your site...' },
+  { from: 55, text: 'Writing example leads and conversations for your business...' },
+  { from: 90, text: 'Checking everything over...' },
+  { from: 130, text: 'Almost there. Getting your login ready...' },
+  { from: 180, text: 'Taking a little longer than usual. I am still working, so keep this tab open.' },
+];
+
+function BuildingStatus({ since, reduce }: { since: number; reduce: boolean | null }) {
+  const [elapsed, setElapsed] = useState(() => Math.max(0, Math.floor((Date.now() - since) / 1000)));
+  useEffect(() => {
+    const t = setInterval(() => setElapsed(Math.max(0, Math.floor((Date.now() - since) / 1000))), 1000);
+    return () => clearInterval(t);
+  }, [since]);
+  const line = [...BUILD_LINES].reverse().find((l) => elapsed >= l.from) ?? BUILD_LINES[0];
+  return (
+    <div className="flex flex-col items-center gap-2" role="status" aria-live="polite">
+      <div className="flex items-center gap-2.5">
+        <Loader2 className="h-4 w-4 animate-spin text-cyan-300 motion-reduce:animate-none" aria-hidden="true" />
+        <AnimatePresence mode="wait">
+          <motion.p
+            key={line.text}
+            className="text-sm text-slate-200"
+            initial={reduce ? false : { opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={reduce ? undefined : { opacity: 0, y: -4 }}
+            transition={{ duration: 0.35 }}
+          >
+            {line.text}
+          </motion.p>
+        </AnimatePresence>
+      </div>
+      <div className="h-[3px] w-40 overflow-hidden rounded-full bg-slate-700/60" aria-hidden="true">
+        <div className="dx-sweep h-full w-1/3 rounded-full bg-cyan-300/80 motion-reduce:hidden" />
+      </div>
+    </div>
+  );
+}
+
 /* ───────────────────────────── main ───────────────────────────── */
 
 export default function DemoExperience() {
@@ -358,6 +401,7 @@ export default function DemoExperience() {
   const [linkBusy, setLinkBusy] = useState(false);
   const [linkError, setLinkError] = useState('');
   const accountToken = useRef('');
+  const buildStartedAt = useRef(0);
   const turnstileToken = useRef('');
   const honeypot = useRef<HTMLInputElement>(null);
   const foxSize =
@@ -530,6 +574,7 @@ export default function DemoExperience() {
       return;
     }
     accountToken.current = signedUp.token;
+    buildStartedAt.current = Date.now();
     setAccount('building');
 
     await say(
@@ -685,14 +730,16 @@ export default function DemoExperience() {
         @keyframes dx-caret { 0%,49% { opacity: 1 } 50%,100% { opacity: 0 } }
         @keyframes dx-drift { 0% { transform: translateY(0); opacity: 0 } 15% { opacity: .7 } 100% { transform: translateY(-70px); opacity: 0 } }
         @keyframes dx-breathe { 0%,100% { opacity: .75 } 50% { opacity: 1 } }
+        @keyframes dx-sweep { 0% { transform: translateX(-100%) } 100% { transform: translateX(300%) } }
         .dx-float { animation: dx-float 6s ease-in-out infinite }
         .dx-glow { animation: dx-glow 4s ease-in-out infinite }
         .dx-scan { animation: dx-scan 1.8s linear infinite }
         .dx-caret { animation: dx-caret 1s steps(1) infinite }
         .dx-particle { animation: dx-drift linear infinite; opacity: 0 }
         .dx-floor { animation: dx-breathe 5s ease-in-out infinite }
+        .dx-sweep { animation: dx-sweep 1.6s ease-in-out infinite }
         @media (prefers-reduced-motion: reduce) {
-          .dx-float, .dx-glow, .dx-scan, .dx-caret, .dx-particle, .dx-floor { animation: none }
+          .dx-float, .dx-glow, .dx-scan, .dx-caret, .dx-particle, .dx-floor, .dx-sweep { animation: none }
           .dx-particle { opacity: .4 }
         }
       `}</style>
@@ -1168,9 +1215,9 @@ export default function DemoExperience() {
                   That is how your talk tracks come out right, with no cookie-cutter setup.
                 </p>
 
-                <div className="mt-4 flex h-12 items-center justify-center">
+                <div className="mt-4 flex min-h-[3rem] items-center justify-center">
                   {allLocked && account === 'building' && (
-                    <p className="text-sm text-slate-300">Putting the last touches on your workspace...</p>
+                    <BuildingStatus since={buildStartedAt.current || Date.now()} reduce={reduce} />
                   )}
                   {allLocked && account === 'failed' && (
                     <p className="max-w-md text-center text-sm text-amber-300/90">
