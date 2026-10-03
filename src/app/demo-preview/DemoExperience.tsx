@@ -496,6 +496,17 @@ export default function DemoExperience() {
     let described = '';
     let readInBackground = false;
 
+    // The build does not use anything said after the email (the industry check below is only for what Surf shows), so it starts the
+    // moment the email is in and runs while the conversation carries on. The result is collected at the sign-up step below. Only
+    // when there is a website to read, and only when the bot check has already produced its token (otherwise the old timing applies).
+    let earlySignup: Promise<SignupResult> | null = null;
+    const fireEarly = () => {
+      if (!domain || (TURNSTILE_SITE_KEY && !turnstileToken.current)) return;
+      earlySignup = startSignup({ name, email, website: site, turnstile_token: turnstileToken.current, hp: honeypot.current?.value ?? '' });
+      if (TURNSTILE_SITE_KEY && window.turnstile) window.turnstile.reset(); // a token works once; the request already holds its copy
+      turnstileToken.current = '';
+    };
+
     if (domain) {
       // The read starts now, in the background. The conversation never waits on it.
       let finished = false;
@@ -506,6 +517,7 @@ export default function DemoExperience() {
 
       await say("Got it. I'll read it while we talk. Where should I send your login?");
       email = await ask('email');
+      fireEarly();
       company = companyFromDomain(domain);
 
       if (finished) {
@@ -554,9 +566,14 @@ export default function DemoExperience() {
     // Create the real account. Everything that costs money is decided server side.
     let signedUp: SignupResult = { kind: 'error', code: 'FAILED', message: '' };
     for (let attempt = 0; attempt < 3; attempt++) {
-      signedUp = await startSignup({ name, email, website: domain ? site : '', turnstile_token: turnstileToken.current, hp: honeypot.current?.value ?? '' });
-      if (TURNSTILE_SITE_KEY && window.turnstile) window.turnstile.reset(); // a token works once
-      turnstileToken.current = '';
+      const early = attempt === 0 ? earlySignup : null;
+      signedUp = early
+        ? await early
+        : await startSignup({ name, email, website: domain ? site : '', turnstile_token: turnstileToken.current, hp: honeypot.current?.value ?? '' });
+      if (!early) {
+        if (TURNSTILE_SITE_KEY && window.turnstile) window.turnstile.reset(); // a token works once
+        turnstileToken.current = '';
+      }
       if (signedUp.kind === 'error' && signedUp.code === 'EMAIL_TAKEN' && attempt < 2) {
         await say(signedUp.message);
         email = await ask('email');
