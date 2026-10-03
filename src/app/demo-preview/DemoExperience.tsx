@@ -325,12 +325,12 @@ function TypedText({ text, onDone }: { text: string; onDone: () => void }) {
    that wait: a moving indicator, a line that changes as time passes (worded to match what the build is doing, in its real order),
    and an honest note if it runs long. No progress bar: we cannot know the real percentage. */
 const BUILD_LINES: { from: number; text: string }[] = [
-  { from: 0, text: 'Building your workspace. This usually takes about two minutes.' },
+  { from: 0, text: 'Building your workspace...' },
   { from: 25, text: 'Writing your campaign from what I read on your site...' },
   { from: 55, text: 'Writing example leads and conversations for your business...' },
   { from: 90, text: 'Checking everything over...' },
   { from: 130, text: 'Almost there. Getting your login ready...' },
-  { from: 180, text: 'Taking a little longer than usual. I am still working, so keep this tab open.' },
+  { from: 180, text: 'Taking a little longer than usual. I am still working on it...' },
 ];
 
 function BuildingStatus({ since, reduce }: { since: number; reduce: boolean | null }) {
@@ -360,6 +360,7 @@ function BuildingStatus({ since, reduce }: { since: number; reduce: boolean | nu
       <div className="h-[3px] w-40 overflow-hidden rounded-full bg-slate-700/60" aria-hidden="true">
         <div className="dx-sweep h-full w-1/3 rounded-full bg-cyan-300/80 motion-reduce:hidden" />
       </div>
+      <p className="text-xs text-slate-400">This might take 2 to 3 minutes. Please keep this tab open.</p>
     </div>
   );
 }
