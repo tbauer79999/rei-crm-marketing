@@ -11,8 +11,65 @@ import Link from 'next/link';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Check, ExternalLink, Loader2, X } from 'lucide-react';
 
-// Placeholder. The real value will be the demo workspace login URL.
-const WORKSPACE_URL = '#';
+// Cloudflare Turnstile. Off (no widget, no token) until the site key is set.
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? '';
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (el: string | HTMLElement, o: Record<string, unknown>) => string;
+      reset: (id?: string) => void;
+    };
+  }
+}
+
+type SignupResult =
+  | { kind: 'building'; token: string }
+  | { kind: 'later' }
+  | { kind: 'error'; code: string; message: string };
+
+// Creates the real demo account. The server decides everything that costs money (limits, bot
+// check); this only reports what happened in words Surf can say.
+async function startSignup(body: { name: string; email: string; website: string; turnstile_token: string; hp: string }): Promise<SignupResult> {
+  try {
+    const res = await fetch('/api/demo-preview/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const j = await res.json().catch(() => ({}));
+    if (res.ok && j?.status === 'building' && typeof j.token === 'string') return { kind: 'building', token: j.token };
+    if (res.ok && (j?.status === 'busy' || j?.status === 'manual')) return { kind: 'later' };
+    return { kind: 'error', code: String(j?.error ?? 'FAILED'), message: String(j?.message ?? 'Something went wrong on our side. Please try again in a minute.') };
+  } catch {
+    return { kind: 'error', code: 'FAILED', message: 'Something went wrong on our side. Please try again in a minute.' };
+  }
+}
+
+async function fetchState(token: string): Promise<'building' | 'ready' | 'failed'> {
+  try {
+    const res = await fetch(`/api/demo-preview/status?token=${encodeURIComponent(token)}`, { cache: 'no-store' });
+    const j = await res.json();
+    return j?.state === 'ready' ? 'ready' : j?.state === 'failed' ? 'failed' : 'building';
+  } catch {
+    return 'building'; // a dropped poll is not a failed build: ask again
+  }
+}
+
+// A fresh one-time sign-in link. Single use, so it is fetched at the moment of the click.
+async function fetchLink(token: string): Promise<string | null> {
+  try {
+    const res = await fetch('/api/demo-preview/link', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token }),
+    });
+    const j = await res.json();
+    return res.ok && typeof j?.url === 'string' ? j.url : null;
+  } catch {
+    return null;
+  }
+}
 
 const PILLARS = [
   'Operations',
@@ -25,14 +82,14 @@ const PILLARS = [
 ] as const;
 
 type Phase = 'intro' | 'chat' | 'build' | 'ready';
-type InputMode = 'website' | 'describe' | 'confirm' | 'email' | null;
+type InputMode = 'name' | 'website' | 'describe' | 'confirm' | 'email' | null;
 type Message =
   | { id: number; from: 'surf' | 'you'; text: string }
   | { id: number; from: 'deal' };
 
 // Plain statement of the arrangement. Draft copy; Tom to confirm each line is true.
 const DEAL_ROWS: [string, string][] = [
-  ['What I need', "Your website and your email. That's it."],
+  ['What I need', "Your name, your website and your email. That's it."],
   ['What I do', 'Read your site, build a workspace around your business, and send you a login.'],
   ['What you do', 'Log in, talk to your own AI, and judge it yourself.'],
   ['What I will not do', "Pitch you. If it's not for you, close the tab."],
@@ -88,7 +145,8 @@ const DIFFERENCES: [string, string][] = [
   ['Built from your business', 'Your campaigns are written from your own site, not copied from a template.'],
 ];
 
-const WHY_I_ASK: Record<'website' | 'describe' | 'email', string> = {
+const WHY_I_ASK: Record<'name' | 'website' | 'describe' | 'email', string> = {
+  name: 'Why I ask: so I know who I am talking to.',
   website: 'Why I ask: so I can build campaigns around your actual business.',
   describe: 'Why I ask: so I can build campaigns around your actual business.',
   email: 'Why I ask: to send you your login.',
@@ -275,7 +333,7 @@ export default function DemoExperience() {
   const [inputMode, setInputMode] = useState<InputMode>(null);
   const [value, setValue] = useState('');
   const [hint, setHint] = useState('');
-  const [profile, setProfile] = useState({ company: '', email: '' });
+  const [profile, setProfile] = useState({ company: '', email: '', name: '' });
   const [learned, setLearned] = useState<{ company: string; industry: string; summary: string } | null>(null);
   const [scanFailed, setScanFailed] = useState(false);
   const [manual, setManual] = useState('');
@@ -295,6 +353,13 @@ export default function DemoExperience() {
   // The pillar whose card is showing: the one the visitor picked, else the one being built.
   const shown = selected ?? (allLocked ? null : locked);
   const [opened, setOpened] = useState(false);
+  // The real account: 'none' until the sign-up call, then building -> ready | failed. 'later' = no account was built now.
+  const [account, setAccount] = useState<'none' | 'building' | 'ready' | 'failed' | 'later'>('none');
+  const [linkBusy, setLinkBusy] = useState(false);
+  const [linkError, setLinkError] = useState('');
+  const accountToken = useRef('');
+  const turnstileToken = useRef('');
+  const honeypot = useRef<HTMLInputElement>(null);
   const foxSize =
     phase === 'build'
       ? 'w-[min(30vw,110px,13vh)] sm:w-[min(16vh,140px)] [@media(max-height:720px)]:w-14'
@@ -374,7 +439,10 @@ export default function DemoExperience() {
     await say("Hey, I'm Surf. You probably expect a sales pitch. Here's how this actually works.");
     setMessages((m) => [...m, { id: idRef.current++, from: 'deal' }]);
     await wait(reduce ? 0 : 1600);
-    await say("So, what's your website?");
+    await say("First, what's your name?");
+    const name = (await ask('name')).replace(/\s+/g, ' ').trim().slice(0, 80);
+    const first = name.split(' ')[0];
+    await say(`Nice to meet you, ${first}. What's your website?`);
     const site = await ask('website');
     const domain = cleanDomain(site);
 
@@ -438,6 +506,32 @@ export default function DemoExperience() {
       email = await ask('email');
     }
 
+    // Create the real account. Everything that costs money is decided server side.
+    let signedUp: SignupResult = { kind: 'error', code: 'FAILED', message: '' };
+    for (let attempt = 0; attempt < 3; attempt++) {
+      signedUp = await startSignup({ name, email, website: domain ? site : '', turnstile_token: turnstileToken.current, hp: honeypot.current?.value ?? '' });
+      if (TURNSTILE_SITE_KEY && window.turnstile) window.turnstile.reset(); // a token works once
+      turnstileToken.current = '';
+      if (signedUp.kind === 'error' && signedUp.code === 'EMAIL_TAKEN' && attempt < 2) {
+        await say(signedUp.message);
+        email = await ask('email');
+        continue;
+      }
+      break;
+    }
+    if (!alive.current) return;
+    if (signedUp.kind === 'error') {
+      await say(signedUp.message || 'Something went wrong on our side. Please try again in a minute.');
+      return;
+    }
+    if (signedUp.kind === 'later') {
+      setAccount('later');
+      await say(`I'm building a lot of workspaces right now, so yours is in the queue. I have your details and I'll email your login to ${email} as soon as it's ready.`);
+      return;
+    }
+    accountToken.current = signedUp.token;
+    setAccount('building');
+
     await say(
       readInBackground
         ? "Thanks. I'm going to build your workspace now. I'll finish reading your site while it comes together."
@@ -446,7 +540,7 @@ export default function DemoExperience() {
     // Hold on the last line long enough to read before the screen changes.
     await wait(reduce ? 400 : 2800);
     if (!alive.current) return;
-    setProfile({ company, email });
+    setProfile({ company, email, name });
     if (described) setManual(described);
     setPhase('build');
   }, [say, ask, reduce]);
@@ -474,6 +568,66 @@ export default function DemoExperience() {
     return () => clearInterval(t);
   }, [phase, reduce]);
 
+  // Ask the server whether the real workspace is built yet.
+  useEffect(() => {
+    if (account !== 'building') return;
+    let live = true;
+    const tick = async () => {
+      const st = await fetchState(accountToken.current);
+      if (!live) return;
+      if (st === 'ready') setAccount('ready');
+      else if (st === 'failed') setAccount('failed');
+    };
+    const t = setInterval(tick, 3000);
+    void tick();
+    return () => {
+      live = false;
+      clearInterval(t);
+    };
+  }, [account]);
+
+  // Cloudflare Turnstile: invisible unless it needs to ask something.
+  useEffect(() => {
+    if (!TURNSTILE_SITE_KEY) return;
+    const draw = () => {
+      const el = document.getElementById('dx-turnstile');
+      if (!el || !window.turnstile || el.childElementCount) return;
+      window.turnstile.render(el, {
+        sitekey: TURNSTILE_SITE_KEY,
+        appearance: 'interaction-only',
+        callback: (t: string) => {
+          turnstileToken.current = t;
+        },
+        'expired-callback': () => {
+          turnstileToken.current = '';
+        },
+      });
+    };
+    if (window.turnstile) {
+      draw();
+      return;
+    }
+    const sc = document.createElement('script');
+    sc.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    sc.async = true;
+    sc.onload = draw;
+    document.head.appendChild(sc);
+  }, []);
+
+  const openWorkspace = async () => {
+    if (linkBusy) return;
+    setLinkBusy(true);
+    setLinkError('');
+    const url = await fetchLink(accountToken.current);
+    setLinkBusy(false);
+    if (!url) {
+      setLinkError('I could not open it just now. Your login is also in your email.');
+      return;
+    }
+    window.open(url, '_blank', 'noopener');
+    setOpened(true);
+  };
+
   const pillarNote = (i: number) =>
     [
       `Learning how ${companyLabel || 'your business'} runs`,
@@ -492,6 +646,12 @@ export default function DemoExperience() {
       const d = cleanDomain(v);
       if (!d.includes('.') || d.includes(' ')) {
         setHint('That does not look like a website. Try something like yourcompany.com');
+        return;
+      }
+      answer(v);
+    } else if (inputMode === 'name') {
+      if (v.length < 2 || /[<>@]/.test(v)) {
+        setHint('Please enter your name.');
         return;
       }
       answer(v);
@@ -735,7 +895,9 @@ export default function DemoExperience() {
                       <motion.form key={inputMode} {...fade} onSubmit={submit} noValidate>
                         <div className="flex items-center gap-2 rounded-2xl border border-white/10 bg-[#0c1626]/90 p-2 pl-4 shadow-[0_0_30px_rgba(34,211,238,0.08)] focus-within:border-cyan-300/50">
                           <label htmlFor="dx-input" className="sr-only">
-                            {inputMode === 'website'
+                            {inputMode === 'name'
+                              ? 'Your name'
+                              : inputMode === 'website'
                               ? 'Your website'
                               : inputMode === 'email'
                                 ? 'Your email'
@@ -751,9 +913,11 @@ export default function DemoExperience() {
                             }}
                             type={inputMode === 'email' ? 'email' : 'text'}
                             inputMode={inputMode === 'website' ? 'url' : inputMode === 'email' ? 'email' : 'text'}
-                            autoComplete={inputMode === 'email' ? 'email' : inputMode === 'website' ? 'url' : 'off'}
+                            autoComplete={inputMode === 'name' ? 'name' : inputMode === 'email' ? 'email' : inputMode === 'website' ? 'url' : 'off'}
                             placeholder={
-                              inputMode === 'website'
+                              inputMode === 'name'
+                                ? 'Your name'
+                                : inputMode === 'website'
                                 ? 'yourcompany.com'
                                 : inputMode === 'email'
                                   ? 'you@yourcompany.com'
@@ -772,7 +936,7 @@ export default function DemoExperience() {
                         <div className="mt-2 flex min-h-[20px] items-center justify-between px-1 text-xs">
                           {hint ? (
                             <span className="text-amber-300/90">{hint}</span>
-                          ) : inputMode === 'website' || inputMode === 'describe' || inputMode === 'email' ? (
+                          ) : inputMode === 'name' || inputMode === 'website' || inputMode === 'describe' || inputMode === 'email' ? (
                             <span className="text-slate-500">{WHY_I_ASK[inputMode]}</span>
                           ) : (
                             <span />
@@ -1005,7 +1169,15 @@ export default function DemoExperience() {
                 </p>
 
                 <div className="mt-4 flex h-12 items-center justify-center">
-                  {allLocked && (
+                  {allLocked && account === 'building' && (
+                    <p className="text-sm text-slate-300">Putting the last touches on your workspace...</p>
+                  )}
+                  {allLocked && account === 'failed' && (
+                    <p className="max-w-md text-center text-sm text-amber-300/90">
+                      I could not finish building from that site. I have flagged it and will email you at {profile.email} once it is sorted out.
+                    </p>
+                  )}
+                  {allLocked && account === 'ready' && (
                     <motion.button
                       type="button"
                       initial={reduce ? false : { opacity: 0, y: 6 }}
@@ -1064,17 +1236,16 @@ export default function DemoExperience() {
                     ))}
                   </ul>
                 </div>
-                <a
-                  href={WORKSPACE_URL}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setOpened(true);
-                  }}
+                <button
+                  type="button"
+                  disabled={linkBusy}
+                  onClick={openWorkspace}
                   className="group mt-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/50 bg-cyan-400/15 px-8 py-4 text-base font-medium text-cyan-50 shadow-[0_0_40px_rgba(34,211,238,0.35)] transition hover:bg-cyan-400/25 hover:shadow-[0_0_56px_rgba(34,211,238,0.55)] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
                 >
-                  Open your workspace
+                  {linkBusy ? 'Opening...' : 'Open your workspace'}
                   <ExternalLink className="h-4 w-4" />
-                </a>
+                </button>
+                {linkError && <p className="mt-3 text-xs text-amber-300/90">{linkError}</p>}
                 <p className="mt-4 text-xs text-slate-400">
                   Your login is also on its way to {profile.email}.
                 </p>
@@ -1086,14 +1257,15 @@ export default function DemoExperience() {
                   It is in another tab. I will meet you there. Come back here anytime.
                 </p>
                 <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
-                  <a
-                    href={WORKSPACE_URL}
-                    onClick={(e) => e.preventDefault()}
+                  <button
+                    type="button"
+                    disabled={linkBusy}
+                    onClick={openWorkspace}
                     className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-medium text-slate-100 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
                   >
-                    Open it again
+                    {linkBusy ? 'Opening...' : 'Open it again'}
                     <ExternalLink className="h-4 w-4" />
-                  </a>
+                  </button>
                   <Link
                     href="/pricing"
                     className="text-sm text-cyan-200/90 underline-offset-4 transition hover:text-cyan-100 hover:underline"
@@ -1111,8 +1283,12 @@ export default function DemoExperience() {
         )}
       </AnimatePresence>
 
+      {/* Bot checks: a field no person sees (bots fill it in) and the Turnstile slot (empty unless a key is set). */}
+      <input ref={honeypot} type="text" name="website_url_confirm" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 opacity-0" />
+      <div id="dx-turnstile" className="absolute bottom-14 left-1/2 z-30 -translate-x-1/2" />
+
       <div className="pointer-events-none absolute bottom-3 left-4 z-20 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[10px] uppercase tracking-widest text-slate-500">
-        Prototype · scripted, no backend
+        Preview · builds a real demo account
       </div>
     </div>
   );
