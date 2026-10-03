@@ -5,5 +5,5 @@ export const runtime = 'nodejs';
 
 export async function POST(req: NextRequest) {
   const b = await req.json().catch(() => ({}));
-  return forward(req, '/link', { method: 'POST', body: { token: b?.token } });
+  return forward(req, '/resend', { method: 'POST', body: { token: b?.token } });
 }

@@ -9,7 +9,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, Check, ExternalLink, Loader2, X } from 'lucide-react';
+import { ArrowRight, Check, Loader2, Mail, X } from 'lucide-react';
 
 // Cloudflare Turnstile. Off (no widget, no token) until the site key is set.
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? '';
@@ -56,18 +56,21 @@ async function fetchState(token: string): Promise<'building' | 'ready' | 'failed
   }
 }
 
-// A fresh one-time sign-in link. Single use, so it is fetched at the moment of the click.
-async function fetchLink(token: string): Promise<string | null> {
+// Email the sign-in link again. The link itself never comes back to the browser: the only way in is the email, so every demo belongs
+// to someone who can read the inbox they typed.
+async function resendLogin(token: string): Promise<{ ok: boolean; message: string }> {
+  const fallback = 'I could not send it just now. Please try again in a minute.';
   try {
-    const res = await fetch('/api/demo-preview/link', {
+    const res = await fetch('/api/demo-preview/resend', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token }),
     });
-    const j = await res.json();
-    return res.ok && typeof j?.url === 'string' ? j.url : null;
+    const j = await res.json().catch(() => ({}));
+    if (res.ok && j?.ok === true) return { ok: true, message: '' };
+    return { ok: false, message: typeof j?.message === 'string' && j.message ? j.message : fallback };
   } catch {
-    return null;
+    return { ok: false, message: fallback };
   }
 }
 
@@ -396,11 +399,10 @@ export default function DemoExperience() {
   const allLocked = locked >= PILLARS.length;
   // The pillar whose card is showing: the one the visitor picked, else the one being built.
   const shown = selected ?? (allLocked ? null : locked);
-  const [opened, setOpened] = useState(false);
   // The real account: 'none' until the sign-up call, then building -> ready | failed. 'later' = no account was built now.
   const [account, setAccount] = useState<'none' | 'building' | 'ready' | 'failed' | 'later'>('none');
-  const [linkBusy, setLinkBusy] = useState(false);
-  const [linkError, setLinkError] = useState('');
+  const [resendBusy, setResendBusy] = useState(false);
+  const [resendNote, setResendNote] = useState('');
   const accountToken = useRef('');
   const buildStartedAt = useRef(0);
   const turnstileToken = useRef('');
@@ -408,9 +410,7 @@ export default function DemoExperience() {
   const foxSize =
     phase === 'build'
       ? 'w-[min(30vw,110px,13vh)] sm:w-[min(16vh,140px)] [@media(max-height:720px)]:w-14'
-      : opened
-        ? 'w-[min(60vw,300px)] sm:w-[min(38vh,340px)]'
-        : 'w-[min(24vw,96px)] sm:w-[min(24vh,220px)] [@media(max-height:720px)]:w-20';
+      : 'w-[min(24vw,96px)] sm:w-[min(24vh,220px)] [@media(max-height:720px)]:w-20';
 
   const idRef = useRef(1);
   const resolvers = useRef<Record<number, () => void>>({});
@@ -677,18 +677,13 @@ export default function DemoExperience() {
     document.head.appendChild(sc);
   }, []);
 
-  const openWorkspace = async () => {
-    if (linkBusy) return;
-    setLinkBusy(true);
-    setLinkError('');
-    const url = await fetchLink(accountToken.current);
-    setLinkBusy(false);
-    if (!url) {
-      setLinkError('I could not open it just now. Your login is also in your email.');
-      return;
-    }
-    window.open(url, '_blank', 'noopener');
-    setOpened(true);
+  const resendEmail = async () => {
+    if (resendBusy) return;
+    setResendBusy(true);
+    setResendNote('');
+    const r = await resendLogin(accountToken.current);
+    setResendBusy(false);
+    setResendNote(r.ok ? `Sent again to ${profile.email}.` : r.message);
   };
 
   const pillarNote = (i: number) =>
@@ -1266,14 +1261,13 @@ export default function DemoExperience() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.25, ease: 'easeOut', delay: 0.1 }}
                   >
-                    {!opened ? (
               <>
                 <h2 className="mt-2 text-3xl font-light tracking-wide sm:text-4xl">Your workspace is ready.</h2>
                 <p className="mt-3 max-w-lg text-[15px] leading-relaxed text-slate-300">
                   {companyLabel && companyLabel !== 'Your business'
                     ? `${companyLabel}, set up for ${industryLabel || 'your business'}.`
                     : `Set up for ${industryLabel || 'your business'}.`}{' '}
-                  Open Campaigns, pick one, and press Test conversation. Play one of your own leads and see what
+                  Once you are in, open Campaigns, pick one, and press Test conversation. Play one of your own leads and see what
                   your AI does. I will be right there with you.
                 </p>
 
@@ -1301,45 +1295,37 @@ export default function DemoExperience() {
                     ))}
                   </ul>
                 </div>
-                <button
-                  type="button"
-                  disabled={linkBusy}
-                  onClick={openWorkspace}
-                  className="group mt-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/50 bg-cyan-400/15 px-8 py-4 text-base font-medium text-cyan-50 shadow-[0_0_40px_rgba(34,211,238,0.35)] transition hover:bg-cyan-400/25 hover:shadow-[0_0_56px_rgba(34,211,238,0.55)] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
-                >
-                  {linkBusy ? 'Opening...' : 'Open your workspace'}
-                  <ExternalLink className="h-4 w-4" />
-                </button>
-                {linkError && <p className="mt-3 text-xs text-amber-300/90">{linkError}</p>}
-                <p className="mt-4 text-xs text-slate-400">
-                  Your login is also on its way to {profile.email}.
-                </p>
-              </>
-            ) : (
-              <>
-                <h2 className="mt-2 text-3xl font-light tracking-wide sm:text-4xl">Your workspace is open.</h2>
-                <p className="mt-3 max-w-md text-[15px] leading-relaxed text-slate-300">
-                  It is in another tab. I will meet you there. Come back here anytime.
-                </p>
-                <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
+                <div className="mt-7 w-full max-w-md rounded-2xl border border-cyan-300/30 bg-cyan-400/10 p-5 text-center shadow-[0_0_40px_rgba(34,211,238,0.2)]">
+                  <Mail className="mx-auto h-5 w-5 text-cyan-200" aria-hidden="true" />
+                  <p className="mt-2 text-base font-medium text-cyan-50">Check your email</p>
+                  <p className="mt-1.5 text-[13.5px] leading-relaxed text-slate-300">
+                    I sent your login to <span className="text-slate-100">{profile.email}</span>. Open that email and press{' '}
+                    <span className="text-slate-100">Open your demo</span> to step inside.
+                  </p>
+                </div>
+                <p className="mt-4 text-xs leading-relaxed text-slate-400">
+                  Nothing there yet? Look in spam or promotions.{' '}
                   <button
                     type="button"
-                    disabled={linkBusy}
-                    onClick={openWorkspace}
-                    className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-medium text-slate-100 transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+                    disabled={resendBusy}
+                    onClick={resendEmail}
+                    className="text-cyan-200/90 underline underline-offset-4 transition hover:text-cyan-100 disabled:opacity-60"
                   >
-                    {linkBusy ? 'Opening...' : 'Open it again'}
-                    <ExternalLink className="h-4 w-4" />
+                    {resendBusy ? 'Sending...' : 'Send it again'}
                   </button>
-                  <Link
-                    href="/pricing"
-                    className="text-sm text-cyan-200/90 underline-offset-4 transition hover:text-cyan-100 hover:underline"
-                  >
-                    See pricing
-                  </Link>
-                </div>
+                </p>
+                {resendNote && (
+                  <p className="mt-2 text-xs text-cyan-200/90" role="status">
+                    {resendNote}
+                  </p>
+                )}
+                <Link
+                  href="/pricing"
+                  className="mt-5 text-sm text-cyan-200/90 underline-offset-4 transition hover:text-cyan-100 hover:underline"
+                >
+                  See pricing
+                </Link>
               </>
-            )}
                   </motion.div>
                 )}
               </AnimatePresence>
