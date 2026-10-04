@@ -2022,8 +2022,8 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'product-callout',
         content: 'SurFox AI solves this problem automatically.',
-        linkText: 'See a 2-min demo \u2192',
-        linkHref: '/demo'
+        linkText: 'Try it free in minutes \u2192',
+        linkHref: '/demo-preview'
       },
       {
         type: 'paragraph',
@@ -2227,10 +2227,10 @@ export const blogPosts: BlogPost[] = [
     relatedPosts: ['qualify-leads-faster-ai', 'reduce-sdr-headcount-ai', 'trade-show-follow-up-conversion-cliff'],
     productCard: {
       category: 'Product',
-      title: 'See SurFox AI in action',
-      description: '2-minute walkthrough of how SurFox AI qualifies leads by text, chat, and a published Voice number while your team is still on the floor.',
-      ctaText: 'Request Demo \u2192',
-      href: '/demo'
+      title: 'Try SurFox AI on your own business',
+      description: 'Your own demo, built from your website in minutes. Watch the AI text a lead, hand your team a hot one, and win back a cold one.',
+      ctaText: 'Try it free in minutes \u2192',
+      href: '/demo-preview'
     }
   },
   {
@@ -4980,8 +4980,8 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'product-callout',
         content: 'SurFox AI closes that gap automatically.',
-        linkText: 'See a 2-min demo →',
-        linkHref: '/demo'
+        linkText: 'Try it free in minutes →',
+        linkHref: '/demo-preview'
       },
       {
         type: 'heading',
@@ -5265,8 +5265,8 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'product-callout',
         content: 'SurFox AI answers in seconds, day or night.',
-        linkText: 'See a 2-min demo →',
-        linkHref: '/demo'
+        linkText: 'Try it free in minutes →',
+        linkHref: '/demo-preview'
       },
       {
         type: 'paragraph',
@@ -5490,8 +5490,8 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'product-callout',
         content: 'SurFox AI keeps every candidate conversation moving.',
-        linkText: 'See a 2-min demo →',
-        linkHref: '/demo'
+        linkText: 'Try it free in minutes →',
+        linkHref: '/demo-preview'
       },
       {
         type: 'paragraph',
@@ -5724,8 +5724,8 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'product-callout',
         content: 'SurFox AI contacts your whole shortlist at once.',
-        linkText: 'See a 2-min demo →',
-        linkHref: '/demo'
+        linkText: 'Try it free in minutes →',
+        linkHref: '/demo-preview'
       },
       {
         type: 'paragraph',
@@ -8078,8 +8078,8 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'product-callout',
         content: 'SurFox AI runs the structured screen on every applicant.',
-        linkText: 'See a 2-min demo →',
-        linkHref: '/demo'
+        linkText: 'Try it free in minutes →',
+        linkHref: '/demo-preview'
       },
       {
         type: 'paragraph',
@@ -8460,8 +8460,8 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'product-callout',
         content: 'SurFox AI closes the loop with every applicant automatically.',
-        linkText: 'See a 2-min demo →',
-        linkHref: '/demo'
+        linkText: 'Try it free in minutes →',
+        linkHref: '/demo-preview'
       },
       {
         type: 'paragraph',
@@ -8797,8 +8797,8 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'product-callout',
         content: 'SurFox AI handles identification, consent and opt-outs on every message.',
-        linkText: 'See a 2-min demo →',
-        linkHref: '/demo'
+        linkText: 'Try it free in minutes →',
+        linkHref: '/demo-preview'
       },
       {
         type: 'paragraph',
@@ -9137,8 +9137,8 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'product-callout',
         content: 'SurFox AI runs the SMS side of the sequence for you.',
-        linkText: 'See a 2-min demo →',
-        linkHref: '/demo'
+        linkText: 'Try it free in minutes →',
+        linkHref: '/demo-preview'
       },
       {
         type: 'paragraph',
@@ -9283,8 +9283,8 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'product-callout',
         content: 'SurFox AI runs the candidate-facing side of this timeline over SMS, sending scheduled check-ins and status updates so no candidate sits in unexplained silence between interview stages.',
-        linkText: 'See a 2-min demo',
-        linkHref: '/demo'
+        linkText: 'Try it free in minutes',
+        linkHref: '/demo-preview'
       },
       {
         type: 'heading',

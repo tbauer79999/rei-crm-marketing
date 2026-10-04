@@ -122,10 +122,10 @@ export default function Page() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-16">
               <a
-                href="/demo"
+                href="/demo-preview"
                 className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-[#13171F] text-white text-base font-semibold transition flex items-center justify-center gap-2"
               >
-                See SurFox AI in Action
+                Try it free in minutes
                 <ArrowRight className="w-5 h-5" />
               </a>
 
@@ -362,10 +362,10 @@ export default function Page() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 px-4 mb-12">
               <a
-                href="/demo"
+                href="/demo-preview"
                 className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg bg-[#13171F] text-white text-base font-semibold transition flex items-center justify-center gap-2"
               >
-                See SurFox AI in Action
+                Try it free in minutes
                 <ArrowRight className="w-5 h-5" />
               </a>
 

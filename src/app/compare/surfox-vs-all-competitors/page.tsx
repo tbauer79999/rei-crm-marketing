@@ -242,10 +242,10 @@ export default function Page() {
               </a>
 
               <a
-                href="/demo"
+                href="/demo-preview"
                 className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-[#E4E6E2] text-[#13171F] text-base font-semibold hover:border-[#E4E6E2] hover:bg-[#F4F5F3] transition"
               >
-                Request Demo
+                Try it free in minutes
               </a>
             </div>
 
@@ -567,10 +567,10 @@ export default function Page() {
               </a>
 
               <a
-                href="/demo"
+                href="/demo-preview"
                 className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 rounded-lg border-2 border-[#E4E6E2] text-[#13171F] text-base font-semibold hover:border-[#c9cdc7] hover:bg-[#F4F5F3] transition"
               >
-                Schedule Demo
+                Try it free in minutes
               </a>
             </div>
 
