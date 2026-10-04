@@ -1340,9 +1340,6 @@ export default function DemoExperience() {
       <input ref={honeypot} type="text" name="website_url_confirm" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 opacity-0" />
       <div id="dx-turnstile" className="absolute bottom-14 left-1/2 z-30 -translate-x-1/2" />
 
-      <div className="pointer-events-none absolute bottom-3 left-4 z-20 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[10px] uppercase tracking-widest text-slate-500">
-        Preview · builds a real demo account
-      </div>
     </div>
   );
 }
