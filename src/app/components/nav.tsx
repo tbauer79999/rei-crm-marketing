@@ -13,21 +13,18 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown, Menu, Sparkles, X } from 'lucide-react';
 
-// The one call to action. Brand cyan with a soft glow, dark text; every other nav item is grey.
+// The one call to action; every other nav item is grey.
 const DEMO_HREF = '/demo-preview';
 const DEMO_LABEL = 'Try it free in minutes';
 
-// What makes the button impossible to miss: a slow pulsing glow ring and a light shimmer that sweeps across it every few seconds.
-// Both stop for visitors who have asked their system for reduced motion.
+// Matches the "$49" ribbon on the homepage hero (home.css .hero-ribbon): the same teal gradient, white text, pill shape, soft glow and
+// gentle pulsing ring, so the two read as one family. The pulse stops for visitors who have asked their system for reduced motion.
 const CTA_CSS = `
-@keyframes sfx-cta-pulse { 0%,100% { box-shadow: 0 8px 24px -8px rgba(34,211,238,.85), 0 0 0 0 rgba(34,211,238,.55); } 50% { box-shadow: 0 10px 30px -6px rgba(34,211,238,.95), 0 0 0 9px rgba(34,211,238,0); } }
-@keyframes sfx-cta-shine { 0%,55% { transform: translateX(-120%) skewX(-18deg); } 100% { transform: translateX(260%) skewX(-18deg); } }
-.sfx-cta { position: relative; overflow: hidden; background-image: linear-gradient(100deg, #22D3EE 0%, #5EEAD4 50%, #22D3EE 100%); animation: sfx-cta-pulse 2.6s ease-in-out infinite; }
-.sfx-cta::after { content: ''; position: absolute; inset: 0; width: 38%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.75), transparent); animation: sfx-cta-shine 4.2s ease-in-out infinite; pointer-events: none; }
-.sfx-cta:hover { filter: brightness(1.06); }
-@media (prefers-reduced-motion: reduce) { .sfx-cta, .sfx-cta::after { animation: none; } }
+@keyframes sfx-cta-pulse { 0%, 100% { box-shadow: 0 8px 24px rgba(15, 182, 201, 0.4), 0 0 0 0 rgba(15, 182, 201, 0.45); } 50% { box-shadow: 0 8px 24px rgba(15, 182, 201, 0.4), 0 0 0 12px rgba(15, 182, 201, 0); } }
+.sfx-cta { background: linear-gradient(100deg, #0a7c8c 0%, #0fb6c9 100%); color: #fff; box-shadow: 0 8px 24px rgba(15, 182, 201, 0.4); animation: sfx-cta-pulse 2.4s ease-in-out infinite; transition: transform 0.15s ease; }
+.sfx-cta:hover { transform: translateY(-2px) scale(1.02); }
+@media (prefers-reduced-motion: reduce) { .sfx-cta { animation: none; } }
 `;
-
 const productLinks = [
   { label: 'Staffing Agencies', href: '/staffing' },
   { label: 'Real Estate Wholesalers', href: '/wholesalers' },
@@ -150,7 +147,7 @@ export default function Nav() {
           </a>
           <Link
             href={DEMO_HREF}
-            className="sfx-cta inline-flex items-center gap-2 rounded-[10px] text-[#02121F] text-[15px] font-bold px-6 py-[13px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE] focus-visible:ring-offset-2"
+            className="sfx-cta inline-flex items-center gap-2 rounded-full text-[15px] font-bold px-6 py-[12px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0fb6c9] focus-visible:ring-offset-2"
           >
             <Sparkles className="w-4 h-4" aria-hidden="true" />
             {DEMO_LABEL}
@@ -179,7 +176,7 @@ export default function Nav() {
             <Link
               href={DEMO_HREF}
               onClick={() => setMobileOpen(false)}
-              className="sfx-cta mb-3 inline-flex w-full items-center justify-center gap-2 rounded-[10px] text-[#02121F] text-[15px] font-bold px-5 py-3.5"
+              className="sfx-cta mb-3 inline-flex w-full items-center justify-center gap-2 rounded-full text-[15px] font-bold px-5 py-3.5"
             >
               <Sparkles className="w-4 h-4" aria-hidden="true" />
               {DEMO_LABEL}
