@@ -23,7 +23,7 @@ const columns: { title: string; links: { label: string; href: string }[]; wide?:
     ],
   },
   {
-    title: 'Solutions',
+    title: 'Industries',
     links: [
       { label: 'For Staffing Firms', href: '/staffing' },
       { label: 'For Real Estate', href: '/wholesalers' },

@@ -2,14 +2,20 @@
 
 /* =============================================================================
    NAV - Homepage redesign ("Thread")
-   Minimal light-mode SaaS nav: Logo | Platform | Solutions ▾ | Pricing | Company ▾ |
-   Sign in | Start today. Hover/focus dropdowns as white cards, one ink CTA.
+   Minimal light-mode SaaS nav: Logo | Platform | Industries ▾ | Pricing | Company ▾ |
+   Sign in | Try it free in minutes. Hover/focus dropdowns as white cards, ONE call to
+   action: the self-serve demo, in brand cyan so it reads as the point of the nav and
+   not as another menu item. It points at /demo-preview until that replaces /demo.
    ============================================================================= */
 
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, Sparkles, X } from 'lucide-react';
+
+// The one call to action. Brand cyan with a soft glow, dark text; every other nav item is grey.
+const DEMO_HREF = '/demo-preview';
+const DEMO_LABEL = 'Try it free in minutes';
 
 const productLinks = [
   { label: 'Staffing Agencies', href: '/staffing' },
@@ -112,18 +118,12 @@ export default function Nav() {
           >
             Platform
           </Link>
-          <Dropdown label="Solutions" links={productLinks} />
+          <Dropdown label="Industries" links={productLinks} />
           <Link
             href="/pricing"
             className="text-sm font-medium text-[#5A626E] hover:text-[#13171F] transition-colors"
           >
             Pricing
-          </Link>
-          <Link
-            href="/demo"
-            className="text-sm font-medium text-[#5A626E] hover:text-[#13171F] transition-colors"
-          >
-            Demo
           </Link>
           <Dropdown label="Company" links={companyLinks} />
         </nav>
@@ -137,10 +137,11 @@ export default function Nav() {
             Sign in
           </a>
           <Link
-            href="/#pricing"
-            className="inline-flex items-center rounded-[9px] bg-[#13171F] text-white text-sm font-semibold px-5 py-[11px] hover:bg-black transition-colors"
+            href={DEMO_HREF}
+            className="inline-flex items-center gap-2 rounded-[9px] bg-[#22D3EE] text-[#02121F] text-sm font-semibold px-5 py-[11px] shadow-[0_8px_24px_-8px_rgba(34,211,238,0.85)] hover:bg-[#67E8F9] hover:shadow-[0_10px_28px_-6px_rgba(34,211,238,0.95)] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE] focus-visible:ring-offset-2"
           >
-            Start today
+            <Sparkles className="w-4 h-4" aria-hidden="true" />
+            {DEMO_LABEL}
           </Link>
         </div>
 
@@ -164,6 +165,14 @@ export default function Nav() {
         >
           <div className="px-8 py-6 flex flex-col gap-1">
             <Link
+              href={DEMO_HREF}
+              onClick={() => setMobileOpen(false)}
+              className="mb-3 inline-flex w-full items-center justify-center gap-2 rounded-[9px] bg-[#22D3EE] text-[#02121F] text-sm font-semibold px-5 py-3 shadow-[0_8px_24px_-8px_rgba(34,211,238,0.85)]"
+            >
+              <Sparkles className="w-4 h-4" aria-hidden="true" />
+              {DEMO_LABEL}
+            </Link>
+            <Link
               href="/platform"
               onClick={() => setMobileOpen(false)}
               className="py-2 text-sm font-medium text-[#5A626E] hover:text-[#13171F]"
@@ -171,7 +180,7 @@ export default function Nav() {
               Platform
             </Link>
             <p className="text-[11px] font-medium uppercase tracking-[.12em] text-[#8A92A0] mt-2 mb-1">
-              Solutions
+              Industries
             </p>
             {productLinks.map((l) => (
               <Link
@@ -190,13 +199,6 @@ export default function Nav() {
             >
               Pricing
             </Link>
-            <Link
-              href="/demo"
-              onClick={() => setMobileOpen(false)}
-              className="py-2 text-sm font-medium text-[#5A626E] hover:text-[#13171F]"
-            >
-              Demo
-            </Link>
             <p className="text-[11px] font-medium uppercase tracking-[.12em] text-[#8A92A0] mt-3 mb-1">
               Company
             </p>
@@ -214,13 +216,6 @@ export default function Nav() {
               <a href="https://surfox.ai" className="text-sm font-medium text-[#5A626E]">
                 Sign in
               </a>
-              <Link
-                href="/#pricing"
-                onClick={() => setMobileOpen(false)}
-                className="inline-flex items-center rounded-[9px] bg-[#13171F] text-white text-sm font-semibold px-5 py-[11px]"
-              >
-                Start today
-              </Link>
             </div>
           </div>
         </div>
