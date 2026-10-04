@@ -106,10 +106,10 @@ export default function Page() {
               </a>
 
               <a
-                href="/demo"
+                href="/demo-preview"
                 className="px-7 py-3.5 rounded-[9px] border border-[#E4E6E2] bg-white text-[#13171F] font-semibold hover:border-[#c9cdc7] transition"
               >
-                Schedule a Demo
+                Try it free in minutes
               </a>
             </div>
 
@@ -196,10 +196,10 @@ export default function Page() {
               If you generate leads and need to qualify them faster than your team can manage manually, SurFox AI was built for you. The platform is not vertical-specific. The verticals above are where we have the most documented results, but the underlying problem is universal.
             </p>
             <a
-              href="/demo"
+              href="/demo-preview"
               className="inline-flex items-center gap-2 text-[#0A7C8C] font-semibold hover:underline"
             >
-              Book a demo and we will show you exactly how it maps to your workflow
+              Try it free and see exactly how it maps to your workflow
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -252,10 +252,10 @@ export default function Page() {
               </a>
 
               <a
-                href="/demo"
+                href="/demo-preview"
                 className="px-7 py-3.5 rounded-[9px] border border-[#E4E6E2] bg-white text-[#13171F] font-semibold hover:border-[#c9cdc7] transition"
               >
-                Schedule a Demo
+                Try it free in minutes
               </a>
             </div>
 

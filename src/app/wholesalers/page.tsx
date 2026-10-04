@@ -111,10 +111,10 @@ export default function Page() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <a
-                href="/demo"
+                href="/demo-preview"
                 className="px-7 py-3.5 rounded-[9px] bg-[#13171F] text-white text-base font-semibold hover:bg-black transition inline-flex items-center gap-2"
               >
-                Get a Walkthrough
+                Try it free in minutes
                 <ArrowRight className="w-5 h-5" />
               </a>
 
@@ -302,10 +302,10 @@ export default function Page() {
               </a>
 
               <a
-                href="/demo"
+                href="/demo-preview"
                 className="px-7 py-3.5 rounded-[9px] border border-[#E4E6E2] bg-white text-[#13171F] font-semibold hover:border-[#c9cdc7] transition"
               >
-                Book a Demo
+                Try it free in minutes
               </a>
             </div>
 

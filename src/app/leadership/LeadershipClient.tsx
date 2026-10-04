@@ -231,10 +231,10 @@ export default function Leadership() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
-                href="/demo"
+                href="/demo-preview"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border-2 border-[#E4E6E2] text-[#13171F] text-base font-semibold hover:border-[#c9cdc7] hover:bg-[#EDEEEB] transition"
               >
-                See the Product
+                Try it free in minutes
               </Link>
             </div>
           </motion.div>

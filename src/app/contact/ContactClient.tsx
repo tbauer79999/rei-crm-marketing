@@ -271,7 +271,7 @@ export default function Contact() {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-[#5A626E] mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-normal px-4">
-              Whether you have questions, want to see a demo, or are ready to get started - we're here to help.
+              Whether you have questions, want to try SurFox AI, or are ready to get started - we're here to help.
             </p>
           </motion.div>
         </div>
@@ -568,7 +568,7 @@ export default function Contact() {
                           className="w-full px-4 py-3 rounded-lg border border-[#E4E6E2] focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 bg-white text-[#13171F] outline-none transition"
                         >
                           <option value="" className="bg-white">Select an option</option>
-                          <option value="demo">Request a demo</option>
+                          <option value="sales">Talk to sales</option>
                           <option value="pricing">Pricing question</option>
                           <option value="partnership">Partnership opportunities</option>
                           <option value="support">Technical support</option>
@@ -677,10 +677,10 @@ export default function Contact() {
             {[
               {
                 icon: MessageSquare,
-                title: 'Request a Demo',
-                desc: 'See SurFox AI in action with a personalized walkthrough.',
-                link: '/demo',
-                linkText: 'Request a Demo'
+                title: 'Try the Demo',
+                desc: 'Your own demo, built from your website in minutes. No card needed.',
+                link: '/demo-preview',
+                linkText: 'Try it free in minutes'
               },
               {
                 icon: Mail,
@@ -746,8 +746,8 @@ export default function Contact() {
                 a: 'Our team typically responds to inquiries within 24 hours during business days.'
               },
               {
-                q: 'Can I schedule a demo directly?',
-                a: 'Yes! You can request a demo through our Request a Demo page, or mention it in the contact form above. We will follow up to schedule a time that works for you.'
+                q: 'Can I try SurFox AI before I buy?',
+                a: 'Yes. Give us your website and we build a demo account around your business in minutes, with no card needed. If you would rather talk to someone first, use the contact form above and our team will follow up.'
               },
               {
                 q: 'Do you offer custom enterprise solutions?',
