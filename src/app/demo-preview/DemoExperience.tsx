@@ -1046,11 +1046,13 @@ export default function DemoExperience() {
                     transition={{ duration: 0.3, ease: 'easeOut' }}
                   >
                     <h2 className="mt-1 text-lg font-light tracking-wide sm:text-xl">
-                {allLocked ? 'Your workspace is built' : 'Building your workspace'}
+                {allLocked && account === 'ready' ? 'Your workspace is built' : allLocked ? 'Finishing your workspace' : 'Building your workspace'}
               </h2>
               <p className="mt-0.5 text-sm text-cyan-200/80" aria-live="polite">
                 {allLocked
-                  ? 'Tap any pillar to see what it does.'
+                  ? account === 'ready'
+                    ? 'Tap any pillar to see what it does.'
+                    : 'Pillars set. Writing your campaigns now.'
                   : waitingOnRead
                     ? 'Reading your site'
                     : scanFailed && !manual
