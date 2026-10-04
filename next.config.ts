@@ -13,6 +13,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        // The demo was built at /demo-preview first; anything still pointing there goes to the live demo.
+        source: '/demo-preview',
+        destination: '/demo',
+        permanent: true,
+      },
+      {
         source: '/engage',
         destination: '/',
         permanent: true,

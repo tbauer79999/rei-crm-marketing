@@ -679,7 +679,7 @@ export default function Contact() {
                 icon: MessageSquare,
                 title: 'Try the Demo',
                 desc: 'Your own demo, built from your website in minutes. No card needed.',
-                link: '/demo-preview',
+                link: '/demo',
                 linkText: 'Try it free in minutes'
               },
               {

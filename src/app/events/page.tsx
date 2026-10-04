@@ -104,7 +104,7 @@ export default function Page() {
               </a>
 
               <a
-                href="/demo-preview"
+                href="/demo"
                 className="px-7 py-3.5 rounded-[9px] border border-[#E4E6E2] bg-white text-[#13171F] font-semibold hover:border-[#c9cdc7] transition"
               >
                 Try it free in minutes
@@ -277,7 +277,7 @@ export default function Page() {
               </a>
 
               <a
-                href="/demo-preview"
+                href="/demo"
                 className="px-7 py-3.5 rounded-[9px] border border-[#E4E6E2] bg-white text-[#13171F] font-semibold hover:border-[#c9cdc7] transition"
               >
                 Try it free in minutes

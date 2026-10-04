@@ -1,9 +1,8 @@
 'use client';
 
-// Prototype of the reimagined /demo. Fully scripted: no backend, no real scrape,
-// no account creation. Surf's lines below are draft copy for Tom to rewrite.
-// Real version: /demo chat -> public provisioning endpoint -> new-tab login where
-// the in-app Surf continues with this conversation as context.
+// The self-serve demo at /demo. Surf asks the visitor's name, website and email, reads the site, and a real demo account is built
+// from it (through /api/demo/signup, which forwards to the lead-app). The login arrives by email as a one-time link, and the in-app
+// Surf picks up from there. The earlier scripted page is kept at /demo_old.
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
@@ -32,7 +31,7 @@ type SignupResult =
 // check); this only reports what happened in words Surf can say.
 async function startSignup(body: { name: string; email: string; website: string; turnstile_token: string; hp: string }): Promise<SignupResult> {
   try {
-    const res = await fetch('/api/demo-preview/signup', {
+    const res = await fetch('/api/demo/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
@@ -48,7 +47,7 @@ async function startSignup(body: { name: string; email: string; website: string;
 
 async function fetchState(token: string): Promise<'building' | 'ready' | 'failed'> {
   try {
-    const res = await fetch(`/api/demo-preview/status?token=${encodeURIComponent(token)}`, { cache: 'no-store' });
+    const res = await fetch(`/api/demo/status?token=${encodeURIComponent(token)}`, { cache: 'no-store' });
     const j = await res.json();
     return j?.state === 'ready' ? 'ready' : j?.state === 'failed' ? 'failed' : 'building';
   } catch {
@@ -61,7 +60,7 @@ async function fetchState(token: string): Promise<'building' | 'ready' | 'failed
 async function resendLogin(token: string): Promise<{ ok: boolean; message: string }> {
   const fallback = 'I could not send it just now. Please try again in a minute.';
   try {
-    const res = await fetch('/api/demo-preview/resend', {
+    const res = await fetch('/api/demo/resend', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token }),
@@ -174,7 +173,7 @@ async function fetchScan(url: string): Promise<ScanResult> {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), 25000);
   try {
-    const res = await fetch('/api/demo-preview/scan', {
+    const res = await fetch('/api/demo/scan', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ url }),

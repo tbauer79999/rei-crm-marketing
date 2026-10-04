@@ -5,7 +5,7 @@
    Minimal light-mode SaaS nav: Logo | Platform | Industries ▾ | Pricing | Company ▾ |
    Sign in | Try it free in minutes. Hover/focus dropdowns as white cards, ONE call to
    action: the self-serve demo, in brand cyan so it reads as the point of the nav and
-   not as another menu item. It points at /demo-preview until that replaces /demo.
+   not as another menu item. It points at /demo until that replaces /demo.
    ============================================================================= */
 
 import { useState } from 'react';
@@ -14,7 +14,7 @@ import Image from 'next/image';
 import { ChevronDown, Menu, Sparkles, X } from 'lucide-react';
 
 // The one call to action; every other nav item is grey.
-const DEMO_HREF = '/demo-preview';
+const DEMO_HREF = '/demo';
 const DEMO_LABEL = 'Try it free in minutes';
 
 // Matches the "$49" ribbon on the homepage hero (home.css .hero-ribbon): the same teal gradient, white text, pill shape, soft glow and

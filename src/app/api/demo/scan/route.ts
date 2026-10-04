@@ -1,4 +1,4 @@
-// Prototype website scan for /demo-preview. Reads one public homepage and asks Claude (through the
+// Prototype website scan for /demo. Reads one public homepage and asks Claude (through the
 // lead-app, on the 'demo' workspace key) what the business is, so Surf can say something specific and accurate.
 //
 // This is the first public endpoint in this repo, so it is deliberately defensive:
@@ -248,7 +248,7 @@ export async function POST(req: NextRequest) {
   } catch (e) {
     const code = e instanceof Error ? e.message : 'FAILED';
     // Refused or unreachable targets are reported as plain failures; no detail leaks to the caller.
-    console.warn('[demo-preview/scan] failed:', code);
+    console.warn('[demo/scan] failed:', code);
     return fail('SCAN_FAILED');
   }
 }

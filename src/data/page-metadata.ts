@@ -51,9 +51,9 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/blog',
   },
   demo: {
-    title: 'See AI Lead Qualification in Action',
-    description: 'Schedule a personalized demo of SurFox AI. See how AI-powered lead qualification can transform your sales process in just 30 minutes.',
-    keywords: ['product demo', 'SurFox AI demo', 'AI sales demo', 'schedule demo'],
+    title: 'Try SurFox AI Free in Minutes',
+    description: 'Give SurFox AI your website and get a working demo built around your business in minutes: two campaigns, sample conversations, and Surf to guide you. No card needed.',
+    keywords: ['SurFox AI demo', 'try SurFox AI', 'free AI lead qualification demo', 'AI SMS lead qualification demo'],
     path: '/demo',
   },
   integrations: {
