@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FileText, Shield, AlertCircle, DollarSign, Users, XCircle, Scale, ShieldCheck, MessageSquare, Phone } from 'lucide-react';
+import { FileText, Shield, AlertCircle, DollarSign, Users, XCircle, Scale, ShieldCheck, MessageSquare, Phone, Zap, Database, Clock, Copyright, Puzzle, Bot, RefreshCw, Gavel, ClipboardList, Mail } from 'lucide-react';
 
 export default function TermsOfService() {
   return (
@@ -41,10 +41,15 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Agreement to Terms
-            </h2>
-            <div className="text-[#5A626E] leading-relaxed space-y-4">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <FileText className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Agreement to Terms
+              </h2>
+            </div>
+            <div className="ml-0 sm:ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 By accessing or using SurFox AI ("the Platform"), you agree to be bound by these Terms of Service. If you don't agree, don't use the Platform.
               </p>
@@ -64,10 +69,15 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              What SurFox AI Does
-            </h2>
-            <div className="text-[#5A626E] leading-relaxed space-y-4">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Zap className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                What SurFox AI Does
+              </h2>
+            </div>
+            <div className="ml-0 sm:ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 SurFox AI provides AI-powered lead qualification software that automates lead engagement and qualification through SMS messaging. The Platform analyzes prospect responses, identifies buying signals, and escalates qualified leads to your sales team.
               </p>
@@ -360,11 +370,16 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Your Data & Our AI
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Database className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Your Data & Our AI
+              </h2>
+            </div>
 
-            <div className="space-y-6 text-[#5A626E]">
+            <div className="ml-0 sm:ml-16 space-y-6 text-[#5A626E]">
               <div>
                 <h3 className="text-xl font-semibold text-[#13171F] mb-3">What you own:</h3>
                 <ul className="space-y-2">
@@ -958,11 +973,16 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Service Availability
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Clock className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Service Availability
+              </h2>
+            </div>
 
-            <div className="space-y-4 text-[#5A626E] leading-relaxed">
+            <div className="ml-0 sm:ml-16 space-y-4 text-[#5A626E] leading-relaxed">
               <p>
                 We aim for 99% uptime but make no guarantees.
               </p>
@@ -1185,11 +1205,16 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Intellectual Property
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Copyright className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Intellectual Property
+              </h2>
+            </div>
 
-            <div className="space-y-6 text-[#5A626E] leading-relaxed">
+            <div className="ml-0 sm:ml-16 space-y-6 text-[#5A626E] leading-relaxed">
               <div>
                 <h3 className="text-lg font-semibold text-[#13171F] mb-3">You grant us a limited license to:</h3>
                 <ul className="space-y-2">
@@ -1247,11 +1272,16 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Third-Party Services
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Puzzle className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Third-Party Services
+              </h2>
+            </div>
 
-            <div className="space-y-4 text-[#5A626E] leading-relaxed">
+            <div className="ml-0 sm:ml-16 space-y-4 text-[#5A626E] leading-relaxed">
               <p>
                 SurFox AI integrates with third-party services including:
               </p>
@@ -1309,11 +1339,16 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Connecting an AI Assistant
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Bot className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Connecting an AI Assistant
+              </h2>
+            </div>
 
-            <div className="space-y-4 text-[#5A626E] leading-relaxed">
+            <div className="ml-0 sm:ml-16 space-y-4 text-[#5A626E] leading-relaxed">
               <p>
                 SurFox AI lets an account administrator connect an outside AI assistant (such as Claude) to their own SurFox account. This feature is off until an administrator turns it on, and it is never required to use the Platform.
               </p>
@@ -1470,11 +1505,16 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Changes to Terms
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <RefreshCw className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Changes to Terms
+              </h2>
+            </div>
 
-            <div className="space-y-4 text-[#5A626E] leading-relaxed">
+            <div className="ml-0 sm:ml-16 space-y-4 text-[#5A626E] leading-relaxed">
               <p>
                 We may update these Terms at any time. Material changes will be communicated via:
               </p>
@@ -1508,11 +1548,16 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Governing Law
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Scale className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Governing Law
+              </h2>
+            </div>
 
-            <div className="space-y-4 text-[#5A626E] leading-relaxed">
+            <div className="ml-0 sm:ml-16 space-y-4 text-[#5A626E] leading-relaxed">
               <p>
                 These Terms and any dispute arising out of or relating to them or to the Platform are governed by the laws of the State of Delaware, without regard to its conflict-of-laws principles.
               </p>
@@ -1526,11 +1571,16 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Dispute Resolution
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Gavel className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Dispute Resolution
+              </h2>
+            </div>
 
-            <div className="space-y-4 text-[#5A626E] leading-relaxed">
+            <div className="ml-0 sm:ml-16 space-y-4 text-[#5A626E] leading-relaxed">
               <div className="bg-[#F0F8F9] border-l-4 border-[#E4E6E2] rounded-r-lg p-4">
                 <h3 className="font-semibold text-[#13171F] mb-2">Let's talk first:</h3>
                 <p>
@@ -1569,11 +1619,16 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Miscellaneous
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <ClipboardList className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Miscellaneous
+              </h2>
+            </div>
 
-            <div className="space-y-3 text-[#5A626E]">
+            <div className="ml-0 sm:ml-16 space-y-3 text-[#5A626E]">
               <p><strong className="text-[#13171F]">Entire Agreement:</strong> These Terms, plus our Privacy Policy, constitute the entire agreement.</p>
               <p><strong className="text-[#13171F]">Severability:</strong> If any provision is unenforceable, the rest remains in effect.</p>
               <p><strong className="text-[#13171F]">No Waiver:</strong> Our failure to enforce a right doesn't waive that right.</p>
@@ -1589,11 +1644,16 @@ export default function TermsOfService() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Contact Us
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Mail className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Contact Us
+              </h2>
+            </div>
 
-            <div className="text-[#5A626E] leading-relaxed space-y-4">
+            <div className="ml-0 sm:ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 Questions about these Terms?
               </p>
