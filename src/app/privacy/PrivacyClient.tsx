@@ -312,6 +312,47 @@ export default function PrivacyPolicy() {
             </div>
           </motion.div>
 
+          {/* AI Assistant Connections */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Eye className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Connecting an AI Assistant to Your Account
+              </h2>
+            </div>
+
+            <div className="ml-0 sm:ml-16 space-y-4 text-[#5A626E] leading-relaxed">
+              <p>
+                An account administrator may optionally connect an outside AI assistant (such as Claude) to their own SurFox account. This is off by default and is a deliberate choice an administrator makes, not something we do automatically.
+              </p>
+              <p>When connected, the assistant can read:</p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>Your leads, with phone numbers masked to the last four digits and email addresses shown in full</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>Your conversations with those leads, including message text</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>The names of your active campaigns, and your usage numbers</span>
+                </li>
+              </ul>
+              <p>
+                The assistant cannot send messages, change any data, or see payment details. Access lasts 90 days and an administrator can revoke it at any time from Settings. Data shared this way is handled by the assistant&apos;s own provider under that provider&apos;s own terms, outside our control; it is not sold, and it is not used by SurFox for any purpose other than answering the administrator&apos;s request.
+              </p>
+            </div>
+          </motion.div>
+
           {/* Cookies & Tracking Technologies */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

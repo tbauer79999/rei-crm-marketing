@@ -1302,6 +1302,48 @@ export default function TermsOfService() {
             </div>
           </motion.div>
 
+          {/* AI Assistant Connections */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
+              Connecting an AI Assistant
+            </h2>
+
+            <div className="space-y-4 text-[#5A626E] leading-relaxed">
+              <p>
+                SurFox AI lets an account administrator connect an outside AI assistant (such as Claude) to their own SurFox account. This feature is off until an administrator turns it on, and it is never required to use the Platform.
+              </p>
+              <p>
+                If you connect an assistant, you control what it can do:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>Only your own account&apos;s data is visible to the assistant. It can read your leads, your conversations with them, your campaign names, and your usage numbers.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>Phone numbers shown to the assistant are masked to the last four digits. Email addresses are shown in full.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>The assistant cannot send messages, change any data, or view billing or payment details.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#0A7C8C] mt-1">•</span>
+                  <span>Access lasts 90 days and must be renewed, and you can remove it at any time from Settings.</span>
+                </li>
+              </ul>
+              <p>
+                Once your data reaches the assistant, it is handled by that assistant&apos;s own provider under that provider&apos;s own terms, not ours. We do not control, and are not responsible for, how that provider stores, uses, or retains data you choose to share this way. You are responsible for deciding whether connecting an assistant is appropriate for your business and your leads.
+              </p>
+            </div>
+          </motion.div>
+
           {/* Affiliate Program Terms */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
