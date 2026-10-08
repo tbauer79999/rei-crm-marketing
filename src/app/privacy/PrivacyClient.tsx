@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Shield, Bell, Lock, Eye, FileText, AlertCircle, Cookie } from 'lucide-react';
+import { Shield, Bell, Lock, Eye, FileText, AlertCircle, Cookie, UserCheck, Trash2, Archive, Globe, Baby, RefreshCw, Mail } from 'lucide-react';
 
 export default function PrivacyPolicy() {
   return (
@@ -447,11 +447,16 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Your Rights
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <UserCheck className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Your Rights
+              </h2>
+            </div>
 
-            <div className="text-[#5A626E] leading-relaxed space-y-4">
+            <div className="ml-0 sm:ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>Depending on your location, you may have the following rights:</p>
               <ul className="space-y-2">
                 <li className="flex items-start gap-2">
@@ -489,11 +494,16 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-16 scroll-mt-24"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Data Deletion Requests
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Trash2 className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Data Deletion Requests
+              </h2>
+            </div>
 
-            <div className="text-[#5A626E] leading-relaxed space-y-4">
+            <div className="ml-0 sm:ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 SurFox AI stores conversation and contact information on behalf of the businesses that use our platform. If you messaged one of those businesses on Facebook Messenger and want your data deleted, you can request it in either of these ways:
               </p>
@@ -520,11 +530,16 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Data Retention
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Archive className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Data Retention
+              </h2>
+            </div>
 
-            <div className="text-[#5A626E] leading-relaxed space-y-4">
+            <div className="ml-0 sm:ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 We retain your information for as long as necessary to provide our services and fulfill the purposes outlined in this Privacy Policy. When you close your account, we will delete or anonymize your personal information within a reasonable timeframe, except where we are required to retain it for legal or regulatory purposes.
               </p>
@@ -538,11 +553,16 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              International Data Transfers
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Globe className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                International Data Transfers
+              </h2>
+            </div>
 
-            <div className="text-[#5A626E] leading-relaxed space-y-4">
+            <div className="ml-0 sm:ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place to protect your information in accordance with this Privacy Policy and applicable data protection laws.
               </p>
@@ -556,11 +576,16 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Children's Privacy
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Baby className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Children&apos;s Privacy
+              </h2>
+            </div>
 
-            <div className="text-[#5A626E] leading-relaxed space-y-4">
+            <div className="ml-0 sm:ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.
               </p>
@@ -574,11 +599,16 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Changes to This Privacy Policy
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <RefreshCw className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Changes to This Privacy Policy
+              </h2>
+            </div>
 
-            <div className="text-[#5A626E] leading-relaxed space-y-4">
+            <div className="ml-0 sm:ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. Your continued use of our services after such modifications constitutes your acceptance of the updated Privacy Policy.
               </p>
@@ -592,11 +622,16 @@ export default function PrivacyPolicy() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F] mb-6">
-              Contact Us
-            </h2>
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <Mail className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                Contact Us
+              </h2>
+            </div>
 
-            <div className="text-[#5A626E] leading-relaxed space-y-4">
+            <div className="ml-0 sm:ml-16 text-[#5A626E] leading-relaxed space-y-4">
               <p>
                 If you have questions about this Privacy Policy or our data practices, please contact us:
               </p>
