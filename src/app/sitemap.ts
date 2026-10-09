@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getAllBlogPosts } from '@/data/blog-posts';
+import { getAllNews } from '@/lib/news';
 
 const BASE_URL = 'https://www.getsurfox.com';
 
@@ -24,6 +25,7 @@ const keyRoutes = [
   '/integrations/follow-up-boss',
   '/security',
   '/blog',
+  '/news',
   '/roi',
   '/industries',
   '/staffing',
@@ -86,5 +88,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [homepage, ...keyPages, ...secondaryPages, ...blogPosts];
+  const newsReleases: MetadataRoute.Sitemap = getAllNews().map((r) => ({
+    url: `${BASE_URL}/news/${r.slug}`,
+    lastModified: new Date(`${r.updated ?? r.date}T12:00:00Z`),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [homepage, ...keyPages, ...secondaryPages, ...blogPosts, ...newsReleases];
 }

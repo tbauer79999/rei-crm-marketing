@@ -44,6 +44,7 @@ const columns: { title: string; links: { label: string; href: string }[]; wide?:
     title: 'Resources',
     links: [
       { label: 'Blog', href: '/blog' },
+      { label: 'News', href: '/news' },
       { label: 'ROI calculator', href: '/roi' },
       { label: 'AI principles', href: '/ai-principles' },
     ],
