@@ -15,6 +15,9 @@ const BASE_URL = 'https://www.getsurfox.com';
 // Key commercial and content pages: priority 0.8.
 const keyRoutes = [
   '/platform',
+  '/platform/sms',
+  '/platform/web-chat',
+  '/platform/voice-ai',
   '/pricing',
   '/integrations',
   '/integrations/gohighlevel',

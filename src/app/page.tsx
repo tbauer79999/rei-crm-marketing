@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { HeroPhone, AnnotatedMoments, FAQSection } from './HomeClientSections';
 import { SOFTWARE_APP_DESCRIPTION } from '@/data/page-metadata';
 import ProofResults from './components/ProofResults';
+import CustomerLogoBar from './components/CustomerLogoBar';
 import './home.css';
 
 export const metadata: Metadata = {
@@ -297,6 +298,9 @@ export default function Page() {
         </div>
       </section>
 
+      {/* CUSTOMER LOGOS - directly under the hero */}
+      <CustomerLogoBar />
+
       {/* CHANNEL STRIP - SMS thread, web chat widget, and an unknown caller qualified live by Voice */}
       <section className="dual-demo" id="channels">
         <div className="wrap">
@@ -430,9 +434,6 @@ export default function Page() {
       {/* ANNOTATED MOMENTS */}
       <AnnotatedMoments />
 
-      {/* SOCIAL PROOF / RESULTS */}
-      <ProofResults />
-
       {/* QUIET STATS */}
       <section className="quiet">
         <div className="wrap qrow">
@@ -547,6 +548,9 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* SOCIAL PROOF / RESULTS */}
+      <ProofResults />
 
       {/* PRICING */}
       <section className="pricing" id="pricing">

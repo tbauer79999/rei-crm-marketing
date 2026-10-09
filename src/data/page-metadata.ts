@@ -14,6 +14,24 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     keywords: ['SMS lead qualification software', 'conversational AI platform', 'automated lead follow up', 'AI sales automation', 'lead response automation'],
     path: '/platform',
   },
+  'platform-sms': {
+    title: 'AI SMS Lead Qualification | Text Back New Leads in Seconds',
+    description: 'SurFox AI texts new leads back in seconds, asks your qualifying questions, handles objections, follows up, and books the call. Built for your business.',
+    keywords: ['AI SMS lead qualification', 'text back new leads', 'speed to lead SMS', 'AI text message follow up'],
+    path: '/platform/sms',
+  },
+  'platform-web-chat': {
+    title: 'AI Website Chat That Qualifies and Books Leads',
+    description: 'SurFox AI\'s website chat answers visitors in seconds, asks your qualifying questions, handles objections, and books the appointment. Built for your business.',
+    keywords: ['AI website chat', 'AI chatbot that books appointments', 'website chat lead qualification'],
+    path: '/platform/web-chat',
+  },
+  'platform-voice-ai': {
+    title: 'AI Voice Agent for Inbound Leads | Answers, Qualifies, Books',
+    description: 'SurFox AI\'s voice agent answers inbound lead calls, asks your qualifying questions, handles objections, checks your Google or Outlook calendar, and books the appointment on the call.',
+    keywords: ['AI voice agent for inbound leads', 'AI receptionist that books appointments', 'inbound call qualification AI'],
+    path: '/platform/voice-ai',
+  },
   about: {
     title: 'About SurFox AI - AI Lead Qualification Built for Operators',
     description: 'SurFox AI helps businesses work every lead by SMS and web chat, so sales teams spend time on conversations that are ready to close. Built by operators, not demos.',
