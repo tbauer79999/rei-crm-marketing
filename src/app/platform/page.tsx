@@ -48,7 +48,7 @@ const features = [
   {
     icon: Phone,
     title: 'Voice: Publish a Number',
-    desc: "Unknown callers dial in, get qualified in a real conversation, and become a lead. Hot ones reach your team by live transfer or hot notify.",
+    desc: "Unknown callers dial in, get qualified in a real conversation, and become a lead. Hot ones reach your team by live transfer, or the AI instantly notifies your team about hot leads.",
   },
   {
     icon: Star,
@@ -208,7 +208,7 @@ export default function Page() {
             <p className="text-lg text-[#5A626E] leading-relaxed mb-4">
               When someone who isn&apos;t already in SurFox AI calls, the AI answers in the
               moment, qualifies them in a real conversation, and creates the lead. Hot intent
-              gets a live transfer to your number, or an instant hot notify to your team.
+              gets a live transfer to your number, or the AI instantly notifies your team about hot leads.
             </p>
             <p className="text-sm text-[#8A92A0] leading-relaxed">
               Inbound form or webhook leads get the same near-instant SMS treatment, gated by
@@ -222,7 +222,7 @@ export default function Page() {
                 'Publish your Voice number',
                 'An unknown caller dials in',
                 'The AI answers, qualifies, and creates the lead',
-                'Live transfer to you, or an instant hot notify',
+                'Live transfer to you, or an instant alert about the hot lead',
               ].map((label, i) => (
                 <li key={label} className="flex items-start gap-4">
                   <span className="w-8 h-8 rounded-full bg-[#13171F] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">
@@ -290,7 +290,7 @@ export default function Page() {
           </div>
           <p className="text-sm text-[#8A92A0] mt-8 max-w-xl mx-auto leading-relaxed">
             Voice: unknown callers get answered and qualified in a real
-            conversation, then hot ones get a live transfer or hot notify to your team.
+            conversation, then hot ones get a live transfer, or the AI instantly notifies your team about hot leads.
             It&apos;s not an outbound dialer working your list.
           </p>
         </div>

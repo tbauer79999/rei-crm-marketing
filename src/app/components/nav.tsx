@@ -190,7 +190,7 @@ export default function Nav() {
         </Link>
 
         {/* Desktop links */}
-        <nav className="hidden md:flex items-center gap-[30px]">
+        <nav className="hidden lg:flex items-center gap-[30px]">
           <PlatformDropdown />
           <Dropdown label="Industries" links={productLinks} />
           <Link
@@ -203,16 +203,16 @@ export default function Nav() {
         </nav>
 
         {/* Desktop right side */}
-        <div className="hidden md:flex items-center gap-[22px] ml-auto">
+        <div className="hidden lg:flex items-center gap-[22px] ml-auto">
           <a
             href="https://surfox.ai"
-            className="text-sm font-medium text-[#5A626E] hover:text-[#13171F] transition-colors"
+            className="text-sm font-medium text-[#5A626E] hover:text-[#13171F] transition-colors whitespace-nowrap"
           >
             Sign in
           </a>
           <Link
             href={DEMO_HREF}
-            className="sfx-cta inline-flex items-center gap-2 rounded-full text-[15px] font-bold px-6 py-[12px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0fb6c9] focus-visible:ring-offset-2"
+            className="sfx-cta inline-flex items-center gap-2 whitespace-nowrap rounded-full text-[15px] font-bold px-6 py-[12px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0fb6c9] focus-visible:ring-offset-2"
           >
             <Sparkles className="w-4 h-4" aria-hidden="true" />
             {DEMO_LABEL}
@@ -222,7 +222,7 @@ export default function Nav() {
         {/* Mobile toggle */}
         <button
           type="button"
-          className="md:hidden ml-auto text-[#13171F]"
+          className="lg:hidden ml-auto text-[#13171F]"
           onClick={() => setMobileOpen((v) => !v)}
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileOpen}
@@ -234,7 +234,7 @@ export default function Nav() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div
-          className="md:hidden border-t border-[#E4E6E2] bg-[#F4F5F3]"
+          className="lg:hidden border-t border-[#E4E6E2] bg-[#F4F5F3]"
           style={{ fontFamily: 'var(--font-plus-jakarta-sans)' }}
         >
           <div className="px-8 py-6 flex flex-col gap-1">

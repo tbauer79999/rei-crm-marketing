@@ -206,3 +206,11 @@ input:focus-visible {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
+
+/* Third-party chat widget (served from surfox.ai): on phones, hide the proactive prompt card and
+   shrink the launcher so neither covers page content. Overrides the widget's own injected rules. */
+@media (max-width: 767px) {
+  #sfx-proactive { display: none !important; }
+  #sfx-bubble { width: 48px !important; height: 48px !important; bottom: 12px !important; right: 12px !important; }
+  #sfx-bubble svg { width: 22px !important; height: 22px !important; }
+}

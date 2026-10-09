@@ -34,10 +34,10 @@ export type ChannelPageProps = {
   faqs: { q: string; a: string }[];
 };
 
-function CtaPair({ light = false }: { light?: boolean }) {
+function CtaPair({ center = false, note = true }: { center?: boolean; note?: boolean }) {
   return (
     <>
-      <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+      <div className={`flex flex-col sm:flex-row items-center justify-center ${center ? '' : 'lg:justify-start'} gap-4`}>
         <Link
           href={DEMO_HREF}
           className="px-7 py-3.5 rounded-[9px] bg-[#13171F] text-white font-semibold hover:bg-black transition inline-flex items-center gap-2"
@@ -52,9 +52,11 @@ function CtaPair({ light = false }: { light?: boolean }) {
           See plans
         </Link>
       </div>
-      <p className={`text-sm mt-4 ${light ? 'text-[#5A626E]' : 'text-[#8A92A0]'}`}>
-        Exactly what we give customers: no sales pitch, just the product.
-      </p>
+      {note && (
+        <p className="text-sm mt-4 text-[#8A92A0]">
+          Exactly what we give customers: no sales pitch, just the product.
+        </p>
+      )}
     </>
   );
 }
@@ -119,7 +121,7 @@ export default function ChannelPage(p: ChannelPageProps) {
               </div>
               <div>
                 {p.mock}
-                <p className="text-center text-xs text-[#8A92A0] mt-4">Sample conversation</p>
+                <p className="text-center text-sm text-[#5A626E] mt-5 pb-1">Sample conversation</p>
               </div>
             </div>
           </div>
@@ -131,7 +133,7 @@ export default function ChannelPage(p: ChannelPageProps) {
         <section className="py-20 sm:py-24 px-4 sm:px-6 md:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-12">How it works</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 ${p.steps.some((s) => s.extra) ? 'md:items-start' : ''}`}>
               {p.steps.map((s, i) => (
                 <div key={s.title} className="p-7 rounded-[22px] border border-[#E4E6E2] bg-white">
                   <div className="w-11 h-11 rounded-full bg-[#13171F] text-white flex items-center justify-center font-bold mb-5">
@@ -231,7 +233,7 @@ export default function ChannelPage(p: ChannelPageProps) {
               Get a login to a live demo account. It&apos;s exactly what we give customers: no sales pitch, just the
               product.
             </p>
-            <CtaPair light />
+            <CtaPair center note={false} />
           </div>
         </section>
       </div>
