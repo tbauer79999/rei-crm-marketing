@@ -416,14 +416,14 @@ export default function PrivacyPolicy() {
                   You can control or delete cookies through your browser settings. Most browsers let you refuse cookies, delete existing cookies, or receive a warning before a cookie is stored. Disabling certain cookies may affect the functionality of our website.
                 </p>
                 <p className="mt-3">
-                  We do not currently block non-essential cookies prior to consent. We are working toward implementing consent-based cookie management for visitors in the EU, UK, and other jurisdictions where required.
+                  We do not load analytics or advertising technologies until you choose to allow them. When you first visit, a banner lets you accept all, reject all, or choose by category. You can change your choice at any time using the "Cookie settings" link in the footer of every page. We also honor the Global Privacy Control browser signal as a request to opt out of the sale or sharing of your personal information.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-semibold text-[#13171F] mb-3">California Privacy Rights</h3>
                 <p>
-                  The use of advertising pixels such as Meta and OpenAI's may be considered a "sale" or "sharing" of personal information under the California Consumer Privacy Act (CCPA). We do not sell personal information for monetary payment. To opt out of this sharing, contact us at privacy@getsurfox.com.
+                  The use of advertising pixels such as Meta and OpenAI's may be considered a "sale" or "sharing" of personal information under the California Consumer Privacy Act (CCPA). We do not sell personal information for monetary payment. To opt out of this sharing, choose "Reject all" in the cookie banner, use the "Cookie settings" link in the footer, enable Global Privacy Control in your browser, or contact us at privacy@getsurfox.com.
                 </p>
               </div>
 

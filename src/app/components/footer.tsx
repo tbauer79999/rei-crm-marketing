@@ -196,6 +196,13 @@ export default function Footer() {
             <Link href="/terms" className="text-[#8A92A0] hover:text-[#13171F] transition-colors">
               Terms
             </Link>
+            <button
+              type="button"
+              onClick={() => (window as unknown as { Cookiebot?: { renew: () => void } }).Cookiebot?.renew()}
+              className="text-[#8A92A0] hover:text-[#13171F] transition-colors"
+            >
+              Cookie settings
+            </button>
           </div>
         </div>
       </div>
