@@ -78,6 +78,13 @@ export const metadata: Metadata = {
   },
 };
 
+/*
+ * CONSENT RULE: do not add trackers, pixels, analytics tags, heatmaps, chat widgets
+ * or third-party embeds that set cookies or storage directly in this file. They would
+ * fire before the visitor consents through Cookiebot. Add them to
+ * ConsentGatedScripts.tsx under the right consent category instead, and update the
+ * Cookies section and "Last Updated" date on the privacy page.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
