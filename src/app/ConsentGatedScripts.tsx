@@ -8,6 +8,8 @@ import { useEffect } from "react";
  *
  *   statistics consent -> GTM (and so GA4)
  *   marketing consent  -> Meta Pixel + OpenAI pixel (GTM too, if not yet loaded)
+ *   preferences consent -> SurFox chat widget (it stores a persistent visitor ID in
+ *                          localStorage and logs a page_open event on every load)
  *
  * Cookiebot runs in manual blocking mode (see layout.tsx), so this file is the
  * single place where tracking scripts are gated. Any new tracker must be added
@@ -35,7 +37,7 @@ const OPENAI_PIXEL = `
 `;
 
 type CookiebotApi = {
-  consent: { statistics: boolean; marketing: boolean };
+  consent: { statistics: boolean; marketing: boolean; preferences: boolean };
 };
 
 declare global {
@@ -46,6 +48,7 @@ declare global {
 
 let gtmLoaded = false;
 let pixelsLoaded = false;
+let widgetLoaded = false;
 
 function gtag(..._args: unknown[]) {
   window.dataLayer = window.dataLayer || [];
@@ -97,6 +100,17 @@ function apply() {
     runInline("meta-pixel", META_PIXEL);
     runInline("oai-pixel", OPENAI_PIXEL);
     pixelsLoaded = true;
+  }
+
+  if (consent.preferences && !widgetLoaded) {
+    const w = document.createElement("script");
+    w.id = "surfox-chat-widget";
+    w.src = "https://surfox.ai/chat-widget.js";
+    w.async = true;
+    w.setAttribute("data-widget-key", "wk_5c3a82cabe46479da8d56b797483ac3c");
+    w.setAttribute("data-primary-color", "#0FB6C9");
+    document.body.appendChild(w);
+    widgetLoaded = true;
   }
 }
 

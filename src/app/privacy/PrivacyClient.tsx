@@ -379,7 +379,11 @@ export default function PrivacyPolicy() {
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-[#0A7C8C] mt-1">•</span>
-                    <span><strong>Essential cookies:</strong> Required for core site and platform functionality, such as maintaining your session and account authentication</span>
+                    <span><strong>Essential cookies:</strong> Required for core site and platform functionality, such as maintaining your session and account authentication. If you arrive through a referral or affiliate link, we also store the referral code and a random click ID in first-party cookies for up to 60 days so we can credit the referrer and attribute a signup. We do not share these with advertising networks.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#0A7C8C] mt-1">•</span>
+                    <span><strong>Preference cookies:</strong> Our website chat widget stores a random identifier in your browser so we can continue your conversation if you return. It only loads if you allow preference cookies.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#0A7C8C] mt-1">•</span>

@@ -98,18 +98,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${sora.variable} ${dmSans.variable} ${plusJakartaSans.variable} antialiased`} style={{ fontFamily: 'var(--font-plus-jakarta-sans)' }}>
-        {/* GTM, Meta Pixel and OpenAI pixel load here only after consent. The
+        {/* GTM, Meta Pixel, OpenAI pixel and the SurFox chat widget load here only after consent. The
             <noscript> tracking fallbacks were removed: they fire with no consent. */}
         <ConsentGatedScripts />
-
-        {/* SurFox AI Chat Widget */}
-        <Script
-          id="surfox-chat-widget"
-          src="https://surfox.ai/chat-widget.js"
-          data-widget-key="wk_5c3a82cabe46479da8d56b797483ac3c"
-          data-primary-color="#0FB6C9"
-          strategy="lazyOnload"
-        />
 
         {/* Wrap client router hooks in Suspense per Next.js 15 requirement */}
         <Suspense fallback={null}>
