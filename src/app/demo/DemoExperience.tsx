@@ -493,6 +493,7 @@ export default function DemoExperience() {
     let company = '';
     let email = '';
     let described = '';
+    let describedReason: 'unreadable_site' | 'wrong_industry' = 'unreadable_site';
     let readInBackground = false;
 
     // The build does not use anything said after the email (the industry check below is only for what Surf shows), so it starts the
@@ -532,6 +533,7 @@ export default function DemoExperience() {
           );
           const ok = await ask('confirm');
           if (ok === 'no' || !industry) {
+            describedReason = 'wrong_industry';
             await say('No problem. In a few words, what does your business do?');
             described = (await ask('describe')).slice(0, 60);
           } else {
@@ -591,6 +593,14 @@ export default function DemoExperience() {
       return;
     }
     accountToken.current = signedUp.token;
+    // Keep what they typed about their business (only asked when the site could not be read or was misread). Never blocks the build.
+    if (described) {
+      void fetch('/api/demo/described', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: signedUp.token, text: described, reason: describedReason }),
+      }).catch(() => {});
+    }
     buildStartedAt.current = Date.now();
     setAccount('building');
 
@@ -999,15 +1009,6 @@ export default function DemoExperience() {
                             <span className="text-slate-500">{WHY_I_ASK[inputMode]}</span>
                           ) : (
                             <span />
-                          )}
-                          {inputMode === 'website' && (
-                            <button
-                              type="button"
-                              onClick={() => answer('', 'I do not have a website')}
-                              className="shrink-0 whitespace-nowrap text-slate-400 underline-offset-2 transition hover:text-slate-200 hover:underline"
-                            >
-                              I do not have a website
-                            </button>
                           )}
                         </div>
                       </motion.form>
