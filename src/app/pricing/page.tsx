@@ -150,7 +150,7 @@ export default function Page() {
         "name": "What counts as a Voice minute?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Only inbound calls to your published Voice number count against your monthly bucket, from an unknown caller who isn't already in SurFox AI. Uploaded lists and reactivation campaigns never burn Voice minutes, because Voice doesn't dial them."
+          "text": "Both inbound and outbound Voice calls placed through the service count against your monthly bucket. Minutes are measured by SurFox AI's systems."
         }
       },
       {

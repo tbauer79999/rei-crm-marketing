@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Check, X, Mail } from 'lucide-react';
 import '../home.css';
 
@@ -41,7 +42,7 @@ const plans: Plan[] = [
           },
           {
             t: '20 Voice minutes per month',
-            sub: 'Only inbound calls to your published number count. CSV and reactivation lists never touch it, Voice doesn’t dial them.',
+            sub: 'Both inbound and outbound Voice calls count toward your minutes.',
           },
           { t: '500 new SMS leads ingested per month' },
           { t: '3 active campaigns' },
@@ -92,7 +93,7 @@ const plans: Plan[] = [
           },
           {
             t: '400 Voice minutes per month',
-            sub: 'Only inbound calls to your published number count. CSV and reactivation lists never touch it, Voice doesn’t dial them.',
+            sub: 'Both inbound and outbound Voice calls count toward your minutes.',
           },
           { t: '5 team member accounts' },
         ],
@@ -140,7 +141,7 @@ const plans: Plan[] = [
           },
           {
             t: '1,000 Voice minutes per month',
-            sub: 'Only inbound calls to your published number count. CSV and reactivation lists never touch it, Voice doesn’t dial them.',
+            sub: 'Both inbound and outbound Voice calls count toward your minutes.',
           },
           { t: '15 team member accounts' },
         ],
@@ -188,7 +189,7 @@ const plans: Plan[] = [
           },
           {
             t: '2,000 Voice minutes per month',
-            sub: 'Only inbound calls to your published number count. CSV and reactivation lists never touch it, Voice doesn’t dial them.',
+            sub: 'Both inbound and outbound Voice calls count toward your minutes.',
           },
           { t: '15+ team member accounts' },
         ],
@@ -234,7 +235,7 @@ const faqs = [
   },
   {
     q: 'What counts as a Voice minute?',
-    a: "Only inbound calls to your published Voice number count against your monthly bucket, from an unknown caller who isn't already in SurFox AI. Uploaded lists and reactivation campaigns never burn Voice minutes, because Voice doesn't dial them.",
+    a: "Both inbound and outbound Voice calls placed through the service count against your monthly bucket. Minutes are measured by SurFox AI's systems.",
   },
   {
     q: 'When will I see my first qualified lead?',
@@ -340,7 +341,8 @@ export default function PricingClient() {
           </div>
 
           <p className="price-note">
-            30-day money-back guarantee. No setup fees. No risk.
+            30-day money-back guarantee. No setup fees. No risk. Conditions apply,{' '}
+            <Link href="/terms">see terms</Link>.
           </p>
           <p className="price-note">
             When you hit your website chat limit, new chats pause until your next billing cycle
@@ -348,8 +350,7 @@ export default function PricingClient() {
           </p>
           <p className="price-note">
             Voice minutes work differently: $0.25/min after your bucket is billed automatically,
-            no approval step. Only inbound calls to your published number count. CSV and
-            reactivation lists never touch it, Voice doesn&apos;t dial them.
+            no approval step. Both inbound and outbound Voice calls count toward your minutes.
           </p>
         </div>
       </section>
@@ -366,6 +367,9 @@ export default function PricingClient() {
               it has been. Your guarantee clock starts when your A2P registration is approved, not
               the day you sign up, so you never lose time to setup. No partial credits, no
               fine-print games, just your money back.
+            </p>
+            <p style={{ marginTop: 14 }}>
+              Conditions apply, <Link href="/terms">see terms</Link>.
             </p>
           </div>
         </div>
