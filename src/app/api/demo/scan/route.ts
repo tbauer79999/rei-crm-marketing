@@ -247,18 +247,21 @@ export async function POST(req: NextRequest) {
   if (permit.status === 429) return fail('RATE_LIMITED', 429);
   if (!permit.ok) return fail('SCAN_FAILED');
 
+  let pageRead = false;
   try {
     const { html } = await fetchHtml(url);
     const pageText = readPage(html);
     if (pageText.length < 40) return fail('NO_CONTENT');
+    pageRead = true; // the page itself was read (the lead-app keeps this text for the build, even if the summary below fails)
 
     const result = await describeBusiness(pageText, token);
-    if (!result.company && !result.summary) return fail('NO_CONTENT');
+    if (!result.company && !result.summary) return NextResponse.json({ ok: false, error: 'NO_CONTENT', pageRead });
     return NextResponse.json({ ok: true, ...result });
   } catch (e) {
     const code = e instanceof Error ? e.message : 'FAILED';
     // Refused or unreachable targets are reported as plain failures; no detail leaks to the caller.
     console.warn('[demo/scan] failed:', code);
-    return fail('SCAN_FAILED');
+    // pageRead tells the page whether the SITE could be read: if so, only the one-sentence summary failed and the build can still use the text.
+    return NextResponse.json({ ok: false, error: 'SCAN_FAILED', pageRead });
   }
 }

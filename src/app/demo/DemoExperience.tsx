@@ -72,13 +72,41 @@ async function resendCode(body: { token: string; phone: string }): Promise<{ ok:
   return { ok: false, message: errorOf(r.j).message };
 }
 
-async function fetchState(token: string): Promise<'building' | 'ready' | 'failed'> {
+// What the server says about the real build. building | needs_input (it wants two quick answers) | ready | down (the system could not build
+// it; the visitor's one demo is unused). null = the server could not be reached (not the same as "failed": keep asking).
+type BuildView = { state: 'building' | 'needs_input' | 'ready' | 'down'; company: string | null; generic: boolean; loginEmail: 'sent' | 'failed' | null };
+async function fetchState(token: string): Promise<BuildView | null> {
   try {
     const res = await fetch(`/api/demo/status?token=${encodeURIComponent(token)}`, { cache: 'no-store' });
+    if (res.status === 404) return { state: 'down', company: null, generic: false, loginEmail: null }; // the sign-up is gone (cleaned up): nothing to wait for
+    if (!res.ok) return null;
     const j = await res.json();
-    return j?.state === 'ready' ? 'ready' : j?.state === 'failed' ? 'failed' : 'building';
+    const state = j?.state === 'ready' || j?.state === 'needs_input' || j?.state === 'down' ? j.state : 'building';
+    return {
+      state,
+      company: typeof j?.company === 'string' ? j.company : null,
+      generic: j?.generic === true,
+      loginEmail: j?.login_email === 'sent' || j?.login_email === 'failed' ? j.login_email : null,
+    };
   } catch {
-    return 'building'; // a dropped poll is not a failed build: ask again
+    return null;
+  }
+}
+
+// The two answers asked when neither read of the site worked. The server builds from them.
+async function sendAnswers(token: string, sells: string, leads: string): Promise<{ ok: boolean; message: string }> {
+  const r = await postJson('/api/demo/answers', { token, sells, leads });
+  if (r.ok) return { ok: true, message: '' };
+  return { ok: false, message: errorOf(r.j).message };
+}
+
+// How long the status can be unreachable before the page says so. A URL parameter (?dxlost=milliseconds) only changes this wait.
+function lostAfterMs(): number {
+  try {
+    const v = Number(new URLSearchParams(window.location.search).get('dxlost'));
+    return Number.isFinite(v) && v >= 1000 ? v : 120000;
+  } catch {
+    return 120000;
   }
 }
 
@@ -230,7 +258,7 @@ function cleanDomain(raw: string): string {
     .split(/[/?#]/)[0];
 }
 
-type ScanResult = { ok: true; company: string; industry: string; summary: string } | { ok: false };
+type ScanResult = { ok: true; company: string; industry: string; summary: string } | { ok: false; pageRead: boolean };
 
 // Reads the visitor's website. Only called AFTER the phone code was verified (the server refuses it otherwise).
 // Nobody waits long on this: if it is not back in a few seconds the conversation carries on and the result is picked up later.
@@ -248,9 +276,9 @@ async function fetchScan(url: string, token: string): Promise<ScanResult> {
     if (j?.ok && typeof j.summary === 'string' && j.summary) {
       return { ok: true, company: String(j.company ?? ''), industry: String(j.industry ?? ''), summary: j.summary };
     }
-    return { ok: false };
+    return { ok: false, pageRead: j?.pageRead === true }; // pageRead: the site was read and only the summary failed
   } catch {
-    return { ok: false };
+    return { ok: false, pageRead: false };
   } finally {
     clearTimeout(timer);
   }
@@ -446,13 +474,14 @@ export default function DemoExperience() {
   const [hint, setHint] = useState('');
   const [profile, setProfile] = useState({ company: '', email: '', name: '' });
   const [learned, setLearned] = useState<{ company: string; industry: string; summary: string } | null>(null);
-  const [scanFailed, setScanFailed] = useState(false);
+  const [scanFailed, setScanFailed] = useState(false); // the SITE could not be read from here
+  const [scanSettled, setScanSettled] = useState(false); // the page's own read finished, one way or the other
   const [manual, setManual] = useState('');
   const [heardChoice, setHeardChoice] = useState('');
   const [heardOther, setHeardOther] = useState('');
   const [correcting, setCorrecting] = useState(false);
   const [draft, setDraft] = useState('');
-  const [locked, setLocked] = useState(0);
+  const [lockedRaw, setLockedRaw] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const readyRef = useRef(false);
 
@@ -460,13 +489,26 @@ export default function DemoExperience() {
   const industryLabel = manual || learned?.industry || '';
   const companyLabel = learned?.company || profile.company;
   const waitingOnRead = !manual && !learned && !scanFailed;
-  readyRef.current = Boolean(manual || learned);
+  readyRef.current = Boolean(manual || learned || scanFailed || scanSettled);
   const pillars = pillarCopy(companyLabel, industryLabel);
+  // The real account: 'none' until the code is verified, then building (or needs_input while it waits for two answers) -> ready | down.
+  const [account, setAccount] = useState<'none' | 'building' | 'needs_input' | 'ready' | 'down'>('none');
+  // The pillars are the same list the real build writes, but the build has no per-pillar progress to report, so the animation is only a
+  // picture of work in progress: it can reach 6 of 7 and then waits. "7 of 7 locked in" is shown ONLY when the server says the workspace
+  // is really built, so a build that failed or is waiting can never look finished.
+  const locked = account === 'ready' ? PILLARS.length : Math.min(lockedRaw, PILLARS.length - 1);
   const allLocked = locked >= PILLARS.length;
   // The pillar whose card is showing: the one the visitor picked, else the one being built.
   const shown = selected ?? (allLocked ? null : locked);
-  // The real account: 'none' until the code is verified, then building -> ready | failed.
-  const [account, setAccount] = useState<'none' | 'building' | 'ready' | 'failed'>('none');
+  const accountRef = useRef<'none' | 'building' | 'needs_input' | 'ready' | 'down'>('none');
+  accountRef.current = account;
+  const [generic, setGeneric] = useState(false);
+  const [loginEmail, setLoginEmail] = useState<'sent' | 'failed' | null>(null);
+  const [lostConnection, setLostConnection] = useState(false);
+  const [answerSells, setAnswerSells] = useState('');
+  const [answerLeads, setAnswerLeads] = useState('');
+  const [answerBusy, setAnswerBusy] = useState(false);
+  const [answerNote, setAnswerNote] = useState('');
   const [resendBusy, setResendBusy] = useState(false);
   const [resendNote, setResendNote] = useState('');
   const accountToken = useRef('');
@@ -668,18 +710,21 @@ export default function DemoExperience() {
         } else {
           setLearned({ company, industry, summary: result.summary });
         }
+        setScanSettled(true);
       } else {
-        await say("I couldn't read that site, which is fine. In a few words, what does your business do?");
-        described = (await ask('describe')).slice(0, 60);
+        // No question here. If the build cannot read the site either, the build screen asks two short questions, once, and only then.
+        setScanFailed(!result.pageRead);
+        setScanSettled(true);
       }
     } else {
       readInBackground = true;
       void reading.then((r) => {
         if (!alive.current) return;
+        setScanSettled(true);
         if (r.ok) {
           setLearned({ company: r.company || company, industry: r.industry, summary: r.summary });
         } else {
-          setScanFailed(true);
+          setScanFailed(!r.pageRead);
         }
       });
     }
@@ -718,10 +763,11 @@ export default function DemoExperience() {
   // what Surf read from the site, so any wait on the read happens here, on screen, not in chat.
   useEffect(() => {
     if (phase !== 'build') return;
-    setLocked(0);
+    setLockedRaw(0);
     const t = setInterval(() => {
-      setLocked((prev) => {
-        if (prev >= PILLARS.length) return prev;
+      if (accountRef.current !== 'building') return; // waiting for answers, or already ended: the picture stops
+      setLockedRaw((prev) => {
+        if (prev >= PILLARS.length - 1) return prev; // never past 6: the last pillar waits for the real result
         if (prev < 2 && !readyRef.current) return prev;
         return prev + 1;
       });
@@ -729,33 +775,75 @@ export default function DemoExperience() {
     return () => clearInterval(t);
   }, [phase, reduce]);
 
-  // Ask the server whether the real workspace is built yet.
+  // Ask the server what the real build is doing: building, waiting for two answers, ready, or down. After "ready" it keeps asking a little
+  // longer for the result of the login email, so the page never says "I sent your login" before that is true. If the server cannot be
+  // reached for a while the page says so (it never claims anything it does not know).
   useEffect(() => {
-    if (account !== 'building') return;
+    if (account !== 'building' && account !== 'needs_input' && !(account === 'ready' && loginEmail === null)) return;
     let live = true;
+    let tries = 0;
+    let failingSince = 0;
     const tick = async () => {
       const st = await fetchState(accountToken.current);
       if (!live) return;
-      if (st === 'ready') setAccount('ready');
-      else if (st === 'failed') setAccount('failed');
+      if (st === null) {
+        if (!failingSince) failingSince = Date.now();
+        if (Date.now() - failingSince >= lostAfterMs()) setLostConnection(true);
+        return;
+      }
+      failingSince = 0;
+      setLostConnection(false);
+      setGeneric(st.generic);
+      setLoginEmail(st.loginEmail);
+      if (account === 'ready') {
+        tries += 1;
+        if (tries >= 20) live = false;
+        return;
+      }
+      if (st.state === 'ready') setAccount('ready');
+      else if (st.state === 'down') setAccount('down');
+      else if (st.state === 'needs_input') setAccount('needs_input');
+      else if (account === 'needs_input') setAccount('building'); // the server picked the build back up by itself
     };
-    const t = setInterval(tick, 3000);
+    const t = setInterval(tick, account === 'ready' ? 2000 : 3000);
     void tick();
     return () => {
       live = false;
       clearInterval(t);
     };
-  }, [account]);
+  }, [account, loginEmail]);
 
-  // Cloudflare Turnstile: invisible unless it needs to ask something.
+  const submitAnswers = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (answerBusy) return;
+    if (answerSells.trim().length < 3 || answerLeads.trim().length < 3) {
+      setAnswerNote('Please give a few words for each question.');
+      return;
+    }
+    setAnswerBusy(true);
+    setAnswerNote('');
+    const r = await sendAnswers(accountToken.current, answerSells.trim(), answerLeads.trim());
+    setAnswerBusy(false);
+    if (r.ok) {
+      buildStartedAt.current = Date.now();
+      setAccount('building');
+    } else {
+      setAnswerNote(r.message);
+    }
+  };
+
+  // Cloudflare Turnstile: invisible unless it needs to ask something. Its container sits IN the chat's normal flow, directly above the input
+  // (never positioned over anything), so when it does ask it takes its own space and can never cover the Send button. It is only drawn once
+  // the chat is on screen; the answer is not needed until the form is submitted, many seconds later.
   useEffect(() => {
-    if (!TURNSTILE_SITE_KEY) return;
+    if (!TURNSTILE_SITE_KEY || phase !== 'chat') return;
     const draw = () => {
       const el = document.getElementById('dx-turnstile');
       if (!el || !window.turnstile || el.childElementCount) return;
       window.turnstile.render(el, {
         sitekey: TURNSTILE_SITE_KEY,
         appearance: 'interaction-only',
+        size: el.clientWidth > 0 && el.clientWidth < 310 ? 'compact' : 'normal', // the normal widget is 300px wide; very narrow phones get the compact one
         callback: (t: string) => {
           turnstileToken.current = t;
         },
@@ -773,7 +861,7 @@ export default function DemoExperience() {
     sc.async = true;
     sc.onload = draw;
     document.head.appendChild(sc);
-  }, []);
+  }, [phase]);
 
   const resendEmail = async () => {
     if (resendBusy) return;
@@ -1051,6 +1139,7 @@ export default function DemoExperience() {
               </div>
 
               <div className="px-5 pb-6 pt-2 sm:px-8 lg:pr-14">
+                <div id="dx-turnstile" className="mx-auto flex max-w-2xl justify-center empty:hidden [&:not(:empty)]:mb-3" />
                 <div className="mx-auto min-h-[96px] max-w-2xl">
                   <AnimatePresence mode="wait">
                     {inputMode === 'confirm' ? (
@@ -1227,26 +1316,28 @@ export default function DemoExperience() {
                     transition={{ duration: 0.3, ease: 'easeOut' }}
                   >
                     <h2 className="mt-1 text-lg font-light tracking-wide sm:text-xl">
-                {allLocked && account === 'ready' ? 'Your workspace is built' : allLocked ? 'Finishing your workspace' : 'Building your workspace'}
+                {account === 'ready' ? 'Your workspace is built' : account === 'down' ? 'I could not finish your workspace' : 'Building your workspace'}
               </h2>
               <p className="mt-0.5 text-sm text-cyan-200/80" aria-live="polite">
-                {allLocked
-                  ? account === 'ready'
-                    ? 'Tap any pillar to see what it does.'
-                    : 'Pillars set. Writing your campaigns now.'
-                  : waitingOnRead
-                    ? 'Reading your site'
-                    : scanFailed && !manual
-                      ? 'I need one thing from you'
-                      : pillarNote(locked)}
+                {account === 'ready'
+                  ? 'Tap any pillar to see what it does.'
+                  : account === 'down'
+                    ? 'Something went wrong on our side'
+                    : account === 'needs_input' && scanFailed
+                    ? 'I need two quick answers'
+                    : locked >= PILLARS.length - 1
+                      ? 'Writing your campaigns now.'
+                      : waitingOnRead
+                        ? 'Reading your site'
+                        : pillarNote(locked)}
               </p>
 
               <div className="mt-4 w-full max-w-4xl">
-                <div className="mb-2 flex items-center justify-between text-[11px] uppercase tracking-[0.25em] text-slate-400 [@media(max-height:720px)]:hidden">
+                <div className={`mb-2 flex items-center justify-between text-[11px] uppercase tracking-[0.25em] text-slate-400 [@media(max-height:720px)]:hidden ${account === 'down' ? '!hidden' : ''}`}>
                   <span>Pillars</span>
                   <span>{locked} of 7 locked in</span>
                 </div>
-                <div className="mb-3 h-1 overflow-hidden rounded-full bg-white/10">
+                <div className={`mb-3 h-1 overflow-hidden rounded-full bg-white/10 ${account === 'down' ? 'hidden' : ''}`}>
                   <motion.div
                     className="h-full rounded-full bg-gradient-to-r from-cyan-300 to-blue-400"
                     animate={{ width: `${(locked / PILLARS.length) * 100}%` }}
@@ -1254,7 +1345,7 @@ export default function DemoExperience() {
                   />
                 </div>
 
-                <ul className="flex flex-wrap justify-center gap-1.5 sm:gap-2" aria-label="Pillars. Select one to read about it.">
+                <ul className={`flex flex-wrap justify-center gap-1.5 sm:gap-2 ${account === 'down' ? 'hidden' : ''}`} aria-label="Pillars. Select one to read about it.">
                   {PILLARS.map((p, i) => {
                     const done = i < locked;
                     const active = i === locked;
@@ -1296,11 +1387,54 @@ export default function DemoExperience() {
                   })}
                 </ul>
 
+                {account === 'down' ? null : account === 'needs_input' && scanFailed ? (
+                  <div className="mt-3 rounded-2xl border border-cyan-300/20 bg-[#08111f]/80 p-4 text-left backdrop-blur" data-testid="dx-questions">
+                    <p className="text-[10px] uppercase tracking-[0.22em] text-cyan-300/80">Two quick questions</p>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-200">I could not read your site from here, so I will build from your own words.</p>
+                    <form onSubmit={submitAnswers} noValidate className="mt-3 grid gap-3 md:grid-cols-2">
+                      <div>
+                        <label htmlFor="dx-sells" className="mb-1.5 block text-[13px] text-slate-300">What do you sell or do?</label>
+                        <input
+                          id="dx-sells"
+                          value={answerSells}
+                          onChange={(e) => { setAnswerSells(e.target.value); if (answerNote) setAnswerNote(''); }}
+                          maxLength={300}
+                          autoComplete="off"
+                          placeholder="For example: roof repair and replacement"
+                          className="w-full rounded-xl border border-white/10 bg-[#0c1626]/90 px-3 py-2.5 text-[15px] text-slate-100 placeholder-slate-500 outline-none focus:border-cyan-300/50"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="dx-leads" className="mb-1.5 block text-[13px] text-slate-300">Who are your leads, and what do they usually want?</label>
+                        <input
+                          id="dx-leads"
+                          value={answerLeads}
+                          onChange={(e) => { setAnswerLeads(e.target.value); if (answerNote) setAnswerNote(''); }}
+                          maxLength={300}
+                          autoComplete="off"
+                          placeholder="For example: homeowners with storm damage"
+                          className="w-full rounded-xl border border-white/10 bg-[#0c1626]/90 px-3 py-2.5 text-[15px] text-slate-100 placeholder-slate-500 outline-none focus:border-cyan-300/50"
+                        />
+                      </div>
+                      <div className="flex flex-wrap items-center justify-between gap-3 md:col-span-2">
+                        <span className="text-xs text-slate-400">{answerNote ? <span className="text-amber-300/90">{answerNote}</span> : 'If you would rather not, I will set up a general workspace in a few minutes.'}</span>
+                        <button
+                          type="submit"
+                          disabled={answerBusy}
+                          className="inline-flex items-center gap-2 rounded-full border border-cyan-300/50 bg-cyan-400/15 px-6 py-2.5 text-sm font-medium text-cyan-50 transition hover:bg-cyan-400/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 disabled:opacity-60"
+                        >
+                          {answerBusy ? 'Sending...' : 'Build my workspace'}
+                          <ArrowRight className="h-4 w-4" />
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                ) : (
                 <div className="mt-3 grid gap-3 md:grid-cols-2">
                   {/* Left: what Surf read, or the one question it still needs answered.
                       Fixed height: the layout must never move when the text changes. */}
                   <div className="flex h-[104px] flex-col justify-between overflow-hidden rounded-2xl border border-cyan-300/20 bg-[#08111f]/80 p-4 text-left backdrop-blur md:h-[212px] max-md:[@media(max-height:700px)]:hidden">
-                    {(scanFailed && !manual) || correcting ? (
+                    {correcting ? (
                       <form
                         onSubmit={(e) => {
                           e.preventDefault();
@@ -1333,6 +1467,16 @@ export default function DemoExperience() {
                           </button>
                         </div>
                       </form>
+                    ) : scanSettled && !scanFailed && !manual && !learned ? (
+                      <div>
+                        <p className="text-[10px] uppercase tracking-[0.22em] text-cyan-300/80">What I read</p>
+                        <p className="mt-2 text-sm leading-relaxed text-slate-300">I read your site but could not summarize it here. I am building from it now.</p>
+                      </div>
+                    ) : scanFailed && !manual && !learned ? (
+                      <div>
+                        <p className="text-[10px] uppercase tracking-[0.22em] text-cyan-300/80">What I read</p>
+                        <p className="mt-2 text-sm leading-relaxed text-slate-300">I could not preview your site from here. I am still building from it directly, and if that does not work I will ask you two quick questions.</p>
+                      </div>
                     ) : manual ? (
                       <div>
                         <p className="text-[10px] uppercase tracking-[0.22em] text-cyan-300/80">What you told me</p>
@@ -1405,22 +1549,37 @@ export default function DemoExperience() {
                     </AnimatePresence>
                   </div>
                 </div>
+                )}
 
-                <p className="mx-auto mt-3 max-w-2xl text-center text-[12px] leading-relaxed text-slate-300">
+                <p className={`mx-auto mt-3 max-w-2xl text-center text-[12px] leading-relaxed text-slate-300 ${account === 'down' ? 'hidden' : ''}`}>
                   <span className="text-cyan-200/90">In onboarding, you and Surf build these seven pillars together.</span>{' '}
                   That is how your talk tracks come out right, with no cookie-cutter setup.
                 </p>
 
                 <div className="mt-4 flex min-h-[3rem] items-center justify-center">
-                  {allLocked && account === 'building' && (
+                  {account === 'building' && locked >= PILLARS.length - 1 && (
                     <BuildingStatus since={buildStartedAt.current || Date.now()} reduce={reduce} />
                   )}
-                  {allLocked && account === 'failed' && (
-                    <p className="max-w-md text-center text-sm text-amber-300/90">
-                      I could not finish building from that site. I have flagged it and will email you at {profile.email} once it is sorted out.
+                  {account === 'down' && (
+                    <div className="flex max-w-md flex-col items-center gap-3 text-center" data-testid="dx-down">
+                      <p className="text-sm leading-relaxed text-amber-300/90">
+                        I could not build your workspace because our system is having trouble right now. This did not use up your demo, so please try again in a little while.
+                      </p>
+                      <button
+                        type="button"
+                        onClick={() => window.location.reload()}
+                        className="rounded-full border border-cyan-300/50 bg-cyan-400/15 px-6 py-2.5 text-sm font-medium text-cyan-50 transition hover:bg-cyan-400/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+                      >
+                        Start over
+                      </button>
+                    </div>
+                  )}
+                  {lostConnection && account !== 'ready' && account !== 'down' && (
+                    <p className="max-w-md text-center text-xs leading-relaxed text-amber-300/90" data-testid="dx-lost">
+                      I am having trouble reaching the server. I will keep trying, and you can also reload this page.
                     </p>
                   )}
-                  {allLocked && account === 'ready' && (
+                  {account === 'ready' && (
                     <motion.button
                       type="button"
                       initial={reduce ? false : { opacity: 0, y: 6 }}
@@ -1453,6 +1612,11 @@ export default function DemoExperience() {
                   Once you are in, open Campaigns, pick one, and press Test conversation. Play one of your own leads and see what
                   your AI does. I will be right there with you.
                 </p>
+                {generic && (
+                  <p className="mt-3 max-w-lg rounded-xl border border-cyan-300/20 bg-cyan-400/5 px-4 py-3 text-left text-[13.5px] leading-relaxed text-slate-300" data-testid="dx-generic">
+                    I could not tailor your campaigns to your site this time, so I set up a general workspace for you. It works the same way, and you can refine the campaigns with Surf once you are inside.
+                  </p>
+                )}
 
                 <div className="mt-4 w-full max-w-3xl sm:mt-6">
                   <motion.p
@@ -1478,16 +1642,35 @@ export default function DemoExperience() {
                     ))}
                   </ul>
                 </div>
-                <div className="mt-7 w-full max-w-md rounded-2xl border border-cyan-300/30 bg-cyan-400/10 p-5 text-center shadow-[0_0_40px_rgba(34,211,238,0.2)]">
+                <div className={`mt-7 w-full max-w-md rounded-2xl border p-5 text-center ${loginEmail === 'failed' ? 'border-amber-300/40 bg-amber-400/10' : 'border-cyan-300/30 bg-cyan-400/10 shadow-[0_0_40px_rgba(34,211,238,0.2)]'}`} data-testid="dx-login-card">
                   <Mail className="mx-auto h-5 w-5 text-cyan-200" aria-hidden="true" />
-                  <p className="mt-2 text-base font-medium text-cyan-50">Check your email</p>
-                  <p className="mt-1.5 text-[13.5px] leading-relaxed text-slate-300">
-                    I sent your login to <span className="text-slate-100">{profile.email}</span>. Open that email and press{' '}
-                    <span className="text-slate-100">Open your demo</span> to step inside.
-                  </p>
+                  {loginEmail === 'failed' ? (
+                    <>
+                      <p className="mt-2 text-base font-medium text-amber-100">I could not email your login</p>
+                      <p className="mt-1.5 text-[13.5px] leading-relaxed text-slate-300">
+                        Your workspace is ready, but the email to <span className="text-slate-100">{profile.email}</span> did not go out. Press Send it again below, or write to{' '}
+                        <a href="mailto:sales@getsurfox.com" className="text-cyan-200 underline underline-offset-4">sales@getsurfox.com</a> and we will get you in.
+                      </p>
+                    </>
+                  ) : loginEmail === 'sent' ? (
+                    <>
+                      <p className="mt-2 text-base font-medium text-cyan-50">Check your email</p>
+                      <p className="mt-1.5 text-[13.5px] leading-relaxed text-slate-300">
+                        I sent your login to <span className="text-slate-100">{profile.email}</span>. Open that email and press{' '}
+                        <span className="text-slate-100">Open your demo</span> to step inside.
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="mt-2 text-base font-medium text-cyan-50">Sending your login</p>
+                      <p className="mt-1.5 text-[13.5px] leading-relaxed text-slate-300">
+                        I am sending your login to <span className="text-slate-100">{profile.email}</span> now.
+                      </p>
+                    </>
+                  )}
                 </div>
                 <p className="mt-4 text-xs leading-relaxed text-slate-400">
-                  Nothing there yet? Look in spam or promotions.{' '}
+                  {loginEmail === 'failed' ? '' : 'Nothing there yet? Look in spam or promotions. '}
                   <button
                     type="button"
                     disabled={resendBusy}
@@ -1517,9 +1700,8 @@ export default function DemoExperience() {
         )}
       </AnimatePresence>
 
-      {/* Bot checks: a field no person sees (bots fill it in) and the Turnstile slot (empty unless a key is set). */}
+      {/* Bot check: a field no person sees (bots fill it in). The Turnstile slot lives in the chat's input area, in normal flow. */}
       <input ref={honeypot} type="text" name="website_url_confirm" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 opacity-0" />
-      <div id="dx-turnstile" className="absolute bottom-14 left-1/2 z-30 -translate-x-1/2" />
 
     </div>
   );
