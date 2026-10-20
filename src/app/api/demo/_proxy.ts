@@ -11,6 +11,21 @@ export function configured(): boolean {
   return Boolean(process.env.DEMO_SIGNUP_URL && process.env.DEMO_SIGNUP_SECRET);
 }
 
+// Names (never values) of the website's demo variables that are missing or empty on THIS deployment, for the log below.
+export function missingConfig(): string[] {
+  return ['DEMO_SIGNUP_URL', 'DEMO_SIGNUP_SECRET'].filter((k) => !process.env[k]);
+}
+
+// The website's own "not switched on yet". The lead-app can give the same words for its own reasons (its logs say which), so this one
+// logs what is missing here and says `where: 'website'` in the response, which the page's Network tab shows.
+function websiteOff(): NextResponse {
+  console.error(
+    `[demo] "not switched on yet" was returned by the WEBSITE (Vercel), before the lead-app was contacted. Missing on this deployment: ${missingConfig().join(', ') || 'none'}. ` +
+      `VERCEL_ENV=${process.env.VERCEL_ENV ?? 'unknown'}, build ${(process.env.VERCEL_GIT_COMMIT_SHA ?? 'unknown').slice(0, 8)}.`,
+  );
+  return NextResponse.json({ error: 'OFF', message: 'Demo sign-up is not switched on yet.', where: 'website' }, { status: 503 });
+}
+
 export function sameOrigin(req: NextRequest): boolean {
   const origin = req.headers.get('origin');
   if (!origin) return process.env.NODE_ENV !== 'production';
@@ -27,7 +42,7 @@ export function clientIp(req: NextRequest): string {
 }
 
 export async function forward(req: NextRequest, path: string, init: { method: 'GET' | 'POST'; body?: unknown; timeoutMs?: number }): Promise<NextResponse> {
-  if (!configured()) return NextResponse.json({ error: 'OFF', message: 'Demo sign-up is not switched on yet.' }, { status: 503 });
+  if (!configured()) return websiteOff();
   if (init.method === 'POST' && !sameOrigin(req)) return NextResponse.json({ error: 'FORBIDDEN' }, { status: 403 });
   try {
     const res = await fetch(`${process.env.DEMO_SIGNUP_URL!.replace(/\/+$/, '')}/api/public/demo${path}`, {
