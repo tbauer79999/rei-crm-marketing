@@ -26,7 +26,7 @@ export function clientIp(req: NextRequest): string {
   return v.split(',')[0].trim().slice(0, 64);
 }
 
-export async function forward(req: NextRequest, path: string, init: { method: 'GET' | 'POST'; body?: unknown }): Promise<NextResponse> {
+export async function forward(req: NextRequest, path: string, init: { method: 'GET' | 'POST'; body?: unknown; timeoutMs?: number }): Promise<NextResponse> {
   if (!configured()) return NextResponse.json({ error: 'OFF', message: 'Demo sign-up is not switched on yet.' }, { status: 503 });
   if (init.method === 'POST' && !sameOrigin(req)) return NextResponse.json({ error: 'FORBIDDEN' }, { status: 403 });
   try {
@@ -38,7 +38,7 @@ export async function forward(req: NextRequest, path: string, init: { method: 'G
         'x-client-ip': clientIp(req),
       },
       body: init.method === 'POST' ? JSON.stringify(init.body ?? {}) : undefined,
-      signal: AbortSignal.timeout(20000),
+      signal: AbortSignal.timeout(init.timeoutMs ?? 20000),
       cache: 'no-store',
     });
     const data = await res.json().catch(() => ({}));

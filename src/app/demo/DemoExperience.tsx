@@ -1,8 +1,9 @@
 'use client';
 
-// The self-serve demo at /demo. Surf asks the visitor's name, website and email, reads the site, and a real demo account is built
-// from it (through /api/demo/signup, which forwards to the lead-app). The login arrives by email as a one-time link, and the in-app
-// Surf picks up from there. The earlier scripted page is kept at /demo_old.
+// The self-serve demo at /demo. Surf asks the visitor's name, website, email, US mobile number and how they heard about us, texts a
+// one-time code, and ONLY after the right code is entered reads the site and builds a real demo account from it (through
+// /api/demo/start, /verify and /resend-code, which forward to the lead-app). The login arrives by email as a one-time link, and the
+// in-app Surf picks up from there. The earlier scripted page is kept at /demo_old.
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
@@ -22,27 +23,53 @@ declare global {
   }
 }
 
-type SignupResult =
+type StartResult =
+  | { kind: 'sent'; token: string; last4: string }
+  | { kind: 'error'; code: string; message: string; field: string };
+type VerifyResult =
   | { kind: 'building'; token: string }
-  | { kind: 'later' }
   | { kind: 'error'; code: string; message: string };
 
-// Creates the real demo account. The server decides everything that costs money (limits, bot
-// check); this only reports what happened in words Surf can say.
-async function startSignup(body: { name: string; email: string; website: string; turnstile_token: string; hp: string }): Promise<SignupResult> {
+const GENERIC_ERROR = 'Something went wrong on our side. Please try again in a minute.';
+
+async function postJson(path: string, body: unknown): Promise<{ ok: boolean; status: number; j: Record<string, unknown> }> {
   try {
-    const res = await fetch('/api/demo/signup', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    });
+    const res = await fetch(path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
     const j = await res.json().catch(() => ({}));
-    if (res.ok && j?.status === 'building' && typeof j.token === 'string') return { kind: 'building', token: j.token };
-    if (res.ok && (j?.status === 'busy' || j?.status === 'manual')) return { kind: 'later' };
-    return { kind: 'error', code: String(j?.error ?? 'FAILED'), message: String(j?.message ?? 'Something went wrong on our side. Please try again in a minute.') };
+    return { ok: res.ok, status: res.status, j: j && typeof j === 'object' ? j : {} };
   } catch {
-    return { kind: 'error', code: 'FAILED', message: 'Something went wrong on our side. Please try again in a minute.' };
+    return { ok: false, status: 0, j: {} };
   }
+}
+const errorOf = (j: Record<string, unknown>) => ({
+  code: String(j.error ?? 'FAILED'),
+  message: String(j.message ?? GENERIC_ERROR),
+  field: typeof j.field === 'string' ? j.field : '',
+});
+
+// Step 1: the form. The server decides everything (bot check, duplicates, the phone screen: US mobile only) and sends the text code.
+// Nothing is built or read yet; this only reports what happened in words Surf can say.
+async function startSignup(body: {
+  name: string; email: string; website: string; phone: string; heard_from: string; heard_other: string; affiliate_src: string;
+  turnstile_token: string; hp: string;
+}): Promise<StartResult> {
+  const r = await postJson('/api/demo/start', body);
+  if (r.ok && r.j.status === 'code_sent' && typeof r.j.token === 'string') return { kind: 'sent', token: r.j.token, last4: String(r.j.phone_last4 ?? '') };
+  return { kind: 'error', ...errorOf(r.j) };
+}
+
+// Step 2: the code. Only the right code makes the server build the workspace.
+async function verifyCode(body: { token: string; phone: string; code: string }): Promise<VerifyResult> {
+  const r = await postJson('/api/demo/verify', body);
+  if (r.ok && r.j.status === 'building' && typeof r.j.token === 'string') return { kind: 'building', token: r.j.token };
+  const e = errorOf(r.j);
+  return { kind: 'error', code: e.code, message: e.message };
+}
+
+async function resendCode(body: { token: string; phone: string }): Promise<{ ok: boolean; message: string }> {
+  const r = await postJson('/api/demo/resend-code', body);
+  if (r.ok && r.j.ok === true) return { ok: true, message: '' };
+  return { ok: false, message: errorOf(r.j).message };
 }
 
 async function fetchState(token: string): Promise<'building' | 'ready' | 'failed'> {
@@ -84,14 +111,14 @@ const PILLARS = [
 ] as const;
 
 type Phase = 'intro' | 'chat' | 'build' | 'ready';
-type InputMode = 'name' | 'website' | 'describe' | 'confirm' | 'email' | null;
+type InputMode = 'name' | 'website' | 'describe' | 'confirm' | 'email' | 'phone' | 'heard' | 'code' | null;
 type Message =
   | { id: number; from: 'surf' | 'you'; text: string }
   | { id: number; from: 'deal' };
 
 // Plain statement of the arrangement. Draft copy; Tom to confirm each line is true.
 const DEAL_ROWS: [string, string][] = [
-  ['What I need', "Your name, your website and your email. That's it."],
+  ['What I need', "Your name, website, email and a US mobile number. I text you one code to confirm it's you."],
   ['What I do', 'Read your site, build a workspace around your business, and send you a login.'],
   ['What you do', 'Log in, talk to your own AI, and judge it yourself.'],
   ['What I will not do', "Pitch you. If it's not for you, close the tab."],
@@ -147,14 +174,52 @@ const DIFFERENCES: [string, string][] = [
   ['Built from your business', 'Your campaigns are written from your own site, not copied from a template.'],
 ];
 
-const WHY_I_ASK: Record<'name' | 'website' | 'describe' | 'email', string> = {
+const WHY_I_ASK: Record<'name' | 'website' | 'describe' | 'email' | 'phone' | 'heard' | 'code', string> = {
   name: 'Why I ask: so I know who I am talking to.',
   website: 'Why I ask: so I can build campaigns around your actual business.',
   describe: 'Why I ask: so I can build campaigns around your actual business.',
   email: 'Why I ask: to send you your login.',
+  phone: 'Why I ask: to text you one code, so I know you are a real person. Message and data rates may apply.',
+  heard: 'Why I ask: so I know which of our efforts reach people.',
+  code: 'The text can take a few seconds to arrive.',
 };
 
+// "How did you hear about us". The key is what the server stores; the label is what the visitor reads.
+const HEARD_OPTIONS: [string, string][] = [
+  ['youtube', 'YouTube review or creator'],
+  ['google', 'Google search'],
+  ['ai_assistant', 'AI assistant (ChatGPT, Claude, Perplexity, etc.)'],
+  ['linkedin', 'LinkedIn'],
+  ['referral', 'Referred by a friend or colleague'],
+  ['directory', 'Directory or review site (G2, etc.)'],
+  ['other', 'Other'],
+];
+
+// Partner links carry ?src=aud-<name>. Captured silently (from this page's own URL, or the cookie the site sets on first landing)
+// so the visitor never has to say it; the server checks the shape again.
+const AUDIENCE_SRC = /^aud-[a-z0-9][a-z0-9_-]{0,59}$/i;
+function audienceSrc(): string {
+  try {
+    const fromUrl = new URLSearchParams(window.location.search).get('src') ?? '';
+    if (AUDIENCE_SRC.test(fromUrl)) return fromUrl.toLowerCase();
+    const m = document.cookie.match(/(?:^|;\s*)surfox_src=([^;]+)/);
+    const fromCookie = m ? decodeURIComponent(m[1]) : '';
+    return AUDIENCE_SRC.test(fromCookie) ? fromCookie.toLowerCase() : '';
+  } catch {
+    return '';
+  }
+}
+
+// A US number is 10 digits (a leading 1 is fine). The server does the real check; this only catches obvious typos before a round trip.
+function looksLikeUsPhone(raw: string): boolean {
+  const d = raw.replace(/\D/g, '');
+  return d.length === 10 || (d.length === 11 && d.startsWith('1'));
+}
+
 const wait = (ms: number) => new Promise<void>((res) => setTimeout(res, ms));
+
+// What the code step answers with when the visitor presses "Send a new code" instead of typing a code.
+const RESEND_CODE = '__resend__';
 
 function cleanDomain(raw: string): string {
   return raw
@@ -167,16 +232,16 @@ function cleanDomain(raw: string): string {
 
 type ScanResult = { ok: true; company: string; industry: string; summary: string } | { ok: false };
 
-// Starts the website read the moment the visitor submits it. Nobody waits on this:
-// the conversation carries on and the result is picked up later.
-async function fetchScan(url: string): Promise<ScanResult> {
+// Reads the visitor's website. Only called AFTER the phone code was verified (the server refuses it otherwise).
+// Nobody waits long on this: if it is not back in a few seconds the conversation carries on and the result is picked up later.
+async function fetchScan(url: string, token: string): Promise<ScanResult> {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), 25000);
   try {
     const res = await fetch('/api/demo/scan', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ url }),
+      body: JSON.stringify({ url, token }),
       signal: ctrl.signal,
     });
     const j = await res.json();
@@ -383,6 +448,8 @@ export default function DemoExperience() {
   const [learned, setLearned] = useState<{ company: string; industry: string; summary: string } | null>(null);
   const [scanFailed, setScanFailed] = useState(false);
   const [manual, setManual] = useState('');
+  const [heardChoice, setHeardChoice] = useState('');
+  const [heardOther, setHeardOther] = useState('');
   const [correcting, setCorrecting] = useState(false);
   const [draft, setDraft] = useState('');
   const [locked, setLocked] = useState(0);
@@ -398,8 +465,8 @@ export default function DemoExperience() {
   const allLocked = locked >= PILLARS.length;
   // The pillar whose card is showing: the one the visitor picked, else the one being built.
   const shown = selected ?? (allLocked ? null : locked);
-  // The real account: 'none' until the sign-up call, then building -> ready | failed. 'later' = no account was built now.
-  const [account, setAccount] = useState<'none' | 'building' | 'ready' | 'failed' | 'later'>('none');
+  // The real account: 'none' until the code is verified, then building -> ready | failed.
+  const [account, setAccount] = useState<'none' | 'building' | 'ready' | 'failed'>('none');
   const [resendBusy, setResendBusy] = useState(false);
   const [resendNote, setResendNote] = useState('');
   const accountToken = useRef('');
@@ -480,134 +547,156 @@ export default function DemoExperience() {
   };
 
   const run = useCallback(async () => {
+    // The bot check solves itself in the background; a retry right after a reset may need a moment for its next token.
+    const waitForBotCheck = async () => {
+      if (!TURNSTILE_SITE_KEY) return;
+      for (let i = 0; i < 20 && !turnstileToken.current; i++) await wait(300);
+    };
+
     await say("Hey, I'm Surf. You probably expect a sales pitch. Here's how this actually works.");
     setMessages((m) => [...m, { id: idRef.current++, from: 'deal' }]);
     await wait(reduce ? 0 : 1600);
     await say("First, what's your name?");
-    const name = (await ask('name')).replace(/\s+/g, ' ').trim().slice(0, 80);
-    const first = name.split(' ')[0];
-    await say(`Nice to meet you, ${first}. What's your website?`);
-    const site = await ask('website');
-    const domain = cleanDomain(site);
+    let name = (await ask('name')).replace(/\s+/g, ' ').trim().slice(0, 80);
+    await say(`Nice to meet you, ${name.split(' ')[0]}. What's your website?`);
+    let site = await ask('website');
+    await say('Got it. Where should I send your login?');
+    let email = await ask('email');
+    await say("What's your US mobile number? I'll text you one code to confirm it's you.");
+    let phone = await ask('phone');
+    await say('Last question: how did you hear about SurFox?');
+    let heard = JSON.parse(await ask('heard')) as { from: string; other: string };
+    const affiliate = audienceSrc(); // from a partner link, captured silently: the visitor is never asked
 
-    let company = '';
-    let email = '';
+    // STEP 1. The server checks the form and the phone (US mobile only) and texts a code. Nothing is read or built yet.
+    let pending: { token: string; last4: string } | null = null;
+    for (let attempt = 0; attempt < 4 && !pending; attempt++) {
+      await waitForBotCheck();
+      const r = await startSignup({
+        name, email, website: site, phone, heard_from: heard.from, heard_other: heard.other, affiliate_src: affiliate,
+        turnstile_token: turnstileToken.current, hp: honeypot.current?.value ?? '',
+      });
+      if (TURNSTILE_SITE_KEY && window.turnstile) window.turnstile.reset(); // a token works once
+      turnstileToken.current = '';
+      if (!alive.current) return;
+      if (r.kind === 'sent') {
+        pending = r;
+        break;
+      }
+      await say(r.message);
+      // Something the visitor can fix (a VoIP number, a typo, a taken email) is asked again; anything else ends here.
+      if (attempt >= 3 || !r.field) return;
+      if (r.field === 'name') {
+        await say("What's your name?");
+        name = (await ask('name')).replace(/\s+/g, ' ').trim().slice(0, 80);
+      } else if (r.field === 'website') {
+        site = await ask('website');
+      } else if (r.field === 'email') {
+        email = await ask('email');
+      } else if (r.field === 'phone') {
+        phone = await ask('phone');
+      } else if (r.field === 'heard') {
+        heard = JSON.parse(await ask('heard')) as { from: string; other: string };
+      } else {
+        return;
+      }
+    }
+    if (!pending) return;
+    const pendingToken = pending.token;
+
+    // STEP 2. Only the right code starts the build.
+    await say(`I just texted a code to the number ending in ${pending.last4}. Type it here.`);
+    let verified: VerifyResult | null = null;
+    for (let tries = 0; tries < 12 && !verified; tries++) {
+      const entered = await ask('code');
+      if (!alive.current) return;
+      if (entered === RESEND_CODE) {
+        const again = await resendCode({ token: pendingToken, phone });
+        await say(again.ok ? 'Sent you a new code.' : again.message);
+        continue;
+      }
+      const v = await verifyCode({ token: pendingToken, phone, code: entered });
+      if (v.kind !== 'error') {
+        verified = v;
+        break;
+      }
+      await say(v.message);
+      if (v.code === 'DAILY_DEMO_CAP') return; // the message already says what to do (come back tomorrow or email sales)
+      // The sign-up itself is over (expired, too many wrong codes, taken): starting again is the only way forward.
+      if (['NOT_FOUND', 'EXPIRED', 'CODE_ATTEMPTS', 'EMAIL_TAKEN', 'DOMAIN_TAKEN', 'PHONE_TAKEN', 'FAILED', 'OFF'].includes(v.code)) {
+        await say('Refresh this page to start again.');
+        return;
+      }
+    }
+    if (!verified || !alive.current) return;
+    accountToken.current = verified.token;
+    buildStartedAt.current = Date.now();
+    setAccount('building');
+
+    // STEP 3. Verified, so the workspace is already being built on the server. Reading the site is allowed from here on.
+    const domain = cleanDomain(site);
+    let company = companyFromDomain(domain);
     let described = '';
     let describedReason: 'unreadable_site' | 'wrong_industry' = 'unreadable_site';
     let readInBackground = false;
+    await say("You're verified. I'm building your workspace now, and I'll read your site while it comes together.");
 
-    // The build does not use anything said after the email (the industry check below is only for what Surf shows), so it starts the
-    // moment the email is in and runs while the conversation carries on. The result is collected at the sign-up step below. Only
-    // when there is a website to read, and only when the bot check has already produced its token (otherwise the old timing applies).
-    let earlySignup: Promise<SignupResult> | null = null;
-    const fireEarly = () => {
-      if (!domain || (TURNSTILE_SITE_KEY && !turnstileToken.current)) return;
-      earlySignup = startSignup({ name, email, website: site, turnstile_token: turnstileToken.current, hp: honeypot.current?.value ?? '' });
-      if (TURNSTILE_SITE_KEY && window.turnstile) window.turnstile.reset(); // a token works once; the request already holds its copy
-      turnstileToken.current = '';
-    };
+    let finished = false;
+    const reading: Promise<ScanResult> = fetchScan(site, pendingToken).then((r) => {
+      finished = true;
+      return r;
+    });
+    // Give the read a few seconds; if it is not back, do not make them wait: the build screen shows what Surf learned when it lands.
+    await Promise.race([reading, wait(reduce ? 0 : 9000)]);
+    if (!alive.current) return;
 
-    if (domain) {
-      // The read starts now, in the background. The conversation never waits on it.
-      let finished = false;
-      const reading: Promise<ScanResult> = fetchScan(site).then((r) => {
-        finished = true;
-        return r;
-      });
-
-      await say("Got it. I'll read it while we talk. Where should I send your login?");
-      email = await ask('email');
-      fireEarly();
-      company = companyFromDomain(domain);
-
-      if (finished) {
-        // Already in, so there is nothing to wait for: check the read right now.
-        const result = await reading;
-        if (result.ok) {
-          company = result.company || company;
-          const industry = result.industry;
-          await say(
-            industry
-              ? `${result.summary} I'd call that ${industry}. Did I get that right?`
-              : `${result.summary} Did I get that right?`,
-          );
-          const ok = await ask('confirm');
-          if (ok === 'no' || !industry) {
-            describedReason = 'wrong_industry';
-            await say('No problem. In a few words, what does your business do?');
-            described = (await ask('describe')).slice(0, 60);
-          } else {
-            setLearned({ company, industry, summary: result.summary });
-          }
-        } else {
-          await say("I couldn't read that site, which is fine. In a few words, what does your business do?");
+    if (finished) {
+      const result = await reading;
+      if (result.ok) {
+        company = result.company || company;
+        const industry = result.industry;
+        await say(
+          industry
+            ? `${result.summary} I'd call that ${industry}. Did I get that right?`
+            : `${result.summary} Did I get that right?`,
+        );
+        const ok = await ask('confirm');
+        if (ok === 'no' || !industry) {
+          describedReason = 'wrong_industry';
+          await say('No problem. In a few words, what does your business do?');
           described = (await ask('describe')).slice(0, 60);
+        } else {
+          setLearned({ company, industry, summary: result.summary });
         }
       } else {
-        // Still reading. Do not make them wait: hand off to the build screen, which shows
-        // what Surf learned the moment it lands.
-        readInBackground = true;
-        void reading.then((r) => {
-          if (!alive.current) return;
-          if (r.ok) {
-            setLearned({ company: r.company || company, industry: r.industry, summary: r.summary });
-          } else {
-            setScanFailed(true);
-          }
-        });
+        await say("I couldn't read that site, which is fine. In a few words, what does your business do?");
+        described = (await ask('describe')).slice(0, 60);
       }
     } else {
-      await say('No problem. In a few words, what does your business do?');
-      described = (await ask('describe')).slice(0, 60);
-      company = 'Your business';
-      await say('Got it. Where should I send your login?');
-      email = await ask('email');
+      readInBackground = true;
+      void reading.then((r) => {
+        if (!alive.current) return;
+        if (r.ok) {
+          setLearned({ company: r.company || company, industry: r.industry, summary: r.summary });
+        } else {
+          setScanFailed(true);
+        }
+      });
     }
 
-    // Create the real account. Everything that costs money is decided server side.
-    let signedUp: SignupResult = { kind: 'error', code: 'FAILED', message: '' };
-    for (let attempt = 0; attempt < 3; attempt++) {
-      const early = attempt === 0 ? earlySignup : null;
-      signedUp = early
-        ? await early
-        : await startSignup({ name, email, website: domain ? site : '', turnstile_token: turnstileToken.current, hp: honeypot.current?.value ?? '' });
-      if (!early) {
-        if (TURNSTILE_SITE_KEY && window.turnstile) window.turnstile.reset(); // a token works once
-        turnstileToken.current = '';
-      }
-      if (signedUp.kind === 'error' && signedUp.code === 'EMAIL_TAKEN' && attempt < 2) {
-        await say(signedUp.message);
-        email = await ask('email');
-        continue;
-      }
-      break;
-    }
-    if (!alive.current) return;
-    if (signedUp.kind === 'error') {
-      await say(signedUp.message || 'Something went wrong on our side. Please try again in a minute.');
-      return;
-    }
-    if (signedUp.kind === 'later') {
-      setAccount('later');
-      await say(`I'm building a lot of workspaces right now, so yours is in the queue. I have your details and I'll email your login to ${email} as soon as it's ready.`);
-      return;
-    }
-    accountToken.current = signedUp.token;
     // Keep what they typed about their business (only asked when the site could not be read or was misread). Never blocks the build.
     if (described) {
       void fetch('/api/demo/described', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ token: signedUp.token, text: described, reason: describedReason }),
+        body: JSON.stringify({ token: verified.token, text: described, reason: describedReason }),
       }).catch(() => {});
     }
-    buildStartedAt.current = Date.now();
-    setAccount('building');
 
     await say(
       readInBackground
-        ? "Thanks. I'm going to build your workspace now. I'll finish reading your site while it comes together."
-        : "Perfect. I'm going to build your workspace now. You can watch it come together.",
+        ? "Thanks. I'll finish reading your site while your workspace comes together. You can watch it."
+        : "Perfect. Your workspace is coming together now. You can watch it.",
     );
     // Hold on the last line long enough to read before the screen changes.
     await wait(reduce ? 400 : 2800);
@@ -728,6 +817,27 @@ export default function DemoExperience() {
         return;
       }
       answer(v);
+    } else if (inputMode === 'phone') {
+      if (!looksLikeUsPhone(v)) {
+        setHint('Please enter a US mobile number, like (954) 555-0123.');
+        return;
+      }
+      answer(v);
+    } else if (inputMode === 'heard') {
+      if (!heardChoice) {
+        setHint('Please choose one.');
+        return;
+      }
+      const label = HEARD_OPTIONS.find(([k]) => k === heardChoice)?.[1] ?? heardChoice;
+      const other = heardChoice === 'other' ? heardOther.trim().slice(0, 120) : '';
+      answer(JSON.stringify({ from: heardChoice, other }), other ? `${label}: ${other}` : label);
+    } else if (inputMode === 'code') {
+      const digits = v.replace(/\D/g, '');
+      if (digits.length < 4 || digits.length > 8) {
+        setHint('Enter the code from the text message.');
+        return;
+      }
+      answer(digits, digits);
     } else if (inputMode === 'describe') {
       if (v.length < 3) return;
       answer(v);
@@ -960,6 +1070,59 @@ export default function DemoExperience() {
                           Not quite
                         </button>
                       </motion.div>
+                    ) : inputMode === 'heard' ? (
+                      <motion.form key="heard" {...fade} onSubmit={submit} noValidate>
+                        <div className="flex items-center gap-2 rounded-2xl border border-white/10 bg-[#0c1626]/90 p-2 pl-4 shadow-[0_0_30px_rgba(34,211,238,0.08)] focus-within:border-cyan-300/50">
+                          <label htmlFor="dx-heard" className="sr-only">
+                            How did you hear about us
+                          </label>
+                          <select
+                            id="dx-heard"
+                            autoFocus
+                            value={heardChoice}
+                            onChange={(e) => {
+                              setHeardChoice(e.target.value);
+                              if (hint) setHint('');
+                            }}
+                            className="min-w-0 flex-1 cursor-pointer bg-transparent text-[15px] text-slate-100 outline-none [&>option]:bg-[#0c1626] [&>option]:text-slate-100"
+                          >
+                            <option value="" disabled>
+                              Choose one
+                            </option>
+                            {HEARD_OPTIONS.map(([k, label]) => (
+                              <option key={k} value={k}>
+                                {label}
+                              </option>
+                            ))}
+                          </select>
+                          <button
+                            type="submit"
+                            aria-label="Send"
+                            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-400/90 text-[#02121f] transition hover:bg-cyan-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200"
+                          >
+                            <ArrowRight className="h-4 w-4" />
+                          </button>
+                        </div>
+                        {heardChoice === 'other' && (
+                          <div className="mt-2 rounded-2xl border border-white/10 bg-[#0c1626]/90 px-4 py-2 focus-within:border-cyan-300/50">
+                            <label htmlFor="dx-heard-other" className="sr-only">
+                              Where did you hear about us (optional)
+                            </label>
+                            <input
+                              id="dx-heard-other"
+                              value={heardOther}
+                              onChange={(e) => setHeardOther(e.target.value)}
+                              maxLength={120}
+                              autoComplete="off"
+                              placeholder="Optional: where, in a few words"
+                              className="w-full bg-transparent text-[15px] text-slate-100 placeholder-slate-500 outline-none"
+                            />
+                          </div>
+                        )}
+                        <div className="mt-2 flex min-h-[20px] items-center px-1 text-xs">
+                          {hint ? <span className="text-amber-300/90">{hint}</span> : <span className="text-slate-500">{WHY_I_ASK.heard}</span>}
+                        </div>
+                      </motion.form>
                     ) : inputMode ? (
                       <motion.form key={inputMode} {...fade} onSubmit={submit} noValidate>
                         <div className="flex items-center gap-2 rounded-2xl border border-white/10 bg-[#0c1626]/90 p-2 pl-4 shadow-[0_0_30px_rgba(34,211,238,0.08)] focus-within:border-cyan-300/50">
@@ -970,7 +1133,11 @@ export default function DemoExperience() {
                               ? 'Your website'
                               : inputMode === 'email'
                                 ? 'Your email'
-                                : 'What your business does'}
+                                : inputMode === 'phone'
+                                  ? 'Your US mobile number'
+                                  : inputMode === 'code'
+                                    ? 'The code from the text message'
+                                    : 'What your business does'}
                           </label>
                           <input
                             id="dx-input"
@@ -980,9 +1147,9 @@ export default function DemoExperience() {
                               setValue(e.target.value);
                               if (hint) setHint('');
                             }}
-                            type={inputMode === 'email' ? 'email' : 'text'}
-                            inputMode={inputMode === 'website' ? 'url' : inputMode === 'email' ? 'email' : 'text'}
-                            autoComplete={inputMode === 'name' ? 'name' : inputMode === 'email' ? 'email' : inputMode === 'website' ? 'url' : 'off'}
+                            type={inputMode === 'email' ? 'email' : inputMode === 'phone' ? 'tel' : 'text'}
+                            inputMode={inputMode === 'website' ? 'url' : inputMode === 'email' ? 'email' : inputMode === 'phone' ? 'tel' : inputMode === 'code' ? 'numeric' : 'text'}
+                            autoComplete={inputMode === 'name' ? 'name' : inputMode === 'email' ? 'email' : inputMode === 'website' ? 'url' : inputMode === 'phone' ? 'tel' : inputMode === 'code' ? 'one-time-code' : 'off'}
                             placeholder={
                               inputMode === 'name'
                                 ? 'Your name'
@@ -990,8 +1157,13 @@ export default function DemoExperience() {
                                 ? 'yourcompany.com'
                                 : inputMode === 'email'
                                   ? 'you@yourcompany.com'
-                                  : 'What does your business do?'
+                                  : inputMode === 'phone'
+                                    ? '(555) 123-4567'
+                                    : inputMode === 'code'
+                                      ? '6-digit code'
+                                      : 'What does your business do?'
                             }
+                            maxLength={inputMode === 'code' ? 12 : undefined}
                             className="min-w-0 flex-1 bg-transparent text-[15px] text-slate-100 placeholder-slate-500 outline-none"
                           />
                           <button
@@ -1005,10 +1177,19 @@ export default function DemoExperience() {
                         <div className="mt-2 flex min-h-[20px] items-center justify-between px-1 text-xs">
                           {hint ? (
                             <span className="text-amber-300/90">{hint}</span>
-                          ) : inputMode === 'name' || inputMode === 'website' || inputMode === 'describe' || inputMode === 'email' ? (
+                          ) : inputMode === 'name' || inputMode === 'website' || inputMode === 'describe' || inputMode === 'email' || inputMode === 'phone' || inputMode === 'code' ? (
                             <span className="text-slate-500">{WHY_I_ASK[inputMode]}</span>
                           ) : (
                             <span />
+                          )}
+                          {inputMode === 'code' && (
+                            <button
+                              type="button"
+                              onClick={() => answer(RESEND_CODE, '')}
+                              className="shrink-0 text-cyan-200/90 underline underline-offset-4 transition hover:text-cyan-100"
+                            >
+                              Send a new code
+                            </button>
                           )}
                         </div>
                       </motion.form>

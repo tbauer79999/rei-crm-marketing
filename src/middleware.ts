@@ -15,6 +15,9 @@ const ATTRIBUTION_MAX_AGE = 60 * 60 * 24 * 60; // 60 days
 // persist values shaped like a real code. Anything else is ignored, not stored.
 const ATTRIBUTION_CODE = /^[A-Za-z0-9_-]{1,64}$/;
 
+// ?src=aud-<name> from a partner link (see the capture below).
+const AUDIENCE_SRC = /^aud-[A-Za-z0-9][A-Za-z0-9_-]{0,59}$/i;
+
 // Click-tracking beacon target — the platform's Express API (same origin
 // SubscribeClient already posts create-checkout-session to). No new service.
 const CLICK_LOG_URL = 'https://api.surfox.ai/api/affiliates/log-click';
@@ -49,6 +52,14 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
     if (value && ATTRIBUTION_CODE.test(value)) {
       response.cookies.set(cookieName, value, cookieOptions(ATTRIBUTION_MAX_AGE, cookieDomain));
     }
+  }
+
+  // Audience source from a partner link (?src=aud-<name>). Kept so the /demo sign-up can record it with the demo WITHOUT asking the
+  // visitor again. Only the aud- shape is stored (the same ?src= also carries affiliate channel names, which are left alone), and the
+  // lead-app validates it again. The /demo page also reads ?src= straight from its own URL, so a link that lands there needs no cookie.
+  const src = searchParams.get('src');
+  if (src && AUDIENCE_SRC.test(src)) {
+    response.cookies.set('surfox_src', src.toLowerCase(), cookieOptions(ATTRIBUTION_MAX_AGE, cookieDomain));
   }
 
   // Click tracking rides the same ?aff= capture above, with a second token

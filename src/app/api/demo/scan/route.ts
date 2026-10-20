@@ -2,6 +2,8 @@
 // lead-app, on the 'demo' workspace key) what the business is, so Surf can say something specific and accurate.
 //
 // This is the first public endpoint in this repo, so it is deliberately defensive:
+//   - only for a sign-up whose phone code was verified: the lead-app is asked for a permit BEFORE anything is fetched or read, and
+//     the Claude call behind it (lead-app /describe) checks the same token again
 //   - off in production unless DEMO_PREVIEW_SCAN=on (a deploy cannot start spending by accident)
 //   - same-origin only, per-visitor rate limit, daily cap
 //   - domain names only, http(s) on 80/443, every redirect hop re-checked, private/loopback/
@@ -15,7 +17,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { lookup } from 'node:dns/promises';
 import { isIP } from 'node:net';
-import { configured } from '../_proxy';
+import { configured, forward } from '../_proxy';
 
 export const runtime = 'nodejs';
 export const maxDuration = 30;
@@ -198,12 +200,12 @@ function readPage(html: string): string {
 
 /* ───────────── model ───────────── */
 
-async function describeBusiness(pageText: string) {
+async function describeBusiness(pageText: string, token: string) {
   if (!configured()) throw new Error('NOT_CONFIGURED');
   const res = await fetch(`${process.env.DEMO_SIGNUP_URL!.replace(/\/+$/, '')}/api/public/demo/describe`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'x-demo-signup-secret': process.env.DEMO_SIGNUP_SECRET! },
-    body: JSON.stringify({ page_text: pageText }),
+    body: JSON.stringify({ page_text: pageText, token }),
     signal: AbortSignal.timeout(20000),
     cache: 'no-store',
   });
@@ -228,21 +230,29 @@ export async function POST(req: NextRequest) {
   if (limited) return fail(limited === 'daily' ? 'BUSY' : 'RATE_LIMITED', 429);
 
   let url = '';
+  let token = '';
   try {
     const body = await req.json();
     url = typeof body?.url === 'string' ? body.url.trim().slice(0, 300) : '';
+    token = typeof body?.token === 'string' ? body.token.trim().slice(0, 64) : '';
   } catch {
     return fail('BAD_REQUEST', 400);
   }
-  if (!url) return fail('BAD_REQUEST', 400);
+  if (!url || !token) return fail('BAD_REQUEST', 400);
   if (!/^https?:\/\//i.test(url)) url = `https://${url}`;
+
+  // Nothing is fetched or read until the lead-app confirms this sign-up's phone code was verified (and counts the read).
+  const permit = await forward(req, '/scan-permit', { method: 'POST', body: { token } });
+  if (permit.status === 403) return fail('NOT_VERIFIED', 403);
+  if (permit.status === 429) return fail('RATE_LIMITED', 429);
+  if (!permit.ok) return fail('SCAN_FAILED');
 
   try {
     const { html } = await fetchHtml(url);
     const pageText = readPage(html);
     if (pageText.length < 40) return fail('NO_CONTENT');
 
-    const result = await describeBusiness(pageText);
+    const result = await describeBusiness(pageText, token);
     if (!result.company && !result.summary) return fail('NO_CONTENT');
     return NextResponse.json({ ok: true, ...result });
   } catch (e) {
