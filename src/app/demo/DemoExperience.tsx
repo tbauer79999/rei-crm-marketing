@@ -612,7 +612,7 @@ export default function DemoExperience() {
     let email = await ask('email');
     await say("What's your US mobile number? I'll text you one code to confirm it's you.");
     let phone = await ask('phone');
-    await say('Last question: how did you hear about SurFox?');
+    await say('Last question: how did you hear about SurFox AI?');
     let heard = JSON.parse(await ask('heard')) as { from: string; other: string };
     const affiliate = audienceSrc(); // from a partner link, captured silently: the visitor is never asked
 
