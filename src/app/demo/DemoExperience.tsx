@@ -258,6 +258,10 @@ function cleanDomain(raw: string): string {
     .split(/[/?#]/)[0];
 }
 
+// The sign-up refusals that mean "you (or your team) already have a demo": never a dead end, always pointed at the sign-in page.
+const RETURNING_CODES = ['EMAIL_TAKEN', 'DOMAIN_TAKEN', 'PHONE_TAKEN', 'IP_TAKEN'];
+const SIGN_IN_URL = 'https://surfox.ai/login';
+
 type ScanResult = { ok: true; company: string; industry: string; summary: string } | { ok: false; pageRead: boolean; busy?: boolean }; // busy: the site itself asked us to slow down (HTTP 429)
 
 // Reads the visitor's website. Only called AFTER the phone code was verified (the server refuses it otherwise).
@@ -475,6 +479,7 @@ export default function DemoExperience() {
   const [profile, setProfile] = useState({ company: '', email: '', name: '' });
   const [learned, setLearned] = useState<{ company: string; industry: string; summary: string } | null>(null);
   const [scanFailed, setScanFailed] = useState(false); // the SITE could not be read from here
+  const [returning, setReturning] = useState(false); // the email, phone, site or connection already has a demo: point them to sign-in instead of a dead end
   const [scanBusy, setScanBusy] = useState(false); // ...because the site asked us to slow down (HTTP 429), which is worded kindly
   const [scanSettled, setScanSettled] = useState(false); // the page's own read finished, one way or the other
   const [manual, setManual] = useState('');
@@ -548,7 +553,7 @@ export default function DemoExperience() {
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
-  }, [messages, inputMode]);
+  }, [messages, inputMode, returning]); // returning: the sign-in card is taller than the input it replaces, so the last message is scrolled back into view
 
   useEffect(() => {
     if (inputMode && inputMode !== 'confirm') inputRef.current?.focus();
@@ -627,7 +632,10 @@ export default function DemoExperience() {
         break;
       }
       await say(r.message);
-      // Something the visitor can fix (a VoIP number, a typo, a taken email) is asked again; anything else ends here.
+      // A returning visitor (their email, phone, site or connection already has a demo) is not asked for a different email: they are shown the
+      // sign-in page and its "Email me a new link" option.
+      if (RETURNING_CODES.includes(r.code)) { setReturning(true); return; }
+      // Something the visitor can fix (a VoIP number, a typo) is asked again; anything else ends here.
       if (attempt >= 3 || !r.field) return;
       if (r.field === 'name') {
         await say("What's your name?");
@@ -666,7 +674,8 @@ export default function DemoExperience() {
       await say(v.message);
       if (v.code === 'DAILY_DEMO_CAP') return; // the message already says what to do (come back tomorrow or email sales)
       // The sign-up itself is over (expired, too many wrong codes, taken): starting again is the only way forward.
-      if (['NOT_FOUND', 'EXPIRED', 'CODE_ATTEMPTS', 'EMAIL_TAKEN', 'DOMAIN_TAKEN', 'PHONE_TAKEN', 'FAILED', 'OFF'].includes(v.code)) {
+      if (RETURNING_CODES.includes(v.code)) { setReturning(true); return; }
+      if (['NOT_FOUND', 'EXPIRED', 'CODE_ATTEMPTS', 'FAILED', 'OFF'].includes(v.code)) {
         await say('Refresh this page to start again.');
         return;
       }
@@ -872,7 +881,7 @@ export default function DemoExperience() {
     setResendNote('');
     const r = await resendLogin(accountToken.current);
     setResendBusy(false);
-    setResendNote(r.ok ? `Sent again to ${profile.email}.` : r.message);
+    setResendNote(r.ok ? `Sent again to ${profile.email}, with a new link and a new password. Use the newest email.` : r.message);
   };
 
   const pillarNote = (i: number) =>
@@ -1145,7 +1154,25 @@ export default function DemoExperience() {
                 <div id="dx-turnstile" className="mx-auto flex max-w-2xl justify-center empty:hidden [&:not(:empty)]:mb-3" />
                 <div className="mx-auto min-h-[96px] max-w-2xl">
                   <AnimatePresence mode="wait">
-                    {inputMode === 'confirm' ? (
+                    {returning ? (
+                      <motion.div key="returning" {...fade} className="rounded-2xl border border-cyan-300/30 bg-cyan-400/10 p-5 text-left" data-testid="dx-returning">
+                        <p className="text-base font-medium text-cyan-50">Already have a demo?</p>
+                        <p className="mt-1.5 text-[13.5px] leading-relaxed text-slate-300">
+                          Sign in with your email and the password from your demo email. Lost the email, or already used the one-time link? On the sign-in page choose{' '}
+                          <span className="text-slate-100">Email me a new link</span> and we will send a fresh one to your demo email.
+                        </p>
+                        <a
+                          href={SIGN_IN_URL}
+                          className="mt-4 inline-flex items-center rounded-full bg-cyan-300 px-6 py-3 text-sm font-semibold text-[#02121f] transition hover:bg-cyan-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-100"
+                        >
+                          Go to sign-in
+                        </a>
+                        <p className="mt-3 text-xs text-slate-400">
+                          Not your demo, or need a hand? Write to{' '}
+                          <a href="mailto:sales@getsurfox.com" className="text-cyan-200 underline underline-offset-4">sales@getsurfox.com</a>.
+                        </p>
+                      </motion.div>
+                    ) : inputMode === 'confirm' ? (
                       <motion.div key="confirm" {...fade} className="flex flex-wrap gap-3">
                         <button
                           type="button"
@@ -1660,7 +1687,8 @@ export default function DemoExperience() {
                       <p className="mt-2 text-base font-medium text-cyan-50">Check your email</p>
                       <p className="mt-1.5 text-[13.5px] leading-relaxed text-slate-300">
                         I sent your login to <span className="text-slate-100">{profile.email}</span>. Open that email and press{' '}
-                        <span className="text-slate-100">Open your demo</span> to step inside.
+                        <span className="text-slate-100">Open your demo</span> to step inside. It also has a password, so you can come back any
+                        time at surfox.ai/login until your demo ends.
                       </p>
                     </>
                   ) : (
