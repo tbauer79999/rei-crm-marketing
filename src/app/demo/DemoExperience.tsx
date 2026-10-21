@@ -881,7 +881,7 @@ export default function DemoExperience() {
     setResendNote('');
     const r = await resendLogin(accountToken.current);
     setResendBusy(false);
-    setResendNote(r.ok ? `Sent again to ${profile.email}, with a new link and a new password. Use the newest email.` : r.message);
+    setResendNote(r.ok ? `Sent a new sign-in link to ${profile.email}. Your password has not changed: it is in your first email.` : r.message);
   };
 
   const pillarNote = (i: number) =>
@@ -1688,7 +1688,7 @@ export default function DemoExperience() {
                       <p className="mt-1.5 text-[13.5px] leading-relaxed text-slate-300">
                         I sent your login to <span className="text-slate-100">{profile.email}</span>. Open that email and press{' '}
                         <span className="text-slate-100">Open your demo</span> to step inside. It also has a password, so you can come back any
-                        time at surfox.ai/login until your demo ends.
+                        time at surfox.ai/login until your demo ends. Keep that first email: the password does not change.
                       </p>
                     </>
                   ) : (
