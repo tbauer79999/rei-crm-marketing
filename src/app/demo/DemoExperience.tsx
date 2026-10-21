@@ -258,7 +258,7 @@ function cleanDomain(raw: string): string {
     .split(/[/?#]/)[0];
 }
 
-type ScanResult = { ok: true; company: string; industry: string; summary: string } | { ok: false; pageRead: boolean };
+type ScanResult = { ok: true; company: string; industry: string; summary: string } | { ok: false; pageRead: boolean; busy?: boolean }; // busy: the site itself asked us to slow down (HTTP 429)
 
 // Reads the visitor's website. Only called AFTER the phone code was verified (the server refuses it otherwise).
 // Nobody waits long on this: if it is not back in a few seconds the conversation carries on and the result is picked up later.
@@ -276,7 +276,7 @@ async function fetchScan(url: string, token: string): Promise<ScanResult> {
     if (j?.ok && typeof j.summary === 'string' && j.summary) {
       return { ok: true, company: String(j.company ?? ''), industry: String(j.industry ?? ''), summary: j.summary };
     }
-    return { ok: false, pageRead: j?.pageRead === true }; // pageRead: the site was read and only the summary failed
+    return { ok: false, pageRead: j?.pageRead === true, busy: j?.error === 'SITE_BUSY' }; // pageRead: the site was read and only the summary failed
   } catch {
     return { ok: false, pageRead: false };
   } finally {
@@ -475,6 +475,7 @@ export default function DemoExperience() {
   const [profile, setProfile] = useState({ company: '', email: '', name: '' });
   const [learned, setLearned] = useState<{ company: string; industry: string; summary: string } | null>(null);
   const [scanFailed, setScanFailed] = useState(false); // the SITE could not be read from here
+  const [scanBusy, setScanBusy] = useState(false); // ...because the site asked us to slow down (HTTP 429), which is worded kindly
   const [scanSettled, setScanSettled] = useState(false); // the page's own read finished, one way or the other
   const [manual, setManual] = useState('');
   const [heardChoice, setHeardChoice] = useState('');
@@ -714,6 +715,7 @@ export default function DemoExperience() {
       } else {
         // No question here. If the build cannot read the site either, the build screen asks two short questions, once, and only then.
         setScanFailed(!result.pageRead);
+        setScanBusy(result.busy === true);
         setScanSettled(true);
       }
     } else {
@@ -725,6 +727,7 @@ export default function DemoExperience() {
           setLearned({ company: r.company || company, industry: r.industry, summary: r.summary });
         } else {
           setScanFailed(!r.pageRead);
+          setScanBusy(r.busy === true);
         }
       });
     }
@@ -1475,7 +1478,7 @@ export default function DemoExperience() {
                     ) : scanFailed && !manual && !learned ? (
                       <div>
                         <p className="text-[10px] uppercase tracking-[0.22em] text-cyan-300/80">What I read</p>
-                        <p className="mt-2 text-sm leading-relaxed text-slate-300">I could not preview your site from here. I am still building from it directly, and if that does not work I will ask you two quick questions.</p>
+                        <p className="mt-2 text-sm leading-relaxed text-slate-300">{scanBusy ? 'Your site asked me to slow down, so I could not preview it just now. That is common for sites with bot protection, and it is nothing you did wrong. I am still building from it directly, and if that does not work I will ask you two quick questions.' : 'I could not preview your site from here. I am still building from it directly, and if that does not work I will ask you two quick questions.'}</p>
                       </div>
                     ) : manual ? (
                       <div>

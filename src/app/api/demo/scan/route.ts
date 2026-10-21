@@ -18,6 +18,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { lookup } from 'node:dns/promises';
 import { isIP } from 'node:net';
 import { configured, forward } from '../_proxy';
+import { withOneRetryOn429 } from './backoff';
 
 export const runtime = 'nodejs';
 export const maxDuration = 30;
@@ -115,14 +116,17 @@ async function fetchHtml(startUrl: string): Promise<{ html: string; finalUrl: st
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
     try {
-      const res = await fetch(u, {
-        redirect: 'manual',
-        signal: ctrl.signal,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; SurFoxDemoBot/0.1; +https://www.getsurfox.com)',
-          Accept: 'text/html,application/xhtml+xml',
-        },
-      });
+      // A site that answers 429 is asked once more after a short pause (see backoff.ts); anything else is taken as the answer.
+      const res = await withOneRetryOn429(() =>
+        fetch(u, {
+          redirect: 'manual',
+          signal: ctrl.signal,
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (compatible; SurFoxDemoBot/0.1; +https://www.getsurfox.com)',
+            Accept: 'text/html,application/xhtml+xml',
+          },
+        }),
+      );
 
       if (res.status >= 300 && res.status < 400) {
         const loc = res.headers.get('location');
@@ -209,7 +213,12 @@ async function describeBusiness(pageText: string, token: string) {
     signal: AbortSignal.timeout(20000),
     cache: 'no-store',
   });
-  if (res.status === 422) return { company: '', industry: '', summary: '' };
+  if (res.status === 422) {
+    // The lead-app says whether the page was a bot-challenge or block page (UNREADABLE) rather than a site it could not summarize.
+    const j = await res.json().catch(() => null);
+    if (j?.error === 'UNREADABLE') throw new Error('UNREADABLE');
+    return { company: '', industry: '', summary: '' };
+  }
   if (!res.ok) throw new Error(`DESCRIBE_${res.status}`);
   const d = await res.json();
   return { company: String(d.company ?? ''), industry: String(d.industry ?? ''), summary: String(d.summary ?? '') };
@@ -261,7 +270,10 @@ export async function POST(req: NextRequest) {
     const code = e instanceof Error ? e.message : 'FAILED';
     // Refused or unreachable targets are reported as plain failures; no detail leaks to the caller.
     console.warn('[demo/scan] failed:', code);
+    // The site itself told us to slow down (still 429 after the one retry): the page words that kindly instead of "could not preview".
+    if (code === 'HTTP_429') return NextResponse.json({ ok: false, error: 'SITE_BUSY', pageRead: false });
+    // A bot-challenge page was fetched, not the site: nothing was read.
     // pageRead tells the page whether the SITE could be read: if so, only the one-sentence summary failed and the build can still use the text.
-    return NextResponse.json({ ok: false, error: 'SCAN_FAILED', pageRead });
+    return NextResponse.json({ ok: false, error: 'SCAN_FAILED', pageRead: code === 'UNREADABLE' ? false : pageRead });
   }
 }
