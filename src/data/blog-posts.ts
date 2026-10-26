@@ -3516,7 +3516,6 @@ export const blogPosts: BlogPost[] = [
         rows: [
           ['Instantly', '$30/mo', 'Flat subscription', '5,000 emails, 1,000 contacts, unlimited warmups'],
           ['Apollo.io', '$49/user/mo', 'Per user', '275M+ contacts, basic sequencing, AI writing assistant'],
-          ['SurFox AI Starter', '$49/mo', 'Flat bundle', '1,000 SMS + 100 web chat + 20 Voice min, 3 campaigns, 1 user, full AI qualification'],
           ['LeadLoft', '$99/mo', 'Flat rate', 'Basic prospecting automation, monthly billing'],
         ]
       },
@@ -3526,7 +3525,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'callout',
-        content: '**Where SurFox AI fits in this tier:** At $49/month, SurFox AI\'s Starter plan sits at the low end of entry-level pricing and includes full AI qualification conversations over SMS - not just sequencing or email automation. That is a meaningfully different product than a $30 email sender. You are paying for a system that qualifies leads through real dialogue, not one that automates sending.'
+        content: '**Where SMS-based platforms fit in this tier:** SMS-based platforms such as SurFox AI (see [AI SMS lead qualification](/platform/sms)) sit at the low end of entry-level pricing and include full AI qualification conversations over SMS - not just sequencing or email automation. That is a meaningfully different product than a $30 email sender. You are paying for a system that qualifies leads through real dialogue, not one that automates sending.'
       },
       {
         type: 'heading',
@@ -3540,7 +3539,6 @@ export const blogPosts: BlogPost[] = [
         type: 'table',
         headers: ['Platform', 'Price', 'Channel', 'Key Details'],
         rows: [
-          ['SurFox AI Growth', '$597/mo', 'SMS', '10,000 SMS + 500 web chat, 5 users, learns from last 100 conversations, Zapier + GHL integrations'],
           ['Agent Frank', '$499/mo', 'Email', '1,000 active contacts, email personalization, basic CRM sync, quarterly billing required'],
           ['AiSDR', '$900/mo', 'Email + LinkedIn + SMS', '1,200 leads/mo, managed onboarding, ICP and brand voice setup, quarterly billing required'],
         ]
@@ -3590,7 +3588,6 @@ export const blogPosts: BlogPost[] = [
           ['Fully loaded human SDR, per year', '$98,000 to $173,000'],
           ['Median meetings booked per SDR per month', '14.6 (Bridge Group)'],
           ['Cost per booked meeting, human SDR', '$560 to $990'],
-          ['SurFox AI Growth plan, per year', '$7,164 flat'],
         ]
       },
       {
@@ -3688,7 +3685,6 @@ export const blogPosts: BlogPost[] = [
         type: 'table',
         headers: ['Platform', 'Pricing Transparency', 'Starting Price', 'Notes'],
         rows: [
-          ['SurFox AI', 'Public', '$49/mo', 'Full tier breakdown on pricing page'],
           ['Instantly', 'Public', '$30/mo', 'Email infrastructure focus'],
           ['Apollo.io', 'Public', '$0 (free tier)', 'Paid from $49/user/mo'],
           ['AiSDR', 'Public', '$900/mo', 'Quarterly billing required'],
@@ -3720,7 +3716,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'For smaller teams using AI qualification on SMS campaigns - the SurFox AI use case - the math is even simpler. At [$597 per month on the Growth plan](/pricing), a single additional deal closed from AI-qualified leads covers multiple months of platform cost. Most real estate wholesalers, staffing agencies, and home service companies running meaningful SMS volume find the ROI case closes itself.'
+        content: 'For smaller teams using AI qualification on SMS campaigns - the SurFox AI use case - the math is even simpler. With [SMS-based platforms](/platform/sms), a single additional deal closed from AI-qualified leads covers multiple months of platform cost. Most real estate wholesalers, staffing agencies, and home service companies running meaningful SMS volume find the ROI case closes itself.'
       },
       {
         type: 'paragraph',
@@ -3736,7 +3732,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI lead qualification platforms range from $30 to $10,000+ per month depending on volume, autonomy, and features. SMS-based qualification like SurFox AI starts at $49 per month. Mid-market platforms run $500 to $2,500 per month. Enterprise autonomous AI SDR platforms like 11x.ai and Artisan run $3,000 to $10,000+ per month.'
+        content: 'AI lead qualification platforms range from $30 to $10,000+ per month depending on volume, autonomy, and features. SMS-based qualification like SurFox AI (see [AI SMS lead qualification](/platform/sms)) sits at the low end of that range. Mid-market platforms run $500 to $2,500 per month. Enterprise autonomous AI SDR platforms like 11x.ai and Artisan run $3,000 to $10,000+ per month.'
       },
       {
         type: 'subheading',
@@ -3760,7 +3756,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'We do not publish a single ROI multiple, because it depends entirely on your deal size and close rate and any one number would be someone else\'s business rather than yours. What can be stated: a human SDR at $98,000 to $173,000 fully loaded, booking The Bridge Group\'s median of 14.6 meetings a month, costs roughly $560 to $990 per booked meeting. SurFox AI Growth is $597 a month flat. Put your own volume and average deal value against those two figures.'
+        content: 'We do not publish a single ROI multiple, because it depends entirely on your deal size and close rate and any one number would be someone else\'s business rather than yours. What can be stated: a human SDR at $98,000 to $173,000 fully loaded, booking The Bridge Group\'s median of 14.6 meetings a month, costs roughly $560 to $990 per booked meeting. Put your own volume and average deal value against that cost per booked meeting, and compare it with the platform price you are quoted.'
       },
       {
         type: 'subheading',
@@ -3768,7 +3764,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Platforms with transparent public pricing include SurFox AI (starting at $49/month), Apollo.io (free tier available, paid from $49/user/month), Instantly ($30/month), AiSDR ($900/month), and Agent Frank ($499/month). Enterprise platforms including 11x.ai, Artisan, and Qualified require a demo and do not publish pricing.'
+        content: 'Platforms with transparent public pricing include SMS-based platforms (see [AI SMS lead qualification](/platform/sms)), Apollo.io (free tier available, paid from $49/user/month), Instantly ($30/month), AiSDR ($900/month), and Agent Frank ($499/month). Enterprise platforms including 11x.ai, Artisan, and Qualified require a demo and do not publish pricing.'
       },
       {
         type: 'subheading',
