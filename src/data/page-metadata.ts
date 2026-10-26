@@ -172,7 +172,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
     path: '/compare/surfox-vs-qualified',
   },
   'compare-spara': {
-    title: 'SurFox vs Spara: Best Spara Alternative for Outbound (2026)',
+    title: 'SurFox AI vs Spara: Best Spara Alternative for Outbound (2026)',
     description: 'Looking for a Spara replacement for outbound lead lists? SurFox qualifies leads via SMS (98% open rate) where Spara\'s inbound chat can\'t reach.',
     keywords: [
       'SurFox vs Spara',
