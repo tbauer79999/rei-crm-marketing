@@ -1,3 +1,4 @@
+// TODO(Tom confirm): reintroduce a numbered scoring claim only once product confirms it.
 import { generatePageMetadata, generateCompareBreadcrumb } from '@/data/page-metadata';
 import Image from 'next/image';
 import {
@@ -20,7 +21,7 @@ const breadcrumbSchema = generateCompareBreadcrumb('GoHighLevel', '/compare/surf
 const comparisonRows = [
   { feature: 'AI Learning', ghl: 'Static (manual training)', surfox: 'Learns from every conversation', surfoxWins: true },
   { feature: 'Setup Time', ghl: 'Weeks of configuration', surfox: 'Minutes', surfoxWins: true },
-  { feature: 'Lead Scoring', ghl: 'Basic tagging', surfox: '50-point psychological scoring', surfoxWins: true },
+  { feature: 'Lead Scoring', ghl: 'Basic tagging', surfox: 'Lead scoring on every conversation', surfoxWins: true },
   { feature: 'Follow-up', ghl: 'Manual workflow setup', surfox: 'Automatic 2-path logic', surfoxWins: true },
   { feature: 'Knowledge Base', ghl: 'Manual FAQ entry', surfox: 'Dynamic, indexes your docs', surfoxWins: true },
   { feature: 'Data Privacy', ghl: 'Shared infrastructure', surfox: 'Tenant-only learning, SOC 2 roadmap', surfoxWins: true },
@@ -40,8 +41,8 @@ const builtDifferentItems = [
   },
   {
     icon: Target,
-    title: '50-Point Psychological Scoring',
-    body: "Basic tags and manual lead scoring don't cut it. SurFox AI analyzes conversation patterns, response timing, objection types, and engagement signals to score leads on a 50-point scale. You know exactly who's worth calling - not just who responded.",
+    title: 'Every Conversation Scored',
+    body: "Basic tags and manual lead scoring don't cut it. SurFox AI analyzes conversation patterns, response timing, objection types, and engagement signals to score every lead conversation. You know exactly who's worth calling - not just who responded.",
   },
 ];
 
@@ -141,9 +142,9 @@ export default function Page() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4">
               {[
                 { stat: 'Minutes', label: 'Setup Time', sub: 'vs weeks of config' },
-                { stat: '50-Point', label: 'Lead Scoring', sub: 'psychological analysis' },
+                { stat: 'Built-in', label: 'Lead Scoring', sub: 'every conversation scored' },
                 { stat: 'Auto', label: 'Follow-up Logic', sub: 'no workflow building' },
-                { stat: '100%', label: 'Data Isolation', sub: 'tenant-only learning' },
+                { stat: 'Private', label: 'Data Isolation', sub: 'your data kept separate' },
               ].map((item, i) => (
                 <div key={i} className="p-4 sm:p-6 rounded-2xl border-2 border-[#E4E6E2] bg-white">
                   <div className="text-2xl sm:text-3xl font-semibold text-[#0A7C8C] mb-2">{item.stat}</div>
@@ -208,7 +209,7 @@ export default function Page() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#13171F] mb-6 px-4">
-                Why 73% of GoHighLevel Users Quit Within 60 Days
+                Why so many GoHighLevel users quit in the first 60 days
               </h2>
             </div>
 
@@ -220,7 +221,7 @@ export default function Page() {
                 Building workflows, configuring triggers, training AI bots manually, connecting integrations, managing sub-accounts - it&apos;s a full-time job. For agencies with dedicated ops teams, that&apos;s fine. For sales teams that just need to qualify leads? It&apos;s overkill that kills momentum.
               </p>
               <p className="text-lg text-[#5A626E] leading-relaxed">
-                The 73% who quit aren&apos;t quitting because the tool is bad. They&apos;re quitting because they needed conversations, not a configuration project.
+                Users who quit aren&apos;t quitting because the tool is bad. They&apos;re quitting because they needed conversations, not a configuration project.
               </p>
               <p className="text-lg text-[#5A626E] leading-relaxed mt-6">
                 Even a well-configured GoHighLevel workflow still hands you a pile of replies to sort by hand once volume picks up, whether they land as texts, chats, or missed calls. That sorting is SurFox AI&apos;s job: reading every reply the moment it arrives, on any of its three doors, and surfacing only the ones worth a human&apos;s time.

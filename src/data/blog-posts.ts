@@ -3472,7 +3472,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: 'tldr',
-        content: 'AI lead qualification ranges from $30 to $10,000+/month - SMS-based (SurFox AI) starts at $49/month; enterprise runs $3K–$10K+/month.\nFully loaded human SDR costs $98K–$173K/year vs. $24K–$60K/year for a platform - roughly a 40% to 85% reduction depending on tier.\nCost per booked meeting with a human SDR works out to roughly $560 to $990, dividing a fully loaded salary by The Bridge Group\'s median of 14.6 meetings booked per month.\nMost businesses see positive ROI within 60–90 days.\nHidden costs - deliverability infrastructure, setup labor, prompt tuning - can double the visible price if unbudgeted.'
+        content: 'AI lead qualification ranges from $30 to $10,000+/month - SMS-based platforms (see [AI SMS lead qualification](/platform/sms)) sit at the low end; enterprise runs $3K–$10K+/month.\nFully loaded human SDR costs $98K–$173K/year vs. $24K–$60K/year for a platform - roughly a 40% to 85% reduction depending on tier.\nCost per booked meeting with a human SDR works out to roughly $560 to $990, dividing a fully loaded salary by The Bridge Group\'s median of 14.6 meetings booked per month.\nMost businesses see positive ROI within 60–90 days.\nHidden costs - deliverability infrastructure, setup labor, prompt tuning - can double the visible price if unbudgeted.'
       },
       {
         type: 'callout',

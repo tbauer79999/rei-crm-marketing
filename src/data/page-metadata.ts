@@ -148,7 +148,7 @@ export const pageMetadata: Record<string, PageMetadataConfig> = {
   },
   'compare-gohighlevel': {
     title: 'SurFox AI vs GoHighLevel: Which is Right for You?',
-    description: 'Compare SurFox AI vs GoHighLevel. Built for conversations, not chaos. Self-serve setup, 50-point psychological scoring, and AI that learns.',
+    description: 'Compare SurFox AI vs GoHighLevel. Built for conversations, not chaos. Self-serve setup, AI lead qualification across SMS, website chat, and Voice, and AI that learns.',
     keywords: ['SurFox vs GoHighLevel', 'GoHighLevel alternative', 'GHL alternative', 'AI lead qualification', 'SMS lead qualification', 'sales automation'],
     path: '/compare/surfox-vs-gohighlevel',
   },

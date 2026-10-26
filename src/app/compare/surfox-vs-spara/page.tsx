@@ -110,6 +110,14 @@ export default function Page() {
             mainEntity: [
               {
                 '@type': 'Question',
+                name: 'Can Spara replace SDRs for initial lead qualification of outbound lead lists?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "For inbound website visitors, Spara can replace SDRs for initial lead qualification. But Spara cannot qualify outbound lead lists - purchased leads, aged contacts, trade show signups, or any list where you need to reach out first. If you need SDR replacement for outbound lead list qualification via SMS, that's what SurFox AI is built for. Different tools solving different sides of the lead qualification problem.",
+                },
+              },
+              {
+                '@type': 'Question',
                 name: 'Can Spara replace SDRs for initial lead qualification?',
                 acceptedAnswer: {
                   '@type': 'Answer',
