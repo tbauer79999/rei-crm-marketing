@@ -115,6 +115,14 @@ export default function Page() {
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "What is SurFox AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SurFox AI is software that texts and chats with your inbound leads, qualifies them with a real back-and-forth conversation, and hands the hot ones to your team. Your team only spends time on contacts who are ready to talk."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "What happens if I exceed my message or Voice minute limit?",
         "acceptedAnswer": {
           "@type": "Answer",

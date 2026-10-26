@@ -218,6 +218,10 @@ const plans: Plan[] = [
 
 const faqs = [
   {
+    q: 'What is SurFox AI?',
+    a: 'SurFox AI is software that texts and chats with your inbound leads, qualifies them with a real back-and-forth conversation, and hands the hot ones to your team. Your team only spends time on contacts who are ready to talk.',
+  },
+  {
     q: 'What happens if I exceed my message or Voice minute limit?',
     a: 'For messages, we email you as you approach your limit, and you choose whether to purchase a top-up. Voice works differently: minutes over your plan’s bucket are billed automatically at $0.25/min, no approval step. You can move up a plan at any time to raise your included amount.',
   },
@@ -279,7 +283,7 @@ export default function PricingClient() {
       <section style={{ paddingBottom: 0 }}>
         <div className="wrap">
           <div className="sec-head">
-            <span className="eyebrow">Pricing</span>
+            <h1 className="eyebrow">SurFox AI Pricing</h1>
             <h2 className="disp">Pay for messages, not headcount.</h2>
             <p>
               Real conversational AI at SMB pricing. Every plan is backed by a 30-day money-back

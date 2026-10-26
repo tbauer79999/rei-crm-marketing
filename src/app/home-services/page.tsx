@@ -71,6 +71,10 @@ const objections = [
     q: '"What about our old list, is it worth reactivating?"',
     a: 'Most home services companies have hundreds of untouched leads from the last 12 months. A single reactivation campaign routinely surfaces jobs that were never formally closed. They just went cold because follow-up stopped.',
   },
+  {
+    q: '"Can it reactivate old or dormant leads by text?"',
+    a: 'Yes. Upload your list of old estimates, seasonal inquiries, and past leads, and SurFox AI texts them in a paced campaign. Anyone who replies gets the same qualifying conversation a new lead would, and you are notified when a contact shows real buying signals so your team only picks up the ones worth a call.',
+  },
 ];
 
 export default function Page() {
@@ -80,8 +84,24 @@ export default function Page() {
       'Responds to new home services leads within seconds over SMS and reactivates cold lists automatically, so contractors win the job by responding first.',
   });
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: objections.map((item) => ({
+      '@type': 'Question',
+      name: item.q.replace(/^"|"$/g, ''),
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  };
+
   return (
     <>
+      {/* FAQPage schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* SoftwareApplication schema */}
       <script
         type="application/ld+json"
