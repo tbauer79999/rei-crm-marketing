@@ -41,11 +41,22 @@ const faqData = [
   },
   {
     question: 'Does Spara work for inbound lead qualification?',
-    answer: 'Yes, that is exactly what Spara is built for. It engages website visitors through chat, email, and voice. If your leads come to you through SEO, ads, or content marketing, Spara qualifies them. If you need to reach out to leads first, that is where SurFox AI comes in.',
+    answer: 'Yes, that is exactly what Spara is built for. It engages website visitors through chat, email, and voice. If your leads come to you through SEO, ads, or content marketing, Spara qualifies them. SurFox AI also handles inbound leads, over SMS, website chat, and a published Voice number, and it can work lead lists you already own.',
   },
   {
     question: 'Can I use both Spara and SurFox AI?',
     answer: 'Yes. Spara handles inbound website visitors through its chat widget. SurFox AI works your outbound lead lists by text and also covers its own inbound doors, website chat and a published Voice number for callers who are not yet in your CRM. Many sales teams run both, with SurFox AI covering the ground Spara does not reach.',
+  },  {
+    question: 'Is Spara good for converting inbound website leads?',
+    answer: 'Yes. Spara is built for inbound website visitors and engages them through chat, email, and voice, which suits companies with heavy web traffic. Its lead source is website traffic, so it is not built around leads who reach you by text or phone.',
+  },
+  {
+    question: 'How does SurFox AI differ from Spara for inbound leads?',
+    answer: 'Spara focuses on visitors who are on your website. SurFox AI covers inbound over SMS, website chat, and a published Voice number, so a lead who texts, chats, or calls gets a qualifying conversation and the hot ones are handed to your team. SurFox AI can also work lead lists you already own.',
+  },
+  {
+    question: 'Which is the better fit for inbound leads, Spara or SurFox AI?',
+    answer: 'It depends on your size and how leads reach you. Spara targets enterprise SaaS companies with high web traffic and uses sales-led implementation with unlisted enterprise contracts. SurFox AI is self-serve, with plans from $49/month to $2,497/month, and handles inbound by SMS, website chat, and Voice.',
   },
 ];
 
@@ -110,7 +121,7 @@ export default function Page() {
                 name: 'Does Spara work for inbound lead qualification?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Yes, that is exactly what Spara is built for. It engages website visitors through chat, email, and voice. If your leads come to you through SEO, ads, or content marketing, Spara qualifies them. If you need to reach out to leads first, that is where SurFox AI comes in.',
+                  text: 'Yes, that is exactly what Spara is built for. It engages website visitors through chat, email, and voice. If your leads come to you through SEO, ads, or content marketing, Spara qualifies them. SurFox AI also handles inbound leads, over SMS, website chat, and a published Voice number, and it can work lead lists you already own.',
                 },
               },
               {
@@ -119,6 +130,30 @@ export default function Page() {
                 acceptedAnswer: {
                   '@type': 'Answer',
                   text: 'Yes. Spara handles inbound website visitors through its chat widget. SurFox AI works your outbound lead lists by text and also covers its own inbound doors, website chat and a published Voice number for callers who are not yet in your CRM. Many sales teams run both, with SurFox AI covering the ground Spara does not reach.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is Spara good for converting inbound website leads?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Spara is built for inbound website visitors and engages them through chat, email, and voice, which suits companies with heavy web traffic. Its lead source is website traffic, so it is not built around leads who reach you by text or phone.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How does SurFox AI differ from Spara for inbound leads?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Spara focuses on visitors who are on your website. SurFox AI covers inbound over SMS, website chat, and a published Voice number, so a lead who texts, chats, or calls gets a qualifying conversation and the hot ones are handed to your team. SurFox AI can also work lead lists you already own.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Which is the better fit for inbound leads, Spara or SurFox AI?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'It depends on your size and how leads reach you. Spara targets enterprise SaaS companies with high web traffic and uses sales-led implementation with unlisted enterprise contracts. SurFox AI is self-serve, with plans from $49/month to $2,497/month, and handles inbound by SMS, website chat, and Voice.',
                 },
               },
             ],
