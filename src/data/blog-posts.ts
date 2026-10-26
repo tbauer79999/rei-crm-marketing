@@ -1407,7 +1407,7 @@ export const blogPosts: BlogPost[] = [
     authorUrl: '/leadership',
     metaTitle: 'Reactivate Dormant Leads: Turn Dead CRM Databases Into Revenue with AI',
     metaDescription: '3-5% of dead leads are ready to buy right now. AI re-engages thousands simultaneously, finds the hot ones. Real strategy for reactivating old leads + found revenue.',
-    lastUpdated: '2026-02-25',
+    lastUpdated: '2026-10-26',
     authorTitle: 'Founder & CEO, SurFox AI',
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     howToSteps: [
@@ -1420,6 +1420,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'AI database reactivation is the highest-ROI move in sales right now - and most companies have never tried it. You have a goldmine sitting in your CRM and you\'re ignoring it. Every business has one - thousands of leads collected over months or years that never closed. Old inquiries. Expired trials. Prospects who ghosted after the second call. They\'re sitting in your database right now, untouched, because your team decided they weren\'t worth the effort.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Short answer: reactivating dormant leads means sending old contacts a relevant, low-pressure text, letting software handle the replies with qualifying questions, and passing anyone who shows real buying intent to a person. It only works when you have documented consent to text each contact and a working opt-out.'
       },
       {
         type: 'tldr',
@@ -1561,6 +1565,50 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'heading',
+        content: 'Consent and Opt-Out Basics'
+      },
+      {
+        type: 'paragraph',
+        content: 'Old leads are still people you need permission to text. In the United States, marketing texts sent with automated technology generally require prior express written consent under the Telephone Consumer Protection Act (TCPA), and the age of the lead does not change that. A lead who filled out a form years ago may not have agreed to receive texts at all, so check what the original form said before you upload the list. This is general information, not legal advice, so confirm your approach with counsel.'
+      },
+      {
+        type: 'list',
+        items: [
+          'Confirm you have documented consent to text each contact, including when and how it was collected.',
+          'Remove contacts with no consent record, and check numbers against your internal opt-out list and the National Do Not Call Registry where it applies.',
+          'Identify your business by name in the first message.',
+          'Honor opt-outs immediately. Treat STOP, UNSUBSCRIBE, CANCEL, END, and QUIT as opt-outs, send one confirmation, and send nothing further.',
+          'Respect quiet hours. A common rule of thumb is no texts before 8 a.m. or after 9 p.m. in the recipient\'s local time.',
+          'Register your brand and campaign for A2P 10DLC before you send.',
+          'Keep records of consent and opt-outs.',
+        ],
+      },
+      {
+        type: 'heading',
+        content: 'Buyer Checklist: How to Choose a Reactivation Tool'
+      },
+      {
+        type: 'paragraph',
+        content: 'Use these questions when you compare tools for dormant lead reactivation. A good tool should be able to answer yes to most of them.'
+      },
+      {
+        type: 'list',
+        items: [
+          'Does it track consent and process opt-outs automatically?',
+          'Does it enforce quiet hours by the recipient\'s time zone?',
+          'Does it hold a two-way conversation, or only send a fixed drip sequence?',
+          'Does it handle replies like "not interested," "wrong number," and "stop texting me" correctly?',
+          'Does it ask qualifying questions and recognize buying intent?',
+          'Does it hand hot leads to a person with the full conversation attached?',
+          'Can you pace sends instead of texting the whole list at once?',
+          'Does it import from your CRM, and can results flow back?',
+          'Does it support A2P 10DLC registration?',
+          'Does it report replies, opt-outs, and handoffs so you can judge the campaign?',
+          'Are the contract and cancellation terms clear?',
+        ],
+      },
+      {
+        type: 'heading',
         content: 'What Results to Expect'
       },
       {
@@ -1638,6 +1686,30 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'SMS outperforms every other channel for reactivation. With a 98% open rate versus email\'s 20%, your message actually gets seen. Response rates of 45% mean leads actually engage in conversation. SMS feels personal and conversational, making it ideal for re-engaging prospects who went cold.'
+      },
+      {
+        type: 'subheading',
+        content: 'Do I need consent to text old leads?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Generally yes. Marketing texts sent with automated technology usually require prior express written consent, and a lead being old does not remove that requirement. Check the original opt-in language, keep a record, and exclude contacts you cannot document. This is general information, not legal advice.'
+      },
+      {
+        type: 'subheading',
+        content: 'What should I look for in a dormant lead reactivation tool?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Look for built-in consent tracking and opt-out handling, quiet-hours enforcement, real two-way conversation instead of a fixed drip, clean handoff of hot leads to a person, and pacing controls. The buyer checklist above lists the questions to ask each vendor.'
+      },
+      {
+        type: 'subheading',
+        content: 'What happens when a dormant lead replies STOP?'
+      },
+      {
+        type: 'paragraph',
+        content: 'The lead should be marked as opted out immediately, receive at most one confirmation message, and never be texted again from that number unless they opt back in. Test this before launching any campaign.'
       }
     ],
     relatedPosts: ['qualify-leads-faster-ai', 'ai-sdr-vs-hiring-sdr-roi-2026', 'future-of-ai-in-sales']

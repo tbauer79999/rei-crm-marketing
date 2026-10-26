@@ -21,7 +21,38 @@ const faqs = [
     q: 'Can it send leads to my CRM?',
     a: 'Yes. Leads can be pushed to a CRM through an active integration in Settings > Integrations. CRMs like Close or Zoho connect through Zapier or webhooks.',
   },
+  {
+    q: "What's the best AI to text and qualify inbound leads?",
+    a: 'The best fit is a tool that replies within seconds, asks your own qualifying questions, handles objections, follows up automatically when leads go quiet, and hands the hot leads to a person. SurFox AI does this over SMS, and the same talk track also runs in website chat and Voice AI.',
+  },
+  {
+    q: 'How is this different from auto-texts or drip campaigns?',
+    a: 'An auto-text or drip campaign sends a fixed set of messages whether or not the lead replies. SurFox AI holds a two-way conversation. It reads each reply, answers questions, handles pushback, and follows up automatically when leads go quiet, then hands the hot leads to your team.',
+  },
+  {
+    q: 'What does it cost?',
+    a: 'Plans start at $49/month (Starter). Growth is $597/month, Growth Plus is $1,497/month, and Scale is $2,497/month. Every plan includes SMS, website chat, and Voice AI, and every plan is backed by a 30-day money-back guarantee.',
+  },
 ];
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'SurFox AI SMS Lead Qualification',
+  description: 'AI that texts new leads back in seconds, asks your qualifying questions, handles objections, follows up automatically when leads go quiet, and hands hot leads to your team.',
+  image: 'https://www.getsurfox.com/newSurFoxLogo1.png',
+  url: 'https://www.getsurfox.com/platform/sms',
+  brand: { '@type': 'Brand', name: 'SurFox AI' },
+  offers: {
+    '@type': 'Offer',
+    name: 'Starter plan',
+    price: '49',
+    priceCurrency: 'USD',
+    priceValidUntil: '2026-12-31',
+    availability: 'https://schema.org/InStock',
+    url: 'https://www.getsurfox.com/pricing',
+  },
+};
 
 function Mock() {
   return (
@@ -69,10 +100,13 @@ function LearningLine() {
 
 export default function Page() {
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
     <ChannelPage
       channel="sms"
       channelLabel="SMS"
       h1="AI SMS lead qualification that texts back and books the call"
+      hook="Plans from $49/month"
       sub="A new lead comes in. SurFox AI texts back in seconds, asks the right questions, handles the pushback, and books the call. Your team only talks to leads who are ready."
       mock={<Mock />}
       steps={[
@@ -93,5 +127,6 @@ export default function Page() {
       }
       faqs={faqs}
     />
+    </>
   );
 }
