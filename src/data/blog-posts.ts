@@ -2960,6 +2960,20 @@ export const blogPosts: BlogPost[] = [
         content: '**Why SMS qualification outperforms email qualification**\nSMS open rates average 90%+ compared to 20–25% for email. The conversational format of SMS also produces more candid responses - prospects are more likely to say "yes I\'m interested" or "not right now" over text than they are over a formal email reply. That signal quality makes AI qualification significantly more accurate when deployed via SMS.'
       },
       {
+        type: 'paragraph',
+        content: 'For inbound leads, SMS qualification follows four steps:'
+      },
+      {
+        type: 'list',
+        ordered: true,
+        items: [
+          'A lead comes in. A form fill, ad click, or other inquiry gives you a phone number and consent to text.',
+          'The AI texts within seconds. It reaches out while the lead is still thinking about the inquiry.',
+          'The AI asks qualifying questions. It reads each reply, answers questions, handles pushback, and follows up if the lead goes quiet.',
+          'Hot leads go to a person. When the lead shows real buying intent, your team gets the full conversation and takes over.',
+        ],
+      },
+      {
         type: 'heading',
         content: 'ROI and Performance Data'
       },
@@ -3103,7 +3117,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Yes. SMS-based AI lead qualification is especially effective for high-volume outreach industries like real estate, staffing, and home services. The AI conducts a back-and-forth text conversation to qualify leads and surfaces the hot ones for human follow-up. SMS open rates exceeding 90% make it the highest-engagement channel for this type of qualification.'
+        content: 'Yes. For inbound leads, it works in four steps: the lead comes in, the AI texts within seconds, it asks qualifying questions and handles the replies, and it hands hot leads to a person with the full conversation. The same back-and-forth text qualification also works for replies to outbound campaigns, which is common in real estate, staffing, and home services.'
       },
       {
         type: 'subheading',
@@ -3119,7 +3133,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'AI lead qualification platforms typically [range from $12,000 to $60,000 per year](/blog/ai-lead-qualification-cost-pricing-guide-2026) depending on message volume, features, and tier. This compares favorably to a team of three to five SDRs, which costs $882,000 to $2,595,000 over three years when you include salary, benefits, training, and turnover. SurFox AI starts at $49/month for teams getting started with SMS-based qualification.'
+        content: 'AI lead qualification platforms typically [range from $12,000 to $60,000 per year](/blog/ai-lead-qualification-cost-pricing-guide-2026) depending on message volume, features, and tier. This compares favorably to a team of three to five SDRs, which costs $882,000 to $2,595,000 over three years when you include salary, benefits, training, and turnover. For a closer look at the text channel, see [AI SMS lead qualification](/platform/sms).'
       },
     ]
   }
