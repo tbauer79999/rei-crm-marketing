@@ -1,9 +1,9 @@
-// Sends ONE real alert email (to Tom, as the demo alerts) and ONE real report email (to the address you give) through the SurFox AI app.
+// Sends ONE real alert email (to admin@surfox.ai) and ONE real report email (to the address you give) through the SurFox AI app.
 //
 //   vercel env pull .env.preview --environment=preview
 //   npx tsx --env-file=.env.preview src/lib/tools/live/send-test-emails.ts you@yourdomain.com
 //
-// Needs TOOLS_MODEL_URL and TOOLS_MODEL_SECRET. The alert goes to the app's alert address, whatever address you pass.
+// Needs TOOLS_MODEL_URL and TOOLS_MODEL_SECRET. The alert always goes to admin@surfox.ai, whatever address you pass.
 
 import { leadAppMailer } from '../mail';
 

@@ -1,7 +1,7 @@
 // Email goes through the SurFox AI app (POST /api/public/tools-model/mail), which already sends the demo emails through Resend with its own
 // verified sender domains. The website holds no email credentials, so there is nothing to set up here beyond the shared secret.
 //
-//   alert  -> to Tom at the same address and sender as the demo alerts. The app ignores any recipient we send for an alert.
+//   alert  -> to admin@surfox.ai, like the platform's other notifications. The app ignores any recipient we send for an alert.
 //   report -> to the visitor, from the visitor sender (sales), Reply-To the sales address.
 //
 // The two kinds are counted separately in our own database (tools_sends) so alert volume can never use up the report allowance.

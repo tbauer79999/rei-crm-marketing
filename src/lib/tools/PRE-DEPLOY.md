@@ -34,7 +34,7 @@ npx tsx --env-file=.env.preview src/lib/tools/live/send-test-emails.ts you@yourd
 
 - [ ] Output says `report: sent` and `alert: sent`.
 - [ ] The report email arrives at the address you gave, From the sales sender; Reply goes to sales@getsurfox.com.
-- [ ] The alert email arrives at the demo-alert address (`DEMO_ALERT_EMAIL`, whatever address you passed), From the demo-alert sender.
+- [ ] The alert email arrives at admin@surfox.ai (whatever address you passed), From SurFox AI <admin@surfox.ai>.
 - [ ] Both show in the Resend dashboard the SurFox AI app already uses.
 
 ## 3. One successful cron call

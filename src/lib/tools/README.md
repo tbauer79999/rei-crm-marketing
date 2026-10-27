@@ -40,7 +40,7 @@ Before deploying, work through `PRE-DEPLOY.md`.
 ## Setup steps
 
 1. Create a new free Supabase project. Run `migrations/0001_init.sql` in its SQL editor. Copy the URL and the service-role key.
-2. Email needs nothing new: the SurFox AI app already sends the demo emails through Resend. Alerts reach Tom at the same address and from the same sender as the demo alerts (`DEMO_ALERT_EMAIL` / `DEMO_ALERT_FROM` on the app). Visitor reports go from the sales sender, Reply-To sales@getsurfox.com.
+2. Email needs nothing new: the SurFox AI app already sends the demo emails through Resend. Alerts go to admin@surfox.ai, like the platform's other notifications. Visitor reports go from the sales sender, Reply-To sales@getsurfox.com.
 3. In the SurFox AI app: run migration `20261027_tools_10dlc_checker_internal_tool.sql`, set `TOOLS_MODEL_SECRET` (same value as above) on the app's host, deploy, then open Customer Health -> Internal Tools -> "10DLC Checker (public tool)" and create its Anthropic workspace and key there, like the other internal tools. Set a spend limit on that workspace too.
 4. Set the variables above in Vercel (Production and Preview as needed).
 5. Add a free external cron (for example cron-job.org) that calls `GET https://www.getsurfox.com/api/tools/cron` every 15 minutes with
