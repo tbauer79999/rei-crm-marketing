@@ -5,7 +5,7 @@ import type { Mailer } from './mail';
 import { dayStartIso } from './limits';
 import { newId, type AlertRecord, type Store } from './store';
 
-// Instant alerts to Tom. Every alert is written to the queue first, then sent from there, so a failed or rate-limited send is never
+// Instant alerts to Tom (the SurFox AI app delivers them to the same address as the demo alerts). Every alert is written to the queue first, then sent from there, so a failed or rate-limited send is never
 // lost: failures are retried with backoff, and when the alert account hits its daily limit the rest are held and go out as ONE
 // catch-up email on the next day.
 
@@ -69,11 +69,11 @@ export async function enqueueAlert(store: Store, input: AlertInput, now: Date): 
 
 const utcDate = (d: Date) => d.toISOString().slice(0, 10);
 
-export type FlushResult = { sent: number; held: number; digested: number; failed: number; skipped?: 'no_recipient' };
+export type FlushResult = { sent: number; held: number; digested: number; failed: number };
 
-export async function flushAlerts(store: Store, mailer: Mailer, now: Date, to: string | undefined = process.env.TOOLS_NOTIFY_EMAIL): Promise<FlushResult> {
+// `to` is optional and only informational: the app sends every alert to Tom's configured address whatever is passed here.
+export async function flushAlerts(store: Store, mailer: Mailer, now: Date, to?: string): Promise<FlushResult> {
   const out: FlushResult = { sent: 0, held: 0, digested: 0, failed: 0 };
-  if (!to) return { ...out, skipped: 'no_recipient' };
 
   const today = utcDate(now);
   let budget = LIMITS.alertDailyLimit - (await store.countSends('alert', dayStartIso(now)));

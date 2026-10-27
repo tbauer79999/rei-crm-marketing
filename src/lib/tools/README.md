@@ -30,22 +30,17 @@ Before deploying, work through `PRE-DEPLOY.md`.
 | Variable | Purpose |
 | --- | --- |
 | `TOOLS_SUPABASE_URL`, `TOOLS_SUPABASE_SERVICE_KEY` | the checker's own Supabase project (never the SurFox AI one) |
-| `TOOLS_MODEL_URL`, `TOOLS_MODEL_SECRET` | base URL of the SurFox AI app and the shared secret for `POST /api/public/tools-model/messages`. The marketing site holds **no** Anthropic key |
+| `TOOLS_MODEL_URL`, `TOOLS_MODEL_SECRET` | base URL of the SurFox AI app and the shared secret for its `/api/public/tools-model/messages` (the model) and `/api/public/tools-model/mail` (email) routes. The marketing site holds **no** Anthropic key and **no** email credentials |
 | `MONTHLY_COST_CAP_USD` | monthly cap on logged model cost, default 30 |
 | `TOOLS_COOKIE_SECRET` | long random string; signs the visitor cookie, hashes IPs, signs the admin cookie |
-| `TOOLS_REPORT_EMAIL_KEY`, `TOOLS_REPORT_EMAIL_FROM` | Resend account #1: visitor report emails only |
-| `TOOLS_ALERT_EMAIL_KEY`, `TOOLS_ALERT_EMAIL_FROM` | Resend account #2: alerts to Tom only |
-| `TOOLS_NOTIFY_EMAIL` | where Tom's alerts go |
 | `TOOLS_ADMIN_PASSWORD` | password for `/tools/admin` |
 | `TOOLS_CRON_SECRET` | bearer token for `GET /api/tools/cron` |
-| `TOOLS_ALERT_DAILY_LIMIT`, `TOOLS_REPORT_DAILY_LIMIT` | optional, default 100 each (Resend free tier) |
+| `TOOLS_ALERT_DAILY_LIMIT`, `TOOLS_REPORT_DAILY_LIMIT` | optional, default 100 each. Our own daily send counters; raise them to match the Resend plan the SurFox AI app uses |
 
 ## Setup steps
 
 1. Create a new free Supabase project. Run `migrations/0001_init.sql` in its SQL editor. Copy the URL and the service-role key.
-2. Create two Resend accounts (free). In each, verify one sending domain so SPF and DKIM are published, for example
-   `reports.getsurfox.com` on the report account and `alerts.getsurfox.com` on the alert account (Resend's free plan allows one
-   domain per account). Add the DNS records Resend shows. Set the two `*_EMAIL_FROM` addresses on those domains.
+2. Email needs nothing new: the SurFox AI app already sends the demo emails through Resend. Alerts reach Tom at the same address and from the same sender as the demo alerts (`DEMO_ALERT_EMAIL` / `DEMO_ALERT_FROM` on the app). Visitor reports go from the sales sender, Reply-To sales@getsurfox.com.
 3. In the SurFox AI app: run migration `20261027_tools_10dlc_checker_internal_tool.sql`, set `TOOLS_MODEL_SECRET` (same value as above) on the app's host, deploy, then open Customer Health -> Internal Tools -> "10DLC Checker (public tool)" and create its Anthropic workspace and key there, like the other internal tools. Set a spend limit on that workspace too.
 4. Set the variables above in Vercel (Production and Preview as needed).
 5. Add a free external cron (for example cron-job.org) that calls `GET https://www.getsurfox.com/api/tools/cron` every 15 minutes with
@@ -60,7 +55,7 @@ Before deploying, work through `PRE-DEPLOY.md`.
 | Service | Plan | Limit that matters | Cost |
 | --- | --- | --- | --- |
 | Supabase | Free | 500 MB database; free projects pause after about a week with no activity | free |
-| Resend (x2) | Free | 100 emails/day and 3,000/month per account; 1 verified domain per account | free |
+| Resend (via the SurFox AI app) | the app's existing plan | shares the app's quota with the demo emails | existing plan |
 | Anthropic API (via the SurFox AI app) | Pay as you go | no free tier | **costs money**, hard-capped in code by `MONTHLY_COST_CAP_USD` |
 | External cron | Free | one call every few minutes | free |
 | Vercel | existing plan | function duration of 45 to 60 seconds on the check and cron routes | existing plan |

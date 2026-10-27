@@ -218,7 +218,7 @@ test('only the visitor who ran the check can unlock it; consent and a real email
 
 test('a failed report email is retried later and never lost', () =>
   withConsent(async () => {
-    const m = mailer({ failFirst: 1 });
+    const m = mailer({ failFirst: 1, failOn: 'report' });
     const { deps, store, settle } = makeDeps({ mailer: m });
     await handleCheck(deps, site());
     await handleUnlock(deps, { shareId: store.scans[0].share_id, email: 'a@example.com', consent: true, visitorId: WHO.visitorId, attribution: ATTR });

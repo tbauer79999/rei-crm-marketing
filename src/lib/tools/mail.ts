@@ -1,32 +1,31 @@
-// Two separate sending accounts, each on its own free tier (Resend: 100 emails/day, 3,000/month). Alerts to Tom use ONLY the alert
-// key and visitor reports use ONLY the report key, so alert volume can never use up the visitors' quota.
+// Email goes through the SurFox AI app (POST /api/public/tools-model/mail), which already sends the demo emails through Resend with its own
+// verified sender domains. The website holds no email credentials, so there is nothing to set up here beyond the shared secret.
+//
+//   alert  -> to Tom at the same address and sender as the demo alerts. The app ignores any recipient we send for an alert.
+//   report -> to the visitor, from the visitor sender (sales), Reply-To the sales address.
+//
+// The two kinds are counted separately in our own database (tools_sends) so alert volume can never use up the report allowance.
 
 export type MailAccount = 'alert' | 'report';
-export type MailMessage = { to: string; subject: string; text: string; replyTo?: string };
+export type MailMessage = { to?: string; subject: string; text: string };
 export type MailResult = { ok: true } | { ok: false; limit: boolean; error: string };
 export type Mailer = (account: MailAccount, msg: MailMessage) => Promise<MailResult>;
 
-function credentials(account: MailAccount): { key: string | undefined; from: string | undefined } {
-  return account === 'alert'
-    ? { key: process.env.TOOLS_ALERT_EMAIL_KEY, from: process.env.TOOLS_ALERT_EMAIL_FROM }
-    : { key: process.env.TOOLS_REPORT_EMAIL_KEY, from: process.env.TOOLS_REPORT_EMAIL_FROM };
-}
-
-export const resendMailer: Mailer = async (account, msg) => {
-  const { key, from } = credentials(account);
-  if (!key || !from) return { ok: false, limit: false, error: `${account} email is not configured` };
+export const leadAppMailer: Mailer = async (account, msg) => {
+  const base = process.env.TOOLS_MODEL_URL;
+  const secret = process.env.TOOLS_MODEL_SECRET;
+  if (!base || !secret) return { ok: false, limit: false, error: 'TOOLS_MODEL_URL and TOOLS_MODEL_SECRET are not set' };
   try {
-    const res = await fetch('https://api.resend.com/emails', {
+    const res = await fetch(`${base.replace(/\/+$/, '')}/api/public/tools-model/mail`, {
       method: 'POST',
-      headers: { Authorization: `Bearer ${key}`, 'content-type': 'application/json' },
-      body: JSON.stringify({ from, to: [msg.to], subject: msg.subject, text: msg.text, ...(msg.replyTo ? { reply_to: msg.replyTo } : {}) }),
-      signal: AbortSignal.timeout(10_000),
+      headers: { 'content-type': 'application/json', 'x-tools-model-secret': secret },
+      body: JSON.stringify({ kind: account, ...(account === 'report' ? { to: msg.to } : {}), subject: msg.subject, text: msg.text }),
+      signal: AbortSignal.timeout(15_000),
+      cache: 'no-store',
     });
     if (res.ok) return { ok: true };
-    const body = await res.text().catch(() => '');
-    // Resend answers 429 when a rate or daily quota is hit.
-    const limit = res.status === 429 && /quota|daily|limit/i.test(body);
-    return { ok: false, limit, error: `resend ${res.status} ${body.slice(0, 160)}` };
+    const body = (await res.json().catch(() => ({}))) as { error?: string };
+    return { ok: false, limit: res.status === 429, error: `mail service ${res.status} ${body.error ?? ''}`.trim() };
   } catch (e) {
     return { ok: false, limit: false, error: (e as Error).message };
   }

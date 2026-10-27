@@ -10,8 +10,8 @@ Run this on a Vercel **preview** deploy of the branch before anything reaches pr
 - [ ] Platform host: set `TOOLS_MODEL_SECRET`, deploy the platform.
 - [ ] Customer Health -> Internal Tools -> "10DLC Checker (public tool)": create the workspace and key.
 - [ ] Checker database: new free Supabase project, run `migrations/0001_init.sql`.
-- [ ] Two Resend accounts, one verified domain each (SPF + DKIM records published). Note the From addresses.
-- [ ] Vercel (Preview and Production): `TOOLS_MODEL_URL`, `TOOLS_MODEL_SECRET`, `TOOLS_SUPABASE_URL`, `TOOLS_SUPABASE_SERVICE_KEY`, `TOOLS_COOKIE_SECRET`, `TOOLS_REPORT_EMAIL_KEY`, `TOOLS_REPORT_EMAIL_FROM`, `TOOLS_ALERT_EMAIL_KEY`, `TOOLS_ALERT_EMAIL_FROM`, `TOOLS_NOTIFY_EMAIL`, `TOOLS_ADMIN_PASSWORD`, `TOOLS_CRON_SECRET`. (No Anthropic key on Vercel.)
+- [ ] Email: nothing to set up. The SurFox AI app already sends through Resend; the checker's mail route reuses its senders.
+- [ ] Vercel (Preview and Production): `TOOLS_MODEL_URL`, `TOOLS_MODEL_SECRET`, `TOOLS_SUPABASE_URL`, `TOOLS_SUPABASE_SERVICE_KEY`, `TOOLS_COOKIE_SECRET`, `TOOLS_ADMIN_PASSWORD`, `TOOLS_CRON_SECRET`. (No Anthropic key and no email credentials on Vercel.)
 
 ## 1. Real 10-site test with the model
 
@@ -26,16 +26,16 @@ npx tsx --env-file=.env.preview src/lib/tools/live/ten-sites.ts
 - [ ] Each site takes under 30 seconds and the printed total cost looks sane (cents per site). Compare it with the cost shown for the "10DLC Checker" workspace in the Anthropic Console.
 - [ ] Spot-check three findings by hand: open the rule's source link and confirm the quote is on that page.
 
-## 2. One real email through each Resend account
+## 2. One real email of each kind
 
 ```
 npx tsx --env-file=.env.preview src/lib/tools/live/send-test-emails.ts you@yourdomain.com
 ```
 
 - [ ] Output says `report: sent` and `alert: sent`.
-- [ ] The two emails arrive (check spam), one From the report domain and one From the alert domain.
-- [ ] In "Show original": `SPF: PASS` and `DKIM: PASS` on **both**.
-- [ ] In each Resend dashboard, only its own email shows up (the alert one on the alert account, the report one on the report account).
+- [ ] The report email arrives at the address you gave, From the sales sender; Reply goes to sales@getsurfox.com.
+- [ ] The alert email arrives at the demo-alert address (`DEMO_ALERT_EMAIL`, whatever address you passed), From the demo-alert sender.
+- [ ] Both show in the Resend dashboard the SurFox AI app already uses.
 
 ## 3. One successful cron call
 

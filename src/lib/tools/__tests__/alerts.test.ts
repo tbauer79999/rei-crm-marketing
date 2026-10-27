@@ -113,11 +113,12 @@ test('at the alert account daily limit the rest are held, then go out as ONE cat
   assert.equal(m2.sent.length, 1);
 });
 
-test('with no notify address nothing is sent and nothing is lost', async () => {
+test('no recipient is configured on the website: the app picks Tom\'s address, so alerts still go out', async () => {
   const store = new MemoryStore();
   await enqueueAlert(store, { kind: 'paste_check', site: null, checks: null, attribution: ATTR, unlocked: false }, day1);
   const m = mailer();
-  const r = await flushAlerts(store, m, day1, undefined);
-  assert.equal(r.skipped, 'no_recipient');
-  assert.equal(store.alerts[0].status, 'pending');
+  const r = await flushAlerts(store, m, day1);
+  assert.equal(r.sent, 1);
+  assert.deepEqual(m.sent.map((s) => s.account), ['alert']);
+  assert.equal(store.alerts[0].status, 'sent');
 });

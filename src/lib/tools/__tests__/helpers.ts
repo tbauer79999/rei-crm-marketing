@@ -35,13 +35,15 @@ export function client(opts: { status?: 'pass' | 'warn' | 'fail'; inputTokens?: 
   return fn;
 }
 
-export function mailer(opts: { failFirst?: number; limitAfter?: number } = {}): Mailer & { sent: { account: string; msg: MailMessage }[]; attempts: number } {
+export function mailer(opts: { failFirst?: number; failOn?: 'alert' | 'report'; limitAfter?: number } = {}): Mailer & { sent: { account: string; msg: MailMessage }[]; attempts: number } {
   const sent: { account: string; msg: MailMessage }[] = [];
   let attempts = 0;
+  const failedOn: Record<string, number> = { alert: 0, report: 0 };
   const fn = (async (account, msg) => {
     attempts++;
     fn.attempts = attempts;
-    if (opts.failFirst && attempts <= opts.failFirst) return { ok: false as const, limit: false, error: 'boom' };
+    // failFirst counts only attempts on the account named in failOn (or on any account when failOn is not given)
+    if (opts.failFirst && (!opts.failOn || opts.failOn === account) && failedOn[opts.failOn ?? account]++ < opts.failFirst) return { ok: false as const, limit: false, error: 'boom' };
     if (opts.limitAfter !== undefined && sent.filter((s) => s.account === account).length >= opts.limitAfter) return { ok: false as const, limit: true, error: 'daily quota' };
     sent.push({ account, msg });
     return { ok: true as const };
