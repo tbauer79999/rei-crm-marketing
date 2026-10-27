@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
               Privacy Policy
             </h1>
             <p className="text-lg sm:text-xl text-[#5A626E] leading-relaxed">
-              Last Updated: October 10, 2026
+              Last Updated: October 27, 2026
             </p>
           </motion.div>
         </div>
@@ -439,6 +439,61 @@ export default function PrivacyPolicy() {
                 <h3 className="text-xl font-semibold text-[#13171F] mb-3">Scope</h3>
                 <p>
                   This Cookies & Tracking Technologies section applies to www.getsurfox.com only. It does not apply to websites operated by our customers that embed the SurFox AI chat widget. Cookies and tracking on those sites are controlled by the site operator, not SurFox AI.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* 10DLC Registration Checker */}
+          <motion.div
+            id="10dlc-checker"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-[#EAF7F9] border border-[#dCEEF1] flex items-center justify-center flex-shrink-0">
+                <FileText className="w-6 h-6 text-[#0A7C8C]" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
+                10DLC Registration Checker [PENDING GC REVIEW]
+              </h2>
+            </div>
+
+            <div className="ml-0 sm:ml-16 space-y-6 text-[#5A626E] leading-relaxed">
+              <p>
+                The free 10DLC Registration Checker at www.getsurfox.com/tools is separate from the SurFox AI platform. This section describes what it collects, who processes it, and how long we keep it.
+              </p>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">What we collect</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>The website address you ask us to check, the addresses of the public pages we read on it (up to three), and the text you paste into the checker. We keep the result of each check, which includes short excerpts from the text we checked. We do not keep the full page text.</li>
+                  <li>Where you came from: the referrer, the first page you landed on, and the campaign tag (src or aff) in the link you followed.</li>
+                  <li>Your email address, only if you choose to unlock the full report and tick the consent box. We never ask for a phone number.</li>
+                  <li>A signed cookie (tools_vid) and a keyed hash of your IP address, used only to enforce a limit of 3 website scans a day. We do not store your IP address itself.</li>
+                  <li>A first-touch cookie (surfox_first_src) that remembers the src tag from the link that first brought you to getsurfox.com, for 60 days, so we can tell which link led to a sign-up.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">Who processes it</h3>
+                <p>
+                  The text we check is sent to our AI model service, which compares it with published industry and carrier rules and returns a result. If you unlock the full report, we email it to you through Resend, our email delivery provider. We also send ourselves an internal alert for each check, which includes the website address, the results, the referrer and landing page, and your email address if you gave one.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-[#13171F] mb-3">How long we keep it</h3>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Check results, the referrer and landing page, and any email address you gave: 12 months, then deleted.</li>
+                  <li>The daily-limit records (cookie identifier and IP hash): 30 days, then deleted.</li>
+                  <li>Internal alert and email delivery logs: 90 days, then deleted.</li>
+                  <li>Cost records, which hold no personal information: 13 months.</li>
+                </ul>
+                <p className="mt-3">
+                  To have your result or email address deleted sooner, email privacy@getsurfox.com.
                 </p>
               </div>
             </div>

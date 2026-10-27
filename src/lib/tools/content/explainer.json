@@ -1,0 +1,3642 @@
+{
+  "title": "10DLC Registration and Compliance: Rules, Steps, Rejections",
+  "metaDescription": "What 10DLC is, how A2P 10DLC registration works, and the rules behind common campaign rejections, quoted from CTIA, TCR and carrier sources.",
+  "h1": "10DLC registration and compliance, explained with official sources",
+  "blocks": [
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Last checked against official sources: Oct 27, 2026"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "This page summarizes published industry and carrier guidance and is not legal advice."
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Every rule below is quoted from an official source, with a link to that source. The sources are CTIA, The Campaign Registry (TCR), Twilio's own documentation, and T-Mobile and Verizon pages. Some examples come from AT&T Office@Hand support and from Bandwidth. Those are labeled as provider guidance, not carrier rules. The full list is in the Sources box at the end."
+        }
+      ]
+    },
+    {
+      "k": "h2",
+      "id": "what-is-10dlc",
+      "inl": [
+        {
+          "t": "text",
+          "v": "1. What is 10DLC?"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "10DLC stands for 10-digit long code. It is a standard 10-digit phone number used by a business to send text messages to consumers, often called A2P (application-to-person) messaging."
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "This page walks through registering a brand and a campaign, and the published rules that reviewers apply."
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Verizon says it relies on \"ensuring that every campaign\" is \"compliant with the CTIA Messaging Principles and Best Practices.\" ("
+        },
+        {
+          "t": "link",
+          "v": "Verizon, \"How can businesses use text messages to communicate with consumers?\"",
+          "href": "https://www.verizon.com/about/account-security/smishing-and-spam-text-messages"
+        },
+        {
+          "t": "text",
+          "v": ")"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "whos-who",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Who's who in 10DLC"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "bold",
+            "v": "Brand:"
+          },
+          {
+            "t": "text",
+            "v": " the business that sends the messages."
+          }
+        ],
+        [
+          {
+            "t": "bold",
+            "v": "CSP (campaign service provider):"
+          },
+          {
+            "t": "text",
+            "v": " the messaging provider you register through, such as Twilio."
+          }
+        ],
+        [
+          {
+            "t": "bold",
+            "v": "CNP and DCA:"
+          },
+          {
+            "t": "text",
+            "v": " the upstream connection partners that pass campaigns along to the carriers."
+          }
+        ],
+        [
+          {
+            "t": "bold",
+            "v": "Carriers:"
+          },
+          {
+            "t": "text",
+            "v": " the mobile networks, such as T-Mobile and Verizon."
+          }
+        ],
+        [
+          {
+            "t": "bold",
+            "v": "TCR (The Campaign Registry):"
+          },
+          {
+            "t": "text",
+            "v": " the registry that holds brand and campaign records."
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "TCR does not decide whether a campaign is approved. In its own words: \"The Campaign Registry (TCR) does not review, approve, or reject campaigns. This is solely done by the CSPs and their upstream connection partners.\" ("
+        },
+        {
+          "t": "link",
+          "v": "TCR FAQ, \"How long does it take to approve my Campaign once submitted?\"",
+          "href": "https://www.campaignregistry.com/resources/"
+        },
+        {
+          "t": "text",
+          "v": ")"
+        }
+      ]
+    },
+    {
+      "k": "h2",
+      "id": "how-registration-works",
+      "inl": [
+        {
+          "t": "text",
+          "v": "2. How A2P 10DLC registration works"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "register-the-brand",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Step 1: register the brand"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Your brand details must match your government tax records. Twilio says: \"most Standard or LVS Brands fail because of a mismatch between the business information (exact legal business name, exact address, etc) submitted in the registration process with the Business Profile, and that information as registered with the government tax authority.\" ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Docs, \"Resubmitting Standard/LVS Brands\"",
+          "href": "https://www.twilio.com/docs/messaging/compliance/a2p-10dlc/troubleshooting-a2p-brands/troubleshooting-and-rectifying-a2p-standardlvs-brands"
+        },
+        {
+          "t": "text",
+          "v": ")"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "register-the-campaign",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Step 2: register the campaign"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "A campaign describes what you will send and how people agree to receive it. TCR's CSP guide covers each field:"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "bold",
+            "v": "Campaign description:"
+          },
+          {
+            "t": "text",
+            "v": " \"This field is used to give a clear and detailed description of what the campaign will be used for.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide, Campaign Description",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "bold",
+            "v": "Call-to-action and message flow:"
+          },
+          {
+            "t": "text",
+            "v": " \"This field is used to describe how a consumer opts-in to the campaign, therefore giving consent to the sender to receive their messages.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide, Call-to-Action / Message Flow",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "bold",
+            "v": "Sample messages:"
+          },
+          {
+            "t": "text",
+            "v": " \"All campaigns require at least 1 sample message, and some campaign types require a minimum of 2 sample messages.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide, Sample Messages",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "wait-for-review",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Step 3: wait for review"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "After you submit, the campaign is reviewed by your CSP and its upstream partners, not by TCR. TCR says this review \"is solely done by the CSPs and their upstream connection partners.\" ("
+        },
+        {
+          "t": "link",
+          "v": "TCR FAQ",
+          "href": "https://www.campaignregistry.com/resources/"
+        },
+        {
+          "t": "text",
+          "v": ") None of the sources on this page gives a set review time."
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "what-a-rejection-looks-like",
+      "inl": [
+        {
+          "t": "text",
+          "v": "What a rejection looks like and who to ask"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "A rejection comes back through your provider, with a reason."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"If your campaign is rejected for any reason, you will need to speak to your CSP that you registered through.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR FAQ, \"What do I do if my Campaign is not approved?\"",
+            "href": "https://www.campaignregistry.com/resources/"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"When declining a shared campaign, CNPs are required to provide a rejection category and explanation.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide, CNP Campaign Rejections",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"Whenever a campaign is declined, the Upstream CNP who rejected it must provide an explanation (e.g., they could require additional sample messages).\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR developer portal, Declined Campaigns",
+            "href": "https://developer.campaignregistry.com/cadp/sharing-campaigns"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h2",
+      "id": "compliance-basics",
+      "inl": [
+        {
+          "t": "text",
+          "v": "3. 10DLC compliance basics"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Carriers judge campaigns against the CTIA Messaging Principles and Best Practices. Verizon says every campaign must be \"compliant with the CTIA Messaging Principles and Best Practices.\" ("
+        },
+        {
+          "t": "link",
+          "v": "Verizon",
+          "href": "https://www.verizon.com/about/account-security/smishing-and-spam-text-messages"
+        },
+        {
+          "t": "text",
+          "v": ")"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Consent comes first in CTIA's guidance. CTIA says senders \"should also document opt-in consent by retaining the following data where applicable: Timestamp of consent acquisition; Consent acquisition medium (e.g., cell-submit form, physical sign-up form, SMS keyword, etc.); Capture of experience (e.g., language and action) used to secure consent\" ("
+        },
+        {
+          "t": "link",
+          "v": "CTIA Messaging Principles and Best Practices, 5.1.2 Consumer Opt-In",
+          "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+        },
+        {
+          "t": "text",
+          "v": ")"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "TCR does not rule on compliance: \"Please note that TCR is not a compliance house and therefore we cannot comment on compliance matters such as how to collect opt-ins, or the correct way to process opt-outs, etc.\" ("
+        },
+        {
+          "t": "link",
+          "v": "TCR CSP User Guide, campaign and content attributes",
+          "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+        },
+        {
+          "t": "text",
+          "v": ")"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "T-Mobile also keeps a list of prohibited content: \"T-Mobile's Code of Conduct has a list of prohibited content for non-consumer messaging campaigns. While illegal content will never be allowed, some campaigns do require additional review for evaluation of our exception process.\" ("
+        },
+        {
+          "t": "link",
+          "v": "T-Mobile Support, Consumer versus Non-Consumer Text Messaging",
+          "href": "https://www.t-mobile.com/support/plans-features/consumer-versus-non-consumer-text-messaging"
+        },
+        {
+          "t": "text",
+          "v": ")"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "checklist",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Quick compliance checklist"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Each item links to the rule below. You can also run your campaign through the "
+        },
+        {
+          "t": "link",
+          "v": "10DLC checker",
+          "href": "https://www.getsurfox.com/tools"
+        },
+        {
+          "t": "text",
+          "v": "."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "link",
+            "v": "Your call-to-action carries the required disclosures",
+            "href": "#opt-in-wording"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Opt-out instructions are present",
+            "href": "#opt-out"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Consent is optional, unchecked and not bundled",
+            "href": "#consent-checkbox"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Every opt-in method is described and can be verified",
+            "href": "#opt-in-evidence"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Recurring programs send an opt-in confirmation",
+            "href": "#opt-in-confirmation"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Your privacy policy is public and linked",
+            "href": "#privacy-policy"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Your Terms and Conditions are complete and linked",
+            "href": "#terms-and-conditions"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Your campaign description matches the use case",
+            "href": "#campaign-description"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Your sample messages match the campaign",
+            "href": "#sample-messages"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Links use https and no public shorteners",
+            "href": "#links"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Phone numbers in messages belong to you",
+            "href": "#phone-numbers"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Your website is live, public and explains the business",
+            "href": "#website"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Your brand details match your tax records",
+            "href": "#brand-details"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "You know the brand vetting appeal limits",
+            "href": "#vetting-appeals"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Your content is not prohibited",
+            "href": "#prohibited-content"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Age-gated content has a real age gate",
+            "href": "#age-gated-content"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Each business has its own number and campaign",
+            "href": "#shared-numbers"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h2",
+      "id": "common-rejections",
+      "inl": [
+        {
+          "t": "text",
+          "v": "4. Common 10DLC campaign rejections and what the rules require"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Each reason below states what the rule requires and quotes it. Twilio error codes are Twilio's own labels. AT&T Office@Hand codes are AT&T Office@Hand product guidance, not AT&T carrier rules. Bandwidth DCA2 codes are Bandwidth's list, not TCR's."
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "opt-in-wording",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Your call-to-action is missing required disclosures"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " where people sign up, the call-to-action tells them who is sending, what the program is, the fees, and the other terms."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "CTIA: \"A Call-to-Action should ensure that Consumers are aware of: (1) the program or product description; (2) the telephone number(s) or short code(s) from which messaging will originate; (3) the specific identity of the organization or individual being represented in the initial message; (4) clear and conspicuous language about opt-in and any associated fees or charges; and (5) other applicable terms and conditions (e.g., how to opt-out, customer care contact information, and any applicable privacy policy).\" ("
+          },
+          {
+            "t": "link",
+            "v": "CTIA, 5.1.1",
+            "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"The call-to-action must be explicitly clear and inform the consumer of the nature of the program. If multiple opt-in methods can be used for the same campaign, you must list them all.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide, Call-to-Action / Message Flow",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"Content providers should display a clear and conspicuous Call-to-Action with appropriate disclosures to Consumers about the type and purpose of the messaging that Consumers will receive.\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 2.5 Calls-to-Action",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"Content Providers should set the proper expectation with the consumer on how many messages they can expect to receive.\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 3.6 Set Expectations On Frequency",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "Twilio: \"A required disclosure in the CTA must appear where consent is collected; putting it only in Terms of Service may not resolve the CTA error.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, A2P 10DLC Campaign Registration Rejected",
+            "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio codes for this reason ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30909: \"Campaign rejected: Message Flow or Call to Action incomplete/unverified\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30544: \"Call-to-Action does not state the message purpose\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30545: \"Call-to-Action does not state message frequency\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30568: \"Call-to-Action is missing the business or brand name\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30569: \"Call-to-Action is missing the message and data rates disclosure\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30570: \"Call-to-Action is missing customer support instructions\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30551: \"Consent does not specify SMS or text messaging\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "opt-out",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Opt-out instructions are missing or wrong"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " messages say how to opt out, using standard STOP wording, and every opt-out is honored."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "CTIA: \"Message Senders should state in the message how and what words effect an opt-out. Standardized “STOP” wording should be used for opt-out instructions\" ("
+          },
+          {
+            "t": "link",
+            "v": "CTIA, 5.1.3 Consumer Opt-Out",
+            "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"Indicates whether the campaign is collecting and processing consumer opt-outs. This is mandatory for all campaign types, except for 2FA and Machine-to-Machine (M2M).\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide, Subscriber Opt-Out",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"Messaging programs must respond to, at a minimum, the universal keywords STOP, END, CANCEL, UNSUBSCRIBE, and QUIT by sending an opt-out message and, if the user is subscribed, by opting the user out of the program.\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 2.8 Opt-Out",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio codes ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30887: \"Campaign vetting rejection - Opt-out Error\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30547: \"Call-to-Action is missing opt-out instructions\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30539: \"Call-to-Action opt-out instructions are present but noncompliant\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "AT&T Office@Hand product guidance ("
+        },
+        {
+          "t": "link",
+          "v": "AT&T Office@Hand support",
+          "href": "https://asecare.att.com/tutorials/troubleshooting-tcr-sms-application-rejections-att-officehand-95333/?T+Office%40Hand=&product=AT"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "9106: \"Opt-out language missing from sample messages.\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "consent-checkbox",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Consent is pre-checked, required, or bundled"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " consent is an active choice, not a condition of service, and marketing consent is collected separately from other consent."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "Twilio: \"Marketing and transactional message consent must be consented to separately with two checkboxes.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, A2P 10DLC Campaign Onboarding Guide, Message Flow",
+            "href": "https://help.twilio.com/articles/11847054539547-A2P-10DLC-Campaign-Approval-Best-Practices"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"Where consent is required, the proposed entities authorized to send must be clearly communicated before obtaining consent\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 2.4 Choice and Consent",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio codes ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30925: \"Campaign rejected: Opt-in must be unchecked by default; active consent required\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30923: \"Campaign rejected: Message consent cannot be required for service use\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30913: \"Campaign rejected: Marketing and informational consent must be separate\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30556: \"SMS consent is bundled with other communication channels\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Bandwidth DCA2 list ("
+        },
+        {
+          "t": "link",
+          "v": "Bandwidth Support",
+          "href": "https://www.bandwidth.com/support/en/articles/12823079-dca2-vetting-rejection-reasons"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "803: \"Call to Action forces an opt-in consent because it's missing the checkbox. The checkbox is either not present or mandatory, causing a forced opt-in.\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "opt-in-evidence",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Your opt-in flow can't be verified"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " every opt-in method is described from start to finish, a reviewer can see it, and consent records are kept."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"If multiple opt-in methods can be used for the same campaign, you must list them all.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide, Call-to-Action / Message Flow",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "CTIA: \"Message Senders should also document opt-in consent by retaining the following data where applicable: Timestamp of consent acquisition; Consent acquisition medium (e.g., cell-submit form, physical sign-up form, SMS keyword, etc.); Capture of experience (e.g., language and action) used to secure consent\" ("
+          },
+          {
+            "t": "link",
+            "v": "CTIA, 5.1.2 Consumer Opt-In",
+            "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio codes ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30917: \"Campaign rejected: All opt-in methods must include complete workflow descriptions\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30896: \"Campaign vetting rejection - Opt-in Error\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30924: \"Campaign rejected: Missing or non-compliant consent agreement language in opt-in flow\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30543: \"Live opt-in link not provided\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30552: \"Opt-in is not customer-facing\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30555: \"First message sent without documented prior consent\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "AT&T Office@Hand product guidance ("
+        },
+        {
+          "t": "link",
+          "v": "AT&T Office@Hand support",
+          "href": "https://asecare.att.com/tutorials/troubleshooting-tcr-sms-application-rejections-att-officehand-95333/?T+Office%40Hand=&product=AT"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "803: \"Your website has no language about users opting in to SMS.\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "9104: \"You didn’t provide enough details in the how you obtain consent section when you get consent outside of your website.\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "opt-in-confirmation",
+      "inl": [
+        {
+          "t": "text",
+          "v": "No opt-in confirmation message"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " recurring programs confirm the opt-in with a message that carries set details."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "CTIA: \"The confirmation message should include: (1) the program name or product description; (2) customer care contact information (e.g., a toll-free number, 10-digit telephone number, or HELP command instructions); (3) how to opt-out; (4) a disclosure that the messages are recurring and the frequency of the messaging; and (5) clear and conspicuous language about any associated fees or charges and how those charges will be billed.\" ("
+          },
+          {
+            "t": "link",
+            "v": "CTIA, 5.1.2.1 Confirm Opt-In for Recurring Messages",
+            "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"T-Mobile does recommend obtaining a secondary “Double Opt-In\" in cases where the consent was initially collected outside of SMS channels, (i.e. phone call, web form, POS, etc.).\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 2.7 Double Opt-In",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio code ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30540: \"Double opt-in confirmation message is required\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "privacy-policy",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Privacy policy problems"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " a privacy policy that can be reached from the call-to-action, and no buying, selling, renting or sharing of opt-in consent."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "CTIA: \"All applicable privacy policies should be referenced in and accessible from the initial call-to-action.\" ("
+          },
+          {
+            "t": "link",
+            "v": "CTIA, 5.2.1",
+            "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "CTIA: \"Message Senders should not use opt-in lists that have been rented, sold, or shared to send messages.\" ("
+          },
+          {
+            "t": "link",
+            "v": "CTIA, 5.1.4 Renting, Selling, or Sharing Opt-In Lists",
+            "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"T-Mobile in no way allows consumers' consent to be bought, sold, rented, or shared.\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 4.1",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"You should collect the consumer consent yourself, and not use consent acquired from a third party.\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 3.5 Direct Consent",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "Twilio: \"Any business with a terms of service or privacy policy that mentions sharing or selling consumer data/opt-in information is considered noncompliant.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, Forbidden Message Categories",
+            "href": "https://help.twilio.com/articles/360045004974-Forbidden-message-categories-for-SMS-and-MMS-in-the-US-and-Canada"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio codes ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30932: \"Campaign rejected: Privacy policy must disclose third-party data sharing\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30536: \"Privacy policy URL is missing, inaccessible, or empty\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30550: \"No Privacy Policy link found in the opt-in flow\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Bandwidth DCA2 list ("
+        },
+        {
+          "t": "link",
+          "v": "Bandwidth Support",
+          "href": "https://www.bandwidth.com/support/en/articles/12823079-dca2-vetting-rejection-reasons"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "805: \"A compliant privacy policy is required on the website.\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "terms-and-conditions",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Terms and Conditions problems"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " Terms that cover the program, frequency, support, opt-out, rates and carrier liability, linked near the opt-in."
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio codes ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30882: \"Campaign vetting rejection - Terms & Conditions\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30557: \"Terms of Service missing business or program name\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30558: \"Terms of Service missing message frequency disclosure\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30560: \"Terms of Service missing customer support information\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30561: \"Terms of Service missing opt-out information\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30562: \"Terms of Service missing message and data rates disclosure\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30563: \"Terms of Service missing carrier liability disclosure\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30549: \"No Terms of Service link found in the opt-in flow\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30564: \"Terms of Service and Privacy Policy links not near opt-in\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "campaign-description",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Campaign description or use case mismatch"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " a clear, detailed description of what the campaign is for, under the use case that matches it."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"The campaign description should be a clear and detailed outline of exactly what the campaign will be used for. This field should paint an accurate picture so that everyone in the campaign chain can see and understand exactly how this campaign will be used. Lack of clarity can result in campaigns being rejected.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR FAQ, \"What should I write in the Campaign Description field?\"",
+            "href": "https://www.campaignregistry.com/resources/"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"Providers must keep all messaging campaigns accurate to what is live in the market.\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 3.12 Campaigns Information Accuracy",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio codes ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30886: \"Campaign vetting rejection - Invalid Campaign Description\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30916: \"Campaign rejected: Use case mismatch between lead generation and lead nurture\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30497: \"Use case summary is incomplete or unrelated to the messaging\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Bandwidth DCA2 list ("
+        },
+        {
+          "t": "link",
+          "v": "Bandwidth Support",
+          "href": "https://www.bandwidth.com/support/en/articles/12823079-dca2-vetting-rejection-reasons"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "601: \"Campaign Attributes do not match the website and/or sample message content.\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "sample-messages",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Sample messages that don't match"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " enough samples for the campaign type, a sample for each use case, the business name in the message, and samples that match the use case."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"All campaigns require at least 1 sample message, and some campaign types require a minimum of 2 sample messages.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide, Sample Messages",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"You should include the business name within the message to ensure that the consumer knows who they are interreacting and not attempt to hide the identity.\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 3.7 Business Recognition",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio codes ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30893: \"Campaign vetting rejection - Inconsistency between Sample Message and Use-case\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30538: \"A message sample is missing for a selected use case\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "AT&T Office@Hand product guidance ("
+        },
+        {
+          "t": "link",
+          "v": "AT&T Office@Hand support",
+          "href": "https://asecare.att.com/tutorials/troubleshooting-tcr-sms-application-rejections-att-officehand-95333/?T+Office%40Hand=&product=AT"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "9302: \"Inconsistency between sample message(s) and use case.\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "9106: \"Opt-out language missing from sample messages.\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Bandwidth DCA2 list ("
+        },
+        {
+          "t": "link",
+          "v": "Bandwidth Support",
+          "href": "https://www.bandwidth.com/support/en/articles/12823079-dca2-vetting-rejection-reasons"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "602: \"Inaccurate Registration. Inconsistency between the sample message and the use case.\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "links",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Public link shorteners and http links"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " no shared public URL shorteners, a shortener dedicated to you or branded if you use one, and secure (https) links."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "CTIA: \"Where a web address (i.e., Uniform Resource Locator (URL)) shortener is used, Message Senders should use a shortener with a web address and IP address(es) dedicated to the exclusive use of the Message Sender.\" ("
+          },
+          {
+            "t": "link",
+            "v": "CTIA, 5.3.2 Embedded Website Links",
+            "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"Note that public URL shorteners (bitly, tinyurl) are not accepted.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide, Embedded Link",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"The practice of using public URL shorteners in bulk messaging is highly discouraged, and messages containing them may be subject to blocking.\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 4.7",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"Although a full domain is preferred, a branded short URL may be used to deliver custom links.\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 3.3 Use One Recognizable Domain Name",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "Twilio: \"For instance, the use of shared or free public URL shorteners is not permitted and will lead to filtering. Ensure that when using a shortened URL it is company branded.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, Forbidden Message Categories",
+            "href": "https://help.twilio.com/articles/360045004974-Forbidden-message-categories-for-SMS-and-MMS-in-the-US-and-Canada"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio codes ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30892: \"Campaign vetting rejection - Invalid Sample Message - Public URL Shorteners\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30963: \"Campaign rejected: public URL shortener detected in campaign\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30964: \"Campaign rejected: non-secured URL (http://) detected\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "AT&T Office@Hand product guidance ("
+        },
+        {
+          "t": "link",
+          "v": "AT&T Office@Hand support",
+          "href": "https://asecare.att.com/tutorials/troubleshooting-tcr-sms-application-rejections-att-officehand-95333/?T+Office%40Hand=&product=AT"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "9401: \"You included a public shortened URL in your sample messages.\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "phone-numbers",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Phone numbers inside messages"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " a phone number in a message clearly shows who owns it, and the campaign declares that it uses one."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "CTIA: \"Messages should not contain phone numbers that are assigned to or forward to unpublished phone numbers, unless the owner (i.e., a person or legally registered business entity) of such phone numbers is unambiguously indicated in the text message.\" ("
+          },
+          {
+            "t": "link",
+            "v": "CTIA, 5.3.3 Embedded Phone Numbers",
+            "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"Indicates whether the campaign is using an embedded phone number (except the required HELP information contact phone number).\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide, Embedded Phone Number",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio code ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30889: \"Campaign vetting rejection - Embedded Phone Number\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "website",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Website problems"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " a working website that represents the brand, can be viewed without a login, and explains the business and its messaging."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "Twilio: \"Website: The URL you provide needs to be functional and represent the brand you're registering. Sites that don't load, return errors, or aren't live yet won't pass review.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, Make Sure Your Data Matches Up",
+            "href": "https://help.twilio.com/articles/11847054539547-A2P-10DLC-Campaign-Approval-Best-Practices"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio codes ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30891: \"Campaign vetting rejection - Invalid Website URL\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30919: \"Campaign rejected: Website lacks sufficient business or messaging use case info\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30920: \"Campaign rejected: Website is only a form; insufficient business context\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30921: \"Campaign rejected: Website requires authentication and cannot be reviewed\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "brand-details",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Brand details don't match"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " the legal name, address and other brand details match the tax record, and the brand name in messages matches the registered brand."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "Twilio: \"most Standard or LVS Brands fail because of a mismatch between the business information (exact legal business name, exact address, etc) submitted in the registration process with the Business Profile, and that information as registered with the government tax authority.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Docs, Resubmitting Standard/LVS Brands",
+            "href": "https://www.twilio.com/docs/messaging/compliance/a2p-10dlc/troubleshooting-a2p-brands/troubleshooting-and-rectifying-a2p-standardlvs-brands"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "Twilio: \"Brand Name: If you register as \"Acme Inc\" but your messages say \"Contoso,\" reviewers will flag that mismatch.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, Make Sure Your Data Matches Up",
+            "href": "https://help.twilio.com/articles/11847054539547-A2P-10DLC-Campaign-Approval-Best-Practices"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio codes ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30894: \"Campaign vetting rejection - Invalid Brand Information\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "30918: \"Campaign rejected: DBA name does not match the legal business name on file\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "AT&T Office@Hand product guidance ("
+        },
+        {
+          "t": "link",
+          "v": "AT&T Office@Hand support",
+          "href": "https://asecare.att.com/tutorials/troubleshooting-tcr-sms-application-rejections-att-officehand-95333/?T+Office%40Hand=&product=AT"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "713: \"You didn’t use an email address with your company domain.\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "711: \"You’ve used the same EIN for multiple brands registered.\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "vetting-appeals",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Brand vetting failed: appeals and limits"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " appeals fit TCR's time window and vet status, and each one is charged."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"Appeals are allowed for vets created within 45 calendar days\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR Brand Vetting Appeals, Appeal Requirements",
+            "href": "https://www.campaignregistry.com/Assets/Brand%20Vetting%20Appeals%20Overview.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"Appeals are only allowed on a Standard Vet in a final state (ACTIVE/FAIL) not a temporary state (PENDING)\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR Brand Vetting Appeals",
+            "href": "https://www.campaignregistry.com/Assets/Brand%20Vetting%20Appeals%20Overview.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"Each appeal request is charged regardless of the outcome\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR Brand Vetting Appeals",
+            "href": "https://www.campaignregistry.com/Assets/Brand%20Vetting%20Appeals%20Overview.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "prohibited-content",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Prohibited and high-risk content"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " some business types and content are not allowed at all, whatever the wording."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "CTIA: \"Message Senders should take affirmative steps and employ tools that can monitor and prevent Unwanted Messages and content, including for example content that: (1) is unlawful, harmful, abusive, malicious, misleading, harassing, excessively violent, obscene/illicit, or defamatory\" ("
+          },
+          {
+            "t": "link",
+            "v": "CTIA, 5.3.1",
+            "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "Twilio: \"Please note that these forbidden use cases are not only related to the content of the message but the business type itself.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, Forbidden Message Categories",
+            "href": "https://help.twilio.com/articles/360045004974-Forbidden-message-categories-for-SMS-and-MMS-in-the-US-and-Canada"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "Twilio, third-party lead generation: \"Any third-party use cases are strictly forbidden. Consent must be obtained directly from end-users.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, Forbidden Message Categories",
+            "href": "https://help.twilio.com/articles/360045004974-Forbidden-message-categories-for-SMS-and-MMS-in-the-US-and-Canada"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "Twilio, debt: \"Debt consolidation, debt reduction and credit repair programs are prohibited regardless if there is first-party consent.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, Forbidden Message Categories",
+            "href": "https://help.twilio.com/articles/360045004974-Forbidden-message-categories-for-SMS-and-MMS-in-the-US-and-Canada"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "Twilio, gambling: \"Gambling traffic is prohibited in the US and Canada on all number types (Toll Free, Short Code, Long Code, RCS).\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, Forbidden Message Categories",
+            "href": "https://help.twilio.com/articles/360045004974-Forbidden-message-categories-for-SMS-and-MMS-in-the-US-and-Canada"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"An attestation that Affiliate Marketing will not be a part of this campaign.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide, Terms & Conditions",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"Due to these issues, we will no longer support any campaign under the following categories, regardless of any prior approval.\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 5.2 Disallowed Content",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio's Forbidden Message Categories article lists more categories, including high-risk financial services, \"get rich quick\" schemes, cannabis and CBD, prescription drugs, phishing and academic fraud. ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center, Forbidden Message Categories",
+          "href": "https://help.twilio.com/articles/360045004974-Forbidden-message-categories-for-SMS-and-MMS-in-the-US-and-Canada"
+        },
+        {
+          "t": "text",
+          "v": ")"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio code ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30951: \"Campaign rejected: Third-party lead generation or MLM content detected\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "Twilio's guidance for this code group: \"This rejection is ineligible for resubmission under the existing code-specific guidance.\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "AT&T Office@Hand product guidance ("
+        },
+        {
+          "t": "link",
+          "v": "AT&T Office@Hand support",
+          "href": "https://asecare.att.com/tutorials/troubleshooting-tcr-sms-application-rejections-att-officehand-95333/?T+Office%40Hand=&product=AT"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "9208: \"Your sample messages indicate lead generation or affiliated marketing.\""
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "708: \"One or more of your sample messages intends to generate leads to your business and/or referrals to another company that isn’t yours.\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "age-gated-content",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Age-gated (SHAFT) content"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " some age-restricted content is never allowed on long code, and where it is allowed, the age gate asks for a date of birth, not a yes or no answer."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "Twilio: \"Alcohol traffic is allowed on Toll Free, Short Code, and Long Code in the US, as long as proper age gating procedures are in place. Age gating means that website users must input their date of birth. It cannot be a yes or no question.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, Forbidden Message Categories",
+            "href": "https://help.twilio.com/articles/360045004974-Forbidden-message-categories-for-SMS-and-MMS-in-the-US-and-Canada"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "Twilio: \"Firearms, Vape, and E-cigarettes are not allowed on Short Code, Toll Free, or Long Code regardless of age gating. Tobacco is allowed on Short Code with proper age gating procedures in place, but isn’t allowed on Long Code or Toll Free.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, Forbidden Message Categories",
+            "href": "https://help.twilio.com/articles/360045004974-Forbidden-message-categories-for-SMS-and-MMS-in-the-US-and-Canada"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "Twilio: \"The only way to send age-gated traffic into Canada (even with proper age-gating) is to receive a special carrier exemption.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Twilio Help Center, Forbidden Message Categories",
+            "href": "https://help.twilio.com/articles/360045004974-Forbidden-message-categories-for-SMS-and-MMS-in-the-US-and-Canada"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"Nonacceptable age gating function includes but is not limited to Yes or No responses. The age-gate mechanism should include the date of birth verification during the consent opt-in of the consumer.\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 5.7 Age Gating",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"Indicates whether the campaign includes any age-gated content as defined by Carrier and CTIA guidelines.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide, Age-Gated Content",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio code ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30888: \"Campaign vetting rejection - Age Gate Not Present / Not Acceptable\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "shared-numbers",
+      "inl": [
+        {
+          "t": "text",
+          "v": "One number or campaign shared by several businesses"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " each business has its own campaign, and a number is not shared across businesses."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "T-Mobile: \"The use of shared telephone numbers across multiple businesses, entities, or organizations is prohibited. “Sub-aggregating” a single telephone number with multiple Message Senders is also prohibited.\" ("
+          },
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, 4.6 Shared Codes Prohibited",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Twilio code ("
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "):"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "30926: \"Campaign rejected: Multiple companies cannot share a single campaign\""
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "who-rejected",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Who rejected my campaign, and where to appeal"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " you take a rejection to the CSP you registered through. TCR does not make the decision."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"The Campaign Registry (TCR) does not review, approve, or reject campaigns. This is solely done by the CSPs and their upstream connection partners.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR FAQ",
+            "href": "https://www.campaignregistry.com/resources/"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ],
+        [
+          {
+            "t": "text",
+            "v": "TCR: \"If your campaign is rejected for any reason, you will need to speak to your CSP that you registered through.\" ("
+          },
+          {
+            "t": "link",
+            "v": "TCR FAQ",
+            "href": "https://www.campaignregistry.com/resources/"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h3",
+      "id": "carrier-baseline",
+      "inl": [
+        {
+          "t": "text",
+          "v": "The baseline every carrier uses"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "bold",
+          "v": "What the rule requires:"
+        },
+        {
+          "t": "text",
+          "v": " every campaign follows the CTIA Messaging Principles and Best Practices."
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "text",
+            "v": "Verizon: \"every campaign\" is expected to be \"compliant with the CTIA Messaging Principles and Best Practices.\" ("
+          },
+          {
+            "t": "link",
+            "v": "Verizon",
+            "href": "https://www.verizon.com/about/account-security/smishing-and-spam-text-messages"
+          },
+          {
+            "t": "text",
+            "v": ")"
+          }
+        ]
+      ]
+    },
+    {
+      "k": "h2",
+      "id": "check-your-campaign",
+      "inl": [
+        {
+          "t": "text",
+          "v": "5. Check your campaign before you submit"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "The free 10DLC checker walks through the same rules above, field by field, and links each finding back to its official source."
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "link",
+          "v": "Check my 10DLC campaign",
+          "href": "https://www.getsurfox.com/tools"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "A free tool from SurFox AI"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Once you're cleared to text, SurFox AI turns your cold leads into booked calls."
+        }
+      ]
+    },
+    {
+      "k": "h2",
+      "id": "faq",
+      "inl": [
+        {
+          "t": "text",
+          "v": "6. FAQ"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "inl": [
+        {
+          "t": "text",
+          "v": "What is 10DLC?"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "10DLC stands for 10-digit long code, a standard 10-digit number used for business (A2P) texting. Verizon says it relies on every campaign being \"compliant with the CTIA Messaging Principles and Best Practices.\""
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Source: "
+        },
+        {
+          "t": "link",
+          "v": "Verizon",
+          "href": "https://www.verizon.com/about/account-security/smishing-and-spam-text-messages"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Do I need to register for 10DLC to text customers from a business number?"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "The sources on this page describe brand and campaign registration through a CSP, reviewed by \"the CSPs and their upstream connection partners.\" Ask your messaging provider what it requires for your number."
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Source: "
+        },
+        {
+          "t": "link",
+          "v": "TCR FAQ",
+          "href": "https://www.campaignregistry.com/resources/"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Does The Campaign Registry approve or reject campaigns?"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "No. TCR says: \"The Campaign Registry (TCR) does not review, approve, or reject campaigns. This is solely done by the CSPs and their upstream connection partners.\""
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Source: "
+        },
+        {
+          "t": "link",
+          "v": "TCR FAQ",
+          "href": "https://www.campaignregistry.com/resources/"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "inl": [
+        {
+          "t": "text",
+          "v": "How long does 10DLC campaign approval take?"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "None of the official sources on this page gives a set time. Review is done by your CSP and its upstream partners, so ask your provider."
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Source: "
+        },
+        {
+          "t": "link",
+          "v": "TCR FAQ",
+          "href": "https://www.campaignregistry.com/resources/"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "inl": [
+        {
+          "t": "text",
+          "v": "What should a 10DLC call-to-action include?"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "CTIA says a call-to-action should make people aware of the program description, the sending number, who is sending, fees, and other terms such as how to opt out, customer care contact and any privacy policy."
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Source: "
+        },
+        {
+          "t": "link",
+          "v": "CTIA Messaging Principles and Best Practices, 5.1.1",
+          "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Can I use bit.ly or other public link shorteners in 10DLC messages?"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "No. TCR says: \"Note that public URL shorteners (bitly, tinyurl) are not accepted.\" CTIA says a shortener should be dedicated to the exclusive use of the sender."
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Source: "
+        },
+        {
+          "t": "link",
+          "v": "TCR CSP User Guide, Embedded Link",
+          "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+        },
+        {
+          "t": "text",
+          "v": "; "
+        },
+        {
+          "t": "link",
+          "v": "CTIA, 5.3.2",
+          "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "inl": [
+        {
+          "t": "text",
+          "v": "How many sample messages do I need?"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "TCR says: \"All campaigns require at least 1 sample message, and some campaign types require a minimum of 2 sample messages.\""
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Source: "
+        },
+        {
+          "t": "link",
+          "v": "TCR CSP User Guide, Sample Messages",
+          "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Why was my 10DLC campaign rejected, and what do the error codes mean?"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Your CSP gets the rejection reason, and codes depend on the provider. Twilio codes such as 30909 are Twilio's labels, and AT&T Office@Hand codes are that product's guidance, not carrier rules."
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Source: "
+        },
+        {
+          "t": "link",
+          "v": "Twilio Help Center",
+          "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+        },
+        {
+          "t": "text",
+          "v": "; "
+        },
+        {
+          "t": "link",
+          "v": "AT&T Office@Hand support",
+          "href": "https://asecare.att.com/tutorials/troubleshooting-tcr-sms-application-rejections-att-officehand-95333/?T+Office%40Hand=&product=AT"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Can I appeal a failed brand vetting?"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "TCR allows appeals \"for vets created within 45 calendar days\" on a vet in a final state, and \"Each appeal request is charged regardless of the outcome.\""
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Source: "
+        },
+        {
+          "t": "link",
+          "v": "TCR Brand Vetting Appeals",
+          "href": "https://www.campaignregistry.com/Assets/Brand%20Vetting%20Appeals%20Overview.pdf"
+        }
+      ]
+    },
+    {
+      "k": "h3",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Is 10DLC compliance the same as TCPA compliance?"
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "This page does not cover the TCPA. CTIA's guidance is not legal advice, so ask a lawyer about your legal obligations."
+        }
+      ]
+    },
+    {
+      "k": "p",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Source: "
+        },
+        {
+          "t": "link",
+          "v": "CTIA, 2.3 Scope, Limitations, & Disclaimer of Legal Guidance or Advice",
+          "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+        }
+      ]
+    },
+    {
+      "k": "h2",
+      "id": "sources",
+      "inl": [
+        {
+          "t": "text",
+          "v": "Sources"
+        }
+      ]
+    },
+    {
+      "k": "ul",
+      "items": [
+        [
+          {
+            "t": "link",
+            "v": "CTIA Messaging Principles and Best Practices (May 2023)",
+            "href": "https://api.ctia.org/wp-content/uploads/2023/05/230523-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 26, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "The Campaign Registry, Resources FAQ",
+            "href": "https://www.campaignregistry.com/resources/"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 26, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "TCR CSP User Guide (Jul 2026 v2)",
+            "href": "https://www.campaignregistry.com/wp-content/uploads/CSP-User-Guide_Jul_2026_v2.pdf"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 27, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "TCR Brand Vetting Appeals Overview",
+            "href": "https://www.campaignregistry.com/Assets/Brand%20Vetting%20Appeals%20Overview.pdf"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 26, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "TCR developer portal, Sharing Campaigns",
+            "href": "https://developer.campaignregistry.com/cadp/sharing-campaigns"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 27, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Twilio Help Center, A2P 10DLC Campaign Registration Rejected",
+            "href": "https://help.twilio.com/articles/15778026827291-Why-Was-My-A2P-10DLC-Campaign-Registration-Rejected-"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 27, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Twilio Help Center, A2P 10DLC Campaign Onboarding Guide",
+            "href": "https://help.twilio.com/articles/11847054539547-A2P-10DLC-Campaign-Approval-Best-Practices"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 26, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Twilio Docs, Troubleshooting A2P 10DLC Standard/LVS Brands",
+            "href": "https://www.twilio.com/docs/messaging/compliance/a2p-10dlc/troubleshooting-a2p-brands/troubleshooting-and-rectifying-a2p-standardlvs-brands"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 26, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Twilio Help Center, Forbidden Message Categories",
+            "href": "https://help.twilio.com/articles/360045004974-Forbidden-message-categories-for-SMS-and-MMS-in-the-US-and-Canada"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 27, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Verizon, Smishing and spam text messages",
+            "href": "https://www.verizon.com/about/account-security/smishing-and-spam-text-messages"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 26, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "T-Mobile Support, Consumer versus Non-Consumer Text Messaging",
+            "href": "https://www.t-mobile.com/support/plans-features/consumer-versus-non-consumer-text-messaging"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 26, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "T-Mobile Code of Conduct, Version 2.2 (November 2020)",
+            "href": "https://www.t-mobile.com/support/public-files/attachments/T-Mobile%20Code%20of%20Conduct.pdf"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 27, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "AT&T Office@Hand support, Troubleshooting TCR SMS Application Rejections (product guidance)",
+            "href": "https://asecare.att.com/tutorials/troubleshooting-tcr-sms-application-rejections-att-officehand-95333/?T+Office%40Hand=&product=AT"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 27, 2026"
+          }
+        ],
+        [
+          {
+            "t": "link",
+            "v": "Bandwidth Support, DCA2 vetting rejection reasons (Bandwidth's list)",
+            "href": "https://www.bandwidth.com/support/en/articles/12823079-dca2-vetting-rejection-reasons"
+          },
+          {
+            "t": "text",
+            "v": ", checked Oct 27, 2026"
+          }
+        ]
+      ]
+    }
+  ],
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "10DLC registration and compliance, explained with official sources",
+      "description": "What 10DLC is, how A2P 10DLC registration works, and the rules behind common campaign rejections, quoted from CTIA, TCR and carrier sources.",
+      "url": "https://www.getsurfox.com/tools/10dlc",
+      "mainEntityOfPage": "https://www.getsurfox.com/tools/10dlc",
+      "dateModified": "2026-10-27",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SurFox AI",
+        "url": "https://www.getsurfox.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "url": "https://www.getsurfox.com/tools/10dlc",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is 10DLC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "10DLC stands for 10-digit long code, a standard 10-digit number used for business (A2P) texting. Verizon says it relies on every campaign being \"compliant with the CTIA Messaging Principles and Best Practices.\""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to register for 10DLC to text customers from a business number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The sources on this page describe brand and campaign registration through a CSP, reviewed by \"the CSPs and their upstream connection partners.\" Ask your messaging provider what it requires for your number."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does The Campaign Registry approve or reject campaigns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. TCR says: \"The Campaign Registry (TCR) does not review, approve, or reject campaigns. This is solely done by the CSPs and their upstream connection partners.\""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does 10DLC campaign approval take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "None of the official sources on this page gives a set time. Review is done by your CSP and its upstream partners, so ask your provider."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should a 10DLC call-to-action include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CTIA says a call-to-action should make people aware of the program description, the sending number, who is sending, fees, and other terms such as how to opt out, customer care contact and any privacy policy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use bit.ly or other public link shorteners in 10DLC messages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. TCR says: \"Note that public URL shorteners (bitly, tinyurl) are not accepted.\" CTIA says a shortener should be dedicated to the exclusive use of the sender."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many sample messages do I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TCR says: \"All campaigns require at least 1 sample message, and some campaign types require a minimum of 2 sample messages.\""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why was my 10DLC campaign rejected, and what do the error codes mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your CSP gets the rejection reason, and codes depend on the provider. Twilio codes such as 30909 are Twilio's labels, and AT&T Office@Hand codes are that product's guidance, not carrier rules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I appeal a failed brand vetting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TCR allows appeals \"for vets created within 45 calendar days\" on a vet in a final state, and \"Each appeal request is charged regardless of the outcome.\""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is 10DLC compliance the same as TCPA compliance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This page does not cover the TCPA. CTIA's guidance is not legal advice, so ask a lawyer about your legal obligations."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SurFox AI",
+          "item": "https://www.getsurfox.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://www.getsurfox.com/tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "10DLC registration and compliance",
+          "item": "https://www.getsurfox.com/tools/10dlc"
+        }
+      ]
+    }
+  ]
+}

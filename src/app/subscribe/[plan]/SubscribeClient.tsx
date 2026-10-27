@@ -93,6 +93,10 @@ export default function Subscribe() {
   // the normal case and just means no click to correlate.
   const clickId = validCode(readCookie('surfox_click_id'));
 
+  // First-touch ?src= tag (for example 10dlc-checker). The middleware keeps the first one in surfox_first_src; the lead-app saves it on the
+  // new account when the plan is paid. A tag in this page's own URL is used only when no first touch was recorded.
+  const firstTouchSrc = validCode(readCookie('surfox_first_src')) || validCode(urlParams.get('src'));
+
   setIsSubmitting(true);
   try {
     const response = await fetch('https://api.surfox.ai/api/stripe/create-checkout-session', {
@@ -104,6 +108,7 @@ export default function Subscribe() {
         referralCode: referralCode,
         affiliateCode: affiliateCode,
         clickId: clickId,
+        firstTouchSrc: firstTouchSrc,
         metadata: {
           terms_agreed_at: new Date().toISOString()
         }

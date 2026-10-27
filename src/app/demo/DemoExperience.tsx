@@ -50,7 +50,7 @@ const errorOf = (j: Record<string, unknown>) => ({
 // Step 1: the form. The server decides everything (bot check, duplicates, the phone screen: US mobile only) and sends the text code.
 // Nothing is built or read yet; this only reports what happened in words Surf can say.
 async function startSignup(body: {
-  name: string; email: string; website: string; phone: string; heard_from: string; heard_other: string; affiliate_src: string;
+  name: string; email: string; website: string; phone: string; heard_from: string; heard_other: string; affiliate_src: string; first_touch_src: string;
   turnstile_token: string; hp: string;
 }): Promise<StartResult> {
   const r = await postJson('/api/demo/start', body);
@@ -233,6 +233,21 @@ function audienceSrc(): string {
     const m = document.cookie.match(/(?:^|;\s*)surfox_src=([^;]+)/);
     const fromCookie = m ? decodeURIComponent(m[1]) : '';
     return AUDIENCE_SRC.test(fromCookie) ? fromCookie.toLowerCase() : '';
+  } catch {
+    return '';
+  }
+}
+
+// First-touch ?src= tag (any shape, e.g. 10dlc-checker). The site's middleware keeps the first one in a cookie; this page's own URL wins if it
+// carries one. Sent along with the sign-up so the lead-app can keep it through to a paid plan. The server checks the shape again.
+const FIRST_TOUCH_SRC = /^[A-Za-z0-9_-]{1,64}$/;
+function firstTouchSrc(): string {
+  try {
+    const fromUrl = new URLSearchParams(window.location.search).get('src') ?? '';
+    if (FIRST_TOUCH_SRC.test(fromUrl)) return fromUrl;
+    const m = document.cookie.match(/(?:^|;\s*)surfox_first_src=([^;]+)/);
+    const fromCookie = m ? decodeURIComponent(m[1]) : '';
+    return FIRST_TOUCH_SRC.test(fromCookie) ? fromCookie : '';
   } catch {
     return '';
   }
@@ -621,7 +636,7 @@ export default function DemoExperience() {
     for (let attempt = 0; attempt < 4 && !pending; attempt++) {
       await waitForBotCheck();
       const r = await startSignup({
-        name, email, website: site, phone, heard_from: heard.from, heard_other: heard.other, affiliate_src: affiliate,
+        name, email, website: site, phone, heard_from: heard.from, heard_other: heard.other, affiliate_src: affiliate, first_touch_src: firstTouchSrc(),
         turnstile_token: turnstileToken.current, hp: honeypot.current?.value ?? '',
       });
       if (TURNSTILE_SITE_KEY && window.turnstile) window.turnstile.reset(); // a token works once

@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getAllBlogPosts } from '@/data/blog-posts';
 import { getAllNews } from '@/lib/news';
+import { toolsOpen } from '../lib/tools/content-gate';
 
 const BASE_URL = 'https://www.getsurfox.com';
 
@@ -95,5 +96,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [homepage, ...keyPages, ...secondaryPages, ...blogPosts, ...newsReleases];
+  // The 10DLC checker and its explainer, listed only while the content gate is open (rulebook and explainer text are real).
+  const toolPages: MetadataRoute.Sitemap = toolsOpen()
+    ? ['/tools', '/tools/10dlc'].map((path) => ({
+        url: `${BASE_URL}${path}`,
+        lastModified: now,
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+      }))
+    : [];
+
+  return [homepage, ...keyPages, ...secondaryPages, ...blogPosts, ...newsReleases, ...toolPages];
 }

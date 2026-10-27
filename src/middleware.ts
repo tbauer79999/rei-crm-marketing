@@ -62,6 +62,19 @@ export function middleware(request: NextRequest, event: NextFetchEvent) {
     response.cookies.set('surfox_src', src.toLowerCase(), cookieOptions(ATTRIBUTION_MAX_AGE, cookieDomain));
   }
 
+  // First-touch ?src= for the 10DLC checker (/tools) and the /demo sign-up. Written once and never overwritten, so the tag that first
+  // brought the visitor is the one that survives to the sign-up. Readable by the page (httpOnly false), like surfox_aff.
+  // This is a separate cookie from surfox_src above, which keeps its own aud- behaviour.
+  if (src && ATTRIBUTION_CODE.test(src) && !request.cookies.get('surfox_first_src')) {
+    response.cookies.set('surfox_first_src', src, cookieOptions(ATTRIBUTION_MAX_AGE, cookieDomain));
+  }
+
+  // The 10DLC checker is only indexable on the production deployment. Preview deploys get an X-Robots-Tag header on every /tools page.
+  const path = request.nextUrl.pathname;
+  if (process.env.VERCEL_ENV !== 'production' && (path === '/tools' || path.startsWith('/tools/'))) {
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+  }
+
   // Click tracking rides the same ?aff= capture above, with a second token
   // (click_id) instead of a parallel system — see affiliate_clicks migration.
   // Only fires when an affiliate link was actually followed THIS pageview

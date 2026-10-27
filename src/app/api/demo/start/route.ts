@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     timeoutMs: 26000, // phone lookup + text can take a few seconds each
     body: {
       name: b?.name, email: b?.email, website: b?.website, phone: b?.phone,
-      heard_from: b?.heard_from, heard_other: b?.heard_other, affiliate_src: b?.affiliate_src,
+      heard_from: b?.heard_from, heard_other: b?.heard_other, affiliate_src: b?.affiliate_src, first_touch_src: b?.first_touch_src,
       turnstile_token: b?.turnstile_token, hp: b?.hp,
     },
   });
