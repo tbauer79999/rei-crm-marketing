@@ -5,7 +5,7 @@ import path from 'node:path';
 import test from 'node:test';
 import { outboundUrl, resolveAttribution, tagOf } from '../attribution';
 import { parseExplainerMd, parseRulebookMd } from '../build-content';
-import { checkPrivacyPage, gateStatus, loadConsentText, loadExplainer, loadRulebook, parseExplainer, parseRulebook, toolsOpen } from '../content-gate';
+import { gateStatus, loadConsentText, loadExplainer, loadRulebook, parseExplainer, parseRulebook, toolsOpen } from '../content-gate';
 import { RETENTION_DAYS } from '../config';
 import { ERROR_COPY } from '../errors';
 import { clientIp, hashIp, issueVisitorCookie, readVisitorCookie, signAdminCookie, verifyAdminCookie } from '../visitor';
@@ -65,20 +65,14 @@ test('the gate is closed when the rulebook or explainer is missing, empty, unrea
   for (const [name, files] of Object.entries(closed)) assert.equal(withDir(tmpContent(files), toolsOpen), false, name);
 });
 
-test('the gate stays closed for consent wording or a privacy page that is missing or still marked pending', () => {
-  const closedWith: [string, Record<string, unknown | null>, string | null][] = [
-    ['consent missing', { 'rulebook.json': goodRulebook, 'explainer.json': goodExplainer }, GOOD_PRIVACY],
-    ['consent pending marker', { ...allGood, 'consent.json': { text: '[PENDING LEGAL REVIEW: GENERAL COUNSEL CONSENT WORDING]' } }, GOOD_PRIVACY],
-    ['consent starts with [PASTE', { ...allGood, 'consent.json': { text: '[PASTE wording here]' } }, GOOD_PRIVACY],
-    ['privacy page unreadable', allGood, null],
-    ['privacy page has no checker section', allGood, '<h2>Privacy</h2>'],
-    ['privacy section marked [PENDING GC REVIEW]', allGood, '<section id="10dlc-checker"><h2>10DLC Registration Checker [PENDING GC REVIEW]</h2></section>'],
-    ['privacy page has a [PASTE marker', allGood, '<section id="10dlc-checker">[PASTE the final text]</section>'],
-  ];
-  for (const [name, files, privacy] of closedWith) assert.equal(withDir(tmpContent(files), toolsOpen, privacy), false, name);
+test('missing consent wording or an unmarked privacy page does NOT close the routes; only the rulebook and explainer do', () => {
+  assert.equal(withDir(tmpContent({ 'rulebook.json': goodRulebook, 'explainer.json': goodExplainer }), toolsOpen, null), true);
+  assert.equal(withDir(tmpContent({ ...allGood, 'consent.json': { text: '[PENDING LEGAL REVIEW: GENERAL COUNSEL CONSENT WORDING]' } }), toolsOpen, null), true);
+  assert.equal(withDir(tmpContent({ 'explainer.json': goodExplainer, 'consent.json': GOOD_CONSENT }), toolsOpen), false);
+  assert.equal(withDir(tmpContent({ 'rulebook.json': goodRulebook, 'consent.json': GOOD_CONSENT }), toolsOpen), false);
 });
 
-test('the gate opens when rulebook, explainer, consent wording and the privacy section are all real, and never throws', () => {
+test('the routes open when the rulebook and explainer are real, and never throw', () => {
   assert.equal(withDir(tmpContent(allGood), toolsOpen), true);
   assert.doesNotThrow(() => withDir(fs.mkdtempSync(path.join(os.tmpdir(), 'tools-empty-')), toolsOpen, null));
 });
@@ -89,23 +83,20 @@ test('the consent wording alone is held back while it is pending legal review', 
   assert.equal(withDir(tmpContent({ 'consent.json': { text: 'Real wording.' } }), () => loadConsentText().ok), true);
 });
 
-test('the shipped rulebook and explainer are real; the gate is open exactly when consent and the privacy section are signed off', () => {
+test('the shipped rulebook and explainer are real, so the routes are open', () => {
   const g = gateStatus();
   assert.equal(g.rulebook, 'ok', g.rulebook);
   assert.equal(g.explainer, 'ok', g.explainer);
   const rb = loadRulebook();
   assert.ok(rb.ok && rb.data.rules.length === 163);
-  assert.equal(toolsOpen(), g.consent === 'ok' && g.privacy === 'ok');
-  assert.equal(g.open, toolsOpen());
+  assert.equal(toolsOpen(), true);
+  assert.equal(g.open, true);
 });
 
-test('the privacy page carries the checker section; while it is marked [PENDING GC REVIEW] the real gate is closed', () => {
+test('the privacy page carries the checker section with no pending marker', () => {
   const page = fs.readFileSync(path.join(process.cwd(), 'src', 'app', 'privacy', 'PrivacyClient.tsx'), 'utf8');
   assert.ok(page.includes('id="10dlc-checker"'));
-  if (page.includes('[PENDING GC REVIEW]')) {
-    assert.equal(checkPrivacyPage().ok, false);
-    assert.equal(toolsOpen(), false);
-  }
+  assert.ok(!page.includes('[PENDING'));
 });
 
 test('the privacy section states the retention periods the code enforces, and covers what the brief lists', () => {

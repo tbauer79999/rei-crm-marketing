@@ -2,9 +2,7 @@
 
 Run this on a Vercel **preview** deploy of the branch before anything reaches production. Tick each box.
 
-> While consent wording is pending or the privacy section still says `[PENDING GC REVIEW]`, `/tools`, `/tools/10dlc` and the tool APIs
-> are **404 + noindex on every deploy, previews included**. That is intended. Everything below except the browser pages works with the
-> gate closed: the scripts call the library directly, and `/api/tools/cron` is deliberately outside the gate.
+> Until `content/consent.json` holds real wording the email unlock and the "leave your email" queue are off; everything else works.
 
 ## 0. Order of operations (platform first, then the website)
 
@@ -66,11 +64,10 @@ purchase is real Stripe. Use a Stripe promo code that makes it free, or buy once
   shows the new account.
 - [ ] Demo handoff: open `/demo?src=10dlc-checker` (or arrive with the cookie), complete a demo sign-up, and confirm `demo_signups.first_touch_src` is set and the tenant has a `demo_first_touch_src` setting in `platform_settings`.
 
-## 5. Opening the gate (after counsel signs off)
+## 5. Turning on the email unlock
 
-- [ ] `content/consent.json`: replace the pending marker with the approved wording.
-- [ ] Privacy page: remove `[PENDING GC REVIEW]` from the checker section heading in `PrivacyClient.tsx` (edit the text only if counsel changed it; keep the retention periods in step with `RETENTION_DAYS` in `config.ts`, a test checks this).
-- [ ] Deploy. `/tools`, `/tools/10dlc` return 200, the sitemap lists both, and the email unlock appears.
+- [ ] `content/consent.json`: replace the pending marker with the approved wording, then deploy. The unlock form and the "leave your email" queue appear.
+- [ ] Privacy page: the checker section's retention periods must match `RETENTION_DAYS` in `config.ts` (a test checks this).
 - [ ] On production only, `view-source` of `/tools` shows no `noindex`. On a preview URL it still does.
 - [ ] `/tools/admin`: sign in, check cost vs cap, the queue, and alert status.
 

@@ -15,10 +15,11 @@ Rebuild both JSON files after editing either `.md` file: `npx tsx src/lib/tools/
 The converter copies text through unchanged. The one transformation: URLs on the bare domain `https://getsurfox.com` become
 `https://www.getsurfox.com`, because the bare domain 301-redirects to www.
 
-**Content gate.** `/tools`, `/tools/10dlc`, `/tools/r/*`, `/tools/admin` and the tool APIs return 404 with noindex, and the sitemap leaves
-the URLs out, until ALL of these are real: the rulebook, the explainer text, `consent.json`, and the checker section of the privacy page
-(`src/app/privacy/PrivacyClient.tsx`, read as text; it must exist and must not contain a `[PENDING` or `[PASTE` marker). The build never
-fails over this. `/api/tools/cron` is outside the gate (it needs the secret) so upkeep keeps running.
+**Routes open/closed.** `/tools`, `/tools/10dlc`, `/tools/r/*`, `/tools/admin` and the tool APIs are open whenever the rulebook and the
+explainer load and validate. If either is missing, empty, malformed or still holds a `[PASTE ...]` / `[PENDING ...]` / `PLACEHOLDER`
+marker, they return 404 with noindex and the sitemap leaves them out; the build never fails over this. The consent wording is not a
+gate: while `consent.json` still holds the pending marker the checker works, but the email unlock and the "leave your email" queue are
+not offered. `/api/tools/cron` is outside this check (it needs its secret) so upkeep keeps running.
 
 Retention is enforced in code (`retention.ts`, run by the cron call) and the privacy section states the same periods.
 

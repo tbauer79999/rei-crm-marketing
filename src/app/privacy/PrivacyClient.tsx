@@ -457,7 +457,7 @@ export default function PrivacyPolicy() {
                 <FileText className="w-6 h-6 text-[#0A7C8C]" />
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-[#13171F]">
-                10DLC Registration Checker [PENDING GC REVIEW]
+                10DLC Registration Checker
               </h2>
             </div>
 

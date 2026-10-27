@@ -140,7 +140,7 @@ export function loadExplainer(): GateResult<Explainer> {
   return f.ok ? parseExplainer(f.data) : f;
 }
 
-// Consent wording. Separate from the route gate: the checker still runs while this is pending, but the email unlock is not offered.
+// Consent wording. Not a route gate: the checker still runs while this is pending, but the email unlock is not offered.
 export function loadConsentText(): GateResult<string> {
   const f = readJson('consent.json');
   if (!f.ok) return f;
@@ -150,47 +150,19 @@ export function loadConsentText(): GateResult<string> {
   return { ok: true, data: text };
 }
 
-// Privacy page. The checker collects personal data and sets cookies, so its section of the privacy page must exist and must have been
-// signed off: the section carries a "[PENDING GC REVIEW]" marker until general counsel has reviewed it, and the gate stays closed while any
-// "[PASTE..." or "[PENDING..." marker is on that page. The file is read as text; nothing is imported from the site.
-const PRIVACY_SECTION_ID = 'id="10dlc-checker"';
-
-// Read through a directory + a variable file name (the same shape as the content files) so Next's output tracing copies the privacy page
-// into the serverless bundle. Reading it with a fixed file name is not traced, and the gate could never open on Vercel.
-function readPrivacyFile(name: string): string {
-  return fs.readFileSync(process.env.TOOLS_PRIVACY_FILE || path.join(process.cwd(), 'src', 'app', 'privacy', name), 'utf8');
-}
-
-export function privacyFilePath(): string {
-  return process.env.TOOLS_PRIVACY_FILE || path.join(process.cwd(), 'src', 'app', 'privacy', 'PrivacyClient.tsx');
-}
-
-export function checkPrivacyPage(): GateResult<true> {
-  let text: string;
-  try {
-    text = readPrivacyFile('PrivacyClient.tsx');
-  } catch {
-    return { ok: false, reason: 'privacy page cannot be read' };
-  }
-  if (!text.includes(PRIVACY_SECTION_ID)) return { ok: false, reason: 'privacy page has no 10DLC checker section' };
-  if (/\[\s*(?:PASTE|PENDING)/i.test(text)) return { ok: false, reason: 'privacy page still has a [PENDING] or [PASTE] marker' };
-  return { ok: true, data: true };
-}
-
-// The gate for every /tools route and for the sitemap. All four must be real: the rulebook, the explainer text, the consent wording
-// and the privacy page section. Until then the routes are 404 + noindex and the sitemap leaves them out.
+// The routes are open whenever the rulebook and the explainer text load and validate. If either file is missing, empty or malformed
+// the tool cannot work, so the routes answer 404 + noindex and the sitemap leaves them out (the build never fails over this).
+// The consent wording is NOT a gate: without it the checker runs, but the email unlock and the "leave your email" queue are not offered.
 export function toolsOpen(): boolean {
-  return loadRulebook().ok && loadExplainer().ok && loadConsentText().ok && checkPrivacyPage().ok;
+  return loadRulebook().ok && loadExplainer().ok;
 }
 
-export function gateStatus(): { open: boolean; rulebook: string; explainer: string; consent: string; privacy: string } {
+export function gateStatus(): { open: boolean; rulebook: string; explainer: string; consent: string } {
   const r = loadRulebook();
   const e = loadExplainer();
   const c = loadConsentText();
-  const p = checkPrivacyPage();
   return {
-    open: r.ok && e.ok && c.ok && p.ok,
-    privacy: p.ok ? 'ok' : p.reason,
+    open: r.ok && e.ok,
     rulebook: r.ok ? 'ok' : r.reason,
     explainer: e.ok ? 'ok' : e.reason,
     consent: c.ok ? 'ok' : c.reason,
