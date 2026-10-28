@@ -1,6 +1,6 @@
 import { enqueueAlert, flushAlerts, type AlertInput } from './alerts';
 import type { Attribution } from './attribution';
-import { countStatuses, runChecks, summarize, type CheckResult, type Counts, type SummaryCheck, type UsageRecord } from './checks';
+import { countStatuses, runChecks, summarize, withWhatBroke, type CheckResult, type Counts, type SummaryCheck, type UsageRecord } from './checks';
 import { CHECKS, type CheckId, type EventType } from './config';
 import { loadConsentText, type Rulebook } from './content-gate';
 import type { ErrorCode } from './errors';
@@ -55,7 +55,8 @@ export function toView(rec: ScanRecord): ScanView {
     site: rec.site,
     pages: rec.pages,
     counts: rec.counts,
-    checks: summarize(rec.checks),
+    // This is the visitor's own screen, so the "what broke it" sentence may quote their text. The share link uses summarize() without it.
+    checks: summarize(rec.checks, { includeUserText: true }),
     unlock_available: loadConsentText().ok,
   };
 }
@@ -278,7 +279,7 @@ export async function handleUnlock(d: Deps, req: { shareId: string; email: unkno
     raiseAlert(d, { kind: 'email_unlocked', site: rec.site, checks: rec.checks, attribution: req.attribution, unlocked: true, email });
     defer(d, () => sendReport(d, { ...rec, unlocked: true, email }, req.attribution));
   }
-  return { ok: true, share_id: rec.share_id, email, checks: rec.checks, emailed: true };
+  return { ok: true, share_id: rec.share_id, email, checks: withWhatBroke(rec.checks, true), emailed: true };
 }
 
 export async function sendReport(d: Deps, rec: ScanRecord, attribution: Attribution): Promise<boolean> {

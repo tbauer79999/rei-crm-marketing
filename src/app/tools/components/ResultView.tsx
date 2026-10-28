@@ -39,6 +39,12 @@ function FindingBlock({ f }: { f: ViewFinding }) {
         <StatusBadge status={f.status} />
         <span className="text-xs text-[#5a626e]">Rule {f.rule_id}</span>
       </div>
+      {f.what_broke ? (
+        <>
+          <h4 className="mt-3 text-sm font-semibold text-[var(--ink)]">What broke it</h4>
+          <p className="mt-1 text-[15px] leading-relaxed text-[var(--ink)]">{f.what_broke}</p>
+        </>
+      ) : null}
       <h4 className="mt-3 text-sm font-semibold text-[var(--ink)]">What the rule requires</h4>
       <blockquote className="mt-1 border-l-4 border-[var(--cyan-deep)] pl-3 text-[15px] leading-relaxed text-[var(--ink)]">{f.official_quote}</blockquote>
       <p className="mt-2 text-sm text-[#5a626e]">

@@ -118,12 +118,12 @@ test('cost is computed from tokens and the pricing config', async () => {
   assert.ok(costUsd('some-unknown-model', 1_000_000, 0) >= 5); // unknown models are billed high, so the cap errs safe
 });
 
-test('the summary hides evidence and all but the most serious finding', async () => {
+test('the summary lists every failed finding and never carries evidence from the visitor text', async () => {
   const c = client({ reply: (req) => verdictJson(req, 'fail', 'Reply STOP to opt out') });
   const run = await runChecks({ inputs: { opt_in_wording: text }, rulebook: { version: 't', rules }, client: c });
   const s = summarize(run.checks).find((k) => k.check === 'opt_in_wording')!;
-  assert.equal(s.findings.length, 1);
-  assert.equal(s.hiddenFindings, rules.length - 1);
+  assert.equal(s.findings.length, rules.length); // every failed rule stays visible
+  assert.equal(s.hiddenFindings, 0);
   assert.ok(!JSON.stringify(s).includes('Reply STOP to opt out'));
   assert.deepEqual(countStatuses(run.checks), { pass: 0, warn: 0, fail: 1, gray: 3 });
 });

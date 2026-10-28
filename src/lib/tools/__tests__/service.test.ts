@@ -6,6 +6,7 @@ import test from 'node:test';
 import { checkAttempt, recordAttempt } from '../limits';
 import { FetchError } from '../net-guard';
 import { NoTextError } from '../scan';
+import { summarize } from '../checks';
 import { drainQueue, handleCheck, handleJoinQueue, handleUnlock, newShareId, retryReports, toView } from '../service';
 import { ATTR, client, makeDeps, mailer, SCAN_OK, WHO } from './helpers';
 
@@ -182,11 +183,18 @@ test('share ids are long random strings and the share view carries the summary o
   assert.match(a, /^[A-Za-z0-9_-]{24}$/);
   const { deps, store } = makeDeps({ client: client({ reply: (req) => JSON.stringify({ findings: [...req.user.matchAll(/rule_id: (\S+)/g)].map((m) => ({ rule_id: m[1], status: 'fail', evidence: 'I agree to receive texts' })) }) }) });
   await handleCheck(deps, site());
-  const view = JSON.stringify(toView(store.scans[0]));
-  assert.ok(!view.includes('I agree to receive texts'), 'no excerpt from the visitor\'s own text');
-  assert.ok(!view.includes(store.scans[0].visitor_id!));
-  assert.ok(!view.includes(store.scans[0].ip_hash!));
-  assert.ok(!view.includes('@'));
+  // The share link (summarize without the visitor's text) carries none of their words, ids or addresses.
+  const shared = JSON.stringify(summarize(store.scans[0].checks));
+  assert.ok(!shared.includes('I agree to receive texts'), 'no excerpt from the visitor\'s own text');
+  assert.ok(!shared.includes(store.scans[0].visitor_id!));
+  assert.ok(!shared.includes(store.scans[0].ip_hash!));
+  assert.ok(!shared.includes('@'));
+  // The visitor's own screen may quote their text in the "what broke it" sentence, but still carries no ids or evidence field.
+  const own = JSON.stringify(toView(store.scans[0]));
+  assert.ok(own.includes('I agree to receive texts'));
+  assert.ok(!own.includes('"evidence"'));
+  assert.ok(!own.includes(store.scans[0].visitor_id!));
+  assert.ok(!own.includes(store.scans[0].ip_hash!));
 });
 
 test('only the visitor who ran the check can unlock it; consent and a real email are required', () =>
