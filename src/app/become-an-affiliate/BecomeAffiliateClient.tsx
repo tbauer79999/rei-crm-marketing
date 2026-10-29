@@ -17,6 +17,8 @@ interface ApplicationFormData {
   email: string;
   applicationLink: string;
   applicationNote: string;
+  heardAboutUs: string;
+  heardAboutUsDetail: string;
   /** Honeypot. Real users never see or fill this. */
   website: string;
 }
@@ -28,8 +30,18 @@ const EMPTY_FORM: ApplicationFormData = {
   email: '',
   applicationLink: '',
   applicationNote: '',
+  heardAboutUs: '',
+  heardAboutUsDetail: '',
   website: '',
 };
+
+const HEARD_ABOUT_US_OPTIONS = [
+  { value: 'ai_assistant', label: 'An AI assistant (ChatGPT, Claude, Gemini, etc.)' },
+  { value: 'google_search', label: 'Google search' },
+  { value: 'social_media', label: 'Social media' },
+  { value: 'referral', label: 'Referred by someone' },
+  { value: 'other', label: 'Other' },
+];
 
 function pushToDataLayer(payload: Record<string, string | boolean>): void {
   if (typeof window === 'undefined') return;
@@ -55,7 +67,7 @@ export default function BecomeAffiliateClient() {
     }
   }, [status]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -87,6 +99,8 @@ export default function BecomeAffiliateClient() {
           email: formData.email,
           application_link: formData.applicationLink,
           application_note: formData.applicationNote,
+          heard_about_us: formData.heardAboutUs,
+          heard_about_us_detail: formData.heardAboutUsDetail,
         }),
       });
 
@@ -314,6 +328,29 @@ export default function BecomeAffiliateClient() {
                       autoComplete="email" value={formData.email} onChange={handleChange}
                       className={inputClass} placeholder="jane@example.com"
                     />
+                  </div>
+
+                  <div>
+                    <label htmlFor="heardAboutUs" className="block text-sm font-semibold text-[#13171F] mb-2">How did you hear about SurFox AI? *</label>
+                    <select
+                      id="heardAboutUs" name="heardAboutUs" required aria-required="true"
+                      value={formData.heardAboutUs} onChange={handleChange}
+                      className={inputClass}
+                    >
+                      <option value="" disabled>Select one</option>
+                      {HEARD_ABOUT_US_OPTIONS.map((o) => (
+                        <option key={o.value} value={o.value}>{o.label}</option>
+                      ))}
+                    </select>
+                    {(formData.heardAboutUs === 'other' || formData.heardAboutUs === 'referral') && (
+                      <input
+                        type="text" id="heardAboutUsDetail" name="heardAboutUsDetail" maxLength={300}
+                        aria-label={formData.heardAboutUs === 'referral' ? 'Who referred you?' : 'Where did you hear about us?'}
+                        value={formData.heardAboutUsDetail} onChange={handleChange}
+                        className={`${inputClass} mt-3`}
+                        placeholder={formData.heardAboutUs === 'referral' ? 'Who referred you?' : 'Where did you hear about us?'}
+                      />
+                    )}
                   </div>
 
                   <div>
