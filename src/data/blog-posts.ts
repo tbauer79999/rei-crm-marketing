@@ -9886,7 +9886,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'Speed to Lead Across SMS, Chat, and Voice',
     metaDescription: 'SMS, website chat, and inbound voice each run on a different speed-to-lead clock. See what actually counts as fast on each door, and how to measure it.',
-    relatedPosts: ['missed-inbound-sales-call-what-to-do', 'ai-receptionist-that-books-appointments', 'reply-pile-bottleneck-after-speed-to-lead'],
+    relatedPosts: ['missed-inbound-sales-call-what-to-do', 'ai-receptionist-that-books-appointments', 'google-business-profile-ai-messaging-agent'],
     content: [
       {
         type: 'tldr',
@@ -10587,7 +10587,7 @@ export const blogPosts: BlogPost[] = [
     authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
     metaTitle: 'AI Receptionist vs. AI Voice Agent: The Real Test',
     metaDescription: 'Most AI receptionists log a message and make you call back. Here\'s what to check before you buy, with sourced stats and a vendor comparison.',
-    relatedPosts: ['missed-inbound-sales-call-what-to-do', 'speed-to-lead-sms-chat-voice', 'missed-call-text-back-real-estate'],
+    relatedPosts: ['missed-inbound-sales-call-what-to-do', 'speed-to-lead-sms-chat-voice', 'google-business-profile-ai-messaging-agent'],
     content: [
       {
         type: 'tldr',
@@ -10849,6 +10849,416 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         content: 'Not legal advice, but at a high level: the FCC\'s February 2024 ruling classified AI-generated voices as an "artificial voice" under the TCPA, and answering an inbound call the caller placed themselves is treated differently from placing outbound AI calls without consent, which can carry statutory damages. Recording consent rules and text follow-up rules (opt-out, registration) vary by state and channel; see [our guide to texting consent and compliance](/blog/texting-candidates-what-gets-a-reply) for more on consent and messaging compliance. Confirm specifics with a lawyer.'
+      }
+    ]
+  },
+  {
+    id: 45,
+    slug: 'google-business-profile-ai-messaging-agent',
+    title: 'Google Business Profile\'s Free AI Messaging Agent: What Google Has and Hasn\'t Said',
+    excerpt: 'Google\'s free AI messaging agent answers routine questions from Search and Maps. What Google has confirmed, what it hasn\'t, and where lead qualification fits.',
+    category: 'AI & Technology',
+    date: '2026-11-04',
+    lastUpdated: '2026-11-04',
+    readTime: '13 min read',
+    author: 'Tom Bauer',
+    authorUrl: '/leadership',
+    authorTitle: 'Founder & CEO, SurFox AI',
+    authorBio: 'Tom Bauer is the founder and CEO of SurFox AI. With 20+ years building and scaling sales teams across multiple industries, he founded SurFox AI to bridge the gap between what AI promises and what revenue operators actually need. He writes about AI-powered lead qualification and sales operations from direct operational experience - not theory.',
+    metaTitle: 'Google Business Profile AI Agent: What Google Confirmed',
+    metaDescription: 'Google\'s AI messaging agent answers routine questions at no cost in a pilot, but qualifying and follow-up are unconfirmed. See what Google has said.',
+    relatedPosts: ['ai-receptionist-that-books-appointments', 'speed-to-lead-sms-chat-voice', 'home-services-lead-response-window'],
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Google Business Profile\'s AI messaging agent is an early-access pilot that answers routine customer questions from Search and Maps, and Google is offering it at no cost ([Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html)). It replies instantly, hands anything complex to you, and only works for customers on RCS-capable phones. Its biggest limit is that Google describes it as a question answerer, and nothing in that description says it qualifies leads or follows up when someone goes quiet.'
+      },
+      {
+        type: 'callout',
+        content: 'Last verified November 4, 2026. This pilot is still changing. Where Google hasn\'t said something, we say so and mark it unconfirmed.'
+      },
+      {
+        type: 'tldr',
+        content: '$0: Google\'s early-access offer says the pilot is at no cost to the business ([Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html), 2026).\n1 phone requirement: the agent only works for customers on RCS-capable phones and networks, and everyone else\'s texts go straight to your phone ([Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html), 2026).\nJuly 31, 2024: the date Google ended its original Business Profile chat ([Google Business Profile Help](https://support.google.com/business/answer/14919056), 2024).\n5 capabilities unconfirmed: qualifying and scoping leads, follow-up with quiet leads, a CRM connection, learning over time, and data beyond your profile. We found no mention of them in [Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html) (2026) or [Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/) (2026).\n21 times: the higher odds of qualifying a lead called within 5 minutes versus 30 minutes, in the [Oldroyd study](https://www.leadresponsemanagement.org/lrm_study/) of InsideSales.com data (2007).\n7 times: how much likelier companies were to qualify a lead when they contacted it within an hour rather than an hour later ([Harvard Business Review](https://hbr.org/2011/03/the-short-life-of-online-sales-leads), 2011).'
+      },
+      {
+        type: 'heading',
+        content: 'What it is and how it works'
+      },
+      {
+        type: 'paragraph',
+        content: 'Google shut down its original Business Profile chat in 2024. Customers in existing chats were notified on July 15, 2024, and the chat feature ended on July 31, 2024. Google let owners download past chat records through Google Takeout until August 30, 2024, and pointed eligible accounts to text messages or WhatsApp instead ([Google Business Profile Help](https://support.google.com/business/answer/14919056)).'
+      },
+      {
+        type: 'paragraph',
+        content: 'Messaging is now coming back with an AI agent in front of it. On October 29, 2026, [Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html) reported that Google appears to be rolling the feature out to more businesses. It is still a pilot. Google is emailing some owners an offer of early access, and [Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/) describes the pilot as running in the United States.'
+      },
+      {
+        type: 'subheading',
+        content: 'How a conversation works'
+      },
+      {
+        type: 'paragraph',
+        content: 'A customer taps Message on your listing in Search or Maps. If their phone and carrier support RCS (the newer texting standard), the chat opens in their phone\'s own texting app and the AI agent answers. If they don\'t, their text goes straight to your phone, and standard text rates may apply ([Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html)).'
+      },
+      {
+        type: 'paragraph',
+        content: 'When the agent can\'t answer something, it hands the conversation to you, and you can jump in at any time. Every message shows up in your Business Profile, and a red dot appears on the Messages tab ([Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html)).'
+      },
+      {
+        type: 'subheading',
+        content: 'Setup and where the answers come from'
+      },
+      {
+        type: 'paragraph',
+        content: 'In the settings you can write a welcome message, add conversation starters, upload a logo, and switch on a "Customer handoff" notification that tells you when the AI decides to pass a chat to you ([Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/)). We couldn\'t find Google instructions for turning the agent off, so the Messages settings are the place to start.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The agent gets its answers from your Business Profile. [Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/) notes that Google hasn\'t published a full list of what else the agent reads, such as reviews, so treat anything beyond your profile as unconfirmed.'
+      },
+      {
+        type: 'heading',
+        content: 'What Google has said, at a glance'
+      },
+      {
+        type: 'table',
+        headers: [
+          'Capability',
+          'What Google has said',
+          'Status',
+          'Source'
+        ],
+        rows: [
+          [
+            'Original chat feature',
+            'Customers notified July 15, 2024. Chat ended July 31, 2024. Takeout downloads available until August 30, 2024.',
+            'Confirmed',
+            '[Google Business Profile Help](https://support.google.com/business/answer/14919056) (2024)'
+          ],
+          [
+            'Answers routine questions',
+            'The agent handles common customer questions and redirects complex ones to you.',
+            'Confirmed',
+            '[Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html) (2026)'
+          ],
+          [
+            'Cost',
+            'Early access is offered at no cost.',
+            'Confirmed (Google\'s offer)',
+            '[Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html) (2026)'
+          ],
+          [
+            'Works on any phone',
+            'Works only for customers on RCS-capable phones and networks. Other texts go to your phone.',
+            'Confirmed',
+            '[Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html) (2026)'
+          ],
+          [
+            'Handoff to you',
+            'Hands off what it can\'t answer. You can take over any time. Red dot on Messages.',
+            'Confirmed',
+            '[Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html) (2026), [Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/) (2026)'
+          ],
+          [
+            'Qualifies leads or asks scoping questions',
+            'Not described.',
+            'Unconfirmed',
+            'No source found'
+          ],
+          [
+            'Follows up with quiet leads',
+            'Not described.',
+            'Unconfirmed',
+            'No source found'
+          ],
+          [
+            'Sends chats to a CRM',
+            'Google says messages are available in your Business Profile. No CRM connection found.',
+            'Unconfirmed',
+            '[Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html) (2026)'
+          ],
+          [
+            'Learns over time',
+            'Unclear whether responses can be corrected, trained, or guided.',
+            'Unconfirmed',
+            '[Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/) (2026)'
+          ],
+          [
+            'Reads data beyond your profile',
+            'No full list published.',
+            'Unconfirmed',
+            '[Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/) (2026)'
+          ]
+        ]
+      },
+      {
+        type: 'heading',
+        content: 'What it does well'
+      },
+      {
+        type: 'paragraph',
+        content: 'Fair is fair. For a small business, this solves a real problem.'
+      },
+      {
+        type: 'paragraph',
+        content: '**It answers routine questions instantly.** Google\'s own examples, as relayed by Claudia Tomina, include today\'s specials and whether you can book for Saturday. The agent pulls up menu items with photos and prices and offers open reservation times ([Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html)). Those are restaurant examples, but the idea carries over to any question your profile can answer, like hours or service details.'
+      },
+      {
+        type: 'paragraph',
+        content: '**It works when you can\'t.** A customer who asked a question at 10pm on a Sunday used to get silence. Now they get an answer ([Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/)).'
+      },
+      {
+        type: 'paragraph',
+        content: '**It knows when to step aside.** Complex questions get redirected to you, and you can take over any conversation ([Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html)).'
+      },
+      {
+        type: 'paragraph',
+        content: '**It costs nothing during the pilot.** Google\'s early-access offer is at no cost.'
+      },
+      {
+        type: 'heading',
+        content: 'What it doesn\'t do'
+      },
+      {
+        type: 'paragraph',
+        content: 'Google\'s description is narrow. The agent handles common questions and redirects complex ones to you ([Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html)). Here is where that leaves the things a busy service business usually needs. Where Google hasn\'t said anything, we\'ve marked it unconfirmed. A missing mention isn\'t proof something is impossible, so check your own account as the pilot changes.'
+      },
+      {
+        type: 'list',
+        items: [
+          '**Qualify leads.** Unconfirmed. Nothing we found says the agent asks what the job is, how big it is, or whether the person is ready to book.',
+          '**Ask follow-up questions to scope a job.** Unconfirmed, for the same reason. Google describes answering the customer\'s questions and passing complex ones to you.',
+          '**Follow up when a lead goes quiet.** Unconfirmed. Google\'s description doesn\'t mention the agent reaching back out after someone stops replying.',
+          '**Handle regular SMS.** Confirmed. The agent only works for customers on RCS-capable phones and networks. Everyone else\'s texts go straight to your phone, and you answer them yourself ([Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html)).',
+          '**Send chats to your CRM.** Unconfirmed. Google says messages are available in your Business Profile. We found no mention of a connection to a CRM.',
+          '**Learn over time.** Unconfirmed. [Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/) points out that it is still unclear whether the agent\'s responses can be corrected, trained, or guided over time.'
+        ]
+      },
+      {
+        type: 'heading',
+        content: 'Where it can go wrong'
+      },
+      {
+        type: 'paragraph',
+        content: 'The agent is only as good as what\'s in your profile. As Claudia Tomina put it, "The agent can only answer as well as your profile does" ([Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html)). A few ways that can bite:'
+      },
+      {
+        type: 'list',
+        items: [
+          '**Old hours.** If your listing says you close at 5:00 PM but you run an after-hours emergency line, an agent working from that listing is working from the 5:00 PM hours.',
+          '**Old service details.** If your profile still lists work you no longer do, the agent is working from out-of-date information.',
+          '**Nobody owning the handoff.** A complex complaint or a custom quote request will hit the agent\'s limits, so someone on your team needs to be ready to step in quickly ([Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/)).',
+          '**An unsettled rollout.** Early in the pilot, several users saw the feature appear and disappear from their dashboards within hours ([Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/)).'
+        ]
+      },
+      {
+        type: 'heading',
+        content: 'Answering vs. qualifying'
+      },
+      {
+        type: 'paragraph',
+        content: 'Answering a question means giving someone a fact. "Yes, we serve your zip code." "We close at 5." The customer gets what they asked for, and then nothing else happens.'
+      },
+      {
+        type: 'paragraph',
+        content: 'Qualifying means finding out whether this person is a real prospect. What\'s the job? How soon does it need to happen? Are they ready to book? That is the step that turns an inquiry into an appointment, and it is the step Google hasn\'t said its agent takes.'
+      },
+      {
+        type: 'table',
+        headers: [
+          'Comparison',
+          'Answering',
+          'Qualifying'
+        ],
+        rows: [
+          [
+            'What it is',
+            'Giving someone a fact',
+            'Finding out if the person is a real prospect'
+          ],
+          [
+            'Example',
+            '"Do you serve my zip code?" "Yes."',
+            'What is the job, how soon, ready to book?'
+          ],
+          [
+            'What Google has described',
+            'Agent handles common questions',
+            'Not described (unconfirmed)'
+          ],
+          [
+            'What the research counts',
+            'Contact, meaning a reply',
+            'Qualification, counted separately in the MIT study'
+          ]
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'Response-time research shows why speed and qualifying are two different things. Two studies get cited most often.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The first is the [Lead Response Management study](https://www.leadresponsemanagement.org/lrm_study/), led by Dr. James Oldroyd of MIT using InsideSales.com data and presented in 2007. It covered three years of data: more than 15,000 web leads and more than 100,000 call attempts across six companies. The odds of making contact with a lead were about 100 times higher when the lead was called within 5 minutes than after 30 minutes. The odds of qualifying the lead were about 21 times higher. Notice that the study counts contact and qualification separately. Getting a reply is contact. Learning whether the person is a real prospect is qualification.'
+      },
+      {
+        type: 'paragraph',
+        content: 'The second is a 2011 Harvard Business Review article, ["The Short Life of Online Sales Leads."](https://hbr.org/2011/03/the-short-life-of-online-sales-leads) In an analysis of 1.25 million online sales leads, companies that contacted a lead within an hour were nearly seven times as likely to qualify it as companies that waited one more hour.'
+      },
+      {
+        type: 'paragraph',
+        content: 'One caveat. Both studies looked at web leads and sales calls, not Google messaging. The lesson still carries over: speed matters, and qualifying is its own job. For more on response speed across text, chat, and phone, see our guide to [speed to lead across SMS, chat, and voice](/blog/speed-to-lead-sms-chat-voice).'
+      },
+      {
+        type: 'paragraph',
+        content: 'Google\'s agent is fast, and fast is good. A reply in seconds beats a reply the next day. But those studies measure what happens after the first response. Contact is step one. Qualifying is step two. And if the customer goes quiet after step one, nothing Google has described brings them back.'
+      },
+      {
+        type: 'subheading',
+        content: 'A worked example (assumptions, not data)'
+      },
+      {
+        type: 'paragraph',
+        content: 'Every number below is our own assumption, chosen to show the arithmetic. Replace them with your own. None of this is a performance claim about Google\'s agent or SurFox AI.'
+      },
+      {
+        type: 'list',
+        items: [
+          '**Assumption:** 50 people message your business through your Google Business Profile in a month.',
+          '**Assumption:** 30 of them ask routine questions the agent can fully answer.',
+          '**Assumption:** 20 are asking about a real job.',
+          '**Assumption:** 8 of those 20 go quiet after the first reply.',
+          '**Assumption:** an average job is worth $600.',
+          '**Assumption:** 1 in 4 of the quiet leads would have booked if someone had qualified them and followed up.'
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'The math: 8 quiet leads times 1 in 4 is 2 jobs. Two jobs at $600 is $1,200 a month, or $14,400 a year. The point is not the exact figure. It is that the number of questions Google\'s agent answers tells you little about how many jobs you book. If you run a home service business, our look at the [home services lead response window](/blog/home-services-lead-response-window) goes deeper on timing.'
+      },
+      {
+        type: 'heading',
+        content: 'Where SurFox AI fits'
+      },
+      {
+        type: 'paragraph',
+        content: 'SurFox AI does not integrate with Google\'s messaging. Google says chats live in your Business Profile, and we found no CRM connection, so SurFox AI cannot see or text a lead who messaged Google\'s agent. We\'d rather say that plainly than imply otherwise.'
+      },
+      {
+        type: 'paragraph',
+        content: 'What SurFox AI does do is qualify the leads that reach it through its own channels: website chat, forms, a published Voice number, and SMS reactivation campaigns. It routes qualified people to a human. SurFox AI Voice handles inbound calls only. You can see how each channel works on the [SurFox AI platform page](/platform).'
+      },
+      {
+        type: 'paragraph',
+        content: 'There is one practical way the two can sit side by side. A business can publish its SurFox AI Voice number on its Google Business Profile. [Google Business Profile Help](https://support.google.com/business/answer/14919056) recommends adding your phone number to your profile so customers can contact you. The work then splits by channel. Google\'s agent covers profile questions by message, and SurFox AI covers qualification by call or chat. Nothing passes between the two systems. A person who messages Google\'s agent stays in Google\'s chat, and a person who calls your number is handled by SurFox AI. For more on the phone side, read about an [AI receptionist that books appointments](/blog/ai-receptionist-that-books-appointments).'
+      },
+      {
+        type: 'callout',
+        content: 'Not a replacement, not a plug-in. SurFox AI does not read Google\'s chats and is not part of Google\'s messaging. It covers the leads that arrive through your own channels.'
+      },
+      {
+        type: 'heading',
+        content: 'When Google\'s agent is enough'
+      },
+      {
+        type: 'paragraph',
+        content: 'Our judgment, not a Google claim: Google\'s agent may be all you need in some situations.'
+      },
+      {
+        type: 'list',
+        items: [
+          'Most of your messages are routine questions your profile already answers, like hours, service areas, or menu items.',
+          'Your jobs are simple enough that booking doesn\'t depend on scoping questions.',
+          'You or your staff can reply quickly when the agent hands a chat to you.',
+          'You are comfortable with an RCS-only agent, with everyone else\'s texts landing on your phone.',
+          'Your profile is accurate, and someone owns keeping it current.'
+        ]
+      },
+      {
+        type: 'paragraph',
+        content: 'It is more likely to fall short when your jobs need scoping before anyone can book, when nobody watches the red dot, or when leads tend to go quiet after the first answer. In those cases you need something that qualifies and follows up, whether that is a person or a tool that sits on your own channels.'
+      },
+      {
+        type: 'cta-box',
+        headline: 'See how SurFox AI qualifies the leads that reach you directly.',
+        subhead: 'Website chat, forms, a published Voice number, and SMS reactivation campaigns, with qualified people routed to a human.',
+        primaryButton: { text: 'See pricing', href: '/pricing' },
+        secondaryButton: { text: 'See the platform', href: '/platform' }
+      },
+      {
+        type: 'heading',
+        content: 'Google Business Profile AI Messaging: Frequently Asked Questions'
+      },
+      {
+        type: 'subheading',
+        content: 'Does the Google Business Profile AI messaging agent cost money?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Google\'s early-access offer says the pilot is at no cost to the business. Customers whose phones or plans don\'t support RCS will send a regular text instead, and standard text rates may apply to them ([Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html)).'
+      },
+      {
+        type: 'subheading',
+        content: 'Can I connect Google Business Profile messaging to my CRM or my own chatbot?'
+      },
+      {
+        type: 'paragraph',
+        content: 'We couldn\'t find any Google documentation of a CRM connection or a way to swap in your own chatbot. Google says messages are available in your Business Profile, so assume that is where the conversation lives unless Google says otherwise.'
+      },
+      {
+        type: 'subheading',
+        content: 'What happens when the Google Business Profile AI agent can\'t answer a question?'
+      },
+      {
+        type: 'paragraph',
+        content: 'It hands the conversation to you, and you can take over at any time. You\'ll see a red dot on the Messages tab, and the "Customer handoff" setting can notify you when the AI decides to pass a chat along ([Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html), [Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/)).'
+      },
+      {
+        type: 'subheading',
+        content: 'Does the Google Business Profile AI agent follow up if a customer stops replying?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Google hasn\'t described any follow-up feature, so treat it as unconfirmed. Until Google says otherwise, plan on following up with quiet leads yourself or with another tool.'
+      },
+      {
+        type: 'subheading',
+        content: 'Why did Google bring Google Business Profile messaging back after shutting it down in 2024?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Google hasn\'t given an official explanation for the 2024 shutdown, and we couldn\'t find a stated reason for the return ([Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/)). Google\'s early-access offer says the agent is meant to handle common questions and help with reservations so your team can focus on running the business.'
+      },
+      {
+        type: 'subheading',
+        content: 'What should I do before turning on the Google Business Profile AI agent?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Check that your hours, services, and menu or service list are accurate, because the agent works from your profile. Also decide who will watch for handoffs and respond quickly when the agent passes a chat to you ([Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/)).'
+      },
+      {
+        type: 'subheading',
+        content: 'Can SurFox AI read messages sent through Google Business Profile messaging?'
+      },
+      {
+        type: 'paragraph',
+        content: 'No. SurFox AI does not integrate with Google\'s messaging, and Google says chats live in your Business Profile. SurFox AI works with leads that reach it through its own channels: website chat, forms, a published Voice number, and SMS reactivation campaigns.'
+      },
+      {
+        type: 'heading',
+        content: 'Sources'
+      },
+      {
+        type: 'list',
+        items: [
+          '[Google Business Profile Help](https://support.google.com/business/answer/14919056): changes to Google Business Profile chat and call history. Supports the 2024 chat shutdown dates (July 15 notification, July 31 end, Takeout until August 30), the text and WhatsApp options for eligible accounts, and the recommendation to add your phone number to your profile.',
+          '[Search Engine Roundtable](https://www.seroundtable.com/google-business-profiles-ai-powered-messaging-42419.html), October 29, 2026. Supports the pilot rollout, Google\'s at-no-cost early-access offer, the RCS requirement and non-RCS fallback, handoff to the owner, the red dot on Messages, messages being available in your Business Profile, Google\'s examples as relayed by Claudia Tomina, and her quoted advice.',
+          '[Partoo](https://www.partoo.co/en/blog/google-reintroduces-business-profile-messaging-with-ai-agent/): Google brings back messaging on business listings. Supports the settings (welcome message, conversation starters, logo, Customer handoff), the US pilot, the unstable rollout, the open questions on data sources and learning over time, and the absence of an official explanation for the 2024 removal.',
+          '[Lead Response Management study](https://www.leadresponsemanagement.org/lrm_study/) (Oldroyd, MIT, InsideSales.com data, 2007). Supports the sample size and the 100 times and 21 times figures for contact and qualification at 5 versus 30 minutes.',
+          '[Harvard Business Review, "The Short Life of Online Sales Leads"](https://hbr.org/2011/03/the-short-life-of-online-sales-leads) (2011). Supports the finding that contacting a lead within an hour made companies nearly seven times as likely to qualify it as waiting an hour longer, in an analysis of 1.25 million leads.'
+        ]
       }
     ]
   }
