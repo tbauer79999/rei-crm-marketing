@@ -46,6 +46,7 @@ const columns: { title: string; links: { label: string; href: string }[]; wide?:
       { label: 'Blog', href: '/blog' },
       { label: 'News', href: '/news' },
       { label: 'ROI calculator', href: '/roi' },
+      { label: 'Free 10DLC Checker', href: '/tools' },
       { label: 'AI principles', href: '/ai-principles' },
     ],
   },
