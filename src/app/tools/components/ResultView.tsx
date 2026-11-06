@@ -104,6 +104,9 @@ export default function ResultView({ checks, showUnlockHint, unlocked = false }:
       {visible.map((c) => {
         const collapse = c.check === 'privacy_policy' ? c.findings.filter((f) => f.status === 'warn' && SHARING_RULES.has(f.rule_id)) : [];
         const rest = collapse.length > 0 ? c.findings.filter((f) => !collapse.includes(f)) : c.findings;
+        // Before the email: the privacy section shows the one plain-English miss and a count, not every rule card.
+        const locked = !unlocked && collapse.length > 0;
+        const lockedCount = rest.filter((f) => f.status !== 'pass').length;
         return (
           <section key={c.check} aria-labelledby={`check-${c.check}`} className="rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-4 sm:p-5">
             <div className="flex flex-wrap items-center justify-between gap-2">
@@ -114,7 +117,11 @@ export default function ResultView({ checks, showUnlockHint, unlocked = false }:
             </div>
             {c.message ? <p className="mt-2 text-[15px] text-[#4a5160]">{c.message}</p> : null}
             {collapse.length > 0 ? <SharingGap findings={collapse} unlocked={unlocked} /> : null}
-            {rest.length > 0 ? <ul className="mt-3 space-y-3">{rest.map((f) => <FindingBlock key={f.rule_id} f={f} />)}</ul> : null}
+            {locked ? (
+              lockedCount > 0 ? <p className="mt-3 text-sm text-[#5a626e]">{lockedCount} more privacy policy item{lockedCount === 1 ? '' : 's'} need attention. Email unlocks the details.</p> : null
+            ) : rest.length > 0 ? (
+              <ul className="mt-3 space-y-3">{rest.map((f) => <FindingBlock key={f.rule_id} f={f} />)}</ul>
+            ) : null}
             {showUnlockHint && c.hiddenFindings && c.hiddenFindings > 0 ? (
               <p className="mt-3 text-sm text-[#5a626e]">
                 {c.hiddenFindings} more rule{c.hiddenFindings === 1 ? '' : 's'} checked. Email unlocks the full report.
