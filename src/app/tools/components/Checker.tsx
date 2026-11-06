@@ -237,7 +237,7 @@ export default function Checker({ consentText }: { consentText: string | null })
             </p>
             {scan.pages.length > 0 ? <p className="mt-2 text-xs text-[#4a5160]">Pages read: {scan.pages.join(', ')}</p> : null}
             <div className="mt-4">
-              <ResultView checks={full ? full.checks : scan.checks} showUnlockHint={Boolean(consentText) && !full} />
+              <ResultView checks={full ? full.checks : scan.checks} showUnlockHint={Boolean(consentText) && !full} unlocked={Boolean(full)} />
             </div>
           </section>
 
@@ -246,10 +246,10 @@ export default function Checker({ consentText }: { consentText: string | null })
           ) : consentText && scan.unlock_available ? (
             <section aria-labelledby="tools-unlock-title" className="rounded-2xl border border-[var(--line)] bg-white p-5">
               <h3 id="tools-unlock-title" className="text-lg font-semibold text-[var(--ink)]">
-                Get the full report by email
+                Unlock the suggested sentence and fix checklist
               </h3>
-              <p className="mb-4 mt-1 text-sm text-[#4a5160]">Every rule we checked, with the part of your text it was judged on.</p>
-              <EmailForm submitLabel="Email me the full report" consentText={consentText} busy={busy} error={formError} onSubmit={unlock} />
+              <p className="mb-4 mt-1 text-sm text-[#4a5160]">You also get the full report, with every rule we checked and the part of your text it was judged on.</p>
+              <EmailForm submitLabel="Email me this" consentText={consentText} busy={busy} error={formError} onSubmit={unlock} />
             </section>
           ) : null}
 

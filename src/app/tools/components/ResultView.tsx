@@ -70,16 +70,36 @@ const SHARING_RULES = new Set(['R6-Q2', 'R6-Q3', 'R6-Q6', 'R6-Q7', 'R6-Q8', 'R6-
 const SHARING_MISS = "Missing: say you don't sell or share mobile numbers or SMS opt-in data with third parties.";
 const SHARING_SENTENCE = 'We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes.';
 
-function SharingGap({ findings }: { findings: ViewFinding[] }) {
+const SHARING_CHECKLIST = [
+  'Open your privacy policy page.',
+  'Add the suggested sentence in the section on how you use or share personal information.',
+  'Make sure nothing else in the policy or terms says you sell, rent or share mobile numbers or opt-in data.',
+  'Keep the policy linked from your opt-in form and reachable on your website.',
+  'Run this check again to confirm the gap is closed.',
+];
+
+function SharingGap({ findings, unlocked }: { findings: ViewFinding[]; unlocked: boolean }) {
   return (
     <div className="mt-3 rounded-xl border border-[var(--line)] bg-white p-4">
       <p className="text-[15px] font-semibold text-[var(--ink)]">{SHARING_MISS}</p>
-      <p className="mt-3 text-sm font-semibold text-[var(--ink)]">Suggested sentence to paste into your policy</p>
-      <p className="mt-1 border-l-4 border-[var(--cyan-deep)] pl-3 text-[15px] leading-relaxed text-[var(--ink)]">{SHARING_SENTENCE}</p>
+      {unlocked ? (
+        <>
+          <p className="mt-3 text-sm font-semibold text-[var(--ink)]">Suggested sentence to paste into your policy</p>
+          <p className="mt-1 border-l-4 border-[var(--cyan-deep)] pl-3 text-[15px] leading-relaxed text-[var(--ink)]">{SHARING_SENTENCE}</p>
+          <p className="mt-3 text-sm font-semibold text-[var(--ink)]">Short fix checklist</p>
+          <ul className="mt-1 list-disc space-y-1 pl-5 text-[15px] leading-relaxed text-[var(--ink)]">
+            {SHARING_CHECKLIST.map((t) => (
+              <li key={t}>{t}</li>
+            ))}
+          </ul>
+        </>
+      ) : (
+        <p className="mt-2 text-sm text-[#5a626e]">Enter your email below to unlock the suggested sentence and a short fix checklist.</p>
+      )}
       <details className="mt-3">
         <summary className="cursor-pointer text-sm font-medium text-[#06626f]">Show rule details</summary>
         <ul className="mt-3 space-y-3">
-          {findings.map((f) => (
+          {findings.filter((f) => unlocked || f.rule_id !== 'R6-Q6').map((f) => ( // R6-Q6's quote is the suggested sentence itself, so it stays behind the email unlock
             <FindingBlock key={f.rule_id} f={f} />
           ))}
         </ul>
@@ -88,7 +108,7 @@ function SharingGap({ findings }: { findings: ViewFinding[] }) {
   );
 }
 
-export default function ResultView({ checks, showUnlockHint }: { checks: ViewCheck[]; showUnlockHint?: boolean }) {
+export default function ResultView({ checks, showUnlockHint, unlocked = false }: { checks: ViewCheck[]; showUnlockHint?: boolean; unlocked?: boolean }) {
   // Sections with nothing pasted are hidden, not shown as "Not checked".
   const visible = checks.filter((c) => c.reason !== 'no_input');
   return (
@@ -105,7 +125,7 @@ export default function ResultView({ checks, showUnlockHint }: { checks: ViewChe
               <StatusBadge status={c.status} />
             </div>
             {c.message ? <p className="mt-2 text-[15px] text-[#4a5160]">{c.message}</p> : null}
-            {collapse.length > 0 ? <SharingGap findings={collapse} /> : null}
+            {collapse.length > 0 ? <SharingGap findings={collapse} unlocked={unlocked} /> : null}
             {rest.length > 0 ? <ul className="mt-3 space-y-3">{rest.map((f) => <FindingBlock key={f.rule_id} f={f} />)}</ul> : null}
             {showUnlockHint && c.hiddenFindings && c.hiddenFindings > 0 ? (
               <p className="mt-3 text-sm text-[#5a626e]">
