@@ -284,8 +284,8 @@ export async function handleUnlock(d: Deps, req: { shareId: string; email: unkno
 
 export async function sendReport(d: Deps, rec: ScanRecord, attribution: Attribution): Promise<boolean> {
   if (!rec.email) return false;
-  const { subject, text } = buildReportEmail({ site: rec.site, checks: rec.checks, shareId: rec.share_id, attribution });
-  const res = await d.mailer('report', { to: rec.email, subject, text });
+  const { subject, text, html } = buildReportEmail({ site: rec.site, checks: rec.checks, shareId: rec.share_id, attribution });
+  const res = await d.mailer('report', { to: rec.email, subject, text, ...(html ? { html } : {}) });
   if (res.ok) {
     await d.store.insertSend({ id: newId(), account: 'report', kind: 'report', created_at: nowOf(d).toISOString() });
     await d.store.updateScan(rec.id, { report_status: 'sent' });

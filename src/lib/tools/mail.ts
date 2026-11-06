@@ -7,7 +7,7 @@
 // The two kinds are counted separately in our own database (tools_sends) so alert volume can never use up the report allowance.
 
 export type MailAccount = 'alert' | 'report';
-export type MailMessage = { to?: string; subject: string; text: string };
+export type MailMessage = { to?: string; subject: string; text: string; html?: string };
 export type MailResult = { ok: true } | { ok: false; limit: boolean; error: string };
 export type Mailer = (account: MailAccount, msg: MailMessage) => Promise<MailResult>;
 
@@ -19,7 +19,7 @@ export const leadAppMailer: Mailer = async (account, msg) => {
     const res = await fetch(`${base.replace(/\/+$/, '')}/api/public/tools-model/mail`, {
       method: 'POST',
       headers: { 'content-type': 'application/json', 'x-tools-model-secret': secret },
-      body: JSON.stringify({ kind: account, ...(account === 'report' ? { to: msg.to } : {}), subject: msg.subject, text: msg.text }),
+      body: JSON.stringify({ kind: account, ...(account === 'report' ? { to: msg.to, ...(msg.html ? { html: msg.html } : {}) } : {}), subject: msg.subject, text: msg.text }),
       signal: AbortSignal.timeout(15_000),
       cache: 'no-store',
     });

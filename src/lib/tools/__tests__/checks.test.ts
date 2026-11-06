@@ -127,3 +127,15 @@ test('the summary lists every failed finding and never carries evidence from the
   assert.ok(!JSON.stringify(s).includes('Reply STOP to opt out'));
   assert.deepEqual(countStatuses(run.checks), { pass: 0, warn: 0, fail: 1, gray: 3 });
 });
+
+test('the privacy-fix email carries a branded HTML version with only fixed text, and the plain-text one stays', async () => {
+  const { buildReportEmail } = await import('../report');
+  const warn = { rule_id: 'R6-Q6', status: 'warn' as const, official_quote: 'q', source_url: 'https://x.test', verified_date: '2026-01-01', evidence: null };
+  const checks = [{ check: 'privacy_policy' as const, label: 'Privacy policy', status: 'warn' as const, reason: null, message: null, findings: [warn] }];
+  const m = buildReportEmail({ site: 'evil<script>.com', checks, shareId: 'abc123', attribution: {} as never });
+  assert.equal(m.subject, 'Your 10DLC privacy fix');
+  assert.ok(m.html?.includes('We do not sell or share your SMS opt-in data'));
+  assert.ok(m.html?.includes('/tools/r/abc123'));
+  assert.ok(!m.html?.includes('evil'), 'nothing the visitor typed reaches the HTML');
+  assert.ok(m.text.includes('Short checklist:'));
+});
