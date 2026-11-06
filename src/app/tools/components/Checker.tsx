@@ -233,7 +233,7 @@ export default function Checker({ consentText }: { consentText: string | null })
               Your result{scan.site ? ` for ${scan.site}` : ''}
             </h2>
             <p className="mt-2 flex flex-wrap items-center gap-2 text-sm text-[#4a5160]">
-              {(['pass', 'warn', 'fail', 'gray'] as const).map((s) => (scan.counts[s] > 0 ? <span key={s} className="inline-flex items-center gap-1"><StatusBadge status={s} /> <span>{scan.counts[s]}</span></span> : null))}
+              {(['pass', 'warn', 'fail', 'gray'] as const).map((s) => { const n = s === 'gray' ? scan.counts.gray - scan.checks.filter((c) => c.reason === 'no_input').length : scan.counts[s]; return n > 0 ? <span key={s} className="inline-flex items-center gap-1"><StatusBadge status={s} /> <span>{n}</span></span> : null; })}
             </p>
             {scan.pages.length > 0 ? <p className="mt-2 text-xs text-[#4a5160]">Pages read: {scan.pages.join(', ')}</p> : null}
             <div className="mt-4">

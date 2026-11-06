@@ -33,7 +33,7 @@ export default async function SharedResult({ params }: { params: Promise<{ id: s
     <div className="mx-auto w-full max-w-3xl px-4 pb-16 pt-28 sm:px-6">
       <h1 className="text-3xl font-bold leading-tight text-[var(--ink)]">10DLC Registration Check{rec.site ? ` for ${rec.site}` : ''}</h1>
       <p className="mt-3 flex flex-wrap items-center gap-2 text-sm text-[#4a5160]">
-        {(['pass', 'warn', 'fail', 'gray'] as const).map((s) => (rec.counts[s] > 0 ? <span key={s} className="inline-flex items-center gap-1"><StatusBadge status={s} /> <span>{rec.counts[s]}</span></span> : null))}
+        {(['pass', 'warn', 'fail', 'gray'] as const).map((s) => { const n = s === 'gray' ? rec.counts.gray - checks.filter((c) => c.reason === 'no_input').length : rec.counts[s]; return n > 0 ? <span key={s} className="inline-flex items-center gap-1"><StatusBadge status={s} /> <span>{n}</span></span> : null; })}
       </p>
       <div className="mt-6 space-y-6">
         <ResultView checks={checks} />

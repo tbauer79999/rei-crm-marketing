@@ -65,26 +65,57 @@ function FindingBlock({ f }: { f: ViewFinding }) {
   );
 }
 
+// Privacy-policy rules that all describe the same gap: no statement that mobile numbers / SMS opt-in data are not sold or shared.
+const SHARING_RULES = new Set(['R6-Q2', 'R6-Q3', 'R6-Q6', 'R6-Q7', 'R6-Q8', 'R6-Q9', 'BW-29', 'BW-30']);
+const SHARING_MISS = "Missing: say you don't sell or share mobile numbers or SMS opt-in data with third parties.";
+const SHARING_SENTENCE = 'We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes.';
+
+function SharingGap({ findings }: { findings: ViewFinding[] }) {
+  return (
+    <div className="mt-3 rounded-xl border border-[var(--line)] bg-white p-4">
+      <p className="text-[15px] font-semibold text-[var(--ink)]">{SHARING_MISS}</p>
+      <p className="mt-3 text-sm font-semibold text-[var(--ink)]">Suggested sentence to paste into your policy</p>
+      <p className="mt-1 border-l-4 border-[var(--cyan-deep)] pl-3 text-[15px] leading-relaxed text-[var(--ink)]">{SHARING_SENTENCE}</p>
+      <details className="mt-3">
+        <summary className="cursor-pointer text-sm font-medium text-[#06626f]">Show rule details</summary>
+        <ul className="mt-3 space-y-3">
+          {findings.map((f) => (
+            <FindingBlock key={f.rule_id} f={f} />
+          ))}
+        </ul>
+      </details>
+    </div>
+  );
+}
+
 export default function ResultView({ checks, showUnlockHint }: { checks: ViewCheck[]; showUnlockHint?: boolean }) {
+  // Sections with nothing pasted are hidden, not shown as "Not checked".
+  const visible = checks.filter((c) => c.reason !== 'no_input');
   return (
     <div className="space-y-4">
-      {checks.map((c) => (
-        <section key={c.check} aria-labelledby={`check-${c.check}`} className="rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-4 sm:p-5">
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <h3 id={`check-${c.check}`} className="text-lg font-semibold text-[var(--ink)]">
-              {c.label}
-            </h3>
-            <StatusBadge status={c.status} />
-          </div>
-          {c.message ? <p className="mt-2 text-[15px] text-[#4a5160]">{c.message}</p> : null}
-          {c.findings.length > 0 ? <ul className="mt-3 space-y-3">{c.findings.map((f) => <FindingBlock key={f.rule_id} f={f} />)}</ul> : null}
-          {showUnlockHint && c.hiddenFindings && c.hiddenFindings > 0 ? (
-            <p className="mt-3 text-sm text-[#5a626e]">
-              {c.hiddenFindings} more rule{c.hiddenFindings === 1 ? '' : 's'} checked. Email unlocks the full report.
-            </p>
-          ) : null}
-        </section>
-      ))}
+      {visible.map((c) => {
+        const collapse = c.check === 'privacy_policy' ? c.findings.filter((f) => f.status === 'warn' && SHARING_RULES.has(f.rule_id)) : [];
+        const rest = collapse.length > 0 ? c.findings.filter((f) => !collapse.includes(f)) : c.findings;
+        return (
+          <section key={c.check} aria-labelledby={`check-${c.check}`} className="rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-4 sm:p-5">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h3 id={`check-${c.check}`} className="text-lg font-semibold text-[var(--ink)]">
+                {c.label}
+              </h3>
+              <StatusBadge status={c.status} />
+            </div>
+            {c.message ? <p className="mt-2 text-[15px] text-[#4a5160]">{c.message}</p> : null}
+            {collapse.length > 0 ? <SharingGap findings={collapse} /> : null}
+            {rest.length > 0 ? <ul className="mt-3 space-y-3">{rest.map((f) => <FindingBlock key={f.rule_id} f={f} />)}</ul> : null}
+            {showUnlockHint && c.hiddenFindings && c.hiddenFindings > 0 ? (
+              <p className="mt-3 text-sm text-[#5a626e]">
+                {c.hiddenFindings} more rule{c.hiddenFindings === 1 ? '' : 's'} checked. Email unlocks the full report.
+              </p>
+            ) : null}
+          </section>
+        );
+      })}
+      <p className="text-sm text-[#5a626e]">This tool diagnoses. It does not file or fix 10DLC for you.</p>
     </div>
   );
 }
