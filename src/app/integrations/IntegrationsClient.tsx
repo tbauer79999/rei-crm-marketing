@@ -266,11 +266,6 @@ export default function Integrations() {
                 icon: MessageSquare, 
                 name: 'WhatsApp Business', 
                 desc: 'Connect with customers on WhatsApp through the official Business API.'
-              },
-              {
-                icon: Phone,
-                name: 'Voice Call Transcription',
-                desc: 'Ingest recordings from calls your team already takes and transcribe them for unified lead intelligence. Separate from live Voice AI qualification, which is available today.'
               }
             ].map((integration, i) => (
               <motion.div
