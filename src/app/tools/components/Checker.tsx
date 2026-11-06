@@ -239,7 +239,7 @@ export default function Checker({ consentText }: { consentText: string | null })
             </p>
             {scan.pages.length > 0 ? <p className="mt-2 text-xs text-[#4a5160]">Pages read: {scan.pages.join(', ')}</p> : null}
             <div className="mt-4">
-              <ResultView checks={full ? full.checks : scan.checks} showUnlockHint={Boolean(consentText) && !full} unlocked={Boolean(full)} />
+              <ResultView checks={full ? full.checks : scan.checks} unlocked={Boolean(full)} />
             </div>
           </section>
 
