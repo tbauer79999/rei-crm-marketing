@@ -139,3 +139,17 @@ test('the privacy-fix email carries a branded HTML version with only fixed text,
   assert.ok(!m.html?.includes('evil'), 'nothing the visitor typed reaches the HTML');
   assert.ok(m.text.includes('Short checklist:'));
 });
+
+test('the privacy-fix email also lists every other warn or fail, escaped, and skips sections with nothing pasted', async () => {
+  const { buildReportEmail } = await import('../report');
+  const f = (rule_id: string, status: 'warn' | 'fail' | 'pass', evidence: string | null = null) => ({ rule_id, status, official_quote: `quote ${rule_id}`, source_url: 'https://x.test/s', verified_date: '2026-01-01', evidence });
+  const checks = [
+    { check: 'privacy_policy' as const, label: 'Privacy policy', status: 'warn' as const, reason: null, message: null, findings: [f('R6-Q6', 'warn'), f('BW-24', 'warn', '<b>my text</b>'), f('R6-Q4', 'pass')] },
+    { check: 'sample_messages' as const, label: 'Sample messages', status: 'gray' as const, reason: 'no_input' as const, message: 'x', findings: [] },
+  ];
+  const m = buildReportEmail({ site: null, checks, shareId: 'abc', attribution: {} as never });
+  assert.ok(m.text.includes('BW-24') && m.text.includes('quote BW-24'));
+  assert.ok(!m.text.includes('R6-Q4'), 'passes are left out');
+  assert.ok(m.html?.includes('&lt;b&gt;my text&lt;/b&gt;') && !m.html.includes('<b>my text'), 'visitor text is escaped');
+  assert.ok(!m.text.includes('Sample messages'));
+});
