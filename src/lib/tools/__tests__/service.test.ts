@@ -168,10 +168,18 @@ test('joining the queue needs a valid email and ticked consent, counts toward th
   }));
 
 test('while consent wording is pending legal review the unlock and the queue are not offered', async () => {
-  const { deps } = makeDeps(); // the shipped consent.json still carries the pending marker
+  const { deps } = makeDeps();
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'tools-consent-pending-'));
+  fs.writeFileSync(path.join(dir, 'consent.json'), JSON.stringify({ text: '[PENDING LEGAL REVIEW: CONSENT WORDING]' }));
+  process.env.TOOLS_CONTENT_DIR = dir;
+  try {
   assert.deepEqual(await handleJoinQueue(deps, { url: 'example.com', email: 'a@example.com', consent: true, who: WHO, attribution: ATTR }), { ok: false, code: 'UNLOCK_UNAVAILABLE' });
   const r = await handleCheck(deps, site());
   assert.equal(r.ok && r.scan.unlock_available, false);
+  } finally {
+    delete process.env.TOOLS_CONTENT_DIR;
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
 });
 
 // ---- unlock, share links --------------------------------------------------------------------------------------------------

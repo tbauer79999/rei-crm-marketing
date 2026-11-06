@@ -38,7 +38,7 @@ function ConsentBox({ id, text, checked, onChange }: { id: string; text: string;
   );
 }
 
-function EmailForm({ submitLabel, consentText, busy, error, onSubmit }: { submitLabel: string; consentText: string; busy: boolean; error: string | null; onSubmit: (email: string, consent: boolean) => void }) {
+function EmailForm({ submitLabel, emailLabel = 'Email address', consentText, busy, error, onSubmit }: { submitLabel: string; emailLabel?: string; consentText: string; busy: boolean; error: string | null; onSubmit: (email: string, consent: boolean) => void }) {
   const [email, setEmail] = useState('');
   const [consent, setConsent] = useState(false); // unchecked by default
   const uid = useRef(`c${Math.random().toString(36).slice(2, 8)}`).current;
@@ -52,11 +52,10 @@ function EmailForm({ submitLabel, consentText, busy, error, onSubmit }: { submit
     >
       <div>
         <label htmlFor={`${uid}-email`} className="mb-1 block text-sm font-medium text-[var(--ink)]">
-          Email address
+          {emailLabel}
         </label>
         <input id={`${uid}-email`} type="email" inputMode="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} className={field} />
       </div>
-      <ConsentBox id={`${uid}-consent`} text={consentText} checked={consent} onChange={setConsent} />
       {error ? (
         <p role="alert" className="text-sm font-medium text-[#9b1c1c]">
           {error}
@@ -65,6 +64,7 @@ function EmailForm({ submitLabel, consentText, busy, error, onSubmit }: { submit
       <button type="submit" disabled={busy} className={button}>
         {busy ? 'Working...' : submitLabel}
       </button>
+      <ConsentBox id={`${uid}-consent`} text={consentText} checked={consent} onChange={setConsent} />
     </form>
   );
 }
@@ -80,6 +80,7 @@ export default function Checker({ consentText }: { consentText: string | null })
   const [formError, setFormError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [queued, setQueued] = useState(false);
+  const [skipped, setSkipped] = useState(false);
   const headingRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -93,6 +94,7 @@ export default function Checker({ consentText }: { consentText: string | null })
     setScan(null);
     setFull(null);
     setQueued(false);
+    setSkipped(false);
     try {
       const data = await post<{ ok: true; scan: ScanView } | ({ ok: false } & ApiError)>('/api/tools/check', { mode, url, paste, attribution: readFirstTouch() });
       if (data.ok) {
@@ -242,14 +244,17 @@ export default function Checker({ consentText }: { consentText: string | null })
           </section>
 
           {full ? (
-            <p className="rounded-xl bg-[#e8f6ee] p-4 text-[15px] font-medium text-[#0f6b3a]">The full report is above and is on its way to {full.email}.</p>
-          ) : consentText && scan.unlock_available ? (
+            <p className="rounded-xl bg-[#e8f6ee] p-4 text-[15px] font-medium text-[#0f6b3a]">Sent. Check your inbox for the suggested sentence and checklist.</p>
+          ) : consentText && scan.unlock_available && !skipped ? (
             <section aria-labelledby="tools-unlock-title" className="rounded-2xl border border-[var(--line)] bg-white p-5">
               <h3 id="tools-unlock-title" className="text-lg font-semibold text-[var(--ink)]">
-                Unlock the suggested sentence and fix checklist
+                Want the fix sentence and a short checklist?
               </h3>
-              <p className="mb-4 mt-1 text-sm text-[#4a5160]">You also get the full report, with every rule we checked and the part of your text it was judged on.</p>
-              <EmailForm submitLabel="Email me this" consentText={consentText} busy={busy} error={formError} onSubmit={unlock} />
+              <p className="mb-4 mt-1 text-sm text-[#4a5160]">Enter your email. We’ll unlock the suggested policy sentence and a short fix checklist for this gap.</p>
+              <EmailForm submitLabel="Email me the fix" emailLabel="Work email" consentText={consentText} busy={busy} error={formError} onSubmit={unlock} />
+              <button type="button" onClick={() => setSkipped(true)} className="mt-3 text-sm font-medium text-[#06626f] underline underline-offset-2">
+                Skip for now
+              </button>
             </section>
           ) : null}
 

@@ -1,5 +1,6 @@
 import type { CheckResult, Finding, SummaryCheck } from '../../../lib/tools/checks';
 import type { Status } from '../../../lib/tools/config';
+import { SHARING_CHECKLIST, SHARING_MISS, SHARING_RULES, SHARING_SENTENCE } from '../../../lib/tools/privacy-gap';
 
 // Presentational only (no hooks), so the same view renders in the checker, the full report, and the server-rendered share page.
 // It shows sourced rules and the visitor's own excerpts. It never shows wording written for the visitor's business.
@@ -64,19 +65,6 @@ function FindingBlock({ f }: { f: ViewFinding }) {
     </li>
   );
 }
-
-// Privacy-policy rules that all describe the same gap: no statement that mobile numbers / SMS opt-in data are not sold or shared.
-const SHARING_RULES = new Set(['R6-Q2', 'R6-Q3', 'R6-Q6', 'R6-Q7', 'R6-Q8', 'R6-Q9', 'BW-29', 'BW-30']);
-const SHARING_MISS = "Missing: say you don't sell or share mobile numbers or SMS opt-in data with third parties.";
-const SHARING_SENTENCE = 'We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes.';
-
-const SHARING_CHECKLIST = [
-  'Open your privacy policy page.',
-  'Add the suggested sentence in the section on how you use or share personal information.',
-  'Make sure nothing else in the policy or terms says you sell, rent or share mobile numbers or opt-in data.',
-  'Keep the policy linked from your opt-in form and reachable on your website.',
-  'Run this check again to confirm the gap is closed.',
-];
 
 function SharingGap({ findings, unlocked }: { findings: ViewFinding[]; unlocked: boolean }) {
   return (

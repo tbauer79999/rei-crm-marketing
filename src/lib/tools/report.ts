@@ -1,6 +1,7 @@
 import type { CheckResult } from './checks';
 import { CHECK_LABELS, OFFER, SITE_ORIGIN } from './config';
 import { outboundUrl, type Attribution } from './attribution';
+import { hasSharingGap, SHARING_CHECKLIST, SHARING_CLOSING, SHARING_SENTENCE } from './privacy-gap';
 
 const STATUS_WORD = { pass: 'Pass', warn: 'Warn', fail: 'Fail', gray: 'Not checked' } as const;
 
@@ -12,6 +13,24 @@ export function shareUrl(shareId: string): string {
 // replacement wording, and its last line is the approved closing line.
 export function buildReportEmail(args: { site: string | null; checks: CheckResult[]; shareId: string; attribution: Attribution }): { subject: string; text: string } {
   const { site, checks, shareId, attribution } = args;
+  // The visitor unlocked the privacy fix: send exactly that, short.
+  if (hasSharingGap(checks)) {
+    return {
+      subject: 'Your 10DLC privacy fix',
+      text: [
+        "Here's what to paste into your privacy policy:",
+        '',
+        SHARING_SENTENCE,
+        '',
+        'Short checklist:',
+        ...SHARING_CHECKLIST.map((t, i) => `${i + 1}. ${t}`),
+        '',
+        `Your result: ${shareUrl(shareId)}`,
+        '',
+        SHARING_CLOSING,
+      ].join('\n'),
+    };
+  }
   const lines: string[] = [`Your 10DLC registration check${site ? ` for ${site}` : ''}`, ''];
   for (const c of checks) {
     lines.push(`${CHECK_LABELS[c.check]}: ${STATUS_WORD[c.status]}`);
